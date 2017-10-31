@@ -1,6 +1,3 @@
-#CLASS {cSafeQueue} {kill};
-#CLASS {cSafeQueue} {open};
-
 #VAR {commandQueue} {};
 
 #ALIAS {.queueCommand}
@@ -26,5 +23,3 @@
     event_remove_specific e_command h_safe_queue;    
   };
 };
-
-#CLASS {cSafeQueue} {close};

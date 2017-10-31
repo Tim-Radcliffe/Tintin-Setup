@@ -1,20 +1,17 @@
-#CLASS {cStats} {kill};
-#CLASS {cStats} {open};
-
 #FUNCTION {fColourStat}
 {
-  #MATH {temp[statdiv]} {10 * %1 / %2};
-  #IF {$temp[statdiv] == 10}    {#VAR result {<afa>};};
-  #ELSEIF {$temp[statdiv] >= 9} {#VAR result {<bfa>};};
-  #ELSEIF {$temp[statdiv] >= 8} {#VAR result {<cfa>};};
-  #ELSEIF {$temp[statdiv] >= 7} {#VAR result {<dfa>};};
-  #ELSEIF {$temp[statdiv] >= 6} {#VAR result {<efa>};};
-  #ELSEIF {$temp[statdiv] >= 5} {#VAR result {<ffa>};};
-  #ELSEIF {$temp[statdiv] >= 4} {#VAR result {<fea>};};
-  #ELSEIF {$temp[statdiv] >= 3} {#VAR result {<fda>};};
-  #ELSEIF {$temp[statdiv] >= 2} {#VAR result {<fca>};};
-  #ELSEIF {$temp[statdiv] >= 1} {#VAR result {<fba>};};
-  #ELSE                         {#VAR result {<faa>};};
+  #MATH {_fCS} {10 * %1 / %2};
+  #IF {_fCS == 10}    {#VAR result {<afa>};};
+  #ELSEIF {_fCS >= 9} {#VAR result {<bfa>};};
+  #ELSEIF {_fCS >= 8} {#VAR result {<cfa>};};
+  #ELSEIF {_fCS >= 7} {#VAR result {<dfa>};};
+  #ELSEIF {_fCS >= 6} {#VAR result {<efa>};};
+  #ELSEIF {_fCS >= 5} {#VAR result {<ffa>};};
+  #ELSEIF {_fCS >= 4} {#VAR result {<fea>};};
+  #ELSEIF {_fCS >= 3} {#VAR result {<fda>};};
+  #ELSEIF {_fCS >= 2} {#VAR result {<fca>};};
+  #ELSEIF {_fCS >= 1} {#VAR result {<fba>};};
+  #ELSE               {#VAR result {<faa>};};
 };
 
 #ALIAS {.aHPBar}
@@ -43,6 +40,3 @@
 event_register e_hp_bar h_hp_bar .aHPBar;
 event_register e_mip_FFF h_mip_fff .aHPBar;
 .aHPBar;
-
-
-#CLASS {cStats} {close};
