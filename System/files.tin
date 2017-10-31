@@ -56,6 +56,12 @@
   #LINE SUBSTITUTE VARIABLE {#SCRIPT {result} {while read -r line; do echo "$line"; done < %1};};
 };
 
+#FUNCTION {fFileExists}
+{
+  #SCRIPT {result} {test -e %1 && echo "1" || echo "0"};
+  #RETURN $result[1];
+};
+
 #FUNCTION {fParseFilePath}
 {
   #REGEXP {%1} {{^\\*(.+\\)*(.+)\.(.+)$}}

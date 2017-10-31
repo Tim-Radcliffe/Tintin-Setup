@@ -2,7 +2,9 @@
 {
   #VAR {my[guild]} {adventurer};
 };
-#VAR {path[commands]} {Mud/$session[mud]/Commands/};
-#VAR {path[guild]}    {Mud/$session[mud]/Guilds/$my[guild]/};
-.file loadall {$path[commands]*.tin};
-.file loadall {$path[guild]*.tin};
+
+#VAR {path[commands]} {Mud/$session[mud]/Commands};
+#VAR {path[guild]}    {Mud/$session[mud]/Guilds/$my[guild]};
+
+.file loadall {$path[commands]/*.tin};
+.file loadall {$path[guild]/*.tin};
