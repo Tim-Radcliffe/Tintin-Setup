@@ -24,7 +24,7 @@ event_register e_killed_opponent h_corpse_handler handler_corpse;
 #ALIAS {handler_auto_frozen}
 {
   #NOP %1;
-  #IF {$opponent[hp] > 0}
+  #IF {$opponent[hp] > 0 && $my[gp1][current] > 10}
   {
     #SEND {!frozen grasp};
   };

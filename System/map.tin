@@ -175,7 +175,7 @@
   };
 }
 
-#ALIAS {.mapAreaLink}
+#ALIAS {.mapCreateLink}
 {
   #NOP %1;
   #IF {"%1" == ""}
@@ -195,7 +195,7 @@
     #IF {"$_mAL[back][vnum]" == ""} {#VAR {_mAL[back][vnum]} {1};};
 
     #MAP {dig} {$_mAL[out][cmd]};
-    #MAP {exit} {$_mAL[out][cmd]} {command} {.mapAreaJump {$_mAL[back][area]} {$_mAL[back][vnum]} {$_mAL[out][cmd]};};
+    #MAP {exit} {$_mAL[out][cmd]} {command} {.mapLink {$_mAL[back][area]} {$_mAL[back][vnum]} {$_mAL[out][cmd]};};
     #MAP {at} {@fMapGetVnum{%1}}
     {
       #MAP {set} {roomarea} {$_mAL[back][area]};
@@ -205,7 +205,7 @@
     
     #VAR {map[file]} {@fMapCreate{$_mAL[back][area]}[2]};
     #MAP {dig} {$_mAL[back][cmd]}
-    #MAP {exit} {$_mAL[back][cmd]} {command} {.mapAreaJump {$_mAL[out][area]} {$_mAL[out][vnum]} {$_mAL[out][cmd]};};
+    #MAP {exit} {$_mAL[back][cmd]} {command} {.mapLink {$_mAL[out][area]} {$_mAL[out][vnum]} {$_mAL[out][cmd]};};
     #MAP {at} {@fMapGetVnum{$_mAL[back][cmd]}}
     {
       #MAP {set} {roomarea} {$_mAL[out][area]};
@@ -257,7 +257,7 @@
   #UNVAR {_fMC};
 }
 
-#ALIAS {.mapAreaJump}
+#ALIAS {.mapLink}
 {
   #NOP %1;
   #SEND {!%3};
