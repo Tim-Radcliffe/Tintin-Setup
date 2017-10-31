@@ -145,14 +145,17 @@
   #ELSE
   {
     #VAR {_mL} {};
+    #VAR {_mL[path]} {%1};
     #REGEX {%1} {{^(.*)/([^\/]*)$}} 
     {
-      #VAR {_mL[path]} {&2};
       #VAR {_mL[area]} {&3};
-    };
+    }
+    {
+      #VAR {_mL[area]} {%1};
+    }
 
-    #VAR {map[file]} {$_mL[path]/$_mL[area]/$_mL[area].map};
-    #VAR {map[area][path]} {$_mL[path]/$_mL[area]};
+    #VAR {map[file]} {$path[areas]/$_mL[path]/$_mL[area].map};
+    #VAR {map[area][path]} {$_mL[path]};
     #MAP {read} {$map[file]};
     #UNVAR {_mL};   
   };
@@ -229,27 +232,28 @@
     #VAR {_fMC[area]} {&3};
   };
 
-  #SCRIPT {_fMC[dir]} {find $_fMC[path]/$_fMC[area] -type d 2>&1};
-  #REGEX {$_fMC[dir][1]} {No such file or directory}
+  #VAR {_fMC[dir]} {$path[areas]/$_fMC[path]/$_fMC[area]};
+
+  #IF {!@fFileExists{$_fMC[dir]}}
   {
-    #VAR {_fMC[dir][1]} {$_fMC[path]/$_fMC[area]};
-    #SCRIPT {_fMC[result]} {mkdir $_fMC[dir][1]};
+    #LOCAL {null} {@fFileCreateDir{$_fMC[dir]}};
   };
 
-  #VAR {_fMC[file]} {$_fMC[dir][1]/$_fMC[area].map};
+  #VAR {_fMC[file]} {$_fMC[dir]/$_fMC[area].map};
 
-  #SCRIPT {_fMC[check]} {find $_fMC[file] -type f 2>&1};
-  #REGEX {$_fMC[check][1]} {No such file or directory}
-  {
-    #MAP {create} {500};
-    #MAP {goto} {1};
-    #MAP {write} {$_fMC[file]};
-  }
+  #IF {@fFileExists{$_fMC[file]}}
   {
     #MAP {read} {$_fMC[file]};
     #MAP {goto} {1};
   };
-  #VAR {result} {{$_fMC[dir][1]}{$_fMC[file]}};
+  #ELSE
+  {
+    #MAP {create} {500};
+    #MAP {goto} {1};
+    #MAP {write} {$_fMC[file]};
+  };
+
+  #VAR {result} {{$_fMC[dir]}{$_fMC[file]}};
   #UNVAR {_fMC};
 }
 

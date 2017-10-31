@@ -71,6 +71,7 @@
     #VAR {my[sp][current]} {%%3};
     #VAR {my[sp][max]} {%%4};
     #VAR {my[kills]} {%%5};
+    #ACTION {{^(>\s|)Sps  :\s*(\d+)\s*\/\s*(\d+)\s*Kills\s*:\s*(\d+)}};
   };
 
   #SEND {!score};
