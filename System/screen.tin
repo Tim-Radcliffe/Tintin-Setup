@@ -1,0 +1,42 @@
+#ALIAS {.ScreenRefresh}
+{
+  #NOP %1;
+  #FORMAT {temp[ScreenRows]} {%R};
+  #FORMAT {temp[ScreenCols]} {%C};
+  
+  #IF {"$temp[ScreenRows]" != "$session[ScreenRows]"}
+  {
+    #VAR {session[ScreenRows]} {$temp[ScreenRows]};
+    #MATH {session[HeadRows]} { ( $session[ScreenRows] / 4 ) + 1 };
+    #MATH {session[MainRows]} { $session[ScreenRows] - $session[HeadRows] - 3 };
+    #SEND {!setmod ROWS $session[MainRows]};
+  };
+  
+  #IF {"$temp[ScreenCols]" != "$session[ScreenCols]"}
+  {
+    #VAR {session[ScreenCols]} {$temp[ScreenCols]};
+    #MATH {session[ColDiff]} {$session[ScreenCols] - 80};
+    #IF {"$session[ColDiff]" > "0"} 
+    {
+      #SYSTEM {tmux resize-pane -L -t 0 $session[ColDiff]};
+    };
+    #ELSEIF {"$session[ColDiff]" < "0"}
+    {
+      #MATH {session[ColDiff]} {$session[ColDiff] * -1};
+      #SYSTEM {tmux resize-pane -R -t 0 $session[ColDiff]};
+    };
+  };
+  
+  #SCRIPT {temp} {tmux list-panes -F '#{pane_width}'};
+  #VAR {session[MapCols]} {$temp[-1]};
+
+  #SPLIT {$session[HeadRows]} {1};
+};
+event_register {e_screen_resize} {h_screen_refresh} {.ScreenRefresh};
+
+#EVENT {SCREEN RESIZE}
+{
+  event_raise {e_screen_resize};
+};
+
+.ScreenRefresh;

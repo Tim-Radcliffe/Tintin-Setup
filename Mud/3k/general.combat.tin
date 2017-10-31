@@ -1,0 +1,47 @@
+#CLASS {cCombat} {kill};
+#CLASS {cCombat} {open};
+
+#NOP **** Triggers ****
+#ACTION {^{>\s|}{You've killed|(.*) dealt the killing blow to} %*.} 
+{
+	#IF {"%3" == "%4" || "%3" == "$my[name]" || "%3" == ""}
+	{
+		#VAR {opponent[shortname]} {%4};
+		event_raise e_killed_opponent {%4};
+	};
+};
+
+#ACTION {^{>\s|}You attack %*.}
+{
+	#VAR {opponent} {};
+	#VAR {opponent[longname]} {%2};
+	event_raise e_combat {%2};
+};
+
+#NOP **** Functions/Aliases ****
+#ALIAS {handler_combat}
+{
+	#NOP %1;
+	event_register e_killed_opponent h_combat_finished handler_combat_finished;
+	event_remove_specific e_combat h_combat;
+};
+event_register e_combat h_combat handler_combat;
+
+#ALIAS {handler_combat_finished}
+{
+	#NOP %1;
+	event_remove_specific e_killed_opponent h_combat_finished;
+	event_register e_combat h_combat handler_combat;
+        event_raise e_room_corpse;
+        #BELL;
+	#SEND {!glance};
+};
+
+#ALIAS {handler_combat_round}
+{
+  #NOP %1;
+  event_raise {e_combat_round} {%2};
+};
+event_register {e_mip_FFF_N} {h_combat_round} {handler_combat_round};
+
+#CLASS {cCombat} {close};

@@ -1,0 +1,72 @@
+#VAR _events {};
+#ALIAS _event_tmp_ali #NOP;
+ 
+#NOP event_register eventName handlerName action
+#NOP adds action to the eventName event under the tag handlerName.
+ 
+#ALIAS event_register
+{
+  #VAR _events[%1][%2] {%3};
+}
+
+#NOP event_oneshot eventName handlerName action
+#NOP adds action to the eventName event, removes after being called
+#alias {event_oneshot} 
+{ 
+   #var _events[%1][%2] {event_remove_specific {%1} {%2};%3}; 
+};
+ 
+#NOP event_remove_event eventName
+#NOP removes eventName completely
+ 
+#ALIAS event_remove_event
+{
+  #LINE SUBSTITUTE {VARIABLE} #UNVAR _events[%1];
+}
+ 
+ 
+#NOP event_remove_handler handlerName
+#NOP removes handlerName from all events
+ 
+#ALIAS event_remove_handler
+{
+  #FOREACH {${_events[]}} {sublist}
+  {
+    #LINE SUBSTITUTE {VARIABLE} #UNVAR _events[$sublist][%1];
+    #IF {"${_events[$sublist]}" == ""} {#LINE SUBSTITUTE {VARIABLE} #UNVAR _events[$sublist]};
+  }
+}
+ 
+ 
+#NOP event_remove_specific eventName handlerName
+#NOP removes handlerName from eventName
+ 
+#ALIAS event_remove_specific
+{
+  #LINE SUBSTITUTE {VARIABLE} #UNVAR _events[%1][%2];
+  #IF {"${_events[%1]}" == ""} {#LINE SUBSTITUTE {VARIABLE} #UNVAR _events[%1]};
+}
+ 
+
+#NOP event_eval is a helper function that allows dynamic alias definitions.
+#ALIAS event_eval
+{
+  #ALIAS _event_tmp_ali {%1};
+  _event_tmp_ali %2;
+  #ALIAS _event_tmp_ali #NOP;
+}
+
+
+#NOP event_raise eventName args
+#NOP calls all actions for eventName with args
+ 
+#ALIAS event_raise
+{
+  #FOREACH {${_events[%1][]}} {handler}
+  {
+    #IF {&{_events[%1][$handler]} != 0}
+    {
+      event_eval {${_events[%1][$handler]}} {%0};
+    };
+  };
+};

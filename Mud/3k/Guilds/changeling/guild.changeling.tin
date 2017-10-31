@@ -1,0 +1,266 @@
+#CLASS {cGuild} {kill}
+#CLASS {cGuild} {open}
+
+#NOP ======== DEFAULTS ===========;
+
+#VAR {BioTypes} {{1}{dark}{2}{murky}{3}{turbid}{4}{opaque}{5}{cloudy}};
+
+#IF {"$my[gp1][name]" == ""} {#VAR {my[gp1][name]} {Stam};};
+#IF {"$my[gp2][name]" == ""} {#VAR {my[gp2][name]} {Proto};};
+#VAR {RoomScan[objects][bioplast]} {1};
+
+#NOP ======== ACTIONS ============;
+
+#ACTION {^{>\s|}HP:%d/%d SP:%d/%d ST:%d.%d%% PP:%d.%d%%}
+{
+  #FORMAT {my[hp][current]} {%d} {%2};
+  #FORMAT {my[hp][max]} {%d} {%3};
+  #FORMAT {my[sp][current]} {%d} {%4};
+  #FORMAT {my[sp][max]} {%d} {%5};
+  #FORMAT {my[gp1][current]} {%d} {%6};
+  #FORMAT {my[gp2][current]} {%d} {%8};
+  event_raise e_hp_bar;
+};
+
+#ACTION {^{>\s|}Your body ripples and shakes as energy flows into you.}
+{
+  #NOP  queueCommand {keep all bioplast};
+  #VAR {changeling[reset]} {};
+  event_raise e_guild_reset;
+};
+
+#ACTION {^{>\s|}You consume the %w bioplast}
+{
+  #MATH {changeling[bioplasts][@bioplastNum{%2}]} {$changeling[bioplasts][@bioplastNum{%2}] - 1};
+  #FOREACH {$changeling[bioplasts][]} {i}
+  {
+    #IF {"$changeling[bioplasts][$i]" != "0"}
+    {
+      #SEND {!unkeep $BioTypes[$i] bioplast};
+      #SEND {!give $BioTypes[$i] bioplast to $my[name]};
+      #SEND {!keep $BioTypes[$i] bioplast};
+      #RETURN;
+    };
+  };
+};
+
+#ACTION {^{>\s|}You flow over the corpse, creating a %w bioplast with the raw protoplasm}
+{
+  #MATH {changeling[bioplasts][@bioplastNum{%2}]}
+        {$changeling[bioplasts][@bioplastNum{%2}] + 1};
+
+  #IF {@fSumArray{$changeling[bioplasts]} > 50}
+  {
+    #VAR {changeling[fuse]} {};
+    #FORALL {$changeling[bioplasts][]}
+    {
+      #IF {"$changeling[fuse][1]" == "" && $changeling[bioplasts][&0] > 0}
+      {
+        #MATH {changeling[bioplasts][&0]} {$changeling[bioplasts][&0] - 1};      
+        #VAR {changeling[fuse][1]} {$BioTypes[&0]};
+      };
+      
+      #IF {"$changeling[fuse][2]" == "" && $changeling[bioplasts][&0] > 0}
+      {
+        #MATH {changeling[bioplasts][&0]} {$changeling[bioplasts][&0] - 1};
+        #VAR {changeling[fuse][2]} {$BioTypes[&0]};
+      };
+    };
+    
+    #IF {"$changeling[fuse][1]" != "" && "$changeling[fuse][2]" != ""}
+    {
+      #SEND {!fuse $changeling[fuse][1] and $changeling[fuse][2]};
+    };    
+  };
+};
+
+#ACTION {^{>\s|}the resulting %w bioplast.}
+{
+  #MATH {changeling[bioplasts][@bioplastNum{%2}]}
+        {$changeling[bioplasts][@bioplastNum{%2}] + 1};
+};
+
+#NOP ======== ALIASES ============;
+
+#NOP ======== EVENT HANDLERS =====;
+#ALIAS {.HandlerMipGuildline}
+{
+  #NOP %1;
+  #VAR {temp} {%2};
+  #REPLACE {temp} {>} {};
+  #REPLACE {temp} {<%w} {};
+  #REPLACE {temp} {[} {};
+  #REPLACE {temp} {]{\s}} {;};
+  #REPLACE {temp} {]} {};
+
+  #IF {"%1" == "e_mip_FFF_I"}
+  {
+    #VAR {my[${my[guild]}][gline1]} {$temp};
+  }
+  {
+    #VAR {my[${my[guild]}][gline2]} {$temp};
+  };
+  #UNVAR {temp};
+};
+event_register {e_mip_FFF_I} {h_guild_line} {.HandlerMipGuildline};
+event_register {e_mip_FFF_J} {h_guild_line} {.HandlerMipGuildline};
+
+#ALIAS {handler_inv_start}
+{
+  #NOP %1;
+  #UNVAR changeling[bioplasts];
+}
+event_register e_inv_start h_inv_start handler_inv_start;
+
+#ALIAS {handler_bioplast_inv}
+{
+  #NOP %1;
+  #REGEXP {%2} {^a bioplast (%w)}
+  {
+    #MATH {changeling[bioplasts][@bioplastNum{&1}]}
+          {$changeling[bioplasts][@bioplastNum{&1}] + 1};
+  };
+}
+event_register e_inv_item h_bioplast_inv handler_bioplast_inv;
+
+#ALIAS {handler_bioplast_pickup}
+{
+  #NOP %1;
+  #REGEXP {%2} {^a bioplast (%w)}
+  {
+    #SEND {get bioplast};
+    #SEND {keep bioplast};
+    #MATH {changeling[bioplasts][@bioplastNum{&1}]}
+          {$changeling[bioplasts][@bioplastNum{&1}] + 1};
+  };
+}
+event_register e_room_object h_bioplast_pickup handler_bioplast_pickup;
+
+#ALIAS {handler_coin_donate}
+{
+  #NOP %1;
+  #VAR {temp} {0};
+  #REGEXP {%2} {coins (%d)} {#MATH {temp} { (&1*50)/100 }};
+  #IF {$temp > 0}
+  {
+    #SEND {ingest $temp};
+  }
+}
+event_register e_pickup h_pickup_coin handler_coin_donate;
+
+#ALIAS {handler_corpse_process}
+{
+  #NOP %1;
+  #IF {$my[gp1][current] < 20}
+  {
+    #SEND {!absorb};
+  };
+  #NOP #ELSEIF {@fSumArray{$changeling[bioplasts]} >= 50}
+  {
+    #SEND {!absorb};
+  };
+  #ELSE
+  {
+    #SEND {!bioextract};
+  };
+}
+event_register e_room_corpse h_room_corpse handler_corpse_process;
+
+#ALIAS {.HandlerRelinquish}
+{
+  #NOP %1;
+  #IF {"$changeling[reset][relinquish]" != "1" &&
+       ( $my[gp1][current] < 20 || $my[gp2][current] < 20 ) }
+  {
+    #VAR changeling[reset][relinquish] 1;
+    #SEND {relinquish};
+  }
+}
+event_register {e_mip_FFF} {h_relinquish_fff} {.HandlerRelinquish};
+
+#ALIAS {.HandlerHyperproliferate}
+{
+  #NOP %1;
+
+  #IF {$my[sp][current] >= $my[sp][max] && ( $my[gp1][current] < 20 || $my[gp2][current] < 20 )}
+  {
+    #SEND {hyperproliferate on};
+  };
+};
+event_register {e_mip_FFF} {h_hyperproliferate} {.HandlerHyperproliferate};
+
+#ALIAS {.HandlerTransfix}
+{
+  #NOP %1;
+  #IF {"@fListValue{{$my[${my[guild]}][gline1]}{-1}}" == "Cobra"}
+  {
+    #IF { "@fEval{%2 % 10}" == "1"}
+    {
+      #SEND {!transfix};
+    };
+  };
+};
+event_register {e_mip_FFF_N} {h_transfix} {.HandlerTransfix};
+
+#ALIAS {.HandlerPerseverance}
+{
+  #NOP %1;
+  #IF {$my[gp1][current] > $my[gp2][current]}
+  {
+    #IF {"$my[changeling][perseverance]" != "1"}
+    {
+      #SEND {!perseverance on};
+      #SEND {!dissipate on};
+      #VAR {my[changeling][perseverance]} {1};
+    };
+  };
+  #ELSEIF {$my[gp1][current] < $my[gp2][current]}
+  {
+    #IF {"$my[changeling][perseverance]" == "1"}
+    {
+      #SEND {!perseverance off};
+      #SEND {!dissipate off};
+      #VAR {my[changeling][perseverance]} {0};
+    };
+  };
+};
+event_register {e_mip_FFF} {h_perseverance} {.HandlerPerseverance};
+
+#NOP ======== Gags ===============;
+
+#GAG {^You savagely attack %+ with adrenalin-induced ferocity!};
+#GAG {^%+ missed you.};
+#GAG {^%+ struck, but did no damage to you.};
+
+
+#NOP ======== Functions ==========;
+
+#FUNCTION {bioplastNum}
+{
+  #IF {"%1" == 0} {return 0;};
+  #LIST {BioTypes} {find} {%1} {result};
+  #IF {"$result" == "0"}
+  {
+    #VAR {result} {9};
+  }
+}
+
+#FUNCTION {GuildHP}
+{
+  #NOP %1;
+  #FORMAT {vHPBar} {<AAB><fff>HP:%s%+4s<fff> SP:%s%+4s<fff> B:%+2s ST:%s%+3s<fff> PP:%s%+3s<fff> Vs:%s%-7s<fff>}
+  {@fColourStat{{$my[hp][current]}{$my[hp][max]}}}
+  {$my[hp][current]}
+  {@fColourStat{{$my[sp][current]}{$my[sp][max]}}}
+  {$my[sp][current]}
+  {@fSumArray{$changeling[bioplasts]}}
+  {@fColourStat{{$my[gp1][current]}{$my[gp1][max]}}}
+  {$my[gp1][current]}
+  {@fColourStat{{$my[gp2][current]}{$my[gp2][max]}}}
+  {$my[gp2][current]}
+  {@fColourStat{{$opponent[hp]}{100}}}
+  {$opponent[hp]};
+  #VAR {result} {1};
+}
+
+#CLASS {cGuild} {close}

@@ -1,0 +1,78 @@
+#CLASS {cAuto} {kill}
+#CLASS {cAuto} {open}
+#NOP ************ Variables ************;
+#NOP #VAR {auto} {};
+#NOP ************ Aliases **************;
+#ALIAS {auto}
+{
+        #IF {"%1" == ""}
+        {
+                #FOREACH {$auto[]} {i}
+                {
+                        #IF {"$auto[$i][status]" == "1"}
+                        {
+                                #ECHO {AUTO: <128>$i on<098>};
+                        }
+                        {
+                                #ECHO {AUTO: <118>$i off<098>};
+                        };
+                };
+        };
+        #ELSEIF {"%1" == "add"}
+        {
+                #VAR {auto[%2][status]} {0};
+                #IF {"%3" != ""} {#VAR {auto[%2][start]}  {%3};};
+                #IF {"%4" != ""} {#VAR {auto[%2][event]}  {%4};};
+                #IF {"%5" != ""} {#VAR {auto[%2][end]}    {%5};};
+        };
+        #ELSEIF {"%1" == "remove"}
+        {
+                #UNVAR {auto[%2]};
+        };
+        #ELSEIF {&auto[%1] != 0}
+        {
+                #IF {"%2" == "on" || "%2" == "start"} {#VAR {auto[%1][status]} {0};};
+                #IF {"%2" == "off" || "%2" == "stop"} {#VAR {auto[%1][status]} {1};};
+                #IF {$auto[%1][status] == 0}
+                {
+                        #VAR {auto[%1][status]} {1};
+                        #IF {&auto[%1][start] != 0}
+                        {
+                                $auto[%1][start];
+                        };
+                        #IF {&auto[%1][event] != 0}
+                        {
+                                event_register $auto[%1][event] h_auto_%1 handler_auto_%1;
+                        };
+                        #ECHO {AUTO: <128>%1 on<098>};
+                }
+                {
+                        #VAR {auto[%1][status]} {0};
+                        #IF {&auto[%1][event] != 0}
+                        {
+                                event_remove_handler h_auto_%1;
+                        };
+                        #IF {&auto[%1][end] != 0}
+                        {
+                                $auto[%1][end];
+                        };
+                        #ECHO {AUTO: <118>%1 off<098>};
+                };
+        };
+        #ELSE
+        {
+                #ECHO {AUTO: Parameter Not Recognised};
+        };
+};
+#FOREACH {$auto[]} {i}
+{
+        #IF {"$auto[$i][status]" == "1"}
+        {
+                auto $i on;
+        } 
+        {
+                auto $i off;
+        }
+};
+
+#CLASS {cAuto} {close}

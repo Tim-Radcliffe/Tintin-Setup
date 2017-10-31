@@ -1,0 +1,49 @@
+#FUNCTION {fCSVin}
+{
+  #NOP %1;
+  #VAR {_fCSV} {};
+  #VAR {_fCSV[sep]} {,};
+  #VAR {_fCSV[rec]} {0};
+  #VAR {_fCSV[blk1]} {"};
+  #VAR {_fCSV[blk2]} {'};
+  #VAR {_fCSV[b1]} {0};
+  #VAR {_fCSV[b2]} {0};
+  #VAR {_fCSV[in]} {%0};
+  #FOREACH {$_fCSV[in][%*]} {_fCSV[line]}
+  {
+    #VAR {_fCSV[fld]} {0};
+    #VAR {_fCSV[tmp]} {};
+    #PARSE {$_fCSV[line]} {_fCSV[c]}
+    {
+      #REGEXP {$_fCSV[c]} {$_fCSV[blk1]} {#MATH {_fCSV[b1]} {!$_fCSV[b1]};};
+      #REGEXP {$_fCSV[c]} {$_fCSV[blk2]} {#MATH {_fCSV[b2]} {!$_fCSV[b2]};};
+
+      #IF {"$_fCSV[c]" == "$_fCSV[sep]" && !$_fCSV[b1] && !$_fCSV[b2]}
+      {
+        #MATH {_fCSV[fld]} {$_fCSV[fld] + 1};
+        #IF {$_fCSV[rec] == 0}
+        {
+          #VAR {_fCSV[fields][$_fCSV[fld]]} {$_fCSV[tmp]};
+        }
+        {
+          #VAR {_fCSV[out][$_fCSV[rec]][$_fCSV[fields][$_fCSV[fld]]]} {$_fCSV[tmp]};
+        };
+        #VAR {_fCSV[tmp]} {};
+      }
+      {
+        #VAR {_fCSV[tmp]} {$_fCSV[tmp]$_fCSV[c]};
+      };
+    };
+    #MATH {_fCSV[fld]} {$_fCSV[fld] + 1};
+    #IF {$_fCSV[rec] == 0}
+    {
+      #VAR {_fCSV[fields][$_fCSV[fld]]} {$_fCSV[tmp]};
+    }
+    {
+      #VAR {_fCSV[out][$_fCSV[rec]][$_fCSV[fields][$_fCSV[fld]]]} {$_fCSV[tmp]};
+    }; 
+    #MATH {_fCSV[rec]} {$_fCSV[rec] + 1};
+  };
+  #VAR {result} {$_fCSV[out]};
+  #UNVAR {_fCSV};
+};

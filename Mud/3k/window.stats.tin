@@ -1,0 +1,18 @@
+#ALIAS {.HandlerStats}
+{
+  #NOP %1;
+  #IF {"$my[gp1][name]" == ""} {#VAR {my[gp1][name]} {GP1};};
+  #IF {"$my[gp2][name]" == ""} {#VAR {my[gp2][name]} {GP2};};
+  .WindowSet {stats}
+  {
+    {1} {@fGauge{{HP : $my[hp][current]}{$my[hp][current]}{$my[hp][max]}{AFA}{35}} @fGauge{{$my[gp1][name] : $my[gp1][current]}{$my[gp1][current]}{$my[gp1][max]}{AFF}{35}}}
+    {2} {@fGauge{{SP : $my[sp][current]}{$my[sp][current]}{$my[sp][max]}{FFA}{35}} @fGauge{{$my[gp2][name] : $my[gp2][current]}{$my[gp2][current]}{$my[gp2][max]}{FAF}{35}}}
+    {3} {@fGauge{{Vs : $mip[FFF][K][data]}{$mip[FFF][L][data]}{100}{FAA}{35}} Rounds : $mip[FFF][N][data]}
+    {4} {$mip[gline][1]}
+    {5} {$mip[gline][2]}
+    {6} {$mip[BAC][data]}
+  };
+  .WindowRefresh {stats};
+};
+event_register {e_mip_FFF} {h_window_stats} {.HandlerStats};
+.HandlerStats;

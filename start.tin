@@ -1,0 +1,69 @@
+#MESSAGE {all} {off};
+
+#CLASS {System/files.tin} {read} {System/files.tin};
+#CLASS {System/csv.tin}   {read} {System/csv.tin};
+
+#EVENT {SESSION CONNECTED}
+{
+  #VAR {session[name]} {%0};
+  #REGEXP {%0} {{(.+)\.(.+)}}
+  {
+    #VAR {session[mud]} {&2};
+    #VAR {session[player]} {&3};
+  };
+};
+
+#CLASS {cStart} {kill};
+#CLASS {cStart} {open};
+
+#VAR {users} {@fCSVin{@fFileRead{Data/profiles.csv}}};
+
+#MACRO {0}
+{
+  #END;
+}
+
+#ALIAS {.UserMacro}
+{
+  #NOP %1;
+  #MACRO {%1}
+  {
+    #SESSION {%4.%2} {%5} {%6};%2;%3;
+
+    #VAR {path[system]} {System/};
+    #VAR {path[profile]} {Data/%4/Profiles/%2/};
+    #VAR {path[mud]} {Mud/%4/};
+    #VAR {path[areas]} {Data/%4/Areas/};
+
+    .file loadall {$path[system]*.tin};
+    .file loadall {$path[profile]*.tin};
+    .file loadall {$path[mud]*.tin};
+
+    #CLASS {cStart} {kill};
+  };
+};
+
+#ALIAS {.StartMenu}
+{
+  #NOP %1;
+  #VAR {userIndex} {0};
+  #ECHO {};
+  #ECHO {Choose a player};
+  #ECHO {===============};
+  #ECHO {};
+  #FORALL {$users[]}
+  {
+    #ECHO {&0 : $users[&0][name] ($users[&0][gameName])};
+    .UserMacro {&0} {$users[&0][name]} {$users[&0][password]} {$users[&0][gameName]} {$users[&0][gameHost]} {$users[&0][gamePort]};
+  };
+  #ECHO {};
+  #ECHO {Or press '0' to exit};
+};
+.StartMenu;
+
+#ACTION {^#SESSION 'gts' ACTIVATED.}
+{
+  .StartMenu;
+}
+
+#CLASS {cStart} {close};

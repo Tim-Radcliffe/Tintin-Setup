@@ -1,0 +1,120 @@
+#ACTION {You cannot go %w.}
+{
+  #IF {"$map[edit]" == "1"}
+  {
+    #MAP undo;
+    .mapRefresh;
+  };
+};
+
+#ACTION {You cannot get it up.}
+{
+  #IF {"$map[edit]" == "1"}
+  {
+    #MAP undo;
+    .mapRefresh;
+  };
+};
+
+#ALIAS {.mapRoomDesc}
+{
+  #NOP %1;
+  #IF {"$map[room][roomname]" == "" || "$map[edit]" == "1"}
+  {
+    #REGEXP {%2} {{^(.*?)\s*\([a-z\s,]*\)$}}
+    {
+      #IF {"$map[room][roomname]" != "&2"}
+      {
+        #VAR {map[room][newname]} {&2};
+      };
+    }
+    {
+      #IF {"$map[room][roomname]" != "%2"}
+      {
+        #VAR {map[room][newname]} {%2};
+      };
+    };
+
+    #IF {"$map[room][newname]" != ""}
+    {
+      #VAR {map[room][newname]} {@fStripBraces{$map[room][newname]}};
+      #ECHO {MAP : Room name : $map[room][newname]};
+      #MAP set {roomname} {$map[room][newname]};
+      #UNVAR {map[room][newname]};
+    };
+  };
+};
+event_register {e_mip_BAD} {h_map_room_desc} {.mapRoomDesc};
+
+#ALIAS {.mapRoomExits}
+{
+  #NOP %1;
+  #IF {"$map[edit]" == "1"}
+  {
+
+    #NOP *** Add in custom exit commands into the exits list ***;
+    #MAP GET {roomexits} {map[room][roomexits]};
+    #FOREACH {$map[room][roomexits]} {i}
+    {
+      #MAP exit {$i} {save} {map[exit]};
+      #IF {"$map[exit][command]" != ""}
+      {
+        #VAR {map[room][roomexits][$map[exit][command]]} {$map[exit][vnum]};
+      };
+    };
+
+    #REPLACE {room[exits]} { } {;};
+
+    #FOREACH {$room[exits]} {i}
+    {
+      #IF {&map[room][roomexits][$i] == 0}
+      {
+        #IF {"$map[dirs][$i]" != ""}
+        {
+          #ECHO {MAP : Adding exit : $i};
+          #MAP get {roomvnum} {map[room][roomvnum]} {$i};
+          #MAP dig {$i};
+          #MAP get {roomexit} {map[room][roomexits]};
+          #MAP get {roomname} {temp} {$map[room][roomexits][$i]};
+          #MAP set {roomcolor} {$map[col][unexplored]} {$map[room][roomexits][$i]};
+          .mapRefresh;
+        };
+        #ELSE
+        {
+          #MAP set {roomcolor} {$map[col][investigate]};
+          .mapRefresh;
+        };
+      };
+    };
+
+    #FOREACH {$map[room][roomexits][]} {i}
+    {
+      #IF {"$map[dirs][$i]" == ""}
+      {
+        #MAP get roomcolor {temp};
+        #IF {"$temp" != "$map[col][investigate]"}
+        {
+          #MAP set {roomcolor} {$map[col][oddexits]};
+          .mapRefresh;
+        };
+      };
+    };
+  };
+};
+event_register {e_room_enter} {h_map_room_exits} {.mapRoomExits};
+
+#ALIAS {.mapRoomArea}
+{
+  #NOP %1;
+  #IF {"$map[edit]" == "1"}
+  {
+    #IF {"$room[location][name]" != ""}
+    {
+      #MAP {set} {roomarea} {$room[location][name]};
+      #ECHO {MAP : Area Set : $room[location][name]};
+    };
+  };
+};
+event_register {e_command_rating} {h_map_room_area} {.mapRoomArea};
+event_register {e_command_where} {h_map_room_area} {.mapRoomArea};
+

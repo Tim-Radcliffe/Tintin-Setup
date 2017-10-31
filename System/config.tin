@@ -1,0 +1,2 @@
+#CONFIG {command echo} {off};
+#CONFIG {256 colors} {on};

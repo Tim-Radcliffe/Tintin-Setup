@@ -1,0 +1,29 @@
+#ALIAS {handler_BAB}
+{
+  #NOP %1;
+  #IF {"@fListValue{{%2}{3}}" != "0"}
+  {
+    #IF {"@fListValue{{%2}{1}}" == "x"}
+    {
+      #NOP Message to another player;
+      .WindowAppend {messages} {@fTrunc{{@fListValue{{%2}{2}} > @fListValue{{%2}{3}}}{$session[ScreenCols]}}};
+    }
+    {
+      #NOP Message from another player;
+      .WindowAppend {messages} {@fTrunc{{@fListValue{{%2}{2}} < @fListValue{{%2}{3}}}{$session[ScreenCols]}}};
+    };
+    .WindowRefresh {messages};    
+  };
+};
+event_register e_mip_BAB h_message handler_BAB;
+
+#ALIAS {.HandlerCAA}
+{
+  #NOP %1;
+  #IF {"%2" != ""}
+  {
+    .WindowAppend {messages} {@fTrunc{{@fListValue{{%2}{4}}}{$session[ScreenCols]}}};
+    .WindowRefresh {messages};
+  };
+};
+event_register {e_mip_CAA} {h_message} {.HandlerCAA};

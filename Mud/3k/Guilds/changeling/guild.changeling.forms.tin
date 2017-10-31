@@ -1,0 +1,24 @@
+#CLASS {cChangelingFormScan} {kill};
+#CLASS {cChangelingFormScan} {open};
+
+#VAR {form} {};
+#VAR {forms} {};
+
+#ALIAS {handler_room_npc}
+{
+  #VAR {form} {%2};
+  #LIST {forms} {find} {$form} {formindex};
+  #IF {$formindex == 0}
+  {
+    #LIST {forms} {add} {$form};
+    #SEND {exa %2};
+  };
+};
+event_register e_room_npc h_room_npc handler_room_npc;
+
+#ACTION {^This %w appears to %+.}
+{
+  #LINE {log} {guild.changeling.forms.txt} {$form:%1:%2};
+};
+
+#CLASS {cChangelingFormScan} {close};

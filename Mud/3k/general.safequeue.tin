@@ -1,0 +1,30 @@
+#CLASS {cSafeQueue} {kill};
+#CLASS {cSafeQueue} {open};
+
+#VAR {commandQueue} {};
+
+#ALIAS {.queueCommand}
+{
+  #IF {"%1" == ""} {#RETURN;};
+  #UNVAR {temp};
+  #LIST {commandQueue} {find} {%1} {temp};
+  #IF {"$temp" == "0"}
+  {
+    #LIST {commandQueue} {add} {%1};
+    event_register e_command h_safe_queue handler_safe_queue;    
+  };
+};
+
+#ALIAS {handler_safe_queue}
+{
+  #NOP %1;
+  #ECHO {==== Queued Commands ====};
+  #WHILE {&commandQueue[1] != 0}
+  {
+    #SEND {!$commandQueue[1]};
+    #LIST {commandQueue} {delete} {1};
+    event_remove_specific e_command h_safe_queue;    
+  };
+};
+
+#CLASS {cSafeQueue} {close};

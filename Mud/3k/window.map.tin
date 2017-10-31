@@ -1,0 +1,14 @@
+#VAR {mapBuffer} {};
+
+#ALIAS {.HandlerWindowMap}
+{
+  #NOP %1;
+  #IF {"$map[file]" == ""} #RETURN;
+  #MAP MAP {${session[ScreenCols]}x${session[HeadRows]}} {/tmp/map2.txt};
+  #SYSTEM {sed -i 's/\\/\\\\/g' /tmp/map2.txt};
+  #SCRIPT {mapBuffer} {cat /tmp/map2.txt};
+  .WindowSet {map} {$mapBuffer};
+  .WindowRefresh {map};
+};
+event_register {e_map_refresh} {h_window_map} {.HandlerWindowMap};
+event_register {e_map_room_enter} {h_window_map} {.HandlerWindowMap};

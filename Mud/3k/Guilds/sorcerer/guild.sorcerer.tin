@@ -1,0 +1,35 @@
+#class {cGuild} {kill}
+#class {cGuild} {open}
+
+#ACTION {HP: %d/%d  Fettle: %d/%d  G2L: %d}
+{
+  #VAR {my[hp][current]} {%1};
+  #VAR {my[hp][max]} {%2};
+  #VAR {my[gp1][current]} {%3};
+  #VAR {my[gp1][max]} {%4};
+}
+
+#ACTION {^{>\s|}Your spell has killed %*.}
+{
+  event_raise e_killed_opponent {%*};
+}
+
+#ALIAS {handler_corpse}
+{
+  #NOP %1;
+  #SEND {!wrap corpse};
+}
+event_register e_killed_opponent h_corpse_handler handler_corpse;
+
+#ALIAS {handler_auto_frozen}
+{
+  #NOP %1;
+  #IF {$opponent[hp] > 0}
+  {
+    #SEND {!frozen grasp};
+  };
+}
+auto {add} {frozen} {} {e_combat_round} {};
+auto {frozen} {on};
+
+#class {cGuild} {close}

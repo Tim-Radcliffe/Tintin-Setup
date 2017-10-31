@@ -1,0 +1,21 @@
+#CLASS {cMipHighlight} {kill};
+#CLASS {cMipHighlight} {open};
+
+#ALIAS {.HandlerMipHighlight}
+{
+  #NOP %1;
+  #LIST {temp} {CREATE} {%2};
+  #CLASS {cMipHigh2} {open};
+  #LINE SUBSTITUTE VARIABLE #SUBS {$temp[2]} {\e[4m$temp[2]\e[24m};
+  #CLASS {cMipHigh2} {close};
+};
+event_register {e_mip_HAB} {h_mip_highlight} {.HandlerMipHighlight};
+
+#ALIAS {.HandlerHighlightReset}
+{
+  #NOP %1;
+  #CLASS {cMipHigh2} {kill};
+}
+event_register {e_mip_BAD} {h_mip_highlight} {.HandlerHighlightReset};
+
+#CLASS {cMipHighlight} {close};

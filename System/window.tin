@@ -1,0 +1,70 @@
+#VAR {window} {};
+
+#NOP {windowname} {windowline} {content};
+#ALIAS {.WindowSetLine}
+{
+  #NOP %1;
+  .WindowAdd {%1};
+  #VAR {window[buffer][%1][%2]} {%3};
+  #VAR {window[update][%1]} {1};
+};
+
+#ALIAS {.WindowSet}
+{
+  #NOP %1;
+  .WindowAdd {%1};
+  #VAR {window[buffer][%1]} {%2};
+  #VAR {window[update][%1]} {1};
+};
+
+#ALIAS {.WindowAppend}
+{
+  #NOP %1;
+  .WindowAdd {%1};
+  #LIST {window[buffer][%1]} {insert} {1} {%2};
+  #VAR {window[update][%1]} {1};
+};
+
+#ALIAS {.WindowAdd}
+{
+  #NOP %1;
+  #IF {"$window[names][%1]" != "1"}
+  {
+    #VAR {window[names][%1]} {1};
+    #LIST {window[index]} {CREATE} {$window[names][]};
+  };  
+};
+
+#ALIAS {.WindowSwap}
+{
+  #NOP %1;
+  #IF {"$window[index][1]" == "" } {#RETURN;};
+  #LIST {window[index]} {add} {$window[index][1]};
+  #LIST {window[index]} {delete} {1};
+  event_raise {e_notify} {window} {<274>Window Displayed: $window[index][1]} {2};
+  .WindowRefresh {$window[index][1]};
+};
+
+#ALIAS {.WindowRefreshLine}
+{
+  #NOP %1;
+  #IF {"%1" == "$window[index][1]" || "%1" == "" }
+  {
+    #IF {%2 > 0 && %2 <= ($session[HeadRows]-1)}
+    {
+      #ECHO {{%-${session[ScreenCols]}s<099>}{$session[ScreenRows]-%2}} {$window[buffer][$window[index][1]][%2]};
+    };
+  };
+};
+
+#ALIAS {.WindowRefresh}
+{
+  #NOP %1;
+  #LOOP {1} {$session[HeadRows]-1} {i}
+  {
+    .WindowRefreshLine {%1} {$i};
+  };
+};
+event_register {e_screen_resize} {h_window_refresh} {.WindowRefresh};
+
+#MACRO {\t} {.WindowSwap};

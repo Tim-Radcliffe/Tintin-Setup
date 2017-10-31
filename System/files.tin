@@ -1,0 +1,67 @@
+#NOP {command} {parameters};
+#ALIAS {.file}
+{
+  #NOP %1;
+  #SWITCH {"%1"}
+  {
+    #CASE {"load"}
+    {
+      #VAR {result} {@fFileLoad{%2}};
+    };
+    #CASE {"loadall"}
+    {
+      #VAR {result} {@fFileLoadAll{%2}};
+    };
+    #CASE {"read"}
+    {
+      #ECHO {@fFileRead{%2}};
+    };
+    #CASE {"list"}
+    {
+      #VAR {_file[List]} {@fFileList{%1};};
+      #FOREACH {$_file[List][%*]} {_file[Name]} {#ECHO {$_file[Name]};};
+      #UNVAR {_file};
+    };
+    #DEFAULT 
+    {
+      #ECHO {Unrecognised Command};
+    };
+  };
+};
+
+#FUNCTION {fFileLoad}
+{
+  #CLASS {%1} {read} {%1};
+  #RETURN;
+};
+
+#FUNCTION {fFileLoadAll}
+{
+  #VAR {_fFLA[list]} {@fFileList{%1}};
+  #FORALL {$_fFLA[list][%*]} 
+  {
+    #VAR {result} {@fFileLoad{&0}};
+  };
+  #UNVAR {_fFLA};
+  #RETURN;
+};
+
+#FUNCTION {fFileList}
+{
+  #SCRIPT {result} {find %1 -type f};
+};
+
+#FUNCTION {fFileRead}
+{
+  #LINE SUBSTITUTE VARIABLE {#SCRIPT {result} {while read -r line; do echo "$line"; done < %1};};
+};
+
+#FUNCTION {fParseFilePath}
+{
+  #REGEXP {%1} {{^\\*(.+\\)*(.+)\.(.+)$}}
+  {
+    #VAR {result[path]} {&2};
+    #VAR {result[name]} {&3};
+    #VAR {result[ext]} {&4};
+  };
+};

@@ -1,0 +1,517 @@
+#VAR {map} {};
+#VAR {map[file]} {3k.map};
+#VAR {map[dirs]} {{s}{n}{sw}{ne}{w}{e}{nw}{se}{n}{s}{ne}{sw}{e}{w}{se}{nw}{d}{u}{u}{d}};
+
+#VAR {map[col]} {};
+#VAR {map[col][visited]}      {<178>};
+#VAR {map[col][unexplored]}   {<109>};
+#VAR {map[col][investigate]}  {<048>};
+#VAR {map[col][oddexits]}     {<068>};
+#VAR {map[col][money]}        {<128>};
+#VAR {map[col][interest]}     {<158>};
+#VAR {map[col][danger]}       {<118>};
+#VAR {map[col][black]}        {<000>};
+
+#VAR {RoomType}
+{
+  {link}
+  {
+    {symbol} {<138>*}
+    {colour} {${map[col][black]}}
+  }
+  {shop}
+  {
+    {symbol} {<138>%}
+    {colour} {${map[col][money]}}
+  }
+  {atm}
+  {
+    {symbol} {<138>$}
+    {colour} {${map[col][money]}}
+  }
+  {pub}
+  {
+    {symbol} {<138>P}
+    {colour} {${map[col][money]}}
+  }
+  {food}
+  {
+    {symbol} {<138>F}
+    {colour} {${map[col][money]}}
+  }
+  {stall}
+  {
+    {symbol} {<138>S}
+    {colour} {${map[col][money]}}
+  }
+  {special}
+  {
+    {symbol} {<138>?}
+    {colour} {${map[col][interest]}}
+  }
+  {danger}
+  {
+    {symbol} {<138>!}
+    {colour} {${map[col][danger]}}
+  }
+  {portal}
+  {
+    {symbol} {<138>@}
+    {colour} {${map[col][interest]}}
+  }
+  {guild}
+  {
+    {symbol} {<138>G}
+    {colour} {${map[col][interest]}}
+  }
+};
+
+#EVENT {MAP ENTER MAP}
+{
+  #MAP FLAG STATIC ON;
+  #VAR {map[edit]} {0};
+  event_raise {e_map_enter};
+  #NOP #SYSTEM {> /tmp/map.txt};
+  event_register {e_auto_move} {h_map_move} {handler_auto_move};
+};
+
+#EVENT {MAP EXIT MAP}
+{
+  event_raise {e_map_exit};
+  event_remove_specific e_auto_move h_map_move;
+};
+
+#EVENT {MAP ENTER ROOM}
+{
+  #VAR {map[room]} {@fMapRoomInfo{%0}};
+
+  #NOP Void rooms have roomflag binary 8 (1000). Skip them;
+  #IF { @fEval{ $map[room][roomflags] & 8 } == 0 }
+  {
+    #VAR {map[lastroom]} {%1};
+    event_raise {e_map_room_enter} {%0} {%1};
+  };
+};
+
+#EVENT {MAP EXIT ROOM}
+{
+  #NOP Void rooms have roomflag binary 8 (1000). Skip them;
+  #IF { @fEval{ $map[room][roomflags] & 8 } == 0 }
+  {
+    #VAR {map[nextroom]} {%1};
+    event_raise {e_map_room_exit} {%0} {%1};
+  };
+};
+
+#EVENT {END OF PATH}
+{
+  event_raise {e_map_path_end};
+};
+
+#ALIAS {.mapEdit}
+{
+  #IF {"$map[edit]" == "1"}
+  {
+    event_remove_specific {e_map_room_enter} {h_room_record} {.mapRoomRecord};
+    #VAR {map[edit]} {0};
+    #MAP FLAG STATIC ON;
+    #ECHO {MAP : Not Editable};
+  };
+  #ELSE
+  {
+    event_register {e_map_room_enter} {h_room_record} {.mapRoomRecord};
+    #VAR {map[edit]} {1};
+    #MAP FLAG STATIC OFF;
+    #ECHO {MAP : Editable};
+  };
+};
+
+#ALIAS {.mapRefresh}
+{
+  #IF {"$map[file]" == ""} #RETURN;
+  #MATH {map[cols]} {$session[MapCols]-1};
+  #MATH {map[rows]} {$session[ScreenRows]};
+  #MAP MAP {${map[cols]}x${map[rows]}} {/tmp/map.txt} {a};
+  event_raise {e_map_refresh};
+};
+
+#ALIAS {.mapLoad}
+{
+  #NOP %1;
+  #IF {"%1" == ""}
+  {
+    #ECHO {You must define a path};
+  };
+  #ELSE
+  {
+    #VAR {_mL} {};
+    #REGEX {%1} {{^(.*)/([^\/]*)$}} 
+    {
+      #VAR {_mL[path]} {&2};
+      #VAR {_mL[area]} {&3};
+    };
+
+    #VAR {map[file]} {$_mL[path]/$_mL[area]/$_mL[area].map};
+    #VAR {map[area][path]} {$_mL[path]/$_mL[area]};
+    #MAP {read} {$map[file]};
+    #UNVAR {_mL};   
+  };
+};
+
+#ALIAS {.mapSave}
+{
+  #NOP %1;
+  #IF {"$map[file]" == ""}
+  {
+    #ECHO {Path needed to save map}
+  };
+  #ELSE
+  {
+    #MAP {write} {$map[file]};
+    #ECHO {MAP: Saved};
+  };
+}
+
+#ALIAS {.mapAreaLink}
+{
+  #NOP %1;
+  #IF {"%1" == ""}
+  {
+    #ECHO {(exit command) (area name) (return command) (room vnum)};
+  };
+  #ELSE
+  {
+    #VAR {_mAL} {};
+    #VAR {_mAL[out][cmd]} {%1};
+    #VAR {_mAL[out][area]} {$map[area][path]};
+    #MAP {get} {vnum} {$_mAL[out][vnum]};
+    #VAR {_mAL[back][cmd]} {%3};
+    #VAR {_mAL[back][area]} {$map[area][path]/%2};
+    #VAR {_mAL[back][vnum]} {%4};
+
+    #IF {"$_mAL[back][vnum]" == ""} {#VAR {_mAL[back][vnum]} {1};};
+
+    #MAP {dig} {$_mAL[out][cmd]};
+    #MAP {exit} {$_mAL[out][cmd]} {command} {.mapAreaJump {$_mAL[back][area]} {$_mAL[back][vnum]} {$_mAL[out][cmd]};};
+    #MAP {at} {@fMapGetVnum{%1}}
+    {
+      #MAP {set} {roomarea} {$_mAL[back][area]};
+    };
+   
+    #MAP {write} {$map[file]};
+    
+    #VAR {map[file]} {@fMapCreate{$_mAL[back][area]}[2]};
+    #MAP {dig} {$_mAL[back][cmd]}
+    #MAP {exit} {$_mAL[back][cmd]} {command} {.mapAreaJump {$_mAL[out][area]} {$_mAL[out][vnum]} {$_mAL[out][cmd]};};
+    #MAP {at} {@fMapGetVnum{$_mAL[back][cmd]}}
+    {
+      #MAP {set} {roomarea} {$_mAL[out][area]};
+    };     
+  };
+}
+
+#FUNCTION {fMapGetVnum}
+{
+  #NOP %1;
+  #MAP {get} {roomexits} {_fMGV};
+  #VAR {result} {$_fMGV[%1]}
+  #UNVAR {_fMGV};
+}
+
+#FUNCTION {fMapCreate}
+{
+  #NOP %1;
+  #VAR {_fMC} {};
+
+  #REGEX {%0} {{^(.*)/([^\/]*)$}} 
+  {
+    #VAR {_fMC[path]} {&2};
+    #VAR {_fMC[area]} {&3};
+  };
+
+  #SCRIPT {_fMC[dir]} {find $_fMC[path]/$_fMC[area] -type d 2>&1};
+  #REGEX {$_fMC[dir][1]} {No such file or directory}
+  {
+    #VAR {_fMC[dir][1]} {$_fMC[path]/$_fMC[area]};
+    #SCRIPT {_fMC[result]} {mkdir $_fMC[dir][1]};
+  };
+
+  #VAR {_fMC[file]} {$_fMC[dir][1]/$_fMC[area].map};
+
+  #SCRIPT {_fMC[check]} {find $_fMC[file] -type f 2>&1};
+  #REGEX {$_fMC[check][1]} {No such file or directory}
+  {
+    #MAP {create} {500};
+    #MAP {goto} {1};
+    #MAP {write} {$_fMC[file]};
+  }
+  {
+    #MAP {read} {$_fMC[file]};
+    #MAP {goto} {1};
+  };
+  #VAR {result} {{$_fMC[dir][1]}{$_fMC[file]}};
+  #UNVAR {_fMC};
+}
+
+#ALIAS {.mapAreaJump}
+{
+  #NOP %1;
+  #SEND {!%3};
+  #NOP Following command needs a delay or Tintin++ crashes;
+  #DELAY {0.01} {.mapLoad {%1};#MAP {goto} {%2};};
+};
+
+#ALIAS {.mapFlag}
+{
+  #NOP %1;
+  #IF {"%0" != ""}
+  {
+    #VAR {map[room][roomnote]} {%0;$map[room][roomnote]};
+    #MAP set {roomnote} {$map[room][roomnote]};
+  };
+};
+
+#ALIAS {.mapFind}
+{
+  #MAP {list} {roomnote} {%*%1%*};
+};
+
+#ALIAS {.mapFindMe}
+{
+  #MAP {list} {roomname} {$room[name]} {roomexits} {$room[exits]};
+};
+
+#ALIAS {.mapRoom}
+{
+  #IF {"$RoomType[%1]" != "" && "%1" != ""}
+  {
+    .mapFlag %1;
+    #MAP {set} {roomsymbol} {$RoomType[%1][symbol]};
+    #MAP {set} {roomcolor} {$RoomType[%1][colour]};
+    .mapRefresh;
+  };
+  #ELSE
+  {
+    #SHOWME {Room Types:};
+    #SHOWME {==========};
+    #FORALL {$RoomType[]}
+    {
+      #SHOWME {$RoomType[&0][colour] [$RoomType[&0][symbol]$RoomType[&0][colour]]<099> : &0};
+    };
+  };
+};
+
+#ALIAS {.mapRoomSpecialExit}
+{
+  #NOP %1;
+  #IF {"$map[specialexit][%2][%3]" != ""}
+  {
+    .mapRun {pause};
+    #ACTION {$map[specialexit][%2][%3][trigger]}
+    {
+      #IF {"$map[specialexit][%2][%3][command]" != ""}
+      {
+        #SEND {!$map[specialexit][%2][%3][command]};
+      };
+      .mapRun;
+      #UNACTION {$map[specialexit][%2][%3][trigger]};
+    } {2};
+  };
+};
+event_register {e_map_room_exit} {h_map_room_specialexit} {.mapRoomSpecialExit};
+
+#ALIAS {.mapRoomRecord}
+{
+  #NOP %1;
+
+  #IF {"$map[edit]" == "1"}
+  {
+    #IF {"$map[room][roomcolor]" == "$map[col][unexplored]" || "$map[room][roomcolor]" == "$map[col][investigate]"}
+    {
+      #MAP set roomcolor $map[col][visited];
+    };
+  };
+};
+
+#ALIAS {.mapRun}
+{
+  #NOP %1;
+  #IF {"%1" == "stop"}
+  {
+    #UNVAR {map[run]};
+    #UNTICKER {tWalk};
+    #UNACTION {#END OF PATH.};
+  };
+  #ELSEIF {"%1" == "pause"}
+  {
+    #UNTICKER {tWalk};
+  };
+  #ELSE
+  {
+    #IF {"%1" != ""}
+    {
+      #VAR {map[run][dest]} {%1};
+      #MAP FIND $map[run][dest];
+    };
+    #IF {"$map[run][dest]" != ""}
+    {
+      #ACTION {#END OF PATH.}
+      {
+        .mapRun {stop};
+      };
+      #TICKER {tWalk} {#PATH {walk};} {0.1};
+    };
+  };
+};
+
+#ALIAS {.goto}
+{
+  #NOP %1;
+  #UNVAR {map[destination]};
+  #UNVAR {map[rooms]};
+
+  #IF {"%1" == ""}
+  {
+    #ECHO {You must enter something to search for!};
+  };
+  #ELSE
+  {
+    #FORALL {roomnote;roomarea}
+    {
+      #IF {"$map[rooms][+1]" == ""}
+      {
+        #MAP list {&0} {%i%*%0%*} {variable} {map[rooms]};
+      };
+    };
+
+    #IF {"$map[rooms][+1]" != ""}
+    {
+      #IF {"$map[rooms][+2]" == ""}
+      {
+        #FORALL {$map[rooms][]}
+        {
+          #VAR {map[destination]} {&0};
+        };
+        #nop #MAP run $map[destination];
+        .mapRun $map[destination];
+      };
+
+      #ELSE
+      {
+        #ECHO {Please select from the list (0 to cancel):};
+        #CLASS {cMapGotoMacros} {open};
+        #MACRO {0}
+        {
+          #CLASS {cMapGotoMacros} {kill};
+          #ECHO {Cancelled};
+        };
+        #ALIAS {.GotoMacro}
+        {
+          #MACRO {%%1}
+          {
+            #NOP delay added because ticker wouldn't add from macro for some reason;
+            #DELAY {0.1} {.mapRun %%2};
+            #CLASS {cMapGotoMacros} {kill};
+          };
+        };
+
+        #VAR {i} {0};
+
+        #FORALL {$map[rooms][]}
+        {
+          #MATH {i} {$i + 1};
+          #IF {$i < 27}
+          {
+            #FORMAT {map[temp][macroletter]} {%a} {$i+96};
+            .GotoMacro {$map[temp][macroletter]} {&0};
+            #VAR {map[temp][info]} {@fMapRoomInfo{&0}};
+            #ECHO {$map[temp][macroletter] : $map[temp][info][roomname] ($map[temp][info][roomarea])};
+          };
+          #IF {$i == 27}
+          {
+            #ECHO {Further matches not shown.};
+          }
+        };
+      };
+    };
+  };
+};
+
+#ALIAS {.mapAreaList}
+{
+  #MAP {get} {worldsize} {map[worldsize]};
+  #MAP {list} {variable} {map[roomlist]};
+  #FORALL {$map[roomlist][]}
+  {
+    #ECHO {ROOM: &0};
+
+    #IF {"&0" != "" && "$map[roomlist][&0]" != ""}
+    {
+      #MAP at &0
+      {
+        #MAP {get} {roomarea} {map[arealist][areaname]};
+        #MAP {get} {roomname} {map[arealist][roomname]};
+
+        #REPLACE {map[arealist][areaname]} {[} {I};
+        #REPLACE {map[arealist][areaname]} {]} {I};
+
+        #VAR {map[arealist][list][$map[arealist][areaname]]} {&0};
+      };
+    };
+  };
+
+  #UNVAR {map[roomlist]};
+
+  #FORALL {$map[arealist][list][]}
+  {
+    #ECHO {vnum: %+5d area: %s} {$map[arealist][list][&0]} {&0};
+  };
+};
+
+#ALIAS {.arealist} 
+{
+  #IF {"$map[arealist]" == ""}
+  {
+  
+    #ECHO {PLEASE WAIT....Building Area List};
+    #MAP {get} {worldsize} {map[worldsize]};
+
+    #LOOP {$map[worldsize]} {1} {i} 
+    { 
+      #MAP at $i 
+      { 
+        #MAP {get} {roomarea} {map[arealist][areaname]};
+        #MAP {get} {roomname} {map[arealist][roomname]};
+
+        #REPLACE {map[arealist][areaname]} {[} {I};
+        #REPLACE {map[arealist][areaname]} {]} {I};      
+        
+        #VAR {map[arealist][$map[arealist][areaname]]} {$i};                 
+      }; 
+    };
+  };
+  
+  #FORALL {$map[arealist][]}
+  {
+    #ECHO {vnum: %+5d area: %s} {$map[arealist][&0]} {&0};
+  };  
+};
+
+#ALIAS {handler_auto_move}
+{
+  #IF {"$map[file]" == ""} #RETURN;
+  #MAP move %2;
+};
+
+#FUNCTION {fMapRoomInfo}
+{
+  #IF {"%1" == ""}
+  {
+    #RETURN;
+  };
+
+  #FORALL {roomarea;roomdata;roomnote;roomname;roomdesc;roomsymbol;roomcolor;roomflags;roomterrain;roomvnum;roomexits}
+  {
+    #MAP AT %1 #MAP GET {&0} {result[&0]};
+  };
+};

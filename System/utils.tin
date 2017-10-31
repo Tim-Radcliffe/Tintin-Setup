@@ -1,0 +1,290 @@
+#ALIAS {.AnsiFlags}
+{
+  #IF {"%1" == "on"}
+    {
+      #SEND {!aset look_armor_pref <ESC>[36m<A`};
+      #SEND {!aset look_armor_suff `><ESC>[0m};
+      #SEND {!aset look_monster_pref <ESC>[33m<M`};
+      #SEND {!aset look_monster_suff `><ESC>[0m};
+      #SEND {!aset look_other_pref <ESC>[32m<O`};
+      #SEND {!aset look_other_suff `><ESC>[0m};
+      #SEND {!aset look_player_pref <ESC>[37m<P`};
+      #SEND {!aset look_player_suff `><ESC>[0m};
+      #SEND {!aset look_weapon_pref <ESC>[31m<W`};
+      #SEND {!aset look_weapon_suff `><ESC>[0m};
+      #SEND {!aset room_short_pref <ESC>[37m<R`};
+      #SEND {!aset room_short_suff `><ESC>[0m};
+      #SEND {!aset room_long_pref <ESC>[33m<L`};
+      #SEND {!aset room_long_suff `><ESC>[0m};
+    }
+    {
+      #SEND {!aset look_armor_pref <ESC>[36m};
+      #SEND {!aset look_armor_suff <ESC>[0m};
+      #SEND {!aset look_monster_pref <ESC>[33m};
+      #SEND {!aset look_monster_suff <ESC>[0m};
+      #SEND {!aset look_other_pref <ESC>[32m};
+      #SEND {!aset look_other_suff <ESC>[0m};
+      #SEND {!aset look_player_pref <ESC>[37m};
+      #SEND {!aset look_player_suff <ESC>[0m};
+      #SEND {!aset look_weapon_pref <ESC>[31m};
+      #SEND {!aset look_weapon_suff <ESC>[0m};
+      #SEND {!aset room_short_pref <ESC>[37m};
+      #SEND {!aset room_short_suff <ESC>[0m};
+      #SEND {!aset room_long_pref <ESC>[33m};
+      #SEND {!aset room_long_suff <ESC>[0m};
+    };
+};
+
+#NOP {message} {yes/default action} {no action};
+#ALIAS {.aYesNo}
+{
+  #IF {"%1" == ""}
+  {
+    #unmacro {y};
+    #unmacro {n};
+    #unmacro {\ea};
+    .aMessage {};
+  }
+  {
+    .aMessage {%1 (y/n)};
+    #MACRO {y}
+    {
+      %2;
+      .aYesNo {};
+    };
+    #MACRO {\ea}
+    {
+      %2;
+      .aYesNo {};
+    };
+    #MACRO {n}
+    {
+      %3;
+      .aYesNo {};
+    };
+  };
+};
+
+#ALIAS {.aWarning}
+{
+	event_raise e_warning {%0};
+	#ECHO {<110>************* <001>WARNING: %0<110> *****************<099>};
+	#BELL;
+};
+
+#ALIAS {.aMessage}
+{
+  #IF {"%1" != ""}
+  {
+    #BELL;
+    event_raise {e_notify} {message} {<171>%1} {%2};
+  }
+  {
+    event_raise {e_notify} {message} {};
+  };
+};
+
+#NOP Calculate the sum of an array of numbers;
+#FUNCTION {fSumArray}
+{
+  #VAR {tmpkey} {0};
+  #UNVAR {tmp};
+  #VAR {result} {0};
+  #FOREACH {%0} {tmp}
+  {
+    #IF {$tmpkey == 1}
+    {
+      #MATH {result} {$result + $tmp};
+      #VAR {tmpkey} {0};
+    }
+    {
+      #VAR {tmpkey} {1};
+    }
+  }
+  #UNVAR {tmp};
+};
+
+#NOP Truncate a string to a specific length;
+#NOP { {data to truncate} {length} };
+#FUNCTION {fTrunc}
+{
+  #IF {"%1" == ""} RETURN;
+  #IF {"%2" == ""} RETURN %1;
+
+  #REGEXP {%1} {^{.{%2}}{.*}}
+  {
+    #RETURN &1;
+  }
+  {
+    #RETURN %1;
+  };
+};
+
+#NOP Output a Bar Gauge;
+#NOP {content} {current value} {max value} {colour code} {gauge width};
+#FUNCTION {fGauge}
+{
+  #VAR {_fG} {};
+  #VAR {_fG[text]} {@fTrunc{{%1}{%5}}};
+  #VAR {_fG[len]} {@fEval{(%2*%5)/%3}};
+  #VAR {_fG[max]} {@fMin{${_fG[len]};%5}};
+  #IF {${_fG[len]} > ${_fG[max]}}
+  {
+    #FORMAT {result} {[<%4><aaa>%s<AAA><fff>]} {@fLinePad{{@fTrunc{{${_fG[text]}}{@fEval{%5-1}}}}{+}{%5}}};
+  }
+  {
+    #REGEXP {@fLinePad{{${_fG[text]}}{}{%5}}} {^{.{${_fG[max]}}}{.*}}
+    {
+      #FORMAT {result} {[<%4><aaa>%s<AAA><fff>%s]} {&1} {&2};
+    }
+    {
+      #FORMAT {result} {[<%4><aaa>%s<AAA><fff>]} {${_fG[text]}};
+    };
+  };
+  #UNVAR {_fG};
+};
+
+#NOP Pad a line of text to the width specified;
+#NOP {lefthand contents} {righthand contents} {length};
+#FUNCTION {fLinePad}
+{
+  #VAR {_fLP} {};
+  #IF {"%3" == ""}
+  {
+    #VAR {_fLP[LineLength]} {$session[ScreenCols]};
+  }
+  {
+    #VAR {_fLP[LineLength]} {%3};
+  }
+  #FORMAT {_fLP[BarLength]} {%L} {%1};
+  #MATH   {_fLP[BarPad]} {$_fLP[LineLength] - $_fLP[BarLength]};
+  #FORMAT {result} {%s%+${_fLP[BarPad]}s<099>} {%1} {%2};
+  #UNVAR {_fLP};
+};
+
+#NOP Evaluate a calculation;
+#FUNCTION {fEval}
+{
+  #MATH {result} {%1};
+};
+
+#NOP Get a specific entry from a semi-colon delimited list;
+#NOP { {list} {index} };
+#FUNCTION {fListValue}
+{
+  #IF {"%1" == "" || "%2" == ""}
+  {
+    #RETURN;
+  };
+
+  #LIST {_fLV[list]} {CREATE} {%1};
+  #LIST {_fLV[list]} {SIZE} {_fLV[size]};
+
+  #VAR {_fLV[pos]} {%2};
+
+  #LIST {_fLV[list]} {GET} {$_fLV[pos]} {result};
+  #UNVAR {_fLV};
+};
+
+#NOP Get a specific entry from a semi-colon delimited list;
+#NOP { {list} {index} };
+#FUNCTION {fListValueOld}
+{
+  #IF {"%1" == "" || "%2" == ""}
+  {
+    #RETURN;
+  };
+
+  #VAR {_fLV[i]} {0};
+  #VAR {_fLV[j]} {%2};
+  #LIST {_fLV[list]} {CREATE} {%1};
+  #LIST {_fLV[list]} {SIZE} {_fLV[size]};
+
+  #IF {${_fLV[j]} < 0}
+  {
+    #VAR {_fLV[j]} {@fEval{${_fLV[size]} + ${_fLV[j]} + 1}};
+  };
+
+  #FOREACH {%1} {_fLV[item]}
+  {
+    #VAR {_fLV[i]} {@fEval{${_fLV[i]} + 1}};
+    #IF {"${_fLV[i]}" == "${_fLV[j]}"}
+    {
+      #VAR {result} ${_fLV[item]};
+    };
+  };
+  #UNVAR {_fLV};
+};
+
+#FUNCTION {fStripBraces}
+{
+  #VAR {_fSB} {%1};
+  #VAR {result} {};
+
+  #IF {"${_fSB}" == ""}
+  {
+    #RETURN;
+  };
+
+  #WHILE {"$result" == ""}
+  {
+    #REGEXP {${_fSB}} {{(.*)\\x7B(.*)}}
+    {
+      #VAR {_fSB} {&2(&3};
+    }
+    {
+      #REGEXP {${_fSB}} {{(.*)\\x7D(.*)}}
+      {
+        #VAR {_fSB} {&2)&3};
+      }
+      {
+        #VAR {result} {${_fSB}};
+      };
+    };
+  };
+  #UNVAR {_fSB};
+};
+
+#NOP Return minimum of a list of values;
+#NOP {value 1} {value 2} {value 3} ...;
+#FUNCTION {fMin}
+{
+  #VAR {result} {%1};
+  #FOREACH {%0} {_fMin}
+  {
+    #IF {$_fMin < $result} {#VAR {result} {$_fMin};};
+  }
+  #UNVAR {_fMin};
+};
+
+#NOP Return maximum of a list of values;
+#NOP {value 1} {value 2} {value 3} ...;
+#FUNCTION {fMax}
+{
+  #VAR {result} {%1};
+  #FOREACH {%0} {_fMax}
+  {
+    #IF {$_fMax > $result} {#VAR {result} {$_fMax};};
+  }
+  #UNVAR {_fMax};
+};
+
+#NOP Return a comma separated string from a list of values;
+#FUNCTION {fCommaList}
+{
+  #VAR {_fCL[list]} {%0};
+  #VAR {_fCL[i]} {0};
+  #VAR {_fCL[sep]} {, };
+  #VAR {result} {};
+  #LIST {_fCL[list]} {size} {_fCL[len]};
+  #FOREACH {$_fCL[list][%*]} {_fCL[entry]}
+  {
+    #VAR {result} {$result$_fCL[entry]};
+    #MATH {_fCL[i]} {$_fCL[i] + 1};
+    #IF {$_fCL[i] < $_fCL[len]}
+    {
+      #VAR {result} {$result$_fCL[sep]};
+    };
+  };
+  #UNVAR {_fCL};
+};
