@@ -1,0 +1,109 @@
+#NOP /********************************************************************/;
+#NOP /* Generic MySQL Database Connector                                 */;
+#NOP /* By Balthus - 8th March 2010                                      */;
+#NOP /*                                                                  */;
+#NOP /* db_submit works the same way as #FORMAT                          */;
+#NOP /*                                                                  */;
+#NOP /* db_submit {returnvar}                                            */;
+#NOP /* {select * from tablename where fieldname = '%s'} {match text}    */;
+#NOP /*                                                                  */;
+#NOP /* Parses the output and puts it into an associative array:         */;
+#NOP /* $returnvar[recordnumber][fieldname]                              */;
+#NOP /*                                                                  */;
+#NOP /* E.G. to get the data from HP field of the first record returned: */;
+#NOP /* #VAR {varname} {$returnvar[1][HP]}                               */;
+#NOP /*                                                                  */;
+#NOP /********************************************************************/;
+
+#NOP **** Database Connection Info ****;
+
+.file load {$path[data]/dbSettings.tin};
+
+#NOP **** Constants ****;
+#FORMAT {dbSettings[tab]} {%a} {9};
+
+#ALIAS {db_submit}
+{
+  #IF {"%0" != ""}
+  {
+    #VAR {db} {};
+
+    #NOP /* Start constructing #FORMAT command to construct full SQL query string */;
+    #VAR {dbFormat} {#FORMAT {db[Command]} {%2}};
+    #VAR {db[Count]} {0};
+
+    #NOP /* Parse parameters 3->n, remove quotes, and append to #FORMAT command string */;
+    #FOREACH {%0} {db[Temp]}
+    {
+      #MATH {db[Count]} {$db[Count] + 1};
+      #IF {$db[Count] > 2}
+      {
+        #REPLACE {db[Temp]} {"} {'};
+        #REPLACE {db[Temp]} {'} {''};
+        #IF {"$db[Temp]" != ""}
+        {
+
+          #VAR {dbFormat} {${dbFormat}{${db[Temp]}}};
+        };
+      };
+    };
+
+    #NOP /* Perform built #FORMAT command to construct full SQL command in db[Command] */;
+    ${dbFormat};
+
+    #NOP /* Send constructed SQL command to the database, collecting returned raw output (if any) into db[Return] */;
+    #SCRIPT {db[return]} {mysql -h${dbSettings[server]} -u${dbSettings[user]} -p${dbSettings[pass]} -D${dbSettings[database]} -Be "${db[Command]}"};
+
+    #VAR {db[output]} {};
+    #VAR {db[temp]} {};
+
+    #NOP /* Loop through returned tab-delimited records (if any) and process */;
+    #FOREACH {$db[return][]} {i}
+    {
+      #VAR {db[fieldindex]} {0};
+      #MATH {db[recordindex]} {$i - 1};
+
+      #NOP /* Loop through every character in the current record...split into fields on tab */;
+      #PARSE {$db[return][$i]} {j}
+      {
+        #IF {"$j" == "$dbSettings[tab]"}
+        {
+          #MATH {db[fieldindex]} {$db[fieldindex] + 1};
+
+          #NOP /* If its the first record (header record) set the field names */;
+          #NOP /* Otherwise populate the field contents                       */;
+          #IF {$i == 1}
+          {
+            #VAR {db[fields][$db[fieldindex]]} {$db[temp]};
+          }
+          {
+            #VAR {db[output][$db[recordindex]][$db[fields][$db[fieldindex]]]} {$db[temp]};
+          };
+          #VAR {db[temp]} {};
+        }
+        {
+          #VAR {db[temp]} {$db[temp]${j}};
+        };
+      };
+
+      #NOP /* Process the data remaining after the last tab on a record */;
+      #MATH {db[fieldindex]} {$db[fieldindex] + 1};
+      #IF {$i == 1}
+      {
+        #VAR {db[fields][$db[fieldindex]]} {$db[temp]};
+      }
+      {
+        #VAR {db[output][$db[recordindex]][$db[fields][$db[fieldindex]]]} {$db[temp]};
+      };
+      #VAR {db[temp]} {};
+    };
+
+    #NOP /* Put processed results into output array name (if provided) and clean up */;
+    #IF {"%1" != ""}
+    {
+      #VAR {%1} {$db[output]};
+    };
+    #UNVAR {db};
+    #UNVAR {dbFormat};
+  };
+};
