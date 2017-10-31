@@ -1,4 +1,5 @@
 *.log
 *.swp
+*.save
 log.txt
 Data/*

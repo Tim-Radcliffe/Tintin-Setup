@@ -75,9 +75,9 @@
     #UNMACRO {y};
     #UNMACRO {n};
     #UNMACRO {/ea};
+    #LOCAL {null} {@fFileCreateDir{$path[data]/$_profile[gameName]/Profiles/$_profile[name]}};
     #IF {!@fFileExists{$path[data]/profiles.csv}}
     {
-      #SCRIPT {mkdir -p $path[data]};
       #LINE {log} {$path[data]/profiles.csv} {name,password,gameName,gameHost,gamePort};
       #ECHO {PROFILE: $path[data]/profile.csv created};
     };

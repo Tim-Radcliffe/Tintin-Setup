@@ -62,6 +62,11 @@
   #RETURN $result[1];
 };
 
+#FUNCTION {fFileCreateDir}
+{
+  #SCRIPT {mkdir -p "%1"};
+};
+
 #FUNCTION {fParseFilePath}
 {
   #REGEXP {%1} {{^\\*(.+\\)*(.+)\.(.+)$}}
