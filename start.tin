@@ -74,11 +74,11 @@
   };
   #ELSE
   {
-     #ECHO;
-     #ECHO {Profile config file $path[data]/profiles.csv not found.};
-     #ECHO {Please enter mud/account details to continue:};
-     #ECHO;
-     #CLASS {$path[system]/profiles.tin} {read} {$path[system]/profiles.tin};
+    #ECHO {};
+    #ECHO {Profile config file $path[data]/profiles.csv not found.};
+    #ECHO {Please enter mud/account details to continue:};
+    #ECHO {};
+    .file load {$path[system]/profiles.tin};
     .profileCreate;
   };
   
