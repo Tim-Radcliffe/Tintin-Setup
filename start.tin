@@ -1,7 +1,8 @@
 #MESSAGE {all} {off};
 
 #VAR {path[system]} {System};
-#VAR {path[data]} {Data};
+#VAR {path[tools]}  {System/Tools};
+#VAR {path[data]}   {Data};
 
 #CLASS {$path[system]/files.tin} {read} {$path[system]/files.tin};
 #CLASS {$path[system]/csv.tin}   {read} {$path[system]/csv.tin};
@@ -53,7 +54,7 @@
     {
       #UNMACRO {0};
       #FORALL {$users[]} {#UNMACRO {&0};};
-      .file load {$path[system]/profiles.tin};
+      .file load {$path[tools]/profiles.tin};
       .profileCreate;
       #UNMACRO {+};
     };
@@ -78,7 +79,7 @@
     #ECHO {Profile config file $path[data]/profiles.csv not found.};
     #ECHO {Please enter mud/account details to continue:};
     #ECHO {};
-    .file load {$path[system]/profiles.tin};
+    .file load {$path[tools]/profiles.tin};
     .profileCreate;
   };
   
