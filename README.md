@@ -1,5 +1,5 @@
 # Tintin-Setup
-[Tintin++](http://tintin.sourceforge.net) scripts for running in a Mud, including:
+[Tintin++](http://tintin.sourceforge.net) scripts for playing muds, including:
 
 * Multiple map heirarchy handling with travel between maps.
 * "Graphical" gauge display
