@@ -1,2 +1,3 @@
 #CONFIG {command echo} {off};
-#CONFIG {256 colors} {on};
+#CONFIG {256 colors}   {on};
+#CONFIG {charset}      {utf-8}; 
