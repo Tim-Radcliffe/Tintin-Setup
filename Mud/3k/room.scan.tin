@@ -54,8 +54,8 @@
 
 #NOP **** Substitutions ****;
 #NOP ** All flagged objects
-#SUBSTITUTE {<%w`} {};
-#SUBSTITUTE {`>} {};
+#NOP #SUBSTITUTE {<%w`} {};
+#NOP #SUBSTITUTE {`>} {};
 
 #NOP **** Triggers ****
 #NOP ** brief no map

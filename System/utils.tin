@@ -1,39 +1,14 @@
-#ALIAS {.AnsiFlags}
+#ALIAS {.aGlobalVar}
 {
-  #IF {"%1" == "on"}
-    {
-      #SEND {!aset look_armor_pref <ESC>[36m<A`};
-      #SEND {!aset look_armor_suff `><ESC>[0m};
-      #SEND {!aset look_monster_pref <ESC>[33m<M`};
-      #SEND {!aset look_monster_suff `><ESC>[0m};
-      #SEND {!aset look_other_pref <ESC>[32m<O`};
-      #SEND {!aset look_other_suff `><ESC>[0m};
-      #SEND {!aset look_player_pref <ESC>[37m<P`};
-      #SEND {!aset look_player_suff `><ESC>[0m};
-      #SEND {!aset look_weapon_pref <ESC>[31m<W`};
-      #SEND {!aset look_weapon_suff `><ESC>[0m};
-      #SEND {!aset room_short_pref <ESC>[37m<R`};
-      #SEND {!aset room_short_suff `><ESC>[0m};
-      #SEND {!aset room_long_pref <ESC>[33m<L`};
-      #SEND {!aset room_long_suff `><ESC>[0m};
-    }
-    {
-      #SEND {!aset look_armor_pref <ESC>[36m};
-      #SEND {!aset look_armor_suff <ESC>[0m};
-      #SEND {!aset look_monster_pref <ESC>[33m};
-      #SEND {!aset look_monster_suff <ESC>[0m};
-      #SEND {!aset look_other_pref <ESC>[32m};
-      #SEND {!aset look_other_suff <ESC>[0m};
-      #SEND {!aset look_player_pref <ESC>[37m};
-      #SEND {!aset look_player_suff <ESC>[0m};
-      #SEND {!aset look_weapon_pref <ESC>[31m};
-      #SEND {!aset look_weapon_suff <ESC>[0m};
-      #SEND {!aset room_short_pref <ESC>[37m};
-      #SEND {!aset room_short_suff <ESC>[0m};
-      #SEND {!aset room_long_pref <ESC>[33m};
-      #SEND {!aset room_long_suff <ESC>[0m};
-    };
+  #IF {"${%1}" != "%2"}
+  {
+    #CLASS {cGlobalVars} {open};
+    #VAR {%1} {%2};
+    #CLASS {cGlobalVars} {close};
+  };
+  #CLASS {cGlobalVars} {write} {$path[profile]/$session[name].data.tin};
 };
+event_register {e_15_mins} {h_globals} {.aGlobalVar};
 
 #NOP {message} {yes/default action} {no action};
 #ALIAS {.aYesNo}

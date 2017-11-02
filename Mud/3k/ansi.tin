@@ -1,0 +1,37 @@
+#ALIAS {.AnsiFlags}
+{
+  #IF {"%1" == "on"}
+    {
+      #SEND {!aset look_armor_pref <ESC>[36m<A`<ESC>[3D<ESC>[0K};
+      #SEND {!aset look_armor_suff `><ESC>[2D<ESC>[0K<ESC>[0m};
+      #SEND {!aset look_monster_pref <ESC>[33m<M`<ESC>[3D<ESC>[0K};
+      #SEND {!aset look_monster_suff `><ESC>[2D<ESC>[0K<ESC>[0m};
+      #SEND {!aset look_other_pref <ESC>[32m<O`<ESC>[3D<ESC>[0K};
+      #SEND {!aset look_other_suff `><ESC>[2D<ESC>[0K<ESC>[0m};
+      #SEND {!aset look_player_pref <ESC>[37m<P`<ESC>[3D<ESC>[0K};
+      #SEND {!aset look_player_suff `><ESC>[2D<ESC>[0K<ESC>[0m};
+      #SEND {!aset look_weapon_pref <ESC>[31m<W`<ESC>[3D<ESC>[0K};
+      #SEND {!aset look_weapon_suff `><ESC>[2D<ESC>[0K<ESC>[0m};
+      #SEND {!aset room_short_pref <ESC>[37m<R`<ESC>[3D<ESC>[0K};
+      #SEND {!aset room_short_suff `><ESC>[2D<ESC>[0K<ESC>[0m};
+      #SEND {!aset room_long_pref <ESC>[33m<L`<ESC>[3D<ESC>[0K};
+      #SEND {!aset room_long_suff `><ESC>[2D<ESC>[0K<ESC>[0m};
+    }
+    {
+      #SEND {!aset look_armor_pref <ESC>[36m};
+      #SEND {!aset look_armor_suff <ESC>[0m};
+      #SEND {!aset look_monster_pref <ESC>[33m};
+      #SEND {!aset look_monster_suff <ESC>[0m};
+      #SEND {!aset look_other_pref <ESC>[32m};
+      #SEND {!aset look_other_suff <ESC>[0m};
+      #SEND {!aset look_player_pref <ESC>[37m};
+      #SEND {!aset look_player_suff <ESC>[0m};
+      #SEND {!aset look_weapon_pref <ESC>[31m};
+      #SEND {!aset look_weapon_suff <ESC>[0m};
+      #SEND {!aset room_short_pref <ESC>[37m};
+      #SEND {!aset room_short_suff <ESC>[0m};
+      #SEND {!aset room_long_pref <ESC>[33m};
+      #SEND {!aset room_long_suff <ESC>[0m};
+    };
+};
+

@@ -1,18 +1,8 @@
-#class {cGeneral} {kill}
-#class {cGeneral} {open}
 #NOP ************ Variables ************;
 
 #FORMAT {gvNull} {%s};
 #VAR {gvMessageBuffer} {$gvNull};
 #VAR {area} {};
-
-#NOP ************ Events ***************;
-
-#NOP Raise an event for every command manually typed in.
-#EVENT {RECEIVED INPUT}
-{
-  event_raise e_command {%0};
-};
 
 #NOP ************ Triggers *************;
 
@@ -41,18 +31,4 @@
   event_raise e_keep {%3};
 } {2};
 
-#NOP **** FUNCTIONS ****;
 
-#ALIAS {.aGlobalVar}
-{
-  #IF {"${%1}" != "%2"}
-  {
-    #CLASS {cGlobalVars} {open};
-    #VAR {%1} {%2};
-    #CLASS {cGlobalVars} {close};
-  };
-  #CLASS {cGlobalVars} {write} {$session[name].data.tin};
-};
-event_register {e_guild_reset} {h_reset} {.aGlobalVar};
-
-#class {cGeneral} {close}
