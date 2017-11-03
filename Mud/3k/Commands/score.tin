@@ -24,15 +24,15 @@
     #UNACTION {{^(>\s|)Dex:\s*(\d+)\s*\((\d+)\)\s+Age\s+:\s+(.*?)\s+Money\s*:\s*(\S+)}};
   };
 
-  #ACTION {{^(>\s|)Wis:\s*(\d+)\s*\((\d+)\)\s+Guild\s+:\s+(.*?)\s+\((\d+)\)\s*Bank\s*:\s*(\S+)}}
+  #ACTION {{^(>\s|)Wis:\s*(\d+)\s*\((\d+)\)\s+Guild\s+:\s+(.*?)\s+(\((\d+)\)|)\s*Bank\s*:\s*(\S+)}}
   {
     #VAR {my[wis][curr]}  {%%3};
     #VAR {my[wis][base]}  {%%4};
     #FORMAT {my[guild]} {%l} {%%5};
-    #VAR {my[$my[guild]][level]}  {%%6};
-    #VAR {my[gold][bank]} {%%7};
+    #VAR {my[$my[guild]][level]}  {%%7};
+    #VAR {my[gold][bank]} {%%8};
     #REPLACE {my[gold][bank]} {,} {};
-    #UNACTION {{^(>\s|)Wis:\s*(\d+)\s*\((\d+)\)\s+Guild\s+:\s+(.*?)\s+\((\d+)\)\s*Bank\s*:\s*(\S+)}};
+    #UNACTION {{^(>\s|)Wis:\s*(\d+)\s*\((\d+)\)\s+Guild\s+:\s+(.*?)\s+(\((\d+)\)|)\s*Bank\s*:\s*(\S+)}};;
   };
 
   #ACTION {{^(>\s|)Int:\s*(\d+)\s*\((\d+)\)\s+Status\s+:\s+(.*?)\s+\s*Quests\s*:\s*(\d+)}}
