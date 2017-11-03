@@ -1,19 +1,19 @@
-/* Auto - framework to easily add and turn on/off automatic actions                   */
-/*                                                                                    */
-/* Add a new automatic action with:                                                   */
-/*                                                                                    */
-/* auto {name} {start actions} {trigger event} {stop actions}                         */
-/*                                                                                    */
-/* start actions defines what to do when turning this auto on                         */
-/* and stop actions are cleanup actions when turning it off again                     */
-/*                                                                                    */
-/* whenever the trigger event for action "name" is encountered,                       */
-/* the action handler_auto_name is fired (if the auto setting is turned on)           */
-/*                                                                                    */
-/* auto            : lists all current settings with on/off status                    */ 
-/* auto {name}     : toggles the setting on and off.                                  */
-/* auto {name} on  : turns the setting on.                                            */
-/* auto {name} off : turns it off                                                     */
+#NOP /* Auto - framework to easily add and turn on/off automatic actions              */;
+#NOP /*                                                                               */;
+#NOP /* Add a new automatic action with:                                              */;
+#NOP /*                                                                               */;
+#NOP /* auto {name} {start actions} {trigger event} {stop actions}                    */;
+#NOP /*                                                                               */;
+#NOP /* start actions defines what to do when turning this auto on                    */;
+#NOP /* and stop actions are cleanup actions when turning it off again                */;
+#NOP /*                                                                               */;
+#NOP /* whenever the trigger event for action "name" is encountered,                  */;
+#NOP /* the action handler_auto_name is fired (if the auto setting is turned on)      */;
+#NOP /*                                                                               */;
+#NOP /* auto            : lists all current settings with on/off status               */;
+#NOP /* auto {name}     : toggles the setting on and off.                             */;
+#NOP /* auto {name} on  : turns the setting on.                                       */;
+#NOP /* auto {name} off : turns it off                                                */;
 
 #NOP ************ Variables ************;
 #NOP #VAR {auto} {};
