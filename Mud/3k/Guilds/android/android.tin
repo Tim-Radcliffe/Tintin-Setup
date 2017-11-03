@@ -36,7 +36,7 @@ event_register e_killed_opponent h_corpse_handler handler_corpse;
 #ALIAS {handler_auto_nanosurge}
 {
   #NOP %1;
-  #IF {$my[hp][current] < $my[hp][max] && $my[gp1][current] > @fEval{$my[android][nanobots] * 5}}
+  #IF {$my[hp][current] < $my[hp][max] && $my[gp1][current] > @fEval{$my[android][nanobots] * 5} && $my[android][nanobots] > 0}
   {
     #SEND {!nanosurge};
   };
