@@ -8,7 +8,7 @@
   #VAR {my[android][ep]} {%6};
 };
 
-#ACTION {^{>\s|}You vanquish your foe with a final strike of %*.}
+#ACTION {^{>\s|}You vanquish your foe with a final %*.}
 {
   event_raise e_killed_opponent {%*};
 };
@@ -44,3 +44,4 @@ event_register e_killed_opponent h_corpse_handler handler_corpse;
 auto {add} {nanosurge} {} {e_combat_round} {};
 auto {nanosurge} {on};
 
+#NOP /* // Error: You do not have enough charge to sustain engaged plating! */

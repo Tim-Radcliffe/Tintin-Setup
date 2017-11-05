@@ -19,7 +19,7 @@
 #ALIAS {.mapRoomDesc}
 {
   #NOP %1;
-  #IF {"$map[room][roomname]" == "" || "$map[edit]" == "1"}
+  #IF {"$map[room][roomname]" == "" && "$map[edit]" == "1"}
   {
     #REGEXP {%2} {{^(.*?)\s*\([a-z\s,]*\)$}}
     {
