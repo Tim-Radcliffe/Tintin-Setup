@@ -1,5 +1,5 @@
-#NOP #VAR {crafting[quality][specific]} {{1}{legendary}{2}{superior}{3}{good}{4}{average}{5}{poor}{6}{crude}{7}{worthless}};
-#NOP #VAR {crafting[quality][all]} {{best}{worst}{all}{any}${crafting[quality][specific]}};
+#VAR {crafting[quality][specific]} {{1}{legendary}{2}{superior}{3}{good}{4}{average}{5}{poor}{6}{crude}{7}{worthless}};
+#VAR {crafting[quality][all]} {{best}{worst}{all}{any}${crafting[quality][specific]}};
 #NOP #VAR {crafting[limit][default]} {50};
 
 #action {^{>\s|}%sWhat luck!  You have found %1} 
@@ -116,7 +116,7 @@
                 #VAR {satchel[%0][total]} {$crafting[limit][current]};
             };
         };
-    }
+    };
 };
 
 #NOP ############## BLACKSMITH ##############
@@ -142,7 +142,7 @@
             #%%%1 smith %1 %%%2;
         };
 
-        event_register e_prompt h_ingredients {#NOP %%1;#UNACTION {^%%d %%*$};event_remove_specific e_prompt h_ingredients;};
+        event_register e_prompt h_ingredients {#NOP %%%1;#UNACTION {^%%d %%*$};event_remove_specific e_prompt h_ingredients;};
         
         #UNACTION {^-INGREDIENTS-};
     };
@@ -189,4 +189,79 @@
         event_register e_hp_bar h_entrap handler_entrap;
         event_register e_mip_FFF_L h_entrap handler_entrap;
         event_register e_killed_opponent h_entrap {event_remove_handler h_entrap};
+};
+
+#NOP ############## ITEM LIMITS ###############
+
+#ALIAS {.showitem}
+{
+  #VAR {_si} {};
+  #ACTION {^Type: %w}
+  {
+    #VAR {_si[type]} {%%1};
+    #UNACTION {^Type:%w};
+  };
+  
+  #ACTION {^Minimum Skill: %d}
+  {
+    #VAR {_si[min]} {%%1};
+    #UNACTION {^Minimum Skill: %d};
+  }; 
+
+  #ACTION {^Trivial Level: %d}
+  {
+    #VAR {_si[max]} {%%1};
+    #UNACTION {^Trivial Level: %d};
+  }; 
+
+  #ACTION {^-INGREDIENTS-}
+  {
+    #ACTION {^%d %*%s$}
+    {
+      #IF {$crafting[level][%%%2][$_si[type]][max] < $_si[max] || "$crafting[level][%%%2][$_si[type]][max]" == ""}
+      {
+        #VAR {crafting[level][%%%2][$_si[type]][max]} {$_si[max]};
+      };
+
+      #IF {$crafting[level][%%%2][$_si[type]][min] > $_si[min] || "$crafting[level][%%%2][$_si[type]][min]" == ""}
+      {
+        #VAR {crafting[level][%%%2][$_si[type]][min]} {$_si[min]};
+      };     
+    };
+    event_register e_prompt h_ingredients {#NOP %%%1;#UNACTION {^%%d %%*%%s$};#UNVAR {_si};event_remove_specific e_prompt h_ingredients;};
+        
+    #UNACTION {^-INGREDIENTS-};
+  };
+
+  #SEND {!showitem %0};
+};
+
+#ALIAS {.buildCraftStats}
+{
+  #VAR {_bCS} {};
+  #VAR {_bCS[i]} {0};
+
+  #ACTION {^{(.*?)\s+\d+\s+\d+\s+\d+\s+coins}}
+  {
+    #LIST {_bCS[list]} {add} {%%2};
+  };
+
+  #ALIAS {.shownext}
+  {
+    #NOP %%1;
+    #VAR {_bCS[i]} {@fEval{$_bCS[i] + 1}};
+    #IF {$_bCS[i] > &_bCS[list][]}
+    {
+      event_remove_specific e_prompt h_showitem;
+      #UNVAR {_bCS};
+      #UNALIAS {.shownext};
+    }
+    {
+      #FORMAT {_bCS[l]} {%l} {$_bCS[list][$_bCS[i]]};    
+      .showitem $_bCS[l];
+    };
+  };
+  event_register e_prompt h_showitem .shownext;
+
+  #SEND {!list %1};
 };
