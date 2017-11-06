@@ -1,0 +1,192 @@
+#NOP #VAR {crafting[quality][specific]} {{1}{legendary}{2}{superior}{3}{good}{4}{average}{5}{poor}{6}{crude}{7}{worthless}};
+#NOP #VAR {crafting[quality][all]} {{best}{worst}{all}{any}${crafting[quality][specific]}};
+#NOP #VAR {crafting[limit][default]} {50};
+
+#action {^{>\s|}%sWhat luck!  You have found %1} 
+{
+  #bell;
+  #2 !get fragment;
+  #2 !get essence;
+  #2 !get heart;
+  !stash all;
+  !craftsave;
+  event_raise e_message {** Found %1 **} {craft};
+};
+
+#NOP ############## Mining ##################
+
+#ALIAS {md}
+{
+    #ALIAS {handler_mine_ore}
+    {
+      #NOP %%1;
+      #REGEXP {%%2} {ore deposit}
+      {
+        #SEND {!mine};
+      };
+    };
+    event_register e_room_item h_mine_ore handler_mine_ore;
+    
+    #ACTION {^{>\s|}You have found a deposit of}
+    {
+      #SEND {!mine};
+    };
+    
+    #ACTION {^{>\s|}You have exhausted the supply} 
+    {
+      #BELL;
+      #UNACTION {^{>\s|}You have found a deposit of};
+      #UNALIAS {handler_mine_ore};
+      event_remove_handler h_mine_ore;
+    };
+    #SEND {!spelunk};
+};
+
+#ALIAS {handler_auto_mine}
+{
+    #NOP %1;
+    md;
+};
+
+#NOP ############## Craft Satchel ###########
+
+#ALIAS {sl}
+{
+    #ACTION {^%%*%%s|%%s%%d%%s|%%s%%d%%s|%%s%%d%%s|%%s%%d%%s|%%s%%d%%s|%%s%%d%%s|%%s%%d%%s|%%s%%d%%s|} 
+    {
+        #FORMAT {crafting[ingredient]} {%l} {%%1};
+        #VAR {satchel[$crafting[ingredient]][total]} {%%4};
+        #VAR {satchel[$crafting[ingredient]][subtotal][1]} {%%7};
+        #VAR {satchel[$crafting[ingredient]][subtotal][2]} {%%10};
+        #VAR {satchel[$crafting[ingredient]][subtotal][3]} {%%13};
+        #VAR {satchel[$crafting[ingredient]][subtotal][4]} {%%16};
+        #VAR {satchel[$crafting[ingredient]][subtotal][5]} {%%19};
+        #VAR {satchel[$crafting[ingredient]][subtotal][6]} {%%22};
+        #VAR {satchel[$crafting[ingredient]][subtotal][7]} {%%25};
+        .CleanIngredient $crafting[ingredient];
+    };
+    
+    #ACTION {You have %%d/%%d items in your satchel.}
+    {
+        #UNACTION {^%%*%%s|%%s%%d%%s|%%s%%d%%s|%%s%%d%%s|%%s%%d%%s|%%s%%d%%s|%%s%%d%%s|%%s%%d%%s|%%s%%d%%s|};
+        #UNACTION {You have %%d/%%d items in your satchel.};
+    };
+
+    #SEND {!stashlist %0};
+};
+
+#ALIAS {.CleanIngredient}
+{
+    #REGEXP {%0} {{fragment|essence}}
+    {
+        #FOREACH {$crafting[quality][specific][]} {i}
+        {
+            #IF {$satchel[%0][subtotal][$i] >= 5}
+            {
+                #SEND {!unstash2 5 $crafting[quality][specific][$i] %0};
+                #SEND {!assemble %0};
+                #SEND {!stash all};
+            };
+        };
+    }
+    {
+        #IF {&crafting[limit][%0] > 0}
+        {
+            #VAR {crafting[limit][current]} {$crafting[limit][%0]};
+        }
+        {
+            #VAR {crafting[limit][current]} {$crafting[limit][default]};
+        }
+        #MATH {crafting[delta]} {$satchel[%0][total] - $crafting[limit][current]};
+        #IF {$crafting[delta] > 0} 
+        {
+            #REGEXP {%0} {heart}
+            {
+                #NOP **** Don't discard hearts ever ****;
+            }
+            {
+                #REGEXP {%0} {{\sore}}
+                {
+                    #$crafting[delta] {!unstash2 worst %0;!prospect %0};
+                    #SEND {!stash all};
+                }
+                {
+                    #$crafting[delta] {!unstash2 worst %0};
+                }
+                #VAR {satchel[%0][total]} {$crafting[limit][current]};
+            };
+        };
+    }
+};
+
+#NOP ############## BLACKSMITH ##############
+
+#action {^{>\s|}You have created something new!} {craftsave;retrieve all;#bell}
+
+#alias {smith}
+{
+  #ACTION {You pull a %%* from your satchel.}
+    {
+        #SEND {!insert %%1};
+    };
+    #DELAY 5 {#UNACTION {You pull a %%* from your satchel.}};
+    #SEND {!unstash2 %0};
+};
+
+#alias {produce}
+{
+    #ACTION {^-INGREDIENTS-}
+    {
+        #ACTION {^%d %*$}
+        {
+            #%%%1 smith %1 %%%2;
+        };
+
+        event_register e_prompt h_ingredients {#NOP %%1;#UNACTION {^%%d %%*$};event_remove_specific e_prompt h_ingredients;};
+        
+        #UNACTION {^-INGREDIENTS-};
+    };
+    #SEND {!exa moulding};
+    #SEND {!insert moulding};
+};
+
+#NOP ############## WRANGLING ###############
+
+#alias {entrap}
+{
+    #VAR {crafting[entrap][name]} {%1};
+    #IF {%2 > 0}
+    {
+        #VAR {crafting[entrap][level]} {%2};
+        #ECHO {** Entrap Set on %1 at %2 **};
+    }
+    {
+        #VAR {crafting[entrap][level]} {101}:
+    };
+    #ALIAS {handler_entrap}
+    {
+        #NOP %%1;
+        #IF {$opponent[hp] <= $crafting[entrap][level]}
+        {
+            #SEND {!entrap $crafting[entrap][name]};
+      event_register e_room_object h_wrangle handler_wrangle;      
+      #ALIAS {handler_wrangle}
+      {
+        #NOP %%%1;
+        #REGEXP {%%%2} {^chaotic essence}
+        {
+          #SEND {!get essence};
+          #SEND {!wrangle};
+          event_remove_handler h_wrangle;          
+          #UNALIAS {handler_wrangle};
+        };
+            };
+            #UNVAR {crafting[entrap]};
+            event_remove_handler h_entrap;
+            #UNALIAS {handler_entrap};
+        };
+    };
+        event_register e_hp_bar h_entrap handler_entrap;
+        event_register e_mip_FFF_L h_entrap handler_entrap;
+        event_register e_killed_opponent h_entrap {event_remove_handler h_entrap};
+};

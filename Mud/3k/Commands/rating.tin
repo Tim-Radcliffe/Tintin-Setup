@@ -1,0 +1,47 @@
+#ALIAS {rating}
+{
+  #VAR {room[location]} {};
+  
+  #CLASS {cCommand_rating} {open};
+  
+  #ACTION {{^AREA NAME.*?:\s(.*)\s.*\[(.*)\]$}}
+  {
+    #IF {"$room[location][name]" != "%%2" || "$room[location][wiz]" != "%%3"}
+    {
+      #VAR {room[location][name]} {%%2};
+      #VAR {room[location][wiz]} {%%3};
+    };
+    event_oneshot {e_prompt} {h_command_rating} {.HandlerCommandRating}; 
+  } {1};
+
+  #ACTION {^AREA RATING -> %* [%w]}
+  {
+    #IF {"$room[location][name]" != "%%2"}
+    {
+      #VAR {room[location][name]} {%%2};
+      #VAR {room[location][wiz]} {};
+    };
+    event_oneshot {e_prompt} {h_command_rating} {.HandlerCommandRating}; 
+  } {1};
+
+  #ACTION {^This area has no rating.  Please use the idea command to request one.}
+  {
+    #IF {"$room[location][name]" != ""}
+    {
+      #VAR {room[location][name]} {};
+    };
+    where;
+    event_oneshot {e_prompt} {h_command_rating} {.HandlerCommandRating}; 
+  } {1};
+
+  #ALIAS {.HandlerCommandRating}
+  {
+    #NOP %%1;
+    event_raise {e_command_rating};
+    #CLASS {cCommand_rating} {kill};
+  }
+ 
+  #CLASS {cCommand_rating} {close};
+  
+  #SEND {!rating};
+};
