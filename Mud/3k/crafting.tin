@@ -5,9 +5,7 @@
 #action {^{>\s|}%sWhat luck!  You have found %1} 
 {
   #bell;
-  #2 !get fragment;
-  #2 !get essence;
-  #2 !get heart;
+  #2 !get all from corpse;
   !stash all;
   !craftsave;
   event_raise e_message {** Found %1 **} {craft};
