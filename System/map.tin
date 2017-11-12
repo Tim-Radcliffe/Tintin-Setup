@@ -71,7 +71,6 @@
   #MAP FLAG STATIC ON;
   #VAR {map[edit]} {0};
   event_raise {e_map_enter};
-  #NOP #SYSTEM {> /tmp/map.txt};
   event_register {e_auto_move} {h_map_move} {handler_auto_move};
 };
 
@@ -116,6 +115,7 @@
     #VAR {map[edit]} {0};
     #MAP FLAG STATIC ON;
     #ECHO {MAP : Not Editable};
+    event_raise {e_map_edit} {0};
   };
   #ELSE
   {
@@ -123,6 +123,7 @@
     #VAR {map[edit]} {1};
     #MAP FLAG STATIC OFF;
     #ECHO {MAP : Editable};
+    event_raise {e_map_edit} {1};
   };
 };
 

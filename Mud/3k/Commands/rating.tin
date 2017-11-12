@@ -1,47 +1,39 @@
-#ALIAS {rating}
+#VAR {room[location]} {};
+  
+#ACTION {{^AREA NAME.*?:\s(.*)\s.*\[(.*)\]$}}
 {
-  #VAR {room[location]} {};
-  
-  #CLASS {cCommand_rating} {open};
-  
-  #ACTION {{^AREA NAME.*?:\s(.*)\s.*\[(.*)\]$}}
+  #IF {"$room[location][name]" != "%2" || "$room[location][wiz]" != "%3"}
   {
-    #IF {"$room[location][name]" != "%%2" || "$room[location][wiz]" != "%%3"}
-    {
-      #VAR {room[location][name]} {%%2};
-      #VAR {room[location][wiz]} {%%3};
-    };
-    event_oneshot {e_prompt} {h_command_rating} {.HandlerCommandRating}; 
-  } {1};
+    #VAR {room[location][name]} {%2};
+    #VAR {room[location][wiz]} {%3};
+  };
+  event_oneshot {e_prompt} {h_command_rating} {.HandlerCommandRating}; 
+} {1};
 
-  #ACTION {^AREA RATING -> %* [%w]}
+#ACTION {^AREA RATING -> %* [%w]}
+{
+  #IF {"$room[location][name]" != "%2"}
   {
-    #IF {"$room[location][name]" != "%%2"}
-    {
-      #VAR {room[location][name]} {%%2};
-      #VAR {room[location][wiz]} {};
-    };
-    event_oneshot {e_prompt} {h_command_rating} {.HandlerCommandRating}; 
-  } {1};
+    #VAR {room[location][name]} {%2};
+    #VAR {room[location][wiz]} {};
+  };
+  event_oneshot {e_prompt} {h_command_rating} {.HandlerCommandRating}; 
+} {1};
 
-  #ACTION {^This area has no rating.  Please use the idea command to request one.}
+#ACTION {^This area has no rating.  Please use the idea command to request one.}
+{
+  #IF {"$room[location][name]" != ""}
   {
-    #IF {"$room[location][name]" != ""}
-    {
-      #VAR {room[location][name]} {};
-    };
-    where;
-    event_oneshot {e_prompt} {h_command_rating} {.HandlerCommandRating}; 
-  } {1};
+    #VAR {room[location][name]} {};
+  };
+  where;
+  event_oneshot {e_prompt} {h_command_rating} {.HandlerCommandRating}; 
+} {1};
 
-  #ALIAS {.HandlerCommandRating}
-  {
-    #NOP %%1;
-    event_raise {e_command_rating};
-    #CLASS {cCommand_rating} {kill};
-  }
- 
-  #CLASS {cCommand_rating} {close};
-  
-  #SEND {!rating};
+#ALIAS {.HandlerCommandRating}
+{
+  #NOP %1;
+  event_raise {e_command_rating};
+
 };
+ 
