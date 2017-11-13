@@ -67,6 +67,49 @@
   #SCRIPT {mkdir -p "%1"};
 };
 
+#FUNCTION {fFileGetPath}
+{
+  #UNVAR result;
+  #REGEXP {%1} {{^\/*((.+)\/)*}}
+  {
+    #IF {"&1" != ""}
+    {    
+      #RETURN {&3};
+    }
+    {
+      #RETURN {};
+    };
+  };
+};
+
+#FUNCTION {fFileGetName}
+{
+  #REGEXP {%1} {{^(.*\/|)([^\.]+)(\.(.+)|)$}}
+  {
+    #IF {"&1" != ""}
+    {    
+      #RETURN {&3};
+    }
+    {
+      #RETURN {};
+    };
+  };
+};
+
+#FUNCTION {fFileGetExt}
+{
+  #REGEXP {%1} {{^.*\.(.+)$}}
+  {
+    #IF {"&1" != ""}
+    {    
+      #RETURN {&2};
+    }
+    {
+      #RETURN {};
+    };
+  };
+};
+
 #FUNCTION {fParseFilePath}
 {
   #REGEXP {%1} {{^\\*(.+\\)*(.+)\.(.+)$}}

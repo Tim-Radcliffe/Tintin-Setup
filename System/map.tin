@@ -1,5 +1,4 @@
 #VAR {map} {};
-#VAR {map[file]} {3k.map};
 #VAR {map[dirs]} {{s}{n}{sw}{ne}{w}{e}{nw}{se}{n}{s}{ne}{sw}{e}{w}{se}{nw}{d}{u}{u}{d}};
 
 #VAR {map[col]} {};
@@ -155,9 +154,17 @@
       #VAR {_mL[area]} {%1};
     }
 
-    #VAR {map[file]} {$path[areas]/$_mL[path]/$_mL[area].map};
+    #VAR {map[file]} {$_mL[path]/$_mL[area].map};
     #VAR {map[area][path]} {$_mL[path]};
-    #MAP {read} {$map[file]};
+    #MAP {read} {$path[areas]/$map[file]};
+    #IF {"%2" == ""}
+    {
+      #MAP GOTO 1;
+    }
+    #ELSE
+    {
+      #MAP GOTO %2;
+    };
     #UNVAR {_mL};   
   };
 };
@@ -171,57 +178,72 @@
   };
   #ELSE
   {
-    @fFileCreateDir{@fFileParsePath{$map[file]}[path]};
-    #MAP {write} {$map[file]};
+    #LOCAL {_mS} {@fFileCreateDir{@fFileGetPath{$path[areas]/$map[file]}}};
+    #MAP {write} {$path[areas]/$map[file]};
     #ECHO {MAP: Saved};
   };
 }
+
+#ALIAS {.mapCreate}
+{
+  #NOP %1;
+  #IF {"%1" == ""}
+  {
+    #ECHO {.mapCreate {/mud/wilderness/scary castle}};
+  };
+  #ELSE
+  {
+    #VAR {map[file]} {@fMapCreate{@fMapResolvePath{%1}}};
+  };
+};
 
 #ALIAS {.mapCreateLink}
 {
   #NOP %1;
   #IF {"%1" == ""}
   {
-    #ECHO {(exit command) (area name) (return command) (room vnum)};
+    #ECHO {(exit command) (area name) (room vnum)};
   };
   #ELSE
   {
     #VAR {_mAL} {};
-    #VAR {_mAL[out][cmd]} {%1};
-    #VAR {_mAL[out][area]} {$map[area][path]};
-    #MAP {get} {vnum} {$_mAL[out][vnum]};
-    #VAR {_mAL[back][cmd]} {%3};
-    #VAR {_mAL[back][area]} {$map[area][path]/%2};
-    #VAR {_mAL[back][vnum]} {%4};
-
-    #IF {"$_mAL[back][vnum]" == ""} {#VAR {_mAL[back][vnum]} {1};};
-
-    #MAP {dig} {$_mAL[out][cmd]};
-    #MAP {exit} {$_mAL[out][cmd]} {command} {.mapLink {$_mAL[back][area]} {$_mAL[back][vnum]} {$_mAL[out][cmd]};};
-    #MAP {at} {@fMapGetVnum{%1}}
+    #VAR {_mAL[linkroom]} {@fMapGetVnum{%1}};
+    #IF {"$_mAL[linkroom]" == ""}
     {
-      #MAP {set} {roomarea} {$_mAL[back][area]};
+      #MAP DIG {%1};
+      #VAR {_mAL[linkroom]} {@fMapGetVnum{%1}};
     };
-   
-    #MAP {write} {$map[file]};
-    
-    #VAR {map[file]} {@fMapCreate{$_mAL[back][area]}[2]};
-    #MAP {dig} {$_mAL[back][cmd]}
-    #MAP {exit} {$_mAL[back][cmd]} {command} {.mapLink {$_mAL[out][area]} {$_mAL[out][vnum]} {$_mAL[out][cmd]};};
-    #MAP {at} {@fMapGetVnum{$_mAL[back][cmd]}}
-    {
-      #MAP {set} {roomarea} {$_mAL[out][area]};
-    };     
+    #MAP {exit} {%1} {command} {.mapLink {@fMapResolvePath{%2}} {%3} {%1};};    
+    #ECHO {CREATING MAP LINK:};
+    #ECHO {FROM: $map[file] @fMapGetVnum{}};
+    #ECHO {TO  : @fMapResolvePath{%2} %3};
   };
-}
+};
+
+#FUNCTION {fMapResolvePath}
+{
+  #VAR {_fMRP[path]} {@fFileGetPath{%1}};
+  #IF {"$_fMRP[path]" == ""}
+  {
+    #VAR {_fMRP[path]} {@fFileGetPath{$map[file]}};
+  };
+  #VAR {result} {$_fMRP[path]/@fFileGetName{%1}};
+};
 
 #FUNCTION {fMapGetVnum}
 {
   #NOP %1;
-  #MAP {get} {roomexits} {_fMGV};
-  #VAR {result} {$_fMGV[%1]}
-  #UNVAR {_fMGV};
-}
+  #IF {"%1" == ""}
+  {
+    #MAP {get} {roomvnum} {result};
+  };
+  #ELSE
+  {
+    #MAP {get} {roomexits} {_fMGV};
+    #VAR {result} {$_fMGV[%1]};
+    #UNVAR {_fMGV};
+  };
+};
 
 #FUNCTION {fMapCreate}
 {
@@ -255,7 +277,7 @@
     #MAP {write} {$_fMC[file]};
   };
 
-  #VAR {result} {{$_fMC[dir]}{$_fMC[file]}};
+  #VAR {result} {$_fMC[path]/$_fMC[area]/$_fMC[area].map};
   #UNVAR {_fMC};
 }
 

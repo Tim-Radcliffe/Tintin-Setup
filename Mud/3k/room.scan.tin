@@ -141,6 +141,7 @@ event_register {e_mip_DDD} {h_room_exits} {.HandlerRoomExits};
   };
 };
 event_register {e_mip_BAD} {h_room_name} {.HandlerRoomName};
+event_register {e_ansiflags_R} {h_room_name} {.HandlerRoomName};
 
 #ALIAS {handler_room_pickup}
 {

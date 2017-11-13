@@ -106,7 +106,6 @@
                 #REGEXP {%0} {{\sore}}
                 {
                     #$crafting[delta] {!unstash2 worst %0;!prospect %0};
-                    #SEND {!stash all};
                 }
                 {
                     #$crafting[delta] {!unstash2 worst %0};
