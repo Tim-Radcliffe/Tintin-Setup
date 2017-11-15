@@ -16,7 +16,7 @@
   };
 };
 
-#ALIAS {.mapRoomDesc}
+#ALIAS {.mapRoomName}
 {
   #NOP %1;
   #IF {"$map[room][roomname]" == "" && "$map[edit]" == "1"}
@@ -44,7 +44,18 @@
     };
   };
 };
-event_register {e_mip_BAD} {h_map_room_desc} {.mapRoomDesc};
+event_register {e_mip_BAD} {h_map_room_name} {.mapRoomName};
+event_register {e_ansiflag_R} {h_map_room_name} {.mapRoomName};
+
+#ALIAS {.mapRoomDesc}
+{
+  #NOP %1;
+  #IF {"%2" != "" && "$map[edit]" == "1"}
+  {
+    #MAP set {roomdesc} {%2};
+  };
+};
+event_register {e_ansiflag_L} {h_map_room_desc} {.mapRoomDesc};
 
 #ALIAS {.mapRoomExits}
 {

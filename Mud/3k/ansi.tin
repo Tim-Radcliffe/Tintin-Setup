@@ -18,8 +18,29 @@
     #SEND {!aset room_long_suff `><ESC>[0m};
     #SUBSTITUTE {<%w`} {};
     #SUBSTITUTE {`>} {};
-    #ACTION {<%w`%*`>} {event_raise e_ansiflag_%%1 {%%2}};
-  }
+    #ACTION {{<(\w)`(.*?)(`>.*|)$}}
+    {
+      #IF {"%%4" != ""}
+      {
+        event_raise {e_ansiflag_%%2} {%%3};
+      };
+      #ELSE
+      {
+        #VAR {_aAF} {%%3};
+        #ACTION {{^(.*?)(`>.*|)$}}
+        {
+          #VAR {_aAF} {${_aAF} %%%2};
+          #IF {"%%%3" != ""}
+          {
+            event_raise {e_ansiflag_%%2} {$_aAF};
+            #UNVAR {_aAF};
+            #UNACTION {{^(.*?)(`>.*|)$}};
+          };
+        };
+      };
+    };
+  };
+  #ELSE
   {
     #SEND {!aset look_armor_pref <ESC>[36m};
     #SEND {!aset look_armor_suff <ESC>[0m};
@@ -37,7 +58,7 @@
     #SEND {!aset room_long_suff <ESC>[0m};
     #UNSUBSTITUTE {<%w`} {};
     #UNSUBSTITUTE {`>} {};	  
-    #UNACTION {<%w`%*`>};
+    #UNACTION {{<(\w)`(.*?)(`>|)$}};
   };
 };
 

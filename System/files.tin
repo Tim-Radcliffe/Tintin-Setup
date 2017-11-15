@@ -58,7 +58,7 @@
 
 #FUNCTION {fFileExists}
 {
-  #SCRIPT {result} {test -e %1 && echo "1" || echo "0"};
+  #SCRIPT {result} {test -e "%1" && echo "1" || echo "0"};
   #RETURN $result[1];
 };
 

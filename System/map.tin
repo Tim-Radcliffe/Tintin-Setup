@@ -215,9 +215,14 @@
     };
     #MAP {exit} {%1} {command} {.mapLink {@fMapResolvePath{%2}} {%3} {%1};};    
     #ECHO {CREATING MAP LINK:};
-    #ECHO {FROM: $map[file] @fMapGetVnum{}};
+    #ECHO {FROM: @fFileGetPath{$map[file]} @fMapGetVnum{}};
     #ECHO {TO  : @fMapResolvePath{%2} %3};
   };
+};
+
+#FUNCTION {fMapExists}
+{
+  #VAR {result} {@fFileExists{$path[areas]/@fMapResolvePath{%1}}};
 };
 
 #FUNCTION {fMapResolvePath}
@@ -277,6 +282,9 @@
     #MAP {write} {$_fMC[file]};
   };
 
+  #VAR {map[file]} {$_fMC[path]/$_fMC[area]/$_fMC[area].map};
+  #VAR {map[area][path]} {$_fMC[path]/$_fMC[area]};
+
   #VAR {result} {$_fMC[path]/$_fMC[area]/$_fMC[area].map};
   #UNVAR {_fMC};
 }
@@ -286,7 +294,19 @@
   #NOP %1;
   #SEND {!%3};
   #NOP Following command needs a delay or Tintin++ crashes;
-  #DELAY {0.01} {.mapLoad {%1};#MAP {goto} {%2};};
+  #DELAY {0.01} 
+  {
+    #IF {@fMapExists{%1}}
+    {
+      .mapLoad {%1};
+      #MAP {goto} {%2};
+    };
+    #ELSE
+    {
+      .mapCreate {%1};
+      #MAP {goto} {%2};
+    };
+  };
 };
 
 #ALIAS {.mapFlag}
