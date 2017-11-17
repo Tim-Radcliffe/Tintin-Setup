@@ -213,7 +213,9 @@
       #MAP DIG {%1} {NEW};
       #VAR {_mAL[linkroom]} {@fMapGetVnum{%1}};
     };
-    #MAP {exit} {%1} {command} {.mapLink {@fMapResolvePath{%2}} {%3} {%1};};    
+    #MAP {exit} {%1} {command} {.mapLink {@fMapResolvePath{%2}} {%3} {%1};};
+    #MAP AT $_mAL[linkroom] .mapRoom {link};
+    #MAP AT $_mAL[linkroom] #MAP SET roomarea {%2};
     #ECHO {CREATING MAP LINK:};
     #ECHO {FROM: @fFileGetPath{$map[file]} @fMapGetVnum{}};
     #ECHO {TO  : @fMapResolvePath{%2} %3};
@@ -227,12 +229,19 @@
 
 #FUNCTION {fMapResolvePath}
 {
-  #VAR {_fMRP[path]} {@fFileGetPath{%1}};
-  #IF {"$_fMRP[path]" == ""}
+  #IF {"%1" == ".."}
   {
-    #VAR {_fMRP[path]} {@fFileGetPath{$map[file]}};
+    #RETURN {@fFileGetPath{@fFileGetPath{$map[file]}}};
   };
-  #VAR {result} {$_fMRP[path]/@fFileGetName{%1}};
+  #ELSE
+  {
+    #VAR {_fMRP[path]} {@fFileGetPath{%1}};
+    #IF {"$_fMRP[path]" == "" && "@fStringContains{{%1}{$map[file]}}" != "1"}
+    {
+      #VAR {_fMRP[path]} {@fFileGetPath{$map[file]}};
+    };
+    #VAR {result} {$_fMRP[path]/@fFileGetName{%1}};
+  };
 };
 
 #FUNCTION {fMapGetVnum}

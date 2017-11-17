@@ -19,9 +19,9 @@
 #ALIAS {.mapRoomName}
 {
   #NOP %1;
-  #IF {"$map[room][roomname]" == "" && "$map[edit]" == "1"}
+  #IF {"$map[edit]" == "1"}
   {
-    #REGEXP {%2} {{^(.*?)\s*\([a-z\s,]*\)$}}
+    #REGEXP {%2} {{^(.*?)\s*\([a-z\s,]*\)\s*$}}
     {
       #IF {"$map[room][roomname]" != "&2"}
       {
@@ -38,13 +38,12 @@
     #IF {"$map[room][newname]" != ""}
     {
       #VAR {map[room][newname]} {@fStripBraces{$map[room][newname]}};
-      #ECHO {MAP : Room name : $map[room][newname]};
       #MAP set {roomname} {$map[room][newname]};
       #UNVAR {map[room][newname]};
     };
   };
 };
-event_register {e_mip_BAD} {h_map_room_name} {.mapRoomName};
+event_register {e_mip_BAD}    {h_map_room_name} {.mapRoomName};
 event_register {e_ansiflag_R} {h_map_room_name} {.mapRoomName};
 
 #ALIAS {.mapRoomDesc}
@@ -127,5 +126,5 @@ event_register {e_room_enter} {h_map_room_exits} {.mapRoomExits};
   };
 };
 event_register {e_command_rating} {h_map_room_area} {.mapRoomArea};
-event_register {e_command_where} {h_map_room_area} {.mapRoomArea};
+event_register {e_command_where}  {h_map_room_area} {.mapRoomArea};
 

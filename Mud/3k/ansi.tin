@@ -1,5 +1,6 @@
 #ALIAS {.AnsiFlags}
 {
+  #NOP %1;
   #IF {"%1" == "on"}
   {
     #SEND {!aset look_armor_pref <ESC>[36m<A`};
@@ -16,6 +17,34 @@
     #SEND {!aset room_short_suff `><ESC>[0m};
     #SEND {!aset room_long_pref <ESC>[33m<L`};
     #SEND {!aset room_long_suff `><ESC>[0m};
+    #VAR {my[ansiflags]} {1};
+  };
+  #ELSE
+  {
+    #SEND {!aset look_armor_pref <ESC>[36m};
+    #SEND {!aset look_armor_suff <ESC>[0m};
+    #SEND {!aset look_monster_pref <ESC>[33m};
+    #SEND {!aset look_monster_suff <ESC>[0m};
+    #SEND {!aset look_other_pref <ESC>[32m};
+    #SEND {!aset look_other_suff <ESC>[0m};
+    #SEND {!aset look_player_pref <ESC>[37m};
+    #SEND {!aset look_player_suff <ESC>[0m};
+    #SEND {!aset look_weapon_pref <ESC>[31m};
+    #SEND {!aset look_weapon_suff <ESC>[0m};
+    #SEND {!aset room_short_pref <ESC>[37m};
+    #SEND {!aset room_short_suff <ESC>[0m};
+    #SEND {!aset room_long_pref <ESC>[33m};
+    #SEND {!aset room_long_suff <ESC>[0m};
+    #VAR {my[ansiflags]} {0};    
+  };
+  .AnsiFlagTriggers;
+};
+
+#ALIAS {.AnsiFlagTriggers}
+{
+  #NOP %1;
+  #IF {$my[ansiflags]}
+  {
     #SUBSTITUTE {<%w`} {};
     #SUBSTITUTE {`>} {};
     #ACTION {{<(\w)`(.*?)(`>.*|)$}}
@@ -42,23 +71,11 @@
   };
   #ELSE
   {
-    #SEND {!aset look_armor_pref <ESC>[36m};
-    #SEND {!aset look_armor_suff <ESC>[0m};
-    #SEND {!aset look_monster_pref <ESC>[33m};
-    #SEND {!aset look_monster_suff <ESC>[0m};
-    #SEND {!aset look_other_pref <ESC>[32m};
-    #SEND {!aset look_other_suff <ESC>[0m};
-    #SEND {!aset look_player_pref <ESC>[37m};
-    #SEND {!aset look_player_suff <ESC>[0m};
-    #SEND {!aset look_weapon_pref <ESC>[31m};
-    #SEND {!aset look_weapon_suff <ESC>[0m};
-    #SEND {!aset room_short_pref <ESC>[37m};
-    #SEND {!aset room_short_suff <ESC>[0m};
-    #SEND {!aset room_long_pref <ESC>[33m};
-    #SEND {!aset room_long_suff <ESC>[0m};
     #UNSUBSTITUTE {<%w`} {};
     #UNSUBSTITUTE {`>} {};	  
-    #UNACTION {{<(\w)`(.*?)(`>|)$}};
+    #UNACTION {{<(\w)`(.*?)(`>|)$}};  
   };
 };
+
+.AnsiFlagTriggers;
 

@@ -263,3 +263,13 @@ event_register {e_15_mins} {h_globals} {.aGlobalVar};
   };
   #UNVAR {_fCL};
 };
+
+/*
+	Usage: @string_contains{ {<stringA>} {<stringB>} }
+	<string> = a string
+	Returns: 1 if <stringA> appears anywhere in <stringB> else 0.
+*/
+#FUNCTION {fStringContains} {
+	#MATH {result} {"%2" == "%*%1%*"};
+}
+
