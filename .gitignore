@@ -2,5 +2,3 @@
 *.swp
 *.save
 log.txt
-Data/*
-Local/*

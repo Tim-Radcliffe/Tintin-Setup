@@ -2,6 +2,7 @@
 
 #VAR {path[system]} {System};
 #VAR {path[tools]}  {System/Tools};
+#VAR {path[local]}  {Local};
 #VAR {path[data]}   {Data};
 
 #CLASS {$path[system]/files.tin} {read} {$path[system]/files.tin};
@@ -28,8 +29,8 @@
     #SESSION {%4.%2} {%5} {%6};%2;%3;
 
     #VAR {path[profile]} {Data/%4/Profiles/%2};
-    #VAR {path[mud]} {Mud/%4};
-    #VAR {path[areas]} {Data/%4/Areas};
+    #VAR {path[mud]}     {Mud/%4};
+    #VAR {path[areas]}   {Data/%4/Areas};
 
     .file loadall {$path[system]/*.tin};
     .file loadall {$path[profile]/*.tin};
