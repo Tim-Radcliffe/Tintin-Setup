@@ -3,3 +3,4 @@
 *.save
 log.txt
 Data/*
+Local/*

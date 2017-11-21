@@ -152,11 +152,18 @@
     }
     {
       #VAR {_mL[area]} {%1};
-    }
+    };
 
-    #VAR {map[file]} {$_mL[path]/$_mL[area].map};
-    #VAR {map[area][path]} {$_mL[path]};
+    #VAR {map[file]}        {$_mL[path]/$_mL[area].map};
+    #VAR {map[area][path]}  {$_mL[path]};
     #MAP {read} {$path[areas]/$map[file]};
+    
+    #IF {"@fMapResolvePath{..}" != ""}
+    {
+      #KILL {class} {%*@fMapResolvePath{..}/%*};
+    };
+    .file loadall {$path[areas]/$_mL[path]/*.tin};
+    
     #IF {"%2" == ""}
     {
       #MAP GOTO 1;
@@ -216,11 +223,61 @@
     #MAP {exit} {%1} {command} {.mapLink {@fMapResolvePath{%2}} {%3} {%1};};
     #MAP AT $_mAL[linkroom] .mapRoom {link};
     #MAP AT $_mAL[linkroom] #MAP SET roomarea {%2};
+    #MAP EXITFLAG {%1} HIDE;
     #ECHO {CREATING MAP LINK:};
     #ECHO {FROM: @fFileGetPath{$map[file]} @fMapGetVnum{}};
     #ECHO {TO  : @fMapResolvePath{%2} %3};
   };
 };
+
+#ALIAS {.mapLink}
+{
+  #NOP %1;
+  #SEND {!%3};
+  #NOP Following command needs a delay or Tintin++ crashes;
+  #DELAY {0.01} 
+  {
+    #IF {@fMapExists{%1}}
+    {
+      .mapLoad {%1};
+      #MAP {goto} {%2};
+    };
+    #ELSE
+    {
+      #ECHO {CREATING MAP FOR LINK:};
+      #ECHO {FROM: @fFileGetPath{$map[file]} @fMapGetVnum{}};
+      #ECHO {TO  : @fMapResolvePath{%1} %2};    
+      .mapCreate {%1};
+      #MAP {goto} {%2};
+    };
+  };
+};
+
+/*
+  Exit which requires a trigger event
+  {initial action} {trigger match string} {triggered action}
+*/
+#ALIAS {.mapTrigger}
+{
+  #NOP %1;
+  #IF {"%0" == ""}
+  {
+    #ECHO {.mapTrigger {initial action} {trigger match string} {triggered action};};
+  };
+  .mapRun {pause};
+  #ACTION {%2}
+  {
+    #IF {"%3" != ""}
+    {
+      #SEND {%3};
+    };
+    .mapRun;
+  };
+  #IF {"%1" != ""}
+  {
+    #SEND {%1};
+  };
+}
 
 #FUNCTION {fMapExists}
 {
@@ -297,29 +354,6 @@
   #VAR {result} {$_fMC[path]/$_fMC[area]/$_fMC[area].map};
   #UNVAR {_fMC};
 }
-
-#ALIAS {.mapLink}
-{
-  #NOP %1;
-  #SEND {!%3};
-  #NOP Following command needs a delay or Tintin++ crashes;
-  #DELAY {0.01} 
-  {
-    #IF {@fMapExists{%1}}
-    {
-      .mapLoad {%1};
-      #MAP {goto} {%2};
-    };
-    #ELSE
-    {
-      #ECHO {CREATING MAP FOR LINK:};
-      #ECHO {FROM: @fFileGetPath{$map[file]} @fMapGetVnum{}};
-      #ECHO {TO  : @fMapResolvePath{%1} %2};    
-      .mapCreate {%1};
-      #MAP {goto} {%2};
-    };
-  };
-};
 
 #ALIAS {.mapFlag}
 {
