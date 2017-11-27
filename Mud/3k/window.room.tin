@@ -2,10 +2,10 @@
 
 #ALIAS {.HandlerWinTitle}
 {
-  #VAR {winRoom[entered]} {1};
+  #VAR {winRoom[contents]} {};
   .WindowSetLine {room} {1} {%2};
 };
-event_register {e_mip_BAD} {h_window_room} {.HandlerWinTitle};
+event_register {e_ansiflag_R} {h_window_room} {.HandlerWinTitle};
 
 #ALIAS {.HandlerWinExits}
 {
@@ -13,37 +13,22 @@ event_register {e_mip_BAD} {h_window_room} {.HandlerWinTitle};
   #VAR {winRoom[line]} {%2};
   #REPLACE {winRoom[line]} {;} {, };
   .WindowSetLine {room} {2} {Exits: $winRoom[line]};
-  #IF {"$winRoom[entered]" != "1"}
-  {
-    #VAR {winRoom[contents]} {};
-  }
-  #VAR {winRoom[entered]} {0};
 };
 event_register {e_mip_DDD} {h_window_room} {.HandlerWinExits};
 
 #ALIAS {.HandlerWinContent}
 {
   #NOP %1;
-  #VAR {temp} {};
-  #LIST {temp[data]} {CREATE} {%2};
-  #LIST {winRoom[contents][$temp[data][1]]} {ADD} {{{name}{$temp[data][2]}{desc}{$temp[data][3]}{action}{$temp[data][4]}}};
+  #VAR {_HWC} {};
+  #LIST {_HWC[data]} {CREATE} {%2};
+  #VAR {winRoom[contents][$_HWC[data][1]][$_HWC[data][2]]} {{name}{$_HWC[data][2]}{desc}{$_HWC[data][3]}{action}{$_HWC[data][4]}};
   #FORALL {$winRoom[contents][]}
   {
-    #FORALL {$winRoom[contents][&0][]}
-    {
-      #IF {"$winRoom[contents][&0][&&0][name]" == "$winRoom[contents][&0][&&0][desc]"}
-      {
-        #LIST {temp[list][&0]} {ADD} {$winRoom[contents][&0][&&0][name]};     
-      }
-      {
-        #LIST {temp[list][&0]} {ADD} {$winRoom[contents][&0][&&0][desc] ($winRoom[contents][&0][&&0][name])};
-      }
-    };
-    #VAR {temp[&0]} {@fCommaList{$temp[list][&0]}};    
+    #VAR {_HWC[&0]} {@fCommaList{$winRoom[contents][&0][]}};    
   };
-  .WindowSetLine {room} {3} {Noun : $temp[noun]};
-  .WindowSetLine {room} {4} {Mob  : $temp[npc]};
-  .WindowSetLine {room} {5} {Item : $temp[item]};
+  .WindowSetLine {room} {3} {Noun : $_HWC[noun]};
+  .WindowSetLine {room} {4} {Mob  : $_HWC[npc]};
+  .WindowSetLine {room} {5} {Item : $_HWC[item]};
   .WindowRefresh {room};
 };
 event_register {e_mip_HAA} {h_window_room} {.HandlerWinContent};

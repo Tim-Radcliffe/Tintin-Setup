@@ -153,41 +153,8 @@ event_register {e_15_mins} {h_globals} {.aGlobalVar};
   };
 
   #LIST {_fLV[list]} {CREATE} {%1};
-  #LIST {_fLV[list]} {SIZE} {_fLV[size]};
-
   #VAR {_fLV[pos]} {%2};
-
   #LIST {_fLV[list]} {GET} {$_fLV[pos]} {result};
-  #UNVAR {_fLV};
-};
-
-#NOP Get a specific entry from a semi-colon delimited list;
-#NOP { {list} {index} };
-#FUNCTION {fListValueOld}
-{
-  #IF {"%1" == "" || "%2" == ""}
-  {
-    #RETURN;
-  };
-
-  #VAR {_fLV[i]} {0};
-  #VAR {_fLV[j]} {%2};
-  #LIST {_fLV[list]} {CREATE} {%1};
-  #LIST {_fLV[list]} {SIZE} {_fLV[size]};
-
-  #IF {${_fLV[j]} < 0}
-  {
-    #VAR {_fLV[j]} {@fEval{${_fLV[size]} + ${_fLV[j]} + 1}};
-  };
-
-  #FOREACH {%1} {_fLV[item]}
-  {
-    #VAR {_fLV[i]} {@fEval{${_fLV[i]} + 1}};
-    #IF {"${_fLV[i]}" == "${_fLV[j]}"}
-    {
-      #VAR {result} ${_fLV[item]};
-    };
-  };
   #UNVAR {_fLV};
 };
 
@@ -247,19 +214,15 @@ event_register {e_15_mins} {h_globals} {.aGlobalVar};
 #NOP Return a comma separated string from a list of values;
 #FUNCTION {fCommaList}
 {
-  #VAR {_fCL[list]} {%0};
-  #VAR {_fCL[i]} {0};
   #VAR {_fCL[sep]} {, };
   #VAR {result} {};
-  #LIST {_fCL[list]} {size} {_fCL[len]};
-  #FOREACH {$_fCL[list][%*]} {_fCL[entry]}
+  #FORALL {%0}
   {
-    #VAR {result} {$result$_fCL[entry]};
-    #MATH {_fCL[i]} {$_fCL[i] + 1};
-    #IF {$_fCL[i] < $_fCL[len]}
+    #IF {"$result" != ""}
     {
       #VAR {result} {$result$_fCL[sep]};
     };
+    #VAR {result} {${result}&0};
   };
   #UNVAR {_fCL};
 };
@@ -269,7 +232,13 @@ event_register {e_15_mins} {h_globals} {.aGlobalVar};
 	<string> = a string
 	Returns: 1 if <stringA> appears anywhere in <stringB> else 0.
 */
-#FUNCTION {fStringContains} {
+#FUNCTION {fStringContains} 
+{
 	#MATH {result} {"%2" == "%*%1%*"};
-}
+};
 
+#NOP @fWordWrap{ {string} {length} }
+#FUNCTION {fWordWrap}
+{
+  #FORMAT {result} {%w} {{%1}{%2}};
+};

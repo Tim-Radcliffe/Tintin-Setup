@@ -4,7 +4,7 @@
 #ALIAS {.WindowSetLine}
 {
   #NOP %1;
-  .WindowAdd {%1};
+  .WindowCreate {%1};
   #VAR {window[buffer][%1][%2]} {%3};
   #VAR {window[update][%1]} {1};
 };
@@ -12,7 +12,7 @@
 #ALIAS {.WindowSet}
 {
   #NOP %1;
-  .WindowAdd {%1};
+  .WindowCreate {%1};
   #VAR {window[buffer][%1]} {%2};
   #VAR {window[update][%1]} {1};
 };
@@ -20,12 +20,20 @@
 #ALIAS {.WindowAppend}
 {
   #NOP %1;
-  .WindowAdd {%1};
-  #LIST {window[buffer][%1]} {insert} {1} {%2};
+  .WindowCreate {%1};
+  #LIST {window[buffer][%1]} {add} {%2};
+#NOP    #VAR {_wa[head]} {@fEval{$session[HeadRows]-1}};
+#NOP    #VAR {_wa[overflow]} {@fEval{&window[buffer][%1][] - $_wa[head]}};
+#NOP    #IF {$_wa[overflow] > 0}
+#NOP    {
+#NOP      #LIST {window[buffer][%1]} {delete} {1} {$_wa[overflow]};
+#NOP    };
+#NOP    #UNVAR {_wa};
+  #VAR {window[tail][%1]} {1};
   #VAR {window[update][%1]} {1};
 };
 
-#ALIAS {.WindowAdd}
+#ALIAS {.WindowCreate}
 {
   #NOP %1;
   #IF {"$window[names][%1]" != "1"}
@@ -50,9 +58,16 @@
   #NOP %1;
   #IF {"%1" == "$window[index][1]" || "%1" == "" }
   {
-    #IF {%2 > 0 && %2 <= ($session[HeadRows]-1)}
+    #VAR {_WRL[rows]} {@fEval{$session[HeadRows]-1}};
+    #VAR {_WRL[offset]}  {&window[buffer][$window[index][1]][] - $_WRL[rows]};
+    #IF {!$window[tail][%1] || $_WRL[offset] < 1}
     {
-      #ECHO {{%-${session[ScreenCols]}s<099>}{$session[ScreenRows]-%2}} {$window[buffer][$window[index][1]][%2]};
+      #VAR {_WRL[offset]} {0};
+    };
+    #IF {%2 > 0 && %2 <= $_WRL[rows]}
+    {
+      #VAR {_WRL[i]} {@fEval{%2 + $_WRL[offset]}};
+      #ECHO {{%-${session[ScreenCols]}s<099>}{$session[ScreenRows]-%2}} {$window[buffer][$window[index][1]][$_WRL[i]]};
     };
   };
 };
