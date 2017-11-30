@@ -1,3 +1,8 @@
+#VAR {_winComm[colour]}
+{
+  {ctell} {}
+};
+
 #ALIAS {handler_BAB}
 {
   #NOP %1;
@@ -22,7 +27,8 @@ event_register e_mip_BAB h_message handler_BAB;
   #NOP %1;
   #IF {"%2" != ""}
   {
-    .WindowAppend {messages} {@fTrunc{{@fListValue{{%2}{4}}}{$session[ScreenCols]}}};
+#NOP    .WindowAppend {messages} {@fTrunc{{@fListValue{{%2}{4}}}{$session[ScreenCols]}}};
+    .WindowAppend {messages} {@fWordWrap{{@fListValue{{%2}{4}}}{$session[ScreenCols]}}};
     .WindowRefresh {messages};
   };
 };

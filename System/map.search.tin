@@ -1,0 +1,31 @@
+#ALIAS {.mapSearch}
+{
+  #NOP #SCRIPT {_mS[areas]} {find $path[areas] -type d -printf '%f\n'}
+  
+};
+
+#FUNCTION {fGetAreaList}
+{
+  #IF {"%0" == ""}
+  {
+    #SCRIPT {_fGAL[areas]} {find $path[areas] -type d  -printf "%P\n"};
+  };
+  #ELSE
+  {
+    #SCRIPT {_fGAL[areas]} {find $path[areas] -type d -name "*%0*" -printf "%P\n"};
+  };
+  #UNVAR {result};
+  #IF {&_fGAL[areas]}
+  {
+    #FORALL {$_fGAL[areas][%*]}
+    {
+      #NOP #LINE SUBSTITUTE {VARIABLE} #REGEXP {&0} {{$path[areas]\/(.*\/(.+?))$}}
+      #REGEXP {&0} {{(.*\/(.+?))$}}
+      {
+        #ECHO {FIRED: &1 : &2 : &3}
+        #VAR {result[&3]} {&2};
+      };
+    };
+  };
+  #NOP #UNVAR {_fGAL};
+};

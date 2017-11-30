@@ -1,9 +1,6 @@
-#CLASS {cGuild} {kill}
-#CLASS {cGuild} {open}
-
 #NOP ======== DEFAULTS ===========;
 
-#VAR {BioTypes} {{1}{dark}{2}{murky}{3}{turbid}{4}{opaque}{5}{cloudy}};
+#VAR {BioTypes} {{1}{dark}{2}{murky}{3}{turbid}{4}{opaque}{5}{cloudy}{6}{milky}{7}{translucent}{8}{transparent}};
 
 #IF {"$my[gp1][name]" == ""} {#VAR {my[gp1][name]} {Stam};};
 #IF {"$my[gp2][name]" == ""} {#VAR {my[gp2][name]} {Proto};};
@@ -262,5 +259,3 @@ event_register {e_mip_FFF} {h_perseverance} {.HandlerPerseverance};
   {$opponent[hp]};
   #VAR {result} {1};
 }
-
-#CLASS {cGuild} {close}

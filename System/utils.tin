@@ -1,6 +1,6 @@
 #ALIAS {.aGlobalVar}
 {
-  #IF {"${%1}" != "%2"}
+  #IF {"${%1}" != "%2" && "%1" != "e_15_mins"}
   {
     #CLASS {cGlobalVars} {open};
     #VAR {%1} {%2};
@@ -241,4 +241,12 @@ event_register {e_15_mins} {h_globals} {.aGlobalVar};
 #FUNCTION {fWordWrap}
 {
   #FORMAT {result} {%w} {{%1}{%2}};
+  #IF {&result[] > 1}
+  {
+    #VAR {result} {$result[%*]};
+  };
+  #ELSE
+  {
+    #VAR {result} {%1}; 
+  };
 };

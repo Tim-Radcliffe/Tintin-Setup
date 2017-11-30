@@ -1,0 +1,33 @@
+#NOP Examine the changeling forms and record a log of the info
+
+#ALIAS {.changelingFormScan}
+{
+  #NOP %1;
+  
+  #IF {"%1" == "on"}
+  {
+    #ALIAS {handler_changeling_npc}
+    {
+      #LIST {changeling[forms]} {find} {%%2} {formindex};
+      #IF {$formindex == 0}
+      {
+        #LIST {forms} {add} {%%2};
+        #SEND {exa %%2};
+      };
+    };
+    event_register e_room_npc h_changeling_npc handler_changeling_npc;
+
+    #ACTION {^This %w appears to %+.}
+    {
+      #LINE {log} {$path[guild]/changeling.forms.txt} {$form:%%1:%%2};
+    };
+  };
+  #ELSE
+  {
+    event_remove_specific e_room_npc h_changeling_npc handler_changeling_npc;
+    #UNALIAS {handler_changeling_npc};
+    #UNACTION {^This %w appears to %+.};
+  };
+};
+
+auto {add} {formscan} {.changelingFormScan on} {} {.changelingFormScan off};

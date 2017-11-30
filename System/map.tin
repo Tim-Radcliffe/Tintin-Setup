@@ -250,6 +250,7 @@
       .mapCreate {%1};
       #MAP {goto} {%2};
     };
+    event_raise {e_map_link} {@fMapResolvePath{%1}};
   };
 };
 

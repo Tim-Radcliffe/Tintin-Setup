@@ -22,13 +22,6 @@
   #NOP %1;
   .WindowCreate {%1};
   #LIST {window[buffer][%1]} {add} {%2};
-#NOP    #VAR {_wa[head]} {@fEval{$session[HeadRows]-1}};
-#NOP    #VAR {_wa[overflow]} {@fEval{&window[buffer][%1][] - $_wa[head]}};
-#NOP    #IF {$_wa[overflow] > 0}
-#NOP    {
-#NOP      #LIST {window[buffer][%1]} {delete} {1} {$_wa[overflow]};
-#NOP    };
-#NOP    #UNVAR {_wa};
   #VAR {window[tail][%1]} {1};
   #VAR {window[update][%1]} {1};
 };
