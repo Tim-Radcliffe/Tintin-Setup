@@ -11,16 +11,16 @@
       #LIST {changeling[forms]} {find} {%%2} {formindex};
       #IF {$formindex == 0}
       {
-        #LIST {forms} {add} {%%2};
+        #LIST {changeling[forms]} {add} {%%2};
+        #ACTION {^This %w appears to %+.}
+        {
+          #LINE {log} {$path[profile]/changeling.forms.txt} {$changeling[forms][-1]:%%%1:%%%2};
+          #UNACTION {^This %w appears to %+.};
+        };
         #SEND {exa %%2};
       };
     };
     event_register e_room_npc h_changeling_npc handler_changeling_npc;
-
-    #ACTION {^This %w appears to %+.}
-    {
-      #LINE {log} {$path[guild]/changeling.forms.txt} {$form:%%1:%%2};
-    };
   };
   #ELSE
   {

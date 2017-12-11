@@ -73,6 +73,6 @@
     .WindowRefreshLine {%1} {$i};
   };
 };
-event_register {e_screen_resize} {h_window_refresh} {.WindowRefresh};
+event_register {e_screen_resize} {h_window_refresh} {.WindowRefresh {$window[index][1]}};
 
 #MACRO {\t} {.WindowSwap};

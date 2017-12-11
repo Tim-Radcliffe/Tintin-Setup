@@ -121,10 +121,9 @@ event_register e_mip_HAB h_room_contents handler_room_contents;
   #NOP %1;
   #IF {"$mip[last]" != "BAD"}
   {
-    #VAR {room} {};
     #VAR {room[exits]} {%2};
+    event_oneshot e_prompt h_room_enter {event_raise e_room_enter {#NOP %%1};};    
     event_oneshot e_prompt h_room_end handler_room_end;
-    event_raise {e_room_enter} {%2};
   };
 };
 event_register {e_mip_DDD} {h_room_exits} {.HandlerRoomExits};
@@ -132,16 +131,17 @@ event_register {e_mip_DDD} {h_room_exits} {.HandlerRoomExits};
 #ALIAS {.HandlerRoomName}
 {
   #NOP %1;
+  #VAR {room} {};
   #REGEXP {%2} {{^(.*?)\s*\([a-z,]*\)$}}
   {
     #VAR {room[name]} {&2};
   }
   {
     #VAR {room[name]} {%2};
-  };
+  };  
 };
-event_register {e_mip_BAD} {h_room_name} {.HandlerRoomName};
-event_register {e_ansiflags_R} {h_room_name} {.HandlerRoomName};
+#NOP event_register {e_mip_BAD} {h_room_name} {.HandlerRoomName};
+event_register {e_ansiflag_R} {h_room_name} {.HandlerRoomName};
 
 #ALIAS {handler_room_pickup}
 {

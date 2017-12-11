@@ -87,6 +87,8 @@
   #IF { @fEval{ $map[room][roomflags] & 8 } == 0 }
   {
     #VAR {map[lastroom]} {%1};
+    #VAR {my[location][area]} {$map[area][path]};
+    #VAR {my[location][roomvnum]} {$map[room][roomvnum]};
     event_raise {e_map_room_enter} {%0} {%1};
   };
 };
@@ -209,7 +211,7 @@
   #NOP %1;
   #IF {"%1" == ""}
   {
-    #ECHO {(exit command) (area name) (room vnum)};
+    #ECHO {.mapCreateLink (exit command) (area name) (room vnum)};
   };
   #ELSE
   {
@@ -220,10 +222,12 @@
       #MAP DIG {%1} {NEW};
       #VAR {_mAL[linkroom]} {@fMapGetVnum{%1}};
     };
-    #MAP {exit} {%1} {command} {.mapLink {@fMapResolvePath{%2}} {%3} {%1};};
     #MAP AT $_mAL[linkroom] .mapRoom {link};
-    #MAP AT $_mAL[linkroom] #MAP SET roomarea {%2};
+    #MAP AT $_mAL[linkroom] #MAP SET roomarea {@fMapResolvePath{%2}};
+    #MAP AT $_mAL[linkroom] #MAP SET roomname {LINK: @fMapResolvePath{%2}};
+    #MAP EXIT {%1} COMMAND {.mapLink {@fMapResolvePath{%2}} {%3} {%1};};
     #MAP EXITFLAG {%1} HIDE;
+    .mapRefresh
     #ECHO {CREATING MAP LINK:};
     #ECHO {FROM: @fFileGetPath{$map[file]} @fMapGetVnum{}};
     #ECHO {TO  : @fMapResolvePath{%2} %3};
@@ -356,12 +360,12 @@
   #UNVAR {_fMC};
 }
 
-#ALIAS {.mapFlag}
+#ALIAS {.mapNote}
 {
   #NOP %1;
   #IF {"%0" != ""}
   {
-    #VAR {map[room][roomnote]} {%0;$map[room][roomnote]};
+    #VAR {map[room][roomnote][%0]} {};
     #MAP set {roomnote} {$map[room][roomnote]};
   };
 };
@@ -380,7 +384,7 @@
 {
   #IF {"$RoomType[%1]" != "" && "%1" != ""}
   {
-    .mapFlag %1;
+    .mapNote %1;
     #MAP {set} {roomsymbol} {$RoomType[%1][symbol]};
     #MAP {set} {roomcolor} {$RoomType[%1][colour]};
     .mapRefresh;
