@@ -28,7 +28,7 @@
 #ALIAS {handler_corpse}
 {
   #NOP %1;
-  #SEND {!get coins from corpse};
+  #SEND {!get coins from corpse};  
   #SEND {!wrap corpse};
   #SEND {!flush corpse};
   #SEND {!glance};

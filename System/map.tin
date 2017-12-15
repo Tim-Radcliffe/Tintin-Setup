@@ -237,7 +237,10 @@
 #ALIAS {.mapLink}
 {
   #NOP %1;
-  #SEND {!%3};
+  #IF {"%3" != ""}
+  {
+    #SEND {!%3};
+  };
   #NOP Following command needs a delay or Tintin++ crashes;
   #DELAY {0.01} 
   {
@@ -274,13 +277,14 @@
   {
     #IF {"%3" != ""}
     {
-      #SEND {%3};
+      %3;
     };
     .mapRun;
-  };
+    #UNACTION {%2};
+  } {1};
   #IF {"%1" != ""}
   {
-    #SEND {%1};
+    %1;
   };
 }
 
