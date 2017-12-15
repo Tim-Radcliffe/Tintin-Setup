@@ -31,6 +31,7 @@
 
 #FUNCTION {fFileLoad}
 {
+  #CLASS {%1} {kill};
   #CLASS {%1} {read} {%1};
   #RETURN;
 };
