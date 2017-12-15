@@ -1,10 +1,11 @@
-#ACTION {HP: %d/%d  Energy: %d/%d  G2L: %d}
+#ACTION {HP: %d/%d  Energy: %d/%d  G2L: %d{\s+T:(\d+)\%|\s*$}}
 {
     #VAR {my[hp][current]} {%1};
     #VAR {my[hp][max]} {%2};
-    #VAR {my[sp][current]} {%3};
-    #VAR {my[sp][max]} {%4};
+    #VAR {my[gp1][current]} {%3};
+    #VAR {my[gp1][max]} {%4};
     #VAR {my[fighter][g2l]} {%5};
+    #VAR {opponent[hp]} {%7};
 };
 
 #ALIAS {gs}
