@@ -20,8 +20,9 @@
   {
     #FORMAT {_gs2[name]} {%l} {%%2};
     #VAR {my[android][$_gs2[name]]} {%%3};
+    #UNVAR {_gs2};
   };
-  event_oneshot {e_prompt} {h_gs2} {#UNACTION {{^\s{3}(\S+)\s+\((\d+)\/(\d+)\)}}};
+  event_oneshot {e_prompt} {android} {#UNACTION {{^\s{3}(\S+)\s+\((\d+)\/(\d+)\)}}};
   #SEND {!gs2};
 };
 
@@ -33,7 +34,7 @@
   #SEND {!flush corpse};
   #SEND {!glance};
 };
-event_register e_killed_opponent h_corpse_handler handler_corpse;
+event_register e_killed_opponent android handler_corpse;
 
 #ALIAS {handler_auto_nanosurge}
 {
