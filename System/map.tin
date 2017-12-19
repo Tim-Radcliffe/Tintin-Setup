@@ -10,6 +10,7 @@
 #VAR {map[col][interest]}     {<158>};
 #VAR {map[col][danger]}       {<118>};
 #VAR {map[col][black]}        {<000>};
+#VAR {map[col][brown]}        {<238>};
 
 #VAR {RoomType}
 {
@@ -62,6 +63,11 @@
   {
     {symbol} {<138>G}
     {colour} {${map[col][interest]}}
+  }
+  {road}
+  {
+    {symbol} {}
+    {colour} {$map[col][brown]}
   }
 };
 
