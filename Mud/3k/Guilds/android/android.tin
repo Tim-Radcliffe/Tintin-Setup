@@ -1,61 +1,98 @@
 #ACTION {^{>\s|}HP:\[(\d+)\/(\d+)\]\s+CHARGE:\[(\d+)Ah\/(\d+)Ah\]\s+G2N:\[([0-9.]+)\%\]\s+P:(.)\s+E:(.*)}
 {
-  #VAR {my[hp][current]} {%1};
-  #VAR {my[hp][max]} {%2};
-  #VAR {my[gp1][current]} {%3};
-  #VAR {my[gp1][max]} {%4};
-  #VAR {my[android][g2n]} {%5};
-  #VAR {my[android][ep]} {%6};
+    #VAR {my[hp][current]} {%1};
+    #VAR {my[hp][max]} {%2};
+    #VAR {my[gp1][current]} {%3};
+    #VAR {my[gp1][max]} {%4};
+    #VAR {my[android][g2n]} {%5};
+    #VAR {my[android][ep]} {%6};
 };
 
 #ACTION {^{>\s|}You vanquish your foe with a final %*.}
 {
-  event_raise e_killed_opponent {%*};
+    event_raise e_killed_opponent {%*};
 };
 
+#ACTION {^{>\s|}Your %* struck but did no damage to %*.}
+{
+    event_raise e_android_missed {%2};
+};
+
+/* Get all of the android component levels into $my[android] */
 #ALIAS {gs2}
 {
-  #NOP %1;
-  #ACTION {{^\s{3}(\S+)\s+\((\d+)\/(\d+)\)}}
-  {
-    #FORMAT {_gs2[name]} {%l} {%%2};
-    #VAR {my[android][$_gs2[name]]} {%%3};
-    #UNVAR {_gs2};
-  };
-  event_oneshot {e_prompt} {android} {#UNACTION {{^\s{3}(\S+)\s+\((\d+)\/(\d+)\)}}};
-  #SEND {!gs2};
+    #NOP %1;
+    #ACTION {{^\s{3}(\S+)\s+\((\d+)\/(\d+)\)}}
+    {
+        #FORMAT {_gs2[name]} {%l} {%%2};
+        #VAR {my[android][$_gs2[name]]} {%%3};
+        #UNVAR {_gs2};
+    };
+    event_oneshot {e_prompt} {android} {#UNACTION {{^\s{3}(\S+)\s+\((\d+)\/(\d+)\)}}};
+    #SEND {!gs2};
+};
+
+/* Make sure that plating updates to any changes in equipment */
+#ALIAS {wear}
+{
+    #NOP %1;
+    #IF {$my[android][plating] >= 1}
+    {
+        #SEND {!engage plating off};
+        #SEND {!wear %0};
+        #SEND {!engage plating};
+    };
+    #ELSE
+    {
+        #SEND {!wear %0};
+    };
 };
 
 #ALIAS {handler_corpse}
 {
-  #NOP %1;
-  #SEND {!get coins from corpse};  
-  #SEND {!wrap corpse};
-  #SEND {!flush corpse};
-  #SEND {!glance};
+    #NOP %1;
+    #SEND {!get coins from corpse};  
+    #SEND {!wrap corpse};
+    #SEND {!flush corpse};
+    #SEND {!glance};
 };
 event_register e_killed_opponent android handler_corpse;
 
+/* Fire off nanosurge when HP drops */
 #ALIAS {handler_auto_nanosurge}
 {
-  #NOP %1;
-  #IF {$my[hp][current] < $my[hp][max] && 
-       $my[gp1][current] > @fEval{$my[android][nanobots] * 5} && 
-       $my[android][nanobots] > 0}
-  {
-    #SEND {!nanosurge};
-  };
+    #NOP %1;
+    #IF {$my[hp][current]       < $my[hp][max]                       && 
+         $my[gp1][current]      > @fEval{$my[android][nanobots] * 5} && 
+         $my[android][nanobots] > 0}
+    {
+        #SEND {!nanosurge};
+    };
 
-  #NOP /* Send second nanosurge if HP is less than 80% */;
-  #IF {$my[hp][current] < $my[hp][max] * 0.8 && 
-       $my[gp1][current] > @fEval{$my[android][nanobots] * 10} && 
-       $my[android][nanobots] > 5}
-  {
-    #SEND {!nanosurge};
-  };
+    #NOP /* Send second nanosurge if HP is less than 90% */;
+    #IF {$my[hp][current]       < $my[hp][max] * 0.9                  && 
+         $my[gp1][current]      > @fEval{$my[android][nanobots] * 10} && 
+         $my[android][nanobots] > 5}
+    {
+        #SEND {!nanosurge};
+    };
   
 };
 auto {add} {nanosurge} {} {e_combat_round} {};
 auto {nanosurge} {on};
+
+/* If not hitting opponent, rotate to next damage type */
+#LIST {my[android][switch]} {CREATE} {blunt;fire;energy;mind};
+#ALIAS {handler_auto_switch}
+{
+    #NOP %1;
+    #LIST {my[android][switch]} {ADD} {$my[android][switch][1]};
+    #LIST {my[android][switch]} {DELETE} {1};
+    #SEND {!switch $my[android][switch][1]};
+    auto switch off;
+    event_oneshot {e_prompt} {android} {auto switch on};
+};
+auto {add} {switch} {} {e_android_missed} {};
+auto {switch} {on};
 
 #NOP /* // Error: You do not have enough charge to sustain engaged plating! */
