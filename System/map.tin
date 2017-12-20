@@ -247,6 +247,7 @@
   {
     #SEND {!%3};
   };
+  event_raise {e_map_area_leave} {$map[area][path]};
   #NOP Following command needs a delay or Tintin++ crashes;
   #DELAY {0.01} 
   {
@@ -263,7 +264,7 @@
       .mapCreate {%1};
       #MAP {goto} {%2};
     };
-    event_raise {e_map_link} {@fMapResolvePath{%1}};
+    event_raise {e_map_area_enter} {@fMapResolvePath{%1}};
   };
 };
 
