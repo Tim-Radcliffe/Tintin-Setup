@@ -76,10 +76,30 @@ event_register e_killed_opponent android handler_corpse;
     {
         #SEND {!nanosurge};
     };
-  
+    
+    #NOP /* Send third nanosurge if HP is less than 75% */;
+    #IF {$my[hp][current]       < $my[hp][max] * 0.75                 && 
+         $my[gp1][current]      > @fEval{$my[android][nanobots] * 15} && 
+         $my[android][nanobots] >= 10}
+    {
+        #SEND {!nanosurge};
+    };
 };
 auto {add} {nanosurge} {} {e_combat_round} {};
 auto {nanosurge} {on};
+
+/* Flush corpse when charge drops below 25%*/
+#ALIAS {handler_auto_flush}
+{
+    #NOP %1;
+    #IF {$my[gp1][current] < $my[gp1][max] * 0.25}
+    {
+        #SEND {!unwrap corpse};
+        #SEND {!flush corpse};
+    };
+}; 
+auto {add} {flush} {} {e_combat_round} {};
+auto {flush} {on};
 
 /* If not hitting opponent, rotate to next damage type */
 #LIST {my[android][switch]} {CREATE} {blunt;fire;energy;mind};
