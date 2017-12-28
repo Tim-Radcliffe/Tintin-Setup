@@ -24,7 +24,7 @@
       {
         .mapRun {stop};
       };
-      #TICKER {tWalk} {#PATH {walk};} {0.1};
+      #TICKER {tWalk} {#PATH {walk};} {0.01};
     };
   };
 };
@@ -90,7 +90,7 @@
             #FORMAT {map[temp][macroletter]} {%a} {$i+96};
             .GotoMacro {$map[temp][macroletter]} {&0};
             #VAR {map[temp][info]} {@fMapRoomInfo{&0}};
-            #ECHO {$map[temp][macroletter] : $map[temp][info][roomname] ($map[temp][info][roomarea])};
+            #ECHO {$map[temp][macroletter] : $map[rooms][&0] $map[temp][info][roomname] ($map[temp][info][roomarea])};
           };
           #IF {$i == 27}
           {

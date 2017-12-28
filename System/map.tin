@@ -3,7 +3,7 @@
 
 #VAR {map[col]} {};
 #VAR {map[col][visited]}      {<178>};
-#VAR {map[col][unexplored]}   {<109>};
+#VAR {map[col][unexplored]}   {<108>};
 #VAR {map[col][investigate]}  {<048>};
 #VAR {map[col][oddexits]}     {<068>};
 #VAR {map[col][money]}        {<128>};
@@ -164,6 +164,7 @@
 
     #VAR {map[file]}        {$_mL[path]/$_mL[area].map};
     #VAR {map[area][path]}  {$_mL[path]};
+    #VAR {map[area][name]}  {$_mL[area]};
     #MAP {read} {$path[areas]/$map[file]};
     
     #IF {"@fMapResolvePath{..}" != ""}
