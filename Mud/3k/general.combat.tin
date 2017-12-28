@@ -17,9 +17,9 @@ event_register e_combat h_combat handler_combat;
 
 #ALIAS {handler_combat_finished}
 {
-	#NOP %1;
-	event_remove_specific e_killed_opponent h_combat_finished;
-	event_register e_combat h_combat handler_combat;
+    #NOP %1;
+    event_remove_specific e_killed_opponent h_combat_finished;
+    event_register e_combat h_combat handler_combat;
     event_raise e_room_corpse;
     #BELL;
 };
