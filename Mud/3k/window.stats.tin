@@ -1,18 +1,28 @@
+#VAR {my[hp][colour]} {AFA};
+#VAR {my[sp][colour]} {FFA};
+#VAR {my[gp1][colour]} {AFF};
+#VAR {my[gp2][colour]} {FAF};
+
 #ALIAS {.HandlerStats}
 {
-  #NOP %1;
-  #IF {"$my[gp1][name]" == ""} {#VAR {my[gp1][name]} {GP1};};
-  #IF {"$my[gp2][name]" == ""} {#VAR {my[gp2][name]} {GP2};};
-  .WindowSet {stats}
-  {
-    {1} {@fGauge{{HP : $my[hp][current]}{$my[hp][current]}{$my[hp][max]}{AFA}{35}} @fGauge{{$my[gp1][name] : $my[gp1][current]}{$my[gp1][current]}{$my[gp1][max]}{AFF}{35}}}
-    {2} {@fGauge{{SP : $my[sp][current]}{$my[sp][current]}{$my[sp][max]}{FFA}{35}} @fGauge{{$my[gp2][name] : $my[gp2][current]}{$my[gp2][current]}{$my[gp2][max]}{FAF}{35}}}
-    {3} {@fGauge{{Vs : $mip[FFF][K][data]}{$mip[FFF][L][data]}{100}{FAA}{35}} Rounds : $mip[FFF][N][data]}
-    {4} {$mip[gline][1]}
-    {5} {$mip[gline][2]}
-    {6} {$mip[BAC][data]}
-  };
-  .WindowRefresh {stats};
+    #NOP %1;
+    #VAR {_wS};
+    #FORALL {hp;sp;gp1;gp2}
+    {
+        #IF {"$my[&0][current]" == "0" && "$my[&0][max]" == "0"} {}
+        {
+            #IF {"$my[&0][name]" == ""} {#FORMAT {my[&0][name]} {%u} {&0};};
+            #LIST {_wS} {add} {@fGauge{{$my[&0][name] : $my[&0][current]}{$my[&0][current]}{$my[&0][max]}{$my[&0][colour]}{35}}};
+        };
+    };
+    #LIST {_wS} {add} {@fGauge{{Vs : $mip[FFF][K][data]}{$mip[FFF][L][data]}{100}{FAA}{35}}};
+    #LIST {_wS} {add} {Rounds : $mip[FFF][N][data]};
+    #LIST {_wS} {add} {$mip[gline][1]};
+    #LIST {_wS} {add} {$mip[gline][2]};
+    #LIST {_wS} {add} {$mip[BAC][data]};
+    .WindowSet {stats} {$_wS};
+    .WindowRefresh {stats};
+    #UNVAR {_wS};
 };
 event_register {e_mip_FFF} {h_window_stats} {.HandlerStats};
 .HandlerStats;

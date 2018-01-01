@@ -7,6 +7,7 @@
   .WindowCreate {%1};
   #VAR {window[buffer][%1][%2]} {%3};
   #VAR {window[update][%1]} {1};
+  .WindowNotify
 };
 
 #ALIAS {.WindowSet}
@@ -15,6 +16,7 @@
   .WindowCreate {%1};
   #VAR {window[buffer][%1]} {%2};
   #VAR {window[update][%1]} {1};
+  .WindowNotify
 };
 
 #ALIAS {.WindowAppend}
@@ -24,6 +26,7 @@
   #LIST {window[buffer][%1]} {add} {%2};
   #VAR {window[tail][%1]} {1};
   #VAR {window[update][%1]} {1};
+  .WindowNotify
 };
 
 #ALIAS {.WindowCreate}
@@ -36,14 +39,37 @@
   };  
 };
 
+#ALIAS {.WindowNotify}
+{
+    #NOP %1;
+    #VAR {_WN} {};
+    #FORALL {$window[names][]}
+    {
+        #IF {"&0" == "$window[index][1]"}
+        {
+            #VAR {_WN} {${_WN}>&0< };        
+        };
+        #ELSEIF {"$window[update][&0]" == "1"}
+        {
+            #VAR {_WN} {${_WN}*&0* };        
+        };
+        #ELSE
+        {
+            #VAR {_WN} {${_WN} &0  };
+        };
+    };
+    event_raise {e_notify} {window} {<274>$_WN} {2};    
+    #UNVAR {_WN};
+};
+
 #ALIAS {.WindowSwap}
 {
   #NOP %1;
   #IF {"$window[index][1]" == "" } {#RETURN;};
   #LIST {window[index]} {add} {$window[index][1]};
   #LIST {window[index]} {delete} {1};
-  event_raise {e_notify} {window} {<274>Window Displayed: $window[index][1]} {2};
   .WindowRefresh {$window[index][1]};
+  .WindowNotify;
 };
 
 #ALIAS {.WindowRefreshLine}
@@ -72,6 +98,7 @@
   {
     .WindowRefreshLine {%1} {$i};
   };
+  #IF {"%1" == "$window[index][1]"} #VAR {window[update][%1]} {0};
 };
 event_register {e_screen_resize} {h_window_refresh} {.WindowRefresh {$window[index][1]}};
 

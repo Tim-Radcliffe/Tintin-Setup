@@ -3,12 +3,17 @@
 #ALIAS {.HandlerNotify}
 {
   #NOP %1;
-  #NOP {id} {text} {timeout};
+  #NOP {event} {id} {text} {timeout};
   #IF {"%2" == ""} {#RETURN;};
   #IF {"%3" == ""} 
   {
     #UNVAR {notifyBar[%2]};
-  }
+  };
+  #ELSEIF {"%3" == "${notifyBar[%2][text]}"}
+  {
+    #RETURN;
+  };
+  #ELSE
   {
     #VAR {notifyBar[%2][text]} {%3};
     #IF {"%4" != ""}

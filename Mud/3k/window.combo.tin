@@ -1,0 +1,54 @@
+#VAR {_WC} {};
+
+#ALIAS {.WindowComboSplit}
+{
+    #NOP %1;
+    #VAR {_WC[split][l]} {40};
+    #VAR {_WC[split][r]} {@fEval{${session[ScreenCols]}-${_WC[split][l]}}};
+};
+
+#ALIAS {.WindowComboRefresh}
+{
+    #NOP %1;
+    #VAR {_WC[buffer]} {};
+    
+    #LOOP {1} {${session[HeadRows]}} {_WC[i]}
+    {
+        #VAR {_WC[buffer][$_WC[i]]} {@fLinePad{{$_WC[stats][$_WC[i]]}{}{$_WC[split][l]}}$_WC[map][$_WC[i]]}
+    };
+    .WindowSet {combo} {$_WC[buffer]};
+    .WindowRefresh {combo};    
+};
+
+#ALIAS {.WindowComboStats}
+{
+    #NOP %1;
+    .WindowComboSplit;
+    #UNVAR {_WC[stats]};
+    #FORALL {hp;sp;gp1;gp2}
+    {
+        #IF {"$my[&0][current]" == "0" && "$my[&0][max]" == "0"} {}
+        {
+            #IF {"$my[&0][name]" == ""} {#FORMAT {my[&0][name]} {%u} {&0};};
+            #LIST {_WC[stats]} {add} {@fGauge{{$my[&0][name] : $my[&0][current]}{$my[&0][current]}{$my[&0][max]}{$my[&0][colour]}{$_WC[split][l]}}};
+        };
+    };
+    #LIST {_WC[stats]} {add} {@fGauge{{Vs : $mip[FFF][K][data]}{$mip[FFF][L][data]}{100}{FAA}{$_WC[split][l]}}};
+    .WindowComboRefresh;    
+};
+event_register {e_mip_FFF} {h_window_combo} {.WindowComboStats};
+.WindowComboStats;
+
+#ALIAS {.WindowComboMap}
+{
+    #NOP %1;
+    #IF {"$map[file]" == ""} #RETURN;
+    .WindowComboSplit;
+    #MAP MAP {${_WC[split][r]}x${session[HeadRows]}} {/tmp/map2.txt};
+    #SYSTEM {sed -i 's/\\/\\\\/g' /tmp/map2.txt};
+    #SCRIPT {_WC[map]} {cat /tmp/map2.txt};
+    .WindowComboRefresh;
+};
+event_register {e_map_refresh} {h_window_combo} {.WindowComboMap};
+event_register {e_map_room_enter} {h_window_combo} {.WindowComboMap};
+.WindowComboMap;

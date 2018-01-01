@@ -100,15 +100,16 @@ event_register {e_15_mins} {h_globals} {.aGlobalVar};
 #FUNCTION {fGauge}
 {
   #VAR {_fG} {};
-  #VAR {_fG[text]} {@fTrunc{{%1}{%5}}};
-  #VAR {_fG[len]} {@fEval{(%2*%5)/%3}};
-  #VAR {_fG[max]} {@fMin{${_fG[len]};%5}};
+  #VAR {_fG[width]} {@fEval{%5-2}};
+  #VAR {_fG[text]} {@fTrunc{{%1}{$_fG[width]}}};
+  #VAR {_fG[len]} {@fEval{(%2*$_fG[width])/%3}};
+  #VAR {_fG[max]} {@fMin{${_fG[len]};$_fG[width]}};
   #IF {${_fG[len]} > ${_fG[max]}}
   {
-    #FORMAT {result} {[<%4><aaa>%s<AAA><fff>]} {@fLinePad{{@fTrunc{{${_fG[text]}}{@fEval{%5-1}}}}{+}{%5}}};
+    #FORMAT {result} {[<%4><aaa>%s<AAA><fff>]} {@fLinePad{{@fTrunc{{${_fG[text]}}{@fEval{$_fG[width]-1}}}}{+}{$_fG[width]}}};
   }
   {
-    #REGEXP {@fLinePad{{${_fG[text]}}{}{%5}}} {^{.{${_fG[max]}}}{.*}}
+    #REGEXP {@fLinePad{{${_fG[text]}}{}{$_fG[width]}}} {^{.{${_fG[max]}}}{.*}}
     {
       #FORMAT {result} {[<%4><aaa>%s<AAA><fff>%s]} {&1} {&2};
     }
