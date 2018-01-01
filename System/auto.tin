@@ -79,13 +79,18 @@
                 #ECHO {AUTO: Parameter Not Recognised};
         };
 };
-#FOREACH {$auto[]} {i}
+
+/* Turn all saved auto settings on after all the other scripts have loaded */
+#DELAY {1}
 {
-        #IF {"$auto[$i][status]" == "1"}
-        {
-                auto $i on;
-        } 
-        {
-                auto $i off;
-        }
+    #FOREACH {$auto[]} {i}
+    {
+            #IF {"$auto[$i][status]" == "1"}
+            {
+                    auto {$i} on;
+            } 
+            {
+                    auto {$i} off;
+            }
+    };
 };

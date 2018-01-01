@@ -48,6 +48,70 @@
     };
 };
 
+#ALIAS {evaluate}
+{
+    #NOP %1;
+    #LIST {_aEV[off]} {create} 
+    {
+        No threat at all;
+        Almost no threat;
+        Very little potential;
+        Capable of inflicting some harm;
+        Capable of decent damage;
+        Fairly dangerous;
+        Capable of excessive force;
+        Capable of extreme amount of force;
+        Devastating potential;
+        Terrifying power;
+        Can destroy a small city;
+        Can level a large metropolis;
+        Can crumble mountains and boil seas;
+        Can fracture the Earth itself;
+        Attacks with the power of a blazing sun;
+        Capable of warping time and space itself;
+    };
+    #LIST {_aEV[def]} {create} 
+    {
+        No survival instict;
+        Can withstand a brisk breeze;
+        As tough as cardboard;
+        As tough as brittle plywood;
+        As tough as sheet metal;
+        Can hold its own;
+        Wants to survive;
+        It determined to prevail;
+        Laughs at danger;
+        Eats broken glass for breakfast;
+        Can withstand monumental force;
+        Wouldn't notice being hit by a comet;
+    };      
+    #LIST {_aEV[hea]} {create} 
+    {
+        Cannot outlive a fruitfly;
+        Can barely outlive a fruitfly;
+        Will outlive a rat;
+        Will outlive a dog;
+        Will outlive a moose;
+        Will outlive a grizzly bear;
+        Will outlive a blue whale;
+        Will outlive Keith Richards;
+        Will outlive the Earth;
+        Will outlive the sun;
+        Will be alive to see the end of the universe;
+    };
+    #CLASS {cAndroidEvaluate} {open};
+    #FORALL {$_aEV[]}
+    {
+        #FORALL {$_aEV[&0][]}
+        {
+            #SUBSTITUTE {$_aEV[&0][&&0]} {(&&0) - $_aEV[&0][&&0]};
+        };
+    };
+    #CLASS {cAndroidEvaluate} {close};
+    event_oneshot {e_prompt} {android} {#CLASS cAndroidEvaluate kill};
+    #SEND {!evaluate %0};
+};
+
 #ALIAS {handler_corpse}
 {
     #NOP %1;
@@ -86,7 +150,6 @@ event_register e_killed_opponent android handler_corpse;
     };
 };
 auto {add} {nanosurge} {} {e_combat_round} {};
-auto {nanosurge} {on};
 
 /* Flush corpse when charge drops below 25%*/
 #ALIAS {handler_auto_flush}
@@ -99,7 +162,6 @@ auto {nanosurge} {on};
     };
 }; 
 auto {add} {flush} {} {e_combat_round} {};
-auto {flush} {on};
 
 /* If not hitting opponent, rotate to next damage type */
 #LIST {my[android][switch]} {CREATE} {blunt;fire;energy;mind};
@@ -113,6 +175,5 @@ auto {flush} {on};
     event_oneshot {e_prompt} {android} {auto switch on};
 };
 auto {add} {switch} {} {e_android_missed} {};
-auto {switch} {on};
 
 #NOP /* // Error: You do not have enough charge to sustain engaged plating! */
