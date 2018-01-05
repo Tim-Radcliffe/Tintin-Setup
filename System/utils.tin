@@ -217,6 +217,7 @@ event_register {e_15_mins} {h_globals} {.aGlobalVar};
 {
   #VAR {_fCL[sep]} {, };
   #VAR {result} {};
+  #IF {"%0" == ""} #RETURN;
   #FORALL {%0}
   {
     #IF {"$result" != ""}

@@ -11,13 +11,20 @@
 {
     #NOP %1;
     #VAR {_WC[buffer]} {};
-    
+    #VAR {_WC[l]} {};
+    #VAR {_WC[r]} {};
+
+    #LIST {_WC[l]} {add} {$_WC[stats][%*]};
+    #LIST {_WC[l]} {add} {$_WC[room][%*]};
+
+    #LIST {_WC[r]} {add} {$_WC[map][%*]};
+
     #LOOP {1} {${session[HeadRows]}} {_WC[i]}
     {
-        #VAR {_WC[buffer][$_WC[i]]} {@fLinePad{{$_WC[stats][$_WC[i]]}{}{$_WC[split][l]}}$_WC[map][$_WC[i]]}
+        #VAR {_WC[buffer][$_WC[i]]} {@fLinePad{{$_WC[l][$_WC[i]]}{}{$_WC[split][l]}}$_WC[r][$_WC[i]]}
     };
     .WindowSet {combo} {$_WC[buffer]};
-    .WindowRefresh {combo};    
+    .WindowRefresh {combo};
 };
 
 #ALIAS {.WindowComboStats}
@@ -39,6 +46,23 @@
 event_register {e_mip_FFF} {h_window_combo} {.WindowComboStats};
 .WindowComboStats;
 
+#ALIAS {.WindowComboRoom}
+{
+    #NOP %1;
+    .WindowComboSplit;
+    #UNVAR {_WC[room]};    
+    #LIST {_WC[room]} {add} {@fTrunc{{Name  :$map[room][roomname]}{$_WC[split][l]}}};
+    #LIST {_WC[room]} {add} {@fTrunc{{Exits :@fCommaList{$map[room][roomexits][]}}{$_WC[split][l]}}};
+    #IF {"$map[room][roomnote]" != ""}
+    {
+        #LIST {_WC[room]} {add} {Notes :};
+        #FORALL {$map[room][roomnote][]}
+        {
+            #LIST {_WC[room]} {add} {@fTrunc{{&0}{$_WC[split][l]}}};
+        };
+    };
+};
+
 #ALIAS {.WindowComboMap}
 {
     #NOP %1;
@@ -49,6 +73,8 @@ event_register {e_mip_FFF} {h_window_combo} {.WindowComboStats};
     #SCRIPT {_WC[map]} {cat /tmp/map2.txt};
     .WindowComboRefresh;
 };
-event_register {e_map_refresh} {h_window_combo} {.WindowComboMap};
-event_register {e_map_room_enter} {h_window_combo} {.WindowComboMap};
+
+event_register {e_map_refresh} {h_window_combo} {.WindowComboRoom;.WindowComboMap};
+event_register {e_map_room_enter} {h_window_combo} {.WindowComboRoom;.WindowComboMap};
+.WindowComboRoom;
 .WindowComboMap;

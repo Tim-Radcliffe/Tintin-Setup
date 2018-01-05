@@ -412,6 +412,11 @@
   };
 };
 
+#ALIAS {.mapRoomPaint}
+{
+
+};
+
 #ALIAS {.mapRoomSpecialExit}
 {
   #NOP %1;

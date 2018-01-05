@@ -131,8 +131,8 @@ event_register {e_mip_DDD} {h_room_exits} {.HandlerRoomExits};
 #ALIAS {.HandlerRoomName}
 {
   #NOP %1;
-  #VAR {room} {};
-  #REGEXP {%2} {{^(.*?)\s*\([a-z,]*\)$}}
+  #VAR {room} {};      
+  #REGEXP {%2} {{^(.*?)\s*\([a-z\s,]*\)\s*$}}
   {
     #VAR {room[name]} {&2};
   }
