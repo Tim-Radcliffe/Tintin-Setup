@@ -68,7 +68,7 @@
 		#VAR {room} {};
 		#VAR {room[name]} {&2};
 		#NOP handler_parse_room_exits {&3};
-    event_raise {e_room_header};
+        event_raise {e_room_header};
 	};
 } {2};
 

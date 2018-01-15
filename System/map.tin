@@ -379,6 +379,11 @@
   {
     #VAR {map[room][roomnote][%0]} {};
     #MAP set {roomnote} {$map[room][roomnote]};
+    #MAP get {roomsymbol} {_aMN};
+    #IF {"$_aMN" == " " || "$_aMN" == ""}
+    {
+        #MAP set {roomsymbol} {<138>?};
+    };
   };
 };
 
@@ -410,11 +415,6 @@
       #SHOWME {$RoomType[&0][colour] [$RoomType[&0][symbol]$RoomType[&0][colour]]<099> : &0};
     };
   };
-};
-
-#ALIAS {.mapRoomPaint}
-{
-
 };
 
 #ALIAS {.mapRoomSpecialExit}
