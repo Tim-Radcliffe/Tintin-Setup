@@ -176,4 +176,26 @@ auto {add} {flush} {} {e_combat_round} {};
 };
 auto {add} {switch} {} {e_android_missed} {};
 
+/* Guild Battle Spam Gags */
+#ALIAS {handler_auto_guildgag_on}
+{
+    #NOP %1;
+    #GAG {// Info: Your nanobots explode with life and furiously repair your suit.};
+    #GAG {// Info: Nanobots work to repair your damaged structure.};
+    #GAG {// Defense: Your shield absorbs some of the attack.};
+    #GAG {// Defense: Your electrified plating shocks %*};
+    #GAG {// Combat: Servomotors move your %* quickly, landing a critical shot!};
+};
+
+#ALIAS {handler_auto_guildgag_off}
+{
+    #NOP %1;
+    #UNGAG {// Info: Your nanobots explode with life and furiously repair your suit.};
+    #UNGAG {// Info: Nanobots work to repair your damaged structure.};
+    #UNGAG {// Defense: Your shield absorbs some of the attack.};
+    #UNGAG {// Defense: Your electrified plating shocks %*};
+    #UNGAG {// Combat: Servomotors move your %* quickly, landing a critical shot!};
+};
+auto {add} {guildgag} {handler_auto_guildgag_on} {} {handler_auto_guildgag_off};
+
 #NOP /* // Error: You do not have enough charge to sustain engaged plating! */
