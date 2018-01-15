@@ -31,4 +31,10 @@
   event_raise e_keep {%3};
 } {2};
 
+#ALIAS {handler_3k_screen_resize}
+{
+    #SEND {!setmod ROWS $session[MainRows]};
+};
+event_register {e_screen_resize} {general.main.tin} {handler_3k_screen_resize};
+
 

@@ -9,7 +9,6 @@
     #VAR {session[ScreenRows]} {$temp[ScreenRows]};
     #MATH {session[HeadRows]} { ( $session[ScreenRows] / 4 ) + 1 };
     #MATH {session[MainRows]} { $session[ScreenRows] - $session[HeadRows] - 3 };
-    #SEND {!setmod ROWS $session[MainRows]};
   };
   
   #IF {"$temp[ScreenCols]" != "$session[ScreenCols]"}
