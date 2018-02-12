@@ -39,12 +39,21 @@
     #IF {$my[android][plating] >= 1}
     {
         #SEND {!engage plating off};
-        #SEND {!wear %0};
+    };
+    #IF {$my[android][shocks] >= 1}
+    {
+        #SEND {!engage shield off};
+    };
+        
+    #SEND {!wear %0};
+
+    #IF {$my[android][plating] >= 1}
+    {
         #SEND {!engage plating};
     };
-    #ELSE
+    #IF {$my[android][shocks] >= 1}
     {
-        #SEND {!wear %0};
+        #SEND {!engage shield};
     };
 };
 

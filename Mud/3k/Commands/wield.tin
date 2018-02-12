@@ -1,0 +1,7 @@
+#ALIAS {wield}
+{
+  #NOP %1;
+  event_raise {e_wield_pre} {%0};
+  #SEND {!wield %0};
+  event_raise {e_wield_post} {%0};
+};

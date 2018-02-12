@@ -1,0 +1,419 @@
+#NOP ############## FARMING ###################
+
+#VAR {_farm[states]}
+{
+    {1}{{pale}{1}{light}{2}{dark}{3}{black}{4}}
+    {2}{{few}{1}{some}{2}{many}{3}{swath}{4}}
+    {3}{{few}{1}{some}{2}{many}{3}{swath}{4}}
+    {4}{{yellow }{1}{yellow-green}{2}{green-yellow}{3}{green}{4}}
+    {5}{{bone dry}{1}{somewhat dry}{2}{damp}{3}{soaked}{4}}
+    {6}{{virtually no}{1}{some}{2}{many}{3}{innumerable}{4}}
+    {7}{{very few}{1}{few}{2}{a bunch}{3}{a lot}{4}}
+    {8}{{very few}{1}{few}{2}{a bunch}{3}{a lot}{4}}
+};
+
+#VAR {_farm[growth]} {{5}{N/A}{4}{growth}{3}{no growth}{2}{shrinkage}{1}{dead}};
+
+#VAR {_farm[air]}           {{Detroit}{}{Genlab}{}{Ryogi-Pei}{}{Serinth}{}};
+#VAR {_farm[fertilizer]}    {{alphabet}{}{Happy Ed's}{}{hippie}{}{smurfy}{}};
+#VAR {_farm[neutralizer]}   {{Burns brand}{}{Cowville}{}{Der'thalas}{}{Garou}{}};
+#VAR {_farm[pesticide]}     {{Ant Cave}{}{Hunch}{}{Mount Perplexus}{}{Murus Faralain}{}};
+#VAR {_farm[water]}         {{Atlantis}{}{Gulf of Mexico}{}{R'lyeh}{}{Wayhaven}{}};
+
+#VAR {_farm[air][cmd]}          {aerate %s %s air};
+#VAR {_farm[fertilizer][cmd]}   {fertilize %s %s fertilizer};
+#VAR {_farm[neutralizer][cmd]}  {spread %s %s neutralizer};
+#VAR {_farm[pesticide][cmd]}    {spray %s %s pesticide};
+#VAR {_farm[water][cmd]}        {water %s %s};
+
+#VAR {_farm[Detroit]}           {{type}{air}}
+#VAR {_farm[Genlab]}            {{type}{air}}
+#VAR {_farm[Ryogi-Pei]}         {{type}{air}}
+#VAR {_farm[Serinth]}           {{type}{air}}
+#VAR {_farm[alphabet]}          {{type}{fertilizer}}
+#VAR {_farm[Happy Ed's]}        {{type}{fertilizer}}
+#VAR {_farm[hippie]}            {{type}{fertilizer}}
+#VAR {_farm[smurfy]}            {{type}{fertilizer}}
+#VAR {_farm[Burns brand]}       {{type}{neutralizer}}
+#VAR {_farm[Cowville]}          {{type}{neutralizer}}
+#VAR {_farm[Der'thalas]}        {{type}{neutralizer}}
+#VAR {_farm[Garou]}             {{type}{neutralizer}}
+#VAR {_farm[Ant Cave]}          {{type}{pesticide}}
+#VAR {_farm[Hunch]}             {{type}{pesticide}}
+#VAR {_farm[Mount Perplexus]}   {{type}{pesticide}}
+#VAR {_farm[Murus Faralain]}    {{type}{pesticide}}
+#VAR {_farm[Atlantis]}          {{type}{water}}
+#VAR {_farm[Gulf of Mexico]}    {{type}{water}}
+#VAR {_farm[R'lyeh]}            {{type}{water}}
+#VAR {_farm[Wayhaven]}          {{type}{water}}
+
+#VAR {_farm[supplies]}
+{
+        {A tank of Detroit air}                 {Detroit}            
+        {A tank of Genlab air}                  {Genlab}
+        {A tank of Ryogi-Pei air}               {Ryogi-Pei}        
+        {A tank of Serinth air}                 {Serinth}
+        {A bag of Happy Ed's fertilizer}        {Happy Ed's}          
+        {A bag of alphabet fertilizer}          {alphabet}
+        {A bag of hippie fertilizer}            {hippie}              
+        {A bag of smurfy fertilizer}            {smurfy}
+        {A barrel of Burns brand neutralizer}   {Burns brand}     
+        {A barrel of Cowville neutralizer}      {Cowville}
+        {A barrel of Der'thalas neutralizer}    {Der'thalas}      
+        {A barrel of Garou neutralizer}         {Garou}
+        {A barrel of Ant Cave pesticide}        {Ant Cave}          
+        {A barrel of Hunch pesticide}           {Hunch}
+        {A barrel of Mount Perplexus pesticide} {Mount Perplexus}   
+        {A barrel of Murus Faralain pesticide}  {Murus Faralain}
+        {A barrel of Gulf of Mexico water}      {Gulf of Mexico}        
+        {A barrel of R'lyeh water}              {R'lyeh}
+        {A barrel of Wayhaven water}            {Wayhaven}              
+        {A conch filled with Atlantis water}    {Atlantis}
+};
+
+#NOP ############## Grow recipes ######################
+
+#VAR {_farm[recipes]}
+{
+    {beefsteak tomato}
+    {
+        {0}{{hippie}{35}}
+        {1}{{hippie}{70}}
+    }
+    {white potato}
+    {
+        {0}{{hippie}{35}{Wayhaven}{35}}
+        {1}{{hippie}{20}{Wayhaven}{20}}
+    }
+    {broccoli}
+    {
+        {0}{{hippie}{105}}
+        {1}{{hippie}{105}}
+    }
+    {mcintosh apple}
+    {
+        {0}{{Happy Ed's}{70}}
+        {1}{{Happy Ed's}{35}}    
+    }
+    {yellow bean}
+    {
+        {0}{{hippie}{35}}
+        {1}{{hippie}{20}}    
+    }
+    {blueberry}
+    {
+        {0}{{R'lyeh}{70}{Happy Ed's}{30}{hippie}{30}{smurfy}{30}{Serinth}{10}{Hunch}{10}}
+        {1}{}
+    }
+    {green bean}
+    {
+        {0}{{smurfy}{35}}
+        {1}{{smurfy}{35}}
+    }
+    {zucchini}
+    {
+        {0}{}
+        {1}{}
+        {2}{{hippie}{175}}
+        {3}{}
+        {4}{}
+    }
+    {roma tomato}
+    {
+        {0}{{smurfy}{70}{hippie}{70}{Gulf of Mexico}{105}{Happy Ed's}{175}{Genlab}{105}}
+        {1}{{smurfy}{30}{Gulf of Mexico}{30}}
+    }
+    {valencia orange}
+    {
+        {0}{{smurfy}{35}}
+        {1}{{smurfy}{20}}
+    }
+    {raspberry}
+    {
+        {0}{{hippie}{35}{Happy Ed's}{35}}
+        {1}{{hippie}{35}}
+        {2}{{Happy Ed's}{35}}
+    }
+    {red pepper}
+    {
+        {0}{{hippie}{35}}
+        {1}{{hippie}{40}}
+    }
+    {red potato}
+    {
+        {0}{{alphabet}{70}}
+        {1}{{alphabet}{10}}
+    }
+    {green apple}
+    {
+        {0}{{smurfy}{70}{hippie}{70}{Gulf of Mexico}{105}{Happy Ed's}{175}{Genlab}{105}}
+        {1}{}
+    }
+    {cauliflower}
+    {
+        {0}{{hippie}{105}{Gulf of Mexico}{45}}
+        {1}{{hippie}{55}{Gulf of Mexico}{20}}
+    }
+};
+
+#NOP ############## Grow round messages ###############
+
+/* event e_farm_round {message num} {1(grow)/-1(shrink)/0(neither)/-2(dead)} */
+
+/* Harvest */
+
+#ACTION {The plant shivers, nudges, and moves its leaves}       {event_raise e_farm_harvest};
+#ACTION {The spindly leaves of the %* plant come together}      {event_raise e_farm_harvest};
+#ACTION {With the tinkling of a bell,}                          {event_raise e_farm_harvest};
+#ACTION {the plant is now ready to harvest!}                    {event_raise e_farm_harvest};
+
+/* Grow */
+
+#ACTION {^The %* flowers pop and rattle as they are hauled}     {event_raise e_farm_round {4};};
+#ACTION {^With a triumphant scream, the %* plant explodes}      {event_raise e_farm_round {4};};
+#ACTION {^The %* plant screams in delight}                      {event_raise e_farm_round {4};};
+#ACTION {^The faint smell of soap and cumin rises}              {event_raise e_farm_round {4};};
+#ACTION {^The roots of the %* plant plungs into the ground}     {event_raise e_farm_round {4};};
+#ACTION {^With a shift to the left, and a shift to the right}   {event_raise e_farm_round {4};};
+#ACTION {^The %* plan sighs tremendously, as if it was}         {event_raise e_farm_round {4};};
+#ACTION {^The roots of the %* plant tear up the ground}         {event_raise e_farm_round {4};};
+#ACTION {^The %* plant spins in a torrent, moving skyward}      {event_raise e_farm_round {4};};
+#ACTION {^The roots of the %* plant spiral up around}           {event_raise e_farm_round {4};};
+#ACTION {^The roots of the %* plant disappear deep}             {event_raise e_farm_round {4};};
+#ACTION {^Soil flies in every direction as the %* plant races}  {event_raise e_farm_round {4};};
+#ACTION {^As in a nature documentary, the %* leaves grow}       {event_raise e_farm_round {4};};
+#ACTION {^The smell of angel wing feathers fills your soul}     {event_raise e_farm_round {4};};
+#ACTION {^The scent of wildflowers and oak wine barrels}        {event_raise e_farm_round {4};};
+#ACTION {^The smell of rotted lilacs showers you as the}        {event_raise e_farm_round {4};};
+#ACTION {^With a shriek of delight, the %* plant dances}        {event_raise e_farm_round {4};};
+#ACTION {^With a pop, a twirl, and a sweet little coo}          {event_raise e_farm_round {4};};
+#ACTION {^The %* leaves coil around itself clockwise}           {event_raise e_farm_round {4};};
+#ACTION {^The %* roots launch themselves skywards to drive}     {event_raise e_farm_round {4};};
+#ACTION {^A massive explosion knocks you back as the}           {event_raise e_farm_round {4};};
+#ACTION {^The sound of children laughing comes}                 {event_raise e_farm_round {4};};
+#ACTION {^A tri-harmonic sound blasts in your ears}             {event_raise e_farm_round {4};};
+#ACTION {^The %* plant dances a slow, luxurious dance}          {event_raise e_farm_round {4};};
+#ACTION {^With leaves all-aquiver, the %* plant undergoes}      {event_raise e_farm_round {4};};
+#ACTION {^The smell of burnt bone marrow overwhelms you}        {event_raise e_farm_round {4};};
+#ACTION {^The %* plant's leaves buffet you with wind}           {event_raise e_farm_round {4};};
+#ACTION {^The %* plant gives a little cough, and moves}         {event_raise e_farm_round {4};};
+#ACTION {^The roots of the %* plant reach downward}             {event_raise e_farm_round {4};};
+#ACTION {^Leaving no trace of its former self behind it}        {event_raise e_farm_round {4};};
+#ACTION {^The %* plant shrugs its leaves as it sends it}        {event_raise e_farm_round {4};};
+
+/* Neutral */
+
+#ACTION {^The roots of the %* plant reach deep}                 {event_raise e_farm_round {3};};
+#ACTION {^The %* plant squiggles and niggles}                   {event_raise e_farm_round {3};};
+#ACTION {^With a stench like oozing foot sores}                 {event_raise e_farm_round {3};};
+#ACTION {^The leaves of the %* plant shrug upwards}             {event_raise e_farm_round {3};};
+
+/* Shrink */
+
+#ACTION {^The %* plant heaves upwards momentarily}              {event_raise e_farm_round {2};};
+#ACTION {^A cough emanates from the %* plant}                   {event_raise e_farm_round {2};};
+#ACTION {^The %* plant shivers right before your eyes}          {event_raise e_farm_round {2};};
+#ACTION {^The roots of the %* plant shrink up}                  {event_raise e_farm_round {2};};
+#ACTION {^A spinning noise is heard}                            {event_raise e_farm_round {2};};
+#ACTION {^With a slump, the %* plant shrinks}                   {event_raise e_farm_round {2};};
+#ACTION {^The leaves of the plant pull back}                    {event_raise e_farm_round {2};};
+
+/* Dead */
+
+#ACTION {^The %* plant blinks its flowers twice at you}         {event_raise e_farm_round {1};};
+#ACTION {^The roots of the %* plant reach skyward}              {event_raise e_farm_round {1};};
+#ACTION {^POOF!  The %* plant disappears}                       {event_raise e_farm_round {1};};
+#ACTION {^With a scream of anguish that pierces your soul}      {event_raise e_farm_round {1};};
+#ACTION {^The %* plant shrugs its leaves, points them upwards}  {event_raise e_farm_round {1};};
+
+#NOP ############## Farm inventory ################
+
+#ALIAS {.farmInv}
+{
+    #NOP %1;
+    #IF {"%1" == "e_inv_start"} {#VAR {_farm[inv]} {}};
+    #ELSE
+    {
+        #REGEX {%2} {{^(.*\s(\S+))\s\((.*)\)}}
+        {
+            #IF {&_farm[supplies][&2] > 0}
+            {
+                #MATH {_farm[inv][&3][$_farm[supplies][&2]]} {$_farm[inv][&3][$_farm[supplies][&2]] + 1};
+            };
+        };
+    };
+};
+event_register {e_inv_start} {craft.farming.tin} {.farmInv};
+event_register {e_inv_item}  {craft.farming.tin} {.farmInv};
+
+#NOP ############## Farm commands #################
+
+/* .farmApply {amount} {type} */
+#ALIAS {.farmApply}
+{
+    #NOP %1;
+    #VAR {_farm[qty]} {%1};
+    #WHILE {$_farm[qty] > 0}
+    {
+        #IF {$_farm[qty] >= 35}
+        {
+            #LINE SUBSTITUTE VARIABLES {#FORMAT {_farm[cmd]} {$_farm[$_farm[%2][type]][cmd]} {lots} {%2};};
+            #MATH {_farm[qty]} {$_farm[qty] - 35};
+        };
+        #ELSEIF {$_farm[qty] >= 20}
+        {
+            #LINE SUBSTITUTE VARIABLES {#FORMAT {_farm[cmd]} {$_farm[$_farm[%2][type]][cmd]} {some} {%2};};
+            #MATH {_farm[qty]} {$_farm[qty] - 20};
+        };
+        #ELSE
+        {
+            #LINE SUBSTITUTE VARIABLES {#FORMAT {_farm[cmd]} {$_farm[$_farm[%2][type]][cmd]} {little} {%2};};
+            #MATH {_farm[qty]} {$_farm[qty] - 10};
+        };
+        !$_farm[cmd];
+    };
+    #UNVAR {_farm[qty]};
+};
+
+#NOP ############## Plot status ###################
+
+#ACTION {{^The.*soil.*$}}
+{
+    #VAR {_farm[soil][desc]} {%1};
+    #IF {"$auto[farmgag][status]" == "1"} {#LINE GAG;};
+    #ACTION {^%*$}
+    {
+        #VAR {_farm[soil][desc]} {$_farm[soil][desc] %%1};
+        #IF {"$auto[farmgag][status]" == "1"} {#LINE GAG;};
+    } {9};
+    event_oneshot {e_prompt} {craft.farming.tin} 
+    {
+        #NOP %%1;
+        .farmParseSoil;
+        #UNACTION {^%*$};
+    };
+};
+
+#ALIAS {.farmParseSoil}
+{
+    #NOP %1;
+    #REGEX {$_farm[soil][desc]} {^%*{pale|light|dark|black}%*{few|some|many|swath}%*{few|some|many|swath}%*{yellow |yellow-green|green-yellow|green}%*{bone dry|somewhat dry|damp|soaked}%*$}
+    {
+        #VAR {_farm[cond][1]} {$_farm[states][1][&2]};
+        #VAR {_farm[cond][2]} {$_farm[states][2][&4]};
+        #VAR {_farm[cond][3]} {$_farm[states][3][&6]};
+        #VAR {_farm[cond][4]} {$_farm[states][4][&8]};
+        #VAR {_farm[cond][5]} {$_farm[states][5][&10]};
+    };
+    event_raise e_farm_state {soil};
+    #UNVAR {_farm[soil]};
+};
+
+#ACTION {^This plot of farm has {virtually no|some|many|innumerable|very few|few|a bunch|a lot}{ of|} %*.$}
+{
+    #IF {"%3" == "bugs"}
+    {
+	#VAR {_farm[cond][6]} {$_farm[states][6][%1]};
+    };   
+    #ELSEIF {"%3" == "wild mushrooms"}
+    {
+	#VAR {_farm[cond][7]} {$_farm[states][7][%1]};
+    };   
+    #ELSEIF {"%3" == "weeds"}
+    {
+	#VAR {_farm[cond][8]} {$_farm[states][8][%1]};
+    };
+    event_raise e_farm_state {%3};
+    #IF {"$auto[farmgag][status]" == "1"} {#LINE GAG;};
+};
+
+
+#ACTION {^Type: %*$}
+{
+    #VAR {_farm[plant][type]} {%1};
+    #IF {&_farm[recipes][%1] > 0}
+    {
+        #ECHO {Recipe: Known};
+    };
+    #ELSE
+    {
+        #ECHO {Recipe: Unknown};
+    };
+};
+
+#ALIAS {.farmRecipe}
+{
+    #NOP %1;
+    #VAR {_farm[recipe]} {$_farm[recipes][$_farm[plant][type]]};
+    #VAR {_farm[i]} {$_farm[round]};
+    #IF {"$_farm[i]" == ""} {#VAR {_farm[i]} {0};};
+    #VAR {_farm[l]} {@fEval{&_farm[recipe][]-1}};
+    #IF {$_farm[l] > 0}
+    {
+        #IF {$_farm[i] > 0}
+        {
+            #VAR {_farm[i]} {@fEval{($_farm[i]%$_farm[l])+1}};
+        };
+        #IF {&_farm[recipe][$_farm[i]][] > 0}
+        {
+            #FORALL {$_farm[recipe][$_farm[i]][]}
+            {
+                .farmApply {$_farm[recipe][$_farm[i]][&0]} {&0};
+            };
+        };
+    };
+};
+
+#ALIAS {.farmRound}
+{
+    #NOP %1;
+    #IF {"%2" != ""}
+    {    
+        #VAR {_farm[result]} {%2};
+        #IF {%2 < 5}
+        {
+            #IF {%2 > 1} 
+            {
+                #MATH {_farm[round]} {$_farm[round] + 1};
+            };
+            #ELSE 
+            {
+                #VAR {_farm[round]} {0};
+            };
+        };
+    };
+    #ELSE
+    {
+        #VAR {_farm[result]} {5};
+    };
+    #SEND {!look at soil};
+    #SEND {!look at bugs};
+    #SEND {!look at mushrooms};
+    #SEND {!look at weeds};
+    #IF {"$auto[farm][status]" == "1" && "%2" != "1"}
+    { 
+        .farmRecipe;
+    };
+};
+event_register {e_farm_round} {craft.farming.tin} {.farmRound};
+
+#ALIAS {.farmBar}
+{
+    #NOP %1;
+    #IF {"%2" == "weeds" || "%2" == ""}
+    {
+        #ECHO {DA $_farm[cond][1] GO $_farm[cond][2] WH $_farm[cond][3] YE $_farm[cond][4] H2 $_farm[cond][5] BU $_farm[cond][6] MU $_farm[cond][7] WE $_farm[cond][8] : $_farm[round] : $_farm[growth][$_farm[result]]};
+    };
+};
+event_register {e_farm_state} {craft.farming.tin} {.farmBar};
+
+#ALIAS {.farmHarvest}
+{
+    #NOP %1;
+    #SEND {!harvest plant};
+    #VAR {_farm[round]} {0};
+    #VAR {_farm[plant]} {};
+};
+event_register {e_farm_harvest} {craft.farming.tin} {.farmHarvest};
+
+auto add farmgag;

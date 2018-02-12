@@ -1,0 +1,34 @@
+#NOP ############## Mining ##################
+
+#ALIAS {md}
+{
+    #ALIAS {handler_mine_ore}
+    {
+      #NOP %%1;
+      #REGEXP {%%2} {ore deposit}
+      {
+        #SEND {!mine};
+      };
+    };
+    event_register e_room_item h_mine_ore handler_mine_ore;
+    
+    #ACTION {^{>\s|}You have found a deposit of}
+    {
+      #SEND {!mine};
+    };
+    
+    #ACTION {^{>\s|}You have exhausted the supply} 
+    {
+      #BELL;
+      #UNACTION {^{>\s|}You have found a deposit of};
+      #UNALIAS {handler_mine_ore};
+      event_remove_handler h_mine_ore;
+    };
+    #SEND {!spelunk};
+};
+
+#ALIAS {handler_auto_mine}
+{
+    #NOP %1;
+    md;
+};
