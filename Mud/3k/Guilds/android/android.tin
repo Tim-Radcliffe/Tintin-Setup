@@ -35,6 +35,7 @@
 #ALIAS {evaluate}
 {
     #NOP %1;
+    #CLASS {cAndroidEvaluate} {open};
     #LIST {_aEV[off]} {create} 
     {
         No threat at all;
@@ -83,7 +84,6 @@
         Will outlive the sun;
         Will be alive to see the end of the universe;
     };
-    #CLASS {cAndroidEvaluate} {open};
     #FORALL {$_aEV[]}
     {
         #FORALL {$_aEV[&0][]}
@@ -172,7 +172,7 @@ auto {add} {switch} {} {e_android_missed} {};
             #DELAY {2} {!mount single};
             #IF {$my[android][mounts] > 7}
             {
-                #DELAY {3} {!mount double};
+                #DELAY {4} {!mount double};
             };
         };
     };
