@@ -32,31 +32,6 @@
     #SEND {!gs2};
 };
 
-/* Make sure that plating updates to any changes in equipment */
-#ALIAS {wear}
-{
-    #NOP %1;
-    #IF {$my[android][plating] >= 1}
-    {
-        #SEND {!engage plating off};
-    };
-    #IF {$my[android][shocks] >= 1}
-    {
-        #SEND {!engage shield off};
-    };
-        
-    #SEND {!wear %0};
-
-    #IF {$my[android][plating] >= 1}
-    {
-        #SEND {!engage plating};
-    };
-    #IF {$my[android][shocks] >= 1}
-    {
-        #SEND {!engage shield};
-    };
-};
-
 #ALIAS {evaluate}
 {
     #NOP %1;
@@ -184,6 +159,45 @@ auto {add} {flush} {} {e_combat_round} {};
     event_oneshot {e_prompt} {android} {auto switch on};
 };
 auto {add} {switch} {} {e_android_missed} {};
+
+/* Handling mounting/unmounting guild weapons automatically */
+#ALIAS {handler_auto_mount}
+{
+    #NOP %1;
+    #REGEXP {%2} {{wield|wear shield|remove shield}}
+    {
+        #IF {$my[android][mounts] > 0}
+        {
+            #SEND {!mount remove};
+            #DELAY {2} {!mount single};
+            #IF {$my[android][mounts] > 7}
+            {
+                #DELAY {3} {!mount double};
+            };
+        };
+    };
+};
+auto {add} {mount} {} {e_command} {};
+
+/* Handling plating automatically, refresh on changing equipment */
+#ALIAS {handler_auto_plating}
+{
+    #NOP %1;
+    #REGEXP {%2} {wear}
+    {
+        #IF {$my[android][plating] >= 1}
+        {
+            #SEND {!engage plating off};
+            event_oneshot {e_prompt} {android_plating} {#NOP %%1;#SEND {!engage plating};};
+        };
+        #IF {$my[android][shocks] >= 1}
+        {
+            #SEND {!engage shield off};
+            event_oneshot {e_prompt} {android_shield} {#NOP %%1;#SEND {!engage shield};};
+        };
+    };
+};
+auto {add} {plating} {} {e_command} {};
 
 /* Guild Battle Spam Gags */
 #ALIAS {handler_auto_guildgag_on}
