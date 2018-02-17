@@ -1,0 +1,23 @@
+#ALIAS {power}
+{
+    #NOP %1;
+    #UNVAR {my[necromancer][power]};
+    #ACTION {^{\s+(.+?)\(\d+\):\s+(\d+)\s+\d+(\s+(.+?)\(\d+\):\s+(\d+).*|)}}
+    {
+        #VAR {my[necromancer][power][%%2]} {%%3};
+        #VAR {my[necromancer][power][%%5]} {%%6};
+    };
+    #SEND {!power};
+};
+
+#ALIAS {powers}
+{
+    #NOP %1;
+    #UNVAR {my[necromancer][power]};
+    #ACTION {^{\s+(.+?)\(\d+\):\s+(\d+)\s+\d+(\s+(.+?)\(\d+\):\s+(\d+).*|)}}
+    {
+        #VAR {my[necromancer][power][%%2]} {%%3};
+        #VAR {my[necromancer][power][%%5]} {%%6};
+    };
+    #SEND {!powers};
+};

@@ -1,0 +1,43 @@
+#NOP /* Necromancer "gs" command */;
+#ALIAS {gs}
+{
+    #NOP %1;
+    #CLASS {cNecroGS} {open};
+    
+    #ACTION {^ |  All Circles:[%s%d/60]}
+    {
+        #VAR {my[necromancer][circle]} {%%2};
+    };
+    
+    #ACTION {^ | You are %d\% to your next %w %w repower}
+    {
+        #VAR {my[necromancer][stone][%%2]} {&my[necromancer][stone][]};
+    };    
+    
+    #ACTION {^ | You have a %+ familiar named %w.}
+    {
+        #VAR {my[necromancer][familiar]} {%%2};
+    };
+    
+    #ACTION {^ |    ginseng:%d    black pearls:%d    spider web:%d    goldenrod:%d}
+    {
+        #VAR {my[necromancer][reagent][ginseng]}      {%%1};
+        #VAR {my[necromancer][reagent][black pearls]} {%%2};
+        #VAR {my[necromancer][reagent][spider web]}   {%%3};
+        #VAR {my[necromancer][reagent][goldenrod]}    {%%4};
+    };
+    
+    #ACTION {^ |   mandrake:%d    pine needles:%d    nightshade:%d    bloodmoss:%d}
+    {
+        #VAR {my[necromancer][reagent][mandrake]}     {%%1};
+        #VAR {my[necromancer][reagent][pine needles]} {%%2};
+        #VAR {my[necromancer][reagent][nightshade]}   {%%3};
+        #VAR {my[necromancer][reagent][bloodmoss]}    {%%4};
+    };
+
+    #CLASS {cNecroGS} {close};
+    
+    event_oneshot {e_prompt} {necromancer} {#NOP %%1;#CLASS {cNecroGS} {kill};};
+    
+    #SEND {!gs};
+};
