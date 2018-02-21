@@ -12,7 +12,7 @@
     #NOP %1;
     #REGEXP {%1} {{\s*(\S+)\[([^\]]*)\]\s*(.*)$}}
     {
-        #LOCAL {_undead}
+        #VAR {_undead}
         {
             {Skeleton}{} {Zombie}{}  {Ghoul}{}   {Valpur}{}
             {Ghast}{}    {Manshi}{}  {Bolwyn}{}  {Greesh}{}
@@ -22,7 +22,9 @@
         
         #IF {&_undead[&2] > 0} {handler_necro_hpbar_Undead {&3};};
         #ELSE {handler_necro_hpbar_&2 {&3};};
-          
+        
+        #UNVAR {_undead};  
+
         #IF {"&4" != ""}
         {
             handler_necro_hpbar {&4};
