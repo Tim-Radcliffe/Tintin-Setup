@@ -1,18 +1,60 @@
-#NOP ************* Teleport to Guild *********;
+#NOP ************* Necromancer Guild *********;
+
+/* Teleport to Guild */
 #ACTION {^Visions of the guild appear first in your mind, then reality...}
 {
-    #NOP %1;   
+    #NOP %1;
+    .mapLoad {Pinnacle/Fantasy/Necromancer Guild};
+    #map goto {Receiving room};
 };
 
+/* Preserve when you kill an opponent */
 #ALIAS {handler_auto_preserve}
 {
     #NOP %1;
     #SEND {!preserve remains};
-    #SEND {!wrap all};
     #SEND {!get preservation};
+    #SEND {!glance};
 };
 auto {add} {preserve} {} {e_killed_opponent} {}; 
 
+/* Call your familiar into combat automatically when you "kill" */
+#ALIAS {handler_auto_call}
+{
+    #NOP %1;
+    #REGEX {%2} {^{k|kill}%s%*}
+    {
+        event_oneshot {e_prompt} {necromancer} {#NOP %%1;#SEND {!call};};
+    };
+};
+auto {add} {call} {} {e_command} {};
+
+/* Corrode your opponent automatically when you "kill" */
+#ALIAS {handler_auto_corrode}
+{
+    #NOP %1;
+    #REGEX {%2} {^{k|kill}%s%*}
+    {
+        #SEND {!corrode &3};
+    };
+};
+auto {add} {corrode} {} {e_command} {};
+
+/* Contribute half of coins picked up to the guild, between 10 and 1000 */
+#ALIAS {handler_auto_contribute}
+{
+    #NOP %1;
+    #REGEXP {%2} {coins (%d)}
+    {
+        #IF {@fEval{&1/2} > 9}
+        {
+            #SEND {!contribute @fMin{@fEval{&1/2};1000}};
+        };
+    };
+};
+auto {add} {contribute} {} {e_pickup} {};
+
+/* Gag Necro message spam */
 #ALIAS {necro_gag_on}
 {
     #GAG {^-You activate your atrance-};
@@ -24,6 +66,7 @@ auto {add} {preserve} {} {e_killed_opponent} {};
     #GAG {^  You'll have to wait a moment master.};
 };
 
+/* Ungag Necro message spam */
 #ALIAS {necro_gag_off}
 {
     #UNGAG {^-You activate your atrance-};

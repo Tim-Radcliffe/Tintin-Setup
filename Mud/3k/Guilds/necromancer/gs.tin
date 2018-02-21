@@ -19,6 +19,12 @@
         #VAR {my[necromancer][familiar]} {%%2};
     };
     
+    #ACTION {^ | You command an undead follower named %w (%w)}
+    {
+        #VAR {my[necromancer][undead][name]} {%%1};
+        #VAR {my[necromancer][undead][type]} {%%2};
+    };    
+    
     #ACTION {^ |    ginseng:%d    black pearls:%d    spider web:%d    goldenrod:%d}
     {
         #VAR {my[necromancer][reagent][ginseng]}      {%%1};
@@ -34,7 +40,7 @@
         #VAR {my[necromancer][reagent][nightshade]}   {%%3};
         #VAR {my[necromancer][reagent][bloodmoss]}    {%%4};
     };
-
+    
     #CLASS {cNecroGS} {close};
     
     event_oneshot {e_prompt} {necromancer} {#NOP %%1;#CLASS {cNecroGS} {kill};};
