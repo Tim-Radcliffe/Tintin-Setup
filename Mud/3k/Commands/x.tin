@@ -1,0 +1,6 @@
+#ALIAS {x}
+{
+  #NOP %1;
+  #SEND {!exa %0};
+  #SEND {!search %0};
+};
