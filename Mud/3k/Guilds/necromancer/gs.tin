@@ -8,6 +8,21 @@
     {
         #VAR {my[necromancer][circle]} {%%2};
     };
+
+    #ACTION {{^ \| HP:(\d+)\/(\d+)(\((\d+)\/(\d+)\)|)\s+SP:(\d+)\/(\d+)(\((\d+)\/(\d+)\)|)\s+NP:(\d+)\/(\d+)\s+Worth:(\d+)(%)}}
+    {
+        #VAR {my[hp][current]}                    {%%2};
+        #VAR {my[hp][max]}                        {%%3};
+        #VAR {my[necromancer][hpfuse][current]}   {%%5};
+        #VAR {my[necromancer][hpfuse][max]}       {%%6};
+        #VAR {my[sp][current]}                    {%%7};
+        #VAR {my[sp][max]}                        {%%8};
+        #VAR {my[necromancer][spfuse][current]}   {%%10};
+        #VAR {my[necromancer][spfuse][max]}       {%%11};
+        #VAR {my[gp1][current]}                   {%%12};
+        #VAR {my[gp1][max]}                       {%%13};
+        #VAR {my[necromancer][worth]}             {%%14};
+    };
     
     #ACTION {^ | You are %d\% to your next %w %w repower}
     {
@@ -43,7 +58,7 @@
     
     #CLASS {cNecroGS} {close};
     
-    event_oneshot {e_prompt} {necromancer} {#NOP %%1;#CLASS {cNecroGS} {kill};};
+    event_oneshot {e_prompt} {cNecroGS} {#NOP %%1;#CLASS {cNecroGS} {kill};};
     
     #SEND {!gs};
 };

@@ -17,7 +17,7 @@
             {Skeleton}{} {Zombie}{}  {Ghoul}{}   {Valpur}{}
             {Ghast}{}    {Manshi}{}  {Bolwyn}{}  {Greesh}{}
             {Wight}{}    {Heucuva}{} {Tholen}{}  {Bayen}{}
-            {Quarin}{}   {Mohrg}{}   {Grimare}{}
+            {Quarin}{}   {Mohrg}{}   {Grimare}{} {Valithyn}{}
         };
         
         #IF {&_undead[&2] > 0} {handler_necro_hpbar_Undead {&3};};
@@ -36,13 +36,13 @@
 #ALIAS {handler_necro_hpbar_HP}
 {
     #NOP %1;
-    #REGEXP {%1} {{(\d+)(\((\d+)\)|)\/(\d+)(\|(\d+)%\|(\d+)|)}}
+    #REGEXP {%1} {{(\d+)(\((\d+)\)|)\/(\d+)(\|(\d+)%\|(\d+)|)($)}}
     {
-        #VAR {my[hp][current]}            {&2};
-        #VAR {my[hp][max]}                {&5};
-        #VAR {my[necromancer][hp][fuse]}  {&4};
-        #VAR {my[necromancer][hp][%]}     {&7};
-        #VAR {my[necromancer][hp][delta]} {&8};
+        #VAR {my[hp][current]}                     {&2};
+        #VAR {my[hp][max]}                         {&5};
+        #VAR {my[necromancer][hpfuse][current]}    {&4};
+        #VAR {my[necromancer][hp][%]}              {&7};
+        #VAR {my[necromancer][hp][delta]}          {&8};
     };
 };
 
@@ -51,9 +51,9 @@
     #NOP %1;
     #REGEXP {%1} {{(\d+)(\((\d+)\)|)\/(\d+)}}
     {
-        #VAR {my[sp][current]}           {&2};
-        #VAR {my[sp][max]}               {&5};
-        #VAR {my[necromancer][sp][fuse]} {&4};
+        #VAR {my[sp][current]}                    {&2};
+        #VAR {my[sp][max]}                        {&5};
+        #VAR {my[necromancer][spfuse][current]}   {&4};
     };
 };
 
@@ -62,9 +62,9 @@
     #NOP %1;
     #REGEXP {%1} {{(\d+)\/(\d+)\|(\d+)c}}
     {
-        #VAR {my[gp1][current]}              {&2};
-        #VAR {my[gp1][max]}                  {&3};
-        #VAR {my[corpse][held]} {&4};
+        #VAR {my[gp1][current]}                   {&2};
+        #VAR {my[gp1][max]}                       {&3};
+        #VAR {my[corpse][held]}                   {&4};
     };
 };
 
@@ -79,7 +79,7 @@
     #NOP %1;
     #REGEXP {%1} {{.*:(.*)}}
     {
-        #VAR {opponent[status]}              {&2};
+        #VAR {opponent[status]}                   {&2};
     };
 };
 
@@ -88,13 +88,13 @@
     #NOP %1;
     #REGEXP {%1} {{(\d+)(\((\d+)\)|)\|(\d+)(\((\d+)\)|)\|(\d+)\|(\d+)\|(.*)}}
     {
-        #VAR {my[hp][current]}               {&2};
-        #VAR {my[necromancer][hp][fuse]}     {&4};
-        #VAR {my[hp][current]}               {&5};
-        #VAR {my[necromancer][hp][fuse]}     {&7};
-        #VAR {my[gp1][current]}              {&8};
-        #VAR {my[corpse][held]}              {&9};
-        #VAR {opponent[status]}              {&10};
+        #VAR {my[hp][current]}                    {&2};
+        #VAR {my[necromancer][hpfuse]}            {&4};
+        #VAR {my[sp][current]}                    {&5};
+        #VAR {my[necromancer][spfuse]}            {&7};
+        #VAR {my[gp1][current]}                   {&8};
+        #VAR {my[corpse][held]}                   {&9};
+        #VAR {opponent[status]}                   {&10};
     };
 };
 
@@ -104,13 +104,13 @@
     #NOP %1;
     #REGEXP {%1} {{(\d+)(\((\d+)\)|)\|(\d+)(\((\d+)\)|)\|(\d+)\|(\d+)\|(.*)}}
     {
-        #VAR {my[hp][perc]}               {&2};
-        #VAR {my[necromancer][hp][fuse]}  {&4};
-        #VAR {my[hp][perc]}               {&5};
-        #VAR {my[necromancer][hp][fuse]}  {&7};
-        #VAR {my[gp1][perc]}              {&8};
-        #VAR {my[corpse][held]}           {&9};
-        #VAR {opponent[status]}           {&10};
+        #VAR {my[hp][perc]}                       {&2};
+        #VAR {my[necromancer][hpfuse]}            {&4};
+        #VAR {my[sp][perc]}                       {&5};
+        #VAR {my[necromancer][spfuse]}            {&7};
+        #VAR {my[gp1][perc]}                      {&8};
+        #VAR {my[corpse][held]}                   {&9};
+        #VAR {opponent[status]}                   {&10};
     };
 };
 
@@ -119,10 +119,10 @@
     #NOP %1;
     #REGEXP {%1} {{w(\d+)%\|p(.*)\|v(.*)\|r(\d+)%}}
     {
-        #VAR {my[necromancer][worth]}      {&2};
-        #VAR {my[necromancer][protection]} {&3};
-        #VAR {my[necromancer][veil]}       {&4};
-        #VAR {my[gp2][current]}            {&5};
+        #VAR {my[necromancer][worth]}             {&2};
+        #VAR {my[necromancer][protection]}        {&3};
+        #VAR {my[necromancer][veil]}              {&4};
+        #VAR {my[gp2][current]}                   {&5};
     };
 };
 
@@ -157,8 +157,8 @@
     #REGEXP {%1} {{((\d+)%\/(\d+)c|none)(\/(\d+)c|)}}
     {
         #VAR {my[necromancer][undead][hp]} {&3};
-        #VAR {my[corpse][minion]}          {&4};
-        #VAR {my[corpse][coffin]}          {&6};
+        #VAR {my[corpse][minion][current]} {&4};
+        #VAR {my[corpse][coffin][current]} {&6};
     };
 };
 

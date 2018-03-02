@@ -1,0 +1,40 @@
+#ALIAS {i}
+{
+    #CLASS {cNecroI} {open};
+
+    #VAR {_undead}
+    {
+        {Skeleton}{} {Zombie}{}  {Ghoul}{}   {Valpur}{}
+        {Ghast}{}    {Manshi}{}  {Bolwyn}{}  {Greesh}{}
+        {Wight}{}    {Heucuva}{} {Tholen}{}  {Bayen}{}
+        {Quarin}{}   {Mohrg}{}   {Grimare}{} {Valithyn}{}
+    };
+
+    #ACTION {{(\w+)\s+\[\s+(\d+)\/\s+(\d+)\|.{2}%\|\s+(\d+)c\]}}
+    {
+        #IF {"%%2" == "Coffin"}
+        {
+            #VAR {my[corpse][coffin][current]} {%%5};
+            #VAR {my[corpse][coffin][max]}     {%%4};
+        };
+        #ELSEIF {"%%2" == "Smuggling"}
+        {
+            #VAR {my[corpse][smuggling][current]} {%%5};
+            #VAR {my[corpse][smuggling][max]}     {%%4};
+        };
+        #ELSEIF {"%%2" == "Encumberance"}
+        {
+            #VAR {my[corpse][held]} {%%5};
+        };
+        #ELSEIF {&_undead[%%2] > 0}
+        {
+            #VAR {my[corpse][minion][current]} {%%5};
+        };
+    };
+
+    #CLASS {cNecroI} {close};
+
+    event_oneshot {e_prompt} {cNecroI} {#NOP %%1;#CLASS {cNecroI} {kill};};
+    
+    #SEND {!i %0};
+};

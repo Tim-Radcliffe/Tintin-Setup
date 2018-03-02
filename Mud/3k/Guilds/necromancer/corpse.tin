@@ -1,0 +1,65 @@
+#ALIAS {.corpse}
+{
+    #NOP %1;
+    #IF {"%1" == ""}
+    {
+        #ECHO {.corpse store or .corpse retrieve};
+    };
+    #ELSEIF {"%1" == "store"}
+    {
+        #IF {$my[corpse][smuggling][current] < $my[corpse][smuggling][max]}
+        {
+            #SEND {!smuggle corpse};
+            #VAR {my[corpse][smuggling][current]} {@fEval{$my[corpse][smuggling][current]+1}};
+            #VAR {my[corpse][held]} {@fEval{$my[corpse][held]-1}};
+        };
+        #ELSEIF {$my[corpse][coffin][current] < $my[corpse][coffin][max]}
+        {
+            #SEND {!wrap corpse};
+            #VAR {my[corpse][coffin][current]} {@fEval{$my[corpse][coffin][current]+1}};
+            #VAR {my[corpse][held]} {@fEval{$my[corpse][held]-1}};
+        };
+        #ELSEIF {$my[corpse][minion][current] < $my[corpse][minion][max]}
+        {
+            #SEND {!give corpse to undead follower};
+            #VAR {my[corpse][minion][current]} {@fEval{$my[corpse][minion][current]+1}};
+            #VAR {my[corpse][held]} {@fEval{$my[corpse][held]-1}};
+        };
+    };
+    #ELSEIF {"%1" == "retrieve"}
+    {
+        #IF {$my[corpse][smuggling][current] > 0}
+        {
+            #SEND {!smuggle remove corpse};
+            #VAR {my[corpse][smuggling][current]} {@fEval{$my[corpse][smuggling][current]-1}};
+            #VAR {my[corpse][held]} {@fEval{$my[corpse][held]+1}};
+        };
+        #ELSEIF {$my[corpse][coffin][current] > 0}
+        {
+            #SEND {!unwrap corpse};
+            #SEND {!get preservation};
+            #VAR {my[corpse][coffin][current]} {@fEval{$my[corpse][coffin][current]-1}};
+            #VAR {my[corpse][held]} {@fEval{$my[corpse][held]+1}};
+        };
+        #ELSEIF {$my[corpse][minion][current] > 0}
+        {
+            #SEND {!=give preservation};
+            #VAR {my[corpse][minion][current]} {@fEval{$my[corpse][minion][current]-1}};
+            #VAR {my[corpse][held]} {@fEval{$my[corpse][held]+1}};
+        };
+    };
+};
+
+#ALIAS {handler_auto_corpse}
+{
+    #NOP %1;
+    #IF {$my[corpse][held] < 5}
+    {
+        .corpse retrieve;
+    };
+    #IF {$my[corpse][held] > 5}
+    {
+        .corpse store;
+    };
+};
+auto {add} {corpse} {} {e_combat_round} {};

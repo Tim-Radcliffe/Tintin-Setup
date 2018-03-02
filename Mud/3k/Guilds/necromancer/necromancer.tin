@@ -33,9 +33,14 @@ auto {add} {call} {} {e_command} {};
 #ALIAS {handler_auto_corrode}
 {
     #NOP %1;
-    #REGEX {%2} {^{k|kill}%s%*}
+    #IF {$my[necromancer][power][corrode] > 0 &&
+         $my[gp1][current] > 50 &&
+         $my[sp][current] > 50}
     {
-        #SEND {!corrode &3};
+        #REGEX {%2} {^{k|kill} %*}
+        {
+            #SEND {!corrode &2};
+        };
     };
 };
 auto {add} {corrode} {} {e_command} {};
@@ -53,6 +58,31 @@ auto {add} {corrode} {} {e_command} {};
     };
 };
 auto {add} {contribute} {} {e_pickup} {};
+
+/* SPFuse when below 25% SP (it refills by itself when SP is full) */
+#ALIAS {handler_auto_spfuse}
+{
+    #NOP %1;
+    #VAR {_necSP[Diff]} {@fEval{($my[sp][max]+0.00-($my[sp][max]-$my[sp][current]))/$my[sp][max]}};
+    #IF {$_necSP[Diff] < 0.25 && $my[necromancer][spfuse][current] > 0} 
+    {
+        #SEND {!spfuse $my[necromancer][spfuse][current]};
+    };
+};
+auto {add} {spfuse} {} {e_combat_round} {};
+
+/* Automatically recast protection (if it's memorised and there's enough NP */
+#ALIAS {handler_auto_protection}
+{
+    #NOP %1;
+    #IF {"$my[necromancer][protection]" != "ON" && 
+         $my[necromancer][power][protection] > 0 &&
+         $my[gp1][current] > 55}
+    {
+        #SEND {!protection};
+    };
+};
+auto {add} {protection} {} {e_combat_round} {};
 
 /* Gag Necro message spam */
 #ALIAS {necro_gag_on}
