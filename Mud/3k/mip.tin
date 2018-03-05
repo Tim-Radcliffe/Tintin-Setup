@@ -13,7 +13,7 @@
 #SEND {3klient $mip[id]~~Tin$mip[Version]};
 #SEND {3klient LINEFEED on};
 #SEND {3klient HAA on};
-#SEND {3klient HAB on};
+#SEND {3klient HAB off};
 
 #NOP ***** Extract Raw Data *********;
 #ACTION {~{\#K\%$mip[id](.{3})(.{3})(.*)$}}

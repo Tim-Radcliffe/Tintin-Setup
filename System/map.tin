@@ -171,7 +171,8 @@
     {
       #KILL {class} {%*@fMapResolvePath{..}/%*};
     };
-    .file loadall {$path[areas]/$_mL[path]/*.tin};
+
+    .file loadall {$path[areas]/${_mL[path]}/*.tin};
     
     #IF {"%2" == ""}
     {

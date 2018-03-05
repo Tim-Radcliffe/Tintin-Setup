@@ -22,12 +22,9 @@ auto {add} {preserve} {} {e_killed_opponent} {};
 #ALIAS {handler_auto_call}
 {
     #NOP %1;
-    #REGEX {%2} {^{k|kill}%s%*}
-    {
-        event_oneshot {e_prompt} {necromancer} {#NOP %%1;#SEND {!call};};
-    };
+    #SEND {!call};
 };
-auto {add} {call} {} {e_command} {};
+auto {add} {call} {} {e_combat} {};
 
 /* Corrode your opponent automatically when you "kill" */
 #ALIAS {handler_auto_corrode}
@@ -37,13 +34,10 @@ auto {add} {call} {} {e_command} {};
          $my[gp1][current] > 50 &&
          $my[sp][current] > 50}
     {
-        #REGEX {%2} {^{k|kill} %*}
-        {
-            #SEND {!corrode &2};
-        };
+        #SEND {!corrode};
     };
 };
-auto {add} {corrode} {} {e_command} {};
+auto {add} {corrode} {} {e_combat} {};
 
 /* Contribute half of coins picked up to the guild, between 10 and 1000 */
 #ALIAS {handler_auto_contribute}
@@ -56,8 +50,12 @@ auto {add} {corrode} {} {e_command} {};
             #SEND {!contribute @fMin{@fEval{&1/2};1000}};
         };
     };
+    #IF {$my[necromancer][worth] < 125}
+    {
+        #SEND {!contribute};
+    };
 };
-auto {add} {contribute} {} {e_pickup} {};
+auto {add} {contribute} {} {e_pickup;e_combat_round} {};
 
 /* SPFuse when below 25% SP (it refills by itself when SP is full) */
 #ALIAS {handler_auto_spfuse}

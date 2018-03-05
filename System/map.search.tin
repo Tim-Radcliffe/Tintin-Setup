@@ -1,31 +1,90 @@
-#ALIAS {.mapSearch}
+#NOP Map Area/Room path finding
+
+/* Find area map directory names that match the passed parameter */
+#FUNCTION {fSearchArea}
 {
-  #NOP #SCRIPT {_mS[areas]} {find $path[areas] -type d -printf '%f\n'}
-  
+    #IF {"%0" == ".."} {#RETURN {{1}{@fFileGetPath{$map[area][path]}}}};
+    #SCRIPT {result} {find $path[areas] -type d -iregex ".*%0[^\/]*" -printf "%P\n"};
 };
 
-#FUNCTION {fGetAreaList}
+/* Find area links within current map */
+#FUNCTION {fSearchLink}
 {
-  #IF {"%0" == ""}
-  {
-    #SCRIPT {_fGAL[areas]} {find $path[areas] -type d  -printf "%P\n"};
-  };
-  #ELSE
-  {
-    #SCRIPT {_fGAL[areas]} {find $path[areas] -type d -name "*%0*" -printf "%P\n"};
-  };
-  #UNVAR {result};
-  #IF {&_fGAL[areas]}
-  {
-    #FORALL {$_fGAL[areas][%*]}
+    #MAP list {roomname} {LINK: %0} {variable} {result[list]};
+    #IF {&result[list] < 1} {#RETURN};
+    #FORALL {$result[list][]}
     {
-      #NOP #LINE SUBSTITUTE {VARIABLE} #REGEXP {&0} {{$path[areas]\/(.*\/(.+?))$}}
-      #REGEXP {&0} {{(.*\/(.+?))$}}
-      {
-        #ECHO {FIRED: &1 : &2 : &3}
-        #VAR {result[&3]} {&2};
-      };
+        #IF {$result[list][&0] < $result[d] || "$result[d]" == ""}
+        {
+            #VAR {result[n]} {&0};
+            #VAR {result[d]} {$result[list][&0]};
+        };
     };
-  };
-  #NOP #UNVAR {_fGAL};
+    #VAR {result} {$result[n]};
+};
+
+/* Run to area specified (full area path) */
+#ALIAS {.areaRun}
+{
+    #NOP %1;
+    #IF {"%1" != "$map[area][path]"}
+    {
+        #REGEXP {%1} {$map[area][path]{\/[^\/]*}}
+        {
+            .mapRun @fSearchLink{$map[area][path]&1};
+        }
+        {
+            .mapRun @fSearchLink{@fFileGetPath{$map[area][path]}};
+        };
+        event_oneshot {e_map_area_enter} {map.search.tin} {#NOP %%1;.areaRun {%1};};
+    };
+};
+
+/* User command to go to area. If one match found, goes straight there */
+/* Otherwise offers a list of alternatives to chose from as macros     */
+#ALIAS {.go}
+{
+    #NOP %1;
+    #VAR {_goArea[list]} @fSearchArea{%0};
+    #IF {&_goArea[list][] < 1}
+    {
+        #ECHO {No match found};
+    };
+    #ELSEIF {&_goArea[list][] == 1}
+    {
+        .areaRun {$_goArea[list][1]};
+    };
+    #ELSE
+    {
+        #ECHO {Please select from the list (0 to cancel):};
+        #CLASS {cMapGotoMacros} {open};
+        #MACRO {0}
+        {
+          #CLASS {cMapGotoMacros} {kill};
+          #ECHO {Cancelled};
+        };
+        #ALIAS {.goMacro}
+        {
+          #MACRO {%%1}
+          {
+            #NOP delay added because ticker wouldn't add from macro for some reason;
+            #DELAY {0.1} {.areaRun {%%2}};
+            #CLASS {cMapGotoMacros} {kill};
+          };
+        };
+        #FORALL {$_goArea[list][]}
+        {
+          #IF {&0 < 27}
+          {
+            #FORMAT {_goArea[c]} {%a} {&0+96};
+            .goMacro {$_goArea[c]} {$_goArea[list][&0]};
+            #ECHO {$_goArea[c] : @fFileGetName{@fFileGetPath{$_goArea[list][&0]}}/@fFileGetName{$_goArea[list][&0]}};
+          };
+          #IF {&0 == 27}
+          {
+            #ECHO {Further matches not shown.};
+            #BREAK;
+          };
+        };
+    };
 };

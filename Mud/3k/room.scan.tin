@@ -7,21 +7,21 @@
 #VAR {RoomScan[mob]} 
 {
   {under the control of}{-1}
-  {the skeleton}{-1}
-  {the zombie}{-1}
-  {the valpur}{-1}
-  {the ghast}{-1}
-  {the manshi}{-1}
-  {the bolwyn}{-1}
-  {the greesh}{-1}
-  {the wight}{-1}
-  {the heucuva}{-1}
-  {the tholen}{-1}
-  {the bayen}{-1}
-  {the quarin}{-1}
-  {the mohrg}{-1}
-  {the grimare}{-1}
-  {the valithyn}{-1}
+  {the Skeleton}{-1}
+  {the Zombie}{-1}
+  {the Valpur}{-1}
+  {the Ghast}{-1}
+  {the Manshi}{-1}
+  {the Bolwyn}{-1}
+  {the Greesh}{-1}
+  {the Wight}{-1}
+  {the Heucuva}{-1}
+  {the Tholen}{-1}
+  {the Bayen}{-1}
+  {the Quarin}{-1}
+  {the Mohrg}{-1}
+  {the Grimare}{-1}
+  {the Valithyn}{-1}
   {esquire}{-1}
   {'s}{-1}
 };
@@ -51,11 +51,6 @@
   {empty}{-1}
   {-\d.}{-1}  
 };
-
-#NOP **** Substitutions ****;
-#NOP ** All flagged objects
-#NOP #SUBSTITUTE {<%w`} {};
-#NOP #SUBSTITUTE {`>} {};
 
 #NOP **** Triggers ****
 #NOP ** brief no map
@@ -88,6 +83,29 @@
 };
 event_register e_mip_HAA h_room_contents handler_room_contents;
 event_register e_mip_HAB h_room_contents handler_room_contents;
+
+#NOP #ALIAS {handler_room_mob}
+#NOP {
+#NOP     #LIST {room[contents][npc]} {add} {{{name}{%2}{id}{%2}}};
+#NOP     event_raise e_room_npc {%2} {%2};
+#NOP };
+#NOP event_register {e_ansiflag_M} {room.scan.tin} {handler_room_mob}; 
+#NOP 
+#NOP #ALIAS {handler_room_item}
+#NOP {
+#NOP     #LIST {room[contents][item]} {add} {{{name}{%2}{id}{%2}}};
+#NOP     event_raise e_room_item {%2} {%2};
+#NOP };
+#NOP event_register {e_ansiflag_A} {room.scan.tin} {handler_room_item}; 
+#NOP event_register {e_ansiflag_W} {room.scan.tin} {handler_room_item}; 
+#NOP event_register {e_ansiflag_O} {room.scan.tin} {handler_room_item}; 
+#NOP 
+#NOP #ALIAS {handler_room_player}
+#NOP {
+#NOP     #LIST {room[contents][player]} {add} {{{name}{%2}{id}{%2}}};
+#NOP     event_raise e_room_player {%2};
+#NOP };
+#NOP event_register {e_ansiflag_P} {room.scan.tin} {handler_room_player}; 
 
 #ALIAS {handler_room_end}
 {
@@ -122,6 +140,7 @@ event_register e_mip_HAB h_room_contents handler_room_contents;
   #IF {"$mip[last]" != "BAD"}
   {
     #VAR {room[exits]} {%2};
+    #REPLACE {room[exits]} {,} {;};
     event_oneshot e_prompt h_room_enter {event_raise e_room_enter {#NOP %%1};};    
     event_oneshot e_prompt h_room_end handler_room_end;
   };
@@ -132,12 +151,14 @@ event_register {e_mip_DDD} {h_room_exits} {.HandlerRoomExits};
 {
   #NOP %1;
   #VAR {room} {};      
-  #REGEXP {%2} {{^(.*?)\s*\([a-z\s,]*\)\s*$}}
+  #REGEXP {%2} {{^(.*?)\s*\(([a-z\s,]*)\)\s*$}}
   {
     #VAR {room[name]} {&2};
+#NOP     .HandlerRoomExits {RoomName} {&3};
   }
   {
     #VAR {room[name]} {%2};
+#NOP    #UNVAR {room[exits]};
   };  
 };
 #NOP event_register {e_mip_BAD} {h_room_name} {.HandlerRoomName};

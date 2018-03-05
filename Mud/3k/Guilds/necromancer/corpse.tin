@@ -1,3 +1,6 @@
+#NOP Necromancer corpse handling scripts.
+
+/* Central command for storing/retrieving/managing corpses */
 #ALIAS {.corpse}
 {
     #NOP %1;
@@ -7,10 +10,10 @@
     };
     #ELSEIF {"%1" == "store"}
     {
-        #IF {$my[corpse][smuggling][current] < $my[corpse][smuggling][max]}
+        #IF {$my[corpse][smuggle][current] < $my[corpse][smuggle][max]}
         {
             #SEND {!smuggle corpse};
-            #VAR {my[corpse][smuggling][current]} {@fEval{$my[corpse][smuggling][current]+1}};
+            #VAR {my[corpse][smuggle][current]} {@fEval{$my[corpse][smuggle][current]+1}};
             #VAR {my[corpse][held]} {@fEval{$my[corpse][held]-1}};
         };
         #ELSEIF {$my[corpse][coffin][current] < $my[corpse][coffin][max]}
@@ -28,10 +31,10 @@
     };
     #ELSEIF {"%1" == "retrieve"}
     {
-        #IF {$my[corpse][smuggling][current] > 0}
+        #IF {$my[corpse][smuggle][current] > 0}
         {
             #SEND {!smuggle remove corpse};
-            #VAR {my[corpse][smuggling][current]} {@fEval{$my[corpse][smuggling][current]-1}};
+            #VAR {my[corpse][smuggle][current]} {@fEval{$my[corpse][smuggle][current]-1}};
             #VAR {my[corpse][held]} {@fEval{$my[corpse][held]+1}};
         };
         #ELSEIF {$my[corpse][coffin][current] > 0}
@@ -48,14 +51,20 @@
             #VAR {my[corpse][held]} {@fEval{$my[corpse][held]+1}};
         };
     };
+    #ELSEIF {"%1" == "sort"}
+    {
+        .file load {$path[guild]/scripts/CorpseSort.tin};
+    };
 };
 
+/* Automatically Stores/Retrieves corpses as required */
 #ALIAS {handler_auto_corpse}
 {
     #NOP %1;
     #IF {$my[corpse][held] < 5}
     {
         .corpse retrieve;
+        #SEND {!give corpse $my[corpse][held] to $my[name]};
     };
     #IF {$my[corpse][held] > 5}
     {
@@ -63,3 +72,32 @@
     };
 };
 auto {add} {corpse} {} {e_combat_round} {};
+
+/* Returns an integer value for corpse size */
+#FUNCTION {fCorpseSize}
+{
+    #REGEXP {%0} {{([\(\[])([\|\*\-]{5})[\)\]]}}
+    {
+        #IF {"&2" == "["}
+        {
+            #VAR {result} {11};
+        };
+        #ELSE
+        {
+            #PARSE {&3} {result[c]}
+            {
+                #MATH {result[i]} {$result[i] + 1};
+                #IF {"$result[c]" == "|"} 
+                {
+                    #VAR {result} {$result[i]};
+                    #BREAK;
+                };
+                #IF {"$result[c]" == "*"} 
+                {
+                    #MATH {result} {11 - $result[i]};
+                    #BREAK;
+                };
+            };
+        };
+    };
+};

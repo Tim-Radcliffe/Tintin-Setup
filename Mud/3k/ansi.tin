@@ -17,6 +17,8 @@
     #SEND {!aset room_short_suff `><ESC>[0m};
     #SEND {!aset room_long_pref <ESC>[33m<L`};
     #SEND {!aset room_long_suff `><ESC>[0m};
+    #SEND {!aset world_drop_pref <ESC>[41m<D`};
+    #SEND {!aset world_drop_suff `><ESC>[0m};
     #VAR {my[ansiflags]} {1};
   };
   #ELSE
@@ -35,6 +37,8 @@
     #SEND {!aset room_short_suff <ESC>[0m};
     #SEND {!aset room_long_pref <ESC>[33m};
     #SEND {!aset room_long_suff <ESC>[0m};
+    #SEND {!aset world_drop_pref <ESC>[41m};
+    #SEND {!aset world_drop_suff <ESC>[0m};
     #VAR {my[ansiflags]} {0};    
   };
   .AnsiFlagTriggers;

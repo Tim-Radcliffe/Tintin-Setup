@@ -19,8 +19,8 @@
         };
         #ELSEIF {"%%2" == "Smuggling"}
         {
-            #VAR {my[corpse][smuggling][current]} {%%5};
-            #VAR {my[corpse][smuggling][max]}     {%%4};
+            #VAR {my[corpse][smuggle][current]} {%%5};
+            #VAR {my[corpse][smuggle][max]}     {%%4};
         };
         #ELSEIF {"%%2" == "Encumberance"}
         {

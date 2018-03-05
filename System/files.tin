@@ -55,11 +55,11 @@
 {
   #IF {"%2" != ""}
   {
-    #SCRIPT {result} {find '%1' -name '%2' -type f -maxdepth 1 2>/dev/null};
+    #SCRIPT {result} {find "%1" -name "%2" -type f -maxdepth 1 2>/dev/null};
   };
   #ELSE
   {
-    #SCRIPT {result} {find '%1' -type f -maxdepth 1 2>/dev/null};
+    #SCRIPT {result} {find "%1" -type f -maxdepth 1 2>/dev/null};
   };
 };
 
