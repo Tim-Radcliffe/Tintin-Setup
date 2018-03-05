@@ -1,6 +1,6 @@
 #NOP /* Necromancer HP Bar parser */
 
-/* Collect HP Bar line (needs to start with HP) */
+/* Collect HP Bar line */
 #ACTION {{^(HP|SP|NP|E|HSN|HSN%|Status|Cr|Corpses|Exp|TG|Moon|Planes|Reag|Memory)\[.*\].*$}}
 {
     handler_necro_hpbar {%1};
