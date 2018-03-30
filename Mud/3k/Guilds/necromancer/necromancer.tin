@@ -1,5 +1,13 @@
 #NOP ************* Necromancer Guild *********;
 
+#VAR {RoomScan[objects][a preserved, %+ corpse of]} {1};
+#VAR {RoomScan[objects][crystal charm]}             {1};
+#VAR {RoomScan[objects][platinum coin]}             {1};
+#VAR {RoomScan[objects][small grey stone]}          {1};
+#VAR {RoomScan[objects][dark leather strap]}        {1};
+#VAR {RoomScan[objects][cloudy glass sphere]}       {1};
+#VAR {RoomScan[objects][dark skull key]}            {1};
+
 /* Teleport to Guild */
 #ACTION {^Visions of the guild appear first in your mind, then reality...}
 {
@@ -12,8 +20,8 @@
 #ALIAS {handler_auto_preserve}
 {
     #NOP %1;
-    #SEND {!preserve remains};
-    #SEND {!get preservation};
+    #SEND {!preserve get};
+#NOP    #SEND {!get preservation};
     #SEND {!glance};
 };
 auto {add} {preserve} {} {e_killed_opponent} {}; 

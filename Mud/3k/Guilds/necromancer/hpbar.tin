@@ -1,9 +1,9 @@
 #NOP /* Necromancer HP Bar parser */
 
 /* Collect HP Bar line */
-#ACTION {{^(HP|SP|NP|E|HSN|HSN%|Status|Cr|Corpses|Exp|TG|Moon|Planes|Reag|Memory)\[.*\].*$}}
+#ACTION {{^(\S:|)((HP|SP|NP|E|HSN|HSN%|Status|Cr|Corpses|Exp|TG|Moon|Planes|Reag|Memory)\[.*\].*$)}}
 {
-    handler_necro_hpbar {%1};
+    handler_necro_hpbar {%3};
 };
 
 /* Pass one HPBar section data at a time to the appropriate parser */

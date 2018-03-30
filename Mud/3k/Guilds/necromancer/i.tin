@@ -30,7 +30,7 @@
         {
             #VAR {my[corpse][minion][current]} {%%5};
         };
-    };
+    } {1};
 
     #CLASS {cNecroI} {close};
 
