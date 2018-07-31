@@ -10,7 +10,7 @@
 
 This setup includes my scripts for [3Kingdoms mud](http://3k.org/)
 
-**I'm in the process of setting this repository up, cleaning and re-factoring old code to work in a tidier way, so not everything may work as expected yet.**
+There is no documentation yet on how this works.
 
 If you want to try it out anyway, run "tt++ start.tin"
 
