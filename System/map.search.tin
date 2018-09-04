@@ -68,7 +68,7 @@
           #MACRO {%%1}
           {
             #NOP delay added because ticker wouldn't add from macro for some reason;
-            #DELAY {0.1} {.areaRun {%%2}};
+            #DELAY {0.2} {.areaRun {%%2}};
             #CLASS {cMapGotoMacros} {kill};
           };
         };

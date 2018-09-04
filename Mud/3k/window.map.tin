@@ -7,6 +7,10 @@
   #MAP MAP {${session[ScreenCols]}x${session[HeadRows]}} {/tmp/map2.txt};
   #SYSTEM {sed -i 's/\\/\\\\/g' /tmp/map2.txt};
   #SCRIPT {mapBuffer} {cat /tmp/map2.txt};
+#NOP  #MAP MAP {${session[ScreenCols]}x${session[HeadRows]}} {mapBuffer2} {v};
+#NOP  #LINE SUBSTITUTE {ESCAPE} {#REPLACE {mapBuffer2} {\n} {\x7B\x7D}};
+#NOP  #VAR {mapBuffer2} {{$mapBuffer2}}
+#NOP  #LIST {mapBuffer} {create} {$mapBuffer2};
   .WindowSet {map} {$mapBuffer};
   .WindowRefresh {map};
 };

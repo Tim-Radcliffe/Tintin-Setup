@@ -4,53 +4,47 @@
 
 #VAR {room} {};
 
-#VAR {RoomScan[mob]} 
-{
-  {under the control of}{-1}
-  {the Skeleton}{-1}
-  {the Zombie}{-1}
-  {the Valpur}{-1}
-  {the Ghast}{-1}
-  {the Manshi}{-1}
-  {the Bolwyn}{-1}
-  {the Greesh}{-1}
-  {the Wight}{-1}
-  {the Heucuva}{-1}
-  {the Tholen}{-1}
-  {the Bayen}{-1}
-  {the Quarin}{-1}
-  {the Mohrg}{-1}
-  {the Grimare}{-1}
-  {the Valithyn}{-1}
-  {esquire}{-1}
-  {'s}{-1}
-};
+#VAR {RoomScan[mob][under the control of]}{-1};
+#VAR {RoomScan[mob][the Skeleton]}{-1};
+#VAR {RoomScan[mob][the Zombie]}{-1};
+#VAR {RoomScan[mob][the Valpur]}{-1};
+#VAR {RoomScan[mob][the Ghast]}{-1};
+#VAR {RoomScan[mob][the Manshi]}{-1};
+#VAR {RoomScan[mob][the Bolwyn]}{-1};
+#VAR {RoomScan[mob][the Greesh]}{-1};
+#VAR {RoomScan[mob][the Wight]}{-1};
+#VAR {RoomScan[mob][the Heucuva]}{-1};
+#VAR {RoomScan[mob][the Tholen]}{-1};
+#VAR {RoomScan[mob][the Bayen]}{-1};
+#VAR {RoomScan[mob][the Quarin]}{-1};
+#VAR {RoomScan[mob][the Mohrg]}{-1};
+#VAR {RoomScan[mob][the Grimare]}{-1};
+#VAR {RoomScan[mob][the Valithyn]}{-1};
+#VAR {RoomScan[mob][esquire]}{-1};
+#VAR {RoomScan[mob]['s]}{-1};
 
-#VAR {RoomScan[objects]} 
-{ 
-  {coins}{1}
-  {phial}{1}
-  {bag}{1}
-  {fragment of}{1}
-  {essence of}{1}
-  {heart of}{1}
-  {puppy}{1}
-  {black stone}{-1}
-  {grafting}{-1}
-  {departing}{-1}
-  {devouring}{-1}
-  {slow digestion}{-1}
-  {quick digestion}{-1}
-  {hunger}{-1}
-  {fractures}{-1}
-  {nullification}{-1}
-  {obliquity}{-1}
-  {fumbling}{-1}
-  {fear}{-1}
-  {departing}{-1}
-  {empty}{-1}
-  {-\d.}{-1}  
-};
+#VAR {RoomScan[objects][coins]}{1};
+#VAR {RoomScan[objects][phial]}{1};
+#VAR {RoomScan[objects][bag]}{1};
+#VAR {RoomScan[objects][fragment of]}{1};
+#VAR {RoomScan[objects][essence of]}{1};
+#VAR {RoomScan[objects][heart of]}{1};
+#VAR {RoomScan[objects][puppy]}{1};
+#VAR {RoomScan[objects][black stone]}{-1};
+#VAR {RoomScan[objects][grafting]}{-1};
+#VAR {RoomScan[objects][departing]}{-1};
+#VAR {RoomScan[objects][devouring]}{-1};
+#VAR {RoomScan[objects][slow digestion]}{-1};
+#VAR {RoomScan[objects][quick digestion]}{-1};
+#VAR {RoomScan[objects][hunger]}{-1};
+#VAR {RoomScan[objects][fractures]}{-1};
+#VAR {RoomScan[objects][nullification]}{-1};
+#VAR {RoomScan[objects][obliquity]}{-1};
+#VAR {RoomScan[objects][fumbling]}{-1};
+#VAR {RoomScan[objects][fear]}{-1};
+#VAR {RoomScan[objects][departing]}{-1};
+#VAR {RoomScan[objects][empty]}{-1};
+#VAR {RoomScan[objects][-\d.]}{-1};
 
 #NOP **** Triggers ****
 #NOP ** brief no map
