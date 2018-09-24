@@ -45,6 +45,7 @@
 #VAR {RoomScan[objects][departing]}{-1};
 #VAR {RoomScan[objects][empty]}{-1};
 #VAR {RoomScan[objects][-\d.]}{-1};
+#VAR {RoomScan[objects][ATM]}{.file load {$path[local]/ATM.tin}};
 
 #NOP **** Triggers ****
 #NOP ** brief no map
@@ -114,7 +115,8 @@ event_register e_mip_HAB h_room_contents handler_room_contents;
     {
       #FORALL {$RoomScan[commandqueue][%*]} 
       {
-        #SEND {&0};
+#NOP        #SEND {&0};
+        &0
       };
       #UNVAR {RoomScan[commandqueue]};
     };

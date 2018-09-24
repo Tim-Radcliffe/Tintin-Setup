@@ -68,10 +68,13 @@ event_register {e_mip_FFF} {h_window_combo} {.WindowComboStats};
     #NOP %1;
     #IF {"$map[file]" == ""} #RETURN;
     .WindowComboSplit;
-    #MAP MAP {${_WC[split][r]}x${session[HeadRows]}} {/tmp/map3.txt};
-    #SYSTEM {sed -i 's/\\/\\\\/g' /tmp/map3.txt};
-    #SCRIPT {_WC[map]} {cat /tmp/map3.txt};
-#NOP    #MAP MAP {${_WC[split][r]}x${session[HeadRows]}} {_WC[map2]} {v};
+    #MAP MAP {${_WC[split][r]}x${session[HeadRows]}} {_WC[mapstring]} {v};
+#NOP    #VAR {_WC[map]} {@fSplitString{$_WC[mapstring]}};
+    #REPLACE {_WC[mapstring]} {\\} {\\\\};
+    #FORMAT {_WC[map]} {%w} {{$_WC[mapstring]}};
+#NOP    #MAP MAP {${_WC[split][r]}x${session[HeadRows]}} {/tmp/map3.txt};
+#NOP    #SYSTEM {sed -i 's/\\/\\\\/g' /tmp/map3.txt};
+#NOP    #SCRIPT {_WC[map]} {cat /tmp/map3.txt};
     .WindowComboRefresh;
 };
 

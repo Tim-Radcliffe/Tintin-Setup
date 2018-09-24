@@ -252,3 +252,25 @@ event_register {e_15_mins} {h_globals} {.aGlobalVar};
     #VAR {result} {%1}; 
   };
 };
+
+#NOP Split a multi-line string into a list
+#FUNCTION {fSplitString}
+{
+    #VAR {_fSS} {%0};
+
+    #REPLACE {_fSS} {;} {+SC+};
+    #REPLACE {_fSS} {\n} {;};
+    #REPLACE {_fSS} {{\ }} {+SP+};
+    #REPLACE {_fSS} {\\} {\\};
+
+    #LIST result CREATE {$_fSS};
+
+    #FOREACH {$result[]} {l} 
+    {
+        #LINE SUBSTITUTE VARIABLE 
+        {
+            #REPLACE {result[$l]} {+SC+} {;};
+            #REPLACE {result[$l]} {+SP+} { };
+        };
+    };
+};
