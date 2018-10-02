@@ -4,10 +4,10 @@
 {
   #NOP %1;
   #IF {"$map[file]" == ""} #RETURN;
-  #MAP MAP {${_WC[split][r]}x${session[HeadRows]}} {_WC[mapstring]} {v};
+  #MAP MAP {${_WC[split][r]}x@fScreen{{head}{rows}}} {_WC[mapstring]} {v};
   #REPLACE {_WC[mapstring]} {\\} {\\\\};  
   #FORMAT {mapBuffer} {%w} {{$_WC[mapstring]}};
-#NOP  #MAP MAP {${session[ScreenCols]}x${session[HeadRows]}} {/tmp/map2.txt};
+#NOP  #MAP MAP {@fScreen{{full}{cols}}x@fScreen{{head}{rows}}} {/tmp/map2.txt};
 #NOP  #SYSTEM {sed -i 's/\\/\\\\/g' /tmp/map2.txt};
 #NOP  #SCRIPT {mapBuffer} {cat /tmp/map2.txt};
   .WindowSet {map} {$mapBuffer};

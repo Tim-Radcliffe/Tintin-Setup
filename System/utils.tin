@@ -127,7 +127,7 @@ event_register {e_15_mins} {h_globals} {.aGlobalVar};
   #VAR {_fLP} {};
   #IF {"%3" == ""}
   {
-    #VAR {_fLP[LineLength]} {$session[ScreenCols]};
+    #VAR {_fLP[LineLength]} {@fScreen{{full}{cols}}};
   }
   {
     #VAR {_fLP[LineLength]} {%3};

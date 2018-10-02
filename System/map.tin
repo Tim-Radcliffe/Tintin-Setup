@@ -137,9 +137,9 @@
 #ALIAS {.mapRefresh}
 {
   #IF {"$map[file]" == ""} #RETURN;
-  #MATH {map[cols]} {$session[MapCols]-1};
-  #MATH {map[rows]} {$session[ScreenRows]};
-  #MAP MAP {${map[cols]}x${map[rows]}} {/tmp/map.txt} {a};
+#NOP  #MATH {map[cols]} {$session[MapCols]-1};
+#NOP  #MATH {map[rows]} {$session[ScreenRows]};
+#NOP  #MAP MAP {${map[cols]}x${map[rows]}} {/tmp/map.txt} {a};
   event_raise {e_map_refresh};
 };
 

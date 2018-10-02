@@ -4,7 +4,7 @@
 {
     #NOP %1;
     #VAR {_WC[split][l]} {40};
-    #VAR {_WC[split][r]} {@fEval{${session[ScreenCols]}-${_WC[split][l]}}};
+    #VAR {_WC[split][r]} {@fEval{@fScreen{{full}{cols}}-${_WC[split][l]}}};
 };
 
 #ALIAS {.WindowComboRefresh}
@@ -19,7 +19,7 @@
 
     #LIST {_WC[r]} {add} {$_WC[map][%*]};
 
-    #LOOP {1} {${session[HeadRows]}} {_WC[i]}
+    #LOOP {1} {@fScreen{{head}{rows}}} {_WC[i]}
     {
         #VAR {_WC[buffer][$_WC[i]]} {@fLinePad{{$_WC[l][$_WC[i]]}{}{$_WC[split][l]}}$_WC[r][$_WC[i]]}
     };
@@ -68,11 +68,11 @@ event_register {e_mip_FFF} {h_window_combo} {.WindowComboStats};
     #NOP %1;
     #IF {"$map[file]" == ""} #RETURN;
     .WindowComboSplit;
-    #MAP MAP {${_WC[split][r]}x${session[HeadRows]}} {_WC[mapstring]} {v};
+    #MAP MAP {${_WC[split][r]}x@fScreen{{head}{rows}}} {_WC[mapstring]} {v};
 #NOP    #VAR {_WC[map]} {@fSplitString{$_WC[mapstring]}};
     #REPLACE {_WC[mapstring]} {\\} {\\\\};
     #FORMAT {_WC[map]} {%w} {{$_WC[mapstring]}};
-#NOP    #MAP MAP {${_WC[split][r]}x${session[HeadRows]}} {/tmp/map3.txt};
+#NOP    #MAP MAP {${_WC[split][r]}x@fScreen{{head}{rows}}} {/tmp/map3.txt};
 #NOP    #SYSTEM {sed -i 's/\\/\\\\/g' /tmp/map3.txt};
 #NOP    #SCRIPT {_WC[map]} {cat /tmp/map3.txt};
     .WindowComboRefresh;
