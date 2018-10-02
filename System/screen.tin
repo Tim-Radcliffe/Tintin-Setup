@@ -33,9 +33,51 @@
 };
 event_register {e_screen_resize} {h_screen_refresh} {.ScreenRefresh};
 
+#FUNCTION {fScreen}
+{
+    #FORMAT {_Screen[temp][rows]} {%R};
+    #FORMAT {_Screen[temp][cols]} {%C};
+
+    #IF {"$_Screen[temp][rows]" != "$_Screen[full][rows]"}
+    {
+        #VAR {_Screen[full][rows]} {$_Screen[temp][rows]};
+        #MATH {_Screen[head][rows]} { ( $_Screen[full][rows] / 4 ) + 1 };
+        #MATH {_Screen[body][rows]} { $_Screen[full][rows] - $_Screen[head][rows] - 3 };
+        #SPLIT {$_Screen[head][rows]} {1};        
+    };
+    
+    #IF {"$_Screen[temp][cols]" != "$_Screen[full][cols]"}
+    {
+        #VAR {_Screen[full][cols]} {$_Screen[temp][cols]};
+        #MATH {_Screen[ColDiff]} {$_Screen[full][cols] - 80};
+        #IF {"$_Screen[ColDiff]" > "0"} 
+        {
+            #SYSTEM {tmux resize-pane -L -t 0 $_Screen[ColDiff]};
+        };
+        #ELSEIF {"$_Screen[ColDiff]" < "0"}
+        {
+            #MATH {_Screen[ColDiff]} {$_Screen[ColDiff] * -1};
+            #SYSTEM {tmux resize-pane -R -t 0 $_Screen[ColDiff]};
+        };
+    };    
+    
+    #UNVAR {_Screen[temp]};
+    
+    #IF {"%1" != ""} 
+    {
+        #IF {"%2" != ""}
+        {
+            #RETURN {$_Screen[%1][%2]}
+        };
+        #RETURN {$_Screen[%1]};
+    };
+    #RETURN {$_Screen};
+};
+
 #EVENT {SCREEN RESIZE}
 {
-  event_raise {e_screen_resize};
+    @fScreen{};
+    event_raise {e_screen_resize};
 };
 
 .ScreenRefresh;
