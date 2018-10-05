@@ -29,7 +29,6 @@
 #VAR {RoomScan[objects][fragment of]}{1};
 #VAR {RoomScan[objects][essence of]}{1};
 #VAR {RoomScan[objects][heart of]}{1};
-#VAR {RoomScan[objects][puppy]}{1};
 #VAR {RoomScan[objects][black stone]}{-1};
 #VAR {RoomScan[objects][grafting]}{-1};
 #VAR {RoomScan[objects][departing]}{-1};

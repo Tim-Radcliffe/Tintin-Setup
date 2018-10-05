@@ -14,19 +14,19 @@
         {
             #SEND {!smuggle corpse};
             #VAR {my[corpse][smuggle][current]} {@fEval{$my[corpse][smuggle][current]+1}};
-            #VAR {my[corpse][held]} {@fEval{$my[corpse][held]-1}};
+            #VAR {my[corpse][held][current]} {@fEval{$my[corpse][held][current]-1}};
         };
         #ELSEIF {$my[corpse][coffin][current] < $my[corpse][coffin][max]}
         {
             #SEND {!wrap corpse};
             #VAR {my[corpse][coffin][current]} {@fEval{$my[corpse][coffin][current]+1}};
-            #VAR {my[corpse][held]} {@fEval{$my[corpse][held]-1}};
+            #VAR {my[corpse][held][current]} {@fEval{$my[corpse][held][current]-1}};
         };
         #ELSEIF {$my[corpse][minion][current] < $my[corpse][minion][max]}
         {
             #SEND {!give corpse to undead follower};
             #VAR {my[corpse][minion][current]} {@fEval{$my[corpse][minion][current]+1}};
-            #VAR {my[corpse][held]} {@fEval{$my[corpse][held]-1}};
+            #VAR {my[corpse][held][current]} {@fEval{$my[corpse][held][current]-1}};
         };
     };
     #ELSEIF {"%1" == "retrieve"}
@@ -35,20 +35,20 @@
         {
             #SEND {!smuggle remove corpse};
             #VAR {my[corpse][smuggle][current]} {@fEval{$my[corpse][smuggle][current]-1}};
-            #VAR {my[corpse][held]} {@fEval{$my[corpse][held]+1}};
+            #VAR {my[corpse][held][current]} {@fEval{$my[corpse][held][current]+1}};
         };
         #ELSEIF {$my[corpse][coffin][current] > 0}
         {
             #SEND {!unwrap corpse};
             #SEND {!get preservation};
             #VAR {my[corpse][coffin][current]} {@fEval{$my[corpse][coffin][current]-1}};
-            #VAR {my[corpse][held]} {@fEval{$my[corpse][held]+1}};
+            #VAR {my[corpse][held][current]} {@fEval{$my[corpse][held][current]+1}};
         };
         #ELSEIF {$my[corpse][minion][current] > 0}
         {
             #SEND {!=give preservation};
             #VAR {my[corpse][minion][current]} {@fEval{$my[corpse][minion][current]-1}};
-            #VAR {my[corpse][held]} {@fEval{$my[corpse][held]+1}};
+            #VAR {my[corpse][held][current]} {@fEval{$my[corpse][held][current]+1}};
         };
     };
     #ELSEIF {"%1" == "sort"}
@@ -61,12 +61,12 @@
 #ALIAS {handler_auto_corpse}
 {
     #NOP %1;
-    #IF {$my[corpse][held] < 5}
+    #IF {$my[corpse][held][current] < $my[corpse][held][max]}
     {
         .corpse retrieve;
-        #SEND {!give corpse $my[corpse][held] to $my[name]};
+        #SEND {!give corpse $my[corpse][held][current] to $my[name]};
     };
-    #IF {$my[corpse][held] > 5}
+    #IF {$my[corpse][held][current] > $my[corpse][held][max]}
     {
         .corpse store;
     };

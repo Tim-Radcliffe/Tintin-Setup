@@ -69,12 +69,8 @@ event_register {e_mip_FFF} {h_window_combo} {.WindowComboStats};
     #IF {"$map[file]" == ""} #RETURN;
     .WindowComboSplit;
     #MAP MAP {${_WC[split][r]}x@fScreen{{head}{rows}}} {_WC[mapstring]} {v};
-#NOP    #VAR {_WC[map]} {@fSplitString{$_WC[mapstring]}};
     #REPLACE {_WC[mapstring]} {\\} {\\\\};
     #FORMAT {_WC[map]} {%w} {{$_WC[mapstring]}};
-#NOP    #MAP MAP {${_WC[split][r]}x@fScreen{{head}{rows}}} {/tmp/map3.txt};
-#NOP    #SYSTEM {sed -i 's/\\/\\\\/g' /tmp/map3.txt};
-#NOP    #SCRIPT {_WC[map]} {cat /tmp/map3.txt};
     .WindowComboRefresh;
 };
 

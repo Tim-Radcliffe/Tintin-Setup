@@ -20,11 +20,39 @@
 #ALIAS {handler_auto_preserve}
 {
     #NOP %1;
-    #SEND {!preserve get};
-#NOP    #SEND {!get preservation};
+    #IF {$my[corpse][held][current] < $my[corpse][held][max]}
+    {
+        #SEND {!preserve get};
+    };
+    #ELSEIF {$auto[consecrate][status]}
+    {
+        #SEND {!consecrate};
+    };
+    #ELSE 
+    {
+        #SEND {!absorb ground};
+        #SEND {!absorb};
+        #SEND {!absorb inventory};
+    };
     #SEND {!glance};
 };
 auto {add} {preserve} {} {e_killed_opponent} {}; 
+auto {add} {consecrate} {} {} {}; 
+
+/* Clean up corpses if you can't carry them */
+#ACTION {^  You can't carry any more master, leaving it on the ground.}
+{
+    #SEND {!absorb ground};
+    #IF {$my[hp][current] < $my[hp][max]}
+    {
+        #SEND {!absorb prime};
+    };
+    #ELSE
+    {
+        #SEND {!absorb};
+    };
+    #SEND {!absorb inventory};
+} {3};
 
 /* Call your familiar into combat automatically when you "kill" */
 #ALIAS {handler_auto_call}
@@ -100,6 +128,7 @@ auto {add} {protection} {} {e_combat_round} {};
     #GAG {^>>Atrancing};
     #GAG {^$my[necromancer][familiar] tells you:};
     #GAG {^  You'll have to wait a moment master.};
+    #GAG {^  You will now absorb corpses from %+ first master.};
 };
 
 /* Ungag Necro message spam */
@@ -112,5 +141,6 @@ auto {add} {protection} {} {e_combat_round} {};
     #UNGAG {^>>Atrancing};
     #UNGAG {^$my[necromancer][familiar] tells you:};
     #UNGAG {^  You'll have to wait a moment master.};
+    #UNGAG {^  You will now absorb corpses from %+ first master.};    
 }
 auto {add} {necrogag} {necro_gag_on} {} {necro_gag_off};
