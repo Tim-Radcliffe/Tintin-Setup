@@ -177,7 +177,7 @@ event_register {e_ansiflag_R} {h_room_name} {.HandlerRoomName};
         {
           #IF {"$RoomScan[objects][&0]" == "1"}
           {
-            #VAR {RoomScan[commandbuffer]} {get %2};
+            #VAR {RoomScan[commandbuffer]} {@fAutoGetCommand{%2}};
           }
           {
             #VAR {RoomScan[commandbuffer]} {$RoomScan[objects][&0]};
@@ -193,12 +193,23 @@ event_register {e_ansiflag_R} {h_room_name} {.HandlerRoomName};
   };
   #ELSEIF {"$RoomScan[break]" != "1" && "$flags[autopickup]" == "2"}
   {
-    #LIST {RoomScan[commandqueue]} {add} {get %2};
+    #LIST {RoomScan[commandqueue]} {add} {@fAutoGetCommand{%2}};
   };
   
   #UNVAR {RoomScan[break]};
   #UNVAR {RoomScan[commandbuffer]};
 };
+
+/* Returns all the commands to perform when getting an object */
+#FUNCTION {fAutoGetCommand}
+{
+    #VAR {result} {#SEND {!get %0}};
+    #IF {$auto[bag][status]}
+    {
+        #VAR {result} {${result};#SEND {!put %0 in bag};};
+    };
+};
+auto {add} {bag} {} {} {};
 
 #ALIAS {autopickup}
 {
