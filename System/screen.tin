@@ -41,8 +41,8 @@
 
 #EVENT {SCREEN RESIZE}
 {
-    @fScreen{};
+    #VAR {result} {@fScreen{}};
     event_raise {e_screen_resize};
 };
 
-@fScreen{};
+#VAR {result} {@fScreen{}};

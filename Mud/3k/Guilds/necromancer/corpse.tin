@@ -61,12 +61,12 @@
 #ALIAS {handler_auto_corpse}
 {
     #NOP %1;
-    #IF {$my[corpse][held][current] < $my[corpse][held][max]}
+    #IF {$my[corpse][held][current] < $my[corpse][held][max] - 1}
     {
         .corpse retrieve;
         #SEND {!give corpse $my[corpse][held][current] to $my[name]};
     };
-    #IF {$my[corpse][held][current] > $my[corpse][held][max]}
+    #IF {$my[corpse][held][current] >= $my[corpse][held][max]}
     {
         .corpse store;
     };
