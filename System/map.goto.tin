@@ -57,7 +57,6 @@
         {
           #VAR {map[destination]} {&0};
         };
-        #nop #MAP run $map[destination];
         .mapRun $map[destination];
       };
 
