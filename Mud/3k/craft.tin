@@ -1,6 +1,5 @@
 #VAR {_craft[quality][specific]} {{1}{legendary}{2}{superior}{3}{good}{4}{average}{5}{poor}{6}{crude}{7}{worthless}};
 #VAR {_craft[quality][all]} {{best}{worst}{all}{any}${_craft[quality][specific]}};
-#NOP #VAR {_craft[limit][default]} {50};
 
 #action {^{>\s|}%sWhat luck!  You have found %1} 
 {

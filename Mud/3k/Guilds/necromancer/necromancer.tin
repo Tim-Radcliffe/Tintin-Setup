@@ -144,3 +144,16 @@ auto {add} {protection} {} {e_combat_round} {};
     #UNGAG {^  You will now absorb corpses from %+ first master.};    
 }
 auto {add} {necrogag} {necro_gag_on} {} {necro_gag_off};
+
+/* Automatically fire glamors */
+#ALIAS {handler_auto_glamor}
+{
+    #NOP %1;
+    #IF {(@fEval{$my[necromancer][glamors][max]-$my[necromancer][glamors][current]} < 
+          @fEval{$my[gp2][current]/(100/$my[necromancer][glamors][max])}) &&
+          "$my[necromancer][glamors][active]" == ""}
+    {
+        #SEND {!illume};
+    };
+};
+auto {add} {glamor} {} {e_combat_round} {};

@@ -1,14 +1,19 @@
+#ALIAS {.aGlobalSave}
+{
+    #NOP %1;
+    #CLASS {cGlobalVars} {write} {$path[profile]/$session[name].data.tin};
+}
+event_register {e_15_mins} {h_globals} {.aGlobalSave};
+
 #ALIAS {.aGlobalVar}
 {
-  #IF {"${%1}" != "%2" && "%1" != "e_15_mins"}
-  {
+    #NOP %1;
+    #UNVAR {%1};
     #CLASS {cGlobalVars} {open};
     #VAR {%1} {%2};
     #CLASS {cGlobalVars} {close};
-  };
-  #CLASS {cGlobalVars} {write} {$path[profile]/$session[name].data.tin};
+    .aGlobalSave;
 };
-event_register {e_15_mins} {h_globals} {.aGlobalVar};
 
 #NOP {message} {yes/default action} {no action};
 #ALIAS {.aYesNo}
