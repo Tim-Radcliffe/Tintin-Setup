@@ -1,12 +1,12 @@
 #NOP ************* Necromancer Guild *********;
 
-#VAR {RoomScan[objects][a preserved, %+ corpse of]} {1};
-#VAR {RoomScan[objects][crystal charm]}             {1};
-#VAR {RoomScan[objects][platinum coin]}             {1};
-#VAR {RoomScan[objects][small grey stone]}          {1};
-#VAR {RoomScan[objects][dark leather strap]}        {1};
-#VAR {RoomScan[objects][cloudy glass sphere]}       {1};
-#VAR {RoomScan[objects][dark skull key]}            {1};
+#VAR {RoomScan[object][a preserved, %+ corpse of]} {1};
+#VAR {RoomScan[object][crystal charm]}             {1};
+#VAR {RoomScan[object][platinum coin]}             {1};
+#VAR {RoomScan[object][small grey stone]}          {1};
+#VAR {RoomScan[object][dark leather strap]}        {1};
+#VAR {RoomScan[object][cloudy glass sphere]}       {1};
+#VAR {RoomScan[object][dark skull key]}            {1};
 
 /* Teleport to Guild */
 #ACTION {^Visions of the guild appear first in your mind, then reality...}
@@ -31,13 +31,20 @@
     #ELSE 
     {
         #SEND {!absorb ground};
-        #SEND {!absorb};
+        #IF {$my[hp][current] < $my[hp][max]}
+        {
+            #SEND {!absorb prime};
+        };
+        #ELSE
+        {
+            #SEND {!absorb};
+        };
         #SEND {!absorb inventory};
     };
     #SEND {!glance};
 };
 auto {add} {preserve} {} {e_killed_opponent} {}; 
-auto {add} {consecrate} {} {} {}; 
+auto {add} {consecrate} {#ACTION {^  You are already at 100% consecration master.} {auto consecrate off};} {} {}; 
 
 /* Clean up corpses if you can't carry them */
 #ACTION {^  You can't carry any more master, leaving it on the ground.}
@@ -117,6 +124,23 @@ auto {add} {spfuse} {} {e_combat_round} {};
     };
 };
 auto {add} {protection} {} {e_combat_round} {};
+
+/* Automatically invoke veil if fighting an undead */
+#ALIAS {handler_auto_veil}
+{
+    #NOP %1;
+    #IF {"$mob[%2][undead]" == "1" && "$my[necromancer][veil]" != "ON"}
+    {
+        #SEND {!veil invoke};
+        #VAR {my[necromancer][veil]} {ON};
+    };
+    #ELSEIF {"$mob[%2][undead]" != "1" && "$my[necromancer][veil]" == "ON"}
+    {
+        #SEND {!veil disperse};
+        #VAR {my[necromancer][veil]} {OFF};
+    };
+};
+auto {add} {veil} {} {e_combat} {};
 
 /* Gag Necro message spam */
 #ALIAS {necro_gag_on}

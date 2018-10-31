@@ -231,5 +231,5 @@
 #NOP ############## AUTO ACTIONS ############
 
 #VAR {path[craft]} {$path[mud]/Craft};
-auto add {mine} {.file load {$path[craft]/mine.tin};#VAR {RoomScan[objects][whitelist][ore deposit]} {mine deposit}} {e_room_enter} {#CLASS {$path[craft]/mine.tin} {kill};#UNVAR {RoomScan[objects][whitelist][ore deposit]}}
+auto add {mine} {.file load {$path[craft]/mine.tin};#VAR {RoomScan[object][whitelist][ore deposit]} {mine deposit}} {e_room_enter} {#CLASS {$path[craft]/mine.tin} {kill};#UNVAR {RoomScan[object][whitelist][ore deposit]}}
 auto add {farm} {.file load {$path[craft]/farm.tin}} {} {#CLASS {$path[craft]/farm.tin} {kill}};

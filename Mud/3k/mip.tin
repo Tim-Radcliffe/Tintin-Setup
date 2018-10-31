@@ -123,7 +123,6 @@
   {
     #VAR {opponent} {};
     #VAR {opponent[longname]} {%1};
-    event_raise e_combat {%1};
   }
   {
     #VAR {opponent[hp]} {};

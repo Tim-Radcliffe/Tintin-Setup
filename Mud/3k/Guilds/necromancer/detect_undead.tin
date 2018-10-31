@@ -1,0 +1,19 @@
+#ALIAS {handler_auto_detectundead}
+{
+    #NOP %1;
+    #IF {"%2" != ""}
+	{
+        #IF {"$mob[%2][undead]" == ""}
+        {
+            #VAR {mob[%2][undead]} {0};
+            #ACTION {^%2 is undead...}
+            {
+                #VAR {mob[%2][undead]} {1};
+                #UNACTION {^%2 is undead...};
+            } {3};
+            event_oneshot e_killed_opponent {detect_undead.tin} {#NOP %%1;#UNACTION {^%2 is undead...}};        
+            #SEND {!detect undead};
+        };
+    };
+};
+event_register e_mobscan_start {detect_undead.tin} {handler_auto_detectundead};

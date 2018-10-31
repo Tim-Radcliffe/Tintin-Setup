@@ -16,8 +16,8 @@
         {
             #IF {"%%3" == "%%4" || "%%3" == "$my[name]" || "%%3" == ""}
             {
-                #VAR {opponent[shortname]} {%4};
-                event_raise e_killed_opponent {%4};
+                #VAR {opponent[shortname]} {%%4};
+                event_raise e_killed_opponent {%%4};
                 #UNACTION {^{>\s|}{You've killed|(.*) dealt the killing blow to} %*.};
             };
         };

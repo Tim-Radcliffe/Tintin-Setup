@@ -23,28 +23,27 @@
 #VAR {RoomScan[mob][esquire]}{-1};
 #VAR {RoomScan[mob]['s]}{-1};
 
-#VAR {RoomScan[objects][coins]}{1};
-#VAR {RoomScan[objects][phial]}{1};
-#VAR {RoomScan[objects][bag]}{1};
-#VAR {RoomScan[objects][fragment of]}{1};
-#VAR {RoomScan[objects][essence of]}{1};
-#VAR {RoomScan[objects][heart of]}{1};
-#VAR {RoomScan[objects][black stone]}{-1};
-#VAR {RoomScan[objects][grafting]}{-1};
-#VAR {RoomScan[objects][departing]}{-1};
-#VAR {RoomScan[objects][devouring]}{-1};
-#VAR {RoomScan[objects][slow digestion]}{-1};
-#VAR {RoomScan[objects][quick digestion]}{-1};
-#VAR {RoomScan[objects][hunger]}{-1};
-#VAR {RoomScan[objects][fractures]}{-1};
-#VAR {RoomScan[objects][nullification]}{-1};
-#VAR {RoomScan[objects][obliquity]}{-1};
-#VAR {RoomScan[objects][fumbling]}{-1};
-#VAR {RoomScan[objects][fear]}{-1};
-#VAR {RoomScan[objects][departing]}{-1};
-#VAR {RoomScan[objects][empty]}{-1};
-#VAR {RoomScan[objects][-\d.]}{-1};
-#VAR {RoomScan[objects][ATM]}{.file load {$path[local]/ATM.tin}};
+#VAR {RoomScan[object][coins]}{1};
+#VAR {RoomScan[object][phial]}{1};
+#VAR {RoomScan[object][bag]}{1};
+#VAR {RoomScan[object][fragment of]}{1};
+#VAR {RoomScan[object][essence of]}{1};
+#VAR {RoomScan[object][heart of]}{1};
+#VAR {RoomScan[object][black stone]}{-1};
+#VAR {RoomScan[object][grafting]}{-1};
+#VAR {RoomScan[object][departing]}{-1};
+#VAR {RoomScan[object][devouring]}{-1};
+#VAR {RoomScan[object][slow digestion]}{-1};
+#VAR {RoomScan[object][quick digestion]}{-1};
+#VAR {RoomScan[object][hunger]}{-1};
+#VAR {RoomScan[object][fractures]}{-1};
+#VAR {RoomScan[object][nullification]}{-1};
+#VAR {RoomScan[object][obliquity]}{-1};
+#VAR {RoomScan[object][fumbling]}{-1};
+#VAR {RoomScan[object][fear]}{-1};
+#VAR {RoomScan[object][departing]}{-1};
+#VAR {RoomScan[object][empty]}{-1};
+#VAR {RoomScan[object][-\d.]}{-1};
 
 #NOP **** Triggers ****
 #NOP ** brief no map
@@ -162,25 +161,26 @@ event_register {e_ansiflag_R} {h_room_name} {.HandlerRoomName};
 #ALIAS {handler_room_pickup}
 {
   #NOP %1;
-
-  #FORALL {$RoomScan[objects][]}
+  
+  #FORALL {$RoomScan[object][]}
   {
     #IF {"$RoomScan[break]" != "1"}
     {
-      #REGEXP {%3} {\b&0\b}
+#NOP      #REGEXP {%3} {\b&0\b};
+      #REGEXP {%3} {{&0}}
       {
-        #IF {"$RoomScan[objects][&0]" == "-1"}
+        #IF {"$RoomScan[object][&0]" == "-1"}
         {
           #UNVAR {RoomScan[commandbuffer]};
           #VAR {RoomScan[break]} {1};
         }
         {
-          #IF {"$RoomScan[objects][&0]" == "1"}
+          #IF {"$RoomScan[object][&0]" == "1"}
           {
             #VAR {RoomScan[commandbuffer]} {@fAutoGetCommand{%2}};
           }
           {
-            #VAR {RoomScan[commandbuffer]} {$RoomScan[objects][&0]};
+            #VAR {RoomScan[commandbuffer]} {$RoomScan[object][&0]};
           };
         };
       };

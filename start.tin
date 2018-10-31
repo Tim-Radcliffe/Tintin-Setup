@@ -31,10 +31,12 @@
     #VAR {path[profile]} {Data/%4/Profiles/%2};
     #VAR {path[mud]}     {Mud/%4};
     #VAR {path[areas]}   {Data/%4/Areas};
+    #VAR {path[local]}   {Local/%4};
 
     .file loadall {$path[system]/*.tin};
     .file loadall {$path[profile]/*.tin};
     .file loadall {$path[mud]/*.tin};
+    .file loadall {$path[local]/*.tin};
 
     #CLASS {cStart} {kill};
   };

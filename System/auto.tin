@@ -1,8 +1,11 @@
 #NOP /* Auto - framework to easily add and turn on/off automatic actions              */;
+#NOP /* By Balthus - 4th April 2016                                                   */;
 #NOP /*                                                                               */;
 #NOP /* Add a new automatic action with:                                              */;
+#NOP /* auto add {name} {start actions} {trigger events} {stop actions}               */;
 #NOP /*                                                                               */;
-#NOP /* auto {name} {start actions} {trigger events} {stop actions}                   */;
+#NOP /* Remove an action with:                                                        */;
+#NOP /* auto remove {name}                                                            */;
 #NOP /*                                                                               */;
 #NOP /* start actions defines what to do when turning this auto on                    */;
 #NOP /* and stop actions are cleanup actions when turning it off again                */;

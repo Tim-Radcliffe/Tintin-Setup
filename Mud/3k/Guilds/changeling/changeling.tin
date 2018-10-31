@@ -4,7 +4,7 @@
 
 #IF {"$my[gp1][name]" == ""} {#VAR {my[gp1][name]} {Stam};};
 #IF {"$my[gp2][name]" == ""} {#VAR {my[gp2][name]} {Proto};};
-#VAR {RoomScan[objects][bioplast]} {1};
+#VAR {RoomScan[object][bioplast]} {1};
 
 #NOP ======== ACTIONS ============;
 

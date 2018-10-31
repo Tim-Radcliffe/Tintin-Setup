@@ -58,10 +58,9 @@
                 #VAR {lvCorpseSize} {$lvCorpseLoop};
                 #BREAK;
             };
-            #ELSEIF
-            {"$i" == "*"}
+            #ELSEIF {"$i" == "*"}
             {
-                #MATH {lvCorpseSize} {11 - $lvCorpseLoop};
+                #MATH {lvCorpseSize} {12 - $lvCorpseLoop};
                 #BREAK;
             };
         };
@@ -122,6 +121,9 @@
     };
 };
 
+/* @fSwapCorpse{{container1}{container2}} */
+/* Checks if largest corpse from container 1 is bigger than smallest from container 2 */
+/* Swaps the two if true */
 #FUNCTION {fSwapCorpse}
 {
     #IF {&_corpses[%1][list][1] == 0}

@@ -1,3 +1,4 @@
+#NOP /* Convert a Comma Separated Value (CSV) stream to a Tintin associative array */
 #FUNCTION {fCSVin}
 {
   #NOP %1;

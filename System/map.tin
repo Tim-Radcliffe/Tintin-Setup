@@ -136,54 +136,86 @@
 
 #ALIAS {.mapRefresh}
 {
-  #IF {"$map[file]" == ""} #RETURN;
-#NOP  #MATH {map[cols]} {$session[MapCols]-1};
+    #IF {"$map[file]" == ""} #RETURN;
+    #NOP  #MATH {map[cols]} {$session[MapCols]-1};
 #NOP  #MATH {map[rows]} {$session[ScreenRows]};
 #NOP  #MAP MAP {${map[cols]}x${map[rows]}} {/tmp/map.txt} {a};
-  event_raise {e_map_refresh};
+    event_raise {e_map_refresh};
 };
 
 #ALIAS {.mapLoad}
 {
-  #NOP %1;
-  #IF {"%1" == ""}
-  {
-    #ECHO {You must define a path};
-  };
-  #ELSE
-  {
-    #VAR {_mL} {};
-    #VAR {_mL[path]} {%1};
-    #REGEX {%1} {{^(.*)/([^\/]*)$}} 
+    #NOP %1;
+    #IF {"%1" == ""}
     {
-      #VAR {_mL[area]} {&3};
-    }
-    {
-      #VAR {_mL[area]} {%1};
+        #ECHO {You must define a path};
     };
-
-    #VAR {map[file]}        {$_mL[path]/$_mL[area].map};
-    #VAR {map[area][path]}  {$_mL[path]};
-    #VAR {map[area][name]}  {$_mL[area]};
-    #MAP {read} {$path[areas]/$map[file]};
-    
-    #IF {"@fMapResolvePath{..}" != ""}
-    {
-      #KILL {class} {%*@fMapResolvePath{..}/%*};
-    };
-
-    .file loadall {$path[areas]/${_mL[path]}/*.tin};
-    
-    #IF {"%2" == ""}
-    {
-      #MAP GOTO 1;
-    }
     #ELSE
     {
-      #MAP GOTO %2;
+        #VAR {_mL} {};
+        #VAR {_mL[path]} {%1};
+        #REGEX {%1} {{^(.*)/([^\/]*)$}} 
+        {
+            #VAR {_mL[area]} {&3};
+        }
+        {
+            #VAR {_mL[area]} {%1};
+        };
+
+        #VAR {map[file]}        {$_mL[path]/$_mL[area].map};
+        #VAR {map[area][path]}  {$_mL[path]};
+        #VAR {map[area][name]}  {$_mL[area]};
+        #MAP {read} {$path[areas]/$map[file]};
+
+        #FORALL {$_mapVariable[]}
+        {
+            #UNVAR {&0};
+        };
+        #UNVAR {_mapVariable};        
+        
+        #IF {"@fMapResolvePath{..}" != ""}
+        {
+            #KILL {class} {%*@fMapResolvePath{..}/%*};
+        };
+       
+        .file loadall {$path[areas]/${_mL[path]}/*.tin};
+
+        #FORALL {$_mapVariable[]}
+        {
+            #VAR {&0} {$_mapVariable[&0]};
+        };
+        
+        #IF {"%2" == ""}
+        {
+            #MAP GOTO 1;
+        }
+        #ELSE
+        {
+            #MAP GOTO %2;
+        };
+        #UNVAR {_mL};   
     };
-    #UNVAR {_mL};   
-  };
+};
+
+/* Set a variable in the map area specific data file */
+#ALIAS {.mapVariable}
+{
+    #NOP %1;
+    #IF {"%1" == ""}
+    {
+        #ECHO {You must define a variable name};
+        #RETURN;
+    };
+    #IF {"$map[file]" == ""}
+    {
+        #ECHO {Map not loaded};
+        #RETURN;
+    };
+    #CLASS {$path[areas]/$map[area][path]/$map[area][name].data.tin} {OPEN};
+    #VAR {_mapVariable[%1]} {%2};
+    #CLASS {$path[areas]/$map[area][path]/$map[area][name].data.tin} {WRITE} {$path[areas]/$map[area][path]/$map[area][name].data.tin};
+    #CLASS {$path[areas]/$map[area][path]/$map[area][name].data.tin} {CLOSE};
+    #VAR {%1} {%2};
 };
 
 #ALIAS {.mapSave}
