@@ -1,12 +1,12 @@
 #NOP ************* Necromancer Guild *********;
 
-#VAR {RoomScan[object][a preserved, %+ corpse of]} {1};
-#VAR {RoomScan[object][crystal charm]}             {1};
-#VAR {RoomScan[object][platinum coin]}             {1};
-#VAR {RoomScan[object][small grey stone]}          {1};
-#VAR {RoomScan[object][dark leather strap]}        {1};
-#VAR {RoomScan[object][cloudy glass sphere]}       {1};
-#VAR {RoomScan[object][dark skull key]}            {1};
+#VAR {RoomScan[object][a preserved, \w+ corpse of]} {1};
+#VAR {RoomScan[object][crystal charm]}              {1};
+#VAR {RoomScan[object][platinum coin]}              {1};
+#VAR {RoomScan[object][small grey stone]}           {1};
+#VAR {RoomScan[object][dark leather strap]}         {1};
+#VAR {RoomScan[object][cloudy glass sphere]}        {1};
+#VAR {RoomScan[object][dark skull key]}             {1};
 
 /* Teleport to Guild */
 #ACTION {^Visions of the guild appear first in your mind, then reality...}

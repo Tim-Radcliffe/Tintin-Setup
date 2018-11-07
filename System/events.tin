@@ -62,6 +62,7 @@
  
 #ALIAS event_raise
 {
+  #IF {"$flags[debug][events]" != ""} {#ECHO {EVENT: %0}};
   #FOREACH {${_events[%1][]}} {handler}
   {
     #IF {&{_events[%1][$handler]} != 0}

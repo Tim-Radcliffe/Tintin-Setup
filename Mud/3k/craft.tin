@@ -1,6 +1,10 @@
 #VAR {_craft[quality][specific]} {{1}{legendary}{2}{superior}{3}{good}{4}{average}{5}{poor}{6}{crude}{7}{worthless}};
 #VAR {_craft[quality][all]} {{best}{worst}{all}{any}${_craft[quality][specific]}};
 
+#VAR {RoomScan[object][fragment of]}    {handler_craft_pickup {%s}};
+#VAR {RoomScan[object][essence of]}     {handler_craft_pickup {%s}};
+#VAR {RoomScan[object][heart of]}       {handler_craft_pickup {%s}};
+
 #action {^{>\s|}%sWhat luck!  You have found %1} 
 {
   #bell;
@@ -8,6 +12,16 @@
   !stash all;
   !craftsave;
   event_raise e_message {** Found %1 **} {craft};
+};
+
+#ALIAS {handler_craft_pickup}
+{
+    #NOP %1;
+    #REGEXP {%1} {%w %*}
+    {
+        #SEND {!get &2};
+        #SEND {!stash &2};
+    };
 };
 
 
@@ -231,5 +245,4 @@
 #NOP ############## AUTO ACTIONS ############
 
 #VAR {path[craft]} {$path[mud]/Craft};
-auto add {mine} {.file load {$path[craft]/mine.tin};#VAR {RoomScan[object][whitelist][ore deposit]} {mine deposit}} {e_room_enter} {#CLASS {$path[craft]/mine.tin} {kill};#UNVAR {RoomScan[object][whitelist][ore deposit]}}
 auto add {farm} {.file load {$path[craft]/farm.tin}} {} {#CLASS {$path[craft]/farm.tin} {kill}};

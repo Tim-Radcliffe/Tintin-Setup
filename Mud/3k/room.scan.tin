@@ -26,9 +26,6 @@
 #VAR {RoomScan[object][coins]}{1};
 #VAR {RoomScan[object][phial]}{1};
 #VAR {RoomScan[object][bag]}{1};
-#VAR {RoomScan[object][fragment of]}{1};
-#VAR {RoomScan[object][essence of]}{1};
-#VAR {RoomScan[object][heart of]}{1};
 #VAR {RoomScan[object][black stone]}{-1};
 #VAR {RoomScan[object][grafting]}{-1};
 #VAR {RoomScan[object][departing]}{-1};
@@ -105,20 +102,16 @@ event_register e_mip_HAB h_room_contents handler_room_contents;
   #NOP %1;
   #IF {&room[contents][player][] <= 0}
   {
-    #IF {$auto[kill][status] > 0 && &room[contents][npc][] > 0}
-    {
-      handler_autokill;
-    };
+    event_raise e_roomscan_end;
     #IF {"&RoomScan[commandqueue][1]" != "0"}
     {
       #FORALL {$RoomScan[commandqueue][%*]} 
       {
-#NOP        #SEND {&0};
         &0
       };
       #UNVAR {RoomScan[commandqueue]};
     };
-    #IF {"$RoomScan[autokill_combat]" != "1"}
+    #IF {&RoomScan[pause][] <= 0}
     {
       event_raise e_roomscan_finished;
     };
@@ -135,8 +128,6 @@ event_register e_mip_HAB h_room_contents handler_room_contents;
   {
     #VAR {room[exits]} {%2};
     #REPLACE {room[exits]} {,} {;};
-    event_oneshot e_prompt h_room_enter {event_raise e_room_enter {#NOP %%1};};    
-    event_oneshot e_prompt h_room_end handler_room_end;
   };
 };
 event_register {e_mip_DDD} {h_room_exits} {.HandlerRoomExits};
@@ -154,6 +145,8 @@ event_register {e_mip_DDD} {h_room_exits} {.HandlerRoomExits};
     #VAR {room[name]} {%2};
 #NOP    #UNVAR {room[exits]};
   };  
+  event_oneshot e_prompt h_room_enter {event_raise e_room_enter {#NOP %%1};};    
+  event_oneshot e_prompt h_room_end handler_room_end;  
 };
 #NOP event_register {e_mip_BAD} {h_room_name} {.HandlerRoomName};
 event_register {e_ansiflag_R} {h_room_name} {.HandlerRoomName};
@@ -166,7 +159,6 @@ event_register {e_ansiflag_R} {h_room_name} {.HandlerRoomName};
   {
     #IF {"$RoomScan[break]" != "1"}
     {
-#NOP      #REGEXP {%3} {\b&0\b};
       #REGEXP {%3} {{&0}}
       {
         #IF {"$RoomScan[object][&0]" == "-1"}
@@ -180,7 +172,8 @@ event_register {e_ansiflag_R} {h_room_name} {.HandlerRoomName};
             #VAR {RoomScan[commandbuffer]} {@fAutoGetCommand{%2}};
           }
           {
-            #VAR {RoomScan[commandbuffer]} {$RoomScan[object][&0]};
+#NOP            #VAR {RoomScan[commandbuffer]} {$RoomScan[object][&0]};
+                #FORMAT {RoomScan[commandbuffer]} {$RoomScan[object][&0]} {%3};
           };
         };
       };

@@ -6,12 +6,12 @@
         #IF {"$mob[%2][undead]" == ""}
         {
             #VAR {mob[%2][undead]} {0};
-            #ACTION {^%2 is undead...}
+            #ACTION {^%i%2%I is undead...}
             {
                 #VAR {mob[%2][undead]} {1};
-                #UNACTION {^%2 is undead...};
+                #UNACTION {^%i%2%I is undead...};
             } {3};
-            event_oneshot e_killed_opponent {detect_undead.tin} {#NOP %%1;#UNACTION {^%2 is undead...}};        
+            event_oneshot e_killed_opponent {detect_undead.tin} {#NOP %%1;#UNACTION {^%i%2%I is undead...}};        
             #SEND {!detect undead};
         };
     };

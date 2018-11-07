@@ -16,3 +16,9 @@ If you want to try it out anyway, run "tt++ start.tin"
 
 Prompt detection works a lot better if you have your mud prompt set to have a newline after it.
 E.G. "prompt >$nl$" in 3 Kingdoms
+
+Folders:
+* Data - Character profile data files, Area & Map data files
+* Local - Personal scripts (put your own code here)
+* Mud - Mud specific scripts
+* System - General (non mud specific) scripts

@@ -1,34 +1,59 @@
 #NOP ############## Mining ##################
 
-#ALIAS {md}
+#ACTION {^{>\s|}You have found a deposit of}
 {
-    #ALIAS {handler_mine_ore}
-    {
-      #NOP %%1;
-      #REGEXP {%%2} {ore deposit}
-      {
-        #SEND {!mine};
-      };
-    };
-    event_register e_room_item h_mine_ore handler_mine_ore;
-    
-    #ACTION {^{>\s|}You have found a deposit of}
-    {
-      #SEND {!mine};
-    };
-    
-    #ACTION {^{>\s|}You have exhausted the supply} 
-    {
-      #BELL;
-      #UNACTION {^{>\s|}You have found a deposit of};
-      #UNALIAS {handler_mine_ore};
-      event_remove_handler h_mine_ore;
-    };
-    #SEND {!spelunk};
+    handler_auto_mine_ore;
+};
+
+#ACTION {^{>\s|}You are not skilled enough to mine this.}
+{
+    handler_auto_mine_end;
+};
+
+#ACTION {^{>\s|}You have exhausted the supply} 
+{
+    #SEND {!glance};
+    handler_auto_mine_end;
+};
+
+#ACTION {!{>\s|}You have found nothing.}
+{
+    handler_auto_mine_end;
+};
+
+#ACTION {^{>\s|}It appears this part of the shaft has already been searched.}
+{
+    handler_auto_mine_end;
+};
+
+#ACTION {^{>\s|}You have disturbed}
+{
+    event_oneshot e_killed_opponent h_auto_mine {#NOP %%1;handler_auto_mine_end;};
+};
+
+#ACTION {^{>\s|}There is no reason to 'spelunk' here.}
+{
+    auto mine off;
+};
+
+#ALIAS {handler_auto_mine_ore}
+{
+    #NOP %1;
+    #VAR {RoomScan[pause][automine]} {1};      
+    #SEND {!mine};
+};
+
+#ALIAS {handler_auto_mine_end}
+{
+    #NOP %1;
+    #UNVAR {RoomScan[pause][automine]};
 };
 
 #ALIAS {handler_auto_mine}
 {
     #NOP %1;
-    md;
+    #VAR {RoomScan[pause][automine]} {1};      
+    #SEND {!spelunk};
 };
+
+auto add {mine} {.file load {$path[craft]/mine.tin};#VAR {RoomScan[object][ore deposit]} {handler_auto_mine_ore};} {e_room_enter} {#UNVAR {RoomScan[object][ore deposit]};handler_auto_mine_end;#CLASS {$path[craft]/mine.tin} {kill};}
