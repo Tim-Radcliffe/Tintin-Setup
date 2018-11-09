@@ -4,6 +4,7 @@
 #VAR {RoomScan[object][fragment of]}    {handler_craft_pickup {%s}};
 #VAR {RoomScan[object][essence of]}     {handler_craft_pickup {%s}};
 #VAR {RoomScan[object][heart of]}       {handler_craft_pickup {%s}};
+#VAR {RoomScan[object][A Tome of]}      {1};
 
 #action {^{>\s|}%sWhat luck!  You have found %1} 
 {
