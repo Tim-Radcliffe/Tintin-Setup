@@ -95,7 +95,7 @@ auto {add} {corrode} {} {e_combat} {};
     };
     #IF {$my[necromancer][worth] < 125}
     {
-        #SEND {!contribute};
+        #SEND {!contribute @fEval{(125-$my[necromancer][worth])*5}};
     };
 };
 auto {add} {contribute} {} {e_pickup;e_combat_round} {};
