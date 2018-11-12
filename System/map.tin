@@ -69,6 +69,11 @@
     {symbol} {}
     {colour} {$map[col][brown]}
   }
+  {note}
+  {
+    {symbol} {<138>?}
+    {colour} {}  
+  }
 };
 
 #EVENT {MAP ENTER MAP}
@@ -405,6 +410,7 @@
   #UNVAR {_fMC};
 }
 
+/* .mapNote {room note text} */
 #ALIAS {.mapNote}
 {
   #NOP %1;
@@ -412,12 +418,26 @@
   {
     #VAR {map[room][roomnote][%0]} {};
     #MAP set {roomnote} {$map[room][roomnote]};
-    #MAP get {roomsymbol} {_aMN};
-    #IF {"$_aMN" == " " || "$_aMN" == ""}
+    #IF {"$map[room][roomsymbol]" == " " || "$map[room][roomsymbol]" == ""}
     {
-        #MAP set {roomsymbol} {<138>?};
+        #VAR {map[room][roomsymbol]} {$RoomType[note][symbol]};
+        #VAR {map[room][roomcolor]}  {$RoomType[note][colour]};
+        #MAP set roomsymbol {$map[room][roomsymbol]};
+        #MAP set roomcolor  {$map[room][roomcolor]};
     };
   };
+};
+
+/* .mapExitNote {exit} {exit note text} */
+#ALIAS {.mapExitNote}
+{
+    #NOP %1;
+    #IF {"%0" != ""}
+    {
+        #MAP EXIT {%1} GET {map[room][exit][%1]};
+        #VAR {map[room][ezit][%1][%2]} {};
+        #MAP EXIT {%1} SET {$map[room][exit][%1]};
+    };
 };
 
 #ALIAS {.mapFind}
@@ -473,7 +493,7 @@
   {
     .mapNote %1;
     #MAP {set} {roomsymbol} {$RoomType[%1][symbol]};
-    #MAP {set} {roomcolor} {$RoomType[%1][colour]};
+    #MAP {set} {roomcolor}  {$RoomType[%1][colour]};
     .mapRefresh;
   };
   #ELSE
@@ -536,4 +556,11 @@ event_register {e_map_room_exit} {h_map_room_specialexit} {.mapRoomSpecialExit};
   {
     #MAP AT %1 #MAP GET {&0} {result[&0]};
   };
+  
+  #FOREACH {$result[roomexits][]} {_fMRI[exit]}
+  {
+    #MAP AT %1 #MAP EXIT {$_fMRI[exit]} GET {result[exit][$_fMRI[exit]]};
+  };
+  
+  #UNVAR {_fMRI};
 };
