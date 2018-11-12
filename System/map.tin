@@ -435,7 +435,7 @@
     #IF {"%0" != ""}
     {
         #MAP EXIT {%1} GET {map[room][exit][%1]};
-        #VAR {map[room][ezit][%1][%2]} {};
+        #VAR {map[room][exit][%1][%2]} {};
         #MAP EXIT {%1} SET {$map[room][exit][%1]};
     };
 };
