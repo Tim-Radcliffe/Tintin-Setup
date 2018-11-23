@@ -76,7 +76,7 @@ event_register {e_mip_FFF} {h_window_combo} {.WindowComboStats};
     };
     #ELSE
     {
-        #MAP MAP {${_WC[split][r]}}x@fScreen{{head}{rows}}} {/tmp/map_combo.txt};
+        #MAP MAP {${_WC[split][r]}x@fScreen{{head}{rows}}} {/tmp/map_combo.txt};
         #SYSTEM {sed -i 's/\\/\\\\/g' /tmp/map_combo.txt};
         #SCRIPT {_WC[map]} {cat /tmp/map_combo.txt};
     }
