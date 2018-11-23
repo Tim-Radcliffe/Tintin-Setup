@@ -6,7 +6,7 @@
     #IF {"$map[file]" == ""} #RETURN;
     #IF {"$_client[version]" > "2.01.1"}
     {  
-        #MAP MAP {${_WC[split][r]}x@fScreen{{head}{rows}}} {_WC[mapstring]} {v};
+        #MAP MAP {@fScreen{{full}{cols}}x@fScreen{{head}{rows}}} {_WC[mapstring]} {v};
         #REPLACE {_WC[mapstring]} {\\} {\\\\};  
         #FORMAT {mapBuffer} {%w} {{$_WC[mapstring]}};
     };
