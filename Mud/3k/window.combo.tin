@@ -68,7 +68,7 @@ event_register {e_mip_FFF} {h_window_combo} {.WindowComboStats};
     #NOP %1;
     #IF {"$map[file]" == ""} #RETURN;
     .WindowComboSplit;
-    #IF {"_client[version]" > "2.01.1"}
+    #IF {"$_client[version]" > "2.01.1"}
     {
         #MAP MAP {${_WC[split][r]}x@fScreen{{head}{rows}}} {_WC[mapstring]} {v};
         #REPLACE {_WC[mapstring]} {\\} {\\\\};
