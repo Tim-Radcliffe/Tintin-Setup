@@ -22,6 +22,7 @@
 #VAR {RoomScan[mob][the Valithyn]}{-1};
 #VAR {RoomScan[mob][esquire]}{-1};
 #VAR {RoomScan[mob]['s]}{-1};
+#VAR {RoomScan[mob][the packmule]}{-1};
 
 #VAR {RoomScan[object][coins]}{1};
 #VAR {RoomScan[object][phial]}{1};

@@ -61,14 +61,19 @@
 #ALIAS {handler_auto_corpse}
 {
     #NOP %1;
-    #IF {$my[corpse][held][current] < $my[corpse][held][max] - 1}
+    #IF {$my[corpse][held][current] < $my[corpse][held][max]}
     {
-        .corpse retrieve;
-        #SEND {!give corpse $my[corpse][held][current] to $my[name]};
+        #LOOP 1 {@fEval{$my[corpse][held][max] - $my[corpse][held][current]}} {}
+        {
+            .corpse retrieve;
+        };
     };
-    #IF {$my[corpse][held][current] >= $my[corpse][held][max]}
+    #ELSEIF {$my[corpse][held][current] > $my[corpse][held][max]}
     {
-        .corpse store;
+        #LOOP 1 {@fEval{$my[corpse][held][current] - $my[corpse][held][max]}} {}
+        {
+            .corpse store;
+        };
     };
 };
 auto {add} {corpse} {} {e_combat_round} {};

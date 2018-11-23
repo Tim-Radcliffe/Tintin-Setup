@@ -13,11 +13,12 @@
                                     {weak goodness}{1}{goodness}{2}{extreme goodness}{3}{divine goodness}{4}};
                 #VAR {mob[%2][alignment]} {$_alignments[%%2]};
                 #UNACTION {{^\x7D\x7D\x7D $_hAL_name reflects (.*)$}};
+                #UNVAR {_hAL_name};
                 #UNVAR {_alignments};
             } {3};
+            event_oneshot e_killed_opponent {detect_alignment.tin} {#NOP %%1;#UNACTION {{^\x7D\x7D\x7D $_hAL_name reflects (.*)$}};};            
             #SEND {!detect alignment};
         };
-        #UNVAR {_hAL_name};
     };
 };
 event_register e_mobscan_start {detect_alignment.tin} {handler_alignment};

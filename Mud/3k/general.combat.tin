@@ -6,6 +6,11 @@
 	event_raise e_combat {%2};
 };
 
+#ACTION {^Death produces a thick book from beneath his robes:}
+{
+    event_raise e_died;
+};
+
 #ALIAS {handler_combat_start}
 {
     #VAR {opponent} {};

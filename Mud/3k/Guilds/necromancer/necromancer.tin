@@ -20,7 +20,7 @@
 #ALIAS {handler_auto_preserve}
 {
     #NOP %1;
-    #IF {$my[corpse][held][current] < $my[corpse][held][max]}
+    #IF {$my[corpse][held][current] <= $my[corpse][held][max]}
     {
         #SEND {!preserve get};
     };
