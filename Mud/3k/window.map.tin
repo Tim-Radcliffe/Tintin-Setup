@@ -2,16 +2,22 @@
 
 #ALIAS {.HandlerWindowMap}
 {
-  #NOP %1;
-  #IF {"$map[file]" == ""} #RETURN;
-  #MAP MAP {${_WC[split][r]}x@fScreen{{head}{rows}}} {_WC[mapstring]} {v};
-  #REPLACE {_WC[mapstring]} {\\} {\\\\};  
-  #FORMAT {mapBuffer} {%w} {{$_WC[mapstring]}};
-#NOP  #MAP MAP {@fScreen{{full}{cols}}x@fScreen{{head}{rows}}} {/tmp/map2.txt};
-#NOP  #SYSTEM {sed -i 's/\\/\\\\/g' /tmp/map2.txt};
-#NOP  #SCRIPT {mapBuffer} {cat /tmp/map2.txt};
-  .WindowSet {map} {$mapBuffer};
-  .WindowRefresh {map};
+    #NOP %1;
+    #IF {"$map[file]" == ""} #RETURN;
+    #IF {"_client[version]" > "2.01.1"}
+    {  
+        #MAP MAP {${_WC[split][r]}x@fScreen{{head}{rows}}} {_WC[mapstring]} {v};
+        #REPLACE {_WC[mapstring]} {\\} {\\\\};  
+        #FORMAT {mapBuffer} {%w} {{$_WC[mapstring]}};
+    };
+    #ELSE
+    {
+        #MAP MAP {@fScreen{{full}{cols}}x@fScreen{{head}{rows}}} {/tmp/map_win.txt};
+        #SYSTEM {sed -i 's/\\/\\\\/g' /tmp/map_win.txt};
+        #SCRIPT {mapBuffer} {cat /tmp/map_win.txt};
+    };
+    .WindowSet {map} {$mapBuffer};
+    .WindowRefresh {map};
 };
 event_register {e_map_refresh} {h_window_map} {.HandlerWindowMap};
 event_register {e_map_room_enter} {h_window_map} {.HandlerWindowMap};

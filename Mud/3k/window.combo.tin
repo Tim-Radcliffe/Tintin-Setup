@@ -68,9 +68,19 @@ event_register {e_mip_FFF} {h_window_combo} {.WindowComboStats};
     #NOP %1;
     #IF {"$map[file]" == ""} #RETURN;
     .WindowComboSplit;
-    #MAP MAP {${_WC[split][r]}x@fScreen{{head}{rows}}} {_WC[mapstring]} {v};
-    #REPLACE {_WC[mapstring]} {\\} {\\\\};
-    #FORMAT {_WC[map]} {%w} {{$_WC[mapstring]}};
+    #IF {"_client[version]" > "2.01.1"}
+    {
+        #MAP MAP {${_WC[split][r]}x@fScreen{{head}{rows}}} {_WC[mapstring]} {v};
+        #REPLACE {_WC[mapstring]} {\\} {\\\\};
+        #FORMAT {_WC[map]} {%w} {{$_WC[mapstring]}};        
+    };
+    #ELSE
+    {
+        #MAP MAP {@fScreen{{full}{cols}}x@fScreen{{head}{rows}}} {/tmp/map_combo.txt};
+        #SYSTEM {sed -i 's/\\/\\\\/g' /tmp/map_combo.txt};
+        #SCRIPT {_WC[map]} {cat /tmp/map_combo.txt};
+    }
+
     .WindowComboRefresh;
 };
 

@@ -1,9 +1,25 @@
+#EVENT {PROGRAM START}
+{
+    #VAR {_client[name]} {%0};
+    #FORMAT {_client[version]} {%p} {%1};
+};
+
 #MESSAGE {all} {off};
 
-#VAR {path[system]} {System};
-#VAR {path[tools]}  {System/Tools};
-#VAR {path[local]}  {Local};
-#VAR {path[data]}   {Data};
+#CLASS {config.tin} {READ} {config.tin};
+
+#IF {&{path} == 0}
+{
+    #CLASS {config.tin} {OPEN};
+        #VAR {path[system]} {System};
+        #VAR {path[tools]}  {System/Tools};
+        #VAR {path[local]}  {Local};
+        #VAR {path[data]}   {Data};
+        #VAR {path[mud]}    {Mud};
+        #VAR {path[temp]}   {/tmp};    
+    #CLASS {config.tin} {CLOSE};
+    #CLASS {config.tin} {WRITE} {config.tin};
+};
 
 #CLASS {$path[system]/files.tin} {read} {$path[system]/files.tin};
 #CLASS {$path[system]/csv.tin}   {read} {$path[system]/csv.tin};
@@ -28,10 +44,10 @@
   {
     #SESSION {%4.%2} {%5} {%6};%2;%3;
 
-    #VAR {path[profile]} {Data/%4/Profiles/%2};
-    #VAR {path[mud]}     {Mud/%4};
-    #VAR {path[areas]}   {Data/%4/Areas};
-    #VAR {path[local]}   {Local/%4};
+    #VAR {path[profile]} {$path[data]/%4/Profiles/%2};
+    #VAR {path[mud]}     {$path[mud]/%4};
+    #VAR {path[areas]}   {$path[data]/%4/Areas};
+    #VAR {path[local]}   {$path[local]/%4};
 
     .file loadall {$path[system]/*.tin};
     .file loadall {$path[profile]/*.tin};

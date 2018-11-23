@@ -61,7 +61,7 @@
 #ALIAS {handler_auto_corpse}
 {
     #NOP %1;
-    #IF {$my[corpse][held][current] < $my[corpse][held][max]}
+    #IF {$my[corpse][held][current] < $my[corpse][held][max] - 1}
     {
         #LOOP 1 {@fEval{$my[corpse][held][max] - $my[corpse][held][current]}} {}
         {
