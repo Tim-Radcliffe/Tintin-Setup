@@ -171,7 +171,6 @@ event_register {e_ansiflag_R} {h_room_name} {.HandlerRoomName};
             #VAR {RoomScan[commandbuffer]} {@fAutoGetCommand{%2}};
           }
           {
-#NOP            #VAR {RoomScan[commandbuffer]} {$RoomScan[object][&0]};
                 #FORMAT {RoomScan[commandbuffer]} {$RoomScan[object][&0]} {%3};
           };
         };

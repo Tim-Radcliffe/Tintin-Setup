@@ -81,6 +81,10 @@
     .aSortCorpse {me};
     .aSortCorpse {minion};
     .aSortCorpse {smuggle};
+    #VAR {my[corpse][held][list]}    {$_corpses[me][list]};
+    #VAR {my[corpse][minion][list]}  {$_corpses[minion][list]};
+    #VAR {my[corpse][smuggle][list]} {$_corpses[smuggle][list]};
+    #VAR {my[corpse][coffin][list]}  {$_corpses[coffin][list]};
     #CLASS {$path[guild]/scripts/CorpseSort.tin} {kill};
 };
 

@@ -34,6 +34,7 @@
     
     #ACTION {^ | You are %d\% to your next %w %w repower}
     {
+        #VAR {my[necromancer][repower]} {%%1};
         #VAR {my[necromancer][stone][%%2]} {&my[necromancer][stone][]};
     };    
     

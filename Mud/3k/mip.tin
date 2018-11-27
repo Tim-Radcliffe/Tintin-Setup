@@ -159,7 +159,7 @@
 #FUNCTION {fMipColourConv}
 {
   #VAR {result} {%1};
-  #REPLACE {result} {>} {<898>};
+  #REPLACE {result} {{>\s}} {<898> };
   #REPLACE {result} {<y} {<838>};
   #REPLACE {result} {<r} {<818>};
   #REPLACE {result} {<b} {<848>};

@@ -24,12 +24,12 @@
 #ACTION {^{>\s|}%*: Taken}
 {
   event_raise e_pickup {%2};
-} {2};
+} {3};
 
 #ACTION {^{>\s|}You keep {\*|}%*{\.|}$}
 {
   event_raise e_keep {%3};
-} {2};
+} {3};
 
 #ALIAS {handler_3k_screen_resize}
 {
@@ -37,5 +37,3 @@
     #SEND {!setmod ROWS @fScreen{{body}{rows}}};
 };
 event_register {e_screen_resize} {general.main.tin} {handler_3k_screen_resize};
-
-

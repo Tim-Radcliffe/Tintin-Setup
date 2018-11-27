@@ -4,6 +4,11 @@
 #ALIAS {.corpse}
 {
     #NOP %1;
+    #LOCAL {_cI} {%2};
+    #IF {"$_cI" == ""} 
+    {
+        #VAR {_cI} {1};
+    };
     #IF {"%1" == ""}
     {
         #ECHO {.corpse store or .corpse retrieve};
@@ -12,48 +17,39 @@
     {
         #IF {$my[corpse][smuggle][current] < $my[corpse][smuggle][max]}
         {
-            #SEND {!smuggle corpse};
-            #VAR {my[corpse][smuggle][current]} {@fEval{$my[corpse][smuggle][current]+1}};
-            #VAR {my[corpse][held][current]} {@fEval{$my[corpse][held][current]-1}};
+            handler_corpse_move {held} {$_cI} {smuggle} {!smuggle corpse $_cI};
         };
         #ELSEIF {$my[corpse][coffin][current] < $my[corpse][coffin][max]}
         {
-            #SEND {!wrap corpse};
-            #VAR {my[corpse][coffin][current]} {@fEval{$my[corpse][coffin][current]+1}};
-            #VAR {my[corpse][held][current]} {@fEval{$my[corpse][held][current]-1}};
+            handler_corpse_move {held} {$_cI} {coffin} {!wrap corpse $_cI};
         };
         #ELSEIF {$my[corpse][minion][current] < $my[corpse][minion][max]}
         {
-            #SEND {!give corpse to undead follower};
-            #VAR {my[corpse][minion][current]} {@fEval{$my[corpse][minion][current]+1}};
-            #VAR {my[corpse][held][current]} {@fEval{$my[corpse][held][current]-1}};
+            handler_corpse_move {held} {$_cI} {minion} {!give corpse $_cI to undead follower};
         };
     };
     #ELSEIF {"%1" == "retrieve"}
     {
         #IF {$my[corpse][smuggle][current] > 0}
         {
-            #SEND {!smuggle remove corpse};
-            #VAR {my[corpse][smuggle][current]} {@fEval{$my[corpse][smuggle][current]-1}};
-            #VAR {my[corpse][held][current]} {@fEval{$my[corpse][held][current]+1}};
+            handler_corpse_move {smuggle} {$_cI} {held} {!smuggle remove corpse $_cI};
         };
         #ELSEIF {$my[corpse][coffin][current] > 0}
         {
-            #SEND {!unwrap corpse};
-            #SEND {!get preservation};
-            #VAR {my[corpse][coffin][current]} {@fEval{$my[corpse][coffin][current]-1}};
-            #VAR {my[corpse][held][current]} {@fEval{$my[corpse][held][current]+1}};
+            handler_corpse_move {coffin} {$_cI} {held} {#SEND {!unwrap corpse $_cI};#SEND {!get preservation}};
         };
         #ELSEIF {$my[corpse][minion][current] > 0}
         {
-            #SEND {!=give preservation};
-            #VAR {my[corpse][minion][current]} {@fEval{$my[corpse][minion][current]-1}};
-            #VAR {my[corpse][held][current]} {@fEval{$my[corpse][held][current]+1}};
+            handler_corpse_move {minion} {$_cI} {held} {!=give preservation $_cI};
         };
     };
     #ELSEIF {"%1" == "sort"}
     {
         .file load {$path[guild]/scripts/CorpseSort.tin};
+    };
+    #ELSEIF {"%1" == "get"}
+    {
+        handler_corpse_get {%2};
     };
 };
 
@@ -61,6 +57,10 @@
 #ALIAS {handler_auto_corpse}
 {
     #NOP %1;
+    #WHILE {&my[corpse][held][list][] > $my[corpse][held][current]}
+    {
+        #LIST {my[corpse][held][list]} {DELETE} {1};
+    };
     #IF {$my[corpse][held][current] < $my[corpse][held][max] - 1}
     {
         #LOOP 1 {@fEval{$my[corpse][held][max] - $my[corpse][held][current]}} {}
@@ -76,12 +76,53 @@
         };
     };
 };
-auto {add} {corpse} {} {e_combat_round} {};
+auto {add} {corpse} {} {e_necro_gline} {};
+
+/* handler_corpse_move {from} {number} {to} {command} */
+#ALIAS {handler_corpse_move}
+{
+    #NOP %1;
+    #VAR {my[corpse][%3][current]} {@fEval{$my[corpse][%3][current]+1}};
+    #VAR {my[corpse][%1][current]} {@fEval{$my[corpse][%1][current]-1}};
+    #LIST {my[corpse][%3][list]} {insert} {1} {$my[corpse][%1][list][%2]};
+    #LIST {my[corpse][%1][list]} {delete} {%2};
+    %4;
+};
+
+#ALIAS {handler_corpse_get}
+{
+    #NOP %1;
+    #LOCAL {_hcg[get]} 1;
+    #IF {$my[corpse][held][current] >= $my[corpse][held][max]}
+    {
+        #LOCAL {_hcg[min]} {0};
+        #FOREACH {$my[corpse][held][list][]} {_hcg[i]}
+        {
+            #IF {$my[corpse][held][list][$_hcg[i]] < $my[corpse][held][list][$_hcg[min]]}
+            {
+                #VAR {_hcg[min]} {$_hcg[i]};
+            };
+        };
+        #IF {"$my[corpse][held][list][$_hcg[min]]" != ""}
+        {
+            #LOCAL {_hcg[get]} 2;        
+            #LIST {my[corpse][held][list]} {delete} {$_hcg[min]};
+            #SEND {!drop preservation $_hcg[min]};
+        };
+    };
+    #ACTION {^\~%* a preserved, %w corpse of}
+    {
+        #LIST {my[corpse][held][list]} {ins} {1} {@fCorpseSize{%%1}};
+        #VAR {my[corpse][held][current]} {@fEval{$my[corpse][held][current]+1}};
+        #UNACTION {^\~%* a preserved, %w corpse of};
+    } {2};
+    #SEND {!get preservation $_hcg[get]};
+};
 
 /* Returns an integer value for corpse size */
 #FUNCTION {fCorpseSize}
 {
-    #REGEXP {%0} {{([\(\[])([\|\*\-]{5})[\)\]]}}
+    #REGEXP {%0} {{([\(\[])([\|\*\-]{5})[\)\]].*}}
     {
         #IF {"&2" == "["}
         {
@@ -104,5 +145,8 @@ auto {add} {corpse} {} {e_combat_round} {};
                 };
             };
         };
+    }
+    {
+        #VAR {result} {0};
     };
 };

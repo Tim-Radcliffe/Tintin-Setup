@@ -1,6 +1,6 @@
 #NOP ************* Necromancer Guild *********;
 
-#VAR {RoomScan[object][a preserved, \w+ corpse of]} {1};
+#VAR {RoomScan[object][a preserved, \w+ corpse of]} {.corpse get %s};
 #VAR {RoomScan[object][crystal charm]}              {1};
 #VAR {RoomScan[object][platinum coin]}              {1};
 #VAR {RoomScan[object][small grey stone]}           {1};
@@ -22,7 +22,7 @@
     #NOP %1;
     #IF {$my[corpse][held][current] <= $my[corpse][held][max]}
     {
-        #SEND {!preserve get};
+        #SEND {!preserve remains};
     };
     #ELSEIF {$auto[consecrate][status]}
     {
@@ -86,14 +86,17 @@ auto {add} {corrode} {} {e_combat} {};
 #ALIAS {handler_auto_contribute}
 {
     #NOP %1;
-    #REGEXP {%2} {coins (%d)}
+    #IF {"%1" == "e_pickup"}
     {
-        #IF {@fEval{&1/2} > 9}
+        #REGEXP {%2} {coins (%d)}
         {
-            #SEND {!contribute @fMin{@fEval{&1/2};1000}};
+            #IF {@fEval{&1/2} > 9}
+            {
+                #SEND {!contribute @fMin{@fEval{&1/2};1000}};
+            };
         };
     };
-    #IF {$my[necromancer][worth] < 125}
+    #ELSEIF {$my[necromancer][worth] < 125}
     {
         #SEND {!contribute @fEval{(125-$my[necromancer][worth])*5}};
     };
