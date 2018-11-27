@@ -7,35 +7,107 @@
     #SCRIPT {result} {find $path[areas] -type d -iregex ".*%0[^\/]*" -printf "%P\n"};
 };
 
-/* Find area links within current map */
+/* Find closest exit match to destination, or the next area closest to it */
 #FUNCTION {fSearchLink}
 {
-    #MAP list {roomname} {LINK: %0} {variable} {result[list]};
-    #IF {&result[list] < 1} {#RETURN};
+    #NOP /* Check a destination was provided */;
+    #IF {"%0" == ""} {#RETURN;};
+    
+    #UNVAR {result};
+
+    #NOP /* Find all LINK rooms in current map */;
+    #MAP list {roomname} {LINK: %*} {variable} {result[list]};
+    
+    #NOP /* No links found */;
+    #IF {&result[list][] < 1} {#RETURN};
+
+    #NOP /* Collect room names for all links */;
     #FORALL {$result[list][]}
     {
-        #IF {$result[list][&0] < $result[d] || "$result[d]" == ""}
+
+        #NOP /* Discard inaccessible rooms (distance -1) */;
+        #IF {$result[list][&0] >= 0}
         {
-            #VAR {result[n]} {&0};
-            #VAR {result[d]} {$result[list][&0]};
+            #VAR {result[list][&0][dist]} {$result[list][&0]};
+            #MAP AT {&0} {#MAP GET ROOMNAME {result[list][&0][name]}};
+            #REPLACE {result[list][&0][name]} {LINK: } {};
         };
     };
-    #VAR {result} {$result[n]};
+    
+    #NOP /* Find links that closest match the destination path */;
+    #VAR {result[match]} {%0};
+    #WHILE {"$result[match]" != ""}
+    {
+        
+        #UNVAR {result[matchlist]};
+        #UNVAR {result[exactlist]};
+        
+        #NOP /* Check all links in the list to see if they match filter string */;
+        #FOREACH {$result[list][]} {result[i]}
+        {
+            #NOP /* Match the current match string, saving any overlap */;
+            #REGEXP {$result[list][$result[i]][name]} {{$result[match](|\/.*)$}}
+            {
+                #NOP /* Store matches based on how many nested areas away they are (count the overlapping areas) */;
+                #VAR {result[overlap]} {&2};
+                #REPLACE {result[overlap]} {/} {;};
+                #LIST {result[nest]} {CREATE} {$result[overlap]};
+                
+                #VAR {result[matches][&result[nest][]][$result[i]]} {$result[list][$result[i]]};
+                
+            };
+        };
+        
+        #NOP /* Set the matchlist to the closest list of matches (minimise the overlapping areas) */;
+        #VAR {result[matchlist]} {$result[matches][*result[matches][+1]]};
+       
+        #IF {&result[matchlist][] == 1}
+        {
+            #NOP /* One match found - return matched room number */;
+            #RETURN {*result[matchlist][+1]};
+        };
+        #ELSEIF {&result[matchlist][] > 1}
+        {
+            #NOP /* More than one match - stop matching, move to next stage */;
+            #VAR {result[list]} {$result[matchlist]};
+            #BREAK;
+        };
+        
+        #NOP /* Trim the last level from destination match */;
+        #REGEXP {$result[match]} {{(.*)\/[^\/]*$}}
+        {
+            #VAR {result[match]} {&2};
+        }
+        {
+            #VAR {result[match]} {};
+            #BREAK;
+        };
+    };
+    
+    #NOP /* Find closest link room to this room on current map */;
+    #VAR {result[return]} {};
+    #FOREACH {$result[list][]} {result[i]}
+    {
+        #IF {"$result[return]" == ""}
+        {
+            #VAR {result[return]} {$result[i]};
+        };
+        #ELSEIF {$result[list][$result[i]][dist] < $result[list][$result[return]][dist]}
+        {
+            #VAR {result[return]} {$result[i]};
+        };
+    };
+    #RETURN {$result[return]};
 };
 
-/* Run to area specified (full area path) */
+/* Run to area specified (full area path). */
 #ALIAS {.areaRun}
 {
     #NOP %1;
     #IF {"%1" != "$map[area][path]"}
     {
-        #REGEXP {%1} {$map[area][path]{\/[^\/]*}}
-        {
-            .mapRun @fSearchLink{$map[area][path]&1};
-        }
-        {
-            .mapRun @fSearchLink{@fFileGetPath{$map[area][path]}};
-        };
+        .mapRun {@fSearchLink{%1}};
+
         event_oneshot {e_map_area_enter} {map.search.tin} {#NOP %%1;.areaRun {%1};};
     };
 };
