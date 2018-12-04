@@ -6,6 +6,7 @@
     #VAR {_hnl[line]} {%2};
     #REPLACE {_hnl[line]} {<{y|r|b|g|c|v|s}} {};
     #REPLACE {_hnl[line]} {{>\s}} { };
+    #REPLACE {_hnl[line]} {[%*]} {&1};
     #REPLACE {_hnl[line]} {{\s+}} {;};
     #FOREACH {$_hnl[line]} {_hnl[item]}
     {

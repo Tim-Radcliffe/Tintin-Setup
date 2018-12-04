@@ -8,6 +8,14 @@
 #VAR {RoomScan[object][cloudy glass sphere]}        {1};
 #VAR {RoomScan[object][dark skull key]}             {1};
 
+#VAR {_guild[minions]}
+{
+    {Skeleton}{} {Zombie}{} {Ghoul}{} {Valpur}{}
+    {Ghast}{} {Manshi}{} {Bolwyn}{} {Greesh}{}
+    {Wight}{} {Heucuva}{} {Tholen}{} {Bayen}{}
+    {Quarin}{} {Mohrg}{} {Grimare}{} {Valithyn}{}
+};
+
 /* Teleport to Guild */
 #ACTION {^Visions of the guild appear first in your mind, then reality...}
 {
@@ -103,12 +111,12 @@ auto {add} {corrode} {} {e_combat} {};
 };
 auto {add} {contribute} {} {e_pickup;e_combat_round} {};
 
-/* SPFuse when below 25% SP (it refills by itself when SP is full) */
+/* SPFuse when below 75% SP (it refills by itself when SP is full) */
 #ALIAS {handler_auto_spfuse}
 {
     #NOP %1;
     #VAR {_necSP[Diff]} {@fEval{($my[sp][max]+0.00-($my[sp][max]-$my[sp][current]))/$my[sp][max]}};
-    #IF {$_necSP[Diff] < 0.25 && $my[necromancer][spfuse][current] > 0} 
+    #IF {$_necSP[Diff] < 0.75 && $my[necromancer][spfuse][current] > 0} 
     {
         #SEND {!spfuse $my[necromancer][spfuse][current]};
     };

@@ -23,24 +23,24 @@
         {
             handler_corpse_move {held} {$_cI} {coffin} {!wrap corpse $_cI};
         };
-        #ELSEIF {$my[corpse][minion][current] < $my[corpse][minion][max]}
+        #ELSEIF {$my[corpse][minion][current] < $my[corpse][minion][max] && @fMinionPresent{}}
         {
             handler_corpse_move {held} {$_cI} {minion} {!give corpse $_cI to undead follower};
         };
     };
     #ELSEIF {"%1" == "retrieve"}
     {
-        #IF {$my[corpse][smuggle][current] > 0}
+        #IF {$my[corpse][minion][current] > 0 && @fMinionPresent{}}
+        {
+            handler_corpse_move {minion} {$_cI} {held} {!=give preservation $_cI};
+        };
+        #ELSEIF {$my[corpse][smuggle][current] > 0}
         {
             handler_corpse_move {smuggle} {$_cI} {held} {!smuggle remove corpse $_cI};
         };
         #ELSEIF {$my[corpse][coffin][current] > 0}
         {
             handler_corpse_move {coffin} {$_cI} {held} {#SEND {!unwrap corpse $_cI};#SEND {!get preservation}};
-        };
-        #ELSEIF {$my[corpse][minion][current] > 0}
-        {
-            handler_corpse_move {minion} {$_cI} {held} {!=give preservation $_cI};
         };
     };
     #ELSEIF {"%1" == "sort"}
@@ -117,6 +117,36 @@ auto {add} {corpse} {} {e_necro_gline} {};
         #UNACTION {^\~%* a preserved, %w corpse of};
     } {2};
     #SEND {!get preservation $_hcg[get]};
+};
+
+#ACTION {^A {bayen|bolwyn|ghast|ghoul|greesh|grimare|heucuva|manshi|mohrg|quarin|skeleton|tholen|valithyn|valpur|wight|zombie} {trudges in|drifts in on a ghostly vapor}.}
+{
+    #LOCAL {_aMinEnter} {%1};
+    #FORMAT {_aMinEnter} {%n} {$_aMinEnter};
+    #LIST {room[contents][npc]} {ADD} {{{id}{$_aMinEnter}}};
+};
+
+#FUNCTION {fMinionPresent}
+{
+    #LOCAL {_fMPi} {};
+    #LOCAL {_fMPt};
+    #FORMAT {_fMPt} {%n} {$my[necromancer][undead][type]};
+    #FOREACH {$room[contents][npc]} {_fMPi}
+    {
+        #IF {"$room[contents][npc][$_fMPi][id]" == ""}
+        {
+            #CONTINUE;
+        };
+	#ELSEIF {"$room[contents][npc][$_fMPi][id]" == "$my[necromancer][undead][name] the $_fMPt"}
+        {
+            #RETURN 1;
+        };
+        #ELSEIF {&_guild[minions][$room[contents][npc][$_fMPi][id]] > 0}
+        {
+            #RETURN 1;
+        };
+    };
+    #RETURN 0;
 };
 
 /* Returns an integer value for corpse size */

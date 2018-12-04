@@ -11,19 +11,9 @@
 {
     #NOP %1;
     #REGEXP {%1} {{\s*(\S+)\[([^\]]*)\]\s*(.*)$}}
-    {
-        #VAR {_undead}
-        {
-            {Skeleton}{} {Zombie}{}  {Ghoul}{}   {Valpur}{}
-            {Ghast}{}    {Manshi}{}  {Bolwyn}{}  {Greesh}{}
-            {Wight}{}    {Heucuva}{} {Tholen}{}  {Bayen}{}
-            {Quarin}{}   {Mohrg}{}   {Grimare}{} {Valithyn}{}
-        };
-        
-        #IF {&_undead[&2] > 0} {handler_necro_hpbar_Undead {&3};};
+    {   
+        #IF {&_guild[minions][&2] > 0} {handler_necro_hpbar_Undead {&3};};
         #ELSE {handler_necro_hpbar_&2 {&3};};
-        
-        #UNVAR {_undead};  
 
         #IF {"&4" != ""}
         {
