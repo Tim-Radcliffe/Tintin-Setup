@@ -188,7 +188,14 @@ auto {add} {necrogag} {necro_gag_on} {} {necro_gag_off};
           @fEval{$my[gp2][current]/(100/$my[necromancer][glamors][max])}) &&
           "$my[necromancer][glamors][active]" == ""}
     {
-        #SEND {!illume};
+        #IF {"$my[necromancer][glamors][command]" != ""}
+        {
+            #SEND {!$my[necromancer][glamors][command]};
+        };
+        #ELSE
+        {
+            #ECHO {AUTO GLAMOR WARNING: my[necromancer][glamors][command not set};
+        };
     };
 };
 auto {add} {glamor} {} {e_combat_round} {};

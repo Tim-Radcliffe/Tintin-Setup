@@ -200,7 +200,31 @@ event_register {e_ansiflag_R} {h_room_name} {.HandlerRoomName};
         #VAR {result} {${result};#SEND {!put %0 in bag};};
     };
 };
-auto {add} {bag} {} {} {};
+auto {add} {bag} {#ACTION {There is not room for more.} {.bagswap}} {} {#UNACTION {There is not room for more.}};
+
+#ALIAS {.bagswap}
+{
+    #NOP %1;
+    #VAR {_gvBS} {9};
+    #IF {"%0" != ""}
+    {
+        #VAR {_gvBS} {%0};
+    };
+    #ACTION {^You have no bag %d.}
+    {
+        .bagswap @fEval{%%1 - 1};
+    };
+    #ACTION {^You unkeep}
+    {
+        #UNACTION {^You have no bag %d.};
+        #SEND {!give bag $_gvBS to $my[name]};
+        #SEND {!keep bag};
+        #SEND {!keep bag $_gvBS};
+        #UNVAR {_gvBS};
+        #UNACTION {^You unkeep};
+    }; 
+    #SEND {!unkeep bag $_gvBS};
+};
 
 #ALIAS {autopickup}
 {
@@ -244,3 +268,4 @@ auto {add} {bag} {} {} {};
 
 autopickup min;
 #CLASS {cRoomScan} {close};
+

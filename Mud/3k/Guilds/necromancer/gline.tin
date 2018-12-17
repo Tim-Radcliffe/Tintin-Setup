@@ -73,7 +73,7 @@ event_register {e_mip_FFF_J} {gline.tin} {handler_necro_gline};
     #REGEXP {%1} {%d/%d}
     {
         #VAR {my[necromancer][glamors][current]} {&1};
-        #VAR {my[necromancer][glamors][max]} {&1};
+        #VAR {my[necromancer][glamors][max]} {&2};
         #VAR {my[necromancer][glamors][active]} {};        
     };
 };
