@@ -1,6 +1,6 @@
 #NOP ************* Necromancer Guild *********;
 
-#VAR {RoomScan[object][a preserved, \w+ corpse of]} {.corpse get %s};
+#VAR {RoomScan[object][a preserved, .* corpse of]} {.corpse get %s};
 #VAR {RoomScan[object][crystal charm]}              {1};
 #VAR {RoomScan[object][platinum coin]}              {1};
 #VAR {RoomScan[object][small grey stone]}           {1};

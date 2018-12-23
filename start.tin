@@ -16,7 +16,8 @@
         #VAR {path[local]}  {Local};
         #VAR {path[data]}   {Data};
         #VAR {path[mud]}    {Mud};
-        #VAR {path[temp]}   {/tmp};    
+        #VAR {path[temp]}   {/tmp};
+        #VAR {path[log]}    {Log};    
     #CLASS {config.tin} {CLOSE};
     #CLASS {config.tin} {WRITE} {config.tin};
 };
@@ -52,6 +53,7 @@
     #VAR {path[mud]}     {$path[mud]/%4};
     #VAR {path[areas]}   {$path[data]/%4/Areas};
     #VAR {path[local]}   {$path[local]/%4};
+    #VAR {path[log]}     {$path[log]/%4/%2};
 
     .file loadall {$path[system]/*.tin};
     .file loadall {$path[profile]/*.tin};

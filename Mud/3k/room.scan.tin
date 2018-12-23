@@ -210,6 +210,10 @@ auto {add} {bag} {#ACTION {There is not room for more.} {.bagswap}} {} {#UNACTIO
     {
         #VAR {_gvBS} {%0};
     };
+    #ELSEIF {"%0" == "1"}
+    {
+        auto bag off;
+    };
     #ACTION {^You have no bag %d.}
     {
         .bagswap @fEval{%%1 - 1};
