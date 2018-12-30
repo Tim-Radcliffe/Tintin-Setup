@@ -57,23 +57,21 @@
 #ALIAS {handler_auto_corpse}
 {
     #NOP %1;
+
     #WHILE {&my[corpse][held][list][] > $my[corpse][held][current]}
     {
         #LIST {my[corpse][held][list]} {DELETE} {1};
     };
-    #IF {$my[corpse][held][current] < $my[corpse][held][max] - 1}
+
+    #LOCAL {_hACdiff} {@fEval{$my[corpse][held][max] - $my[corpse][held][current]}};
+
+    #IF {$_hACdiff > 1}
     {
-        #LOOP 1 {@fEval{$my[corpse][held][max] - $my[corpse][held][current]}} {}
-        {
-            .corpse retrieve;
-        };
+        .corpse retrieve {$_hACdiff};
     };
-    #ELSEIF {$my[corpse][held][current] > $my[corpse][held][max]}
+    #ELSEIF {$_hACdiff < -1}
     {
-        #LOOP 1 {@fEval{$my[corpse][held][current] - $my[corpse][held][max]}} {}
-        {
-            .corpse store;
-        };
+        .corpse store {@fEval{$_hACdiff * -1}};
     };
 };
 auto {add} {corpse} {} {e_necro_gline} {};
