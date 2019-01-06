@@ -23,13 +23,13 @@
 #NOP ************ Aliases **************;
 #ALIAS {auto}
 {
-    #IF {"%1" == ""}
+    #IF {"%1" == "" || "%1" == "status"}
     {
         #FOREACH {$auto[]} {i}
         {
             #IF {"$auto[$i][status]" == "1"}
             {
-                #ECHO {AUTO: <128>$i on<098>};
+                #ECHO {AUTO: <128>$i on<098> $auto[$1][variable]};
             }
             {
                 #ECHO {AUTO: <118>$i off<098>};
@@ -49,9 +49,9 @@
     };
     #ELSEIF {&auto[%1] != 0}
     {
-        #IF     {"%2" == "on" || "%2" == "start"} {#VAR {auto[%1][status]} {0};};
-        #ELSEIF {"%2" == "off" || "%2" == "stop"} {#VAR {auto[%1][status]} {1};};
-        #ELSEIF {"%2" != ""}  {#VAR {auto[%1][variable]} {%2};
+        #IF     {"%2" == "on" || "%2" == "start"} {#VAR {auto[%1][status]} {0}};
+        #ELSEIF {"%2" == "off" || "%2" == "stop"} {#VAR {auto[%1][status]} {1}};
+        #ELSEIF {"%2" != ""}  {#VAR {auto[%1][variable]} {%2};#VAR {auto[%1][status]} {0}};
 
         #IF {$auto[%1][status] == 0}
         {
@@ -67,11 +67,11 @@
                     event_register &0 h_auto_%1 handler_auto_%1;
                 };
             };
-            #ECHO {AUTO: <128>%1 on<098>};
+            #ECHO {AUTO: <128>%1 on<098> $auto[%1][variable]};
         }
         {
             #VAR {auto[%1][status]} {0};
-            #UNVAR {auto[$1][variable]};
+            #UNVAR {auto[%1][variable]};
             #IF {&auto[%1][event] != 0}
             {
                 event_remove_handler h_auto_%1;
