@@ -49,8 +49,10 @@
     };
     #ELSEIF {&auto[%1] != 0}
     {
-        #IF {"%2" == "on" || "%2" == "start"} {#VAR {auto[%1][status]} {0};};
-        #IF {"%2" == "off" || "%2" == "stop"} {#VAR {auto[%1][status]} {1};};
+        #IF     {"%2" == "on" || "%2" == "start"} {#VAR {auto[%1][status]} {0};};
+        #ELSEIF {"%2" == "off" || "%2" == "stop"} {#VAR {auto[%1][status]} {1};};
+        #ELSEIF {"%2" != ""}  {#VAR {auto[%1][variable]} {%2};
+
         #IF {$auto[%1][status] == 0}
         {
             #VAR {auto[%1][status]} {1};
@@ -69,6 +71,7 @@
         }
         {
             #VAR {auto[%1][status]} {0};
+            #UNVAR {auto[$1][variable]};
             #IF {&auto[%1][event] != 0}
             {
                 event_remove_handler h_auto_%1;
