@@ -26,12 +26,26 @@
         #ELSEIF {"%%2" == "Encumberance"}
         {
             #VAR {my[corpse][held][current]} {%%5};
+            
+            #NOP /* Increase/Decrease max corpses held to keep encumberance between 70% and 80% */;
+            #IF {$my[corpse][held][current] == $my[corpse][held][max]}
+            {
+                #IF {@fEval{((%%3*100)/%%4) < 70}}
+                {
+                    #VAR {my[corpse][held][max]} {@fEval{$my[corpse][held][max] + 1}};
+                };
+                #ELSEIF {@fEval{((%%3*100)/%%4) > 80}}
+                {
+                    #VAR {my[corpse][held][max]} {@fEval{$my[corpse][held][max] - 1}};
+                };                
+            };
         };
         #ELSEIF {&_undead[%%2] > 0}
         {
             #VAR {my[corpse][minion][current]} {%%5};
             #IF {%%5 > 0}
             {
+                #NOP /* Set max corpse capacity of minion based on average weight of current minion corpses */;
                 #VAR {my[corpse][minion][max]} {@fEval{(%%4/(%%3/%%5))-1}};
             };
         };

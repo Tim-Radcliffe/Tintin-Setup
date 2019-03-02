@@ -9,47 +9,50 @@
     {
         #VAR {_cI} {1};
     };
-    #IF {"%1" == ""}
+    #SWITCH {"%1"}
     {
-        #ECHO {.corpse store or .corpse retrieve};
-    };
-    #ELSEIF {"%1" == "store"}
-    {
-        #IF {$my[corpse][smuggle][current] < $my[corpse][smuggle][max]}
+        #CASE {"store"}
         {
-            handler_corpse_move {held} {$_cI} {smuggle} {!smuggle corpse $_cI};
+            #IF {$my[corpse][smuggle][current] < $my[corpse][smuggle][max]}
+            {
+                handler_corpse_move {held} {$_cI} {smuggle} {!smuggle corpse $_cI};
+            };
+            #ELSEIF {$my[corpse][coffin][current] < $my[corpse][coffin][max]}
+            {
+                handler_corpse_move {held} {$_cI} {coffin} {!wrap corpse $_cI};
+            };
+            #ELSEIF {$my[corpse][minion][current] < $my[corpse][minion][max] && @fMinionPresent{}}
+            {
+                handler_corpse_move {held} {$_cI} {minion} {!give corpse $_cI to undead follower};
+            };
         };
-        #ELSEIF {$my[corpse][coffin][current] < $my[corpse][coffin][max]}
+        #CASE {"retrieve"}
         {
-            handler_corpse_move {held} {$_cI} {coffin} {!wrap corpse $_cI};
+            #IF {$my[corpse][minion][current] > 0 && @fMinionPresent{}}
+            {
+                handler_corpse_move {minion} {$_cI} {held} {!=give preservation $_cI};
+            };
+            #ELSEIF {$my[corpse][smuggle][current] > 0}
+            {
+                handler_corpse_move {smuggle} {$_cI} {held} {!smuggle remove corpse $_cI};
+            };
+            #ELSEIF {$my[corpse][coffin][current] > 0}
+            {
+                handler_corpse_move {coffin} {$_cI} {held} {#SEND {!unwrap corpse $_cI};#SEND {!get preservation}};
+            };
         };
-        #ELSEIF {$my[corpse][minion][current] < $my[corpse][minion][max] && @fMinionPresent{}}
+        #CASE {"sort"}
         {
-            handler_corpse_move {held} {$_cI} {minion} {!give corpse $_cI to undead follower};
+            .file load {$path[guild]/scripts/CorpseSort.tin};
         };
-    };
-    #ELSEIF {"%1" == "retrieve"}
-    {
-        #IF {$my[corpse][minion][current] > 0 && @fMinionPresent{}}
+        #CASE {"get"}
         {
-            handler_corpse_move {minion} {$_cI} {held} {!=give preservation $_cI};
+            handler_corpse_get {%2};
         };
-        #ELSEIF {$my[corpse][smuggle][current] > 0}
+        #DEFAULT
         {
-            handler_corpse_move {smuggle} {$_cI} {held} {!smuggle remove corpse $_cI};
+            #ECHO {.corpse store/retrieve/sort/get};
         };
-        #ELSEIF {$my[corpse][coffin][current] > 0}
-        {
-            handler_corpse_move {coffin} {$_cI} {held} {#SEND {!unwrap corpse $_cI};#SEND {!get preservation}};
-        };
-    };
-    #ELSEIF {"%1" == "sort"}
-    {
-        .file load {$path[guild]/scripts/CorpseSort.tin};
-    };
-    #ELSEIF {"%1" == "get"}
-    {
-        handler_corpse_get {%2};
     };
 };
 
@@ -63,18 +66,17 @@
         #LIST {my[corpse][held][list]} {DELETE} {1};
     };
 
-    #LOCAL {_hACdiff} {@fEval{$my[corpse][held][max] - $my[corpse][held][current]}};
-
-    #IF {$_hACdiff > 1}
+    #NOP /* Repeatedly retrieve/store corpses until current held >= min */;
+    #IF {$my[corpse][held][current] < $my[corpse][held][min]}
     {
-        .corpse retrieve {$_hACdiff};
+        #@fEval{$my[corpse][held][min] - $my[corpse][held][current]} .corpse retrieve;
     };
-    #ELSEIF {$_hACdiff < -1}
+    #ELSEIF {$my[corpse][held][current] > $my[corpse][held][max]}
     {
-        .corpse store {@fEval{$_hACdiff * -1}};
+        #@fEval{$my[corpse][held][current] - $my[corpse][held][max]} .corpse store;
     };
 };
-auto {add} {corpse} {} {e_necro_gline} {};
+auto {add} {corpse} {} {e_necro_gline_C} {};
 
 /* handler_corpse_move {from} {number} {to} {command} */
 #ALIAS {handler_corpse_move}

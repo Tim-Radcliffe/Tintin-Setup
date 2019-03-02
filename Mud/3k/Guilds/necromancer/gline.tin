@@ -13,10 +13,10 @@
         #REGEXP {$_hnl[item]} {%*:%*}
         {
             handler_necro_gline_&1 {&2};
+            event_raise {e_necro_gline_&1} {&2};
         };
     };
     #UNVAR {_hnl};
-    event_raise {e_necro_gline} {%2};
 };
 event_register {e_mip_FFF_I} {gline.tin} {handler_necro_gline};
 event_register {e_mip_FFF_J} {gline.tin} {handler_necro_gline};

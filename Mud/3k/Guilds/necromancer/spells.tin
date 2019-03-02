@@ -1,0 +1,47 @@
+#ALIAS {handler_necspells_mobscan_end}
+{
+    #NOP %1;
+    #UNVAR {my[necromancer][spells]};
+    #ACTION {^%s{Edged|Crushing|Cold|Flame|Psionic|Lightning|Corrosion|Virulence|Power|Light}-\(%s%d\)-(%s%d\%\)}
+    {
+        #FORMAT {_necSpell} {%l} {%%2};
+        #VAR {my[necromancer][spells][%%4][$_necSpell]} {%%6};
+        #IF {"$mob[$mob[current]][spells][$_necSpell]" == "" || "%%6" != "0"}
+        {
+            #VAR {mob[$mob[current]][spells][$_necSpell]} {%%6};
+        };
+        #UNVAR {_necSpell};
+    };
+    #ACTION {^Your spells minimum is set to}
+    {
+        #UNACTION {^Your spells minimum is set to};
+        #UNACTION {^%s{Edged|Crushing|Cold|Flame|Psionic|Lightning|Corrosion|Virulence|Power|Light}-\(%s%d\)-(%s%d\%\)};
+    };
+    #SEND {!spells};
+};
+event_register e_mobscan_end spells.tin handler_necspells_mobscan_end; 
+
+#ALIAS {handler_necspells_mobscan_start}
+{
+    #NOP %1;
+    #SEND {!spells clear};
+    #IF {"$mob[$mob[current]][spells][-1]" != ""}
+    {
+        #FORALL {$mob[$mob[current]][spells]}
+        {
+            #IF {$mob[$mob[current]][spells][&0] >= $_necSpells[max]}
+            {
+                #VAR {_necSpells[max]} {$mob[$mob[current]][spells][&0]};
+                #VAR {_necSpells[spell]} {&0};
+            };
+        };
+        #SEND {!comtrance invoke $_necSpells[spell]};
+        #UNVAR {_necSpells};
+    };
+    #ELSE
+    {
+        #SEND {!comtrance invoke power/psionic};
+    };
+};
+event_register e_mobscan_start spells.tin handler_necspells_mobscan_start; 
+

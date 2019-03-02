@@ -7,6 +7,7 @@
 #VAR {RoomScan[object][dark leather strap]}         {1};
 #VAR {RoomScan[object][cloudy glass sphere]}        {1};
 #VAR {RoomScan[object][dark skull key]}             {1};
+#VAR {RoomScan[object][shattered jaw bone]}         {1};
 
 #VAR {_guild[minions]}
 {
@@ -158,7 +159,7 @@ auto {add} {veil} {} {e_combat} {};
 {
     #GAG {^-You activate your atrance-};
     #GAG {^-Your atrance is complete-};
-    #GAG {^C:* You blink into unconsciousness *};
+    #GAG {^* You blink into unconsciousness *};
     #GAG {^* You recover your senses *};
     #GAG {^>>Atrancing};
     #GAG {^$my[necromancer][familiar] tells you:};
@@ -171,7 +172,7 @@ auto {add} {veil} {} {e_combat} {};
 {
     #UNGAG {^-You activate your atrance-};
     #UNGAG {^-Your atrance is complete-};
-    #UNGAG {^C:* You blink into unconsciousness *};
+    #UNGAG {^* You blink into unconsciousness *};
     #UNGAG {^* You recover your senses *};
     #UNGAG {^>>Atrancing};
     #UNGAG {^$my[necromancer][familiar] tells you:};
