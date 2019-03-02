@@ -49,13 +49,13 @@
 #NOP ** brief/verbose with map
 #NOP #ACTION {{^(\S.{68})[?:\@|\+|\^|v|E].*}}
 {
-	#REGEXP {%1} {{(.*) \(([a-z,]*)\).*$}}
-	{
-		#VAR {room} {};
-		#VAR {room[name]} {&2};
-		#NOP handler_parse_room_exits {&3};
+    #REGEXP {%1} {{(.*) \(([a-z,]*)\).*$}}
+    {
+        #VAR {room} {};
+        #VAR {room[name]} {&2};
+        #NOP handler_parse_room_exits {&3};
         event_raise {e_room_header};
-	};
+    };
 } {2};
 
 #NOP *********** Aliases **************;

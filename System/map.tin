@@ -448,43 +448,62 @@
 /* Repeatedly check the map looking for rooms that match the current room name/exits */
 #ALIAS {.mapFindMe}
 {
-	#MAP {list} {roomname} {$room[name]} {roomexits} {$room[exits]} {variable} {_mFM[currRooms]};
-	#UNVAR {_mFM[matchRooms]};
-	#IF {"$_mFM[refRooms]" == ""} 
-	{
-		#VAR {_mFM[matchRooms]} {$_mFM[currRooms]};
-	};
-	#ELSEIF {&_mFM[currRooms][] > 0}
-	{
-		#FORALL {$_mFM[refRooms][]} 
-		{
-			#MAP AT {&0} {#MAP GET ROOMEXITS {_mFM[exits]};};
-			#FORALL {$_mFM[exits][]}
-			{
-				#IF {"$_mFM[currRooms][$_mFM[exits][&&0]]" != ""}
-				{
-					#VAR {_mFM[matchRooms][&0]} {$_mFM[currRooms][&0]};
-				};
-			};
-		};
-	};
+    #NOP /* Find all rooms that match the current room name */;
+    #MAP {list} {roomname} {$room[name]} {variable} {_mFM[currRooms]};
+ 
+    #NOP /* Keep the matches with the most matching room exits */;
+    #FOREACH {$_mFM[currRooms][]} {_mFM[room]}
+    {
+        #MAP AT {$_mFM[room]} {#MAP GET ROOMEXITS {_mFM[mapExits]};};
+        #LIST {_mFM[roomExits]} {create} {$room[exits]};
+        #VAR {_mFM[exitMatch]} {0};
+        #FORALL {$_mFM[roomExits][%*]}
+        {
+            #IF {&_mFM[mapExits][&0]}
+            {
+                #MATH {_mFM[exitMatch]} {$_mFM[exitMatch] + 1}; 
+            };
+        };
+        #VAR {_mFM[matchRooms][$_mFM[exitMatch]][$_mFM[room]]} {$_mFM[mapExits]};
+    };
+    #VAR {_mFM[currRooms]} {$_mFM[matchRooms][-1]};
+                       
+    #UNVAR {_mFM[matchRooms]};
+    #IF {"$_mFM[refRooms]" == ""} 
+    {
+        #VAR {_mFM[matchRooms]} {$_mFM[currRooms]};
+    };
+    #ELSEIF {&_mFM[currRooms][] > 0}
+    {
+        #FORALL {$_mFM[refRooms][]} 
+        {
+            #MAP AT {&0} {#MAP GET ROOMEXITS {_mFM[exits]};};
+            #FORALL {$_mFM[exits][]}
+            {
+                #IF {"$_mFM[currRooms][$_mFM[exits][&&0]]" != ""}
+                {
+                    #VAR {_mFM[matchRooms][&0]} {$_mFM[currRooms][&0]};
+                };
+            };
+        };
+    };
 	
-	#IF {&_mFM[matchRooms][] == 1}
-	{
-		#ECHO {INFO: 1 match found - Located!};
-		#MAP GOTO {*_mFM[matchRooms][+1]};
-		#UNVAR {_mFM};
-	};
-	#ELSEIF {&_mFM[matchRooms][] > 1}
-	{
-		#ECHO {INFO: &_mFM[matchRooms][] matches - keep moving};
-		#VAR {_mFM[refRooms]} {$_mFM[matchRooms]};
-	};
-	#ELSE
-	{
-		#ECHO {INFO: No Match Found};
-		#UNVAR {_mFM};
-	};
+    #IF {&_mFM[matchRooms][] == 1}
+    {
+        #ECHO {INFO: 1 match found - Located!};
+        #MAP GOTO {*_mFM[matchRooms][+1]};
+        #UNVAR {_mFM};
+    };
+    #ELSEIF {&_mFM[matchRooms][] > 1}
+    {
+        #ECHO {INFO: &_mFM[matchRooms][] matches - keep moving};
+        #VAR {_mFM[refRooms]} {$_mFM[matchRooms]};
+    };
+    #ELSE
+    {
+        #ECHO {INFO: No Match Found};
+        #UNVAR {_mFM};
+    };
 };
 
 #ALIAS {.mapRoom}
