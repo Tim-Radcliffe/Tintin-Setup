@@ -98,16 +98,27 @@
 
 #NOP ############## BLACKSMITH ##############
 
-#ACTION {^{>\s|}You have created something new!} {craftsave;retrieve all;#bell};
 
 #ALIAS {.smith}
 {
-    #ACTION {You pull a %%* from your satchel.}
-    {
-        #SEND {!insert %%1};
-    };
-    #DELAY 5 {#UNACTION {You pull a %%* from your satchel.}};
+    #NOP %1;
     #SEND {!unstash2 %0};
+    #SEND {!insert %2 %3 %4};
+};
+
+#ALIAS {.smith_end}
+{
+    #NOP %1;
+
+    #UNACTION {^%d %*$};
+    #UNACTION {^-INGREDIENTS-};
+
+    #ACTION {^{>\s|}You have created something new!} 
+    {
+        #SEND {!retrieve all};
+        #UNACTION {^{>\s|}You have created something new!}; 
+    };
+    #SEND {!fire};
 };
 
 #ALIAS {produce}
@@ -118,13 +129,11 @@
         {
             #%%%1 .smith %1 %%%2;
         };
-
-        event_oneshot e_prompt h_ingredients {#NOP %%%1;#UNACTION {^%%d %%*$};};
-        
-        #UNACTION {^-INGREDIENTS-};
+       
     };
     #SEND {!exa moulding};
     #SEND {!insert moulding};
+    trigger_command {.smith_end};
 };
 
 #NOP ############## WRANGLING ###############
