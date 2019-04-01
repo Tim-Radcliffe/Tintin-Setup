@@ -18,7 +18,8 @@ Prompt detection works a lot better if you have your mud prompt set to have a ne
 E.G. "prompt >$nl$" in 3 Kingdoms
 
 Folders:
-* Data - Character profile data files, Area & Map data files
-* Local - Personal scripts (put your own code here)
-* Mud - Mud specific scripts
+* Data    - Character profile data files, Area & Map data files
+* Local   - Personal scripts (put your own code here)
+* Log     - Session/Chat/Other Data log files
+* Mud     - Mud specific scripts
 * System - General (non mud specific) scripts
