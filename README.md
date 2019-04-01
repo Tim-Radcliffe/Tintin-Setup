@@ -1,7 +1,7 @@
 # Tintin-Setup
 [Tintin++](http://tintin.sourceforge.net) scripts for playing muds, including:
 
-* Multiple map heirarchy handling with travel between maps.
+* Multiple map heirarchy handling with travel between maps/areas.
 * "Graphical" gauge display
 * Window handling (multiple swappable configurable information displays)
 * Event handling (subscribe/unsubscribe multiple actions to a code event)
@@ -10,7 +10,7 @@
 
 This setup includes my scripts for [3Kingdoms mud](http://3k.org/)
 
-There is no documentation yet on how this works.
+This page is the only documentation on how all this works.
 
 If you want to try it out anyway, run "tt++ start.tin"
 
