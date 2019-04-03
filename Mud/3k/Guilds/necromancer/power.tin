@@ -21,3 +21,72 @@
     };
     #SEND {!powers};
 };
+
+#ALIAS {.studyPower}
+{
+    #NOP %1;
+    #IF {%2 > 100}
+    {
+        #SEND {!study %1 100};
+        .studyPower {%1} {@fEval{%2-100}};
+    };
+    #ELSE
+    {
+        #SEND {!study %1 %2};
+    };
+};
+
+#ALIAS {.study}
+{
+    #NOP %1;
+    #IF {"%0" == "default"}
+    {
+        #VAR {my[necromancer][powerdefaults]} {$my[necromancer][power]};
+        #ECHO {Necromancer power defaults set:};
+        #VAR {my[necromancer][powerdefaults]};
+    };
+    #ELSEIF {"%0" != ""}
+    {
+        #ECHO {.study                   - study missing powers};
+        #ECHO {.study default           - set the default powers};
+        #ECHO {.study <power> <amount>  - Study that power the given number of times};
+    };
+    #ELSE
+    {
+        #IF {"$my[necromancer][powerdefaults]" == ""}
+        {
+            .study help
+        };
+        #ELSE
+        {
+            #FOREACH {$my[necromancer][powerdefaults][]} {_necStudy[power]}
+            {
+                #IF {"$my[necromancer][power][$_necStudy[power]]" == ""}
+                {
+                    #VAR {_necStudy[count]} {$my[necromancer][powerdefaults][$_necStudy[power]]};
+                };
+                #ELSE
+                {
+                    #MATH {_necStudy[count]} {$my[necromancer][powerdefaults][$_necStudy[power]] - $my[necromancer][power][$_necStudy[power]]};
+                };
+                #VAR {_necStudy[$_necStudy[count]][$_necStudy[power]]} {};
+            };
+            #UNVAR {_necStudy[count]};
+            #UNVAR {_necStudy[power]};
+            #UNVAR {_necStudy[0]};
+            #IF {&_necStudy[] > 0}
+            {
+                #FORALL {$_necStudy[]}
+                {
+                    #WHILE {"*_necStudy[&0][-1]" != ""}
+                    {
+                        .studyPower {*_necStudy[&0][-1]} {&0};
+                        #UNVAR {_necStudy[&0][-1]};
+                    };
+                };
+            };
+        };
+        #UNVAR {_necStudy};
+    };
+    
+};
