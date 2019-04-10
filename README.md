@@ -14,7 +14,7 @@ This page is the only documentation on how all this works.
 
 If you want to try it out anyway, run "tt++ start.tin"
 
-Prompt detection works a lot better if you have your mud prompt set to have a newline after it.
+Prompt detection needs you to have your mud prompt set to have a newline after it.
 E.G. "prompt >$nl$" in 3 Kingdoms
 
 Folders:
