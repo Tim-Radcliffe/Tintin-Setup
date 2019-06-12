@@ -1,3 +1,6 @@
+#NOP MIP handler version 1.05
+#NOP By Balthus.
+
 #NOP ***** Set MIP ID Code **********;
 #VAR {mip} {};
 #VAR {mip[Version]} {0.105};
