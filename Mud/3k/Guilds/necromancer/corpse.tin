@@ -71,9 +71,9 @@
     {
         #@fEval{$my[corpse][held][min] - $my[corpse][held][current]} .corpse retrieve;
     };
-    #ELSEIF {$my[corpse][held][current] > $my[corpse][held][max]}
+    #ELSEIF {$my[corpse][held][current] > $my[corpse][held][min]}
     {
-        #@fEval{$my[corpse][held][current] - $my[corpse][held][max]} .corpse store;
+        #@fEval{$my[corpse][held][current] - $my[corpse][held][min]} .corpse store;
     };
 };
 auto {add} {corpse} {} {e_necro_gline_C} {};
@@ -124,6 +124,7 @@ auto {add} {corpse} {} {e_necro_gline_C} {};
     #LOCAL {_aMinEnter} {%1};
     #FORMAT {_aMinEnter} {%n} {$_aMinEnter};
     #LIST {room[contents][npc]} {ADD} {{{id}{$_aMinEnter}}};
+    handler_auto_corpse;
 };
 
 #FUNCTION {fMinionPresent}

@@ -1,2 +1,2 @@
-#CONFIG {packet patch} {0.5};
+#CONFIG {packet patch} {0.6};
 #CONFIG {color patch} {on};

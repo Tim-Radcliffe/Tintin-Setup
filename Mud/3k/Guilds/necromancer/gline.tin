@@ -114,7 +114,7 @@ event_register {e_mip_FFF_J} {gline.tin} {handler_necro_gline};
     #REGEXP {%1} {{(ON|OFF)(X|)}}
     {
         #VAR {my[necromancer][protection]} {&2};
-        #IF {"&3" == "X"} 
+        #IF {"&3" == "X" || "&3" == "*"} 
         {
             #VAR {my[necromancer][veil]} {ON};
         };
