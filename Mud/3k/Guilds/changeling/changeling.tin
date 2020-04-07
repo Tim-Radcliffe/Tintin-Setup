@@ -49,18 +49,18 @@
   #IF {@fSumArray{$changeling[bioplasts]} > 50}
   {
     #VAR {changeling[fuse]} {};
-    #FORALL {$changeling[bioplasts][]}
+    #FOREACH {$changeling[bioplasts][]} {v}
     {
-      #IF {"$changeling[fuse][1]" == "" && $changeling[bioplasts][&0] > 0}
+      #IF {"$changeling[fuse][1]" == "" && $changeling[bioplasts][$v] > 0}
       {
-        #MATH {changeling[bioplasts][&0]} {$changeling[bioplasts][&0] - 1};      
-        #VAR {changeling[fuse][1]} {$BioTypes[&0]};
+        #MATH {changeling[bioplasts][$v]} {$changeling[bioplasts][$v] - 1};      
+        #VAR {changeling[fuse][1]} {$BioTypes[$v]};
       };
       
-      #IF {"$changeling[fuse][2]" == "" && $changeling[bioplasts][&0] > 0}
+      #IF {"$changeling[fuse][2]" == "" && $changeling[bioplasts][$v] > 0}
       {
-        #MATH {changeling[bioplasts][&0]} {$changeling[bioplasts][&0] - 1};
-        #VAR {changeling[fuse][2]} {$BioTypes[&0]};
+        #MATH {changeling[bioplasts][$v]} {$changeling[bioplasts][$v] - 1};
+        #VAR {changeling[fuse][2]} {$BioTypes[$v]};
       };
     };
     

@@ -356,9 +356,9 @@ event_register {e_inv_item}  {craft.farming.tin} {.farmInv};
         };
         #IF {&_farm[recipe][$_farm[i]][] > 0}
         {
-            #FORALL {$_farm[recipe][$_farm[i]][]}
+            #FOREACH {$_farm[recipe][$_farm[i]][]} {v}
             {
-                .farmApply {$_farm[recipe][$_farm[i]][&0]} {&0};
+                .farmApply {$_farm[recipe][$_farm[i]][$v]} {$v};
             };
         };
     };

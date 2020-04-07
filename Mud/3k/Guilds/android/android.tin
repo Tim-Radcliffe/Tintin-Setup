@@ -84,11 +84,11 @@
         Will outlive the sun;
         Will be alive to see the end of the universe;
     };
-    #FORALL {$_aEV[]}
+    #FOREACH {$_aEV[]} {v)
     {
-        #FORALL {$_aEV[&0][]}
+        #FOREACH {$_aEV[$v][]} {w)
         {
-            #SUBSTITUTE {$_aEV[&0][&&0]} {(&&0) - $_aEV[&0][&&0]};
+            #SUBSTITUTE {$_aEV[$v][$w]} {($w) - $_aEV[$v][$w]};
         };
     };
     #CLASS {cAndroidEvaluate} {close};

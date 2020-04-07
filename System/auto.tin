@@ -62,9 +62,9 @@
             };
             #IF {&auto[%1][event] != 0}
             {
-                #FORALL {$auto[%1][event]}
+                #FOREACH {$auto[%1][event]} {e}
                 {
-                    event_register &0 h_auto_%1 handler_auto_%1;
+                    event_register $e h_auto_%1 handler_auto_%1;
                 };
             };
             #ECHO {AUTO: <128>%1 on<098> $auto[%1][variable]};

@@ -27,12 +27,12 @@ event_register e_mobscan_end spells.tin handler_necspells_mobscan_end;
     #SEND {!spells clear};
     #IF {"$mob[$mob[current]][spells][-1]" != ""}
     {
-        #FORALL {$mob[$mob[current]][spells]}
+        #FOREACH {$mob[$mob[current]][spells]} {v}
         {
-            #IF {$mob[$mob[current]][spells][&0] >= $_necSpells[max]}
+            #IF {$mob[$mob[current]][spells][$v] >= $_necSpells[max]}
             {
-                #VAR {_necSpells[max]} {$mob[$mob[current]][spells][&0]};
-                #VAR {_necSpells[spell]} {&0};
+                #VAR {_necSpells[max]} {$mob[$mob[current]][spells][$v]};
+                #VAR {_necSpells[spell]} {$v};
             };
         };
         #SEND {!comtrance invoke $_necSpells[spell]};

@@ -43,19 +43,19 @@
 {
     #NOP %1;
     #VAR {_WN} {};
-    #FORALL {$window[names][]}
+    #FOREACH {$window[names][]} {w}
     {
-        #IF {"&0" == "$window[index][1]"}
+        #IF {"$w" == "$window[index][1]"}
         {
-            #VAR {_WN} {${_WN}>&0< };        
+            #VAR {_WN} {${_WN}>$w< };        
         };
-        #ELSEIF {"$window[update][&0]" == "1"}
+        #ELSEIF {"$window[update][$w]" == "1"}
         {
-            #VAR {_WN} {${_WN}*&0* };        
+            #VAR {_WN} {${_WN}*$w* };        
         };
         #ELSE
         {
-            #VAR {_WN} {${_WN} &0  };
+            #VAR {_WN} {${_WN} $w  };
         };
     };
     event_raise {e_notify} {window} {<274>$_WN} {2};    

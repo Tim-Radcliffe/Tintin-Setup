@@ -106,9 +106,9 @@ event_register e_mip_HAB h_room_contents handler_room_contents;
     event_raise e_roomscan_end;
     #IF {"&RoomScan[commandqueue][1]" != "0"}
     {
-      #FORALL {$RoomScan[commandqueue][%*]} 
+      #FOREACH {$RoomScan[commandqueue][%*]} {v} 
       {
-        &0
+        $v
       };
       #UNVAR {RoomScan[commandqueue]};
     };
@@ -154,24 +154,24 @@ event_register {e_ansiflag_R} {h_room_name} {.HandlerRoomName};
 {
   #NOP %1;
   
-  #FORALL {$RoomScan[object][]}
+  #FOREACH {$RoomScan[object][]} {v}
   {
     #IF {"$RoomScan[break]" != "1"}
     {
-      #REGEXP {%3} {{&0}}
+      #REGEXP {%3} {{$v}}
       {
-        #IF {"$RoomScan[object][&0]" == "-1"}
+        #IF {"$RoomScan[object][$v]" == "-1"}
         {
           #UNVAR {RoomScan[commandbuffer]};
           #VAR {RoomScan[break]} {1};
         }
         {
-          #IF {"$RoomScan[object][&0]" == "1"}
+          #IF {"$RoomScan[object][$v]" == "1"}
           {
             #VAR {RoomScan[commandbuffer]} {@fAutoGetCommand{%2}};
           }
           {
-            #FORMAT {RoomScan[commandbuffer]} {$RoomScan[object][&0]} {%3};
+            #FORMAT {RoomScan[commandbuffer]} {$RoomScan[object][$v]} {%3};
           };
         };
       };

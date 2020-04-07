@@ -223,13 +223,13 @@ event_register {e_15_mins} {h_globals} {.aGlobalSave};
   #VAR {_fCL[sep]} {, };
   #VAR {result} {};
   #IF {"%0" == ""} #RETURN;
-  #FORALL {%0}
+  #FOREACH {%0} {s}
   {
     #IF {"$result" != ""}
     {
       #VAR {result} {$result$_fCL[sep]};
     };
-    #VAR {result} {${result}&0};
+    #VAR {result} {${result}$s};
   };
   #UNVAR {_fCL};
 };

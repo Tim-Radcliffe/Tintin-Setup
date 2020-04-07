@@ -172,9 +172,9 @@
         #VAR {map[area][name]}  {$_mL[area]};
         #MAP {read} {$path[areas]/$map[file]};
 
-        #FORALL {$_mapVariable[]}
+        #FOREACH {$_mapVariable[]} {v}
         {
-            #UNVAR {&0};
+            #UNVAR {$v};
         };
         #UNVAR {_mapVariable};        
         
@@ -185,9 +185,9 @@
        
         .file loadall {$path[areas]/${_mL[path]}/*.tin};
 
-        #FORALL {$_mapVariable[]}
+        #FOREACH {$_mapVariable[]} {v}
         {
-            #VAR {&0} {$_mapVariable[&0]};
+            #VAR {$v} {$_mapVariable[$v]};
         };
         
         #IF {"%2" == ""}
@@ -457,9 +457,9 @@
         #MAP AT {$_mFM[room]} {#MAP GET ROOMEXITS {_mFM[mapExits]};};
         #LIST {_mFM[roomExits]} {create} {$room[exits]};
         #VAR {_mFM[exitMatch]} {0};
-        #FORALL {$_mFM[roomExits][%*]}
+        #FOREACH {$_mFM[roomExits][%*]} {e}
         {
-            #IF {&_mFM[mapExits][&0]}
+            #IF {&_mFM[mapExits][$e]}
             {
                 #MATH {_mFM[exitMatch]} {$_mFM[exitMatch] + 1}; 
             };
@@ -475,14 +475,14 @@
     };
     #ELSEIF {&_mFM[currRooms][] > 0}
     {
-        #FORALL {$_mFM[refRooms][]} 
+        #FOREACH {$_mFM[refRooms][]} {r} 
         {
-            #MAP AT {&0} {#MAP GET ROOMEXITS {_mFM[exits]};};
-            #FORALL {$_mFM[exits][]}
+            #MAP AT {$r} {#MAP GET ROOMEXITS {_mFM[exits]};};
+            #FOREACH {$_mFM[exits][]} {e}
             {
-                #IF {"$_mFM[currRooms][$_mFM[exits][&&0]]" != ""}
+                #IF {"$_mFM[currRooms][$_mFM[exits][$e]]" != ""}
                 {
-                    #VAR {_mFM[matchRooms][&0]} {$_mFM[currRooms][&0]};
+                    #VAR {_mFM[matchRooms][$r]} {$_mFM[currRooms][$r]};
                 };
             };
         };
@@ -502,6 +502,7 @@
     #ELSE
     {
         #ECHO {INFO: No Match Found};
+
         #UNVAR {_mFM};
     };
 };
@@ -519,9 +520,9 @@
   {
     #SHOWME {Room Types:};
     #SHOWME {==========};
-    #FORALL {$RoomType[]}
+    #FOREACH {$RoomType[]} {t}
     {
-      #SHOWME {$RoomType[&0][colour] [$RoomType[&0][symbol]$RoomType[&0][colour]]<099> : &0};
+      #SHOWME {$RoomType[$t][colour] [$RoomType[$t][symbol]$RoomType[$t][colour]]<099> : $t};
     };
   };
 };
@@ -571,9 +572,9 @@ event_register {e_map_room_exit} {h_map_room_specialexit} {.mapRoomSpecialExit};
     #RETURN;
   };
 
-  #FORALL {roomarea;roomdata;roomnote;roomname;roomdesc;roomsymbol;roomcolor;roomflags;roomterrain;roomvnum;roomexits}
+  #FOREACH {roomarea;roomdata;roomnote;roomname;roomdesc;roomsymbol;roomcolor;roomflags;roomterrain;roomvnum;roomexits} {v}
   {
-    #MAP AT %1 #MAP GET {&0} {result[&0]};
+    #MAP AT %1 #MAP GET {$v} {result[$v]};
   };
   
   #FOREACH {$result[roomexits][]} {_fMRI[exit]}

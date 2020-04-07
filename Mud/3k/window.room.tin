@@ -22,9 +22,9 @@ event_register {e_mip_DDD} {h_window_room} {.HandlerWinExits};
   #VAR {_HWC} {};
   #LIST {_HWC[data]} {CREATE} {%2};
   #VAR {winRoom[contents][$_HWC[data][1]][$_HWC[data][2]]} {{name}{$_HWC[data][2]}{desc}{$_HWC[data][3]}{action}{$_HWC[data][4]}};
-  #FORALL {$winRoom[contents][]}
+  #FOREACH {$winRoom[contents][]} {v}
   {
-    #VAR {_HWC[&0]} {@fCommaList{$winRoom[contents][&0][]}};    
+    #VAR {_HWC[$v]} {@fCommaList{$winRoom[contents][$v][]}};    
   };
   .WindowSetLine {room} {3} {Noun : $_HWC[noun]};
   .WindowSetLine {room} {4} {Mob  : $_HWC[npc]};

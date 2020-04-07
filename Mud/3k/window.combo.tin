@@ -32,12 +32,12 @@
     #NOP %1;
     .WindowComboSplit;
     #UNVAR {_WC[stats]};
-    #FORALL {hp;sp;gp1;gp2}
+    #FOREACH {hp;sp;gp1;gp2} {v}
     {
-        #IF {"$my[&0][current]" == "0" && "$my[&0][max]" == "0"} {}
+        #IF {"$my[$v][current]" == "0" && "$my[$v][max]" == "0"} {}
         {
-            #IF {"$my[&0][name]" == ""} {#FORMAT {my[&0][name]} {%u} {&0};};
-            #LIST {_WC[stats]} {add} {@fGauge{{$my[&0][name] : $my[&0][current]}{$my[&0][current]}{$my[&0][max]}{$my[&0][colour]}{$_WC[split][l]}}};
+            #IF {"$my[$v][name]" == ""} {#FORMAT {my[$v][name]} {%u} {$v};};
+            #LIST {_WC[stats]} {add} {@fGauge{{$my[$v][name] : $my[$v][current]}{$my[$v][current]}{$my[$v][max]}{$my[$v][colour]}{$_WC[split][l]}}};
         };
     };
     #LIST {_WC[stats]} {add} {@fGauge{{Vs : $mip[FFF][K][data]}{$mip[FFF][L][data]}{100}{FAA}{$_WC[split][l]}}};
@@ -56,9 +56,9 @@ event_register {e_mip_FFF} {h_window_combo} {.WindowComboStats};
     #IF {"$map[room][roomnote]" != ""}
     {
         #LIST {_WC[room]} {add} {Notes :};
-        #FORALL {$map[room][roomnote][]}
+        #FOREACH {$map[room][roomnote][]} {v}
         {
-            #LIST {_WC[room]} {add} {@fTrunc{{&0}{$_WC[split][l]}}};
+            #LIST {_WC[room]} {add} {@fTrunc{{$v}{$_WC[split][l]}}};
         };
     };
 };

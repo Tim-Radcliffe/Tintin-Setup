@@ -84,12 +84,12 @@
             #UNVAR {_necStudy[0]};
             #IF {&_necStudy[] > 0}
             {
-                #FORALL {$_necStudy[]}
+                #FOREACH {$_necStudy[]} {v}
                 {
-                    #WHILE {"*_necStudy[&0][-1]" != ""}
+                    #WHILE {"*_necStudy[$v][-1]" != ""}
                     {
-                        .studyPower {*_necStudy[&0][-1]} {&0};
-                        #UNVAR {_necStudy[&0][-1]};
+                        .studyPower {*_necStudy[$v][-1]} {$v};
+                        #UNVAR {_necStudy[$v][-1]};
                     };
                 };
             };

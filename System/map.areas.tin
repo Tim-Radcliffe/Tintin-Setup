@@ -2,13 +2,13 @@
 {
   #MAP {get} {worldsize} {map[worldsize]};
   #MAP {list} {variable} {map[roomlist]};
-  #FORALL {$map[roomlist][]}
+  #FOREACH {$map[roomlist][]} {r}
   {
-    #ECHO {ROOM: &0};
+    #ECHO {ROOM: $r};
 
-    #IF {"&0" != "" && "$map[roomlist][&0]" != ""}
+    #IF {"$r" != "" && "$map[roomlist][$r]" != ""}
     {
-      #MAP at &0
+      #MAP at $r
       {
         #MAP {get} {roomarea} {map[arealist][areaname]};
         #MAP {get} {roomname} {map[arealist][roomname]};
@@ -16,16 +16,16 @@
         #REPLACE {map[arealist][areaname]} {[} {I};
         #REPLACE {map[arealist][areaname]} {]} {I};
 
-        #VAR {map[arealist][list][$map[arealist][areaname]]} {&0};
+        #VAR {map[arealist][list][$map[arealist][areaname]]} {$r};
       };
     };
   };
 
   #UNVAR {map[roomlist]};
 
-  #FORALL {$map[arealist][list][]}
+  #FOREACH {$map[arealist][list][]} {a}
   {
-    #ECHO {vnum: %+5d area: %s} {$map[arealist][list][&0]} {&0};
+    #ECHO {vnum: %+5d area: %s} {$map[arealist][list][$a]} {$a};
   };
 };
 
@@ -52,8 +52,8 @@
     };
   };
   
-  #FORALL {$map[arealist][]}
+  #FOREACH {$map[arealist][]} {a}
   {
-    #ECHO {vnum: %+5d area: %s} {$map[arealist][&0]} {&0};
+    #ECHO {vnum: %+5d area: %s} {$map[arealist][$a]} {$a};
   };  
 };

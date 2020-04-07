@@ -41,11 +41,11 @@
   };
   #ELSE
   {
-    #FORALL {roomnote;roomarea}
+    #FOREACH {roomnote;roomarea} {v}
     {
       #IF {"$map[rooms][+1]" == ""}
       {
-        #MAP list {&0} {%i%*%0%*} {variable} {map[rooms]};
+        #MAP list {$v} {%i%*%0%*} {variable} {map[rooms]};
       };
     };
 
@@ -53,9 +53,9 @@
     {
       #IF {"$map[rooms][+2]" == ""}
       {
-        #FORALL {$map[rooms][]}
+        #FOREACH {$map[rooms][]} {r}
         {
-          #VAR {map[destination]} {&0};
+          #VAR {map[destination]} {$r};
         };
         .mapRun $map[destination];
       };
@@ -81,15 +81,15 @@
 
         #VAR {i} {0};
 
-        #FORALL {$map[rooms][]}
+        #FOREACH {$map[rooms][]} {r}
         {
           #MATH {i} {$i + 1};
           #IF {$i < 27}
           {
             #FORMAT {map[temp][macroletter]} {%a} {$i+96};
-            .GotoMacro {$map[temp][macroletter]} {&0};
-            #VAR {map[temp][info]} {@fMapRoomInfo{&0}};
-            #ECHO {$map[temp][macroletter] : $map[rooms][&0] $map[temp][info][roomname] ($map[temp][info][roomarea])};
+            .GotoMacro {$map[temp][macroletter]} {$r};
+            #VAR {map[temp][info]} {@fMapRoomInfo{$r}};
+            #ECHO {$map[temp][macroletter] : $map[rooms][$r] $map[temp][info][roomname] ($map[temp][info][roomarea])};
           };
           #IF {$i == 27}
           {

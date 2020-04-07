@@ -94,15 +94,15 @@
     #VAR {_corpses[%1][max][size]} {0};
     #VAR {_corpses[%1][count]} {0};
     #IF {&_corpses[%1][list][1] == 0} {#RETURN;}
-    #FORALL {$_corpses[%1][list][]}
+    #FOREACH {$_corpses[%1][list][]} {v}
     {
-        #IF {$_corpses[%1][list][&0] > $_corpses[%1][max][size]}
+        #IF {$_corpses[%1][list][$v] > $_corpses[%1][max][size]}
         {
-            #VAR {_corpses[%1][max][size]} {$_corpses[%1][list][&0]};
+            #VAR {_corpses[%1][max][size]} {$_corpses[%1][list][$v]};
         };
-        #IF {$_corpses[%1][list][&0] < $_corpses[%1][max][size]}
+        #IF {$_corpses[%1][list][$v] < $_corpses[%1][max][size]}
         {
-            #VAR {_corpses[%1][sortpos]} {&0};
+            #VAR {_corpses[%1][sortpos]} {$v};
         };
         #MATH {_corpses[%1][count]} {$_corpses[%1][count] + 1};
     };

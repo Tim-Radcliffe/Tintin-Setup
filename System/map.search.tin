@@ -22,15 +22,15 @@
     #IF {&result[list][] < 1} {#RETURN};
 
     #NOP /* Collect room names for all links */;
-    #FORALL {$result[list][]}
+    #FOREACH {$result[list][]} {r}
     {
 
         #NOP /* Discard inaccessible rooms (distance -1) */;
-        #IF {$result[list][&0] >= 0}
+        #IF {$result[list][$r] >= 0}
         {
-            #VAR {result[list][&0][dist]} {$result[list][&0]};
-            #MAP AT {&0} {#MAP GET ROOMNAME {result[list][&0][name]}};
-            #REPLACE {result[list][&0][name]} {LINK: } {};
+            #VAR {result[list][$r][dist]} {$result[list][$r]};
+            #MAP AT {$r} {#MAP GET ROOMNAME {result[list][$r][name]}};
+            #REPLACE {result[list][$r][name]} {LINK: } {};
         };
     };
     
@@ -144,15 +144,15 @@
             #CLASS {cMapGotoMacros} {kill};
           };
         };
-        #FORALL {$_goArea[list][]}
+        #FOREACH {$_goArea[list][]} {v}
         {
-          #IF {&0 < 27}
+          #IF {$v < 27}
           {
-            #FORMAT {_goArea[c]} {%a} {&0+96};
-            .goMacro {$_goArea[c]} {$_goArea[list][&0]};
-            #ECHO {$_goArea[c] : @fFileGetName{@fFileGetPath{$_goArea[list][&0]}}/@fFileGetName{$_goArea[list][&0]}};
+            #FORMAT {_goArea[c]} {%a} {$v+96};
+            .goMacro {$_goArea[c]} {$_goArea[list][$v]};
+            #ECHO {$_goArea[c] : @fFileGetName{@fFileGetPath{$_goArea[list][$v]}}/@fFileGetName{$_goArea[list][$v]}};
           };
-          #IF {&0 == 27}
+          #IF {$v == 27}
           {
             #ECHO {Further matches not shown.};
             #BREAK;

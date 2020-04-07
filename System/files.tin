@@ -42,9 +42,9 @@
   #VAR {_fFLA[list]} {@fFileList{{$_fFLA[spec][path]}{$_fFLA[spec][name].$_fFLA[spec][ext]}}};
   #IF {"$_fFLA[list]" != ""}
   {
-    #FORALL {$_fFLA[list][%*]} 
+    #FOREACH {$_fFLA[list][%*]} {file} 
     {
-      #VAR {result} {@fFileLoad{&0}};
+      #VAR {result} {@fFileLoad{$file}};
     };
   };
   #UNVAR {_fFLA};
