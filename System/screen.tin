@@ -1,9 +1,9 @@
 #FUNCTION {fScreen}
 {
-    #SCREEN get rows {_Screen[temp][rows]};
-    #SCREEN get cols {_Screen[temp][cols]};
-#NOP    #FORMAT {_Screen[temp][rows]} {%R};
-#NOP    #FORMAT {_Screen[temp][cols]} {%C};
+#NOP    #SCREEN get rows {_Screen[temp][rows]};
+#NOP    #SCREEN get cols {_Screen[temp][cols]};
+    #FORMAT {_Screen[temp][rows]} {%R};
+    #FORMAT {_Screen[temp][cols]} {%C};
 
     #IF {"$_Screen[temp][rows]" != "$_Screen[full][rows]"}
     {
