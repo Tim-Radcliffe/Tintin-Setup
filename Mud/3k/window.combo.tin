@@ -52,7 +52,7 @@ event_register {e_mip_FFF} {h_window_combo} {.WindowComboStats};
     .WindowComboSplit;
     #UNVAR {_WC[room]};    
     #LIST {_WC[room]} {add} {@fTrunc{{Name  :$map[room][roomname]}{$_WC[split][l]}}};
-    #LIST {_WC[room]} {add} {@fTrunc{{Exits :@fCommaList{$map[room][roomexits][]}}{$_WC[split][l]}}};
+    #LIST {_WC[room]} {add} {@fTrunc{{Exits :@fCommaList{$map[room][exit][]}}{$_WC[split][l]}}};
     #IF {"$map[room][roomnote]" != ""}
     {
         #LIST {_WC[room]} {add} {Notes :};

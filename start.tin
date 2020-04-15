@@ -78,7 +78,7 @@
     #MACRO {+}
     {
       #UNMACRO {0};
-      #FOREACH {$users[]} {user} {#UNMACRO {$user};};
+      #FOREACH {*users[]} {u} {#UNMACRO {$u};};
       .file load {$path[tools]/profiles.tin};
       .profileCreate;
       #UNMACRO {+};
@@ -90,10 +90,10 @@
     #ECHO {Choose a player};
     #ECHO {===============};
     #ECHO {};
-    #FOREACH {$users[]} {user}
+    #FOREACH {*users[]} {u}
     {
-      #ECHO {$user : $users[$user][name] ($users[$user][gameName])};
-      .UserMacro {$user} {$users[$user][name]} {$users[$user][password]} {$users[$user][gameName]} {$users[$user][gameHost]} {$users[$user][gamePort]};
+      #ECHO {$u : $users[$u][name] ($users[$u][gameName])};
+      .UserMacro {$u} {$users[$u][name]} {$users[$u][password]} {$users[$u][gameName]} {$users[$u][gameHost]} {$users[$u][gamePort]};
     };
     #ECHO {};
     #ECHO {Or press '+' to add a new profile or press '0' to exit};
