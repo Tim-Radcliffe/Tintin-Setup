@@ -17,7 +17,7 @@
 
 #NOP **** Database Connection Info ****;
 
-.file load {$path[data]/dbSettings.tin};
+.file load {$path[local]/dbSettings.tin};
 
 #NOP **** Constants ****;
 #FORMAT {dbSettings[tab]} {%a} {9};

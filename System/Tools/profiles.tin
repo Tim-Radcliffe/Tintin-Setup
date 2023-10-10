@@ -83,13 +83,13 @@
     #UNMACRO {n};
     #UNMACRO {/ea};
     #LOCAL {null} {@fFileCreateDir{$path[data]/$_profile[gameName]/Profiles/$_profile[name]}};
-    #IF {!@fFileExists{$path[data]/profiles.csv}}
+    #IF {!@fFileExists{$path[local]/profiles.csv}}
     {
-      #LINE {log} {$path[data]/profiles.csv} {name,password,gameName,gameHost,gamePort};
-      #ECHO {PROFILE: $path[data]/profile.csv created};
+      #LINE {log} {$path[local]/profiles.csv} {name,password,gameName,gameHost,gamePort};
+      #ECHO {PROFILE: $path[local]/profile.csv created};
     };
-    #LINE {log} {$path[data]/profiles.csv} {$_profile[name],$_profile[password],$_profile[gameName],$_profile[gameHost],$_profile[gamePort]};
-    #ECHO {PROFILE: $path[data]/profile.csv updated};
+    #LINE {log} {$path[local]/profiles.csv} {$_profile[name],$_profile[password],$_profile[gameName],$_profile[gameHost],$_profile[gamePort]};
+    #ECHO {PROFILE: $path[local]/profile.csv updated};
     #ECHO;
     .StartMenu;
   };

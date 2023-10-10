@@ -71,7 +71,7 @@
 #ALIAS {.StartMenu}
 {
   #NOP %1;
-  #IF {@fFileExists{$path[data]/profiles.csv}}
+  #IF {@fFileExists{$path[local]/profiles.csv}}
   {
 
     #MACRO {0}
@@ -88,7 +88,7 @@
       #UNMACRO {+};
     };
 
-    #VAR {users} {@fCSVin{@fFileRead{$path[data]/profiles.csv}}};
+    #VAR {users} {@fCSVin{@fFileRead{$path[local]/profiles.csv}}};
     #VAR {userIndex} {0};
     #ECHO {};
     #ECHO {Choose a player};
@@ -105,7 +105,7 @@
   #ELSE
   {
     #ECHO {};
-    #ECHO {Profile config file $path[data]/profiles.csv not found.};
+    #ECHO {Profile config file $path[local]/profiles.csv not found.};
     #ECHO {Please enter mud/account details to continue:};
     #ECHO {};
     .file load {$path[tools]/profiles.tin};

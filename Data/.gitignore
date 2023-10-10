@@ -1,5 +1,4 @@
 # Ignore all files in this directory
 /*.*
-/profiles.csv
 # Except this file
 !.gitignore
