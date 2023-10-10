@@ -4,17 +4,13 @@
 {
     {item} 
     {
-        {^A Statue of Cancer the King$} 
+        {^.+ Board containing \d+ messages} 
         {
-            {Pinnacle} {1}
+            {Pinnacle/Fantasy/Necromancer Guild} {20}
         }
-        {^The 3-K Kill List$} 
+        {^The Necromancers' Tapestry honoring Dracula$} 
         {
-            {Pinnacle} {1}
-        }
-        {^a tall street light$} 
-        {
-            {Pinnacle} {1}
+            {Pinnacle/Fantasy/Necromancer Guild} {20}
         }
     }
 }
