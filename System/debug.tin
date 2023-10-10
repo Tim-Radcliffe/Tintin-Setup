@@ -5,7 +5,7 @@
     #INFO ARGUMENTS SAVE;
     #VAR {_debug[args]} {$info[ARGUMENTS]};
 
-    #IF {&_debug[args][] <= 0}
+    #IF {"$_debug[args][1]" == ""}
     {
         #IF {&_debug[] > 0}
         {

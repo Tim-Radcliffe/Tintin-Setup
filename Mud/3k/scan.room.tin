@@ -64,7 +64,8 @@ event_register e_mip_HAB h_room_contents handler_room_contents;
     {
       event_raise e_roomscan_finished;
     };
-  }
+  };
+  #ELSE
   {
     event_raise e_roomscan_finished;
   };
