@@ -52,15 +52,15 @@ event_register e_mip_HAB h_room_contents handler_room_contents;
   #IF {&room[contents][player][] <= 0}
   {
     event_raise e_roomscan_end;
-    #IF {"&RoomScan[commandqueue][1]" != "0"}
+    #IF {"&room[commandqueue][1]" != "0"}
     {
-      #FOREACH {$RoomScan[commandqueue][%*]} {v} 
+      #FOREACH {$room[commandqueue][%*]} {v} 
       {
         #LINE SUBSTITUTE VARIABLES {$v};
       };
-      #UNVAR {RoomScan[commandqueue]};
+      #UNVAR {room[commandqueue]};
     };
-    #IF {&RoomScan[pause][] <= 0}
+    #IF {&room[pause][] <= 0}
     {
       event_raise e_roomscan_finished;
     };
@@ -104,26 +104,26 @@ event_register {e_ansiflag_R} {h_room_name} {.HandlerRoomName};
   
   #FOREACH {*_item[%*]} {v}
   {
-    #IF {"$RoomScan[break]" != "1"}
+    #IF {"$room[break]" != "1"}
     {
       #REGEXP {%3} {{$v}}
       {
         .debug PICKUP {MATCH ${v} : %3};
         #IF {"$_item[$v][pickup]" == "-1"}
         {
-          #UNVAR {RoomScan[commandbuffer]};
-          #VAR {RoomScan[break]} {1};
+          #UNVAR {room[commandbuffer]};
+          #VAR {room[break]} {1};
         }
         {
           #IF {"$_item[$v][pickup]" == "1"}
           {
             #IF {"$_item[$v][pickup_command]" != ""}
             {
-              #VAR {RoomScan[commandbuffer]} {$_item[$v][pickup_command]};              
+              #VAR {room[commandbuffer]} {$_item[$v][pickup_command]};              
             }
             #ELSE
             {
-              #VAR {RoomScan[commandbuffer]} {@fAutoGetCommand{%2}};
+              #VAR {room[commandbuffer]} {@fAutoGetCommand{%2}};
             };
           };
         };
@@ -132,17 +132,17 @@ event_register {e_ansiflag_R} {h_room_name} {.HandlerRoomName};
   };
 
   
-  #IF {"$RoomScan[commandbuffer]" != ""}
+  #IF {"$room[commandbuffer]" != ""}
   {
-    #LIST {RoomScan[commandqueue]} {add} {$RoomScan[commandbuffer]};
+    #LIST {room[commandqueue]} {add} {$room[commandbuffer]};
   };
-  #ELSEIF {"$RoomScan[break]" != "1" && "$flags[autopickup]" == "2"}
+  #ELSEIF {"$room[break]" != "1" && "$flags[autopickup]" == "2"}
   {
-    #LIST {RoomScan[commandqueue]} {add} {@fAutoGetCommand{%2}};
+    #LIST {room[commandqueue]} {add} {@fAutoGetCommand{%2}};
   };
   
-  #UNVAR {RoomScan[break]};
-  #UNVAR {RoomScan[commandbuffer]};
+  #UNVAR {room[break]};
+  #UNVAR {room[commandbuffer]};
 };
 
 /* Returns all the commands to perform when getting an object */

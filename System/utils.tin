@@ -352,3 +352,10 @@ event_register {e_5_mins} {h_globals} {.aGlobalSave};
   #FORMAT {_fGT} {%t} {%Y-%m-%d %H:%M:%S};
   #RETURN {$_fGT};
 };
+
+#FUNCTION {fGetHash}
+{
+  #LOCAL {_fGH} {};
+  #FORMAT {_fGH} {%H} {%0};
+  #RETURN {$_fGH};
+};
