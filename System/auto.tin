@@ -42,10 +42,12 @@
         #IF {"%3" != ""} {#VAR {auto[%2][start]}  {%3};};
         #IF {"%4" != ""} {#VAR {auto[%2][event]}  {%4};};
         #IF {"%5" != ""} {#VAR {auto[%2][end]}    {%5};};
+        .aGlobalSave;        
     };
     #ELSEIF {"%1" == "remove"}
     {
         #UNVAR {auto[%2]};
+        .aGlobalSave;        
     };
     #ELSEIF {&auto[%1] != 0}
     {
