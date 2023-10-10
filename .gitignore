@@ -5,3 +5,4 @@
 log.txt
 config.tin
 Data/*.*
+.vscode/*
