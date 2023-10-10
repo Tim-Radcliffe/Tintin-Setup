@@ -1,0 +1,31 @@
+#ALIAS {.Handler_Comms}
+{
+  #NOP %1;
+  #IF {"%2" != ""}
+  {
+	#LOCAL {_handlerComms} {};
+	#FORMAT {_handlerComms[time]} {%t} {{%H:%M}};
+	#VAR {_handlerComms[data]} {%2};
+	#LIST {_handlerComms[data]} INSERT 1 {$_handlerComms[time]};
+    #IF {"%1" == "e_mip_BAB"}
+	{
+		#IF {"$_handlerComms[data][2]" == "x"}
+		{
+			#VAR {_handlerComms[data][2]} {tell};
+			#LIST {_handlerComms[data]} INSERT 3 {MsgTo};
+
+		};
+		#ELSE 
+		{
+			#VAR {_handlerComms[data][2]} {tell};
+			#LIST {_handlerComms[data]} INSERT 3 {MsgFrom};
+		};
+		#VAR {_handlerComms[data][5]} {$_handlerComms[data][4] [$_handlerComms[data][3]]: $_handlerComms[data][5]};		
+	};
+	#LIST {_comms} {ADD} {{$_handlerComms[data]}};
+	#LIST {_comms} {DELETE} {100};
+	event_raise {e_comms} {$_handlerComms[data]};
+  };
+};
+event_register {e_mip_CAA} {h_message} {.Handler_Comms};
+event_register {e_mip_BAB} {h_message} {.Handler_Comms};

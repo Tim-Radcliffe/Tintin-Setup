@@ -1,0 +1,22 @@
+#CLASS {Data/3k/Areas/area.index.tin} OPEN
+
+#VARIABLE {_area_index}
+{
+    {item} 
+    {
+        {^A Statue of Cancer the King$} 
+        {
+            {Pinnacle} {1}
+        }
+        {^The 3-K Kill List$} 
+        {
+            {Pinnacle} {1}
+        }
+        {^a tall street light$} 
+        {
+            {Pinnacle} {1}
+        }
+    }
+}
+
+#CLASS {Data/3k/Areas/area.index.tin} CLOSE

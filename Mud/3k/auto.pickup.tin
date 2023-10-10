@@ -1,0 +1,41 @@
+#ALIAS {autopickup}
+{
+  #IF {"%1" == "off" || "%1" == "stop"}
+  {
+    #VAR {flags[autopickup]} {0};
+    #ECHO {Auto Pickup Off};
+    #RETURN;
+  };
+  #IF {"%1" == "min"} {#VAR {flags[autopickup]} {0};};
+  #IF {"%1" == "full"} {#VAR {flags[autopickup]} {1};};
+
+  #SWITCH {"$flags[autopickup]"}
+  {
+    #CASE {"0"}
+    {
+      #VAR {flags[autopickup]} {1};
+      #ECHO {Auto Pickup Minimal};
+    }
+    #CASE {"1"}
+    {
+      #VAR {flags[autopickup]} {2};
+      #ECHO {Auto Pickup Full};
+    };
+    #CASE {"2"}
+    {
+      #VAR {flags[autopickup]} {1};
+      #ECHO {Auto Pickup Minimal};
+    };
+  };
+
+  #IF {$flags[autopickup] > 0 }
+  {
+    event_register e_room_item h_auto_pickup handler_room_pickup;
+  };
+  #ELSE
+  {
+    event_remove_handler h_auto_pickup;
+  };
+};
+
+autopickup min;

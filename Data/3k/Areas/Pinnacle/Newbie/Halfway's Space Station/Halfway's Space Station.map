@@ -1,0 +1,96 @@
+C 500
+
+CE <278>
+CH <118>
+CP <138>
+CR <178>
+CB 
+
+F 8
+
+I 1
+
+L ▪ ╹ ╺ ┗ ╻ ┃ ┏ ┣ ╸ ┛ ━ ┻ ┓ ┫ ┳ ╋ X
+
+
+R {    1} {0} {<068>} {Landing Pad 6} { } {Surrounded by craters, this newly repaired landing pad is the jumping off point to Halfways space station. A large sign sits along the narrow path to the pad which is lit up with landing lights. A mirror leads back into the Newbie Tower.} {} {} {} {} {1.000}
+E {    2} {mirror} {.mapLink {Pinnacle/Newbie} {23} {mirror};} {0} {0} {}
+E {    3} {n} {enter shuttle} {1} {0} {}
+
+R {    2} {0} {<000>} {} {<138>*} {} {..} {link;} {} {} {1.000}
+
+R {    3} {0} {<068>} {Captain Bob's Shuttle} { } {Unlike the aircraft of a time gone by, this shuttle has a nice wide aisle way and big, roomy seats for its passengers. Overhead bins provide storage for luggage and other items, and each seat has its own touch panel. Looks like this will be one enjoyable flight.} {} {} {} {} {1.000}
+E {    1} {s} {exit shuttle} {4} {0} {}
+E {    4} {n} {exit} {1} {0} {}
+
+R {    4} {0} {<068>} {-=[ Docking Bay 3 ]=-} { } {The docking bay is reminiscent of an airport gate. A small counter sits in front of an airlock. Several seats line up for passengers to sit on while they wait for the shuttle service. A reinforced glass dome surrounds the entire area allowing a nice view of space.} {} {} {} {} {1.000}
+E {    3} {s} {enter shuttle} {4} {0} {}
+E {    5} {ne} {walkway} {3} {0} {}
+
+R {    5} {0} {<068>} {-=[ Docking Bay Junction ]=- (bayward,docking1,ringward,docking2,docking4,docking3)} { } {-=[ Docking Bay Junction ]=- You are on a walkway that connects to the several docking bays attached to the space station. Each tube leads to a different bay. The walkway extends to the habitation ring in one direction and to the cargo bay in the other. } {} {} {} {} {1.000}
+E {    4} {sw} {docking3} {12} {0} {}
+E {    6} {nw} {docking1} {9} {0} {}
+E {    7} {ne} {docking2} {3} {0} {}
+E {    8} {se} {docking4} {6} {0} {}
+E {    9} {e } {e } {0} {0} {}
+E {   10} {e} {bayward} {2} {0} {}
+E {   11} {w} {ringward} {8} {0} {}
+
+R {    6} {0} {<068>} {-=[ Docking Bay Junction ]=- (bayward,docking1,ringward,docking2,docking4,docking3)} { } {The bay is lit by dim maintenance lights. A small counter sits in front of an airlock. Several seats are lined up like those at an airport terminal. A reinforced glass dome surrounds the entire area and if it weren't for the metal shield behind it, you would probably have a nice view of the stars.} {} {} {} {} {1.000}
+E {    5} {se} {walkway} {6} {0} {}
+
+R {    7} {0} {<068>} {-=[ Docking Bay 2 ]=-} { } {The bay is lit by dim maintenance lights. A small counter sits in front of an airlock. Several seats are lined up like those at an airport terminal. A reinforced glass dome surrounds the entire area and if it weren't for the metal shield behind it, you would probably have a nice view of the stars.} {} {} {} {} {1.000}
+E {    5} {sw} {walkway} {12} {0} {}
+
+R {    8} {0} {<068>} {-=[ Docking Bay 4 ]=-} { } {The bay here is lit by dim maintenance lights. A small counter sits in front of an airlock. Several seats are lined up like those at an airport terminal. A reinforced glass dome surrounds the entire area and if it weren't for the metal shield behind it, you would probably have a nice view of the stars.} {} {} {} {} {1.000}
+E {    5} {nw} {walkway} {9} {0} {}
+
+R {    9} {0} {} {} { } {} {} {} {} {} {1.000}
+
+R {   10} {0} {<048>} {-=[ Outside the Cargo Bay ]=-} { } {The walkway has narrowed into a tube-like structure that leads to the cargo bay. A small slot sits on the wall next to a reinforced metal door. A rather open area sits toward the habitation ring of the space station.} {} {} {} {} {1.000}
+E {    5} {w} {ringward} {8} {0} {}
+E {   19} {e} {insert passcard;door} {2} {0} {}
+
+R {   11} {0} {<068>} {-=[ Halfway's Main Entrance ]=-} { } {You are on a walkway just before the Halfway's ring. A large colorful archway with a big, bright sign fills the area. You can hear the hustle and bustle of the station up ahead. Several view ports have been placed in the walls of this section so you can get a glimpse of the station's ring.} {} {} {} {} {1.000}
+E {    5} {e} {hub} {2} {0} {}
+E {   12} {w} {ring} {8} {0} {}
+
+R {   12} {0} {<068>} {-=[ Halfway's Ring ]=-} { } {You are standing on the bayward side of the Halfway's ring. A large map is pasted to the wall opposite the corridor to the docking bays. Below the map are two signs, each pointing down a corridor that leads around the Halfway's ring. Directly next to the junction that you are in is a gaming area and a small arms shop.} {} {} {} {} {1.000}
+E {   11} {e} {hub} {2} {0} {}
+E {   13} {nw} {games} {9} {0} {}
+E {   14} {sw} {shop} {12} {0} {}
+
+R {   13} {0} {<158>} {-=[ George's Goofy Games ]=-} {<138>?} {This section of the station is darker than the rest. Probably to help the people playing the games see the screen better. Along one wall is a row of skeeball machines, while various other video game machines are scattered in pods around the room. The smell of food wafts in from another section of the ring and you can hear the chatter of the video games reverberate around the room.} {} {special;} {} {} {1.000}
+E {   12} {se} {hub} {6} {0} {}
+E {   15} {w} {food} {8} {0} {}
+
+R {   14} {0} {<128>} {-=[ Wild Bill's Pistol Palace ]=-} {<138>S} {A long counter with a display case makes up most of Wild Bill's store. The wall behind the counter contains various weapons and a sign listing items for sale. A small archway leads behind the counter and there is an old fashioned cash register sitting on top of the counter. Another shop leads further around the ring and you can get back to the hub from here.} {} {stall;} {} {} {1.000}
+E {   12} {ne} {hub} {3} {0} {}
+E {   18} {w} {w} {8} {0} {}
+
+R {   15} {0} {<128>} {} {<138>F} {} {} {food;} {} {} {1.000}
+E {   13} {e} {games} {2} {0} {}
+E {   16} {s} {corridor} {4} {0} {}
+
+R {   16} {0} {} {} { } {} {} {} {} {} {1.000}
+E {   15} {n} {food} {1} {0} {}
+E {   17} {e} {enter} {2} {0} {}
+E {   18} {s} {shop} {4} {0} {}
+
+R {   17} {0} {} {} { } {} {} {} {} {} {1.000}
+E {   16} {w} {exit} {8} {0} {}
+
+R {   18} {0} {<128>} {} {<138>S} {} {} {stall;} {} {} {1.000}
+E {   16} {n} {n} {1} {0} {}
+E {   14} {e} {shop} {2} {0} {}
+
+R {   19} {0} {<048>} {-=[ Main Cargo Bay ]=- (door,bay2,bay1)} { } {This is the main receiving bay for the space station. Several crates and boxes line the side walls, while a large airlock covers the back wall. Small paths have been cleared and you can see two more bays to either side of you. A small slot sits on the side of the door.} {} {} {} {} {1.000}
+E {   10} {w} {insert passcard;door} {8} {0} {}
+E {   20} {ne} {bay1} {3} {0} {}
+E {   21} {se} {bay2} {6} {0} {}
+
+R {   20} {0} {<068>} {-=[ Cargo Storage ]=-} { } {The path opens up into a large cargo storage area. Several stacks of containers are sitting here waiting for their owners to collect them. There is a security camera in each corner keeping a watchful eye on the contents of the room. This appears to be a highly guarded section of the cargo bay.} {} {} {} {} {1.000}
+E {   19} {sw} {path} {12} {0} {}
+
+R {   21} {0} {<068>} {-=[ Cargo Storage ]=-} { } {The path opens up into a large cargo storage area. Several stacks of containers are sitting here waiting for their owners to collect them. There is a security camera in each corner keeping a watchful eye on the contents of the room. This appears to be a highly guarded section of the cargo bay.} {} {} {} {} {1.000}
+E {   19} {nw} {path} {9} {0} {}

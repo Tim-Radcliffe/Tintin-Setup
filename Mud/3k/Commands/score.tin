@@ -1,0 +1,78 @@
+#ALIAS {sc} {#NOP %1;score};
+
+#ALIAS {score}
+{
+  #NOP %1;
+  #ACTION {{^(>\s|)Str:\s*(\d+)\s*\((\d+)\)\s+Level\s+:\s+(.+)\s\((\d+)\)\s*Exp\s*:\s*(\S+)}}
+  {
+    #VAR {my[str][curr]} {%%3};
+    #VAR {my[str][base]} {%%4};
+    #VAR {my[level]}     {%%6};
+    #VAR {my[exp]}      {%%7};
+    #REPLACE {my[exp]} {,} {};
+    #UNACTION {{^(>\s|)Str:\s*(\d+)\s*\((\d+)\)\s+Level\s+:\s+(.+)\s\((\d+)\)\s*Exp\s*:\s*(\S+)}};
+  };
+
+  #ACTION {{^(>\s|)Dex:\s*(\d+)\s*\((\d+)\)\s+Age\s+:\s+(.*?)\s+Money\s*:\s*(\S+)}}
+  {
+    #VAR {my[dex][curr]}  {%%3};
+    #VAR {my[dex][base]}  {%%4};
+    #VAR {my[age]}        {%%5};
+    #VAR {my[gold][held]} {%%6};
+    #REPLACE {my[age]} { } {};
+    #REPLACE {my[gold][held]} {,} {};
+    #UNACTION {{^(>\s|)Dex:\s*(\d+)\s*\((\d+)\)\s+Age\s+:\s+(.*?)\s+Money\s*:\s*(\S+)}};
+  };
+
+  #ACTION {{^(>\s|)Wis:\s*(\d+)\s*\((\d+)\)\s+Guild\s+:\s+(.*?)\s+(\((\d+)\)|)\s*Bank\s*:\s*(\S+)}}
+  {
+    #VAR {my[wis][curr]}  {%%3};
+    #VAR {my[wis][base]}  {%%4};
+    #FORMAT {my[guild]} {%l} {%%5};
+    #VAR {my[$my[guild]][level]}  {%%7};
+    #VAR {my[gold][bank]} {%%8};
+    #REPLACE {my[gold][bank]} {,} {};
+    #UNACTION {{^(>\s|)Wis:\s*(\d+)\s*\((\d+)\)\s+Guild\s+:\s+(.*?)\s+(\((\d+)\)|)\s*Bank\s*:\s*(\S+)}};;
+  };
+
+  #ACTION {{^(>\s|)Int:\s*(\d+)\s*\((\d+)\)\s+Status\s+:\s+(.*?)\s+\s*Quests\s*:\s*(\d+)}}
+  {
+    #VAR {my[int][curr]}  {%%3};
+    #VAR {my[int][base]}  {%%4};
+    #FORMAT {my[$my[guild]][title]} {%l} {%%5};
+    #VAR {my[qp]} {%%6};
+    #UNACTION {{^(>\s|)Int:\s*(\d+)\s*\((\d+)\)\s+Status\s+:\s+(.*?)\s+\s*Quests\s*:\s*(\d+)}};
+  };
+
+  #ACTION {{^(>\s|)Con:\s*(\d+)\s*\((\d+)\)}}
+  {
+    #VAR {my[con][curr]}  {%%3};
+    #VAR {my[con][base]}  {%%4};
+    #UNACTION {{^(>\s|)Con:\s*(\d+)\s*\((\d+)\)}};
+  };
+
+  #ACTION {{^(>\s|)Cha:\s*(\d+)\s*\((\d+)\)}}
+  {
+    #VAR {my[cha][curr]}  {%%3};
+    #VAR {my[cha][base]}  {%%4};
+    #UNACTION {{^(>\s|)Cha:\s*(\d+)\s*\((\d+)\)}};
+  };
+
+  #ACTION {{^(>\s|)Hps  :\s*(\d+)\s*\/\s*(\d+)\s*Deaths\s*:\s*(\d+)}}
+  {
+    #VAR {my[hp][current]} {%%3};
+    #VAR {my[hp][max]} {%%4};
+    #VAR {my[deaths]} {%%5};
+    #UNACTION {{^(>\s|)Hps  :\s*(\d+)\s*\/\s*(\d+)\s*Deaths\s*:\s*(\d+)}};
+  };
+
+  #ACTION {{^(>\s|)Sps  :\s*(\d+)\s*\/\s*(\d+)\s*Kills\s*:\s*(\d+)}}
+  {
+    #VAR {my[sp][current]} {%%3};
+    #VAR {my[sp][max]} {%%4};
+    #VAR {my[kills]} {%%5};
+    #UNACTION {{^(>\s|)Sps  :\s*(\d+)\s*\/\s*(\d+)\s*Kills\s*:\s*(\d+)}};
+  };
+
+  #SEND {!score};
+};

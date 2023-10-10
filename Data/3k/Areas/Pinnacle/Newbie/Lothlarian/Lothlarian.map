@@ -1,0 +1,27 @@
+C 500
+
+CE <278>
+CH <118>
+CP <138>
+CR <178>
+CB 
+
+F 8
+
+I 1
+
+L ▪ ╹ ╺ ┗ ╻ ┃ ┏ ┣ ╸ ┛ ━ ┻ ┓ ┫ ┳ ╋ X
+
+
+R {    1} {0} {<068>} {A wide open field} { } {You have been transported somewhere. Smoke rises all around you. You can hear the sounds of clashing swords and cries of war all around you.  A small hole seems to be the only way out of this horrible battlezone.} {} {} {} {} {1.000}
+E {    2} {hole} {.mapLink {Pinnacle/Newbie} {25} {hole};} {0} {0} {}
+E {    3} {s} {s} {4} {0} {}
+E {    4} {e} {e} {2} {0} {}
+
+R {    2} {0} {<000>} {} {<138>*} {} {..} {link;} {} {} {1.000}
+
+R {    3} {0} {<109>} {} { } {} {} {} {} {} {1.000}
+E {    1} {n} {n} {1} {0} {}
+
+R {    4} {0} {<109>} {} { } {} {} {} {} {} {1.000}
+E {    1} {w} {w} {8} {0} {}

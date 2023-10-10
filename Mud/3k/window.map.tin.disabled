@@ -1,0 +1,25 @@
+#VAR {mapBuffer} {};
+
+#ALIAS {.HandlerWindowMap}
+{
+    #NOP %1;
+    #IF {"$map[file]" == ""} #RETURN;
+    #IF {"$_client[version]" > "2.01.1"}
+    {  
+        #MAP MAP {@fScreen{{head}{rows}}} {156} {LIST} {mapBuffer};
+        #FOREACH {*mapBuffer[]} {v}
+        {
+            #REPLACE {mapBuffer[$v]} {\\} {\\};  
+        };
+    };
+    #ELSE
+    {
+        #MAP MAP {@fScreen{{full}{cols}}x@fScreen{{head}{rows}}} {/tmp/map_win.txt};
+        #SYSTEM {sed -i 's/\\/\\\\/g' /tmp/map_win.txt};
+        #SCRIPT {mapBuffer} {cat /tmp/map_win.txt};
+    };
+    .WindowSet {map} {$mapBuffer};
+    .WindowRefresh {map};
+};
+event_register {e_map_refresh} {h_window_map} {.HandlerWindowMap};
+event_register {e_map_room_enter} {h_window_map} {.HandlerWindowMap};

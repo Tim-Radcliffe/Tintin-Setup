@@ -1,0 +1,91 @@
+C 500
+
+CE <278>
+CH <118>
+CP <138>
+CR <178>
+CB 
+
+F 8
+
+I 1
+
+L ▪ ╹ ╺ ┗ ╻ ┃ ┏ ┣ ╸ ┛ ━ ┻ ┓ ┫ ┳ ╋ X
+
+
+R {    1} {0} {<068>} {Entrance to Barracks} { } {You stand just outside of a very large cement building. It looks like it is about one story high, but it is hard to tell since the building is quite large and squat-looking. The sun beats down hard upon the cement pad that you are standing on and reflects off of the cement walls of the building. To the east is a very large archway that leads into the building, there is also a hole here.} {} {} {} {} {1.000}
+E {    2} {hole} {.mapLink {Pinnacle/Newbie} {28} {hole};} {0} {0} {}
+E {    3} {e} {e} {2} {0} {}
+
+R {    2} {0} {<000>} {} {<138>*} {} {..} {link;} {} {} {1.000}
+
+R {    3} {0} {<178>} {Barracks} { } {This appears to be the main room of the military barracks. It looks very large. It would seem that this room was constructed to allow enough room to house a large military contingent. You can see a bright shaft of light coming from the east.} {} {} {} {} {1.000}
+E {    1} {w} {w} {8} {0} {}
+E {    4} {n} {n} {1} {0} {}
+E {    5} {s} {s} {4} {0} {}
+E {    6} {e} {e} {2} {0} {}
+
+R {    4} {0} {<178>} {Barracks} { } {The main hall of this miltiary barracks continues here. It seems to have been made completely out of cement. There is a large wall to your west. The ceiling high above you has a few fluorescent lights in it making it very dreary in here.} {} {} {} {} {1.000}
+E {    3} {s} {s} {4} {0} {}
+E {    7} {n} {n} {1} {0} {}
+E {    8} {e} {e} {2} {0} {}
+
+R {    5} {0} {<178>} {Barracks} { } {This military barracks looks like it was built to withstand a whole lot of abuse. The walls are made out of a thick cement, and the air feels cold and smells like it's been recirculated one too many times.} {} {} {} {} {1.000}
+E {    3} {n} {n} {1} {0} {}
+E {   10} {s} {s} {4} {0} {}
+E {   11} {e} {e} {2} {0} {}
+
+R {    6} {0} {<178>} {Barracks} { } {This is the main room of the military barracks. The ceiling is high over your head, and the cement flooring echoes with the sound of your footsteps. To the east is a small passageway through the cement wall.} {} {} {} {} {1.000}
+E {    3} {w} {w} {8} {0} {}
+E {   11} {s} {s} {4} {0} {}
+E {    8} {n} {n} {1} {0} {}
+E {   13} {e} {e} {2} {0} {}
+
+R {    7} {0} {<178>} {Barracks} { } {The northwest corner of the barracks is located here. Cement walls extend both to the east and to the south. The sound of your footsteps echoes off of the cement floors and walls.} {} {} {} {} {1.000}
+E {    4} {s} {s} {4} {0} {}
+E {    9} {e} {e} {2} {0} {}
+
+R {    8} {0} {<178>} {Barracks} { } {A large wall runs north south here. You can see a wall up ahead to the north. From here you can also see some light coming from an archway a ways to the west. The floor, ceiling and walls all appear to be a drab gray color.} {} {} {} {} {1.000}
+E {    4} {w} {w} {8} {0} {}
+E {    6} {s} {s} {4} {0} {}
+E {    9} {n} {n} {1} {0} {}
+
+R {    9} {0} {<178>} {Barracks} { } {This is the northeast corner of the barracks. You can see that the cement walls that make up this corner are broken only by two small windows near the top. As you walk, your footsteps echo on the cement floor, making a very distinctive noise.} {} {} {} {} {1.000}
+E {    7} {w} {w} {8} {0} {}
+E {    8} {s} {s} {4} {0} {}
+
+R {   10} {0} {<178>} {Barracks} { } {You continue to walk through the large military barracks. The walls come to a corner here in the southwest side of the building. You can see that there is an odd seam in one of the cement walls.} {} {} {} {} {1.000}
+E {    5} {n} {n} {1} {0} {}
+E {   12} {e} {e} {2} {0} {}
+E {   18} {w} {w} {8} {0} {}
+
+R {   11} {0} {<178>} {Barracks} { } {Your footsteps echo as you walk through this military barracks. On the wall to the east you notice a bunch of cots cut into the cement. This must be where the personnel of the barracks sleep.} {} {} {} {} {1.000}
+E {    5} {w} {w} {8} {0} {}
+E {   12} {s} {s} {4} {0} {}
+E {    6} {n} {n} {1} {0} {}
+
+R {   12} {0} {<178>} {Barracks} { } {The barracks comes to a corner here. The cement walls extend up to the ceiling here just like in the rest of the compound. You can see a set of gun racks here, cut out of the cement wall.} {} {} {} {} {1.000}
+E {   10} {w} {w} {8} {0} {}
+E {   11} {n} {n} {1} {0} {}
+
+R {   13} {0} {<068>} {Barracks} { } {This is a small narrow passageway that has lead off from the main room of the barracks. There is one light in the center of the ceiling and a large door to the east. You could probably examine it.} {} {} {} {} {1.000}
+E {    6} {w} {w} {8} {0} {}
+E {   14} {e} {push button;e} {2} {0} {}
+
+R {   14} {0} {<178>} {Barrack passageway} { } {You're walking through a narrow passageway within the military barracks. The walls are lined with all kinds of lights and gadgets. It looks very scientific whatever it is. The light from the walls gives the passage a weird glow.} {} {} {} {} {1.000}
+E {   13} {w} {w} {8} {0} {}
+E {   15} {n} {n} {1} {0} {}
+
+R {   15} {0} {<178>} {Barrack passageway} { } {You continue to walk down this light lined passageway. All of the walls are crowded with displays, readouts, blinking lights, tubes, wires and hoses. A few of them hiss and hum as you walk by.} {} {} {} {} {1.000}
+E {   14} {s} {s} {4} {0} {}
+E {   16} {ne} {ne} {3} {0} {}
+
+R {   16} {0} {<178>} {Barrack passageway} { } {You seem to have come to pretty much the end of the passageway. You can see some large video displays here, with keyboard pads. There are also many lights and displays lining the walls. Everything here looks very advanced and scientific. You also notice through all the jumble of instruments a small passage to the east.} {} {} {} {} {1.000}
+E {   15} {sw} {sw} {12} {0} {}
+E {   17} {e} {e} {2} {0} {}
+
+R {   17} {0} {<178>} {Backroom of barracks} { } {You've walked into a very small and narrow room. The walls are jet black and absorb almost all of the light. This room must be used for the storage of something.} {} {} {} {} {1.000}
+E {   16} {w} {w} {8} {0} {}
+
+R {   18} {0} {} {A secret room} { } {You've stumbled into a secret storage room. There really isn't much space or light in here. The room is mostly filled with dust.} {Barracks} {} {} {} {1.000}
+E {   10} {e} {e} {2} {0} {}

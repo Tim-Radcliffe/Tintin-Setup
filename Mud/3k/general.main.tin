@@ -1,0 +1,52 @@
+#NOP ************ Variables ************;
+
+#FORMAT {gvNull} {%s};
+#VAR {gvMessageBuffer} {$gvNull};
+#VAR {area} {};
+
+#NOP ************ Triggers *************;
+
+#ACTION {#SESSION '%*' ACTIVATED.}
+{
+  #BUFFER end;
+  #NOP  .aMessageRefresh;
+  .aHPBar;
+  #LINE GAG;
+};
+
+#ACTION {^>%s$}
+{
+  event_raise e_prompt;
+} {1};
+
+#PROMPT {^>%s$} {<078>%0} {-1} {};
+
+#ACTION {^{>\s|}%*: Taken}
+{
+  event_raise e_pickup {%2};
+} {3};
+
+#ACTION {^{>\s|}You keep {\*|}%*{\.|}$}
+{
+  event_raise e_keep {%3};
+} {3};
+
+#ALIAS {handler_3k_screen_resize}
+{
+    #NOP %1;
+    #SEND {!setmod ROWS @fScreen{{body}{rows}}};
+};
+event_register {e_screen_resize} {general.main.tin} {handler_3k_screen_resize};
+
+#ALIAS {trigger_command}
+{
+    #NOP %1;
+    #ACTION {^You clear your afk message.}
+    {
+        #LINE GAG;
+        event_raise e_command_end {%1};
+        #UNACTION {^You clear your afk message.};
+    };
+    event_oneshot {e_command_end} {general.main.tin} {%1};
+    #SEND {!afk 0};
+};

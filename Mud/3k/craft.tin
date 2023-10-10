@@ -1,0 +1,260 @@
+#VAR {_craft[quality][specific]} {{1}{legendary}{2}{superior}{3}{good}{4}{average}{5}{poor}{6}{crude}{7}{worthless}};
+#VAR {_craft[quality][all]} {{best}{worst}{all}{any}${_craft[quality][specific]}};
+
+#VAR {_item[fragment of]}    {{nomap}{1}{pickup}{1}{pickup_command}{handler_craft_pickup {%s}}};
+#VAR {_item[essence of]}     {{nomap}{1}{pickup}{1}{pickup_command}{handler_craft_pickup {%s}}};
+#VAR {_item[heart of]}       {{nomap}{1}{pickup}{1}{pickup_command}{handler_craft_pickup {%s}}};
+#VAR {_item[^A Tome of \']}   {{nomap}{1}{pickup}{1}};
+
+#action {^{>\s|}%sWhat luck!  You have found %1} 
+{
+  #bell;
+  #2 !get all from corpse;
+  !stash all;
+  !craftsave;
+  event_raise e_message {** Found %1 **} {craft};
+};
+
+#ALIAS {handler_craft_pickup}
+{
+    #NOP %1;
+    #REGEXP {%1} {%w %*}
+    {
+        #SEND {!get &2};
+        #SEND {!stash &2};
+		sl &2;
+    };
+};
+
+
+#NOP ############## Craft Satchel ###########
+
+#ALIAS {sl}
+{
+    #ACTION {^%%*%%s|%%s%%d%%s|%%s%%d%%s|%%s%%d%%s|%%s%%d%%s|%%s%%d%%s|%%s%%d%%s|%%s%%d%%s|%%s%%d%%s|} 
+    {
+        #FORMAT {_craft[ingredient]} {%l} {%%1};
+        #VAR {_craft[satchel][$_craft[ingredient]][total]} {%%4};
+        #VAR {_craft[satchel][$_craft[ingredient]][subtotal][1]} {%%7};
+        #VAR {_craft[satchel][$_craft[ingredient]][subtotal][2]} {%%10};
+        #VAR {_craft[satchel][$_craft[ingredient]][subtotal][3]} {%%13};
+        #VAR {_craft[satchel][$_craft[ingredient]][subtotal][4]} {%%16};
+        #VAR {_craft[satchel][$_craft[ingredient]][subtotal][5]} {%%19};
+        #VAR {_craft[satchel][$_craft[ingredient]][subtotal][6]} {%%22};
+        #VAR {_craft[satchel][$_craft[ingredient]][subtotal][7]} {%%25};
+        .CleanIngredient $_craft[ingredient];
+    };
+    
+    #ACTION {You have %%d/%%d items in your satchel.}
+    {
+        #UNACTION {^%%*%%s|%%s%%d%%s|%%s%%d%%s|%%s%%d%%s|%%s%%d%%s|%%s%%d%%s|%%s%%d%%s|%%s%%d%%s|%%s%%d%%s|};
+        #UNACTION {You have %%d/%%d items in your satchel.};
+    };
+
+    #SEND {!stashlist %0};
+};
+
+#ALIAS {.CleanIngredient}
+{
+    #REGEXP {%0} {{fragment|essence}}
+    {
+        #FOREACH {*_craft[quality][specific][]} {i}
+        {
+            #IF {$_craft[satchel][%0][subtotal][$i] >= 5}
+            {
+                #SEND {!unstash2 5 $_craft[quality][specific][$i] %0};
+                #SEND {!assemble %0};
+                #SEND {!stash all};
+            };
+        };
+    }
+    {
+        #IF {&_craft[limit][%0] > 0}
+        {
+            #VAR {_craft[limit][current]} {$_craft[limit][%0]};
+        }
+        {
+            #VAR {_craft[limit][current]} {$_craft[limit][default]};
+        }
+        #MATH {_craft[delta]} {$_craft[satchel][%0][total] - $_craft[limit][current]};
+        #IF {$_craft[delta] > 0} 
+        {
+            #REGEXP {%0} {heart}
+            {
+                #NOP **** Don't discard hearts ever ****;
+            }
+            {
+                #REGEXP {%0} {{\sore}}
+                {
+                    #$_craft[delta] {!unstash2 worst %0;!prospect %0};
+                }
+                {
+                    #$_craft[delta] {!unstash2 worst %0};
+                }
+                #VAR {_craft[satchel][%0][total]} {$_craft[limit][current]};
+            };
+        };
+    };
+};
+
+#NOP ############## BLACKSMITH ##############
+
+
+#ALIAS {.smith}
+{
+    #NOP %1;
+    #SEND {!unstash2 %0};
+    #SEND {!insert %2 %3 %4};
+};
+
+#ALIAS {.smith_end}
+{
+    #NOP %1;
+
+    #UNACTION {^%d %*$};
+    #UNACTION {^-INGREDIENTS-};
+
+    #ACTION {^{>\s|}You have created something new!} 
+    {
+        #SEND {!retrieve all};
+        #UNACTION {^{>\s|}You have created something new!}; 
+    };
+    #SEND {!fire};
+};
+
+#ALIAS {produce}
+{
+    #ACTION {^-INGREDIENTS-}
+    {
+        #ACTION {^%d %*$}
+        {
+            #%%%1 .smith %1 %%%2;
+        };
+       
+    };
+    #SEND {!exa moulding};
+    #SEND {!insert moulding};
+    trigger_command {.smith_end};
+};
+
+#NOP ############## WRANGLING ###############
+
+#ALIAS {entrap}
+{
+    #VAR {_craft[entrap][name]} {%1};
+    #IF {%2 > 0}
+    {
+        #VAR {_craft[entrap][level]} {%2};
+        #ECHO {** Entrap Set on %1 at %2 **};
+    }
+    {
+        #VAR {_craft[entrap][level]} {101}:
+    };
+    #ALIAS {handler_entrap}
+    {
+        #NOP %%1;
+        #IF {$opponent[hp] <= $_craft[entrap][level]}
+        {
+            #SEND {!entrap $_craft[entrap][name]};
+            event_register e_room_item h_wrangle handler_wrangle;      
+            #ALIAS {handler_wrangle}
+            {
+                #NOP %%%1;
+                .debug {CRAFT} {WRANGLE: %%%1 : %%%2};
+                #REGEXP {%%%2} {^chaos essence}
+                {
+                    #SEND {!get essence};
+                    #SEND {!wrangle};
+                    event_remove_handler h_wrangle;          
+                    #UNALIAS {handler_wrangle};
+                };
+            };
+            #UNVAR {_craft[entrap]};
+            event_remove_handler h_entrap;
+            #UNALIAS {handler_entrap};
+        };
+    };
+    event_register e_hp_bar h_entrap handler_entrap;
+    event_register e_mip_FFF_L h_entrap handler_entrap;
+    event_register e_killed_opponent h_entrap {event_remove_handler h_entrap};
+};
+
+#NOP ############## ITEM LIMITS ###############
+
+#ALIAS {.showitem}
+{
+  #VAR {_si} {};
+  #ACTION {^Type: %w}
+  {
+    #VAR {_si[type]} {%%1};
+    #UNACTION {^Type:%w};
+  };
+  
+  #ACTION {^Minimum Skill: %d}
+  {
+    #VAR {_si[min]} {%%1};
+    #UNACTION {^Minimum Skill: %d};
+  }; 
+
+  #ACTION {^Trivial Level: %d}
+  {
+    #VAR {_si[max]} {%%1};
+    #UNACTION {^Trivial Level: %d};
+  }; 
+
+  #ACTION {^-INGREDIENTS-}
+  {
+    #ACTION {^%d %*%s$}
+    {
+      #IF {$_craft[level][%%%2][$_si[type]][max] < $_si[max] || "$_craft[level][%%%2][$_si[type]][max]" == ""}
+      {
+        #VAR {_craft[level][%%%2][$_si[type]][max]} {$_si[max]};
+      };
+
+      #IF {$_craft[level][%%%2][$_si[type]][min] > $_si[min] || "$_craft[level][%%%2][$_si[type]][min]" == ""}
+      {
+        #VAR {_craft[level][%%%2][$_si[type]][min]} {$_si[min]};
+      };     
+    };
+    event_register e_prompt h_ingredients {#NOP %%%1;#UNACTION {^%%d %%*%%s$};#UNVAR {_si};event_remove_specific e_prompt h_ingredients;};
+        
+    #UNACTION {^-INGREDIENTS-};
+  };
+
+  #SEND {!showitem %0};
+};
+
+#ALIAS {.buildCraftStats}
+{
+  #VAR {_bCS} {};
+  #VAR {_bCS[i]} {0};
+
+  #ACTION {^{(.*?)\s+\d+\s+\d+\s+\d+\s+coins}}
+  {
+    #LIST {_bCS[list]} {add} {%%2};
+  };
+
+  #ALIAS {.shownext}
+  {
+    #NOP %%1;
+    #VAR {_bCS[i]} {@fEval{$_bCS[i] + 1}};
+    #IF {$_bCS[i] > &_bCS[list][]}
+    {
+      event_remove_specific e_prompt h_showitem;
+      #UNVAR {_bCS};
+      #UNALIAS {.shownext};
+    }
+    {
+      #FORMAT {_bCS[l]} {%l} {$_bCS[list][$_bCS[i]]};    
+      .showitem $_bCS[l];
+    };
+  };
+  event_register e_prompt h_showitem .shownext;
+
+  #SEND {!list %1};
+};
+
+#NOP ############## AUTO ACTIONS ############
+
+#VAR {path[craft]} {$path[mud]/Craft};
+auto add {farm} {.file load {$path[craft]/farm.tin}} {} {#CLASS {$path[craft]/farm.tin} {kill}};

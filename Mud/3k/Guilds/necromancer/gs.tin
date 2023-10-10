@@ -1,0 +1,73 @@
+#NOP /* Necromancer "gs" command */;
+#ALIAS {gs}
+{
+    #NOP %1;
+    #CLASS {cNecroGS} {open};
+    
+    #ACTION {^ |  All Circles:[%s%d/60]}
+    {
+        #VAR {my[necromancer][circle]} {%%2};
+    };
+
+    #ACTION {{^ \| HP:(\d+)\/(\d+)(\((\d+)\/(\d+)\)|)\s+SP:(\d+)\/(\d+)(\((\d+)\/(\d+)\)|)\s+NP:(\d+)\/(\d+)\s+Worth:(\d+)(%)}}
+    {
+        #VAR {my[hp][current]}                    {%%2};
+        #VAR {my[hp][max]}                        {%%3};
+        #VAR {my[necromancer][hpfuse][current]}   {%%5};
+        #VAR {my[necromancer][hpfuse][max]}       {%%6};
+        #VAR {my[sp][current]}                    {%%7};
+        #VAR {my[sp][max]}                        {%%8};
+        #VAR {my[necromancer][spfuse][current]}   {%%10};
+        #VAR {my[necromancer][spfuse][max]}       {%%11};
+        #VAR {my[gp1][current]}                   {%%12};
+        #VAR {my[gp1][max]}                       {%%13};
+        #VAR {my[necromancer][worth]}             {%%14};
+    };
+    
+    #ACTION {^ | Teleports:%d/%d, Form Glamors:%d/%d (%w)}
+    {
+        #VAR {my[necromancer][teleports][current]}  {%%1};
+        #VAR {my[necromancer][teleports][max]}      {%%2};
+        #VAR {my[necromancer][glamors][current]}    {%%3};
+        #VAR {my[necromancer][glamors][max]}        {%%4};
+    };
+    
+    #ACTION {^ | You are %d\% to your next %w %w repower}
+    {
+        #VAR {my[necromancer][repower]} {%%1};
+        #VAR {my[necromancer][stone][%%2]} {&my[necromancer][stone][]};
+    };    
+    
+    #ACTION {^ | You have a %+ familiar named %w.}
+    {
+        #VAR {my[necromancer][familiar]} {%%2};
+    };
+    
+    #ACTION {^ | You command an undead follower named %w (%w)}
+    {
+        #VAR {my[necromancer][undead][name]} {%%1};
+        #VAR {my[necromancer][undead][type]} {%%2};
+    };    
+    
+    #ACTION {^ |    ginseng:%d    black pearls:%d    spider web:%d    goldenrod:%d}
+    {
+        #VAR {my[necromancer][reagent][ginseng]}      {%%1};
+        #VAR {my[necromancer][reagent][black pearls]} {%%2};
+        #VAR {my[necromancer][reagent][spider web]}   {%%3};
+        #VAR {my[necromancer][reagent][goldenrod]}    {%%4};
+    };
+    
+    #ACTION {^ |   mandrake:%d    pine needles:%d    nightshade:%d    bloodmoss:%d}
+    {
+        #VAR {my[necromancer][reagent][mandrake]}     {%%1};
+        #VAR {my[necromancer][reagent][pine needles]} {%%2};
+        #VAR {my[necromancer][reagent][nightshade]}   {%%3};
+        #VAR {my[necromancer][reagent][bloodmoss]}    {%%4};
+    };
+    
+    #CLASS {cNecroGS} {close};
+    
+    event_oneshot {e_prompt} {cNecroGS} {#NOP %%1;#CLASS {cNecroGS} {kill};};
+    
+    #SEND {!gs};
+};

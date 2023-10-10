@@ -1,0 +1,195 @@
+C 500
+
+CE <278>
+CH <118>
+CP <138>
+CR <178>
+CB 
+
+F 8
+
+I 8
+
+L ▪ ╹ ╺ ┗ ╻ ┃ ┏ ┣ ╸ ┛ ━ ┻ ┓ ┫ ┳ ╋ X
+
+
+R {    1} {0} {<068>} {Path} { } {You are on a small gravel path. There is a hole in the ground. The path extends towards the south and it's almost like an invitation to adventure onwards to new and exciting places.} {} {} {} {} {1.000}
+E {    2} {hole} {.mapLink {Pinnacle/Newbie} {26} {hole};} {0} {0} {}
+E {    3} {s} {s} {4} {0} {}
+
+R {    2} {0} {<000>} {} {<138>*} {} {..} {link;} {} {} {1.000}
+
+R {    3} {0} {<178>} {Path} { } {You are walking down a small gravel path. To the north you see a large inviting mysterious hole. Looking south, you see a small forest which looks very inviting.} {} {} {} {} {1.000}
+E {    1} {n} {n} {1} {0} {}
+E {    4} {s} {s} {4} {0} {}
+
+R {    4} {0} {<178>} {Path} { } {You are on the edge of a small forest. The trees extend away from you on both sides. You cannot see any animals but you are sure that there should be some in there. It looks very cool and peaceful.} {} {} {} {} {1.000}
+E {    3} {n} {n} {1} {0} {}
+E {    5} {s} {s} {4} {0} {}
+
+R {    5} {0} {<178>} {Path} { } {You are at the outskirts of the forest. It definitely is cool and peaceful in here. Sunlight trickles down from the holes in the canopy above. You observe a deer trail heading west.} {} {} {} {} {1.000}
+E {    4} {n} {n} {1} {0} {}
+E {    6} {s} {s} {4} {0} {}
+E {    7} {w} {w} {8} {0} {}
+
+R {    6} {0} {<178>} {Path} { } {The forest is becoming darker and colder. You start to feel some disquiet and look around warily. You are not so sure anymore that this forest is as peaceful as you thought it was.} {} {} {} {} {1.000}
+E {    5} {n} {n} {1} {0} {}
+E {    8} {s} {s} {4} {0} {}
+
+R {    7} {0} {<178>} {Forest} { } {The sun seems to smile on you as you enter this part of the forest. To the south you hear the laughter of fairies and to the west you hear the sounds of quiet animal movements.} {} {} {} {} {1.000}
+E {    5} {e} {e} {2} {0} {}
+E {   33} {s} {s} {4} {0} {}
+E {   34} {w} {w} {8} {0} {}
+
+R {    8} {0} {<178>} {Path} { } {You can see now that there is something seriously wrong with this forest. As you look around, you see that many trees are stunted and leafless. It is almost like the trees are fighting each other for every bit of the remaining sunlight.} {} {} {} {} {1.000}
+E {    6} {n} {n} {1} {0} {}
+E {    9} {s} {s} {4} {0} {}
+
+R {    9} {0} {<178>} {Path} { } {It seems like you have spent forever in this dark and gloomy forest. You feel crowded by the trees and stumble about in the darkness. As you search for a way to go, you notice that there is a dark gaping hole in the forest to the east. There is a strange whistling sound coming from the south.} {} {} {} {} {1.000}
+E {    8} {n} {n} {1} {0} {}
+E {   10} {s} {s} {4} {0} {}
+E {   11} {e} {e} {2} {0} {}
+
+R {   10} {0} {<178>} {Path} { } {The forest seems to be thinning out as there are patches of flat rock that the trees cannot get their roots into. This effect seems to get greater the further south you peer. The source of the sound still is not evident.} {} {} {} {} {1.000}
+E {    9} {n} {n} {1} {0} {}
+E {   26} {s} {s} {4} {0} {}
+
+R {   11} {0} {<178>} {Forest} { } {You stand inside the dark gap. This part of the forest has a nightmarish feel to it. Twisted and leafless trees surround you. They almost appear to be screaming in agony. Very strange...} {} {} {} {} {1.000}
+E {    9} {w} {w} {8} {0} {}
+E {   12} {s} {s} {4} {0} {}
+E {   13} {e} {e} {2} {0} {}
+
+R {   12} {0} {<178>} {Forest} { } {As you enter this part of the forest, you become aware of the sound of growling coming from the bushes around you. You look around nervously and spot several pairs yellow eyes in the underbrush. Are you sure you want to stick around?} {} {} {} {} {1.000}
+E {   11} {n} {n} {1} {0} {}
+
+R {   13} {0} {<178>} {Forest} { } {A dense fog is rising and you find that you can barely see your hand even when you place it directly in front of your face. Your eyes and ears appear to be playing tricks on you. But you are fairly certain that you can hear a humming noise to the east, and a dry rustling sound coming from the south. Strangely, you cannot hear anything from the west or the north.} {} {} {} {} {1.000}
+E {   11} {w} {w} {8} {0} {}
+E {   14} {n} {n} {1} {0} {}
+E {   15} {s} {s} {4} {0} {}
+E {   16} {e} {e} {2} {0} {}
+
+R {   14} {0} {<178>} {Forest} { } {The fog swirls around you. You can tell by the lack of tree branches slapping you in the face that you have entered some sort of small clearing. Through a hole in the fog you spot the stump of a very large tree standing alone and abandoned.} {} {} {} {} {1.000}
+E {   13} {s} {s} {4} {0} {}
+E {   17} {w} {w} {8} {0} {}
+E {   18} {e} {e} {2} {0} {}
+
+R {   15} {0} {<178>} {Forest} { } {The dry rustling sound almost seems to be more of either a rasping or rattling sound. You're not quite sure which, however the one thing you're certain of is that it's much louder to the east...} {} {} {} {} {1.000}
+E {   13} {n} {n} {1} {0} {}
+E {   25} {e} {e} {2} {0} {}
+
+R {   16} {0} {<178>} {Forest} { } {Ouch, that humming noise suddenly resolved into the buzzing of busy creatures. You seem to be too close to their hive. Unless you want to get stung badly, it may be a good idea to drift away quietly...} {} {} {} {} {1.000}
+E {   13} {w} {w} {8} {0} {}
+
+R {   17} {0} {<178>} {Forest} { } {You trip over some strange low mounds in the ground that you barely see in time. What sends shivers down your spine is that the mounds squeal as you step on them. You find you are having a very hard time maintaining your footing around here.} {} {} {} {} {1.000}
+E {   14} {e} {e} {2} {0} {}
+E {   19} {n} {n} {1} {0} {}
+
+R {   18} {0} {<178>} {Forest} { } {The fog swirls around you so densely that you stumble on blindly through the forest. Tree branches whip your face and bushes grab at your feet. Moving around in here is not fun...} {} {} {} {} {1.000}
+E {   14} {w} {w} {8} {0} {}
+E {   23} {n} {n} {1} {0} {}
+
+R {   19} {0} {<178>} {Forest} { } {The fog seems to be settling down to the ground, clinging to your ankles and surrounding your feet. Strangely you still can't see very well in this part of the forest. Not a place easily explored.} {} {} {} {} {1.000}
+E {   17} {s} {s} {4} {0} {}
+E {   20} {e} {e} {2} {0} {}
+
+R {   20} {0} {<178>} {Forest} { } {As you enter this part of the forest, you become aware of a steady clacking noise. Almost like someone is sharpening hundreds of knives. Then you become aware that the noise is coming from a large mound standing directly in front of you. You don't want to go near that.} {} {} {} {} {1.000}
+E {   19} {w} {w} {8} {0} {}
+E {   21} {n} {n} {1} {0} {}
+
+R {   21} {0} {<178>} {Forest} { } {Now that is the darkest thicket you've ever seen. It even makes this part of the forest look darker. You begin to wonder if the darkness is natural or not. Then you start to wonder if you really want to find out what could make such a darkness...} {} {} {} {} {1.000}
+E {   20} {s} {s} {4} {0} {}
+E {   22} {w} {w} {8} {0} {}
+
+R {   22} {0} {<178>} {Forest} { } {Yep, this is indeed a very dark thicket. Your light barely reaches to its corners. This would be the perfect place for someone to hide when counting their stolen treasure or planning some other nefarious deed...} {} {} {} {} {1.000}
+E {   21} {e} {e} {2} {0} {}
+
+R {   23} {0} {<178>} {Forest} { } {The fog swirls around you so densely that you stumble on blindly through the forest. Tree branches whip your face and bushes grab at your feet. It seems a little lighter to the north.} {} {} {} {} {1.000}
+E {   18} {s} {s} {4} {0} {}
+E {   24} {n} {n} {1} {0} {}
+
+R {   24} {0} {<178>} {Forest} { } {In the fog you see vague shapes moving about. Every so often you see the flash of dark red eyes that appear to be glaring at you with hate and hunger. Not really the place to be invited to supper, unless you want to be the main course...} {} {} {} {} {1.000}
+E {   23} {s} {s} {4} {0} {}
+
+R {   25} {0} {<178>} {Forest} { } {The ground seems to be moving under your feet. The forest is very dark and cool here. You have a hard time seeing just what is making it so hard to walk here. What bothers you even more is that the vines on the ground seem to move once in a while...} {} {} {} {} {1.000}
+E {   15} {w} {w} {8} {0} {}
+
+R {   26} {0} {<178>} {Path} { } {You finally emerge from the dark woods but realize that there still is not a lot of sunlight about. A cliff to the south overshadows everything, leaving it dim and cool here. You feel a chill as you examine the craggy cliff face that goes straight up.} {} {} {} {} {1.000}
+E {   10} {n} {n} {1} {0} {}
+E {   27} {s} {s} {4} {0} {}
+
+R {   27} {0} {<178>} {Path} { } {The dark forest stands to the north while the cliff dominates your view to the south. You are not certain which looks more forbidding. As you scan over the cliff face you realize that there is a small break at its base.} {} {} {} {} {1.000}
+E {   26} {n} {n} {1} {0} {}
+E {   28} {s} {s} {4} {0} {}
+
+R {   28} {0} {<178>} {Cave mouth} { } {You stand at the mouth of the cave. Its walls, floor, and ceiling are all of the same sheer rock as the cliff face. This is a natural place for predators to hang out. But they would either need a good fur coat or a fire as it is cold in here. You get the feeling you are not alone...} {} {} {} {} {1.000}
+E {   27} {n} {n} {1} {0} {}
+E {   29} {s} {s} {4} {0} {}
+
+R {   29} {0} {<178>} {Cave} { } {Wow, it got dark in here all of a sudden. You almost can't see the cave walls as it is so dim in here. You get a spooky feeling as you search around looking for some way out.} {} {} {} {} {1.000}
+E {   28} {n} {n} {1} {0} {}
+E {   30} {s} {s} {4} {0} {}
+E {   31} {e} {e} {2} {0} {}
+
+R {   30} {0} {<178>} {Cave} { } {The dark cave echos with your footsteps. Its walls, floor, and ceiling are all of the same sheer rock you've been seeing all along. You almost smack your face into the rock but save yourself as you realize the cave ends abruptly here.} {} {} {} {} {1.000}
+E {   29} {n} {n} {1} {0} {}
+
+R {   31} {0} {<178>} {Cave} { } {Ugh, it smells bad in here. You wonder who'd died lately then suddenly realize you don't want it to be you. There is a dark hole leading down but you are not certain at all if you really want to find out what is down there.} {} {} {} {} {1.000}
+E {   29} {w} {w} {8} {0} {}
+E {   32} {d} {d} {32} {0} {}
+
+R {   32} {0} {<178>} {Cave hole} { } {Garbage, filth, and other discarded remains litter the slick surface of this stinking hole. Someone has claimed this as their home but it's not a natural predator as the stink would drive them out. You get the feeling you are not alone...} {} {} {} {} {1.000}
+E {   31} {u} {u} {16} {0} {}
+
+R {   33} {0} {<178>} {Forest} { } {You could swear you heard some laughter as you walked into this clearing in the forest. Hmm, yet you see nothing. Wait, from the corner of your eye did you just see a small figure scamper away?} {} {} {} {} {1.000}
+E {    7} {n} {n} {1} {0} {}
+E {   35} {w} {w} {8} {0} {}
+
+R {   34} {0} {<178>} {Forest} { } {This part of the forest is very quiet and restfully dark. The only sounds you hear are the hooting of owls and the scampering of their small prey.} {} {} {} {} {1.000}
+E {    7} {e} {e} {2} {0} {}
+E {   36} {w} {w} {8} {0} {}
+
+R {   35} {0} {<178>} {Forest} { } {There is little space between the trees here. You have to move carefully to avoid bumping into one. As you look around to get your bearings, you see a tall tree that towers above all the others to the south.} {} {} {} {} {1.000}
+E {   33} {e} {e} {2} {0} {}
+E {   37} {s} {s} {4} {0} {}
+E {   38} {w} {w} {8} {0} {}
+
+R {   36} {0} {<178>} {Forest} { } {The trees surround you here in this natural grove. There almost seems to be no one around then you realize there is something odd about the trees. You get the feeling you are being watched...} {} {} {} {} {1.000}
+E {   34} {e} {e} {2} {0} {}
+
+R {   37} {0} {<178>} {Forest} { } {The tree in the center of this clearing towers above you, extending itself hundreds of feet into the air above. You wonder how something so huge and natural could have survived in this world so long.} {} {} {} {} {1.000}
+E {   35} {n} {n} {1} {0} {}
+E {   42} {s} {s} {4} {0} {}
+E {   43} {e} {e} {2} {0} {}
+
+R {   38} {0} {<178>} {Forest} { } {You hear mischievous laughter but still cannot see who is responsible for it. The giggling is driving you crazy in a nice sort of way. You feel like you are in a hide and seek game...} {} {} {} {} {1.000}
+E {   35} {e} {e} {2} {0} {}
+E {   39} {s} {s} {4} {0} {}
+
+R {   39} {0} {<178>} {Forest} { } {The forest here echos with both the sounds of laughter and the soothing sounds of singing. When you concentrate on the singing, you realize that there is the faint sound of music coming from the south.} {} {} {} {} {1.000}
+E {   38} {n} {n} {1} {0} {}
+E {   40} {s} {s} {4} {0} {}
+
+R {   40} {0} {<178>} {Forest} { } {The forest still surrounds you, but the music is louder now. Its smooth clear sounds are enchanting and you find yourself compelled to find out who or what is making that incredible melody. You find yourself dancing towards the south.} {} {} {} {} {1.000}
+E {   39} {n} {n} {1} {0} {}
+E {   41} {s} {s} {4} {0} {}
+
+R {   41} {0} {<178>} {Forest} { } {You step into a cool, calm clearing. The forest surrounds you in a natural amphitheatre with the highlight being the deep pool positioned in the very center of the clearing. You can't help but dance to the astral music soothing your senses...} {} {} {} {} {1.000}
+E {   40} {n} {n} {1} {0} {}
+
+R {   42} {0} {<178>} {Forest} { } {The forest is rather dense here yet strangely orderly. A tall tree catches your attention to the north. You hear the sound of humming to the south yet the forest still looks very peaceful.} {} {} {} {} {1.000}
+E {   37} {n} {n} {1} {0} {}
+E {   46} {s} {s} {4} {0} {}
+
+R {   43} {0} {<178>} {Forest} { } {The rustling of leaves is the only sound you can hear in this part of the forest. A tall tree catches your attention to the west. A glimmer of light shines through the trees from the south as well.} {} {} {} {} {1.000}
+E {   37} {w} {w} {8} {0} {}
+E {   44} {s} {s} {4} {0} {}
+
+R {   44} {0} {<178>} {Forest} { } {As the forest becomes less dense you feel the sun flicker off of your face. To the south you hear laughter and giggles and wonder who's chasing who. You wonder if you should disturb their privacy.} {} {} {} {} {1.000}
+E {   43} {n} {n} {1} {0} {}
+E {   45} {s} {s} {4} {0} {}
+
+R {   45} {0} {<178>} {Forest} { } {The sun blazes into your eyes and you are blinded momentarily. As you shade your eyes, you behold a remarkable arrangement of shrubbery. Kinda looks comfy but wildly messed up...} {} {} {} {} {1.000}
+E {   44} {n} {n} {1} {0} {}
+
+R {   46} {0} {<178>} {Forest} { } {This part of the forest is definitely more orderly and less wild than the rest of the forest. It's almost like someone has been landscaping the forest bringing out its most beautiful features.} {} {} {} {} {1.000}
+E {   42} {n} {n} {1} {0} {}

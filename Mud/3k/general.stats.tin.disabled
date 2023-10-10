@@ -1,0 +1,27 @@
+#ALIAS {.aHPBar}
+{
+  #NOP %1;
+  #IF {@GuildHP{} == 1} {#NOP}
+  {
+    #FORMAT {vHPBar} {<AAB><fff>HP:%s%+4s<fff> SP:%s%+4s<fff> %s:%s%+4s<fff> %s:%s%+4s<fff> Vs:%s%-7s<fff>}
+    {@fColourStat{$my[hp][current];$my[hp][max]}}
+    {$my[hp][current]}
+    {@fColourStat{$my[sp][current];$my[sp][max]}}
+    {$my[sp][current]}
+    {$my[gp1][name]}
+    {@fColourStat{$my[gp1][current];$my[gp1][max]}}
+    {$my[gp1][current]}
+    {$my[gp2][name]}
+    {@fColourStat{$my[gp2][current];$my[gp2][max]}}
+    {$my[gp2][current]}
+    {@fColourStat{$opponent[hp];100}}
+    {$opponent[hp]};
+  };
+
+  #FORMAT {session[time]} {%t} {%R};
+#NOP  #SHOWME {@fLinePad{{$vHPBar}{$session[time] $session[RebootTime] $session[name]}{}}} {1};
+  #ECHO {{@fLinePad{{$vHPBar}{$session[time] $session[RebootTime] $session[name]}{}}}{-2}};
+};
+event_register e_hp_bar h_hp_bar .aHPBar;
+event_register e_mip_FFF h_mip_fff .aHPBar;
+.aHPBar;

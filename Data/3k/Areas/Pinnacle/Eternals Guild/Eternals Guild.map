@@ -1,0 +1,23 @@
+C 500
+
+CE <278>
+CH <118>
+CP <138>
+CR <178>
+CB 
+
+F 9
+
+I 1
+
+L ▪ ╹ ╺ ┗ ╻ ┃ ┏ ┣ ╸ ┛ ━ ┻ ┓ ┫ ┳ ╋ X
+
+
+R {    1} {0} {<048>} {The Eternal Gateway} { } {This is it, the threshold of ultimate power on the road to immortality. You feel an unseen cord pulling from the center of your being toward the enthalpy and greatness which lies before you.  Beyond this gateway stand the forces which, if harnessed, may define your role within the universe as a key to its very existence.} {} {} {} {} {1.000}
+E {    2} {leave} {.mapLink {Pinnacle} {147} {leave};} {0} {1} {}
+E {    3} {n} {enter} {1} {0} {}
+
+R {    2} {0} {<000>} {LINK: Pinnacle} {<138>*} {} {Pinnacle} {{link}{}} {} {} {1.000}
+
+R {    3} {0} {} {} { } {} {} {} {} {} {1.000}
+E {    1} {s} {s} {4} {0} {}

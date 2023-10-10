@@ -1,0 +1,48 @@
+C 500
+
+CE <278>
+CH <118>
+CP <138>
+CR <178>
+CB 
+
+F 8
+
+I 1
+
+L ▪ ╹ ╺ ┗ ╻ ┃ ┏ ┣ ╸ ┛ ━ ┻ ┓ ┫ ┳ ╋ X
+
+
+R {    1} {0} {<068>} {Outside a Dark Cave} { } {You are in a clearing in the middle of the forest. In the center of the clearing is a rock outcropping. Sunlight shines down through the open air and you can hear birds whistling in the trees. The rock in the clearing has an opening.  A deep black hole lies to the right of the rock.} {} {} {} {} {1.000}
+E {    2} {s} {.mapLink {Pinnacle/Newbie} {26} {s};} {4} {0} {}
+E {    3} {d} {crawl into opening} {32} {0} {}
+
+R {    2} {0} {<000>} {} {<138>*} {} {..} {link;} {} {} {1.000}
+E {    1} {n} {n} {1} {0} {}
+
+R {    3} {0} {<068>} {A Staircase} { } {You are just inside a large rock. There is an opening here where you can get out from. Light shines through the hole to  reveal a small carved out room. The floor is made of dirt. The only thing that catches your eye is the crude staircase leading down.} {New Kobold Cave} {} {} {} {1.000}
+E {    1} {u} {opening} {16} {0} {}
+E {    4} {d} {d} {32} {0} {}
+E {    5} {s} {enter passage} {4} {0} {}
+
+R {    4} {0} {<178>} {A Staircase} { } {You are on an old crude staircase. Above you can make out a dim light. Below, there is only darkness. The stairs are made of stone\; probably the same stone as the rock above. The walls are made of dirt. You can see the roots of trees penetrating from them.} {} {} {} {} {1.000}
+E {    3} {u} {u} {16} {0} {}
+E {    6} {d} {d} {32} {0} {}
+
+R {    5} {0} {} {A hidden room} { } {You are in a dark room beneath the forest floor. The air is dank and stale. The ground is rough and unfinished and there is no furniture around. The only thing that catches your attention are the chains on  the wall.} {} {} {} {} {1.000}
+E {    3} {n} {u} {1} {0} {}
+
+R {    6} {0} {<178>} {Bottom of a Stairwell} { } {You are at the bottom of an old crude stone staircase. The air is cold and damp. The earthen floor looks recently trampled on as though a lot of traffic runs through here. In the ceiling, you can see bits of roots penetrating into the room. There are rooms to the north, east and west, but they all have doors on them except for the northern one.} {} {} {} {} {1.000}
+E {    4} {u} {u} {16} {0} {}
+E {    7} {n} {n} {1} {0} {}
+E {    8} {w} {w} {8} {0} {}
+E {    9} {e} {e} {2} {0} {}
+
+R {    7} {0} {<178>} {A Den} { } {You've entered a den of some sort. The floor is covered in dirt, or wait..it's made of dirt. There is a table in the middle of the room with a bowl in the middle of it. Six small wooden chairs sit around the table. They look quite short. As though they were made for a smaller species.} {} {} {} {} {1.000}
+E {    6} {s} {s} {4} {0} {}
+
+R {    8} {0} {<178>} {Bottom of a Stairwell} { } {You are in a small earthen room. There are many trinkets lying around, but none of them really catch your eye. The walls are earthen but tidy, and the floor is well built. In the centre of the room is a small pedestal.} {New Kobold Cave} {} {} {} {1.000}
+E {    6} {e} {e} {2} {0} {}
+
+R {    9} {0} {<178>} {A small bedroom} { } {You are in a small bedroom. There is a bed in the corner with a nice hand made quilt on it. A dresser and shelf stand opposite the bed and the floor is decorated with a simple rug. The odd thing about the whole thing is that everything is much smaller, as though a  smaller person lived here.} {} {} {} {} {1.000}
+E {    6} {w} {w} {8} {0} {}

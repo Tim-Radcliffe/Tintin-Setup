@@ -1,0 +1,30 @@
+#NOP Switch bags
+auto {add} {bag} {#ACTION {There is not room for more.} {.bagswap}} {} {#UNACTION {There is not room for more.}};
+
+#ALIAS {.bagswap}
+{
+    #NOP %1;
+    #VAR {_gvBS} {9};
+    #IF {"%0" != ""}
+    {
+        #VAR {_gvBS} {%0};
+    };
+    #ELSEIF {"%0" == "1"}
+    {
+        auto bag off;
+    };
+    #ACTION {^You have no bag %d.}
+    {
+        .bagswap @fEval{%%1 - 1};
+    };
+    #ACTION {^You unkeep}
+    {
+        #UNACTION {^You have no bag %d.};
+        #SEND {!give bag $_gvBS to $my[name]};
+        #SEND {!keep bag};
+        #SEND {!keep bag $_gvBS};
+        #UNVAR {_gvBS};
+        #UNACTION {^You unkeep};
+    }; 
+    #SEND {!unkeep bag $_gvBS};
+};

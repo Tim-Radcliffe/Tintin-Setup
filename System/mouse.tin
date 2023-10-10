@@ -1,0 +1,100 @@
+#NOP Mouse Events;
+#CONFIG {MOUSE TRACKING} ON;
+
+#NOP SCREEN FOCUS           %0 focus (0 or 1);
+#EVENT {SCREEN FOCUS}
+{
+    .debug MOUSE {SCREEN FOCUS: %0 : %1};
+};
+
+#NOP SCREEN LOCATION        %0 rows %1 cols  %2 height %3 width;
+#EVENT {SCREEN LOCATION}
+{
+    .debug MOUSE {SCREEN LOCATION: %0 : %1};
+};
+
+#NOP SCREEN MOUSE LOCATION  %0-3 screen row/col %4-7 cell row/col %8 loc;
+#EVENT {SCREEN MOUSE LOCATION}
+{
+    .debug MOUSE {SCREEN MOUSE LOCATION: %0 : %1 : %2};
+};
+
+#EVENT {PRESSED MOUSE BUTTON ONE}
+{
+    .debug MOUSE {PRESSED MOUSE BUTTON ONE: %0 : %1 : %2 : %3 : %4 : %5};	
+};
+
+#EVENT {MOVED MOUSE BUTTON ONE}
+{
+    .debug MOUSE {MOVED MOUSE BUTTON ONE: %0 : %1 : %2 : %3 : %4 : %5};	
+};
+
+#EVENT {RELEASED MOUSE BUTTON ONE}
+{
+    .debug MOUSE {RELEASED MOUSE BUTTON ONE: %0 : %1 : %2 : %3 : %4 : %5};	
+};
+
+#EVENT {SCROLLED MOUSE WHEEL UP}
+{
+    .debug MOUSE {SCROLLED MOUSE WHEEL UP: %0 : %1 : %2};	
+};
+
+#EVENT {SCROLLED MOUSE WHEEL DOWN}
+{
+    .debug MOUSE {SCROLLED MOUSE WHEEL DOWN: %0 : %1 : %2};	
+};
+
+#NOP DOUBLE-CLICKED <VAR>   %0 row %1 col %2 -row %3 -col %4 word %5 line;
+#EVENT {DOUBLE-CLICKED MOUSE BUTTON ONE}
+{
+    .debug MOUSE {DOUBLE CLICKED: %0 : %1 : %2};
+};
+
+#NOP LONG-CLICKED <VAR>     %0 row %1 col %2 -row %3 -col %4 word %5 line;
+#EVENT {LONG-CLICKED MOUSE BUTTON ONE}
+{
+    .debug MOUSE {LONG CLICKED: %0 : %1 : %2};
+};
+
+#NOP SHORT-CLICKED <VAR>    %0 row %1 col %2 -row %3 -col %4 word %5 line;
+#EVENT {SHORT-CLICKED MOUSE BUTTON ONE}
+{
+    .debug MOUSE {SHORT CLICKED MOUSE BUTTON ONE: %0 : %1 : %2};
+};
+
+
+#NOP SWIPED <DIR>;                            
+#NOP           %0 dir %1 button %2 row %3 col %4 -row %5 -col %6 row %7 col %8 -row;
+#NOP           %9 -col %10 rows %11 cols;
+#EVENT {SWIPED}
+{
+    .debug MOUSE {SWIPED: %0 : %1 : %2};
+};
+
+#NOP TRIPLE-CLICKED <VAR>   %0 row %1 col %2 -row %3 -col %4 word %5 line;
+#EVENT {TRIPLE-CLICKED}
+{
+    .debug MOUSE {TRIPLE-CLICKED: %0 : %1 : %2};
+};
+
+
+#NOP MAP MOUSE
+
+
+#EVENT {MAP PRESSED MOUSE BUTTON ONE}
+{
+    event_raise {e_mouse_map_pressed} {1} {%0} {%1} {%2} {%3} {%4} {%5};
+    .debug MAP_MOUSE {MAP PRESSED MOUSE BUTTON ONE: %0 : %1 : %2 : %3 : %4 : %5};
+};
+
+#EVENT {MAP MOVED MOUSE BUTTON ONE}
+{
+    event_raise {e_mouse_map_moved} {1} {%0} {%1} {%2} {%3} {%4} {%5};
+    .debug MAP_MOUSE {MAP MOVED MOUSE BUTTON ONE: %0 : %1 : %2 : %3 : %4 : %5};
+};
+
+#EVENT {MAP RELEASED MOUSE BUTTON ONE}
+{
+    event_raise {e_mouse_map_released} {1} {%0} {%1} {%2} {%3} {%4} {%5};
+    .debug MAP_MOUSE {MAP RELEASED MOUSE BUTTON ONE: %0 : %1 : %2 : %3 : %4 : %5};
+};

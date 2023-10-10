@@ -1,0 +1,151 @@
+C 500
+
+CE <278>
+CH <118>
+CP <138>
+CR <178>
+CB 
+
+F 8
+
+I 4
+
+L ▪ ╹ ╺ ┗ ╻ ┃ ┏ ┣ ╸ ┛ ━ ┻ ┓ ┫ ┳ ╋ X
+
+
+R {    1} {0} {<068>} {On the edge of a small farm} { } {This is the edge of a small farming area, and must be where the villagers on the other side of that hole get their food. The fields extend to the north, south, and east. The fields are worked by peasants and farmers of all ages. The annoying little boys look like they might be the easiest to kill.  } {} {} {} {} {1.000}
+E {    2} {n} {n} {1} {0} {}
+E {    3} {s} {s} {4} {0} {}
+E {    4} {e} {e} {2} {0} {}
+E {    5} {hole} {.mapLink {Pinnacle/Newbie} {25} {hole};} {0} {0} {}
+
+R {    2} {0} {<178>} {In the middle of a small farm.} { } {The tall rows of corn make it hard to see very far in any direction. Judging by the forest that is visible over the tops of the corn to the west, you must be close to the edge of the small farm. The farmers and peasants take a great deal of pride in their ability to grow corn.  } {} {} {} {} {1.000}
+E {    1} {s} {s} {4} {0} {}
+E {    6} {n} {n} {1} {0} {}
+E {    7} {e} {e} {2} {0} {}
+
+R {    3} {0} {<178>} {The center of a small farm} { } {Here on the edge of a small Mandorian farm is a neat lettuce patch. The local peasants and farmers are busy tending their crops in order to provide the village with food. The small farm extends to the north, south, and east.  } {} {} {} {} {1.000}
+E {    1} {n} {n} {1} {0} {}
+E {    8} {s} {s} {4} {0} {}
+E {    9} {e} {e} {2} {0} {}
+
+R {    4} {0} {<178>} {The middle of a small farm} { } {All types of beans are being grown on this portion of the farm. There are rows of lima beans, string beans, and a few other types of bean that are not recognizable. It is amazing how the peasants can grow so much in such a small space here in Mandor. It must be the warm sunny climate, or the water that they use.  } {} {} {} {} {1.000}
+E {    1} {w} {w} {8} {0} {}
+E {    9} {s} {s} {4} {0} {}
+E {    7} {n} {n} {1} {0} {}
+E {   13} {e} {e} {2} {0} {}
+
+R {    5} {0} {<000>} {} {<138>*} {} {..} {link;} {} {} {1.000}
+
+R {    6} {0} {<178>} {North western corner of a small farm} { } {The Manadorian forest borders this small field to the north and west. This corner of the farm looks quite desolate compared to the rest. Not much more than weeds grow here, and even most of them look like they have been stomped on. There is a field of corn to the south, and what appears to be sugar cane to the east.  } {} {} {} {} {1.000}
+E {    2} {s} {s} {4} {0} {}
+E {   16} {e} {e} {2} {0} {}
+
+R {    7} {0} {<178>} {In the middle of a small farm.} { } {This is the middle of a small busy farm. Celery grows all around with very few peasants to watch over it. The farm continues to the north, south, east, and west.  } {} {} {} {} {1.000}
+E {    2} {w} {w} {8} {0} {}
+E {    4} {s} {s} {4} {0} {}
+E {   14} {e} {e} {2} {0} {}
+E {   16} {n} {n} {1} {0} {}
+
+R {    8} {0} {<178>} {Southwest corner of a small farm} { } {The area is bordered by the tall trees of the Mandorian forest to the south and the west. The fields of squash are not nearly as organized as the other parts of the farm. Many of the vegetables and their vines have been stomped flat into the ground, leaving a pulpy mess. The farm spreads out to the north and east.  } {} {} {} {} {1.000}
+E {    3} {n} {n} {1} {0} {}
+E {   10} {e} {e} {2} {0} {}
+
+R {    9} {0} {<178>} {The center of a small farm} { } {This is the center of the small farm. The farm continues north, south, east, and west. It is quite remarkable to see such a variety of crops growing here. The peasants are nurturing beautiful tomato plants, while others within sight are tending lettuce, watermelons, beans, and asparagus.  } {} {} {} {} {1.000}
+E {    3} {w} {w} {8} {0} {}
+E {   10} {s} {s} {4} {0} {}
+E {   12} {e} {e} {2} {0} {}
+E {    4} {n} {n} {1} {0} {}
+
+R {   10} {0} {<178>} {A small watermelon patch} { } {The southern end of the watermelon patch is bordered by a forest, while this small farm continues to the north, east, and west. By the look of it, the sunny warm climate here in Mandor is very conducive to the growth of watermelons.  } {} {} {} {} {1.000}
+E {    8} {w} {w} {8} {0} {}
+E {    9} {n} {n} {1} {0} {}
+E {   11} {e} {e} {2} {0} {}
+
+R {   11} {0} {<178>} {Southeast corner of a small farm} { } {The forest borders this small cucumber patch on the south and east, while the rest of the farm continues to the north and west. Even with the distractions caused by the bandits, the peasants are all still hard at work, to provide fresh fruits and vegetables for their village.  } {} {} {} {} {1.000}
+E {   10} {w} {w} {8} {0} {}
+E {   12} {n} {n} {1} {0} {}
+
+R {   12} {0} {<178>} {A field of asparagus} { } {The peasants are hard at work tending the asparagus in this small field, and pulling what weeds can be found. The small farm continues to the north, south, and west, while the forest on the eastern side makes moving in that direction impossible.  } {} {} {} {} {1.000}
+E {   11} {s} {s} {4} {0} {}
+E {   13} {n} {n} {1} {0} {}
+E {    9} {w} {w} {8} {0} {}
+
+R {   13} {0} {<178>} {A path into the woods} { } {The strawberry patch is nice and neat and teaming with life. The farmers and peasants move around the patch seemingly ignoring the presence of all the bandits, but oddly they do not come within arm's length of the bandits at all. The fields of the small farm continue to the north, south, and west. The eastern edge of this field is bordered by a forest of very tall trees. There appears to be a small path of some sort.  } {} {} {} {} {1.000}
+E {   12} {s} {s} {4} {0} {}
+E {    4} {w} {w} {8} {0} {}
+E {   14} {n} {n} {1} {0} {}
+E {   17} {e} {e} {2} {0} {}
+
+R {   14} {0} {<178>} {A field full of onions} { } {This field is filled full of peasants, and farmers weeding between rows of onions. The forest to the east cuts off all movement in that direction, but fields are visible to the north, south, and west.  } {} {} {} {} {1.000}
+E {   13} {s} {s} {4} {0} {}
+E {   15} {n} {n} {1} {0} {}
+E {    7} {w} {w} {8} {0} {}
+
+R {   15} {0} {<178>} {Northeast corner of a small farm} { } {The beet field is bordered to the north and east by a forest of large trees. Other fields of this small farm are visible to the south and west.  } {} {} {} {} {1.000}
+E {   14} {s} {s} {4} {0} {}
+E {   16} {w} {w} {8} {0} {}
+
+R {   16} {0} {<178>} {A field full of sugar cane} { } {There are tall trees visible to the north over the top of the head high sugar cane. Peasants are visible walking in and out of the rows of cane. Not much more is visible from inside this field.  } {} {} {} {} {1.000}
+E {    7} {s} {s} {4} {0} {}
+E {    6} {w} {w} {8} {0} {}
+E {   15} {e} {e} {2} {0} {}
+
+R {   17} {0} {} {A path into the woods} { } {The small forest path runs farther into the forest to the east, and west back to the farm. This might be where all of the bandits are coming from.  } {} {} {} {} {1.000}
+E {   13} {w} {w} {8} {0} {}
+E {   18} {e} {e} {2} {0} {}
+
+R {   18} {0} {<178>} {A large tree with a nest in it stands here} { } {The path that makes a sharp turn here. To the west, farm sounds can be heard, and from the south, the beautiful chirps of birds echo loudly. A large tree, just south of the trail, stands taller than anything else in the woods.  } {} {} {} {} {1.000}
+E {   17} {w} {w} {8} {0} {}
+E {   19} {s} {s} {4} {0} {}
+
+R {   19} {0} {<068>} {A large tree with a nest in it stands here} { } {The small path runs north and east here. One tree stands out from the rest. A bird's nest sits in a large maple tree, just off the path.  } {} {} {} {} {1.000}
+E {   18} {n} {n} {1} {0} {}
+E {   20} {e} {e} {2} {0} {}
+E {   21} {u} {climb tree} {16} {0} {}
+
+R {   20} {0} {<178>} {A mysterious place on the path} { } {The small forest path runs east and west here. There is a large tree just off the path to the west and it looks kinda gloomy to the east.  } {} {} {} {} {1.000}
+E {   19} {w} {w} {8} {0} {}
+E {   22} {e} {e} {2} {0} {}
+
+R {   21} {0} {} {Out on a limb} { } {There is a very large bird's nest all the way up here in the branches at the top of the maple tree. Out here on the limb, the nest is only an arm's reach away. Maybe there is something in the nest.  } {} {} {} {} {1.000}
+E {   19} {d} {d} {32} {0} {}
+
+R {   22} {0} {<178>} {A mysterious place on the path} { } {The path continues a little further to the east. There is something different about the trail, almost as if something is being concealed here. An eerie chill passes through the air and the trees seem to shimmer. Wicked laughter echoes through the trees, but it is impossible to determine which direction it is coming from.  } {} {} {} {} {1.000}
+E {   20} {w} {w} {8} {0} {}
+E {   23} {e} {e} {2} {0} {}
+E {   24} {s} {s} {4} {0} {}
+
+R {   23} {0} {<178>} {The end of a path} { } {The path abruptly comes to an end. This portion of the path does not seem to be as well traveled as the rest, and this looks like a very odd place for it to end. It is almost as if someone, maybe the bandits, planned for this path to go elsewhere, and never finished it. Trees crowd in on the small trail from all directions, except the west. The tall weeds that grow up from the path suggest that people do not come here often.  } {} {} {} {} {1.000}
+E {   22} {w} {w} {8} {0} {}
+
+R {   24} {0} {} {North of a small camp} { } {There is a small camp to the south. Only one small hut is visible from this distance, but it does not appear to be all that sturdy. Even from here the trash that litters the area is quite visible, but it appears to be deserted.  } {} {} {} {} {1.000}
+E {   22} {n} {n} {1} {0} {}
+E {   25} {s} {s} {4} {0} {}
+
+R {   25} {0} {<178>} {A path leading out of the camp.} { } {This is an intersection in the bandits' camp. The path runs to the north, east, and west. There is a small, crudely built hut to the west. The area is littered with trash, clothing, and rotten vegetables.  } {} {} {} {} {1.000}
+E {   24} {n} {n} {1} {0} {}
+E {   26} {e} {e} {2} {0} {}
+E {   27} {w} {w} {8} {0} {}
+
+R {   26} {0} {<178>} {A path leading out of the camp.} { } {This path leads out of the bandit camp. A strange smell lingers in the air, but it is very hard to tell what it is.  } {} {} {} {} {1.000}
+E {   25} {w} {w} {8} {0} {}
+E {   28} {e} {e} {2} {0} {}
+
+R {   27} {0} {<178>} {An intersection in the bandit camp} { } {This quickly built bandit hut is the home of several bandits. It's not any cleaner than the rest of the camp. There are a few cots around the walls of the hut, and dirty blankets litter the floor around the small fire pit.  } {} {} {} {} {1.000}
+E {   25} {e} {e} {2} {0} {}
+
+R {   28} {0} {<178>} {The path continues.} { } {The path is littered with garbage. The hard packed ground of the trail is filled with large ruts. The ruts appear to have been formed by large items being dragged off to the east. Tall trees form impenetrable walls to the north and south.  } {} {} {} {} {1.000}
+E {   26} {w} {w} {8} {0} {}
+E {   29} {e} {e} {2} {0} {}
+
+R {   29} {0} {<068>} {A path leading into the woods} { } {The smell is simply awful here. It overwhelms the air and even the smell of the forest is gone. Ahead, there is a large mound of something. It seems to be a trash dump site. A pile of sticks and leaves sits to one side of the path. } {} {} {} {} {1.000}
+E {   28} {w} {w} {8} {0} {}
+E {   30} {e} {e} {2} {0} {}
+E {   31} {n} {enter} {1} {0} {}
+
+R {   30} {0} {<178>} {A foul smelling part of the woods.} { } {You are at a clearing in the woods. There are things all around this clearing. Your nose quickly determines that this is where the bandits throw all of their garbage. The mess here is unbelievable. Anything could be in here.  } {} {} {} {} {1.000}
+E {   29} {w} {w} {8} {0} {}
+
+R {   31} {0} {<048>} {A secret hideout} { } {If you hadn't been looking closely, you'd have never noticed this little hut. A rumpled blanket lies on the dirty floor. Several empty beer bottles are sitting near the open doorway that leads back out of here.  } {} {} {} {} {1.000}
+E {   29} {s} {out} {4} {0} {}

@@ -1,0 +1,23 @@
+C 500
+
+CE <278>
+CH <118>
+CP <138>
+CR <178>
+CB 
+
+F 8
+
+I 1
+
+L ▪ ╹ ╺ ┗ ╻ ┃ ┏ ┣ ╸ ┛ ━ ┻ ┓ ┫ ┳ ╋ X
+
+
+R {    1} {0} {<048>} {Outside the Golden Hawk} { } {A small bar is in front of you, with the door opened. As you look in, you can see that the bar is filled to its brim with cigarette smoke, and you almost recoil from the stench of beer that meets you through the open door a few yards away. You can hear a lot of noise in there, and it sounds like people are arguing and yelling at each other. } {} {} {} {} {1.000}
+E {    2} {return} {.mapLink {Pinnacle/Newbie} {23} {return};} {0} {0} {}
+E {    3} {e} {e} {2} {0} {}
+
+R {    2} {0} {<000>} {} {<138>*} {} {..} {link;} {} {} {1.000}
+
+R {    3} {0} {<109>} {} { } {} {} {} {} {} {1.000}
+E {    1} {w} {w} {8} {0} {}

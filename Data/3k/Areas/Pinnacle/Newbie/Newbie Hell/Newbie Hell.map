@@ -1,0 +1,62 @@
+C 500
+
+CE <278>
+CH <118>
+CP <138>
+CR <178>
+CB 
+
+F 8
+
+I 3
+
+L ▪ ╹ ╺ ┗ ╻ ┃ ┏ ┣ ╸ ┛ ━ ┻ ┓ ┫ ┳ ╋ X
+
+
+R {    1} {0} {<068>} {A circular, funnel-shaped room} { } {Walls made of a smooth substance resembling wood, yet which could also be metal, curve around you in a smooth arc.  The southern wall looks climbable. Maybe you should climb back out now.  The floor is vaguely funnel-shaped, leading to a hole in the center which falls to an unknown place.  You can hear strange, guttural noises coming from the hole.  } {} {} {} {} {1.000}
+E {    2} {climb} {.mapLink {Pinnacle/Newbie} {25} {climb};} {0} {0} {}
+E {    3} {d} {d} {32} {0} {}
+
+R {    2} {0} {<000>} {} {<138>*} {} {..} {link;} {} {} {1.000}
+
+R {    3} {0} {<048>} {Within a morass of swirling ether} { } {Ethers of all colors swirl around you constantly, orange, red, yellow and violet vectors of mystical energies contorting and convoluting within themselves.  You have very little sense of direction in this distinctly evil realm, where the firmament beneath your feet seems hardly as real as the sights before your eyes.  } {} {} {} {} {1.000}
+E {    4} {s} {thatway} {4} {0} {}
+E {    6} {sw} {yonder} {12} {0} {}
+E {    8} {e} {overhere} {2} {0} {}
+E {   10} {nw} {overthere} {9} {0} {}
+E {   12} {n} {thisway} {1} {0} {}
+
+R {    4} {0} {} {A chilly chamber} { } {The walls of this hexagonal chamber are coated with a thin sheen of frost.  Beneath the icy layer, the walls seems to be constructed of a brushed metal.  There is a hole in the middle of the room, and a ladder leads down to another room.  } {} {} {} {} {1.000}
+E {    3} {n} {n} {1} {0} {}
+E {    5} {d} {d} {32} {0} {}
+
+R {    5} {0} {<178>} {A chilly nursery room} { } {This chamber is small, and shaped as a pentagon.  The walls are made of a somehow soft metal which undulates gently, as though floating upon itself.  There is a small bed of ice against one wall, tiny and wet. A ladder in the center of the room leads up through a hole.  } {} {} {} {} {1.000}
+E {    4} {u} {u} {16} {0} {}
+
+R {    6} {0} {} {A cavern of rock} { } {This rocky cavern is unbearably hot, yet it is arid and decidedly dry.  The rocky crags on the surfaces of the corridor make for some menacing surroundings.  The cavern opens somewhat to the southeast, and to the northeast, you can see a room filled with brightly-colored swirls of energy.  } {} {} {} {} {1.000}
+E {    3} {ne} {ne} {3} {0} {}
+E {    7} {se} {se} {6} {0} {}
+
+R {    7} {0} {<178>} {A cavern of brown rock} { } {This large room of brown rock seems unnecessarily massive, considering the extremely small bed that lies in the corner.  The bed itself is made  from a rock hardly less craggy than the walls, yet amazingly, it appears to have been slept in.  The cavern narrows to the northwest.  } {} {} {} {} {1.000}
+E {    6} {nw} {nw} {9} {0} {}
+
+R {    8} {0} {} {A corridor dripping with filth} { } {This corridor is completely covered in all sorts of filth, in all colors, sizes and consistencies.  To the west is an opening to a swirling morass of energies, and the passage bends to the southeast.  The smell of this place is almost unbearable.  } {} {} {} {} {1.000}
+E {    3} {w} {w} {8} {0} {}
+E {    9} {se} {se} {6} {0} {}
+
+R {    9} {0} {<178>} {A bedchamber of filth} { } {You have entered a small chamber that has no visible semblance   of a floor, walls or a ceiling...rather, it is merely an amorphous enclosure of all manner of unmentionable, diseased substances.  There is even a bed in what might be considered the corner, where some  truly indiscriminate being must rest.  There is an opening in the hovel to the northwest.  } {} {} {} {} {1.000}
+E {    8} {nw} {nw} {9} {0} {}
+
+R {   10} {0} {<068>} {A crystal corridor} { } {You feel as though you are stepping upon meter-thick crystal.  The highly-wrought geometric corridor through which you are passing is constructed of an impossibly smooth crystal, translucent to the eye. You can see approximately a foot into the surface, after which point it becomes hopelessly opaque.  There is a hole in the floor, and a pole extends from the ceiling of this room, through the hole, into the room below.  } {} {} {} {} {1.000}
+E {    3} {se} {se} {6} {0} {}
+E {   11} {d} {pole} {32} {0} {}
+
+R {   11} {0} {<068>} {A crystal nursery chamber                                   } { } {This crystal room has an uncomfortable-looking glassy bed in the corner, suggesting that someone or something actually lives in this cold, hard chamber.  The walls and floor are constructed of solid, translucent crystal.  In the ceiling there is a hole, and a smooth pole leads up through it to another room. } {} {} {} {} {1.000}
+E {   10} {u} {climb pole} {16} {0} {}
+
+R {   12} {0} {} {A hall of embers} { } {The walls of this strange room are covered with gently gliding embers of fire, as though a recent blaze had been only partially extinguished here.  There is a large hole in the ground, through which you can see another fiery room.  } {} {} {} {} {1.000}
+E {    3} {s} {s} {4} {0} {}
+E {   13} {d} {d} {32} {0} {}
+
+R {   13} {0} {<178>} {A fiery nursery room} { } {This small, circular hovel contains a small bed of fire in the corner.  Steam and smoke waft through the room in soft billows, causing you to sweat slightly.  There is a hole in the low ceiling.  } {} {} {} {} {1.000}
+E {   12} {u} {u} {16} {0} {}

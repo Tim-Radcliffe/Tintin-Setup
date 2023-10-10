@@ -1,0 +1,127 @@
+C 500
+
+CE <278>
+CH <118>
+CP <138>
+CR <178>
+CB 
+
+F 8
+
+I 1
+
+L ▪ ╹ ╺ ┗ ╻ ┃ ┏ ┣ ╸ ┛ ━ ┻ ┓ ┫ ┳ ╋ X
+
+
+R {    1} {0} {<068>} {Newbie road} { } {This is the land of newbies.  A strange hole shimmers in the ground.  To the south the land of newbies continues.  The cool breeze feels real good on this warm day. } {} {} {} {} {1.000}
+E {    2} {hole} {.mapLink {Pinnacle/Newbie} {27} {hole};} {0} {0} {}
+E {    3} {s} {s} {4} {0} {}
+
+R {    2} {0} {<000>} {} {<138>*} {} {..} {link;} {} {} {1.000}
+
+R {    3} {0} {<178>} {Newbie road} { } {This is a little road leading to many places.  Brave adventurers travel this road looking for a challenge. } {} {} {} {} {1.000}
+E {    1} {n} {n} {1} {0} {}
+E {    4} {s} {s} {4} {0} {}
+E {    5} {e} {e} {2} {0} {}
+E {    6} {w} {w} {8} {0} {}
+
+R {    4} {0} {<178>} {Newbie path} { } {You are on a little path.  The path continues north to the newbie center.  The path ends here and the forest is to the south. } {} {} {} {} {1.000}
+E {    3} {n} {n} {1} {0} {}
+E {    8} {s} {s} {4} {0} {}
+
+R {    5} {0} {<178>} {Newbie room} { } {This is a small room with no windows or doors.  It is rather dull.  Everything, even the floor is painted dull white.  Kinda boring room. } {Newbieland} {} {} {} {1.000}
+E {    3} {w} {w} {8} {0} {}
+
+R {    6} {0} {<178>} {Newbie monster's room} { } {This is where a newbie monster lives.  It is dark and dank in this stuffy little room.  It smells bad too. } {} {} {} {} {1.000}
+E {    3} {e} {e} {2} {0} {}
+E {    7} {s} {s} {4} {0} {}
+
+R {    7} {0} {<178>} {Smelly room} { } {This is a large smelly room.  There is garbage scattered about the room. You get an uneasy feeling about this place. } {} {} {} {} {1.000}
+E {    6} {n} {n} {1} {0} {}
+
+R {    8} {0} {<178>} {Newbie forest} { } {The fresh air of the forest clears your lungs.  This looks like a quiet little forest.  The trees still look young and small. } {} {} {} {} {1.000}
+E {    4} {n} {n} {1} {0} {}
+E {    9} {s} {s} {4} {0} {}
+E {   10} {e} {e} {2} {0} {}
+
+R {    9} {0} {<178>} {A light forest} { } {This is a light forest.  The trees are short, allowing plenty of light into the forest.  The forest continues north and east. } {} {} {} {} {1.000}
+E {    8} {n} {n} {1} {0} {}
+E {   11} {e} {e} {2} {0} {}
+
+R {   10} {0} {<178>} {Middle of forest} { } {The forest seems to continue in all directions except north.  The forest to the north is too thick to pass. } {} {} {} {} {1.000}
+E {    8} {w} {w} {8} {0} {}
+E {   11} {s} {s} {4} {0} {}
+E {   12} {e} {e} {2} {0} {}
+
+R {   11} {0} {<178>} {A clearing} { } {You are standing in the middle of the newbie forest.  The forest continues in all directions.  You get the feeling something is watching you. } {} {} {} {} {1.000}
+E {   10} {n} {n} {1} {0} {}
+E {   13} {e} {e} {2} {0} {}
+E {   14} {s} {s} {4} {0} {}
+E {    9} {w} {w} {8} {0} {}
+
+R {   12} {0} {<178>} {In a forest} { } {You are still in a forest with nothing but trees all around you.  You better hope you don't get poison ivy. } {} {} {} {} {1.000}
+E {   10} {w} {w} {8} {0} {}
+E {   13} {s} {s} {4} {0} {}
+
+R {   13} {0} {<178>} {Still a forest} { } {You are still in a forest.  Are you lost yet? Every where you look, it appears to be the same.  Just trees and more trees. } {} {} {} {} {1.000}
+E {   12} {n} {n} {1} {0} {}
+E {   11} {w} {w} {8} {0} {}
+
+R {   14} {0} {<178>} {A clearing} { } {You are coming out of the forest.  To the north is the forest and to the west, a little house can be seen. } {} {} {} {} {1.000}
+E {   11} {n} {n} {1} {0} {}
+E {   15} {w} {w} {8} {0} {}
+
+R {   15} {0} {<068>} {A clearing} { } {This is a wide open field with a large newbie manor in the center.  The manor looks very big and well made.  There is a large door, newbies can enter. } {} {} {} {} {1.000}
+E {   14} {e} {e} {2} {0} {}
+E {   16} {w} {enter} {8} {1} {}
+
+R {   16} {0} {<068>} {A large hallway} { } {This is the main entrance of the newbie manor.  The hall extends to the north.  You can tell a wealthy newbie lives here. } {} {} {} {} {1.000}
+E {   17} {n} {n} {1} {0} {}
+E {   15} {exit} {exit} {0} {0} {}
+
+R {   17} {0} {<178>} {A large hallway} { } {This is a large hallway in the newbie manor.  It is wide enough for five newbies to walk side by side.  To the east and west are the manor's guest rooms. } {} {} {} {} {1.000}
+E {   16} {s} {s} {4} {0} {}
+E {   18} {n} {n} {1} {0} {}
+E {   19} {w} {w} {8} {0} {}
+E {   20} {e} {e} {2} {0} {}
+
+R {   18} {0} {<178>} {Manor hall} { } {This is an empty hall.  Every time you take a step you can hear your footstep echoing in the hall.  The hall continues north and south.  To the west, the kitchen can be seen. } {} {} {} {} {1.000}
+E {   17} {s} {s} {4} {0} {}
+E {   21} {n} {n} {1} {0} {}
+E {   22} {e} {e} {2} {0} {}
+E {   23} {w} {w} {8} {0} {}
+
+R {   19} {0} {<178>} {Guest room} { } {This is the guest room.  The room is rather boring and the guests here have nothing to do except just sit here till they rot. } {} {} {} {} {1.000}
+E {   17} {e} {e} {2} {0} {}
+
+R {   20} {0} {<178>} {Guest room} { } {This is a large room full of beds.  This is where the guests of the manor stay.  They get dumped here and they never get to go anywhere else. } {} {} {} {} {1.000}
+E {   17} {w} {w} {8} {0} {}
+
+R {   21} {0} {<178>} {End of hall} { } {The hallway continues north and south.  To the east is a bedroom and to the west is the guard room.  It is known that the manor guards are very tough. } {} {} {} {} {1.000}
+E {   18} {s} {s} {4} {0} {}
+E {   25} {n} {n} {1} {0} {}
+E {   26} {w} {w} {8} {0} {}
+E {   27} {e} {e} {2} {0} {}
+
+R {   22} {0} {<178>} {Closet} { } {The closet is empty.  It also looks like it needs a good cleaning, but what do you care? } {} {} {} {} {1.000}
+E {   18} {w} {w} {8} {0} {}
+
+R {   23} {0} {<178>} {Manor kitchen} { } {This is the kitchen of the manor.  It is really, really messy in here.  Bits of food and garbage are all over the place. } {} {} {} {} {1.000}
+E {   18} {e} {e} {2} {0} {}
+E {   24} {w} {w} {8} {0} {}
+
+R {   24} {0} {<178>} {Dining room} { } {This is the dining room.  Nothing much here except a very large dining room table.  What did you expect? } {} {} {} {} {1.000}
+E {   23} {e} {e} {2} {0} {}
+
+R {   25} {0} {<178>} {End of hall} { } {This is the end of the long and boring hall of the manor.  The exit to this boring manor is south and to the north is an office. } {} {} {} {} {1.000}
+E {   21} {s} {s} {4} {0} {}
+E {   28} {n} {n} {1} {0} {}
+
+R {   26} {0} {<178>} {Guard room} { } {This is where all the tough manor guards come to rest.  They are a lot tougher than any other newbie monster in this newbie land. } {} {} {} {} {1.000}
+E {   21} {e} {e} {2} {0} {}
+
+R {   27} {0} {<178>} {A bedroom} { } {This is a large bedroom.  Of course there is a bed in the room.  Other than that, it is pretty much empty. } {} {} {} {} {1.000}
+E {   21} {w} {w} {8} {0} {}
+
+R {   28} {0} {<178>} {The manor office} { } {This is the office of the manor.  You came all the way here to find an office.  Was it worth it?  } {} {} {} {} {1.000}
+E {   25} {s} {s} {4} {0} {}

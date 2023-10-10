@@ -1,0 +1,114 @@
+#VARIABLE {_npc}
+{
+    {^\w+, \w+'s .+$}
+    {
+        {nomap} {1}
+        {nokill} {1}
+    }
+    {A tank named}
+    {
+        {nomap} {1}
+        {nokill} {1}
+    }
+    {Jugger Support Mech} 
+    {
+            {nomap} {1}
+            {nokill} {1}
+    }
+    {esquire} 
+    {
+            {nomap} {1}
+            {nokill} {1}
+    }
+    {the Bayen} 
+    {
+            {nomap} {1}
+            {nokill} {1}
+    }
+    {the Bolwyn} 
+    {
+            {nomap} {1}
+            {nokill} {1}
+    }
+    {the Ghast} 
+    {
+            {nomap} {1}
+            {nokill} {1}
+    }
+    {the Greesh} 
+    {
+            {nomap} {1}
+            {nokill} {1}
+    }
+    {the Grimare} 
+    {
+            {nomap} {1}
+            {nokill} {1}
+    }
+    {the Heucuva} 
+    {
+            {nomap} {1}
+            {nokill} {1}
+    }
+    {the Manshi} 
+    {
+            {nomap} {1}
+            {nokill} {1}
+    }
+    {the Mohrg} 
+    {
+            {nomap} {1}
+            {nokill} {1}
+    }
+    {the Quarin} 
+    {
+            {nomap} {1}
+            {nokill} {1}
+    }
+    {the Skeleton} 
+    {
+            {id} {skeleton}         
+            {nomap} {1}
+            {nokill} {1}
+    }
+    {the Tholen} 
+    {
+            {id} {tholen}         
+            {nomap} {1}
+            {nokill} {1}
+    }
+    {the Valithyn} 
+    {
+            {id} {valithyn}
+            {nomap} {1}
+            {nokill} {1}
+    }
+    {the Valpur} 
+    {
+            {id} {valpur}        
+            {nomap} {1}
+            {nokill} {1}
+    }
+    {the Wight} 
+    {
+            {id} {wight}         
+            {nomap} {1}
+            {nokill} {1}
+    }
+    {the Zombie} 
+    {
+            {id} {zombie}         
+            {nomap} {1}
+            {nokill} {1}
+    }
+    {the packmule} 
+    {
+            {nomap} {1}
+            {nokill} {1}
+    }
+    {under the control of} 
+    {
+            {nomap} {1}
+            {nokill} {1}
+    }
+}

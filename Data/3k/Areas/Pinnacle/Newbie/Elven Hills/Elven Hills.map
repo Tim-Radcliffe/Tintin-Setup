@@ -1,0 +1,51 @@
+C 500
+
+CE <278>
+CH <118>
+CP <138>
+CR <178>
+CB 
+
+F 9
+
+I 1
+
+L ▪ ╹ ╺ ┗ ╻ ┃ ┏ ┣ ╸ ┛ ━ ┻ ┓ ┫ ┳ ╋ X
+
+
+R {    1} {0} {<068>} {-= Elven Hills =-} { } {-= Elven Hills =- Along the vast horizon lie layers of emerald green hills.  Patches of yellow and purple flowers dot some of the rolling pasture.  The sky is clear blue and white clouds slowly drift by.  In the distance, a brook babbles.  A hole shimmers in the lush grass. } {} {} {} {} {1.000}
+E {    2} {n} {n} {1} {0} {}
+E {    4} {hole} {.mapLink {Pinnacle/Newbie} {25} {hole};} {0} {0} {}
+
+R {    2} {0} {<068>} {-= Elven Hills =-} { } {-= Elven Hills =- The lush green grass covers the hills, both small and large.  A small hole has been dug into the side of a hill, like some sort of home.  Clumps of dirt carelessly fall to the ground as a gust of wind passes through.  The sound of the brook comes from the west. } {} {} {} {} {1.000}
+E {    1} {s} {s} {4} {0} {}
+E {    3} {n} {n} {1} {0} {}
+E {    9} {w} {enter} {8} {0} {}
+
+R {    3} {0} {<178>} {-= Elven Hills =-} { } {-= Elven Hills =- The hills continue to span off in every direction.  The sun is covered momentarily by a passing cloud.  A speck of black darts across the sky.  Only the occasional set of footprints in the thick grass gives any indication that someone is here. } {} {} {} {} {1.000}
+E {    2} {s} {s} {4} {0} {}
+E {    5} {w} {w} {8} {0} {}
+
+R {    4} {0} {<000>} {} {<138>*} {} {..} {link;} {} {} {1.000}
+
+R {    5} {0} {<178>} {-= Elven Hills =-} { } {-= Elven Hills =- The hills continue to span off in every direction.  A large patch of yellow and purple wildflowers covers this particular hill.  A flurry of butterflies shoot up out of the flowers and take off into the sky.  The babbling brook grows louder. } {} {} {} {} {1.000}
+E {    3} {e} {e} {2} {0} {}
+E {    6} {w} {w} {8} {0} {}
+
+R {    6} {0} {<178>} {-= Elven Hills =-} { } {-= Elven Hills =- A small babbling brook curves out a path through the green hills.  Small pebbles stand in the middle of the brook bed, making little ripples as the water flows over them.  Tall blades of grass surrounds the outer edge of the bank. Small insects dart across the brook from one side to the other. } {} {} {} {} {1.000}
+E {    5} {e} {e} {2} {0} {}
+E {    7} {n} {n} {1} {0} {}
+
+R {    7} {0} {<178>} {-= Elven Hills =-} { } {-= Elven Hills =- Small, branchy shrubs dot the green grass.  Circles of dirt surround each one.  A few rocks peek out from the ground.  The sun burns bright in the sky and a flock of sparrows swoop down behind a distant hill. } {} {} {} {} {1.000}
+E {    6} {s} {s} {4} {0} {}
+E {    8} {w} {w} {8} {0} {}
+
+R {    8} {0} {<068>} {-= Elven Hills =-} { } {-= Elven Hills =- The small hills abruptly end and bring into view a large hole dug into one of the hill sides.  A long, thick branch from a shrub acts as a blockade.  Footprints, only slightly larger than those found in the rest of the hills, mark the ground.  A small light shines from the inside of the hole. } {} {} {} {} {1.000}
+E {    7} {e} {e} {2} {0} {}
+E {   10} {w} {enter} {8} {0} {}
+
+R {    9} {0} {<068>} {-= Elven Hills =-} { } {-= Elven Hills =- Barely enough sunlight seeps into the small hole.  The only surrounding is a reddish-brown, clay like dirt and roots from shrubs and grasses. } {} {} {} {} {1.000}
+E {    2} {e} {out} {2} {0} {}
+
+R {   10} {0} {<068>} {-= Elven Hills =-} { } {-= Elven Hills =- A small torch light hangs on the wall.  The floor and walls are completely made of dirt.  There is a flat gray rock in the back of the hole.  There are no decorations in this place other than the many footprints embedded on the ground. } {} {} {} {} {1.000}
+E {    8} {e} {out} {2} {0} {}

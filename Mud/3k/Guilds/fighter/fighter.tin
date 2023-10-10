@@ -1,0 +1,64 @@
+#ACTION {HP: %d/%d  Energy: %d/%d  G2L: %d{\s+T:(\d+)\%|\s*$}}
+{
+    #VAR {my[hp][current]} {%1};
+    #VAR {my[hp][max]} {%2};
+    #VAR {my[gp1][current]} {%3};
+    #VAR {my[gp1][max]} {%4};
+    #VAR {my[fighter][g2l]} {%5};
+    #VAR {opponent[hp]} {%7};
+};
+
+#ALIAS {gs}
+{
+    #ACTION {^! Guild Level : %d%s Title      : %w%s!}
+    {
+        #VAR {my[fighter][level]} {%%1};
+        #VAR {my[fighter][title]} {%%3};
+    };
+    event_oneshot {e_prompt} {fighter} 
+    {
+        #NOP %%1;
+        #UNACTION {^! Guild Level : %d%s Title      : %w%s!};
+    };
+    #SEND {!gs};
+};
+
+#ALIAS {train}
+{
+    #ACTION {^You've advanced to Fighter Level %d!}
+    {
+        #VAR {my[fighter][level]} {%%1};
+    };
+    event_oneshot {e_prompt} {fighter} 
+    {
+        #NOP %%1;
+        #UNACTION {^You've advanced to Fighter Level %d!};
+    };
+    #SEND {!train %0};
+};
+
+#ALIAS {handler_corpse}
+{
+    #NOP %1;
+    #IF {$my[fighter][level] >= 5 && $auto[smashcorpse][status]}
+    {
+        #SEND {!smash corpse};
+        #SEND {!glance};
+    };
+    #ELSE
+    {
+        #SEND {!get coins from corpse};
+    };
+};
+event_register e_killed_opponent fighter handler_corpse;
+auto {add} {smashcorpse};
+
+#ALIAS {handler_auto_smash}
+{
+    #NOP %1;
+    #IF {$my[gp1][current] >= 5 && $my[fighter][level] >= 5}
+    {
+        #SEND {!smash};
+    };
+};
+auto {add} {smash} {} {e_combat_round} {};

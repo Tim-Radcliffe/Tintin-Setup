@@ -1,0 +1,972 @@
+C 50000
+
+V 2020
+
+CAVOID <118>
+CBACKGROUND 
+CBLOCK <218>
+CEXITS <278>
+CFOG <148>
+CHIDE <118>
+CINVISIBLE <208>
+CPATHS <138>
+CROOMS <178>
+CSYMBOLS <128>
+CUSER <258>
+
+F 10
+
+G 0
+
+I 19
+
+L {ASCII NESW LINE} {NO EXITS} {x}
+L {ASCII NESW LINE} {N} {o}
+L {ASCII NESW LINE} {  E} {o}
+L {ASCII NESW LINE} {N E} {+}
+L {ASCII NESW LINE} {    S} {o}
+L {ASCII NESW LINE} {N   S} {|}
+L {ASCII NESW LINE} {  E S} {+}
+L {ASCII NESW LINE} {N E S} {+}
+L {ASCII NESW LINE} {      W} {o}
+L {ASCII NESW LINE} {N     W} {+}
+L {ASCII NESW LINE} {  E   W} {-}
+L {ASCII NESW LINE} {N E   W} {+}
+L {ASCII NESW LINE} {    S W} {+}
+L {ASCII NESW LINE} {N   S W} {+}
+L {ASCII NESW LINE} {  E S W} {+}
+L {ASCII NESW LINE} {N E S W} {+}
+L {ASCII NESW MISC} {USER} {x}
+L {ASCII NESW MISC} {DIR UNKNOWN} {+}
+L {ASCII NESW MISC} {N S VOID} {|}
+L {ASCII NESW MISC} {E W VOID} {-}
+L {ASCII NESW CURVED} {N E CURVED} {+}
+L {ASCII NESW CURVED} {S E CURVED} {+}
+L {ASCII NESW CURVED} {S W CURVED} {+}
+L {ASCII NESW CURVED} {N W CURVED} {+}
+L {ASCII NESW DIRS} {DIR N} {|}
+L {ASCII NESW DIRS} {DIR NE} {/}
+L {ASCII NESW DIRS} {DIR E} {-}
+L {ASCII NESW DIRS} {DIR SE} {\\}
+L {ASCII NESW DIRS} {DIR S} {|}
+L {ASCII NESW DIRS} {DIR SW} {/}
+L {ASCII NESW DIRS} {DIR W} {-}
+L {ASCII NESW DIRS} {DIR NW} {\\}
+L {NESW LINE} {NO EXITS} {\u2B51}
+L {NESW LINE} {N} {\u2579}
+L {NESW LINE} {  E} {\u257A}
+L {NESW LINE} {N E} {\u2517}
+L {NESW LINE} {    S} {\u257B}
+L {NESW LINE} {N   S} {\u2503}
+L {NESW LINE} {  E S} {\u250F}
+L {NESW LINE} {N E S} {\u2523}
+L {NESW LINE} {      W} {\u2578}
+L {NESW LINE} {N     W} {\u251B}
+L {NESW LINE} {  E   W} {\u2501}
+L {NESW LINE} {N E   W} {\u253B}
+L {NESW LINE} {    S W} {\u2513}
+L {NESW LINE} {N   S W} {\u252B}
+L {NESW LINE} {  E S W} {\u2533}
+L {NESW LINE} {N E S W} {\u254B}
+L {NESW MISC} {USER} {\u2B51}
+L {NESW MISC} {DIR UNKNOWN} {\u2012}
+L {NESW MISC} {N S VOID} {\u2507}
+L {NESW MISC} {E W VOID} {\u254D}
+L {NESW CURVED} {N E CURVED} {\u2570}
+L {NESW CURVED} {S E CURVED} {\u256D}
+L {NESW CURVED} {S W CURVED} {\u256E}
+L {NESW CURVED} {N W CURVED} {\u256F}
+L {NESW DIRS} {DIR N} {\u2191}
+L {NESW DIRS} {DIR NE} {\u2B08}
+L {NESW DIRS} {DIR E} {\u2B95}
+L {NESW DIRS} {DIR SE} {\u2b0A}
+L {NESW DIRS} {DIR S} {\u2193}
+L {NESW DIRS} {DIR SW} {\u2B0B}
+L {NESW DIRS} {DIR W} {\u2B05}
+L {NESW DIRS} {DIR NW} {\u2B09}
+L {MUDFONT NWS} {NO EXITS} {\u28CF}
+L {MUDFONT NWS} {N} {\u28C7}
+L {MUDFONT NWS} {  NW} {\u28CE}
+L {MUDFONT NWS} {N NW} {\u28C6}
+L {MUDFONT NWS} {     W} {\u28C9}
+L {MUDFONT NWS} {N    W} {\u28C1}
+L {MUDFONT NWS} {  NW W} {\u28C8}
+L {MUDFONT NWS} {N NW W} {\u28C0}
+L {MUDFONT NWS} {       SW} {\u288F}
+L {MUDFONT NWS} {N      SW} {\u2887}
+L {MUDFONT NWS} {  NW   SW} {\u288E}
+L {MUDFONT NWS} {N NW   SW} {\u2886}
+L {MUDFONT NWS} {     W SW} {\u2889}
+L {MUDFONT NWS} {N    W SW} {\u2881}
+L {MUDFONT NWS} {  NW W SW} {\u2888}
+L {MUDFONT NWS} {N NW W SW} {\u2880}
+L {MUDFONT NWS} {          S} {\u284F}
+L {MUDFONT NWS} {N         S} {\u2847}
+L {MUDFONT NWS} {  NW      S} {\u284E}
+L {MUDFONT NWS} {N NW      S} {\u2846}
+L {MUDFONT NWS} {     W    S} {\u2849}
+L {MUDFONT NWS} {N    W    S} {\u2841}
+L {MUDFONT NWS} {  NW W    S} {\u2848}
+L {MUDFONT NWS} {N NW W    S} {\u2880}
+L {MUDFONT NWS} {       SW S} {\u280F}
+L {MUDFONT NWS} {N      SW S} {\u2807}
+L {MUDFONT NWS} {  NW   SW S} {\u280E}
+L {MUDFONT NWS} {N NW   SW S} {\u2806}
+L {MUDFONT NWS} {     W SW S} {\u2809}
+L {MUDFONT NWS} {N    W SW S} {\u2801}
+L {MUDFONT NWS} {  NW W SW S} {\u2808}
+L {MUDFONT NWS} {N NW W SW S} {\u2800}
+L {MUDFONT NES} {NO EXITS} {\u28F9}
+L {MUDFONT NES} {N} {\u28F8}
+L {MUDFONT NES} {  NE} {\u28F1}
+L {MUDFONT NES} {N NE} {\u28F0}
+L {MUDFONT NES} {     W} {\u28C9}
+L {MUDFONT NES} {N    W} {\u28C8}
+L {MUDFONT NES} {  NE W} {\u28C2}
+L {MUDFONT NES} {N NE W} {\u28C0}
+L {MUDFONT NES} {       SE} {\u2879}
+L {MUDFONT NES} {N      SE} {\u2878}
+L {MUDFONT NES} {  NE   SE} {\u2871}
+L {MUDFONT NES} {N NE   SE} {\u2870}
+L {MUDFONT NES} {     W SE} {\u2849}
+L {MUDFONT NES} {N    W SE} {\u2848}
+L {MUDFONT NES} {  NE W SE} {\u2842}
+L {MUDFONT NES} {N NE W SE} {\u2840}
+L {MUDFONT NES} {          S} {\u28B9}
+L {MUDFONT NES} {N         S} {\u28B8}
+L {MUDFONT NES} {  NE      S} {\u28B1}
+L {MUDFONT NES} {N NE      S} {\u28B0}
+L {MUDFONT NES} {     W    S} {\u2889}
+L {MUDFONT NES} {N    W    S} {\u2888}
+L {MUDFONT NES} {  NE W    S} {\u2882}
+L {MUDFONT NES} {N NE W    S} {\u2880}
+L {MUDFONT NES} {       SE S} {\u2839}
+L {MUDFONT NES} {N      SE S} {\u2838}
+L {MUDFONT NES} {  NE   SE S} {\u2831}
+L {MUDFONT NES} {N NE   SE S} {\u2830}
+L {MUDFONT NES} {     W SE S} {\u2809}
+L {MUDFONT NES} {N    W SE S} {\u2808}
+L {MUDFONT NES} {  NE W SE S} {\u2802}
+L {MUDFONT NES} {N NE W SE S} {\u2800}
+L {MUDFONT VOID NWS} {NO EXITS} {\u2830}
+L {MUDFONT VOID NWS} {N} {\u2838}
+L {MUDFONT VOID NWS} {  NW} {\u2831}
+L {MUDFONT VOID NWS} {N NW} {\u2839}
+L {MUDFONT VOID NWS} {     W} {\u2836}
+L {MUDFONT VOID NWS} {N    W} {\u283E}
+L {MUDFONT VOID NWS} {  NW W} {\u2837}
+L {MUDFONT VOID NWS} {N NW W} {\u283F}
+L {MUDFONT VOID NWS} {       SW} {\u2870}
+L {MUDFONT VOID NWS} {N      SW} {\u2878}
+L {MUDFONT VOID NWS} {  NW   SW} {\u2871}
+L {MUDFONT VOID NWS} {N NW   SW} {\u2879}
+L {MUDFONT VOID NWS} {     W SW} {\u2876}
+L {MUDFONT VOID NWS} {N    W SW} {\u287E}
+L {MUDFONT VOID NWS} {  NW W SW} {\u2877}
+L {MUDFONT VOID NWS} {N NW W SW} {\u287F}
+L {MUDFONT VOID NWS} {          S} {\u28B0}
+L {MUDFONT VOID NWS} {N         S} {\u28B8}
+L {MUDFONT VOID NWS} {  NW      S} {\u28B1}
+L {MUDFONT VOID NWS} {N NW      S} {\u28B9}
+L {MUDFONT VOID NWS} {     W    S} {\u28B6}
+L {MUDFONT VOID NWS} {N    W    S} {\u28BE}
+L {MUDFONT VOID NWS} {  NW W    S} {\u28B7}
+L {MUDFONT VOID NWS} {N NW W    S} {\u28BF}
+L {MUDFONT VOID NWS} {       SW S} {\u28F0}
+L {MUDFONT VOID NWS} {N      SW S} {\u28F8}
+L {MUDFONT VOID NWS} {  NW   SW S} {\u28F1}
+L {MUDFONT VOID NWS} {N NW   SW S} {\u28F9}
+L {MUDFONT VOID NWS} {     W SW S} {\u28F6}
+L {MUDFONT VOID NWS} {N    W SW S} {\u28FE}
+L {MUDFONT VOID NWS} {  NW W SW S} {\u28F7}
+L {MUDFONT VOID NWS} {N NW W SW S} {\u28FF}
+L {MUDFONT VOID NES} {NO EXITS} {\u2806}
+L {MUDFONT VOID NES} {N} {\u2807}
+L {MUDFONT VOID NES} {  NE} {\u280E}
+L {MUDFONT VOID NES} {N NE} {\u280F}
+L {MUDFONT VOID NES} {     W} {\u2836}
+L {MUDFONT VOID NES} {N    W} {\u2837}
+L {MUDFONT VOID NES} {  NE W} {\u283E}
+L {MUDFONT VOID NES} {N NE W} {\u283F}
+L {MUDFONT VOID NES} {       SE} {\u2886}
+L {MUDFONT VOID NES} {N      SE} {\u2887}
+L {MUDFONT VOID NES} {  NE   SE} {\u288E}
+L {MUDFONT VOID NES} {N NE   SE} {\u288F}
+L {MUDFONT VOID NES} {     W SE} {\u28B6}
+L {MUDFONT VOID NES} {N    W SE} {\u28B7}
+L {MUDFONT VOID NES} {  NE W SE} {\u28BE}
+L {MUDFONT VOID NES} {N NE W SE} {\u28BF}
+L {MUDFONT VOID NES} {          S} {\u2846}
+L {MUDFONT VOID NES} {N         S} {\u2847}
+L {MUDFONT VOID NES} {  NE      S} {\u284E}
+L {MUDFONT VOID NES} {N NE      S} {\u284F}
+L {MUDFONT VOID NES} {     W    S} {\u2876}
+L {MUDFONT VOID NES} {N    W    S} {\u2877}
+L {MUDFONT VOID NES} {  NE W    S} {\u287E}
+L {MUDFONT VOID NES} {N NE W    S} {\u287F}
+L {MUDFONT VOID NES} {       SE S} {\u28C6}
+L {MUDFONT VOID NES} {N      SE S} {\u28C7}
+L {MUDFONT VOID NES} {  NE   SE S} {\u28CE}
+L {MUDFONT VOID NES} {N NE   SE S} {\u28CF}
+L {MUDFONT VOID NES} {     W SE S} {\u28F6}
+L {MUDFONT VOID NES} {N    W SE S} {\u28F7}
+L {MUDFONT VOID NES} {  NE W SE S} {\u28FE}
+L {MUDFONT VOID NES} {N NE W SE S} {\u28FF}
+L {MUDFONT CURVED} {N E} {\u2818}
+L {MUDFONT CURVED} {S E} {\u28A0}
+L {MUDFONT CURVED} {S W} {\u2844}
+L {MUDFONT CURVED} {N W} {\u2803}
+L {UNICODE GRAPHICS} {NO DIAGONAL} { }
+L {UNICODE GRAPHICS} {SE} {\u2E0C}
+L {UNICODE GRAPHICS} {NE} {\u2E1D}
+L {UNICODE GRAPHICS} {SE NE} {>}
+L {UNICODE GRAPHICS} {SW} {\u2E0D}
+L {UNICODE GRAPHICS} {SE SW} {\u2E0C\u2E0D}
+L {UNICODE GRAPHICS} {NE SW} {\uFF0F}
+L {UNICODE GRAPHICS} {SE NE SW} {>\u2E0D}
+L {UNICODE GRAPHICS} {NW} {\u2E1C}
+L {UNICODE GRAPHICS} {SE NW} {\uFF3C}
+L {UNICODE GRAPHICS} {NE NW} {\u2E1D\u2E1C}
+L {UNICODE GRAPHICS} {SE NE NW} {>\u2E1C}
+L {UNICODE GRAPHICS} {SW NW} {<}
+L {UNICODE GRAPHICS} {SE SW NW} {\u2E0C<}
+L {UNICODE GRAPHICS} {NE SW NW} {\u2E1D<}
+L {UNICODE GRAPHICS} {SE NE SW NW} {><}
+L {UNICODE GRAPHICS} {D} {-}
+L {UNICODE GRAPHICS} {N} {\u2191}
+L {UNICODE GRAPHICS} {S} {\u2193}
+L {UNICODE GRAPHICS} {N S} {\u2502}
+L {UNICODE GRAPHICS} {U} {+}
+L {UNICODE GRAPHICS} {E} {\U01F806}
+L {UNICODE GRAPHICS} {W} {\U01F804}
+L {UNICODE GRAPHICS} {E W} {\u2500}
+L {UNICODE GRAPHICS} {ROOM L} {[}
+L {UNICODE GRAPHICS} {ROOM L CURVED} {(}
+L {UNICODE GRAPHICS} {ROOM R} {]}
+L {UNICODE GRAPHICS} {ROOM R CURVED} {)}
+
+
+
+
+T {} { } {}
+
+
+
+R {1}{0}{<068>}{The center of Chaos}{<138>@}{This is the dead center of the Realm of Chaos.  All around you lies a bleak and desolate land tormented by the wrath of unknown forces. You are standing at the edge of a raging vortex that seems to fall into infinity.  There are paths leading away from the vortex in several directions.  What you might find there is so changeable that you aren't certain how to proceed.  Some hard-won experience is related on the plaque.  But don't trust it.  This is CHAOS!}{}{{portal}{}}{}{}{1.000}{}
+E {3}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {4}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {5}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {6}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {2}{vortex}{.mapLink {Pinnacle} {27} {vortex};}{0}{1}{}{1.000}{}{0.00}
+E {172}{Good Humor Truck}{.mobileZone {The Good Humor, Ice Cream Truck} {enter truck} {Pinnacle/Chaos/Good Humor Truck}}{0}{1}{}{1.000}{}{0.00}
+E {173}{Erratio Forest}{.mobileZone {Erratio Forest} {enter forest} {Pinnacle/Chaos/Erratio Forest}}{0}{1}{}{1.000}{}{0.00}
+
+R {2}{0}{<000>}{LINK: Pinnacle}{<138>*}{}{Pinnacle}{{link}{}{portal}{}}{}{}{1.000}{}
+
+R {3}{0}{<068>}{Crazy Road}{ }{You step away from the void and into insanity.  You hear wailing coming from the distance and the room begins to spin before your eyes. Who knows where you are heading now but wherever it is, it's likely to be odd.  There seems to be a path off to the west, but you can't be sure.}{Mud}{}{}{}{1.000}{}
+E {1}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {41}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {7}{w}{.mapLink {Pinnacle/Chaos/Mouse House} {} {w};}{8}{1}{}{1.000}{}{0.00}
+E {152}{climb tower}{.mapLink {Pinnacle/Chaos/Night of Colour} {} {climb tower};}{0}{1}{}{1.000}{}{0.00}
+E {169}{leap haze}{.mapLink {Pinnacle/Chaos/Hyperfunkzone 2} {} {leap haze};}{0}{1}{}{1.000}{}{0.00}
+E {179}{shop}{.mapLink {Pinnacle/Chaos/The Soda Jerk} {} {shop};}{0}{1}{}{1.000}{}{0.00}
+
+R {4}{0}{<068>}{A road heading south {maybe}}{ }{Well, for some unexplained reason you are now standing in a vast pasture.  The sun is shining, and grass is growing.  This is too weird.  You look back north but the vortex is no longer visible.  Come to mention it, nothing is very visible there, except for a lush green hill further to the east.}{}{}{}{}{1.000}{}
+E {1}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {54}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {55}{e}{.mapLink {Pinnacle/Chaos/Leprechaun Village} {} {e};}{2}{1}{}{1.000}{}{0.00}
+E {159}{turn flag}{.mapLink {Pinnacle/Chaos/Rampage of the Piggies} {} {turn flag};}{0}{1}{}{1.000}{}{0.00}
+
+R {5}{0}{<068>}{Eastwick}{ }{This is the Eastwick road.  It leads to you know not where. At the northern edge of the road, there is a ladder that  climbs up to the sky. Follow your feet and see where you go.}{}{}{}{}{1.000}{}
+E {1}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {8}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {9}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {44}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {50}{ladder}{.mapLink {Pinnacle/Chaos/Chinese Checkers} {} {ladder};}{0}{1}{}{1.000}{}{0.00}
+
+R {6}{0}{<068>}{A road leading north-south}{ }{You are on a road moving east-west.  Looking to the south you can see a huge range of mountains in the distance.  To the north the ground is all charred.  You can see an occasional geyser of fire shoot up from the ground.  The land to the east seems to phase in and out periodically.  You can't be sure but it just might be the remains of the old Kingdom capital now called, aptly enough, Kayos.}{}{}{}{}{1.000}{}
+E {1}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {15}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {16}{climb}{.mapLink {Pinnacle/Chaos/Chess Board} {} {climb};}{0}{1}{}{1.000}{}{0.00}
+E {13}{n}{.mapLink {Pinnacle/Chaos/Hippie Commune} {} {n};}{1}{1}{}{1.000}{}{0.00}
+E {14}{s}{.mapLink {Pinnacle/Chaos/Smurfland} {} {s};}{4}{1}{}{1.000}{}{0.00}
+
+R {7}{0}{<000>}{LINK: Pinnacle/Chaos/Mouse House}{<138>*}{}{Pinnacle/Chaos/Mouse House}{{link}{}}{}{}{1.000}{}
+E {3}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {8}{0}{<068>}{South Forest}{ }{Branching off from the main road, you enter a plain forest. The ground beneath you is simply dirt with random tufts of grass shooting up through the ground. There is a marking of some sort etched in the dirt.}{}{}{}{}{1.000}{}
+E {5}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {59}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {11}{w}{.mapLink {Pinnacle/Chaos/Gremlins} {} {w};}{8}{1}{}{1.000}{}{0.00}
+E {145}{smile}{.mapLink {Pinnacle/Chaos/Smileyland} {} {smile};}{0}{1}{}{1.000}{}{0.00}
+
+R {9}{0}{<178>}{Eastwick Road}{ }{This is the road of Eastwick.  It leads to you know not where. Follow your feet and see where you go. There is a manhole here in the ground.}{}{}{}{}{1.000}{}
+E {5}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {10}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {12}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {62}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {193}{open manhole}{.mapLink {Pinnacle/Chaos/BBN Planet} {} {open manhole};}{0}{1}{}{1.000}{}{0.00}
+
+R {10}{0}{<068>}{Wickward Path}{ }{A brand-spanking new path! How 'bout that? It's made out of some kind of spongy material that adds a bounce to your step. The land around the path is as flat as Leeloo Dallas and looks like it's covered in AstroTurf.}{}{}{}{}{1.000}{}
+E {9}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {17}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {18}{follow tracks}{.mapLink {Pinnacle/Chaos/Puppy Mill} {} {follow tracks};}{0}{1}{}{1.000}{}{0.00}
+
+R {11}{0}{<000>}{LINK: Pinnacle/Chaos/Gremlins}{<138>*}{}{Pinnacle/Chaos/Gremlins}{{link}{}}{}{}{1.000}{}
+E {8}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {12}{0}{<068>}{Eastwick}{ }{You continue along the road of Eastwick.  Something smells just slightly wrong.  Turning, you notice bubbling tarpits off to the south.  Not at all extreme for chaos...}{}{}{}{}{1.000}{}
+E {9}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {19}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {20}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {21}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {184}{eat mushroom}{.mapLink {Pinnacle/Chaos/Ladder} {} {eat mushroom};}{0}{1}{}{1.000}{}{0.00}
+
+R {13}{0}{<000>}{LINK: Pinnacle/Chaos/Hippie Commune}{<138>*}{}{Pinnacle/Chaos/Hippie Commune}{{link}{}}{}{}{1.000}{}
+E {6}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {14}{0}{<000>}{LINK: Pinnacle/Chaos/Smurfland}{<138>*}{}{Pinnacle/Chaos/Smurfland}{{link}{}}{}{}{1.000}{}
+E {6}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {15}{0}{<068>}{A roadside}{ }{You have come to an intersection with a highway that appears to go nowhere.  There are tractor trailer trucks wizzing by on both sides.  After watching for a couple of minutes you could swear you have been watching the same trucks go back and forth, over and over again.  There is a really bad smell around here that you can't pin down.  Maybe those geysers?  Maybe Lovecraftian flatulence?  There is a manhole cover here as well.  It seems loose--perhaps you could go down here...But to where? }{}{}{}{}{1.000}{}
+E {6}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {26}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {27}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {28}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {25}{d}{.mapLink {Pinnacle/Chaos/Alphabet Land} {} {d};}{32}{1}{}{1.000}{}{0.00}
+
+R {16}{0}{<000>}{LINK: Pinnacle/Chaos/Chess Board}{<138>*}{}{Pinnacle/Chaos/Chess Board}{{link}{}}{}{}{1.000}{}
+
+R {17}{0}{<068>}{Wickward Path}{ }{This portion of the path is as bouncy as a trampoline. It's all you can do to avoid doing a backflip! The surrounding AstroTurf is now bright red and decorated with shiny white polka-dots. What looks like a giant glazed donut hovers overhead, occasionally dripping sugary sweetness upon the ground.}{}{}{}{}{1.000}{}
+E {10}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {155}{break cookie}{.mapLink {Pinnacle/Chaos/Mortal Kombat} {} {break cookie};}{0}{1}{}{1.000}{}{0.00}
+
+R {18}{0}{<000>}{LINK: Pinnacle/Chaos/Puppy Mill}{<138>*}{}{Pinnacle/Chaos/Puppy Mill}{{link}{}}{}{}{1.000}{}
+
+R {19}{0}{<068>}{A road leading north-south}{ }{You are on a road leading north-south.  You're traveling through some really messed up mountains.  It smells like charred flesh... or maybe it's Snuggle Fabric Softener, it's hard to tell. There is a cave entrance with a path leading up to it.}{}{{content}{{item}{{hockey puck}{{name}{A hockey puck}}}{noun}{{background}{{name}{background}}{sign}{{name}{sign}}{tree}{{name}{tree}}}{npc}{{Valithyn}{{name}{A valithyn under the control of Blutash}}}}{link}{}}{}{}{1.000}{}
+E {12}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {70}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {195}{enter}{.mapLink {Pinnacle/Chaos/Terra's Terrific Treehouse} {} {enter};}{0}{1}{}{1.000}{}{0.00}
+
+R {20}{0}{<068>}{A Cosmic Dishwasher}{ }{You are abruptly doused with hot, soapy water.  Shaking your head you look around and shrink in fear.  You are in a giant dishwasher. A whirling rubber hose nearly takes your head off as you duck behind the silverware.  Some tarpits these turned out to be!}{}{{content}{{item}{{bucket}{{name}{A bucket of water}}{ice cream truck}{{name}{The Good Humor, Ice Cream Truck}}}{noun}{{hose}{{name}{hose}}}}}{}{}{1.000}{}
+E {12}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {22}{u}{u}{16}{0}{}{1.000}{}{0.00}
+E {23}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {24}{dive into bucket}{.mapLink {Pinnacle/Chaos/Atlantis} {} {dive into bucket};}{0}{1}{}{1.000}{}{0.00}
+
+R {21}{0}{<068>}{Eastwick}{ }{This is further down the road of Eastwick.  The sky is turning a brownish yellow. You get the feeling something is not quite right. You feel as if up is down, east is west, and north is south. There is a void swirling in the middle of the road.}{}{}{}{}{1.000}{}
+E {65}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {12}{w}{w}{8}{1}{}{1.000}{}{0.00}
+E {167}{enter void}{.mapLink {Pinnacle/Chaos/Tree of Life} {} {enter void};}{0}{1}{}{1.000}{}{0.00}
+
+R {22}{0}{<068>}{The Upper Rack}{ }{You're now standing in the middle of the upper rack of a giant dishwasher.  Plastic compartments line the rack from one end to to the other.  Soapy water splashes up and over you every few seconds, leaving you smelling a little better, but it sure does sting the eyes!}{}{}{}{}{1.000}{}
+E {20}{d}{d}{32}{0}{}{1.000}{}{0.00}
+E {73}{slide spoon}{.mapLink {Pinnacle/Chaos/Cap'n Crunch Land} {} {slide spoon};}{0}{1}{}{1.000}{}{0.00}
+
+R {23}{0}{<048>}{A Cosmic Dishwasher}{ }{Suds are popping out of the dishwasher to the north.  That must be how you ended up in this neck of the woods in the first place. While you aren't sure you want to go through that again, the current sparse rocky landscape doesn't look all that promising either.  All these rocks seem out of place, given that there aren't any mountains or rivers anywhere nearby.  Go figure.}{}{{content}{{item}{{CD}{{name}{A CD. (pirated)}}{mist}{{name}{A patch of mist}}{puddle}{{name}{A mud puddle}}{waypoint}{{name}{a writhing tendril}}}{noun}{{landscape}{{name}{landscape}}{rocks}{{name}{rocks}}}}}{}{}{1.000}{}
+E {20}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {74}{s}{.mapLink {Pinnacle/Chaos/Burdog Gorge} {} {s};}{4}{1}{}{1.000}{}{0.00}
+E {194}{listen to cd}{.mapLink {Pinnacle/Chaos/MP3 CD} {} {listen to cd};}{0}{1}{}{1.000}{}{0.00}
+
+R {24}{0}{<000>}{LINK: Pinnacle/Chaos/Atlantis}{<138>*}{}{Pinnacle/Chaos/Atlantis}{{link}{}}{}{}{1.000}{}
+
+R {25}{0}{<000>}{LINK: Pinnacle/Chaos/Alphabet Land}{<138>*}{}{Pinnacle/Chaos/Alphabet Land}{{link}{}}{}{}{1.000}{}
+E {15}{u}{u}{16}{0}{}{1.000}{}{0.00}
+
+R {26}{0}{<068>}{A roadside}{ }{That highway definitely didn't go anywhere.  As you move north it totally disappears.  No trucks, no asphalt, nothing.  You suddenly find yourself on a road of yellow dirt.  You almost imagine that you can see the outlines of bricks.  This has got to be your imagination. To make matters worse, you think you can see the outline of a doorway set into the path.}{}{}{}{}{1.000}{}
+E {15}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {38}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {170}{doorway}{.mapLink {Pinnacle/Chaos/Lostar's Bedroom} {} {doorway};}{0}{1}{}{1.000}{}{0.00}
+
+R {27}{0}{<068>}{A path of yellow dirt}{ }{That highway definitely didn't go anywhere.  As you move south it totally disappears.  No trucks, no asphalt, nothing except a small manhole in the ground.  You suddenly find yourself on a road of yellow dirt.  You almost imagine that you can see the outlines of bricks.  This has got to be your imagination.}{}{}{}{}{1.000}{}
+E {15}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {48}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {49}{e}{.mapLink {Pinnacle/Chaos/Mouse Trails Cottage} {} {e};}{2}{1}{}{1.000}{}{0.00}
+E {47}{d}{.mapLink {Pinnacle/Chaos/Radioactive Sewer} {} {d};}{32}{1}{}{1.000}{}{0.00}
+
+R {28}{0}{<068>}{elbow joint}{ }{As you turn the corner, you note that you have entered a steel gray tunnel.  You plink your finger off the rounded wall and realize that you are walking inside a giant junction pipe.}{}{}{}{}{1.000}{}
+E {15}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {29}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {30}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {31}{e}{.mapLink {Pinnacle/Chaos/Jag's Bar} {} {e};}{2}{1}{}{1.000}{}{0.00}
+
+R {29}{0}{<068>}{Pipe Outlet}{ }{After crawling through the pipe, you are abruptly discharged by a burst of water.  Standing up, you realize that you have emerged in a ditch in a fog-clouded night.  Of course, the fog isn't fog, and the ditch isn't a ditch, but....}{}{}{}{}{1.000}{}
+E {28}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {32}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {37}{climb staircase}{.mapLink {Pinnacle/Chaos/NetHack} {} {climb staircase};}{0}{1}{}{1.000}{}{0.00}
+E {33}{e}{.mapLink {Pinnacle/Chaos/A Gigantic Bedroom} {} {e};}{2}{1}{}{1.000}{}{0.00}
+
+R {30}{0}{<068>}{Slide Street}{ }{Whoa!  You nearly fall on your butt as you scramble around trying to keep your balance.  The floor here is a slippery, wet, yellow plastic sheet.  It looks kinda like one of those Wet Run things that you hook up to your sprinkler in the summertime.  A multicolored rainbow extends up majestically into the sky.}{}{}{}{}{1.000}{}
+E {28}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {45}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {46}{w}{.mapLink {Pinnacle/Chaos/Veggie Garden} {} {w};}{8}{1}{}{1.000}{}{0.00}
+E {178}{climb rainbow}{.mapLink {Pinnacle/Chaos/Care Bears} {} {climb rainbow};}{0}{1}{}{1.000}{}{0.00}
+
+R {31}{0}{<000>}{LINK: Pinnacle/Chaos/Jag's Bar}{<138>*}{}{Pinnacle/Chaos/Jag's Bar}{{link}{}}{}{}{1.000}{}
+E {28}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {32}{0}{<068>}{Visiting a Crack House}{ }{As you leave the `ditch' and head north you are suddenly catapulted into another dimension.  As you go flying through the `air', you see dark shapes lying around the floor, smoking some noxious substance from little glass tubes.  You hope the ride comes to a quick end somewhere else because this view is very depressing.}{}{}{}{}{1.000}{}
+E {29}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {36}{w}{.mapLink {Pinnacle/Chaos/Chaos Museum} {} {w};}{8}{1}{}{1.000}{}{0.00}
+E {35}{n}{.mapLink {Pinnacle/Chaos/Old London} {} {n};}{1}{1}{}{1.000}{}{0.00}
+E {34}{d}{.mapLink {Pinnacle/Chaos/Laboratory Maze} {} {d};}{32}{1}{}{1.000}{}{0.00}
+
+R {33}{0}{<000>}{LINK: Pinnacle/Chaos/A Gigantic Bedroom}{<138>*}{}{Pinnacle/Chaos/A Gigantic Bedroom}{{link}{}}{}{}{1.000}{}
+E {29}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {34}{0}{<000>}{LINK: Pinnacle/Chaos/Laboratory Maze}{<138>*}{}{Pinnacle/Chaos/Laboratory Maze}{{link}{}}{}{}{1.000}{}
+E {32}{u}{u}{16}{0}{}{1.000}{}{0.00}
+
+R {35}{0}{<000>}{LINK: Pinnacle/Chaos/Old London}{<138>*}{}{Pinnacle/Chaos/Old London}{{link}{}}{}{}{1.000}{}
+E {32}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {36}{0}{<000>}{LINK: Pinnacle/Chaos/Chaos Museum}{<138>*}{}{Pinnacle/Chaos/Chaos Museum}{{link}{}}{}{}{1.000}{}
+E {32}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {37}{0}{<000>}{LINK: Pinnacle/Chaos/NetHack}{<138>*}{}{Pinnacle/Chaos/NetHack}{{link}{}}{}{}{1.000}{}
+
+R {38}{0}{<178>}{A path of yellow dirt}{ }{The ground beneath you is made of solid gold bricks.  You look  around cautiously, in sudden fear that a house may drop out of  the sky from nowhere and land on your head.  A crowd of drooling idiots is crowding into the passage north.}{}{}{}{}{1.000}{}
+E {26}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {40}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {39}{n}{.mapLink {Pinnacle/Chaos/Game Show} {} {n};}{1}{1}{}{1.000}{}{0.00}
+
+R {39}{0}{<000>}{LINK: Pinnacle/Chaos/Game Show}{<138>*}{}{Pinnacle/Chaos/Game Show}{{link}{}}{}{}{1.000}{}
+E {38}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {40}{0}{<068>}{Crazy Road}{ }{You are crossing a bridge of mist.  In places, the mist gives way to hideous shapes made out of gold.  Which, you suddenly realize is absolutely impossible.  The more you look at them the more you start to look like them.  And anyone with an ounce of sense wouldn't like that!  Of course, they wouldn't be here either but you ignore that thought.}{}{}{}{}{1.000}{}
+E {38}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {41}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {164}{enter frame}{.mapLink {Pinnacle/Chaos/JJJ Enterprises} {} {enter frame};}{0}{1}{}{1.000}{}{0.00}
+
+R {41}{0}{<068>}{Crazy Road}{ }{Your brain is under a serious assault now.  Images of horror and mayhem surround you. Maybe those stores to the north will be a refuge of sanity. Or otherwise that weird stairway over there might lead up to something better? Probably not though.}{}{}{}{}{1.000}{}
+E {40}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {3}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {43}{n}{.mapLink {Pinnacle/Chaos/Grocery Store} {} {n};}{1}{1}{}{1.000}{}{0.00}
+E {42}{u}{.mapLink {Pinnacle/Chaos/Chaos Mall} {} {u};}{16}{1}{}{1.000}{}{0.00}
+E {166}{pull leash}{.mapLink {Pinnacle/Chaos/Dog Pound} {} {pull leash};}{0}{1}{}{1.000}{}{0.00}
+
+R {42}{0}{<000>}{LINK: Pinnacle/Chaos/Chaos Mall}{<138>*}{}{Pinnacle/Chaos/Chaos Mall}{{link}{}}{}{}{1.000}{}
+E {41}{d}{d}{32}{0}{}{1.000}{}{0.00}
+
+R {43}{0}{<000>}{LINK: Pinnacle/Chaos/Grocery Store}{<138>*}{}{Pinnacle/Chaos/Grocery Store}{{link}{}}{}{}{1.000}{}
+E {41}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {44}{0}{<068>}{Lollipop Lane}{ }{As you move north the road gives way to a cutesy little street lined by tall lollipop trees.  The smell of sugar is so intense here that you can almost hear the zits rising on your face and back.  I'd move on fast if I were you!}{}{}{}{}{1.000}{}
+E {5}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {51}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {53}{twist knob}{.mapLink {Pinnacle/Chaos/Kandy Mountain} {} {twist knob};}{0}{1}{}{1.000}{}{0.00}
+
+R {45}{0}{<068>}{Grass Street}{ }{Ahhhh.. what nice soft grass.  The ground is covered with lush green grass.  That yellow slide must definitely have an effect on this place. You hear the distant sounds of circus music to the west.}{}{}{}{}{1.000}{}
+E {30}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {89}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {91}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {90}{w}{.mapLink {Pinnacle/Chaos/Billy Bob's Big Top Circus} {} {w};}{8}{1}{}{1.000}{}{0.00}
+E {150}{ride cow}{.mapLink {Pinnacle/Chaos/CowVille} {} {ride cow};}{0}{1}{}{1.000}{}{0.00}
+E {187}{enter doorway}{.mapLink {Pinnacle/Chaos/B Sharp Jazz Club} {} {enter doorway};}{0}{1}{}{1.000}{}{0.00}
+
+R {46}{0}{<000>}{LINK: Pinnacle/Chaos/Veggie Garden}{<138>*}{}{Pinnacle/Chaos/Veggie Garden}{{link}{}}{}{}{1.000}{}
+E {30}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {47}{0}{<000>}{LINK: Pinnacle/Chaos/Radioactive Sewer}{<138>*}{}{Pinnacle/Chaos/Radioactive Sewer}{{link}{}}{}{}{1.000}{}
+E {27}{u}{u}{16}{0}{}{1.000}{}{0.00}
+
+R {48}{0}{<068>}{A path of yellow dirt}{ }{The yellow brick road, or so you think it might be, comes to an abrupt ending here.  Further to the south, you think you see the yellow bricks give way to Lego blocks.  That's impossible of course!}{}{}{}{}{1.000}{}
+E {27}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {60}{sw}{.mapLink {Pinnacle/Chaos/Brewery Swamp} {} {sw};}{12}{1}{}{1.000}{}{0.00}
+E {61}{s}{.mapLink {Pinnacle/Chaos/New Legoland} {} {s};}{4}{1}{}{1.000}{}{0.00}
+E {88}{grab the box}{.mapLink {Pinnacle/Chaos/Chaos Laundry} {} {grab the box};}{0}{1}{}{1.000}{}{0.00}
+
+R {49}{0}{<000>}{LINK: Pinnacle/Chaos/Mouse Trails Cottage}{<138>*}{}{Pinnacle/Chaos/Mouse Trails Cottage}{{link}{}}{}{}{1.000}{}
+E {27}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {50}{0}{<000>}{LINK: Pinnacle/Chaos/Chinese Checkers}{<138>*}{}{Pinnacle/Chaos/Chinese Checkers}{{link}{}}{}{}{1.000}{}
+
+R {51}{0}{<068>}{Small side road}{ }{The lollipop trees give way abruptly to a narrow concrete road. To the north you can see a massive gray edifice.  Maybe the lollipops were former dwellers of that structure.  But if they were, you probably wouldn't want to chance going that way.  But if you were smart, you wouldn't be in Chaos anyway.}{Mud}{}{}{}{1.000}{}
+E {44}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {144}{sip cup}{.mapLink {Pinnacle/Chaos/Toddler House} {} {sip cup};}{0}{1}{}{1.000}{}{0.00}
+E {52}{n}{.mapLink {Pinnacle/Chaos/Shady Oaks Asylum} {} {n};}{1}{1}{}{1.000}{}{0.00}
+
+R {52}{0}{<000>}{LINK: Pinnacle/Chaos/Shady Oaks Asylum}{<138>*}{}{Pinnacle/Chaos/Shady Oaks Asylum}{{link}{}}{}{}{1.000}{}
+E {51}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {53}{0}{<000>}{LINK: Pinnacle/Chaos/Kandy Mountain}{<138>*}{}{Pinnacle/Chaos/Kandy Mountain}{{link}{}}{}{}{1.000}{}
+
+R {54}{0}{<068>}{A Chagall Mosaic (maybe)}{}{The grass gives way to innumerable little bits of glass.  They are arranged in intricate but non-linear rows.  It is night time here but the stars are out and a blazing comet casts sufficient light to see.}{Pinnacle/Chaos/Humpty Dumpty}{{link}{}}{}{}{1.000}{}
+E {4}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {57}{w}{.mapLink {Pinnacle/Chaos/Carina's Observatory} {} {w};}{8}{1}{}{1.000}{}{0.00}
+E {56}{s}{.mapLink {Pinnacle/Chaos/Forest of Wolves} {} {s};}{4}{1}{}{1.000}{}{0.00}
+E {58}{e}{.mapLink {Pinnacle/Chaos/Toy Store} {} {e};}{2}{1}{}{1.000}{}{0.00}
+E {185}{read chapter 3}{.mapLink {Pinnacle/Chaos/Humpty Dumpty} {} {read chapter 3};}{0}{1}{}{1.000}{}{0.00}
+E {186}{read chapter 1}{.mapLink {Pinnacle/Chaos/Old Woman in the Shoe} {} {read chapter 1};}{0}{1}{}{1.000}{}{0.00}
+
+R {55}{0}{<000>}{LINK: Pinnacle/Chaos/Leprechaun Village}{<138>*}{}{Pinnacle/Chaos/Leprechaun Village}{{link}{}}{}{}{1.000}{}
+E {4}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {56}{0}{<000>}{LINK: Pinnacle/Chaos/Forest of Wolves}{<138>*}{}{Pinnacle/Chaos/Forest of Wolves}{{link}{}}{}{}{1.000}{}
+E {54}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {57}{0}{<000>}{LINK: Pinnacle/Chaos/Carina's Observatory}{<138>*}{}{Pinnacle/Chaos/Carina's Observatory}{{link}{}}{}{}{1.000}{}
+E {54}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {58}{0}{<000>}{LINK: Pinnacle/Chaos/Toy Store}{<138>*}{}{Pinnacle/Chaos/Toy Store}{{link}{}}{}{}{1.000}{}
+E {54}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {59}{0}{<068>}{South Forest}{ }{The non-forest continues south.  But now the `ground' is beginning to take on a purplish tint which seems to be coming from that obloid to the south. There is a dense patch of purple mist in this area through which you can dimly see huge shapes moving.}{}{}{}{}{1.000}{}
+E {8}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {69}{s}{.mapLink {Pinnacle/Chaos/Barney's Studio} {} {s};}{4}{1}{}{1.000}{}{0.00}
+E {171}{enter mist}{.mapLink {Pinnacle/Chaos/Land of the Dinosaurs} {} {enter mist};}{0}{1}{}{1.000}{}{0.00}
+
+R {60}{0}{<000>}{LINK: Pinnacle/Chaos/Brewery Swamp}{<138>*}{}{Pinnacle/Chaos/Brewery Swamp}{{link}{}}{}{}{1.000}{}
+E {48}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+
+R {61}{0}{<000>}{LINK: Pinnacle/Chaos/New Legoland}{<138>*}{}{Pinnacle/Chaos/New Legoland}{{link}{}}{}{}{1.000}{}
+E {48}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {62}{0}{<068>}{Wickland Street}{ }{This appears to be a new side street. The pavement looks fresh and clean. Nary a pothole to be found! Too bad the same can't be said for the ground just beyond the curb on each side of this pleasant little avenue. It seems to be littered with craters.}{}{}{}{}{1.000}{}
+E {9}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {63}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {146}{count 123}{.mapLink {Pinnacle/Chaos/Sesame Street} {} {count 123};}{0}{1}{}{1.000}{}{0.00}
+
+R {63}{0}{<068>}{Wickland Street}{ }{Wickland Street continues merrily along, now winding through what appears to be a bamboo forest. A thick one at that! The trees of the forest are so thick on each side of the street that they almost run right up against the curbs.}{}{}{}{}{1.000}{}
+E {62}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {68}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {147}{draw tile}{.mapLink {Pinnacle/Chaos/Mahjongg} {} {draw tile};}{0}{1}{}{1.000}{}{0.00}
+
+R {64}{0}{<178>}{Eastwick Road}{ }{You are on the Eastwick road.  There is a road to the west and another to the south.  Which way do you go, you do not know.}{}{}{}{}{1.000}{}
+E {65}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {140}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {65}{0}{<068>}{Eastwick}{ }{The road splits into four directions from here. You can go to the north and the south or back to the center. Maybe.  You never really can know in chaos.  The future lies to the north.  The past to the south.  Or is it to the east? Well, head on in and find out for yourself.}{}{}{}{}{1.000}{}
+E {21}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {64}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {66}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {67}{e}{.mapLink {Pinnacle/Chaos/Waldo's House} {} {e};}{2}{1}{}{1.000}{}{0.00}
+E {177}{open chest}{.mapLink {Pinnacle/Chaos/Winnie the Pooh} {} {open chest};}{0}{1}{}{1.000}{}{0.00}
+
+R {66}{0}{<068>}{South/North Fork}{ }{This is a narrow road north of Eastwick.  Or maybe south. It really is hard to say.  You can see a big gray building to the east, or west, or north.  Directions really are pretty meaningless in this part of Chaos.}{Mud}{}{}{}{1.000}{}
+E {65}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {75}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {76}{e}{.mapLink {Pinnacle/Chaos/Physics Lab} {} {e};}{2}{1}{}{1.000}{}{0.00}
+E {151}{enter store}{.mapLink {Pinnacle/Chaos/Chaos Candy Store} {} {enter store};}{0}{1}{}{1.000}{}{0.00}
+
+R {67}{0}{<000>}{LINK: Pinnacle/Chaos/Waldo's House}{<138>*}{}{Pinnacle/Chaos/Waldo's House}{{link}{}}{}{}{1.000}{}
+E {65}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {68}{0}{<178>}{Wickwood Forest}{ }{The ground underfoot is hard-packed dirt and a multitude of strange trees surrounds you. You recognize a few varieties such as bamboo and palm, but what are these others? Some of the wood is bright red, others are purple, and some of these 'trees' actually appear to be giant Q-tips!}{}{}{}{}{1.000}{}
+E {63}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {69}{0}{<000>}{LINK: Pinnacle/Chaos/Barney's Studio}{<138>*}{}{Pinnacle/Chaos/Barney's Studio}{{link}{}}{}{}{1.000}{}
+E {59}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {70}{0}{<068>}{A road leading north-south}{ }{All around you fiery geysers explode from the land, showering you in harmless ashes.  Though, you can imagine it wouldn't be quite so harmless if you were standing on top of one of them when it decided to erupt.  You'd best watch where you step.  A small path branches off here, and in defiance of common sense, someone has set up a notice board here as well.}{}{}{}{}{1.000}{}
+E {19}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {71}{se}{.mapLink {Pinnacle/Chaos/Fidohell} {} {se};}{6}{1}{}{1.000}{}{0.00}
+E {72}{n}{.mapLink {Pinnacle/Chaos/Electric Cave} {} {n};}{1}{1}{}{1.000}{}{0.00}
+
+R {71}{0}{<000>}{LINK: Pinnacle/Chaos/Fidohell}{<138>*}{}{Pinnacle/Chaos/Fidohell}{{link}{}}{}{}{1.000}{}
+E {70}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+
+R {72}{0}{<000>}{LINK: Pinnacle/Chaos/Electric Cave}{<138>*}{}{Pinnacle/Chaos/Electric Cave}{{link}{}}{}{}{1.000}{}
+E {70}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {73}{0}{<000>}{LINK: Pinnacle/Chaos/Cap'n Crunch Land}{<138>*}{}{Pinnacle/Chaos/Cap'n Crunch Land}{{link}{}}{}{}{1.000}{}
+
+R {74}{0}{<000>}{LINK: Pinnacle/Chaos/Burdog Gorge}{<138>*}{}{Pinnacle/Chaos/Burdog Gorge}{{link}{}}{}{}{1.000}{}
+E {23}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {75}{0}{<178>}{Eastwick}{ }{This is the Eastwick road.  There is a path running south and another to the east.  There is also a big white portal here. Which way do you go, I do not know!}{}{}{}{}{1.000}{}
+E {66}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {77}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {76}{0}{<000>}{LINK: Pinnacle/Chaos/Physics Lab}{<138>*}{}{Pinnacle/Chaos/Physics Lab}{{link}{}}{}{}{1.000}{}
+E {66}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {77}{0}{<178>}{Eastwick Road}{ }{The road suddenly leads through the reading room of a small library.  There is a passage north and another to the east. Which way do you go, you do not know.}{}{}{}{}{1.000}{}
+E {75}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {78}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {78}{0}{<178>}{Eastwick}{ }{You are back on the Eastwick road.  There is a road to the east and another to the west.  Which way do you go, you do not know. }{}{}{}{}{1.000}{}
+E {77}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {79}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {79}{0}{<068>}{Eastwick}{ }{This is the Eastwick road.  There is a road to the north and one to the west.  Which way do you go, you do not know.  There is a deep dark hole here.  Oddly enough, it goes up, not down.}{Mud}{}{}{}{1.000}{}
+E {78}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {81}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {82}{e}{.mapLink {Pinnacle/Chaos/The Book Nook} {} {e};}{2}{1}{}{1.000}{}{0.00}
+E {80}{u}{.mapLink {Pinnacle/Chaos/Crydee} {} {u};}{16}{1}{}{1.000}{}{0.00}
+E {143}{grab joystick}{.mapLink {Pinnacle/Chaos/Gamer's House} {} {grab joystick};}{0}{1}{}{1.000}{}{0.00}
+
+R {80}{0}{<000>}{LINK: Pinnacle/Chaos/Crydee}{<138>*}{}{Pinnacle/Chaos/Crydee}{{link}{}}{}{}{1.000}{}
+E {79}{d}{d}{32}{0}{}{1.000}{}{0.00}
+
+R {81}{0}{<178>}{Eastwick Road}{ }{This is the Eastwick road.  The lurching, sidewinding street leads straight as an arrow north and south, or rather south and north, or perhaps both at the same time.  The mottled sky is dark and shadowy, caused both by the existence and non- existence of a fixed source of light, and the giant warehouse that floats happily over your halo.  Which way to head?  Which way to feet?  Which way to the nearest nail factory?  Questions, questions.}{}{}{}{}{1.000}{}
+E {79}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {83}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {82}{0}{<000>}{LINK: Pinnacle/Chaos/The Book Nook}{<138>*}{}{Pinnacle/Chaos/The Book Nook}{{link}{}}{}{}{1.000}{}
+E {79}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {83}{0}{<178>}{Eastwick Road}{ }{This is the Eastwick road.  Somehow it suddenly veered in direction. There is a road to the west and another to the east.  Which way do you go, you do not know.}{}{}{}{}{1.000}{}
+E {85}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {81}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {84}{0}{<109>}{}{ }{}{}{}{}{}{1.000}{}
+E {85}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {85}{0}{<178>}{Eastwick Road}{ }{As you travel west you start to realize... You are going south. The world in eastwick is chaotic and turned around.  To the south is a barren wasteland.  It looks as though it has been hit by an atomic weapon.  The gooey tar-like substance was once an asphalt road.  You can almost feel the radiation pouring through your shoes.  The road to the north leads into eastwick.  The road south trails off into a steamy, twisted world.}{}{}{}{}{1.000}{}
+E {86}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {83}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {86}{0}{<068>}{Nuclear Wasteland}{ }{You meander through a glowing rockpile glancing nervously over you shoulder as you hear slight rustlings on all sides.}{}{}{}{}{1.000}{}
+E {85}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {87}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {158}{enter sleigh}{.mapLink {Pinnacle/Chaos/Toy Factory} {} {enter sleigh};}{0}{1}{}{1.000}{}{0.00}
+
+R {87}{0}{<068>}{Nuclear Wasteland}{ }{There is a vast, bubbling pool to the east.  It looks like you're going to have to jump the pool and hope for the best!}{}{}{}{}{1.000}{}
+E {86}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {141}{jump pool}{jump pool}{0}{0}{}{1.000}{}{0.00}
+
+R {88}{0}{<000>}{LINK: Pinnacle/Chaos/Chaos Laundry}{<138>*}{}{Pinnacle/Chaos/Chaos Laundry}{{link}{}}{}{}{1.000}{}
+
+R {89}{0}{<068>}{Country Road}{ }{You're on a small country road.  All you can see around you are fields of corn. It appears that the WPA has reached this sleepy countryside.  Workers are encamped along the road, manning a stand selling Mentos. }{}{}{}{}{1.000}{}
+E {45}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {92}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {93}{w}{.mapLink {Pinnacle/Chaos/Funkytown} {} {w};}{8}{1}{}{1.000}{}{0.00}
+E {188}{buy mentos}{.mapLink {Pinnacle/Chaos/Mentos} {} {buy mentos};}{0}{1}{}{1.000}{}{0.00}
+
+R {90}{0}{<000>}{LINK: Pinnacle/Chaos/Billy Bob's Big Top Circus}{<138>*}{}{Pinnacle/Chaos/Billy Bob's Big Top Circus}{{link}{}}{}{}{1.000}{}
+E {45}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {91}{0}{<068>}{Voodoo Grove}{ }{Surrounding you are large, closely grown palm trees.  Thick, green vines hang from intertwined leaves and branches making the clearing in which you stand fairly isolated.  The vines sway gently as a breeze from the south blows through.  Storm clouds are gathering to the south and the faint smell of ozone tickles your nose.  Standing at the northern end of the dirt circle is a wooden totem pole with three large heads. The bottom-most head is a carving of an owl, and the middle head is a carving of a dragon.  The top head is eerily different from the rest in the sense that you can't quite determine what is being represented.  There seems to be an opening in the totem pole to the north.}{Mud}{}{}{}{1.000}{}
+E {45}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {94}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {96}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {95}{s}{.mapLink {Pinnacle/Chaos/Tornado} {} {s};}{4}{1}{}{1.000}{}{0.00}
+
+R {92}{0}{<068>}{Forest path}{ }{You're on a tiny deer trail, deep in the middle of a forest.  Only a little sunlight filters through the branches above you, but you can see enough to avoid the trees in your path.   Small animals scurry away at your approach.}{}{}{}{}{1.000}{}
+E {89}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {97}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {98}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {153}{touch card}{.mapLink {Pinnacle/Chaos/Queen of Heart's Garden} {} {touch card};}{0}{1}{}{1.000}{}{0.00}
+E {154}{tear card}{.mapLink {Pinnacle/Chaos/Queen of Heart's Garden 2} {} {tear card};}{0}{1}{}{1.000}{}{0.00}
+
+R {93}{0}{<000>}{LINK: Pinnacle/Chaos/Funkytown}{<138>*}{}{Pinnacle/Chaos/Funkytown}{{link}{}}{}{}{1.000}{}
+E {89}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {94}{0}{<128>}{The Tropical Tavern}{<138>P}{You've found your way to what seems to be the tavern of Kayos - you think.  The place is an extravagantly decorated room.  Beautiful  tropical flowers grace every table while lush, brilliant green vines hang from the ceiling and walls, thriving ever so majestically.  Behind the actual bar itself is a slab of stone with drinks and prices:        Intox:                   Detox:    Bark Brew     75 coins         Glass of Water      80 coins    Root Rot     240 coins         Fertilizer         160 coins    Insecticide  300 coins  }{}{{pub}{}}{}{}{1.000}{}
+E {91}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {95}{0}{<000>}{LINK: Pinnacle/Chaos/Tornado}{<138>*}{}{Pinnacle/Chaos/Tornado}{{link}{}}{}{}{1.000}{}
+E {91}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {96}{0}{<068>}{Broccoli Patch}{ }{As you squeeze through the palm trees, smacking vines trying to grab your buttocks, you find yourself in a broccoli patch.  Nothing you have seen yet in Chaos has prepared you for this horror of untold dimensions. You vaguely make out some buildings to the north.}{Mud}{}{}{}{1.000}{}
+E {91}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {102}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {103}{s}{.mapLink {Pinnacle/Chaos/Chaos Cinemaplex} {} {s};}{4}{1}{}{1.000}{}{0.00}
+E {163}{fix typo}{.mapLink {Pinnacle/Chaos/Dayln's Mind} {} {fix typo};}{0}{1}{}{1.000}{}{0.00}
+E {180}{skip rope}{.mapLink {Pinnacle/Chaos/Club Chaos} {} {skip rope};}{0}{1}{}{1.000}{}{0.00}
+
+R {97}{0}{<068>}{Swirling mist (sideways,out2,out1)                          }{ }{You suddenly find yourself floating in a white, swirling mist.  There's  no sense of up or down, just two openings, like breaks in a cloud, where you can see out.  Strangely enough, there is a concrete ramp here that, as far as you can tell, leads sideways.}{}{}{}{}{1.000}{}
+E {92}{n}{out1}{1}{0}{}{1.000}{}{0.00}
+E {99}{s}{out2}{4}{0}{}{1.000}{}{0.00}
+E {189}{sideways}{.mapLink {Pinnacle/Chaos/Disney World} {} {sideways};}{0}{1}{}{1.000}{}{0.00}
+E {190}{press play}{.mapLink {Pinnacle/Chaos/The Secret of Nimh} {} {press play};}{0}{1}{}{1.000}{}{0.00}
+
+R {98}{0}{<178>}{Field of Daisies}{ }{Blinding sunlight shines down on this lovely field of white and yellow daisies.  The flowers are everywhere, literally thousands of them. Buzzing about this fragrant patch of land are more dragonflies than you can count.  Watch out or they might fly right into you!}{}{}{}{}{1.000}{}
+E {92}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {99}{0}{<068>}{Hedge maze}{ }{You're at an intersection in what appears to be a hedge maze.  Which way will you go?}{Mud}{}{}{}{1.000}{}
+E {97}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {1}{e}{e}{2}{1}{}{1.000}{}{0.00}
+E {100}{s}{.mapLink {Pinnacle/Chaos/Body Mansion} {} {s};}{4}{1}{}{1.000}{}{0.00}
+E {101}{w}{.mapLink {Pinnacle} {} {w};}{8}{1}{}{1.000}{}{0.00}
+E {191}{admire ring}{.mapLink {Pinnacle/Chaos/Browning Estate} {} {admire ring};}{0}{1}{}{1.000}{}{0.00}
+
+R {100}{0}{<000>}{LINK: Pinnacle/Chaos/Body Mansion}{<138>*}{}{Pinnacle/Chaos/Body Mansion}{{link}{}}{}{}{1.000}{}
+E {99}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {101}{0}{<000>}{LINK: Pinnacle}{<138>*}{}{Pinnacle}{{link}{}}{}{}{1.000}{}
+E {99}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {102}{0}{<068>}{Banana Tree Street}{ }{Large leafy plants bloom here bearing large bunches of bananas. The grass is quite short, and a few palm trees have sprouted on eastern side.  They almost block your view of a six-foot tall stake with a bright orange rope tied to it.  The rope trails off to the east into a dark void.  To the west is a tall skyscraper.}{}{}{}{}{1.000}{}
+E {96}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {104}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {105}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {181}{enter}{.mapLink {Pinnacle/Chaos/Seinfeld Studio Set} {} {enter};}{0}{1}{}{1.000}{}{0.00}
+
+R {103}{0}{<000>}{LINK: Pinnacle/Chaos/Chaos Cinemaplex}{<138>*}{}{Pinnacle/Chaos/Chaos Cinemaplex}{{link}{}}{}{}{1.000}{}
+E {96}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {104}{0}{<068>}{Pond Street}{ }{This is a quiet place.  There is a serene little pond with a tiny waterfall flowing down from some piled granite rocks.  A few tortoises lounge about in the warm sun, keeping their minds open and free of worries.  Oddly, there is a manhole here.  Odder yet, it seems to be lacking its cover.  Oddest yet, it bobs up and down on waves of the the pond like a water lily.  How odd!}{}{}{}{}{1.000}{}
+E {102}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {106}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {168}{flick switch}{.mapLink {Pinnacle/Chaos/Android Showroom} {} {flick switch};}{0}{1}{}{1.000}{}{0.00}
+E {182}{hole}{.mapLink {Pinnacle/Chaos/Teenage Mutant Turtles} {} {hole};}{0}{1}{}{1.000}{}{0.00}
+
+R {105}{0}{<068>}{Da Void}{ }{You are stumbling through a dark void.  The only connection to any form of reality is the glowing rope you are hanging on to for dear life!}{Mud}{}{}{}{1.000}{}
+E {102}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {110}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {109}{n}{.mapLink {Pinnacle/Chaos/Warner Bros Inuit Village} {} {n};}{1}{1}{}{1.000}{}{0.00}
+E {148}{slip on peel}{.mapLink {Pinnacle/Chaos/Enchanted Jungle} {} {slip on peel};}{0}{1}{}{1.000}{}{0.00}
+E {162}{turn on faucet}{.mapLink {Pinnacle/Chaos/Funky Bathroom} {} {turn on faucet};}{0}{1}{}{1.000}{}{0.00}
+
+R {106}{0}{<068>}{Glass Road}{ }{The smoothness of the ground beneath you is amazing.  Closer examination reveals that it's stained glass.  The tufts of what you thought was grass are actually small clumps of green crystal formations poking up through the floor. A small trail leads off into the unknown from here.}{}{}{}{}{1.000}{}
+E {104}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {107}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {183}{trail}{.mapLink {Pinnacle/Chaos/Einstein's Cottage} {} {trail};}{0}{1}{}{1.000}{}{0.00}
+
+R {107}{0}{<068>}{Crystal Tree and Arch}{ }{The glass floor stops here.  In the center of the road is a solid crystal tree.  It extends high into the sky, further than your eye can see.  Beneath it is a strange looking tryptich.}{}{}{}{}{1.000}{}
+E {106}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {108}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {175}{break arch}{.mapLink {Pinnacle/Chaos/The Land} {} {break arch};}{0}{1}{}{1.000}{}{0.00}
+E {176}{u}{climb tree}{16}{0}{}{1.000}{}{0.00}
+
+R {108}{0}{<128>}{Chaos Shop}{<138>%}{This, quite possibly, could be the main shop of the Chaos Realm. The annoyingly loud car salesman standing in the center of this black cement lot is a dead giveaway.  Type 'list' to see the fine wares being sold in this shop.}{}{{shop}{}}{}{}{1.000}{}
+E {107}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {160}{jump curb}{.mapLink {Pinnacle/Chaos/Used Car Lot} {} {jump curb};}{0}{1}{}{1.000}{}{0.00}
+
+R {109}{0}{<000>}{LINK: Pinnacle/Chaos/Warner Bros Inuit Village}{<138>*}{}{Pinnacle/Chaos/Warner Bros Inuit Village}{{link}{}}{}{}{1.000}{}
+E {105}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {110}{0}{<068>}{Da Void}{ }{You are stumbling through a dark void.  The only connection to any form of reality is the glowing rope you are hanging on to for dear life!  A chilly wind blasts you from the south. There is a small doctor's office here.}{Mud}{}{}{}{1.000}{}
+E {105}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {112}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {114}{s}{.mapLink {Pinnacle/Chaos/Ice Fishing} {} {s};}{4}{1}{}{1.000}{}{0.00}
+E {161}{enter office}{.mapLink {Pinnacle/Chaos/Innerspace} {} {enter office};}{0}{1}{}{1.000}{}{0.00}
+
+R {111}{0}{<000>}{LINK: Pinnacle/Chaos/Ice Fishing}{<138>*}{}{Pinnacle/Chaos/Ice Fishing}{{link}{}}{}{}{1.000}{}
+E {110}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {112}{0}{<068>}{Da Void                                                     }{ }{As you push on through Da Void the rope suddenly whips out of your hand.  You are left in complete darkness.}{}{}{}{}{1.000}{}
+E {110}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {113}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {124}{e}{.mapLink {Pinnacle/Chaos/Darkmoore} {} {e};}{2}{1}{}{1.000}{}{0.00}
+E {125}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {156}{u}{.mapLink {Pinnacle/Chaos/Oj Cow} {} {u};}{16}{1}{}{1.000}{}{0.00}
+
+R {113}{0}{<068>}{Da Void                                                     }{ }{You are in complete darkness.}{}{}{}{}{1.000}{}
+E {112}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {117}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {123}{e}{.mapLink {Pinnacle/Chaos/Cloud City} {} {e};}{2}{1}{}{1.000}{}{0.00}
+E {157}{enter}{.mapLink {Pinnacle/Chaos/Wormhole Laboratory} {} {enter};}{0}{1}{}{1.000}{}{0.00}
+
+R {114}{0}{<000>}{LINK: Pinnacle/Chaos/Ice Fishing}{<138>*}{}{Pinnacle/Chaos/Ice Fishing}{{link}{}}{}{}{1.000}{}
+E {110}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {115}{0}{<109>}{}{ }{}{}{}{}{}{1.000}{}
+
+R {116}{0}{<109>}{}{ }{}{}{}{}{}{1.000}{}
+
+R {117}{0}{<068>}{Eastwick Road?}{ }{No matter how weird Eastwick is, there just can be no doubt that you're not in Kansas anymore.  The flying totos would make that clear were it not for the fact that the goo seems to have clogged your brain as well as your nasal passages. You can see the swirling void leading into darkness to your east with a slight offshoot to the south. You can just make out some sort of building to the north.}{}{}{}{}{1.000}{}
+E {113}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {118}{n}{.mapLink {Pinnacle/Chaos/ROTC} {} {n};}{1}{1}{}{1.000}{}{0.00}
+E {119}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {121}{s}{.mapLink {Pinnacle/Chaos/Xanth Swamp} {} {s};}{4}{1}{}{1.000}{}{0.00}
+
+R {118}{0}{<000>}{LINK: Pinnacle/Chaos/ROTC}{<138>*}{}{Pinnacle/Chaos/ROTC}{{link}{}}{}{}{1.000}{}
+E {117}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {119}{0}{<068>}{Eastwick Road}{ }{Wow!  Looks like you're back on Eastwick Road.  But this variant is a bit different.  The road is made of some white gooey liquid and larvae are crawling in and through it.  I'd move on fast if I were you!  Although that weird howling down south is ...odd!}{}{}{}{}{1.000}{}
+E {117}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {120}{s}{.mapLink {Pinnacle/Chaos/Happy Ed's Chinchilla Farm} {} {s};}{4}{1}{}{1.000}{}{0.00}
+E {122}{stroke fur}{.mapLink {Pinnacle/Chaos/Happy Ed's Chinchilla Farm 2} {} {stroke fur};}{0}{1}{}{1.000}{}{0.00}
+E {117}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {165}{enter hole}{.mapLink {Pinnacle/Chaos/Easter Bunny Academy} {} {enter hole};}{0}{1}{}{1.000}{}{0.00}
+
+R {120}{0}{<000>}{LINK: Pinnacle/Chaos/Happy Ed's Chinchilla Farm}{<138>*}{}{Pinnacle/Chaos/Happy Ed's Chinchilla Farm}{{link}{}}{}{}{1.000}{}
+E {119}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {121}{0}{<000>}{LINK: Pinnacle/Chaos/Xanth Swamp}{<138>*}{}{Pinnacle/Chaos/Xanth Swamp}{{link}{}}{}{}{1.000}{}
+E {117}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {122}{0}{<000>}{LINK: Pinnacle/Chaos/Happy Ed's Chinchilla Farm 2}{<138>*}{}{Pinnacle/Chaos/Happy Ed's Chinchilla Farm 2}{{link}{}}{}{}{1.000}{}
+
+R {123}{0}{<000>}{LINK: Pinnacle/Chaos/Cloud City}{<138>*}{}{Pinnacle/Chaos/Cloud City}{{link}{}}{}{}{1.000}{}
+E {113}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {124}{0}{<000>}{LINK: Pinnacle/Chaos/Darkmoore}{<138>*}{}{Pinnacle/Chaos/Darkmoore}{{link}{}}{}{}{1.000}{}
+E {112}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {125}{0}{<068>}{Da Void                                                     }{ }{You are in complete darkness.}{Mud}{}{}{}{1.000}{}
+E {112}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {126}{e}{.mapLink {Pinnacle/Chaos/Frosty Igloo} {} {e};}{2}{1}{}{1.000}{}{0.00}
+E {127}{n}{.mapLink {Pinnacle/Chaos/Mystic Forest} {} {n};}{1}{1}{}{1.000}{}{0.00}
+E {128}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {174}{pick paris}{.mapLink {Pinnacle/Chaos/Paris: Eiffel Tower} {} {pick paris};}{0}{1}{}{1.000}{}{0.00}
+
+R {126}{0}{<000>}{LINK: Pinnacle/Chaos/Frosty Igloo}{<138>*}{}{Pinnacle/Chaos/Frosty Igloo}{{link}{}}{}{}{1.000}{}
+E {125}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {127}{0}{<000>}{LINK: Pinnacle/Chaos/Mystic Forest}{<138>*}{}{Pinnacle/Chaos/Mystic Forest}{{link}{}}{}{}{1.000}{}
+E {125}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {128}{0}{}{Da Cubs!}{ }{You break out of Da Void and into an even worse disaster.  You are surrounded on all sides by vociferous Chicagoans declaiming on the playoff possibilities of this year's variant of Da Cubs!}{}{}{}{}{1.000}{}
+E {125}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {129}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {129}{0}{<068>}{Lake Shore Drive}{ }{Somehow, and by what means you are still unclear, you are now zooming down Lake Shore Drive.  It is the dead of winter yet there is no snow and warm balmy breezes play off the shore of Lake Michigan.  A nagging voice tells you that there is something wrong with this picture but you jet onward.}{}{}{}{}{1.000}{}
+E {128}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {130}{sw}{.mapLink {Pinnacle/Chaos/Beavis and Butthead} {} {sw};}{12}{1}{}{1.000}{}{0.00}
+E {131}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {130}{0}{<000>}{LINK: Pinnacle/Chaos/Beavis and Butthead}{<138>*}{}{Pinnacle/Chaos/Beavis and Butthead}{{link}{}}{}{}{1.000}{}
+E {129}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+
+R {131}{0}{<178>}{Wacker Drive}{ }{No place has ever seen a street like this.  Overhead tram rails trail wires on to the ground.  Every now and then, one of them reaches out and takes a hunk of skin out of an unwary pedestrian. But you zoom on blithely.  No time for the hoi polloi now!  You're going to feed peanuts to the orangutans!}{}{}{}{}{1.000}{}
+E {129}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {132}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {132}{0}{<178>}{Da Museum}{ }{Somehow you've managed to drive your shiny little thingie into the lobby of a great museum.  Dedicated to all the people of Chicago by a rich guy who thought they were all scum, the museum looms over the slums that encroach upon it.}{}{}{}{}{1.000}{}
+E {131}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {133}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {134}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {133}{0}{<178>}{Da Shoebox                                                  }{ }{Oddly enough, you find yourself inside a shoebox! It's awfully cramped in here. You might be able to squeeze through the pinholes in the north, south, west or east walls. Through the pinhole to the north you see something blindingly bright, while the aroma of coffee and salt water wafts in from the western and eastern pinholes respectively.}{}{}{}{}{1.000}{}
+E {132}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {137}{w}{.mapLink {Pinnacle/Chaos/Starbuck's Coffee} {} {w};}{8}{1}{}{1.000}{}{0.00}
+E {138}{n}{.mapLink {Pinnacle/Chaos/Sweetboots' House} {} {n};}{1}{1}{}{1.000}{}{0.00}
+E {139}{e}{.mapLink {Pinnacle/Chaos/Aquarium} {} {e};}{2}{1}{}{1.000}{}{0.00}
+
+R {134}{0}{<178>}{Da Slums}{ }{You have suddenly zipped into Da Slum.  You lock your windows.  This is a barren wasteland and looks as though it has been hit by an atomic weapon.  The gooey tar-like substance was once an asphalt street.  You can almost feel the radiation pouring through your shoes.}{}{}{}{}{1.000}{}
+E {132}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {135}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {135}{0}{<068>}{Da Pits}{ }{Your careening path of destruction has come to an end or it has just started.  You have just been ejected from the thingie, or you just flew through the air into it.  This is confusing.  There are peanuts on the ground and the tang of orangutan poop is in the air.}{Mud}{}{}{}{1.000}{}
+E {134}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {136}{e}{.mapLink {Pinnacle/Chaos/Chicago Zoo} {} {e};}{2}{1}{}{1.000}{}{0.00}
+
+R {136}{0}{<000>}{LINK: Pinnacle/Chaos/Chicago Zoo}{<138>*}{}{Pinnacle/Chaos/Chicago Zoo}{{link}{}}{}{}{1.000}{}
+E {135}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {137}{0}{<000>}{LINK: Pinnacle/Chaos/Starbuck's Coffee}{<138>*}{}{Pinnacle/Chaos/Starbuck's Coffee}{{link}{}}{}{}{1.000}{}
+E {133}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {138}{0}{<000>}{LINK: Pinnacle/Chaos/Sweetboots' House}{<138>*}{}{Pinnacle/Chaos/Sweetboots' House}{{link}{}}{}{}{1.000}{}
+E {133}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {139}{0}{<000>}{LINK: Pinnacle/Chaos/Aquarium}{<138>*}{}{Pinnacle/Chaos/Aquarium}{{link}{}}{}{}{1.000}{}
+E {133}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {140}{0}{<068>}{Eastwick Road}{ }{You are on the Eastwick road.  There is a road to the east and another to the north.  Which way do you go, you do not know.}{}{}{}{}{1.000}{}
+E {64}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {141}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {149}{push fence}{.mapLink {Pinnacle/Chaos/Summerset Warrens} {} {push fence};}{0}{1}{}{1.000}{}{0.00}
+
+R {141}{0}{<068>}{Eastwick Road}{ }{Your sense of direction suffers a new jolt.  There is a bubbling pool to the west and a road heading south.  The only way you can see around the pool is by jumping it.}{}{}{}{}{1.000}{}
+E {140}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {142}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {87}{jump pool}{jump pool}{0}{0}{}{1.000}{}{0.00}
+
+R {142}{0}{<048>}{Eastwick Road Food Court}{ }{The road ends here at a series of entrances to various food emporiums. So, if you're hungry, you've come to the right place! Several of the doors' signs say 'CLOSED' with no indication of what they even are.  A few other doors seem to be wide open, ready for you to wander in and fill your gut.}{}{}{}{}{1.000}{}
+E {141}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {143}{0}{<000>}{LINK: Pinnacle/Chaos/Gamer's House}{<138>*}{}{Pinnacle/Chaos/Gamer's House}{{link}{}}{}{}{1.000}{}
+
+R {144}{0}{<000>}{LINK: Pinnacle/Chaos/Toddler House}{<138>*}{}{Pinnacle/Chaos/Toddler House}{{link}{}}{}{}{1.000}{}
+
+R {145}{0}{<000>}{LINK: Pinnacle/Chaos/Smileyland}{<138>*}{}{Pinnacle/Chaos/Smileyland}{{link}{}}{}{}{1.000}{}
+
+R {146}{0}{<000>}{LINK: Pinnacle/Chaos/Sesame Street}{<138>*}{}{Pinnacle/Chaos/Sesame Street}{{link}{}}{}{}{1.000}{}
+
+R {147}{0}{<000>}{LINK: Pinnacle/Chaos/Mahjongg}{<138>*}{}{Pinnacle/Chaos/Mahjongg}{{link}{}}{}{}{1.000}{}
+
+R {148}{0}{<000>}{LINK: Pinnacle/Chaos/Enchanted Jungle}{<138>*}{}{Pinnacle/Chaos/Enchanted Jungle}{{link}{}}{}{}{1.000}{}
+
+R {149}{0}{<000>}{LINK: Pinnacle/Chaos/Summerset Warrens}{<138>*}{}{Pinnacle/Chaos/Summerset Warrens}{{link}{}}{}{}{1.000}{}
+
+R {150}{0}{<000>}{LINK: Pinnacle/Chaos/CowVille}{<138>*}{}{Pinnacle/Chaos/CowVille}{{link}{}}{}{}{1.000}{}
+
+R {151}{0}{<000>}{LINK: Pinnacle/Chaos/Chaos Candy Store}{<138>*}{}{Pinnacle/Chaos/Chaos Candy Store}{{link}{}}{}{}{1.000}{}
+
+R {152}{0}{<000>}{LINK: Pinnacle/Chaos/Night of Colour}{<138>*}{}{Pinnacle/Chaos/Night of Colour}{{link}{}}{}{}{1.000}{}
+
+R {153}{0}{<000>}{LINK: Pinnacle/Chaos/Queen of Heart's Garden}{<138>*}{}{Pinnacle/Chaos/Queen of Heart's Garden}{{link}{}}{}{}{1.000}{}
+
+R {154}{0}{<000>}{LINK: Pinnacle/Chaos/Queen of Heart's Garden 2}{<138>*}{}{Pinnacle/Chaos/Queen of Heart's Garden 2}{{link}{}}{}{}{1.000}{}
+
+R {155}{0}{<000>}{LINK: Pinnacle/Chaos/Mortal Kombat}{<138>*}{}{Pinnacle/Chaos/Mortal Kombat}{{link}{}}{}{}{1.000}{}
+
+R {156}{0}{<000>}{LINK: Pinnacle/Chaos/Oj Cow}{<138>*}{}{Pinnacle/Chaos/Oj Cow}{{link}{}}{}{}{1.000}{}
+E {112}{d}{d}{32}{0}{}{1.000}{}{0.00}
+
+R {157}{0}{<000>}{LINK: Pinnacle/Chaos/Wormhole Laboratory}{<138>*}{}{Pinnacle/Chaos/Wormhole Laboratory}{{link}{}}{}{}{1.000}{}
+
+R {158}{0}{<000>}{LINK: Pinnacle/Chaos/Toy Factory}{<138>*}{}{Pinnacle/Chaos/Toy Factory}{{link}{}}{}{}{1.000}{}
+
+R {159}{0}{<000>}{LINK: Pinnacle/Chaos/Rampage of the Piggies}{<138>*}{}{Pinnacle/Chaos/Rampage of the Piggies}{{link}{}}{}{}{1.000}{}
+
+R {160}{0}{<000>}{LINK: Pinnacle/Chaos/Used Car Lot}{<138>*}{}{Pinnacle/Chaos/Used Car Lot}{{link}{}{shop}{}}{}{}{1.000}{}
+
+R {161}{0}{<000>}{LINK: Pinnacle/Chaos/Innerspace}{<138>*}{}{Pinnacle/Chaos/Innerspace}{{link}{}}{}{}{1.000}{}
+
+R {162}{0}{<000>}{LINK: Pinnacle/Chaos/Funky Bathroom}{<138>*}{}{Pinnacle/Chaos/Funky Bathroom}{{link}{}}{}{}{1.000}{}
+
+R {163}{0}{<000>}{LINK: Pinnacle/Chaos/Dayln's Mind}{<138>*}{}{Pinnacle/Chaos/Dayln's Mind}{{link}{}}{}{}{1.000}{}
+
+R {164}{0}{<000>}{LINK: Pinnacle/Chaos/JJJ Enterprises}{<138>*}{}{Pinnacle/Chaos/JJJ Enterprises}{{link}{}}{}{}{1.000}{}
+
+R {165}{0}{<000>}{LINK: Pinnacle/Chaos/Easter Bunny Academy}{<138>*}{}{Pinnacle/Chaos/Easter Bunny Academy}{{link}{}}{}{}{1.000}{}
+
+R {166}{0}{<000>}{LINK: Pinnacle/Chaos/Dog Pound}{<138>*}{}{Pinnacle/Chaos/Dog Pound}{{link}{}}{}{}{1.000}{}
+
+R {167}{0}{<000>}{LINK: Pinnacle/Chaos/Tree of Life}{<138>*}{}{Pinnacle/Chaos/Tree of Life}{{link}{}}{}{}{1.000}{}
+
+R {168}{0}{<000>}{LINK: Pinnacle/Chaos/Android Showroom}{<138>*}{}{Pinnacle/Chaos/Android Showroom}{{link}{}}{}{}{1.000}{}
+
+R {169}{0}{<000>}{LINK: Pinnacle/Chaos/Hyperfunkzone 2}{<138>*}{}{Pinnacle/Chaos/Hyperfunkzone 2}{{link}{}}{}{}{1.000}{}
+
+R {170}{0}{<000>}{LINK: Pinnacle/Chaos/Lostar's Bedroom}{<138>*}{}{Pinnacle/Chaos/Lostar's Bedroom}{{link}{}}{}{}{1.000}{}
+
+R {171}{0}{<000>}{LINK: Pinnacle/Chaos/Land of the Dinosaurs}{<138>*}{}{Pinnacle/Chaos/Land of the Dinosaurs}{{link}{}}{}{}{1.000}{}
+
+R {172}{0}{<000>}{LINK: Pinnacle/Chaos/Good Humor Truck}{<138>*}{}{Pinnacle/Chaos/Good Humor Truck}{{link}{}{portal}{}}{}{}{1.000}{}
+E {1}{start}{start}{0}{0}{}{1.000}{}{0.00}
+E {1}{mapfind start}{mapfind start}{0}{0}{}{1.000}{}{0.00}
+
+R {173}{0}{<000>}{LINK: Pinnacle/Chaos/Erratio Forest}{<138>*}{}{Pinnacle/Chaos/Erratio Forest}{{link}{}{portal}{}}{}{}{1.000}{}
+E {1}{glance}{glance}{0}{0}{}{1.000}{}{0.00}
+
+R {174}{0}{<000>}{LINK: Pinnacle/Chaos/Paris: Eiffel Tower}{<138>*}{}{Pinnacle/Chaos/Paris: Eiffel Tower}{{link}{}}{}{}{1.000}{}
+
+R {175}{0}{<000>}{LINK: Pinnacle/Chaos/The Land}{<138>*}{}{Pinnacle/Chaos/The Land}{{link}{}}{}{}{1.000}{}
+
+R {176}{0}{}{Crystal Treetop}{ }{Having reached the top of the tree, you stop a minute to  rest.  In doing so, you look around and see a breath-taking view of the Realm of Chaos.  The intermittent lands appear  as random dots of paint on canvas.  The variety is refreshing.}{}{}{}{}{1.000}{}
+E {107}{d}{d}{32}{0}{}{1.000}{}{0.00}
+
+R {177}{0}{<000>}{LINK: Pinnacle/Chaos/Winnie the Pooh}{<138>*}{}{Pinnacle/Chaos/Winnie the Pooh}{{link}{}}{}{}{1.000}{}
+
+R {178}{0}{<000>}{LINK: Pinnacle/Chaos/Care Bears}{<138>*}{}{Pinnacle/Chaos/Care Bears}{{link}{}}{}{}{1.000}{}
+
+R {179}{0}{<000>}{LINK: Pinnacle/Chaos/The Soda Jerk}{<138>*}{}{Pinnacle/Chaos/The Soda Jerk}{{link}{}}{}{}{1.000}{}
+
+R {180}{0}{<000>}{LINK: Pinnacle/Chaos/Club Chaos}{<138>*}{}{Pinnacle/Chaos/Club Chaos}{{link}{}}{}{}{1.000}{}
+
+R {181}{0}{<000>}{LINK: Pinnacle/Chaos/Seinfeld Studio Set}{<138>*}{}{Pinnacle/Chaos/Seinfeld Studio Set}{{link}{}}{}{}{1.000}{}
+
+R {182}{0}{<000>}{LINK: Pinnacle/Chaos/Teenage Mutant Turtles}{<138>*}{}{Pinnacle/Chaos/Teenage Mutant Turtles}{{link}{}}{}{}{1.000}{}
+
+R {183}{0}{<000>}{LINK: Pinnacle/Chaos/Einstein's Cottage}{<138>*}{}{Pinnacle/Chaos/Einstein's Cottage}{{link}{}}{}{}{1.000}{}
+
+R {184}{0}{<000>}{LINK: Pinnacle/Chaos/Ladder}{<138>*}{}{Pinnacle/Chaos/Ladder}{{link}{}}{}{}{1.000}{}
+
+R {185}{0}{<000>}{LINK: Pinnacle/Chaos/Humpty Dumpty}{<138>*}{}{Pinnacle/Chaos/Humpty Dumpty}{{link}{}}{}{}{1.000}{}
+
+R {186}{0}{<000>}{LINK: Pinnacle/Chaos/Old Woman in the Shoe}{<138>*}{}{Pinnacle/Chaos/Old Woman in the Shoe}{{link}{}}{}{}{1.000}{}
+
+R {187}{0}{<000>}{LINK: Pinnacle/Chaos/B Sharp Jazz Club}{<138>*}{}{Pinnacle/Chaos/B Sharp Jazz Club}{{link}{}}{}{}{1.000}{}
+
+R {188}{0}{<000>}{LINK: Pinnacle/Chaos/Mentos}{<138>*}{}{Pinnacle/Chaos/Mentos}{{link}{}}{}{}{1.000}{}
+
+R {189}{0}{<000>}{LINK: Pinnacle/Chaos/Disney World}{<138>*}{}{Pinnacle/Chaos/Disney World}{{link}{}}{}{}{1.000}{}
+
+R {190}{0}{<000>}{LINK: Pinnacle/Chaos/The Secret of Nimh}{<138>*}{}{Pinnacle/Chaos/The Secret of Nimh}{{link}{}}{}{}{1.000}{}
+
+R {191}{0}{<000>}{LINK: Pinnacle/Chaos/Browning Estate}{<138>*}{}{Pinnacle/Chaos/Browning Estate}{{link}{}}{}{}{1.000}{}
+
+R {192}{0}{<000>}{LINK: Pinnacle/Chaos/Terra's Terrific Treehouse}{<138>*}{}{Pinnacle/Chaos/Terra's Terrific Treehouse}{{link}{}}{}{}{1.000}{}
+
+R {193}{0}{<000>}{LINK: Pinnacle/Chaos/BBN Planet}{<138>*}{}{Pinnacle/Chaos/BBN Planet}{{link}{}}{}{}{1.000}{}
+
+R {194}{0}{<000>}{LINK: Pinnacle/Chaos/MP3 CD}{<138>*}{}{Pinnacle/Chaos/MP3 CD}{{content}{{item}{{CD}{{name}{A CD. (pirated)}}{instructions}{{name}{A sheet of instructions}}{puddle}{{name}{A mud puddle}}{waypoint}{{name}{a writhing tendril}}}{noun}{{darkness}{{name}{darkness}}{landscape}{{name}{landscape}}{rocks}{{name}{rocks}}{spot}{{name}{spot}}}}{link}{}}{}{}{1.000}{}
+
+R {195}{0}{<000>}{LINK: Pinnacle/Chaos/Terra's Terrific Treehouse}{<138>*}{}{Pinnacle/Chaos/Terra's Terrific Treehouse}{{content}{{item}{{hockey puck}{{name}{A hockey puck}}}{noun}{{background}{{name}{background}}{sign}{{name}{sign}}{tree}{{name}{tree}}}}{link}{}}{}{}{1.000}{}

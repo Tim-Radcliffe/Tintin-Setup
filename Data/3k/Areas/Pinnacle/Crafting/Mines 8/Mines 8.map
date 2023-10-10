@@ -1,0 +1,61 @@
+C 500
+
+CE <278>
+CH <118>
+CP <138>
+CR <178>
+CB 
+
+F 8
+
+I 1
+
+L ▪ ╹ ╺ ┗ ╻ ┃ ┏ ┣ ╸ ┛ ━ ┻ ┓ ┫ ┳ ╋ X
+
+
+R {    1} {0} {<068>} {A musty mine shaft} { } {You are standing in a damp mine shaft.  There are stalactites jutting out from the ceiling.  The walls are very coarse and jagged.  You could probably spelunk for some resources here.} {} {} {} {} {1.000}
+E {    2} {exit} {.mapLink {Pinnacle/Crafting} {20} {exit};} {0} {1} {}
+E {    3} {s} {s} {4} {0} {}
+
+R {    2} {0} {<000>} {LINK: Pinnacle/Crafting} {<138>*} {} {Pinnacle/Crafting} {{link}{}} {} {} {1.000}
+
+R {    3} {0} {<178>} {A musty mine shaft} { } {You can hear water dripping somewhere in the background.  As your gaze wanders over the rugged walls, you pick up a slight musty odor.  There seems to be a lot of cracks in the floor here.  You could probably spelunk around here.} {} {} {} {} {1.000}
+E {    1} {n} {n} {1} {0} {}
+E {    4} {se} {se} {6} {0} {}
+E {    5} {w} {w} {8} {0} {}
+
+R {    4} {0} {<178>} {A musty mine shaft} { } {You can hear water dripping somewhere in the background.  As your gaze wanders over the rugged walls, you pick up a slight musty odor.  There seems to be a lot of cracks in the floor here.  You could probably spelunk around here.} {} {} {} {} {1.000}
+E {    3} {nw} {nw} {9} {0} {}
+E {   11} {sw} {sw} {12} {0} {}
+
+R {    5} {0} {<178>} {A stale mine shaft} { } {The air is very stale down here, but breathable.  Piles of dirt and debris litter the floor, most likely left over from the  excavation of the mines.  The air is very cool and drops of condensation have formed on the walls.  Looks like a good area to do some spelunking.} {} {} {} {} {1.000}
+E {    3} {e} {e} {2} {0} {}
+E {    6} {w} {w} {8} {0} {}
+
+R {    6} {0} {<178>} {A musty mine shaft} { } {You can hear water dripping somewhere in the background.  As your gaze wanders over the rugged walls, you pick up a slight musty odor.  There seems to be a lot of cracks in the floor here.  You could probably spelunk around here.} {} {} {} {} {1.000}
+E {    5} {e} {e} {2} {0} {}
+E {    7} {sw} {sw} {12} {0} {}
+
+R {    7} {0} {<178>} {A musty mine shaft} { } {You can hear water dripping somewhere in the background.  As your gaze wanders over the rugged walls, you pick up a slight musty odor.  There seems to be a lot of cracks in the floor here.  You could probably spelunk around here.} {} {} {} {} {1.000}
+E {    6} {ne} {ne} {3} {0} {}
+E {    8} {se} {se} {6} {0} {}
+
+R {    8} {0} {<178>} {A musty mine shaft} { } {You can hear water dripping somewhere in the background.  As your gaze wanders over the rugged walls, you pick up a slight musty odor.  There seems to be a lot of cracks in the floor here.  You could probably spelunk around here.} {} {} {} {} {1.000}
+E {    7} {nw} {nw} {9} {0} {}
+E {    9} {se} {se} {6} {0} {}
+
+R {    9} {0} {<178>} {A musty mine shaft} { } {You can hear water dripping somewhere in the background.  As your gaze wanders over the rugged walls, you pick up a slight musty odor.  There seems to be a lot of cracks in the floor here.  You could probably spelunk around here.} {} {} {} {} {1.000}
+E {    8} {nw} {nw} {9} {0} {}
+E {   10} {n} {n} {1} {0} {}
+E {   11} {ne} {ne} {3} {0} {}
+
+R {   10} {0} {<178>} {A musty mine shaft} { } {You can hear water dripping somewhere in the background.  As your gaze wanders over the rugged walls, you pick up a slight musty odor.  There seems to be a lot of cracks in the floor here.  You could probably spelunk around here.} {} {} {} {} {1.000}
+E {    9} {s} {s} {4} {0} {}
+E {   12} {n} {n} {1} {0} {}
+
+R {   11} {0} {<178>} {A stale mine shaft} { } {The air is very stale down here, but breathable.  Piles of dirt and debris litter the floor, most likely left over from the  excavation of the mines.  The air is very cool and drops of condensation have formed on the walls.  Looks like a good area to do some spelunking.} {} {} {} {} {1.000}
+E {    9} {sw} {sw} {12} {0} {}
+E {    4} {ne} {ne} {3} {0} {}
+
+R {   12} {0} {<178>} {A stale mine shaft} { } {The air is very stale down here, but breathable.  Piles of dirt and debris litter the floor, most likely left over from the  excavation of the mines.  The air is very cool and drops of condensation have formed on the walls.  Looks like a good area to do some spelunking.} {} {} {} {} {1.000}
+E {   10} {s} {s} {4} {0} {}

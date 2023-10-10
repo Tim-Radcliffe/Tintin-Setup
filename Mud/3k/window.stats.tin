@@ -1,0 +1,28 @@
+#VAR {my[hp][colour]} {AFA};
+#VAR {my[sp][colour]} {FFA};
+#VAR {my[gp1][colour]} {AFF};
+#VAR {my[gp2][colour]} {FAF};
+
+#ALIAS {.HandlerStats}
+{
+    #NOP %1;
+    #VAR {_wS};
+    #FOREACH {hp;sp;gp1;gp2} {v}
+    {
+        #IF {"$my[$v][current]" == "0" && "$my[$v][max]" == "0"} {}
+        {
+            #IF {"$my[$v][name]" == ""} {#FORMAT {my[$v][name]} {%u} {$v};};
+            #LIST {_wS} {add} {@fGauge{{$my[$v][name] : $my[$v][current]}{$my[$v][current]}{$my[$v][max]}{$my[$v][colour]}{35}}};
+        };
+    };
+    #LIST {_wS} {add} {@fGauge{{Vs : $mip[FFF][K][data]}{$mip[FFF][L][data]}{100}{FAA}{35}}};
+    #LIST {_wS} {add} {Rounds : $mip[FFF][N][data]};
+    #LIST {_wS} {add} {$mip[gline][1]};
+    #LIST {_wS} {add} {$mip[gline][2]};
+    #LIST {_wS} {add} {$mip[BAC][data]};
+    .WindowSet {stats} {$_wS};
+    .WindowRefresh {stats};
+    #UNVAR {_wS};
+};
+event_register {e_mip_FFF} {h_window_stats} {.HandlerStats};
+.HandlerStats;

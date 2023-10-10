@@ -1,0 +1,51 @@
+C 500
+
+CE <278>
+CH <118>
+CP <138>
+CR <178>
+CB 
+
+F 8
+
+I 1
+
+L ▪ ╹ ╺ ┗ ╻ ┃ ┏ ┣ ╸ ┛ ━ ┻ ┓ ┫ ┳ ╋ X
+
+
+R {    1} {0} {<068>} {A Small Dusty Keep} { } {Footsteps echo loudly in the tiny courtyard as a cold wind sweeps from the north. To the south, the bulk of the keep rises up\; an intimidating edifice of stone and mortar. Two arrow slits high up on the wall bear a startling resemblance to baleful eyes\; an effect that is heightened by the southern corridor looking like a wide open mouth, the portcullis, sharp teeth. The courtyard is surrounded on three sides by a high wall, rising two stories into the air. A steep staircase climbs up the western wall, leading up onto the walkway above. In the center of the northern wall, a swirling  hole awaits your return.} {} {} {} {} {1.000}
+E {    2} {hole} {.mapLink {Pinnacle/Newbie} {27} {hole};} {0} {0} {}
+E {    3} {s} {s} {4} {0} {}
+E {    9} {u} {stairs} {16} {0} {}
+
+R {    2} {0} {<000>} {} {<138>*} {} {..} {link;} {} {} {1.000}
+
+R {    3} {0} {<178>} {A Small Dusty Keep} { } {The entry hall of the keep shows disrepair and neglect that can be seen all around the castle. It seems as if a battle was once fought in this room, judging from the dark stains that cover the walls and floors. Deep scars and holes mark the walls, the stone surrounding them blackened as if by some sort of  great and powerful magics. } {} {} {} {} {1.000}
+E {    1} {n} {n} {1} {0} {}
+E {    4} {e} {e} {2} {0} {}
+E {    5} {w} {w} {8} {0} {}
+
+R {    4} {0} {<178>} {A Small Dusty Keep} { } {The kitchen is in the same sad, sorry condition as the rest of the keep. All the foodstuffs rotted into one large, smelly mass that you would really rather not examine too closely.  There is no silverware, or other cooking utensils. In fact, the only thing that lets you know this was a kitchen is the enormous wooden chopping block in the center of the floor, and the oven built into the northern wall.} {} {} {} {} {1.000}
+E {    3} {w} {w} {8} {0} {}
+E {    6} {s} {s} {4} {0} {}
+
+R {    5} {0} {<068>} {A Small Dusty Keep} {<138>?} {This room seems to have been a combination salle and armory. The western wall once contained some sort of mirror, as  evidenced by the amount of glass on the floor and overturned bench in front of it. A large cabinet fills the northern wall, its heavy door hanging by a single hinge. Dark stains liberally cover the sawdust floor, dimmed by a thick layer of dust.} {} {special;} {} {} {1.000}
+E {    3} {e} {e} {2} {0} {}
+E {   10} {n} {search sawdust;unlock door;open door;n} {1} {0} {}
+
+R {    6} {0} {<178>} {A Small Dusty Keep} { } {This small chicken coop once housed one of the keep's meager  sources of food. The perches are empty now, as are the nesting boxes. Chicken droppings cover all surfaces liberally, creating an aroma that makes your eyes water and your lunch try to  reenter society. Through the odorous haze in the room, you can barely make out exits to the north and west.} {} {} {} {} {1.000}
+E {    4} {n} {n} {1} {0} {}
+E {    7} {w} {w} {8} {0} {}
+
+R {    7} {0} {<068>} {A Small Dusty Keep} { } {There isn't much left in the barn of the keep, everything has long since turned to dust or things better left unmentioned. A single  stool remains, along with an old tin milk bucket. Both look like they would crumble with a touch. A decrepit old ladder leads up into the loft.} {} {} {} {} {1.000}
+E {    6} {e} {e} {2} {0} {}
+E {    8} {u} {ladder} {16} {0} {}
+
+R {    8} {0} {<178>} {A Small Dusty Keep} { } {There isn't much left in the barn of the keep, everything has long since turned to dust or things better left unmentioned. A single  stool remains, along with an old tin milk bucket. Both look like they would crumble with a touch. A decrepit old ladder leads up into the loft.} {} {} {} {} {1.000}
+E {    7} {d} {ladder} {32} {0} {}
+
+R {    9} {0} {<068>} {A Small Dusty Keep} { } {Up on the parapets, you can look for miles in all directions. Nothing but destruction meets your gaze. Nothing is left of the village except for collapsed walls and burned out shells of  buildings. The fields and pastures lie fallow, with nothing  growing in them. A cold wind sends chills down your spine as you realize that this land is dead. The stairs leads back down into the courtyard.} {} {} {} {} {1.000}
+E {    1} {d} {stairs} {32} {0} {}
+
+R {   10} {0} {<178>} {A Small Dusty Keep} { } {This was once the Chief Armsman's office\; as is evidenced by  large desk in the center of the room. Empty racks that probably once held weapons and armour cover the walls, along with a banner that presumably once belonged to the keep's Leige Lord. Dust, as elsewhere in the castle, covers everything thickly. This, along with the foul stench of the air, tells you that no one  has entered this room in a long time.} {} {} {} {} {1.000}
+E {    5} {s} {s} {4} {0} {}

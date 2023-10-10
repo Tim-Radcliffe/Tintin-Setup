@@ -1,0 +1,30 @@
+#NOP Raise an event for every command manually typed in.
+#EVENT {RECEIVED INPUT}
+{
+  event_raise e_command {%0};
+};
+
+#NOP Raise an event for every prompt received from the mud.
+#EVENT {RECEIVED PROMPT}
+{
+  event_raise e_prompt {%0};
+};
+
+#EVENT {MINUTE}
+{
+  #IF {@fEval{%5 % 5} == 0}
+  {
+    event_raise {e_5_mins} {%5};
+  };
+
+  #IF {@fEval{%5 % 15} == 0}
+  {
+    event_raise {e_15_mins} {%5};
+  };
+
+  #IF {@fEval{%5 % 30} == 0}
+  {
+    event_raise {e_30_mins} {%5};
+  };
+};
+

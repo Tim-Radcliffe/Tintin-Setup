@@ -1,0 +1,23 @@
+C 500
+
+CE <278>
+CH <118>
+CP <138>
+CR <178>
+CB 
+
+F 8
+
+I 1
+
+L ▪ ╹ ╺ ┗ ╻ ┃ ┏ ┣ ╸ ┛ ━ ┻ ┓ ┫ ┳ ╋ X
+
+
+R {    1} {0} {<068>} {Duploland} { } {You are standing at the entrance to Duploland.  There is a large red sign here with the Duplo Bunny logo on it.  It is attached to the green ground right next to the gray plastic path upon which you are standing.  West takes you right into Duploland while the hole takes you back to safety.} {} {} {} {} {1.000}
+E {    2} {hole} {.mapLink {Pinnacle/Newbie} {27} {hole};} {0} {0} {}
+E {    3} {w} {w} {8} {0} {}
+
+R {    2} {0} {<000>} {} {<138>*} {} {..} {link;} {} {} {1.000}
+
+R {    3} {0} {<109>} {} { } {} {} {} {} {} {1.000}
+E {    1} {e} {e} {2} {0} {}

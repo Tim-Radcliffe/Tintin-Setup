@@ -1,0 +1,204 @@
+#NOP ************* Necromancer Guild *********;
+
+#VAR {_item[a preserved, .* corpse of]} {{nomap}{1}{pickup}{1}{pickup_command}{.corpse get %s}};
+#VAR {_item[crystal charm]}             {{nomap}{1}{pickup}{1}};
+#VAR {_item[platinum coin]}             {{nomap}{1}{pickup}{1}};
+#VAR {_item[small grey stone]}          {{nomap}{1}{pickup}{1}};
+#VAR {_item[dark leather strap]}        {{nomap}{1}{pickup}{1}};
+#VAR {_item[cloudy glass sphere]}       {{nomap}{1}{pickup}{1}};
+#VAR {_item[dark skull key]}            {{nomap}{1}{pickup}{1}};
+#VAR {_item[shattered jaw bone]}        {{nomap}{1}{pickup}{1}};
+
+#VAR {_guild[minions]}
+{
+    {Skeleton}{} {Zombie}{} {Ghoul}{} {Valpur}{}
+    {Ghast}{} {Manshi}{} {Bolwyn}{} {Greesh}{}
+    {Wight}{} {Heucuva}{} {Tholen}{} {Bayen}{}
+    {Quarin}{} {Mohrg}{} {Grimare}{} {Valithyn}{}
+};
+
+/* Teleport to Guild */
+#ACTION {^Visions of the guild appear first in your mind, then reality...}
+{
+    #NOP %1;
+    .mapLoad {Pinnacle/Fantasy/Necromancer Guild};
+    #map goto {Receiving room};
+};
+
+/* Preserve when you kill an opponent */
+#ALIAS {handler_auto_preserve}
+{
+    #NOP %1;
+    #IF {$my[corpse][held][current] <= $my[corpse][held][max]}
+    {
+        #SEND {!preserve remains};
+    };
+    #ELSEIF {$auto[consecrate][status]}
+    {
+        #SEND {!consecrate};
+    };
+    #ELSE 
+    {
+        #SEND {!absorb ground};
+        #IF {$my[hp][current] < $my[hp][max]}
+        {
+            #SEND {!absorb prime};
+        };
+        #ELSE
+        {
+            #SEND {!absorb};
+        };
+        #SEND {!absorb inventory};
+    };
+    #SEND {!glance};
+};
+auto {add} {preserve} {} {e_killed_opponent} {}; 
+auto {add} {consecrate} {#ACTION {^  You are already at 100% consecration master.} {auto consecrate off};} {} {}; 
+
+/* Clean up corpses if you can't carry them */
+#ACTION {^  You can't carry any more master, leaving it on the ground.}
+{
+    #SEND {!absorb ground};
+    #IF {$my[hp][current] < $my[hp][max]}
+    {
+        #SEND {!absorb prime};
+    };
+    #ELSE
+    {
+        #SEND {!absorb};
+    };
+    #SEND {!absorb inventory};
+} {3};
+
+/* Call your familiar into combat automatically when you "kill" */
+#ALIAS {handler_auto_call}
+{
+    #NOP %1;
+    #SEND {!call};
+};
+auto {add} {call} {} {e_combat} {};
+
+/* Corrode your opponent automatically when you "kill" */
+#ALIAS {handler_auto_corrode}
+{
+    #NOP %1;
+    #IF {$my[necromancer][power][corrode] > 0 &&
+         $my[gp1][current] > 50 &&
+         $my[sp][current] > 50}
+    {
+        #SEND {!corrode};
+    };
+};
+auto {add} {corrode} {} {e_combat} {};
+
+/* Contribute half of coins picked up to the guild, between 10 and 1000 */
+#ALIAS {handler_auto_contribute}
+{
+    #NOP %1;
+    #IF {"%1" == "e_pickup"}
+    {
+        #REGEXP {%2} {coins (%d)}
+        {
+            #IF {@fEval{&1/2} > 9}
+            {
+                #SEND {!contribute @fMin{@fEval{&1/2};1000}};
+            };
+        };
+    };
+    #ELSEIF {$my[necromancer][worth] < 125}
+    {
+        #SEND {!contribute @fMax{@fEval{(125-$my[necromancer][worth])*5};10}};
+    };
+};
+auto {add} {contribute} {} {e_pickup;e_combat_round} {};
+
+/* SPFuse when below 75% SP (it refills by itself when SP is full) */
+#ALIAS {handler_auto_spfuse}
+{
+    #NOP %1;
+    #VAR {_necSP[Diff]} {@fEval{($my[sp][max]+0.00-($my[sp][max]-$my[sp][current]))/$my[sp][max]}};
+    #IF {$_necSP[Diff] < 0.75 && $my[necromancer][spfuse][current] > 0} 
+    {
+        #SEND {!spfuse $my[necromancer][spfuse][current]};
+    };
+};
+auto {add} {spfuse} {} {e_combat_round} {};
+
+/* Automatically recast protection (if it's memorised and there's enough NP */
+#ALIAS {handler_auto_protection}
+{
+    #NOP %1;
+    #IF {"$my[necromancer][protection]" != "ON" && 
+         $my[necromancer][power][protection] > 0 &&
+         $my[gp1][current] > 55}
+    {
+        #SEND {!protection};
+    };
+};
+auto {add} {protection} {} {e_combat_round} {};
+
+/* Automatically invoke veil if fighting an undead */
+#ALIAS {handler_auto_veil}
+{
+    #NOP %1;
+    #IF {"$mob[%2][undead]" == "1" && "$my[necromancer][veil]" != "ON"}
+    {
+        #SEND {!veil invoke};
+        #VAR {my[necromancer][veil]} {ON};
+    };
+    #ELSEIF {"$mob[%2][undead]" != "1" && "$my[necromancer][veil]" == "ON"}
+    {
+        #SEND {!veil disperse};
+        #VAR {my[necromancer][veil]} {OFF};
+    };
+};
+auto {add} {veil} {} {e_combat} {};
+
+/* Gag Necro message spam */
+#ALIAS {necro_gag_on}
+{
+    #GAG {^-You activate your atrance-};
+    #GAG {^-Your atrance is complete-};
+    #GAG {^* You blink into unconsciousness *};
+    #GAG {^* You recover your senses *};
+    #GAG {^>>Atrancing};
+    #GAG {^$my[necromancer][familiar] tells you:};
+    #GAG {^  You'll have to wait a moment master.};
+    #GAG {^  You will now absorb corpses from %+ first master.};
+    #GAG {^Shadowy powers compel you to %+};
+};
+
+/* Ungag Necro message spam */
+#ALIAS {necro_gag_off}
+{
+    #UNGAG {^-You activate your atrance-};
+    #UNGAG {^-Your atrance is complete-};
+    #UNGAG {^* You blink into unconsciousness *};
+    #UNGAG {^* You recover your senses *};
+    #UNGAG {^>>Atrancing};
+    #UNGAG {^$my[necromancer][familiar] tells you:};
+    #UNGAG {^  You'll have to wait a moment master.};
+    #UNGAG {^  You will now absorb corpses from %+ first master.};    
+    #UNGAG {^Shadowy powers compel you to %+};
+}
+auto {add} {necrogag} {necro_gag_on} {} {necro_gag_off};
+
+/* Automatically fire glamors */
+#ALIAS {handler_auto_glamor}
+{
+    #NOP %1;
+    #IF {(@fEval{$my[necromancer][glamors][max]-$my[necromancer][glamors][current]} < 
+          @fEval{$my[gp2][current]/(100/$my[necromancer][glamors][max])}) &&
+          "$my[necromancer][glamors][active]" == ""}
+    {
+        #IF {"$my[necromancer][glamors][command]" != ""}
+        {
+            #SEND {!$my[necromancer][glamors][command]};
+        };
+        #ELSE
+        {
+            #ECHO {AUTO GLAMOR WARNING: my[necromancer][glamors][command not set};
+        };
+    };
+};
+auto {add} {glamor} {} {e_combat_round} {};

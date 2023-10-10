@@ -1,0 +1,26 @@
+#ACTION {HP: %d/%d  SP: %d/%d}
+{
+  #VAR {my[hp][current]} {%1};
+  #VAR {my[hp][max]} {%2};
+  #VAR {my[sp][current]} {%3};
+  #VAR {my[sp][max]} {%4};
+}
+
+#ALIAS {handler_corpse}
+{
+  #NOP %1;
+  #SEND {!bury corpse};
+}
+
+event_register e_killed_opponent h_corpse_handler handler_corpse;
+
+#ALIAS {handler_auto_salve}
+{
+  #IF {%2 < $my[hp][max]}
+  {
+    #SEND {!salve};
+  }
+}
+
+auto {add} {salve} {} {e_mip_FFF_A} {};
+auto {salve} {on};

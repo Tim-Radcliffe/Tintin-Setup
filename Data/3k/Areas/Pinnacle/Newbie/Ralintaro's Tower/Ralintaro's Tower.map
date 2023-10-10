@@ -1,0 +1,117 @@
+C 500
+
+CE <278>
+CH <118>
+CP <138>
+CR <178>
+CB 
+
+F 8
+
+I 1
+
+L ▪ ╹ ╺ ┗ ╻ ┃ ┏ ┣ ╸ ┛ ━ ┻ ┓ ┫ ┳ ╋ X
+
+
+R {    1} {0} {<068>} {An ancient battle field} { } {You stand at the center of an ancient battlefield.  The ground around you is badly scorched, though traces of bone and bits of weapons are still visible.  It looks as though some tremendous blast of energy struck here.  Perhaps the creation of the vortex before you created this mark, but somehow you suspect that this mark has been here much longer than the vortex.  It looks much more like a mage of immense power struck here with a fireball.} {} {} {} {} {1.000}
+E {    2} {n} {n} {1} {0} {}
+E {    3} {e} {e} {2} {0} {}
+E {    4} {w} {w} {8} {0} {}
+E {    5} {nw} {nw} {9} {0} {}
+E {    6} {ne} {ne} {3} {0} {}
+E {    7} {hole} {.mapLink {Pinnacle/Newbie} {27} {hole};} {0} {0} {}
+
+R {    2} {0} {<178>} {An ancient battle field} { } {You stand at the north end of an ancient battlefield.  The muddy ground around you bears the evidence of an ancient battle having once been fought here, with broken weapons and fragments of bone scattered about.  A solid stone wall blocks your progress to the north.  There are deep gouges in the surface of the wall.  A thick mist swirls about your feet and fog hangs above your head, obscuring the sky, yet the dim outline of a tower is visible to the northeast.} {} {} {} {} {1.000}
+E {    1} {s} {s} {4} {0} {}
+E {    4} {sw} {sw} {12} {0} {}
+E {    3} {se} {se} {6} {0} {}
+E {    6} {e} {e} {2} {0} {}
+E {    5} {w} {w} {8} {0} {}
+
+R {    3} {0} {<178>} {An ancient battle field} { } {You stand in the midst of an ancient battlefield.  The muddy ground around you bears the evidence of an ancient battle having once been fought here, with broken weapons and fragments of bone scattered about.  A thick mist swirls about your feet and fog hangs above your head, obscuring the sky.} {} {} {} {} {1.000}
+E {    1} {w} {w} {8} {0} {}
+E {    6} {n} {n} {1} {0} {}
+E {    9} {e} {e} {2} {0} {}
+E {    2} {nw} {nw} {9} {0} {}
+E {   10} {ne} {ne} {3} {0} {}
+
+R {    4} {0} {<178>} {An ancient battle field} { } {You stand in the midst of an ancient battlefield.  The muddy ground around you bears the evidence of an ancient battle having once been fought here, with broken weapons and fragments of bone scattered about.  A thick mist swirls about your feet and fog hangs above your head, obscuring the sky.} {} {} {} {} {1.000}
+E {    1} {e} {e} {2} {0} {}
+E {    5} {n} {n} {1} {0} {}
+E {    8} {w} {w} {8} {0} {}
+E {    2} {ne} {ne} {3} {0} {}
+
+R {    5} {0} {<178>} {An ancient battle field} { } {You stand in the midst of an ancient battlefield.  The muddy ground around you bears the evidence of an ancient battle having once been fought here, with broken weapons and fragments of bone scattered about the ground.  The fog is a bit sparser here, allowing you to see the dim outline of a tower far to the east and a bit north.  A stone wall blocks passage to the north.  A thick tangle of brambles blocks your path to the west.} {} {} {} {} {1.000}
+E {    1} {se} {se} {6} {0} {}
+E {    4} {s} {s} {4} {0} {}
+E {    2} {e} {e} {2} {0} {}
+E {   13} {nw} {nw} {9} {0} {}
+E {    8} {sw} {sw} {12} {0} {}
+
+R {    6} {0} {<178>} {An ancient battle field} { } {You stand at the north end of a battle field, near a break in the wall that blocks your progress north.  The muddy ground around you bears the evidence of an ancient battle having once been fought here, with broken weapons and fragments of bone scattered about.  While it is still difficult to make out any details, the tower is much closer now and nearly directly to the north.} {} {} {} {} {1.000}
+E {    1} {sw} {sw} {12} {0} {}
+E {    3} {s} {s} {4} {0} {}
+E {    9} {se} {se} {6} {0} {}
+E {   10} {e} {e} {2} {0} {}
+E {    2} {w} {w} {8} {0} {}
+
+R {    7} {0} {<000>} {} {<138>*} {} {..} {link;} {} {} {1.000}
+
+R {    8} {0} {<178>} {An ancient battle field} { } {You stand at the western edge of an ancient battlefield.  A thick tangle of brambles grows up to the west, blocking travel in that direction.  The muddy ground around you bears the evidence of an ancient battle having once been fought here, with broken weapons and fragments of bone scattered about.  A thick mist swirls about your feet and fog hangs above your head, obscuring the sky.} {} {} {} {} {1.000}
+E {    4} {e} {e} {2} {0} {}
+E {    5} {ne} {ne} {3} {0} {}
+
+R {    9} {0} {<178>} {An ancient battle field} { } {You stand in the midst of an ancient battlefield.  The muddy ground around you bears the evidence of an ancient battle having once been fought here, with broken weapons and fragments of bone scattered about.  A thick mist swirls about your feet and fog hangs above your head, obscuring the sky.} {} {} {} {} {1.000}
+E {    3} {w} {w} {8} {0} {}
+E {   10} {n} {n} {1} {0} {}
+E {   11} {e} {e} {2} {0} {}
+E {    6} {nw} {nw} {9} {0} {}
+E {   12} {ne} {ne} {3} {0} {}
+
+R {   10} {0} {<178>} {An ancient battle field} { } {You are at the north end of what was evidently the site of some ancient battle.  There is a stone wall to the north that more or less blocks travel to the north, although there does appear to be a break in the wall here where some of the stone has crumbled.  A tall tower is visible to the north.} {} {} {} {} {1.000}
+E {    3} {sw} {sw} {12} {0} {}
+E {    9} {s} {s} {4} {0} {}
+E {   11} {se} {se} {6} {0} {}
+E {   12} {e} {e} {2} {0} {}
+E {    6} {w} {w} {8} {0} {}
+E {   14} {n} {n} {1} {0} {}
+
+R {   11} {0} {<178>} {An ancient battle field} { } {You stand in the midst of an ancient battlefield.  The muddy ground around you bears the evidence of an ancient battle having once been fought here, with broken weapons and fragments of bone scattered about.  A thick mist swirls about your feet and fog hangs above your head, obscuring the sky.} {} {} {} {} {1.000}
+E {    9} {w} {w} {8} {0} {}
+E {   12} {n} {n} {1} {0} {}
+E {   10} {nw} {nw} {9} {0} {}
+
+R {   12} {0} {<178>} {An ancient battle field} { } {You are standing at the base of a massive stone wall.  The muddy ground at the foot of the wall shows signs of an ancient battle having once been fought here, with broken weapons and fragments of bone scattered about.  A slender tower is barely visible to the northwest.} {} {} {} {} {1.000}
+E {    9} {sw} {sw} {12} {0} {}
+E {   11} {s} {s} {4} {0} {}
+E {   10} {w} {w} {8} {0} {}
+
+R {   13} {0} {<178>} {A clearing by a wall} { } {You are standing in a small clearing next to a wall that is to the east.  The wall continues north into a thick tangle of brambles that effectively blocks you from following the wall in that direction.  In fact, the brambles are also surrounding you on all other sides except the southeast.  It seems rather odd that there is nothing growing right where you are standing.  Rising through the fog to the east you can make out the outline of a tower.} {} {} {} {} {1.000}
+E {    5} {se} {se} {6} {0} {}
+
+R {   14} {0} {} {An ancient tower} { } {You stand at the entrance to an ancient tower.  Looking at the age of the stonework and the outstanding craftsmanship, there is no question that a powerful lord had this tower built.  The huge stones that form the walls of the tower bear the marks of many centuries, giving you the feeling that this tower is perhaps the oldest thing around, with the exception of the dirt perhaps.  The surrounding mist obscures the top of the tower, making it difficult to see how tall it actually is.  The door to the tower has long since rotted away, allowing you to pass freely into the tower proper.} {} {} {} {} {1.000}
+E {   10} {s} {s} {4} {0} {}
+E {   15} {n} {n} {1} {0} {}
+
+R {   15} {0} {<178>} {An ancient tower} { } {You stand just inside of the immense tower.  The air is quite cool and carries a musty smell.  Small swirls of dust kick up as you move your feet, indicating that it has been quite some time since someone passed this way.  The open entrance to the tower lies to the south, the doors having long since rotted away.  You can feel a sensation of terror welling up from your stomach as you look around this ancient room.  A dusty chandelier hangs down from the ceiling.} {} {} {} {} {1.000}
+E {   14} {s} {s} {4} {0} {}
+E {   16} {n} {n} {1} {0} {}
+E {   17} {w} {w} {8} {0} {}
+E {   18} {e} {e} {2} {0} {}
+
+R {   16} {0} {<178>} {An ancient tower} { } {The room around you appears to be a sitting room of sorts, or at least it was.  Remnants of couches and chairs lie about, covered by dust.  Fragile looking tables sit next to the couches as end tables.  The remains of what once must have been a grand staircase rise precariously toward the ceiling.  The remnants of once grand tapestries hang on the walls.} {} {} {} {} {1.000}
+E {   15} {s} {s} {4} {0} {}
+E {   19} {w} {w} {8} {0} {}
+
+R {   17} {0} {<178>} {An ancient tower} { } {At one time, this room was the armoury of the tower.  Ancient racks of rusted weapons surround you, lending a sense of history to the room.  A table stands in the center of the room.  The room is very dusty.} {} {} {} {} {1.000}
+E {   15} {e} {e} {2} {0} {}
+E {   20} {nw} {nw} {9} {0} {}
+
+R {   18} {0} {<178>} {An ancient tower} { } {You stand in what seems to be a small coatroom.  The tattered remains of cloaks and coats are here, hanging on pegs that jut out from the wall at regular intervals.} {} {} {} {} {1.000}
+E {   15} {w} {w} {8} {0} {}
+
+R {   19} {0} {<178>} {An ancient tower} { } {This room is strikingly different from all of the other rooms of the tower that you have seen.  While the other rooms are old and musty, covered with dust, this room is sparkling clean.  The stone walls look new and strong and the ceiling soars proudly above you.  There is a strange symbol drawn on the floor here.} {} {} {} {} {1.000}
+E {   16} {e} {e} {2} {0} {}
+
+R {   20} {0} {<178>} {An ancient tower} { } {This dusty room seems to have once served as a library of sorts.  Crumbling scrolls lie carefully stacked on the decaying shelves.  There is an extremely comfortable looking chair here that shows no signs of the surrounding decay.} {} {} {} {} {1.000}
+E {   17} {se} {se} {6} {0} {}

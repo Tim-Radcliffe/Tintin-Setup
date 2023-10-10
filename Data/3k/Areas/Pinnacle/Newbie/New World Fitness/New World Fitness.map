@@ -1,0 +1,101 @@
+C 500
+
+CE <278>
+CH <118>
+CP <138>
+CR <178>
+CB 
+
+F 8
+
+I 1
+
+L ▪ ╹ ╺ ┗ ╻ ┃ ┏ ┣ ╸ ┛ ━ ┻ ┓ ┫ ┳ ╋ X
+
+
+R {    1} {0} {<068>} {Small Stairway} { } {You stand at the entrance to a truly evil place.  Masses of spandex brush by you, covering mounds of flesh both firm and flabby alike.  Your nostrils are assaulted by a sickly sweet odour.  The foul stench is a combination of fruity, melon-smelling air freshener, tainted by an over-powering scent of sweat.  There seems to be a number of people both coming and going through here.} {} {} {} {} {1.000}
+E {    2} {return} {.mapLink {Pinnacle/Newbie} {28} {return};} {0} {0} {}
+E {    3} {u} {u} {16} {0} {}
+
+R {    2} {0} {<000>} {} {<138>*} {} {..} {link;} {} {} {1.000}
+
+R {    3} {0} {<178>} {NWF reception desk} { } {Welcome to New World Fitness... where the masses come to lift, press, push, pull, run, jog, walk, step and basically beat the hell out of themselves in the interest of gaining some small degree of greater physical fitness.  There is a reception desk here where members can check in, as well as a schedule on the wall.  Beside the schedule, you see what seems to be a map of the facilities (for new members you would assume).} {} {} {} {} {1.000}
+E {    1} {d} {d} {32} {0} {}
+E {    4} {e} {e} {2} {0} {}
+E {    5} {w} {w} {8} {0} {}
+
+R {    4} {0} {<178>} {Step Class Room} { } {A large group of people here bounce repeatedly onto, off of, and over a small piece of plastic, while loud music blares from somewhere.  Almost all of them seem to be following the lead of one of the perkiest people you have ever seen on the platform to the south.  This must be what they call a 'step class'. There is also an exit east, out to the track.} {} {} {} {} {1.000}
+E {    3} {w} {w} {8} {0} {}
+E {    8} {s} {s} {4} {0} {}
+E {    9} {e} {e} {2} {0} {}
+
+R {    5} {0} {<178>} {Cybex Weight Room} { } {The room before you is filled to the brim with the most modern pieces of weight training apparatus available. Dark and vile images of medival torture devices flash through your mind as you glance around the room.  You also notice that the overwhelming majority of people here are either nattering old grandmothers who seem to do nothing but sit on the equipment, or loud-mouthed youths with seemingly little regard for anything but annoying everyone else.} {} {} {} {} {1.000}
+E {    3} {e} {e} {2} {0} {}
+E {    6} {s} {s} {4} {0} {}
+E {    7} {n} {n} {1} {0} {}
+
+R {    6} {0} {<178>} {Cardio Room} { } {This room is where people come to sweat, that much you could tell from two rooms over.  Two TVs are mounted on the wall and are permanently set to TSN... (The 'Canadian' Sports Network).  Arrayed in a multi-row semi-circle in front of the TV's is a hodge-podge of excercise machines. These machines range from your basic stationary bike, to the ever-popular rowing machine, treadmills, step machines, and even some odd contraption from Reebok that forces people to swing their legs in front of them in some sort of moon- walking motion. Scary.} {} {} {} {} {1.000}
+E {    5} {n} {n} {1} {0} {}
+E {   10} {s} {s} {4} {0} {}
+
+R {    7} {0} {<178>} {Universal Weight Room} { } {This room is filled with the more traditional mix of free weights and 'Universal' equipment.  The crowd in here also seems to be more interested in their own workouts than anything else, making quite a shocking contrast with the surrounding rooms.  A contrast that is very much welcome.} {} {} {} {} {1.000}
+E {    5} {s} {s} {4} {0} {}
+E {   18} {e} {e} {2} {0} {}
+
+R {    8} {0} {<178>} {Instructor's platform} { } {You are on a small, raised platform which is made even smaller by the presence of a loud, annoying, perky-as-hell step instructor.  There is a mirror to the south and the rest of the class to the north of here.} {} {} {} {} {1.000}
+E {    4} {n} {n} {1} {0} {}
+
+R {    9} {0} {<178>} {Track} { } {This is the track that circles the outside of the gym. There are lanes for both walking and running, and windows through which you can see the city.  A rather disgusting gray film covers the windows, obscuring your view slightly. From here, you can walk in through the step aerobics room to the reception desk.} {} {} {} {} {1.000}
+E {    4} {w} {w} {8} {0} {}
+E {   14} {s} {s} {4} {0} {}
+E {   15} {n} {n} {1} {0} {}
+
+R {   10} {0} {<178>} {Track} { } {This is the track that circles the outside of the gym. There are lanes for both walking and running, and windows through which you can see the city.  A rather disgusting gray film covers the windows, obscuring your view slightly. There is also an exit from the track into the cardio room from here.} {} {} {} {} {1.000}
+E {    6} {n} {n} {1} {0} {}
+E {   11} {e} {e} {2} {0} {}
+E {   12} {nw} {nw} {9} {0} {}
+
+R {   11} {0} {<178>} {Track} { } {This is the track that circles the outside of the gym. There are lanes for both walking and running, and windows through which you can see the city.  A rather disgusting gray film covers the windows, obscuring your view slightly.} {} {} {} {} {1.000}
+E {   10} {w} {w} {8} {0} {}
+E {   13} {e} {e} {2} {0} {}
+
+R {   12} {0} {<178>} {Track} { } {This is the track that circles the outside of the gym. There are lanes for both walking and running, and windows through which you can see the city.  A rather disgusting gray film covers the windows, obscuring your view slightly.} {} {} {} {} {1.000}
+E {   10} {se} {se} {6} {0} {}
+E {   20} {n} {n} {1} {0} {}
+
+R {   13} {0} {<178>} {Track} { } {This is the track that circles the outside of the gym. There are lanes for both walking and running, and windows through which you can see the city.  A rather disgusting gray film covers the windows, obscuring your view slightly.} {} {} {} {} {1.000}
+E {   11} {w} {w} {8} {0} {}
+E {   14} {ne} {ne} {3} {0} {}
+
+R {   14} {0} {<178>} {Track} { } {This is the track that circles the outside of the gym. There are lanes for both walking and running, and windows through which you can see the city.  A rather disgusting gray film covers the windows, obscuring your view slightly.} {} {} {} {} {1.000}
+E {   13} {sw} {sw} {12} {0} {}
+E {    9} {n} {n} {1} {0} {}
+
+R {   15} {0} {<178>} {Track} { } {This is the track that circles the outside of the gym. There are lanes for both walking and running, and windows through which you can see the city.  A rather disgusting gray film covers the windows, obscuring your view slightly.} {} {} {} {} {1.000}
+E {    9} {s} {s} {4} {0} {}
+E {   16} {nw} {nw} {9} {0} {}
+
+R {   16} {0} {<178>} {Track} { } {This is the track that circles the outside of the gym. There are lanes for both walking and running, and windows through which you can see the city.  A rather disgusting gray film covers the windows, obscuring your view slightly.} {} {} {} {} {1.000}
+E {   15} {se} {se} {6} {0} {}
+E {   17} {w} {w} {8} {0} {}
+
+R {   17} {0} {<109>} {Track} { } {This is the track that circles the outside of the gym. There are lanes for both walking and running, and windows through which you can see the city.  A rather disgusting gray film covers the windows, obscuring your view slightly. To the south, you see the heavy weight room, from which you are assaulted by a heavy stench of that sickly-sweet smell that pervades the entire gym.} {} {} {} {} {1.000}
+E {   16} {e} {e} {2} {0} {}
+E {   18} {s} {s} {4} {0} {}
+E {   19} {w} {w} {8} {0} {}
+
+R {   18} {0} {<178>} {Heavy Weight Room} { } {Upon entering this room you almost gag as a virtual wall of body odour hits you.  In a dazed state, you gaze around the room and are presented with quite a surrealistic sight. A number of people who are larger than you thought humanly possible wander around the room. Sturdy benches abound as well as huge steel plates that appear extremely heavy. A number of dumbbells sit on racks to one side, all of which are much heavier than you would ever wish to imagine.} {} {} {} {} {1.000}
+E {   17} {n} {n} {1} {0} {}
+E {    7} {w} {w} {8} {0} {}
+
+R {   19} {0} {<178>} {Track} { } {This is the track that circles the outside of the gym. There are lanes for both walking and running, and windows through which you can see the city.  A rather disgusting gray film covers the windows, obscuring your view slightly.} {} {} {} {} {1.000}
+E {   17} {e} {e} {2} {0} {}
+E {   21} {sw} {sw} {12} {0} {}
+
+R {   20} {0} {<178>} {Track} { } {This is the track that circles the outside of the gym. There are lanes for both walking and running, and windows through which you can see the city.  A rather disgusting gray film covers the windows, obscuring your view slightly.} {} {} {} {} {1.000}
+E {   12} {s} {s} {4} {0} {}
+E {   21} {n} {n} {1} {0} {}
+
+R {   21} {0} {<178>} {Track} { } {This is the track that circles the outside of the gym. There are lanes for both walking and running, and windows through which you can see the city.  A rather disgusting gray film covers the windows, obscuring your view slightly.} {} {} {} {} {1.000}
+E {   20} {s} {s} {4} {0} {}
+E {   19} {ne} {ne} {3} {0} {}

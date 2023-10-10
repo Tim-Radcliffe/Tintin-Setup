@@ -1,0 +1,101 @@
+C 500
+
+CE <278>
+CH <118>
+CP <138>
+CR <178>
+CB 
+
+F 8
+
+I 6
+
+L ▪ ╹ ╺ ┗ ╻ ┃ ┏ ┣ ╸ ┛ ━ ┻ ┓ ┫ ┳ ╋ X
+
+
+R {    1} {0} {<068>} {Base of Tower} { } {This is the base of a small tower. There is very little light and fresh air in here. A thick layer of dust coats the room. The walls curve outward to form a circular chamber and there is a definite pattern on them that you can't quite make out.} {} {} {} {} {1.000}
+E {    2} {out} {.mapLink {Pinnacle/Newbie} {28} {out};} {0} {0} {}
+E {    3} {u} {u} {16} {0} {}
+E {    4} {d} {push button;d} {32} {0} {}
+
+R {    2} {0} {<000>} {} {<138>*} {} {..} {link;} {} {} {1.000}
+
+R {    3} {0} {<109>} {} { } {} {} {} {} {} {1.000}
+E {    1} {d} {d} {32} {0} {}
+
+R {    4} {0} {<178>} {Basement of Uslopta's Tower} { } {You are at the bottom of the staircase that descend into the basement. The air is damp and cooler than upstairs, and offers no warmth. To the south is the rest of the cellar, you hear some scurrying about.} {} {} {} {} {1.000}
+E {    1} {u} {u} {16} {0} {}
+E {    5} {s} {s} {4} {0} {}
+
+R {    5} {0} {<178>} {Basement of Uslopta's Tower} { } {You are in a narrow passage in the cellar. To the north you can barely make out the staircase from which you came. While to the south and east the rest of the basement continues. } {} {} {} {} {1.000}
+E {    4} {n} {n} {1} {0} {}
+E {    6} {s} {s} {4} {0} {}
+E {    7} {e} {e} {2} {0} {}
+
+R {    6} {0} {<178>} {Basement of Uslopta's Tower} { } {The basement takes a bend here in the southwest corner. The walls are thick with dust, which is slimy from the dampness in the air. Your light fails to penetrate the darkness.} {} {} {} {} {1.000}
+E {    5} {n} {n} {1} {0} {}
+E {    8} {e} {e} {2} {0} {}
+
+R {    7} {0} {<178>} {Basement of Uslopta's Tower} { } {The air is very damp and dusty. The floor is covered with dust making it look like no one has been here in ages. The basement continues off in many directions here. } {} {} {} {} {1.000}
+E {    5} {w} {w} {8} {0} {}
+E {   15} {n} {n} {1} {0} {}
+E {   10} {e} {e} {2} {0} {}
+
+R {    8} {0} {<068>} {Basement of Uslopta's Tower} { } {The passage continues east and west. Through the darkness you can see shapes against the wall. Unlike the rest of the basement, it is very bright here. There is a hole in the southern wall.} {} {} {} {} {1.000}
+E {    6} {w} {w} {8} {0} {}
+E {    9} {e} {e} {2} {0} {}
+E {   16} {s} {move boxes;enter hole} {4} {0} {}
+
+R {    9} {0} {<178>} {Basement of Uslopta's Tower} { } {The air is very damp and dusty, along with the rest of the room. There is a thick blanket of dust covering the floor and walls. The basement continues off in many directions here.} {} {} {} {} {1.000}
+E {    8} {w} {w} {8} {0} {}
+E {   10} {n} {n} {1} {0} {}
+E {   11} {e} {e} {2} {0} {}
+
+R {   10} {0} {<178>} {Basement of Uslopta's Tower} { } {You are in a narrow passage in the basement. The passage is quite small and cramped, not allowing for very much movement. Dust lays like a blanket on the floor.} {} {} {} {} {1.000}
+E {    9} {s} {s} {4} {0} {}
+E {   14} {n} {n} {1} {0} {}
+E {    7} {w} {w} {8} {0} {}
+
+R {   11} {0} {<178>} {Basement of Uslopta's Tower} { } {The basement takes a bend here in the southeast corner. The walls are thick with moisture from the condensation. Darkness surrounds you. } {} {} {} {} {1.000}
+E {    9} {w} {w} {8} {0} {}
+E {   12} {n} {n} {1} {0} {}
+
+R {   12} {0} {<178>} {Basement of Uslopta's Tower} { } {The passage continues north and south. Your light source is unable to penetrate further into the darkness. You lungs ache from the thick damp air.} {} {} {} {} {1.000}
+E {   11} {s} {s} {4} {0} {}
+E {   13} {n} {n} {1} {0} {}
+
+R {   13} {0} {<178>} {Basement of Uslopta's Tower} { } {The basement takes a bend here in the northeast corner. The walls are covered with dust, and you notice some shapes in the corner.} {} {} {} {} {1.000}
+E {   12} {s} {s} {4} {0} {}
+E {   14} {w} {w} {8} {0} {}
+
+R {   14} {0} {<178>} {Basement of Uslopta's Tower} { } {The basement forks here, trailing off into nothing but darkness. The floor is covered with a blanket of dust, enhancing the emptiness of the basement.} {} {} {} {} {1.000}
+E {   13} {e} {e} {2} {0} {}
+E {   10} {s} {s} {4} {0} {}
+E {   15} {w} {w} {8} {0} {}
+
+R {   15} {0} {<178>} {Basement of Uslopta's Tower} { } {The passage continues east and south. Through the darkness you can see shapes against the western wall. Your light source is still unable to penetrate further into the darkness.} {} {} {} {} {1.000}
+E {   14} {e} {e} {2} {0} {}
+E {    7} {s} {s} {4} {0} {}
+
+R {   16} {0} {<068>} {Basement of Uslopta's Tower} { } {Unlike the rest of the basement, this room is clean. The walls and floor glimmer and sparkle. You can venture on to the south or head back to the dark dismal basement through the hole. } {} {} {} {} {1.000}
+E {    8} {n} {hole} {1} {0} {}
+E {   17} {se} {se} {6} {0} {}
+E {   18} {sw} {sw} {12} {0} {}
+
+R {   17} {0} {<178>} {Basement of Uslopta's Tower} { } {Brightness surrounds you. The room is engulfed in a bright white light. The ceiling, walls and floor make the room seem larger then it really is.} {} {} {} {} {1.000}
+E {   16} {nw} {nw} {9} {0} {}
+E {   19} {s} {s} {4} {0} {}
+
+R {   18} {0} {<178>} {Basement of Uslopta's Tower} { } {White. That is the only way to describe this room. The walls, floor and ceiling are all white making it almost difficult to tell where one stops and the other begins.} {} {} {} {} {1.000}
+E {   16} {ne} {ne} {3} {0} {}
+E {   21} {s} {s} {4} {0} {}
+
+R {   19} {0} {<178>} {Basement of Uslopta's Tower} { } {From the floors to the ceiling far above your head, everything is a bright white stone. It is hard to tell where the wall and floor joins, as it is all the same bright white stone. There is a scratching sound coming from the west.} {} {} {} {} {1.000}
+E {   17} {n} {n} {1} {0} {}
+E {   20} {sw} {sw} {12} {0} {}
+
+R {   20} {0} {<178>} {Basement of Uslopta's Tower} { } {Unlike the rest of this corridor, this room is grey. From the floor to the ceiling, nothing but shades of grey. A murmur can be heard to the north from behind the door.} {} {} {} {} {1.000}
+E {   19} {ne} {ne} {3} {0} {}
+
+R {   21} {0} {} {Basement of Uslopta's Tower} { } {All around you is white, just like the rest of the rooms in this part of the basement. The walls, ceiling and floor all create a peacefulness all around you.} {} {} {} {} {1.000}
+E {   18} {n} {n} {1} {0} {}

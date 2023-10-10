@@ -1,0 +1,43 @@
+#VAR {notifyBar} {};
+
+#ALIAS {.HandlerNotify}
+{
+  #NOP %1;
+  #NOP {event} {id} {text} {timeout};
+  #IF {"%2" == ""} {#RETURN;};
+  #IF {"%3" == ""} 
+  {
+    #UNVAR {notifyBar[%2]};
+  };
+  #ELSEIF {"%3" == "${notifyBar[%2][text]}"}
+  {
+    #RETURN;
+  };
+  #ELSE
+  {
+    #VAR {notifyBar[%2][text]} {%3};
+    #IF {"%4" != ""}
+    {
+      #FORMAT {session[secs]} {%T};
+      #MATH {notifyBar[%2][timeout]} {%4+$session[secs]};
+    };
+  };
+  .HandlerNotifyRefresh;
+};
+event_register {e_notify} {h_notify} {.HandlerNotify};
+
+#ALIAS {.HandlerNotifyRefresh}
+{
+  #NOP %1;
+  #FORMAT {session[secs]} {%T};
+  #FOREACH {*notifyBar[]} {temp}
+  {
+    #IF {"$notifyBar[$temp][timeout]" <= "$session[secs]" && "$notifyBar[$temp][timeout]" != ""}
+    {
+      #LINE SUBSTITUTE {VARIABLES} #UNVAR {notifyBar[$temp]};
+    };
+  };
+  
+  #ECHO {{@fLinePad{{$notifyBar[-1][text]}{}{}}}{@fScreen{{notify}{y}}}};
+};
+event_register {e_screen_resize} {h_notify_refresh} {.HandlerNotifyRefresh};

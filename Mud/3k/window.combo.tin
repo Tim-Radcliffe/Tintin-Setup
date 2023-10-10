@@ -1,0 +1,93 @@
+#VAR {_WC} {};
+
+#ALIAS {.WindowComboSplit}
+{
+    #NOP %1;
+    #VAR {_WC[split][l]} {40};
+    #VAR {_WC[split][r]} {@fEval{@fScreen{{full}{cols}}-${_WC[split][l]}}};
+};
+
+#ALIAS {.WindowComboRefresh}
+{
+    #NOP %1;
+    #VAR {_WC[buffer]} {};
+    #VAR {_WC[l]} {};
+    #VAR {_WC[r]} {};
+
+    #LIST {_WC[l]} {add} {$_WC[stats][%*]};
+    #LIST {_WC[l]} {add} {$_WC[room][%*]};
+
+    #LIST {_WC[r]} {add} {$_WC[map][%*]};
+
+    #LOOP {1} {@fScreen{{head}{rows}}} {_WC[i]}
+    {
+        #VAR {_WC[buffer][$_WC[i]]} {@fLinePad{{$_WC[l][$_WC[i]]}{}{$_WC[split][l]}}$_WC[r][$_WC[i]]}
+    };
+    .WindowSet {combo} {$_WC[buffer]};
+    .WindowRefresh {combo};
+};
+
+#ALIAS {.WindowComboStats}
+{
+    #NOP %1;
+    .WindowComboSplit;
+    #UNVAR {_WC[stats]};
+    #FOREACH {hp;sp;gp1;gp2} {v}
+    {
+        #IF {"$my[$v][current]" == "0" && "$my[$v][max]" == "0"} {}
+        {
+            #IF {"$my[$v][name]" == ""} {#FORMAT {my[$v][name]} {%u} {$v};};
+            #LIST {_WC[stats]} {add} {@fGauge{{$my[$v][name] : $my[$v][current]}{$my[$v][current]}{$my[$v][max]}{$my[$v][colour]}{$_WC[split][l]}}};
+        };
+    };
+    #LIST {_WC[stats]} {add} {@fGauge{{Vs : $mip[FFF][K][data]}{$mip[FFF][L][data]}{100}{FAA}{$_WC[split][l]}}};
+    .WindowComboRefresh;    
+};
+
+#ALIAS {.WindowComboRoom}
+{
+    #NOP %1;
+    .WindowComboSplit;
+    #UNVAR {_WC[room]};    
+    #LIST {_WC[room]} {add} {@fTrunc{{Name  :$map[room][roomname]}{$_WC[split][l]}}};
+    #LIST {_WC[room]} {add} {@fTrunc{{Exits :@fCommaList{*map[room][exit][]}}{$_WC[split][l]}}};
+    #IF {"$map[room][roomnote]" != ""}
+    {
+        #LIST {_WC[room]} {add} {Notes :};
+        #FOREACH {*map[room][roomnote][]} {v}
+        {
+            #LIST {_WC[room]} {add} {@fTrunc{{$v}{$_WC[split][l]}}};
+        };
+    };
+};
+
+#ALIAS {.WindowComboMap}
+{
+    #NOP %1;
+    #IF {"$map[file]" == ""} #RETURN;
+    .WindowComboSplit;
+    #IF {"$_client[version]" > "2.01.1"}
+    {
+        #MAP MAP {@fScreen{{head}{rows}}} {${_WC[split][r]}} {LIST} {_WC[map]};
+        #FOREACH {*_WC[map][]} {v}
+        {
+#NOP            #REPLACE {_WC[map][$v]} {\\} {\\};
+        };
+    };
+    #ELSE
+    {
+        #MAP MAP {${_WC[split][r]}x@fScreen{{head}{rows}}} {/tmp/map_combo.txt};
+        #SYSTEM {sed -i 's/\\/\\\\/g' /tmp/map_combo.txt};
+        #SCRIPT {_WC[map]} {cat /tmp/map_combo.txt};
+    }
+
+    .WindowComboRefresh;
+};
+
+.WindowCreate {combo} {head};
+event_register {e_mip_FFF} {h_window_combo} {.WindowComboStats};
+event_register {e_map_refresh} {h_window_combo} {.WindowComboRoom;.WindowComboMap};
+event_register {e_map_room_enter} {h_window_combo} {.WindowComboRoom;.WindowComboMap};
+.WindowComboStats;
+.WindowComboRoom;
+.WindowComboMap;

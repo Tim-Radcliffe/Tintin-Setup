@@ -1,0 +1,224 @@
+#ACTION {^{>\s|}HP:\[(\d+)\/(\d+)\]\s+CHARGE:\[(\d+)Ah\/(\d+)Ah\]\s+G2N:\[([0-9.]+)\%\]\s+P:(.)\s+E:(.*)}
+{
+    #VAR {my[hp][current]} {%1};
+    #VAR {my[hp][max]} {%2};
+    #VAR {my[gp1][current]} {%3};
+    #VAR {my[gp1][max]} {%4};
+    #VAR {my[android][g2n]} {%5};
+    #VAR {my[android][ep]} {%6};
+};
+
+#ACTION {^{>\s|}You vanquish your foe with a final %*.}
+{
+    event_raise e_killed_opponent {%*};
+};
+
+#ACTION {^{>\s|}Your %* struck but did no damage to %*.}
+{
+    event_raise e_android_missed {%2};
+};
+
+/* Get all of the android component levels into $my[android] */
+#ALIAS {gs2}
+{
+    #NOP %1;
+    #ACTION {{^\s{3}(\S+)\s+\((\d+)\/(\d+)\)}}
+    {
+        #FORMAT {_gs2[name]} {%l} {%%2};
+        #VAR {my[android][$_gs2[name]]} {%%3};
+        #UNVAR {_gs2};
+    };
+    event_oneshot {e_prompt} {android} {#UNACTION {{^\s{3}(\S+)\s+\((\d+)\/(\d+)\)}}};
+    #SEND {!gs2};
+};
+
+#ALIAS {evaluate}
+{
+    #NOP %1;
+    #CLASS {cAndroidEvaluate} {open};
+    #LIST {_aEV[off]} {create} 
+    {
+        No threat at all;
+        Almost no threat;
+        Very little potential;
+        Capable of inflicting some harm;
+        Capable of decent damage;
+        Fairly dangerous;
+        Capable of excessive force;
+        Capable of extreme amount of force;
+        Devastating potential;
+        Terrifying power;
+        Can destroy a small city;
+        Can level a large metropolis;
+        Can crumble mountains and boil seas;
+        Can fracture the Earth itself;
+        Attacks with the power of a blazing sun;
+        Capable of warping time and space itself;
+    };
+    #LIST {_aEV[def]} {create} 
+    {
+        No survival instict;
+        Can withstand a brisk breeze;
+        As tough as cardboard;
+        As tough as brittle plywood;
+        As tough as sheet metal;
+        Can hold its own;
+        Wants to survive;
+        It determined to prevail;
+        Laughs at danger;
+        Eats broken glass for breakfast;
+        Can withstand monumental force;
+        Wouldn't notice being hit by a comet;
+    };      
+    #LIST {_aEV[hea]} {create} 
+    {
+        Cannot outlive a fruitfly;
+        Can barely outlive a fruitfly;
+        Will outlive a rat;
+        Will outlive a dog;
+        Will outlive a moose;
+        Will outlive a grizzly bear;
+        Will outlive a blue whale;
+        Will outlive Keith Richards;
+        Will outlive the Earth;
+        Will outlive the sun;
+        Will be alive to see the end of the universe;
+    };
+    #FOREACH {*_aEV[]} {v}
+    {
+        #FOREACH {*_aEV[$v][]} {w}
+        {
+            #SUBSTITUTE {$_aEV[$v][$w]} {($w) - $_aEV[$v][$w]};
+        };
+    };
+    #CLASS {cAndroidEvaluate} {close};
+    event_oneshot {e_prompt} {android} {#CLASS cAndroidEvaluate kill};
+    #SEND {!evaluate %0};
+};
+
+#ALIAS {handler_corpse}
+{
+    #NOP %1;
+    #SEND {!get coins from corpse};  
+    #SEND {!wrap corpse};
+    #SEND {!flush corpse};
+    #SEND {!glance};
+};
+event_register e_killed_opponent android handler_corpse;
+
+/* Fire off nanosurge when HP drops */
+#ALIAS {handler_auto_nanosurge}
+{
+    #NOP %1;
+    #IF {$my[hp][current]       < $my[hp][max]                       && 
+         $my[gp1][current]      > @fEval{$my[android][nanobots] * 5} && 
+         $my[android][nanobots] > 0}
+    {
+        #SEND {!nanosurge};
+    };
+
+    #NOP /* Send second nanosurge if HP is less than 90% */;
+    #IF {$my[hp][current]       < $my[hp][max] * 0.9                  && 
+         $my[gp1][current]      > @fEval{$my[android][nanobots] * 10} && 
+         $my[android][nanobots] > 5}
+    {
+        #SEND {!nanosurge};
+    };
+    
+    #NOP /* Send third nanosurge if HP is less than 75% */;
+    #IF {$my[hp][current]       < $my[hp][max] * 0.75                 && 
+         $my[gp1][current]      > @fEval{$my[android][nanobots] * 15} && 
+         $my[android][nanobots] >= 10}
+    {
+        #SEND {!nanosurge};
+    };
+};
+auto {add} {nanosurge} {} {e_combat_round} {};
+
+/* Flush corpse when charge drops below 25%*/
+#ALIAS {handler_auto_flush}
+{
+    #NOP %1;
+    #IF {$my[gp1][current] < $my[gp1][max] * 0.25}
+    {
+        #SEND {!unwrap corpse};
+        #SEND {!flush corpse};
+    };
+}; 
+auto {add} {flush} {} {e_combat_round} {};
+
+/* If not hitting opponent, rotate to next damage type */
+#LIST {my[android][switch]} {CREATE} {blunt;fire;energy;mind};
+#ALIAS {handler_auto_switch}
+{
+    #NOP %1;
+    #LIST {my[android][switch]} {ADD} {$my[android][switch][1]};
+    #LIST {my[android][switch]} {DELETE} {1};
+    #SEND {!switch $my[android][switch][1]};
+    auto switch off;
+    event_oneshot {e_prompt} {android} {auto switch on};
+};
+auto {add} {switch} {} {e_android_missed} {};
+
+/* Handling mounting/unmounting guild weapons automatically */
+#ALIAS {handler_auto_mount}
+{
+    #NOP %1;
+    #REGEXP {%2} {{wield|wear shield|remove shield}}
+    {
+        #IF {$my[android][mounts] > 0}
+        {
+            #SEND {!mount remove};
+            #DELAY {2} {!mount single};
+            #IF {$my[android][mounts] > 7}
+            {
+                #DELAY {4} {!mount double};
+            };
+        };
+    };
+};
+auto {add} {mount} {} {e_command} {};
+
+/* Handling plating automatically, refresh on changing equipment */
+#ALIAS {handler_auto_plating}
+{
+    #NOP %1;
+    #REGEXP {%2} {wear}
+    {
+        #IF {$my[android][plating] >= 1}
+        {
+            #SEND {!engage plating off};
+            event_oneshot {e_prompt} {android_plating} {#NOP %%1;#SEND {!engage plating};};
+        };
+        #IF {$my[android][shocks] >= 1}
+        {
+            #SEND {!engage shield off};
+            event_oneshot {e_prompt} {android_shield} {#NOP %%1;#SEND {!engage shield};};
+        };
+    };
+};
+auto {add} {plating} {} {e_command} {};
+
+/* Guild Battle Spam Gags */
+#ALIAS {handler_auto_guildgag_on}
+{
+    #NOP %1;
+    #GAG {// Info: Your nanobots explode with life and furiously repair your suit.};
+    #GAG {// Info: Nanobots work to repair your damaged structure.};
+    #GAG {// Defense: Your shield absorbs some of the attack.};
+    #GAG {// Defense: Your electrified plating shocks %*};
+    #GAG {// Combat: Servomotors move your %* quickly, landing a critical shot!};
+};
+
+#ALIAS {handler_auto_guildgag_off}
+{
+    #NOP %1;
+    #UNGAG {// Info: Your nanobots explode with life and furiously repair your suit.};
+    #UNGAG {// Info: Nanobots work to repair your damaged structure.};
+    #UNGAG {// Defense: Your shield absorbs some of the attack.};
+    #UNGAG {// Defense: Your electrified plating shocks %*};
+    #UNGAG {// Combat: Servomotors move your %* quickly, landing a critical shot!};
+};
+auto {add} {guildgag} {handler_auto_guildgag_on} {} {handler_auto_guildgag_off};
+
+#NOP /* // Error: You do not have enough charge to sustain engaged plating! */

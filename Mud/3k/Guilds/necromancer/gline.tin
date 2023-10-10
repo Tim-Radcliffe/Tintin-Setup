@@ -1,0 +1,185 @@
+#NOP /* Necromancer MIP Gline parser */;
+
+#ALIAS {handler_necro_gline}
+{
+    #NOP %1;
+    #VAR {_hnl[line]} {%2};
+    #REPLACE {_hnl[line]} {<{y|r|b|g|c|v|s}} {};
+    #REPLACE {_hnl[line]} {{>\s}} { };
+    #REPLACE {_hnl[line]} {[%*]} {&1};
+    #REPLACE {_hnl[line]} {{\s+}} {;};
+    #FOREACH {$_hnl[line]} {_hnl[item]}
+    {
+        #REGEXP {$_hnl[item]} {%*:%*}
+        {
+            handler_necro_gline_&1 {&2};
+            event_raise {e_necro_gline_&1} {&2};
+        };
+    };
+    #UNVAR {_hnl};
+};
+event_register {e_mip_FFF_I} {gline.tin} {handler_necro_gline};
+event_register {e_mip_FFF_J} {gline.tin} {handler_necro_gline};
+
+#ALIAS {handler_necro_gline_B}
+{
+    #NOP %1;
+    #VAR {my[necromancer][reagent][bloodmoss]} {%1};
+};
+
+#ALIAS {handler_necro_gline_C}
+{
+    #NOP %1;
+    #VAR {my[corpse][held][current]} {%1};
+};
+
+#ALIAS {handler_necro_gline_Circle}
+{
+    #NOP %1;
+    #VAR {my[necromancer][progress]} {%1};
+};
+
+#ALIAS {handler_necro_gline_Exp}
+{
+    #NOP %1;
+    #VAR {my[exp]} {%1};
+};
+
+#ALIAS {handler_necro_gline_HPf}
+{
+    #NOP %1;
+    #REGEXP {%1} {%d/%d}
+    {
+        #VAR {my[necromancer][hpfuse][current]} {&1};
+        #VAR {my[necromancer][hpfuse][max]}     {&2};
+    };        
+};
+
+#ALIAS {handler_necro_gline_G}
+{
+    #NOP %1;
+    #VAR {my[necromancer][reagent][ginseng]} {%1};
+};
+
+#ALIAS {handler_necro_gline_Gold}
+{
+    #NOP %1;
+    #VAR {my[gold][held]} {%1};
+};
+
+#ALIAS {handler_necro_gline_Illu}
+{
+    #NOP %1;
+    #REGEXP {%1} {%d/%d}
+    {
+        #VAR {my[necromancer][glamors][current]} {&1};
+        #VAR {my[necromancer][glamors][max]} {&2};
+        #VAR {my[necromancer][glamors][active]} {};        
+    };
+};
+
+#ALIAS {handler_necro_gline_illuming}
+{
+    #NOP %1;
+    #VAR {my[necromancer][glamors][active]} {%1};        
+};
+
+#ALIAS {handler_necro_gline_M}
+{
+    #NOP %1;
+    #VAR {my[necromancer][reagent][mandrake]} {%1};
+};
+
+#ALIAS {handler_necro_gline_N}
+{
+    #NOP %1;
+    #VAR {my[necromancer][reagent][pine needles]} {%1};
+};
+
+#ALIAS {handler_necro_gline_P}
+{
+    #NOP %1;
+    #VAR {my[necromancer][reagent][black pearl]} {%1};
+};
+
+#ALIAS {handler_necro_gline_Plane}
+{
+    #NOP %1;
+    #NOP /* Handling still needed */
+};
+
+#ALIAS {handler_necro_gline_Prot}
+{
+    #NOP %1;
+    #REGEXP {%1} {{(ON|OFF)(X|)}}
+    {
+        #VAR {my[necromancer][protection]} {&2};
+        #IF {"&3" == "X" || "&3" == "*"} 
+        {
+            #VAR {my[necromancer][veil]} {ON};
+        };
+        #ELSE
+        {
+            #VAR {my[necromancer][veil]} {OFF};
+        };
+    };
+};
+
+#ALIAS {handler_necro_gline_R}
+{
+    #NOP %1;
+    #VAR {my[necromancer][reagent][goldenrod]} {%1};
+};
+
+#ALIAS {handler_necro_gline_Repower}
+{
+    #NOP %1;
+    #VAR {my[necromancer][repower]} {%1};
+};
+
+#ALIAS {handler_necro_gline_S}
+{
+    #NOP %1;
+    #VAR {my[necromancer][reagent][nightshade]} {%1};
+};
+
+#ALIAS {handler_necro_gline_SPf}
+{
+    #NOP %1;
+    #REGEXP {%1} {%d/%d}
+    {
+        #VAR {my[necromancer][spfuse][current]} {&1};
+        #VAR {my[necromancer][spfuse][max]}     {&2};
+    };        
+};
+
+#ALIAS {handler_necro_gline_Tport}
+{
+    #NOP %1;
+    #REGEXP {%1} {%d/%d}
+    {
+        #VAR {my[necromancer][teleports][current]} {&1};
+        #VAR {my[necromancer][teleports][max]}     {&2};
+    };
+};
+
+#ALIAS {handler_necro_gline_Undead}
+{
+    #NOP %1;
+    #VAR {my[necromancer][undead][hp]} {%1};
+};
+
+#ALIAS {handler_necro_gline_W}
+{
+    #NOP %1;
+    #VAR {my[necromancer][reagent][spider web]} {%1};
+};
+
+#ALIAS {handler_necro_gline_Worth}
+{
+    #NOP %1;
+    #REGEXP {%1} {%d\%}
+    {
+        #VAR {my[necromancer][worth]} {&1};
+    };
+};

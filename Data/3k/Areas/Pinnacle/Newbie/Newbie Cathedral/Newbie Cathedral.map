@@ -1,0 +1,47 @@
+C 500
+
+CE <278>
+CH <118>
+CP <138>
+CR <178>
+CB 
+
+F 8
+
+I 1
+
+L ▪ ╹ ╺ ┗ ╻ ┃ ┏ ┣ ╸ ┛ ━ ┻ ┓ ┫ ┳ ╋ X
+
+
+R {    1} {0} {<068>} {Outside a Cathedral} { } {You stand in a rubble-strewn alley, framed on both sides by the brickwork exteriors of the buildings to the east and west. Before you is the entrance to a cathedral, now in an obvious state of disrepair. One bell tower has collapsed into a pile of rubble which nearly blocks the alleyway, and the other tower leans precariously against the buttresses supporting it.} {} {} {} {} {1.000}
+E {    2} {hole} {.mapLink {Pinnacle/Newbie} {27} {hole};} {0} {0} {}
+E {    3} {n} {enter} {1} {0} {}
+
+R {    2} {0} {<000>} {} {<138>*} {} {..} {link;} {} {} {1.000}
+
+R {    3} {0} {<068>} {Vestibule} { } {You stand inside the entrance vestibule of a ruined cathedral. Light rain falls through gaping holes in the ceiling, while sodden frescoes and plaster filter the water into pastel streaks of paint, running to the floor like bloodstains. Rubble and trash cover the ground, making it hard to maneuver. To the north, the cathedral continues.} {} {} {} {} {1.000}
+E {    1} {s} {leave} {4} {0} {}
+E {    4} {n} {n} {1} {0} {}
+
+R {    4} {0} {<178>} {Cathedral} { } {You stand inside the ruins of a once-great cathedral. Rows of pews lie broken all around you, stacked into piles or simply left to rot. Pale shafts of light beam down from holes in the ceiling, and are scattered by the rain into a prismatic glow as they pass through broken stained-glass windows, now barely more than empty holes ringed with coloured shards. A feeling of decay is palpable. To the north, you can hear the sound of rude laughter and gunfire.} {} {} {} {} {1.000}
+E {    3} {s} {s} {4} {0} {}
+E {    5} {n} {n} {1} {0} {}
+
+R {    5} {0} {<178>} {Cathedral} { } {The cathedral is in slightly better condition here.  The roof is complete, if decaying, and it is relatively dry. Some attempt has been made to clear the smashed pews into a barricade of sorts. In between the barricades, fires have been lit inside metal barrels, providing warmth and light to the surrounding area. It looks like someone lives in this part of the church.} {} {} {} {} {1.000}
+E {    4} {s} {s} {4} {0} {}
+E {    6} {n} {n} {1} {0} {}
+
+R {    6} {0} {<178>} {A Ruined Cathedral} { } {You stand near the altar of the cathedral. Above you hangs the remnant of a statue of the crucified Christ, now smashed and broken. The tabernacle has been removed from where it usually stands, and in its place is a circle marked in spray paint. There are alcoves to the east and west, and you can hear chanting to the north.} {} {} {} {} {1.000}
+E {    5} {s} {s} {4} {0} {}
+E {    7} {n} {n} {1} {0} {}
+E {    8} {e} {e} {2} {0} {}
+E {    9} {w} {w} {8} {0} {}
+
+R {    7} {0} {<178>} {A Welded Throne} { } {You stand at the northernmost part of the church. Before you is a great circular hole where once a massive lead-light hung. In its place stands a gigantic throne constructed from sheet metal, structural beams and car parts. The backrest is made from an AV-4 jet turbine, and rises into the air like a rust-ridden pillar, covered with spraypainted slogans. All around stand benches and makeshift seating, arranged in a circle much like a post-apocalyptic auditorium. There is the smell of blood in the air, and the atmosphere is charged with fear and rage.} {} {} {} {} {1.000}
+E {    6} {s} {s} {4} {0} {}
+
+R {    8} {0} {<178>} {Alcove} { } {You are inside an alcove off the main axis of the cathedral. This part of the ceiling has come crashing down upon the floor, obliterating the flagstones under tons of rubble. There is only one exit: back the way you came.} {} {} {} {} {1.000}
+E {    6} {w} {w} {8} {0} {}
+
+R {    9} {0} {<178>} {A Ruined Cathedral} { } {You are inside an alcove off the main axis of the cathedral. Piles of rubbish are stacked against the far wall, exuding a gruesome stench. A small table has been set on a block of sandstone, and several makeshift stools are arranged around it. To the east, you can hear the sound of chanting.} {} {} {} {} {1.000}
+E {    6} {e} {e} {2} {0} {}

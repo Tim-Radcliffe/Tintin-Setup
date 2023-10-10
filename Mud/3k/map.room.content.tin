@@ -1,0 +1,55 @@
+#ALIAS {.mapRoomItem}
+{
+  #VAR {map[room][roomnote][content][item][%2][name]} {%3};
+  #IF {"$map[edit]" == "1"}
+  {
+    #MAP SET {roomnote} {$map[room][roomnote]};
+  };
+};
+event_register {e_room_item} {h_map_room_item} {.mapRoomItem};
+
+#ALIAS {.mapRoomNPC}
+{
+  #VAR {map[room][roomnote][content][npc][%2][name]} {%3};
+  #IF {"$map[edit]" == "1"}
+  {
+    #MAP SET {roomnote} {$map[room][roomnote]};
+  };
+};
+event_register {e_room_npc} {h_map_room_npc} {.mapRoomNPC};
+
+#ALIAS {.mapRoomNoun}
+{
+  #VAR {map[room][roomnote][content][noun][%2][name]} {%3};
+  #IF {"$map[edit]" == "1"}
+  {
+    #MAP SET {roomnote} {$map[room][roomnote]};
+  };
+};
+event_register {e_room_noun} {h_map_room_noun} {.mapRoomNoun};
+
+#ALIAS {handler_auto_roomsearch}
+{
+  #IF {"%1" == ""}
+  {
+    #VAR {_mRS} {};
+  };
+  #ELSE 
+  {
+    #VAR {_mRS[%1][%2][name]} {%3};
+    #VAR {_mRS[%1][%2][actions]} {%4};
+    #IF {"$_mRS[%1][%2][done]" != "1"}
+    {
+      #SEND {!exa %2 in room};
+      #SEND {!search %2};
+      #VAR {_mRS[%1][%2][done]} {1};
+      #DELAY {.mapRoomSearch} 
+      {
+        event_remove_handler {h_map_room_search};
+        #UNVAR {_mRS};
+        #ECHO {Room Search Finished};
+      } {2};
+    };
+  };
+};
+auto add {roomsearch} {} {e_room_noun;e_room_item;} {};

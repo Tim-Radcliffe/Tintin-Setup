@@ -1,0 +1,35 @@
+#ALIAS {^i$}
+{
+	event_raise e_inv_start;
+	#VAR {my[inv]} {};
+	
+	#ACTION {{^(\w+)\s+\[\s?(\d+)\/\s?(\d+)\|\s?(\d+)\%\|\s?(\d+)c]}}
+	{
+		#SWITCH {"%%1"}
+		{
+			#CASE {"Encumberance"}
+			{
+				#VAR {my[encumberance][current]} {%%2};
+				#VAR {my[encumberance][max]} {%%3};
+				#VAR {my[encumberance][percentage]} {%%4};
+				#VAR {my[corpse][held][current]} {%%5};		
+			};
+			#CASE {"Coffin"}
+			{
+				#VAR {my[corpse][coffin][current]} {%%2};
+				#VAR {my[corpse][coffin][max]} {%%3};
+			};
+			#CASE {"Smuggling"}
+			{
+
+			}
+			#DEFAULT 
+			{
+				#VAR {my[corpse][minion][current]} {%%5};
+			}
+		};
+	};
+
+	event_oneshot {e_prompt} {h_inventory} {#UNACTION {#NOP %%1;{\w+\s+\[\s?(\d+)\/\s?(\d+)\|\s?(\d+)\%\|\s?(\d+)c]}};};
+	#SEND {!i};
+};

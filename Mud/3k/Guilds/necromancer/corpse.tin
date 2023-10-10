@@ -1,0 +1,177 @@
+#NOP Necromancer corpse handling scripts.
+
+/* Central command for storing/retrieving/managing corpses */
+#ALIAS {.corpse}
+{
+	#NOP %1;
+	#LOCAL {_cI} {%2};
+	#IF {"$_cI" == ""} 
+	{
+		#VAR {_cI} {1};
+	};
+	#SWITCH {"%1"}
+	{
+		#CASE {"store"}
+		{
+			#IF {$my[corpse][coffin][current] < $my[corpse][coffin][max]}
+			{
+				handler_corpse_move {held} {$_cI} {coffin} {wrap corpse $_cI};
+			};
+			#ELSEIF {$my[corpse][minion][current] < $my[corpse][minion][max] && @fMinionPresent{}}
+			{
+				handler_corpse_move {held} {$_cI} {minion} {give corpse $_cI to undead follower};
+			};
+		};
+		#CASE {"retrieve"}
+		{
+			#IF {$my[corpse][minion][current] > 0 && @fMinionPresent{}}
+			{
+				handler_corpse_move {minion} {$_cI} {held} {=give preservation $_cI};
+			};
+			#ELSEIF {$my[corpse][coffin][current] > 0}
+			{
+				handler_corpse_move {coffin} {$_cI} {held} {{unwrap $_cI}{get preservation}};
+			};
+		};
+		#CASE {"sort"}
+		{
+			.file load {$path[guild]/scripts/CorpseSort.tin};
+		};
+		#CASE {"get"}
+		{
+			handler_corpse_get {%2};
+		};
+		#DEFAULT
+		{
+			#ECHO {.corpse store/retrieve/sort/get};
+		};
+	};
+};
+
+/* Automatically Stores/Retrieves corpses as required */
+#ALIAS {handler_auto_corpse}
+{
+	#NOP %1;
+
+	#WHILE {&my[corpse][held][list][] > $my[corpse][held][current]}
+	{
+		#LIST {my[corpse][held][list]} {DELETE} {1};
+	};
+
+	#NOP /* Repeatedly retrieve/store corpses until current held >= min */;
+	#IF {$my[corpse][held][current] < $my[corpse][held][min]}
+	{
+		#@fEval{$my[corpse][held][min] - $my[corpse][held][current]} .corpse retrieve;
+	};
+	#ELSEIF {$my[corpse][held][current] > $my[corpse][held][min]}
+	{
+		#@fEval{$my[corpse][held][current] - $my[corpse][held][min]} .corpse store;
+	};
+};
+auto {add} {corpse} {} {e_necro_gline_C} {};
+
+/* handler_corpse_move {from} {number} {to} {command} */
+#ALIAS {handler_corpse_move}
+{
+	#NOP %1;
+	#VAR {my[corpse][%3][current]} {@fEval{$my[corpse][%3][current]+1}};
+	#VAR {my[corpse][%1][current]} {@fEval{$my[corpse][%1][current]-1}};
+	#LIST {my[corpse][%3][list]} {insert} {1} {$my[corpse][%1][list][%2]};
+	#LIST {my[corpse][%1][list]} {delete} {%2};
+	.debug CORPSE {CORPSE MOVE: %4};
+	#FOREACH {%4} {c} {$c};
+};
+
+#ALIAS {handler_corpse_get}
+{
+	#NOP %1;
+	#LOCAL {_hcg[get]} 1;
+	#IF {$my[corpse][held][current] >= $my[corpse][held][max]}
+	{
+		#LOCAL {_hcg[min]} {0};
+		#FOREACH {*my[corpse][held][list][]} {_hcg[i]}
+		{
+			#IF {$my[corpse][held][list][$_hcg[i]] < $my[corpse][held][list][$_hcg[min]]}
+			{
+				#VAR {_hcg[min]} {$_hcg[i]};
+			};
+		};
+		#IF {"$my[corpse][held][list][$_hcg[min]]" != ""}
+		{
+			#LOCAL {_hcg[get]} 2;        
+			#LIST {my[corpse][held][list]} {delete} {$_hcg[min]};
+			#SEND {!drop preservation $_hcg[min]};
+		};
+	};
+	#ACTION {^\~%* a preserved, %w corpse of}
+	{
+		#LIST {my[corpse][held][list]} {ins} {1} {@fCorpseSize{%%1}};
+		#VAR {my[corpse][held][current]} {@fEval{$my[corpse][held][current]+1}};
+		#UNACTION {^\~%* a preserved, %w corpse of};
+	} {2};
+	#SEND {!get preservation $_hcg[get]};
+};
+
+#ACTION {^A {bayen|bolwyn|ghast|ghoul|greesh|grimare|heucuva|manshi|mohrg|quarin|skeleton|tholen|valithyn|valpur|wight|zombie} {trudges in|drifts in on a ghostly vapor}.}
+{
+	#LOCAL {_aMinEnter} {%1};
+	#FORMAT {_aMinEnter} {%n} {$_aMinEnter};
+	#LIST {room[contents][npc]} {ADD} {{{id}{$_aMinEnter}}};
+	handler_auto_corpse;
+};
+
+#FUNCTION {fMinionPresent}
+{
+	#LOCAL {_fMPi} {};
+	#LOCAL {_fMPt} {};
+	#FORMAT {_fMPt} {%n} {$my[necromancer][undead][type]};
+	#FOREACH {$room[contents][npc]} {_fMPi}
+	{
+		#IF {"$room[contents][npc][$_fMPi][id]" == ""}
+		{
+			#CONTINUE;
+		};
+		#ELSEIF {"$room[contents][npc][$_fMPi][id]" == "$my[necromancer][undead][name] the $_fMPt"}
+		{
+			#RETURN 1;
+		};
+		#ELSEIF {&_guild[minions][$room[contents][npc][$_fMPi][id]] > 0}
+		{
+			#RETURN 1;
+		};
+	};
+	#RETURN 0;
+};
+
+/* Returns an integer value for corpse size */
+#FUNCTION {fCorpseSize}
+{
+	#REGEXP {%0} {{([\(\[])([\|\*\-]{5})[\)\]].*}}
+	{
+		#IF {"&2" == "["}
+		{
+			#LOCAL {_fCorpseSize} {11};
+		};
+		#ELSE
+		{
+			#PARSE {&3} {_fCorpseSize[c]}
+			{
+				#MATH {_fCorpseSize[i]} {$_fCorpseSize[i] + 1};
+				#IF {"$_fCorpseSize[c]" == "|"} 
+				{
+					#VAR {_fCorpseSize} {$_fCorpseSize[i]};
+					#BREAK;
+				};
+				#IF {"$_fCorpseSize[c]" == "*"} 
+				{
+					#MATH {_fCorpseSize} {11 - $_fCorpseSize[i]};
+					#BREAK;
+				};
+			};
+		};
+	}
+	{
+		#LOCAL {_fCorpseSize} {0};
+	};
+	#RETURN {$_fCorpseSize};
+};

@@ -1,0 +1,32 @@
+#NOP .debug {command} {parameters};
+#ALIAS {.debug}
+{
+    #UNVAR {_debug[args]};
+    #INFO ARGUMENTS SAVE;
+    #VAR {_debug[args]} {$info[ARGUMENTS]};
+
+    #IF {&_debug[args][] <= 0}
+    {
+        #IF {&_debug[] > 0}
+        {
+            #FOREACH {*_debug[]} {v}
+            {
+                #ECHO {$v : $_debug[$v]};
+            };
+        };
+        #RETURN;
+    };
+
+    #IF {"$_debug[args][2]" == "on" || "$_debug[args][2]" == "ON" || ( &_debug[args][2] == 0 && "$_debug[%1]" == "0" )}
+    {
+        #VAR {_debug[%1]} {1};
+    };
+    #ELSEIF {"$_debug[%1]" == "1" && &_debug[args][2] > 0 && "$_debug[args][2]" != "off" && "$_debug[args][2]" != "OFF"}
+    {
+        #ECHO {DEBUG: %0};
+    };
+    #ELSE
+    {
+        #VAR {_debug[%1]} {0};
+    };
+};

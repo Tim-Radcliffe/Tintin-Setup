@@ -1,0 +1,10 @@
+#IF {"$my[guild]" == ""}
+{
+  #VAR {my[guild]} {adventurer};
+};
+
+#VAR {path[commands]} {$path[mud]/Commands};
+#VAR {path[guild]}    {$path[mud]/Guilds/$my[guild]};
+
+.file loadall {$path[commands]/*.tin};
+.file loadall {$path[guild]/*.tin};

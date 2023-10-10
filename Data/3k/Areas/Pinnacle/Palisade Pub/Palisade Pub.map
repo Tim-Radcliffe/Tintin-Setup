@@ -1,0 +1,444 @@
+C 100
+
+CE <278>
+CH <118>
+CP <138>
+CR <178>
+CB 
+
+F 9
+
+I 1
+
+L ▪ ╹ ╺ ┗ ╻ ┃ ┏ ┣ ╸ ┛ ━ ┻ ┓ ┫ ┳ ╋ X
+
+
+R {    1} {0} {<068>} {Palisade Pub} { } {		Welcome to the Palisade!!  You are in a wide spacious room dominated by an immense redwood bar at the southern end.  Light reflects off the brightly waxed oaken floors, lovingly maintained by the enigmatic Hey, who nods in your direction from behind the bar.  Tables filled with adventurers of various sorts are packed into the room, along with more private booths along the eastern and western walls.  A spiral staircase made of some odd metal dominates the center of the Palisade.   The old-style western saloon doors that exit to Pinnacle are to the north.  An open door is to your west and there seems to be some sort of humidor set up in the eastern section. There seems to be another exit from the room to the south, behind the bar.  A menu is posted in neon glory above the bar. } {Mud} {} {} {} {1.000}
+E {    2} {sw} {sw} {12} {1} {}
+E {    3} {u} {u} {16} {0} {}
+E {    4} {d} {d} {32} {0} {}
+E {    6} {s} {whisper psst} {4} {1} {}
+E {    7} {w} {w} {8} {0} {}
+E {    8} {e} {e} {2} {0} {}
+E {    5} {n} {.mapLink {Pinnacle} {4} {n};} {1} {1} {}
+
+R {    2} {0} {<178>} {Sports Fan-atics Hall} { } {This is the well-appointed back sports-bar section of the Pinnacle Palisade.  The floor is made of dark oak hardwood, polished to a bright shine.  Shaped like an octagon, the expansive room's walls contain many archways leading to separate sections of the sports bar.  Where there aren't archways, clean mirrors hang on the walls, serving to make the room look even larger than it really is.  Hanging from the ceiling are symbols of each sport, describing what's through each of the archways. } {Pinnacle Sports Bar} {} {} {} {1.000}
+E {    1} {ne} {ne} {3} {1} {}
+E {   14} {se} {se} {6} {0} {}
+E {   15} {sw} {sw} {12} {0} {}
+E {   16} {s} {s} {4} {0} {}
+E {   17} {w} {w} {8} {0} {}
+E {   95} {e} {e} {2} {0} {}
+E {   96} {n} {n} {1} {0} {}
+
+R {    3} {0} {<178>} {Trivia \& Puzzle Hall of Fame} { } {As soon as you step onto the tiled floor of this dark room, you hear a click and suddenly a disco ball begins to rotate in the middle of the room, and you are surrounded by, nay immersed in, a swirl of rotating lights and colors! A song kicks in with a thumping bass track and you laugh as you recognize 'Dancing Queen' by ABBA. You feel like gettin' down. Meanwhile, along the walls of this odd room, you notice a wall with a board affixed to it which is entitled 'Contest Winners!' and there are numerous empty picture frames, the purpose of which you are unsure of.  A marble stairwell winds downwards.  } {Trivia Room} {} {} {} {1.000}
+E {    1} {d} {d} {32} {0} {}
+E {    9} {e} {e} {2} {0} {}
+E {   10} {w} {w} {8} {0} {}
+E {   11} {s} {s} {4} {0} {}
+E {   12} {u} {u} {16} {0} {}
+E {   13} {n} {n} {1} {0} {}
+
+R {    4} {0} {<178>} {Getaway} { } {You are at the entrance of the Great Getaway, where everyone has fun, enjoys company, and exudes happiness!  There could truly be no other place to go for enjoyment after a hard day in the realms.  Everyone is having a great time.  There is a stairway leading up out of the getaway, but you can't imagine why anyone would want to leave this fine place.} {The Great Getaway} {} {} {} {1.000}
+E {    1} {u} {u} {16} {1} {}
+E {   19} {n} {n} {1} {0} {}
+E {   20} {s} {s} {4} {0} {}
+E {   21} {w} {w} {8} {0} {}
+E {   22} {e} {e} {2} {0} {}
+
+R {    5} {0} {<000>} {LINK: Pinnacle} {<138>*} {} {Pinnacle} {{link}{}} {} {} {1.000}
+E {    1} {s} {s} {4} {0} {}
+
+R {    6} {0} {<178>} {A room with multiple exits} { } {This is a room that leads to other rooms.  Most of these rooms have to do with PK or other related aspects.} {} {} {} {} {1.000}
+E {    1} {n} {n} {1} {1} {}
+E {   93} {u} {u} {16} {0} {}
+E {   94} {d} {d} {32} {0} {}
+
+R {    7} {0} {<178>} {A College Dorm Room} { } {You are standing in a typical college dorm room. From the moment you entered, you felt a definite sense of being at home. Clothes are thrown about the room in a disorderly fashion, with little regard for keeping the room clean. There is one bed on the left wall, right next to a small closet. On the wall above the bed lie two posters, mirrored on the other wall by an even larger poster. The other bed is elevated above your head, with a computer desk beneath it, so as to maximize space. Across from the desk are two bureaus, stacked on top of each other. In the upper left hand corner of the room, on top of the bureaus is a large stereo, with long wires leading to four feet speakers sonically placed in different corners of the room. Finally, there is a small spiral staircase in the upper right-hand corner of the room\; and on the wall next to the closet, there is a large window that for some reason has been screwed shut.} {} {} {} {} {1.000}
+E {    1} {e} {e} {2} {1} {}
+E {   18} {u} {u} {16} {0} {}
+
+R {    8} {0} {<068>} {The Pinnacle Humidor} { } {} {The Pinnacle Humidor} {} {} {} {1.000}
+E {    1} {w} {out} {8} {0} {}
+
+R {    9} {0} {<178>} {Scavenger Hunt Room} { } {This is the scavenger hunt game room. If you want to enter the hunt,  type 'enter scavenger hunt' to pick up a list of items you need to  find. When you find an item in the list, you need to come back and  'submit <item>' to submit it. You can take as long as you need to  finish the hunt. There is no time limit, if you can't find all items  in one reboot. Don't worry,  your progress will be saved when you  logout. And you can continue the next time you logon.   Note: If you are stuck, you can 'restart scavenger hunt' to get        a new list of items for 1,000 coins. But if you choose to        do so, all your previous work, items found will be erased.        And if you lost your item list, you can replace it here by        typing 'replace item list'. If you think an item in your       list is no longer available, you can 'check <item>' to see        if that's the case. It will cost you 100 coins to check        an item. Make sure you type the short description of the        item exactly as it appears in your item list.  } {Scavenger Hunt} {} {} {} {1.000}
+E {    3} {w} {w} {8} {0} {}
+
+R {   10} {0} {<178>} {Bruno's Body Piercing} { } {Bruno's Body Piercing Entering Bruno's body piercing many things stand out.  A counter extends along the northern and western wall.  The glass case is filled with many types of earrings.  A large sign is fastened to the back wall behind the counter on the northern wall.  On the east wall is a large mirror.  A few stools are in front of the mirror all having their own little table top.  The many light fixtures mounted to the ceiling give off ample light. } {Bodyshop} {} {} {} {1.000}
+E {    3} {e} {e} {2} {0} {}
+
+R {   11} {0} {<178>} {A small bridge club} { } {Small square tables sit empty throughout the room, each surrounded by four chairs.  The lighting here is pleasant, but you're struck mainly by the silence, as if a fortune has been spent on acoustic damping.  In the back of the room a notice board sits beside some sort of vending machine.} {Bridge Club} {} {} {} {1.000}
+E {    3} {n} {n} {1} {0} {}
+
+R {   12} {0} {<109>} {} { } {} {} {} {} {} {1.000}
+E {    3} {d} {d} {32} {0} {}
+
+R {   13} {0} {<178>} {A smokey card room} { } {A typical smokey card hall except you don't see anyone really sitting around playing.  All of the tables and chairs are covered in dust. In the corner of the room you see a dispenser of some sorts.  On the wall to your left is a cashier machine.  Perhaps you should look at them.} {Poker Room} {} {} {} {1.000}
+E {    3} {s} {s} {4} {0} {}
+
+R {   14} {0} {<178>} {Sports Fan-atics Soccer Lounge} { } {This lounge looks like the back room of a pub.  It's dingy and dark with spilled beer on the floor and scarves adorning the walls.  Despite the decor you still feel extremely welcome somehow.  Pictures of the legends of the past and present stretch from wall to wall gazing down upon you, instilling you with a sense of awe and history.  A massive widescreen T.V. takes up the northeast corner of the ceiling and plays live games back to back.  So grab a pint from Hey You, sit yourself down on one of the worn sofas, kick back and enjoy the match.  They don't call it the beautiful game for nothing. } {} {} {} {} {1.000}
+E {    2} {nw} {nw} {9} {0} {}
+
+R {   15} {0} {<178>} {Sports Fan-atics Golf Lounge} { } {Here, the floor is actually a grass-green rug.  In the far corner is a small hole in the floor, with a yellow flag sticking out of it.  There are a couple of TVs on the far wall, and it's very quiet in here.  For seating arrangements, there are tables and chairs about, but they look like they're trying to hide in the shadows so as not to be seen. } {} {} {} {} {1.000}
+E {    2} {ne} {ne} {3} {0} {}
+
+R {   16} {0} {<178>} {Sports Fan-atics Baseball Lounge} { } {The floor in this room contains a miniature painted replica of a baseball field.  Home plate is right at the entryway, with the first base line extending diagonally to the right, and third base going diagonally left.  The pitcher's mound is about six steps into the room, and second base is six steps beyond that.  At each of the bases, of course, is a table with four bar stools around it, giving adventurers places to sit and enjoy the games playing on the TVs.  Around the edges of the room are benches made to look like bleachers. } {} {} {} {} {1.000}
+E {    2} {n} {n} {1} {0} {}
+
+R {   17} {0} {<178>} {Sports Fan-atics Basketball Lounge} { } {The lights are brighter in here than they are in the other rooms.  Additionally, the floor is a lighter color -- this one is the same color as the floorboards in the NBA!  This floor even has all the same markings as a basketball court does\; about the only thing missing are the hoops.  TVs on the far wall display a multitude of basketball games, and tables and chairs are scattered about the room, offering places to sit. } {} {} {} {} {1.000}
+E {    2} {e} {e} {2} {0} {}
+
+R {   18} {0} {<178>} {Uno Tournament Room} { } {Welcome to the Uno Tournament Room.  This is the place where the denizens of Pinnacle come when they wish to compete for the coveted Uno Championship title.  In the center of the room are five large mahogany card tables.  Each table is surrounded by four very comfortable-looking leather chairs.  Hanging from the ceiling, high above each table, is a small glass chandelier. Situated within the southwest corner of the room, is a small wooden booth where information about upcoming tournaments can be found.  A large plaque hangs on the west wall beside the booth.} {} {} {} {} {1.000}
+E {    7} {d} {d} {32} {0} {}
+
+R {   19} {0} {<178>} {Getaway} { } {There is a lot of traffic moving through the northern corridor here. It seems that its fun there, whatever it is!  Perhaps you could go and check it out.} {} {} {} {} {1.000}
+E {    4} {s} {s} {4} {0} {}
+E {   30} {e} {e} {2} {0} {}
+E {   34} {n} {n} {1} {0} {}
+E {   23} {w} {w} {8} {0} {}
+
+R {   20} {0} {<178>} {Getaway} { } {All the virtual reality freaks are passing you up on their way to the south.  They've got their VR visors on, and are ready for battle.  Against the wall, there is a public phone mounted.} {} {} {} {} {1.000}
+E {    4} {n} {n} {1} {0} {}
+E {   24} {w} {w} {8} {0} {}
+E {   26} {s} {s} {4} {0} {}
+E {   27} {e} {e} {2} {0} {}
+
+R {   21} {0} {<178>} {Getaway} { } {Activity abounds all about you.  But to the west, it is nearly silent.  You can see people moving game pieces, deep in thought.} {} {} {} {} {1.000}
+E {    4} {e} {e} {2} {0} {}
+E {   23} {n} {n} {1} {0} {}
+E {   24} {s} {s} {4} {0} {}
+E {   25} {w} {w} {8} {0} {}
+
+R {   22} {0} {<178>} {Tag rooms} { } {Activity abounds all about you.  To the east, you can hear the joyous laughter of kids playing TAG!} {} {} {} {} {1.000}
+E {    4} {w} {w} {8} {0} {}
+E {   27} {s} {s} {4} {0} {}
+E {   30} {n} {n} {1} {0} {}
+E {   31} {e} {e} {2} {0} {}
+
+R {   23} {0} {<178>} {Dart room} { } {You duck as someone throws a dart right past your head!  The northern wall has a dart board mounted on it, and people are here having fun! Everyone has smiles, everyone is having a good time!} {} {} {} {} {1.000}
+E {   21} {s} {s} {4} {0} {}
+E {   19} {e} {e} {2} {0} {}
+
+R {   24} {0} {<128>} {Getaway Snackshop} {<138>F} {People can be seen here sitting at tables, and chatting about their adventures in the realms.  They are all eating snacks they bought from the snack bar here.  You feel drawn to approach the counter yourself, order a few snacks and join in!} {} {food;} {} {} {1.000}
+E {   21} {n} {n} {1} {0} {}
+E {   20} {e} {e} {2} {0} {}
+
+R {   25} {0} {<178>} {Game room} { } {There are games in all directions.  Chess boards are setup to the north and south.  And Connect Four is setup to the west. How fun!  You can go down a few steps into a little playroom too.} {The Great Getaway} {} {} {} {1.000}
+E {   21} {e} {e} {2} {0} {}
+E {   35} {d} {d} {32} {0} {}
+E {   36} {n} {n} {1} {0} {}
+E {   37} {s} {s} {4} {0} {}
+E {   38} {w} {w} {8} {0} {}
+
+R {   26} {0} {<178>} {Getaway} { } {This is virtual reality junction.  To the west you can go to the holodecks, and to the east you can go to WAR. } {The Great Getaway} {} {} {} {1.000}
+E {   20} {n} {n} {1} {0} {}
+E {   28} {w} {w} {8} {0} {}
+E {   29} {e} {e} {2} {0} {}
+
+R {   27} {0} {<178>} {Getaway} { } {Ahh, the getaway lounge.  Adventurers come from all around to relax here.  There are some couches and chairs set up in front of a TV. A rug sprawls out, covering much of the floor.} {} {} {} {} {1.000}
+E {   20} {w} {w} {8} {0} {}
+E {   22} {n} {n} {1} {0} {}
+
+R {   28} {0} {<048>} {Starship Battle Simulator (holodeck2,e,holodeck1)} { } {Holodeck battle simulator. The holodeck is a miracle of technology as it can simulate any event you want as though it was real.  Right now, the program compiled in the holodeck subprocessors is a simulated starship battle between the U.S.S. Enterprise and the Romulan warbird, the Kuhl Manar.  If you feel lucky and would like to try your luck against another player, read the panel and follow the the instructions.} {} {} {} {} {1.000}
+E {   26} {e} {e} {2} {0} {}
+
+R {   29} {0} {<178>} {The WAR! Room} { } {This is the game of WAR! It's an intense game of adrenaline, testosterone, and estrogen. You see very little here except a small machine sitting in the center of the room. If you stand in this room during a game, you can hear the activities of the battlefield.} {War Game!} {} {} {} {1.000}
+E {   26} {w} {w} {8} {0} {}
+
+R {   30} {0} {<178>} {Dart room} { } {You duck as someone throws a dart right past your head!  The northern wall has a dart board mounted on it, and people are here having fun! Everyone has smiles, everyone is having a good time!} {} {} {} {} {1.000}
+E {   22} {s} {s} {4} {0} {}
+E {   19} {w} {w} {8} {0} {}
+
+R {   31} {0} {<178>} {Tag rooms} { } {This is the place you come if you want to get in on a rousing game of TAG! or ARENATAG!  If you're just peeking around and haven't played either yet, you might wanna check out ARENATAG! first. ARENATAG! takes place in a virtual reality arena whereas TAG! encompasses the whole mud.  Both are a blast to play and each is a little different.  It doesn't cost much to have a good time down here so grab some friends and have a ball! North: ARENATAG! South: TAG!} {The Great Getaway} {} {} {} {1.000}
+E {   22} {w} {w} {8} {0} {}
+E {   32} {n} {n} {1} {0} {}
+E {   33} {s} {s} {4} {0} {}
+
+R {   32} {0} {<178>} {ARENATAG!} { } {ARENATAG! This is the Arenatagroom, you come here if you want to get in on a game of ARENATAG! or check up on the one presently running.  There is a button here that you can press to get the information you desire.  Messages from the current game get piped into this room so you can hear what's going on.} {ArenaTAG!} {} {} {} {1.000}
+E {   31} {s} {s} {4} {0} {}
+
+R {   33} {0} {<178>} {TAG!} { } {TAG! This is the Tagroom, you come here if you want to get in on a game of TAG! or check up on the one presently running.  There is a button here that you can press to get the information you desire.  Messages from the present game get piped into this room so you can hear what's going on.} {} {} {} {} {1.000}
+E {   31} {n} {n} {1} {0} {}
+
+R {   34} {0} {<178>} {In front of a casino.} { } {You are in front of the Getaway Casino.  Excitement! Don't stop now, go win your fortune!} {} {} {} {} {1.000}
+E {   19} {s} {s} {4} {0} {}
+E {   39} {n} {n} {1} {0} {}
+
+R {   35} {0} {<178>} {The Game Room} { } {You find yourself in a place of high recreation, the Game Room, here you  are able to play puzzles that have been played throughout the centuries. There is a list on the wall of the available games. Pick one and enjoy!   Note: If there are people in the rooms, please do not disturb. } {Game Room} {} {} {} {1.000}
+E {   25} {u} {u} {16} {0} {}
+
+R {   36} {0} {<178>} {Chess room} { } {This is one of the Getaway chess rooms.  The name of the game here is intelligence, and the word is silence.} {} {} {} {} {1.000}
+E {   25} {s} {s} {4} {0} {}
+
+R {   37} {0} {<178>} {Chess room} { } {This is one of the Getaway chess rooms.  The name of the game here is intelligence, and the word is silence.} {} {} {} {} {1.000}
+E {   25} {n} {n} {1} {0} {}
+
+R {   38} {0} {<178>} {Getaway Connect-Four room} { } {This is the Getaway connect four room.  The name of the game here is strategy, and the word is fun.} {} {} {} {} {1.000}
+E {   25} {e} {e} {2} {0} {}
+
+R {   39} {0} {<178>} {Casino entrance} { } {Wow!  This is more spectacular than you thought.  There are machines everywhere, and within them is YOUR fortune, just waiting for you to snatch it up.  The slots are to the east, to the west, and to the  north.  The lights draw you in. } {} {} {} {} {1.000}
+E {   34} {s} {s} {4} {0} {}
+E {   40} {n} {n} {1} {0} {}
+E {   41} {w} {w} {8} {0} {}
+E {   42} {e} {e} {2} {0} {}
+
+R {   40} {0} {<178>} {Standard slots row} { } {The walls here are lined with the standard slot machines.  People come to these to try their luck.  The row continues to the north with enough slot machines to keep everyone busy making money! } {} {} {} {} {1.000}
+E {   39} {s} {s} {4} {0} {}
+E {   60} {n} {n} {1} {0} {}
+
+R {   41} {0} {<178>} {Casino floor} { } {You are running across the casino floor, searching for the machine that will make you rich!  You are in luck, because it's just around the corner.  The entrance that brought you to this glorious place lies to the east. } {} {} {} {} {1.000}
+E {   39} {e} {e} {2} {0} {}
+E {   43} {w} {w} {8} {0} {}
+
+R {   42} {0} {<178>} {Casino floor} { } {You are running across the casino floor, searching for the machine that will make you rich!  You are in luck, because it's just around the corner.  The entrance that brought you to this glorious place lies to the west. } {} {} {} {} {1.000}
+E {   39} {w} {w} {8} {0} {}
+E {   59} {e} {e} {2} {0} {}
+
+R {   43} {0} {<178>} {Casino floor} { } {You are turning the southwest corner of the casino floor. Just to the north lies your fortune.  So what are you waiting for? } {} {} {} {} {1.000}
+E {   41} {e} {e} {2} {0} {}
+E {   44} {n} {n} {1} {0} {}
+
+R {   44} {0} {<178>} {Casino floor} { } {The walls here are lined with the cheap slot machines.  People come to these just to have fun.  The row continues to the north with enough slot machines to keep everyone busy making money! } {} {} {} {} {1.000}
+E {   43} {s} {s} {4} {0} {}
+E {   45} {n} {n} {1} {0} {}
+
+R {   45} {0} {<178>} {Cheap slots row} { } {The walls here are lined with the cheap slot machines.  People come to these just to have fun.  The row continues to the north and the south, with enough slot machines to keep everyone busy  making money! } {} {} {} {} {1.000}
+E {   44} {s} {s} {4} {0} {}
+E {   46} {n} {n} {1} {0} {}
+
+R {   46} {0} {<178>} {Cheap slots row} { } {The walls here are lined with the cheap slot machines.  People come to these just to have fun.  The row continues to the south, with enough slot machines to keep everyone busy making money! } {} {} {} {} {1.000}
+E {   45} {s} {s} {4} {0} {}
+E {   47} {n} {n} {1} {0} {}
+
+R {   47} {0} {<178>} {Casino floor} { } {You are passing a junction of slots to the south and video poker to the east.  You can see more rows of video poker to the north. All about you are heard the whirls and bells of machines paying people for playing their games! } {} {} {} {} {1.000}
+E {   46} {s} {s} {4} {0} {}
+E {   48} {n} {n} {1} {0} {}
+E {   49} {e} {e} {2} {0} {}
+
+R {   48} {0} {<178>} {Casino floor} { } {You are passing a row of standard video poker to the east.  To the north are the high-roller poker machines, and the south has the cheap machines. } {} {} {} {} {1.000}
+E {   47} {s} {s} {4} {0} {}
+E {   65} {e} {e} {2} {0} {}
+E {   66} {n} {n} {1} {0} {}
+
+R {   49} {0} {<178>} {Cheap video poker} { } {The partitions here are lined with the cheap video poker machines. People come to these just to have fun.  The row continues to the east with enough poker machines to keep everyone busy making money! } {} {} {} {} {1.000}
+E {   47} {w} {w} {8} {0} {}
+E {   50} {e} {e} {2} {0} {}
+
+R {   50} {0} {<178>} {Casino stairwell} { } {This is the center of the top casino floor.  You hear the whirling and whirling of slot machines to the south, the ringing of poker payoffs to the west and east, and a bustling of activity down the stairs. } {} {} {} {} {1.000}
+E {   49} {w} {w} {8} {0} {}
+E {   51} {d} {d} {32} {0} {}
+E {   52} {s} {s} {4} {0} {}
+E {   53} {e} {e} {2} {0} {}
+
+R {   51} {0} {<178>} {Casino basement} { } {This is the center of the casino basement.  You hear the hustle and bustle of activity in all directions.  Upstairs are the common sounds of bells and coins clinking as everyone is winning their fortunes at the slots and poker machines. } {} {} {} {} {1.000}
+E {   50} {u} {u} {16} {0} {}
+E {   69} {n} {n} {1} {0} {}
+E {   70} {s} {s} {4} {0} {}
+E {   71} {w} {w} {8} {0} {}
+E {   72} {e} {e} {2} {0} {}
+
+R {   52} {0} {<178>} {Casino stairwell} { } {The walls here are lined with the standard slot machines.  People come to these just to have fun.  The row continues to the south, with enough slot machines to keep everyone busy making money! } {} {} {} {} {1.000}
+E {   50} {n} {n} {1} {0} {}
+E {   60} {s} {s} {4} {0} {}
+
+R {   53} {0} {<178>} {Cheap video poker} { } {The partitions here are lined with the cheap video poker machines. People come to these just to have fun.  The row continues to the west with enough poker machines to keep everyone busy making money! } {} {} {} {} {1.000}
+E {   50} {w} {w} {8} {0} {}
+E {   54} {e} {e} {2} {0} {}
+
+R {   54} {0} {<178>} {Casino floor} { } {You are passing a junction of slots to the south and video poker to the west.  You can see more rows of video poker to the north. All about you are heard the whirls and bells of machines paying people for playing their games! } {} {} {} {} {1.000}
+E {   53} {w} {w} {8} {0} {}
+E {   55} {n} {n} {1} {0} {}
+E {   56} {s} {s} {4} {0} {}
+
+R {   55} {0} {<178>} {Casino floor} { } {You are passing a row of standard video poker to the west.  To the north are the high-roller poker machines, and the south has the cheap machines. } {} {} {} {} {1.000}
+E {   54} {s} {s} {4} {0} {}
+E {   61} {n} {n} {1} {0} {}
+E {   62} {w} {w} {8} {0} {}
+
+R {   56} {0} {<178>} {High-roller slots row} { } {The walls here are lined with the high-roller slot machines.  People come to these in hopes of making money.  The row continues to the south, with enough slot machines to keep everyone busy making money! } {} {} {} {} {1.000}
+E {   54} {n} {n} {1} {0} {}
+E {   57} {s} {s} {4} {0} {}
+
+R {   57} {0} {<178>} {High-roller slots row} { } {The walls here are lined with the high-roller slot machines.  People come to these in hopes of making money.  The row continues to the north and the south, with enough slot machines to keep everyone busy  making money! } {} {} {} {} {1.000}
+E {   56} {n} {n} {1} {0} {}
+E {   58} {s} {s} {4} {0} {}
+
+R {   58} {0} {<178>} {High-roller slots row} { } {The walls here are lined with the high-roller slot machines.  People come to these in hopes of making money.  The row continues to the north with enough slot machines to keep everyone busy making money! } {} {} {} {} {1.000}
+E {   57} {n} {n} {1} {0} {}
+E {   59} {s} {s} {4} {0} {}
+
+R {   59} {0} {<178>} {Casino floor} { } {You are turning the southeast corner of the casino floor. Just to the north lies your fortune.  So what are you waiting for? } {} {} {} {} {1.000}
+E {   58} {n} {n} {1} {0} {}
+E {   42} {w} {w} {8} {0} {}
+
+R {   60} {0} {<178>} {Standard slots row} { } {The walls here are lined with the standard slot machines.  People come to these to try their luck.  The row continues to the north and the south, with enough slot machines to keep everyone busy  making money! } {} {} {} {} {1.000}
+E {   40} {s} {s} {4} {0} {}
+E {   52} {n} {n} {1} {0} {}
+
+R {   61} {0} {<178>} {Casino floor} { } {You are turning the northeast corner of the casino floor. Just to the west lies the high-roller video poker!  Woo Woo!!  You barely control your excitement. } {} {} {} {} {1.000}
+E {   55} {s} {s} {4} {0} {}
+E {   63} {w} {w} {8} {0} {}
+
+R {   62} {0} {<178>} {Standard video poker} { } {The partitions here are lined with the standard video poker machines. People come to these to test their luck.  The row continues to the west with enough poker machines to keep everyone busy making money! } {} {} {} {} {1.000}
+E {   55} {e} {e} {2} {0} {}
+E {   64} {w} {w} {8} {0} {}
+
+R {   63} {0} {<178>} {High-roller video poker} { } {The partitions here are lined with the high-roller video poker machines. People come to these make some money.  The row continues to the west with enough poker machines to keep everyone busy making money! } {} {} {} {} {1.000}
+E {   61} {e} {e} {2} {0} {}
+E {   68} {w} {w} {8} {0} {}
+
+R {   64} {0} {<178>} {Standard video poker} { } {The partitions here are lined with the standard video poker machines. People come to these make some money.  The row continues to the east and west with enough poker machines to keep everyone busy making money! } {} {} {} {} {1.000}
+E {   62} {e} {e} {2} {0} {}
+E {   65} {w} {w} {8} {0} {}
+
+R {   65} {0} {<178>} {Standard video poker} { } {The partitions here are lined with the standard video poker machines. People come to these to test their luck.  The row continues to the east with enough poker machines to keep everyone busy making money! } {} {} {} {} {1.000}
+E {   64} {e} {e} {2} {0} {}
+E {   48} {w} {w} {8} {0} {}
+
+R {   66} {0} {<128>} {Casino floor} {<138>$} {You are turning the northwest corner of the casino floor. Just to the east lies the high-roller video poker!  Woo Woo!!  You barely control your excitement. } {} {atm;} {} {} {1.000}
+E {   48} {s} {s} {4} {0} {}
+E {   67} {e} {e} {2} {0} {}
+
+R {   67} {0} {<178>} {High-roller video poker} { } {The partitions here are lined with the high-roller video poker machines. People come to these make some money.  The row continues to the west with enough poker machines to keep everyone busy making money! } {} {} {} {} {1.000}
+E {   66} {w} {w} {8} {0} {}
+E {   68} {e} {e} {2} {0} {}
+
+R {   68} {0} {<178>} {High-roller video poker} { } {The partitions here are lined with the standard video poker machines. People come to these make some money.  The row continues to the east and west with enough poker machines to keep everyone busy making money! } {} {} {} {} {1.000}
+E {   67} {w} {w} {8} {0} {}
+E {   63} {e} {e} {2} {0} {}
+
+R {   69} {0} {<178>} {Casino basement} { } {You are just north of the basement floor's stairwell to the main level. All about you are tables, wheels, displays.. games of all types.  Your fortune awaits you here!  Games are just a step away in all directions. } {} {} {} {} {1.000}
+E {   51} {s} {s} {4} {0} {}
+E {   73} {n} {n} {1} {0} {}
+E {   74} {w} {w} {8} {0} {}
+E {   75} {e} {e} {2} {0} {}
+
+R {   70} {0} {<178>} {Casino basement} { } {You are just south of the basement floor's stairwell to the main level. All about you are tables, wheels, displays.. games of all types.  Your fortune awaits you here!  Games are just a step away in all directions. } {} {} {} {} {1.000}
+E {   51} {n} {n} {1} {0} {}
+E {   82} {w} {w} {8} {0} {}
+E {   85} {s} {s} {4} {0} {}
+E {   87} {e} {e} {2} {0} {}
+
+R {   71} {0} {<178>} {Casino basement} { } {You are just west of the basement floor's stairwell to the main level. All about you are tables, wheels, displays.. games of all types.  Your fortune awaits you here!  Games are just a step away in all directions. } {} {} {} {} {1.000}
+E {   51} {e} {e} {2} {0} {}
+E {   74} {n} {n} {1} {0} {}
+E {   80} {w} {w} {8} {0} {}
+E {   82} {s} {s} {4} {0} {}
+
+R {   72} {0} {<178>} {Casino basement} { } {You are just east of the basement floor's stairwell to the main level. All about you are tables, wheels, displays.. games of all types.  Your fortune awaits you here!  Games are just a step away in all directions. } {} {} {} {} {1.000}
+E {   51} {w} {w} {8} {0} {}
+E {   87} {s} {s} {4} {0} {}
+E {   90} {e} {e} {2} {0} {}
+E {   75} {n} {n} {1} {0} {}
+
+R {   73} {0} {<178>} {Casino basement} { } {You are centered along the northern edge of the casino basement floor. All about you are tables, wheels, displays.. games of all types.  Your fortune awaits you here!  Why not wager a bit on roulette? } {} {} {} {} {1.000}
+E {   69} {s} {s} {4} {0} {}
+E {   76} {w} {w} {8} {0} {}
+E {   77} {e} {e} {2} {0} {}
+
+R {   74} {0} {<178>} {Casino basement} { } {You are just northwest of the basement floor's stairwell to the main level. All about you are tables, wheels, displays.. games of all types.  Your fortune awaits you here!  Why not wager some coins on blackjack? } {} {} {} {} {1.000}
+E {   69} {e} {e} {2} {0} {}
+E {   76} {n} {n} {1} {0} {}
+E {   71} {s} {s} {4} {0} {}
+E {   79} {w} {w} {8} {0} {}
+
+R {   75} {0} {<178>} {Casino basement} { } {You are just northeast of the basement floor's stairwell to the main level. All about you are tables, wheels, displays.. games of all types.  Your fortune awaits you here!  Why not wager some coins on blackjack? } {} {} {} {} {1.000}
+E {   69} {w} {w} {8} {0} {}
+E {   72} {s} {s} {4} {0} {}
+E {   91} {e} {e} {2} {0} {}
+E {   77} {n} {n} {1} {0} {}
+
+R {   76} {0} {<178>} {Casino basement} { } {You are running along the northern edge of the casino basement floor. All about you are tables, wheels, displays.. games of all types.  Your fortune awaits you here!  Games are just a step away in all directions. } {} {} {} {} {1.000}
+E {   73} {e} {e} {2} {0} {}
+E {   74} {s} {s} {4} {0} {}
+E {   78} {w} {w} {8} {0} {}
+
+R {   77} {0} {<178>} {Casino basement} { } {You are running along the northern edge of the casino basement floor. All about you are tables, wheels, displays.. games of all types.  Your fortune awaits you here!  Games are just a step away in all directions. } {} {} {} {} {1.000}
+E {   73} {w} {w} {8} {0} {}
+E {   75} {s} {s} {4} {0} {}
+E {   92} {e} {e} {2} {0} {}
+
+R {   78} {0} {<178>} {Casino basement} { } {You are at the northwest corner of the casino basement floor. All about you are tables, wheels, displays.. games of all types.  Your fortune awaits you here!  Why not wager some of your winnings on the horses? } {} {} {} {} {1.000}
+E {   76} {e} {e} {2} {0} {}
+E {   79} {s} {s} {4} {0} {}
+
+R {   79} {0} {<178>} {Casino basement} { } {You are running along the western edge of the casino basement floor. All about you are tables, wheels, displays.. games of all types.  Your fortune awaits you here!  Games are just a step away in all directions. } {} {} {} {} {1.000}
+E {   74} {e} {e} {2} {0} {}
+E {   78} {n} {n} {1} {0} {}
+E {   80} {s} {s} {4} {0} {}
+
+R {   80} {0} {<178>} {Casino basement} { } {You are centered along the western edge of the casino basement floor. All about you are tables, wheels, displays.. games of all types.  Your fortune awaits you here!  Why not wager a bit on roulette? } {} {} {} {} {1.000}
+E {   79} {n} {n} {1} {0} {}
+E {   81} {s} {s} {4} {0} {}
+E {   71} {e} {e} {2} {0} {}
+
+R {   81} {0} {<178>} {Casino basement} { } {You are running along the western edge of the casino basement floor. All about you are tables, wheels, displays.. games of all types.  Your fortune awaits you here!  Games are just a step away in all directions. } {} {} {} {} {1.000}
+E {   80} {n} {n} {1} {0} {}
+E {   83} {s} {s} {4} {0} {}
+E {   82} {e} {e} {2} {0} {}
+
+R {   82} {0} {<178>} {Casino basement} { } {You are just southwest of the basement floor's stairwell to the main level. All about you are tables, wheels, displays.. games of all types.  Your fortune awaits you here!  Why not wager some coins on blackjack? } {} {} {} {} {1.000}
+E {   71} {n} {n} {1} {0} {}
+E {   81} {w} {w} {8} {0} {}
+E {   84} {s} {s} {4} {0} {}
+E {   70} {e} {e} {2} {0} {}
+
+R {   83} {0} {<178>} {Casino basement} { } {You are at the southwest corner of the casino basement floor. All about you are tables, wheels, displays.. games of all types.  Your fortune awaits you here!  Why don't you give the wheel a spin? } {} {} {} {} {1.000}
+E {   81} {n} {n} {1} {0} {}
+E {   84} {e} {e} {2} {0} {}
+
+R {   84} {0} {<178>} {Casino basement} { } {You are running along the southern edge of the casino basement floor. All about you are tables, wheels, displays.. games of all types.  Your fortune awaits you here!  Games are just a step away in all directions. } {} {} {} {} {1.000}
+E {   83} {w} {w} {8} {0} {}
+E {   82} {n} {n} {1} {0} {}
+E {   85} {e} {e} {2} {0} {}
+
+R {   85} {0} {<178>} {Casino basement} { } {You are centered along the southern edge of the casino basement floor. All about you are tables, wheels, displays.. games of all types.  Your fortune awaits you here!  Why not wager a bit on roulette? } {} {} {} {} {1.000}
+E {   84} {w} {w} {8} {0} {}
+E {   70} {n} {n} {1} {0} {}
+E {   86} {e} {e} {2} {0} {}
+
+R {   86} {0} {<178>} {Casino basement} { } {You are running along the southern edge of the casino basement floor. All about you are tables, wheels, displays.. games of all types.  Your fortune awaits you here!  Games are just a step away in all directions. } {} {} {} {} {1.000}
+E {   85} {w} {w} {8} {0} {}
+E {   87} {n} {n} {1} {0} {}
+E {   88} {e} {e} {2} {0} {}
+
+R {   87} {0} {<178>} {Casino basement} { } {You are just southeast of the basement floor's stairwell to the main level. All about you are tables, wheels, displays.. games of all types.  Your fortune awaits you here!  Why not wager some coins on blackjack? } {} {} {} {} {1.000}
+E {   70} {w} {w} {8} {0} {}
+E {   86} {s} {s} {4} {0} {}
+E {   72} {n} {n} {1} {0} {}
+E {   89} {e} {e} {2} {0} {}
+
+R {   88} {0} {<178>} {Casino basement} { } {You are at the southeast corner of the casino basement floor. All about you are tables, wheels, displays.. games of all types.  Your fortune awaits you here!  Why don't you give the wheel a spin? } {} {} {} {} {1.000}
+E {   86} {w} {w} {8} {0} {}
+E {   89} {n} {n} {1} {0} {}
+
+R {   89} {0} {<178>} {Casino basement} { } {You are running along the eastern edge of the casino basement floor. All about you are tables, wheels, displays.. games of all types.  Your fortune awaits you here!  Games are just a step away in all directions. } {} {} {} {} {1.000}
+E {   87} {w} {w} {8} {0} {}
+E {   88} {s} {s} {4} {0} {}
+E {   90} {n} {n} {1} {0} {}
+
+R {   90} {0} {<178>} {Casino basement} { } {You are centered along the eastern edge of the casino basement floor. All about you are tables, wheels, displays.. games of all types.  Your fortune awaits you here!  Why not wager a bit on roulette? } {} {} {} {} {1.000}
+E {   89} {s} {s} {4} {0} {}
+E {   91} {n} {n} {1} {0} {}
+E {   72} {w} {w} {8} {0} {}
+
+R {   91} {0} {<178>} {Casino basement} { } {You are running along the eastern edge of the casino basement floor. All about you are tables, wheels, displays.. games of all types.  Your fortune awaits you here!  Games are just a step away in all directions. } {} {} {} {} {1.000}
+E {   90} {s} {s} {4} {0} {}
+E {   92} {n} {n} {1} {0} {}
+E {   75} {w} {w} {8} {0} {}
+
+R {   92} {0} {<178>} {Casino basement} { } {You are at the northeast corner of the casino basement floor. All about you are tables, wheels, displays.. games of all types.  Your fortune awaits you here!  Why don't you place your wager on keno? } {} {} {} {} {1.000}
+E {   91} {s} {s} {4} {0} {}
+E {   77} {w} {w} {8} {0} {}
+
+R {   93} {0} {} {A Shadowed Room} { } {A barren and empty storage room.} {} {} {} {} {1.000}
+E {    6} {d} {d} {32} {0} {}
+
+R {   94} {0} {<178>} {The Back Room} { } {You're in the backroom of the pub.  A shady place, where people come to discuss their 'exploits', if you know what I mean.  You see graffiti all over the walls and several unkind references to 'your' mother and father.  This is not a place for children.} {} {} {} {} {1.000}
+E {    6} {u} {u} {16} {0} {}
+
+R {   95} {0} {<178>} {Sports Fan-atics Football Lounge} { } {The floor is covered with FieldTurf[TM], marked every three feet with yardage markers.  According to the floor, this room is about 15 yards long, and about 10 yards wide.  Overstuffed leather couches line the left wall, whereas the right wall is covered with widescreen digital TVs, each showing a different football game.  The walls are covered with pennants of every team in the league, as well as memorabilia from throughout the history of the NFL. } {} {} {} {} {1.000}
+E {    2} {w} {w} {8} {0} {}
+
+R {   96} {0} {<178>} {Sports Fan-atics Hockey Lounge} { } {The walls here are painted white on the bottom, and there is a red chair-rail running around the perimeter of this oval-shaped room.  Above the chair-rail are mirrors in the shape of the plexiglass that surrounds hockey rinks.  The floor is ice-white, and has all the standard markings of a hockey rink.  Along the wide far wall is a bank of televisions, each showing a different game.  Spread around the room are chairs and tables to sit down and watch the games at. } {} {} {} {} {1.000}
+E {    2} {s} {s} {4} {0} {}

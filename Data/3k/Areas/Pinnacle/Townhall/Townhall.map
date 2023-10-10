@@ -1,0 +1,367 @@
+C 500
+
+V 2020
+
+CAVOID <118>
+CBACKGROUND 
+CBLOCK <218>
+CEXITS <278>
+CFOG <148>
+CHIDE <118>
+CINVISIBLE <208>
+CPATHS <138>
+CROOMS <178>
+CSYMBOLS <128>
+CUSER <258>
+
+F 10
+
+G 0
+
+I 26
+
+L {ASCII NESW LINE} {NO EXITS} {x}
+L {ASCII NESW LINE} {N} {o}
+L {ASCII NESW LINE} {  E} {o}
+L {ASCII NESW LINE} {N E} {+}
+L {ASCII NESW LINE} {    S} {o}
+L {ASCII NESW LINE} {N   S} {|}
+L {ASCII NESW LINE} {  E S} {+}
+L {ASCII NESW LINE} {N E S} {+}
+L {ASCII NESW LINE} {      W} {o}
+L {ASCII NESW LINE} {N     W} {+}
+L {ASCII NESW LINE} {  E   W} {-}
+L {ASCII NESW LINE} {N E   W} {+}
+L {ASCII NESW LINE} {    S W} {+}
+L {ASCII NESW LINE} {N   S W} {+}
+L {ASCII NESW LINE} {  E S W} {+}
+L {ASCII NESW LINE} {N E S W} {+}
+L {ASCII NESW MISC} {USER} {x}
+L {ASCII NESW MISC} {DIR UNKNOWN} {+}
+L {ASCII NESW MISC} {N S VOID} {|}
+L {ASCII NESW MISC} {E W VOID} {-}
+L {ASCII NESW CURVED} {N E CURVED} {+}
+L {ASCII NESW CURVED} {S E CURVED} {+}
+L {ASCII NESW CURVED} {S W CURVED} {+}
+L {ASCII NESW CURVED} {N W CURVED} {+}
+L {ASCII NESW DIRS} {DIR N} {|}
+L {ASCII NESW DIRS} {DIR NE} {/}
+L {ASCII NESW DIRS} {DIR E} {-}
+L {ASCII NESW DIRS} {DIR SE} {\\}
+L {ASCII NESW DIRS} {DIR S} {|}
+L {ASCII NESW DIRS} {DIR SW} {/}
+L {ASCII NESW DIRS} {DIR W} {-}
+L {ASCII NESW DIRS} {DIR NW} {\\}
+L {NESW LINE} {NO EXITS} {\u2B51}
+L {NESW LINE} {N} {\u2579}
+L {NESW LINE} {  E} {\u257A}
+L {NESW LINE} {N E} {\u2517}
+L {NESW LINE} {    S} {\u257B}
+L {NESW LINE} {N   S} {\u2503}
+L {NESW LINE} {  E S} {\u250F}
+L {NESW LINE} {N E S} {\u2523}
+L {NESW LINE} {      W} {\u2578}
+L {NESW LINE} {N     W} {\u251B}
+L {NESW LINE} {  E   W} {\u2501}
+L {NESW LINE} {N E   W} {\u253B}
+L {NESW LINE} {    S W} {\u2513}
+L {NESW LINE} {N   S W} {\u252B}
+L {NESW LINE} {  E S W} {\u2533}
+L {NESW LINE} {N E S W} {\u254B}
+L {NESW MISC} {USER} {\u2B51}
+L {NESW MISC} {DIR UNKNOWN} {\u2012}
+L {NESW MISC} {N S VOID} {\u2507}
+L {NESW MISC} {E W VOID} {\u254D}
+L {NESW CURVED} {N E CURVED} {\u2570}
+L {NESW CURVED} {S E CURVED} {\u256D}
+L {NESW CURVED} {S W CURVED} {\u256E}
+L {NESW CURVED} {N W CURVED} {\u256F}
+L {NESW DIRS} {DIR N} {\u2191}
+L {NESW DIRS} {DIR NE} {\u2B08}
+L {NESW DIRS} {DIR E} {\u2B95}
+L {NESW DIRS} {DIR SE} {\u2b0A}
+L {NESW DIRS} {DIR S} {\u2193}
+L {NESW DIRS} {DIR SW} {\u2B0B}
+L {NESW DIRS} {DIR W} {\u2B05}
+L {NESW DIRS} {DIR NW} {\u2B09}
+L {MUDFONT NWS} {NO EXITS} {\u2830}
+L {MUDFONT NWS} {N} {\u2838}
+L {MUDFONT NWS} {  NW} {\u2831}
+L {MUDFONT NWS} {N NW} {\u2839}
+L {MUDFONT NWS} {     W} {\u2836}
+L {MUDFONT NWS} {N    W} {\u283E}
+L {MUDFONT NWS} {  NW W} {\u2837}
+L {MUDFONT NWS} {N NW W} {\u283F}
+L {MUDFONT NWS} {       SW} {\u2870}
+L {MUDFONT NWS} {N      SW} {\u2878}
+L {MUDFONT NWS} {  NW   SW} {\u2871}
+L {MUDFONT NWS} {N NW   SW} {\u2879}
+L {MUDFONT NWS} {     W SW} {\u2876}
+L {MUDFONT NWS} {N    W SW} {\u287E}
+L {MUDFONT NWS} {  NW W SW} {\u2877}
+L {MUDFONT NWS} {N NW W SW} {\u287F}
+L {MUDFONT NWS} {          S} {\u28B0}
+L {MUDFONT NWS} {N         S} {\u28B8}
+L {MUDFONT NWS} {  NW      S} {\u28B1}
+L {MUDFONT NWS} {N NW      S} {\u28B9}
+L {MUDFONT NWS} {     W    S} {\u28B6}
+L {MUDFONT NWS} {N    W    S} {\u28BE}
+L {MUDFONT NWS} {  NW W    S} {\u28B7}
+L {MUDFONT NWS} {N NW W    S} {\u28BF}
+L {MUDFONT NWS} {       SW S} {\u28F0}
+L {MUDFONT NWS} {N      SW S} {\u28F8}
+L {MUDFONT NWS} {  NW   SW S} {\u28F1}
+L {MUDFONT NWS} {N NW   SW S} {\u28F9}
+L {MUDFONT NWS} {     W SW S} {\u28F6}
+L {MUDFONT NWS} {N    W SW S} {\u28FE}
+L {MUDFONT NWS} {  NW W SW S} {\u28F7}
+L {MUDFONT NWS} {N NW W SW S} {\u28FF}
+L {MUDFONT NES} {NO EXITS} {\u2806}
+L {MUDFONT NES} {N} {\u2807}
+L {MUDFONT NES} {  NE} {\u280E}
+L {MUDFONT NES} {N NE} {\u280F}
+L {MUDFONT NES} {     W} {\u2836}
+L {MUDFONT NES} {N    W} {\u2837}
+L {MUDFONT NES} {  NE W} {\u283E}
+L {MUDFONT NES} {N NE W} {\u283F}
+L {MUDFONT NES} {       SE} {\u2886}
+L {MUDFONT NES} {N      SE} {\u2887}
+L {MUDFONT NES} {  NE   SE} {\u288E}
+L {MUDFONT NES} {N NE   SE} {\u288F}
+L {MUDFONT NES} {     W SE} {\u28B6}
+L {MUDFONT NES} {N    W SE} {\u28B7}
+L {MUDFONT NES} {  NE W SE} {\u28BE}
+L {MUDFONT NES} {N NE W SE} {\u28BF}
+L {MUDFONT NES} {          S} {\u2846}
+L {MUDFONT NES} {N         S} {\u2847}
+L {MUDFONT NES} {  NE      S} {\u284E}
+L {MUDFONT NES} {N NE      S} {\u284F}
+L {MUDFONT NES} {     W    S} {\u2876}
+L {MUDFONT NES} {N    W    S} {\u2877}
+L {MUDFONT NES} {  NE W    S} {\u287E}
+L {MUDFONT NES} {N NE W    S} {\u287F}
+L {MUDFONT NES} {       SE S} {\u28C6}
+L {MUDFONT NES} {N      SE S} {\u28C7}
+L {MUDFONT NES} {  NE   SE S} {\u28CE}
+L {MUDFONT NES} {N NE   SE S} {\u28CF}
+L {MUDFONT NES} {     W SE S} {\u28F6}
+L {MUDFONT NES} {N    W SE S} {\u28F7}
+L {MUDFONT NES} {  NE W SE S} {\u28FE}
+L {MUDFONT NES} {N NE W SE S} {\u28FF}
+L {MUDFONT VOID NWS} {NO EXITS} {\u2800}
+L {MUDFONT VOID NWS} {N} {\u2808}
+L {MUDFONT VOID NWS} {  NW} {\u2801}
+L {MUDFONT VOID NWS} {N NW} {\u2809}
+L {MUDFONT VOID NWS} {     W} {\u2806}
+L {MUDFONT VOID NWS} {N    W} {\u280E}
+L {MUDFONT VOID NWS} {  NW W} {\u2807}
+L {MUDFONT VOID NWS} {N NW W} {\u280F}
+L {MUDFONT VOID NWS} {       SW} {\u2840}
+L {MUDFONT VOID NWS} {N      SW} {\u2848}
+L {MUDFONT VOID NWS} {  NW   SW} {\u2841}
+L {MUDFONT VOID NWS} {N NW   SW} {\u2849}
+L {MUDFONT VOID NWS} {     W SW} {\u2846}
+L {MUDFONT VOID NWS} {N    W SW} {\u284E}
+L {MUDFONT VOID NWS} {  NW W SW} {\u2847}
+L {MUDFONT VOID NWS} {N NW W SW} {\u284F}
+L {MUDFONT VOID NWS} {          S} {\u2880}
+L {MUDFONT VOID NWS} {N         S} {\u2888}
+L {MUDFONT VOID NWS} {  NW      S} {\u2881}
+L {MUDFONT VOID NWS} {N NW      S} {\u2889}
+L {MUDFONT VOID NWS} {     W    S} {\u2886}
+L {MUDFONT VOID NWS} {N    W    S} {\u288E}
+L {MUDFONT VOID NWS} {  NW W    S} {\u2887}
+L {MUDFONT VOID NWS} {N NW W    S} {\u288F}
+L {MUDFONT VOID NWS} {       SW S} {\u28C0}
+L {MUDFONT VOID NWS} {N      SW S} {\u28C8}
+L {MUDFONT VOID NWS} {  NW   SW S} {\u28C1}
+L {MUDFONT VOID NWS} {N NW   SW S} {\u28C9}
+L {MUDFONT VOID NWS} {     W SW S} {\u28C6}
+L {MUDFONT VOID NWS} {N    W SW S} {\u28CE}
+L {MUDFONT VOID NWS} {  NW W SW S} {\u28C7}
+L {MUDFONT VOID NWS} {N NW W SW S} {\u28CF}
+L {MUDFONT VOID NES} {NO EXITS} {\u2800}
+L {MUDFONT VOID NES} {N} {\u2801}
+L {MUDFONT VOID NES} {  NE} {\u2808}
+L {MUDFONT VOID NES} {N NE} {\u2809}
+L {MUDFONT VOID NES} {     W} {\u2830}
+L {MUDFONT VOID NES} {N    W} {\u2831}
+L {MUDFONT VOID NES} {  NE W} {\u2838}
+L {MUDFONT VOID NES} {N NE W} {\u2839}
+L {MUDFONT VOID NES} {       SE} {\u2880}
+L {MUDFONT VOID NES} {N      SE} {\u2881}
+L {MUDFONT VOID NES} {  NE   SE} {\u2888}
+L {MUDFONT VOID NES} {N NE   SE} {\u2889}
+L {MUDFONT VOID NES} {     W SE} {\u28B0}
+L {MUDFONT VOID NES} {N    W SE} {\u28B1}
+L {MUDFONT VOID NES} {  NE W SE} {\u28B8}
+L {MUDFONT VOID NES} {N NE W SE} {\u28B9}
+L {MUDFONT VOID NES} {          S} {\u2840}
+L {MUDFONT VOID NES} {N         S} {\u2841}
+L {MUDFONT VOID NES} {  NE      S} {\u2848}
+L {MUDFONT VOID NES} {N NE      S} {\u2849}
+L {MUDFONT VOID NES} {     W    S} {\u2870}
+L {MUDFONT VOID NES} {N    W    S} {\u2871}
+L {MUDFONT VOID NES} {  NE W    S} {\u2878}
+L {MUDFONT VOID NES} {N NE W    S} {\u2879}
+L {MUDFONT VOID NES} {       SE S} {\u28C0}
+L {MUDFONT VOID NES} {N      SE S} {\u28C1}
+L {MUDFONT VOID NES} {  NE   SE S} {\u28C8}
+L {MUDFONT VOID NES} {N NE   SE S} {\u28C9}
+L {MUDFONT VOID NES} {     W SE S} {\u28F0}
+L {MUDFONT VOID NES} {N    W SE S} {\u28F1}
+L {MUDFONT VOID NES} {  NE W SE S} {\u28F8}
+L {MUDFONT VOID NES} {N NE W SE S} {\u28F9}
+L {MUDFONT CURVED} {N E} {\u2818}
+L {MUDFONT CURVED} {S E} {\u28A0}
+L {MUDFONT CURVED} {S W} {\u2844}
+L {MUDFONT CURVED} {N W} {\u2803}
+L {UNICODE GRAPHICS} {NO DIAGONAL} { }
+L {UNICODE GRAPHICS} {SE} {\u2E0C}
+L {UNICODE GRAPHICS} {NE} {\u2E1D}
+L {UNICODE GRAPHICS} {SE NE} {>}
+L {UNICODE GRAPHICS} {SW} {\u2E0D}
+L {UNICODE GRAPHICS} {SE SW} {\u2E0C\u2E0D}
+L {UNICODE GRAPHICS} {NE SW} {\uFF0F}
+L {UNICODE GRAPHICS} {SE NE SW} {>\u2E0D}
+L {UNICODE GRAPHICS} {NW} {\u2E1C}
+L {UNICODE GRAPHICS} {SE NW} {\uFF3C}
+L {UNICODE GRAPHICS} {NE NW} {\u2E1D\u2E1C}
+L {UNICODE GRAPHICS} {SE NE NW} {>\u2E1C}
+L {UNICODE GRAPHICS} {SW NW} {<}
+L {UNICODE GRAPHICS} {SE SW NW} {\u2E0C<}
+L {UNICODE GRAPHICS} {NE SW NW} {\u2E1D<}
+L {UNICODE GRAPHICS} {SE NE SW NW} {><}
+L {UNICODE GRAPHICS} {D} {-}
+L {UNICODE GRAPHICS} {N} {\u2191}
+L {UNICODE GRAPHICS} {S} {\u2193}
+L {UNICODE GRAPHICS} {N S} {\u2502}
+L {UNICODE GRAPHICS} {U} {+}
+L {UNICODE GRAPHICS} {E} {\U01F806}
+L {UNICODE GRAPHICS} {W} {\U01F804}
+L {UNICODE GRAPHICS} {E W} {\u2500}
+L {UNICODE GRAPHICS} {ROOM L} {[}
+L {UNICODE GRAPHICS} {ROOM L CURVED} {(}
+L {UNICODE GRAPHICS} {ROOM R} {]}
+L {UNICODE GRAPHICS} {ROOM R CURVED} {)}
+
+
+
+
+T {} { } {}
+
+
+
+R {1}{0}{<068>}{Pinnacle Reception Hall}{ }{		Pinnacle Reception Hall  You stand in a large reception hall.  A vaulted ceiling rises over your head to a height of nearly twenty feet. White marble is everywhere, the floors, the walls and even the ceiling are constructed from the beautiful stone. The flicker of bright candles illuminates the hall of the Player's Council to the west.  An elegant stairway ascends upwards towards the adventurers guild on the second floor of the building.  A similar staircase descends to the central council chamber and board rooms of the 3 Kingdoms below. A large archway opens to the east, leading out to Pinnacle's main street.  From the north, you hear the lively banter of the Kingdom's Clans and from the south comes the sounds of animated discussion of the players and wizards of 3K.  A bronze plaque has been set into the floor in the center of the room and a huge map of Pinnacle has been engraved on a raised dais nearby. }{}{{content}{{item}{{big red button}{{name}{A big red button}}}{noun}{{archway}{{name}{archway}}{ceiling}{{name}{ceiling}}{door}{{name}{door}}{doorframe}{{name}{doorframe}}{floor}{{name}{floor}}{stairway}{{name}{stairway}}{stairwell}{{name}{stairwell}}{walls}{{name}{walls}}}}}{}{}{1.000}{}
+E {3}{u}{u}{16}{0}{}{1.000}{}{0.00}
+E {4}{d}{d}{32}{0}{}{1.000}{}{0.00}
+E {5}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {6}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {7}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {2}{e}{.mapLink {Pinnacle} {} {e};}{2}{1}{}{1.000}{}{0.00}
+
+R {2}{0}{<000>}{LINK: Pinnacle}{<138>*}{}{Pinnacle}{{link}{}}{}{}{1.000}{}
+E {1}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {3}{0}{<178>}{Level advancement room}{ }{                  * Adventurers Guild *  This is the main hall of the Adventurers' Guild.  You can come here to advance your stats and level.  You may also get information about the various quests that exist in 3 Kingdoms, and the requirements you must fulfill to reach certain levels. To the east is the guild bulletin board, and to the west is the donation room.  A small man sits at a desk in the corner, acting as a scribe to record all transactions of consequence.   There's a small placard here. Commands: advance [level,str,con,int,wis,dex,cha]           cost, tally, required, questansi,           list [name -or- # -or- short] }{Adventurer}{{content}{{item}{{clerk}{{name}{The Royal Clerk}}}{noun}{{desk}{{name}{desk}}{man}{{name}{man}}{paper}{{name}{paper}}{papers}{{name}{papers}}{paperweight}{{name}{paperweight}}{placard}{{name}{placard}}}}}{}{}{1.000}{}
+E {1}{d}{d}{32}{0}{}{1.000}{}{0.00}
+E {11}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {12}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {13}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {4}{0}{<178>}{Central Council Chamber}{ }{		Central Council Chamber This is the room where many decisions are made concerning Three Kingdom's future.  Here, players can read and write on the various boards, giving their opinions about upcoming changes and new ideas. Nearly all of Three Kingdoms most prestigious citizens can be seen here at one time or another.  If you're lucky, you might even get to see one of the high wizards aimlessly roaming the halls (probably looking for the bathroom).  Also, this is where you learn about the different guilds available to the players here at 3 Kingdoms.  A large glass case in the center of the room contains each of the prospective guild objects.  There is a large sign here with arrows pointing in various directions. }{}{{content}{{item}{{UserGraph}{{name}{A user graph, hanging on the wall}}{board}{{name}{The 3K Main Bulletin Board containing 83 messages (no unread messages)}}{case}{{name}{A Glass Case}}{newspaper rack}{{name}{A newspaper rack}}{sign}{{name}{Board Directions Sign}}}}}{}{}{1.000}{}
+E {1}{u}{u}{16}{0}{}{1.000}{}{0.00}
+E {17}{d}{d}{32}{1}{}{1.000}{}{0.00}
+E {18}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {19}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {20}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {21}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {5}{0}{<048>}{Entrance to Clanworld}{ }{This is the entrance to the Clanworld. From within this large stone structure you hear the sounds of strong voices singing about the deeds of conquest and victory. Your blood pulses in time to the beat and you surge forward to join the action! If you do not belong to a Clan currently, take the opportunity to sign up!    There is a huge plaque next to the portcullis.  Type 'clanfix' to restore your clan symbol.   }{Clan World}{{content}{{item}{{board}{{name}{The Clan Wanna Be and Info Board containing 79 messages (77 unread messages)}}{registrar}{{name}{Clan signup registrar}}}{noun}{{blocks}{{name}{blocks}}{bridge}{{name}{bridge}}{castle}{{name}{castle}}{cloud}{{name}{cloud}}{clouds}{{name}{clouds}}{drawbridge}{{name}{drawbridge}}{formations}{{name}{formations}}{moat}{{name}{moat}}{plaque}{{name}{plaque}}{portcullis}{{name}{portcullis}}{sky}{{name}{sky}}{slots}{{name}{slots}}{stone}{{name}{stone}}{structure}{{name}{structure}}{walls}{{name}{walls}}{water}{{name}{water}}{window}{{name}{window}}}}}{}{}{1.000}{}
+E {1}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {6}{0}{<178>}{Voluntary Access Fee Room}{ }{		Voluntary Access Fee Room Gathered about in somber deliberations, the players and wizards discuss in animated groups the role each person needs to play in order to maintain a stable link to the outside world. A majestic bulletin board hangs mid-air, and glows with the commitments and ideas of the whole 3k community.}{}{{content}{{item}{{board}{{name}{The 3k Voluntary Access Fee Board containing 85 messages (85 unread messages)}}}}}{}{}{1.000}{}
+E {1}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {7}{0}{<178>}{Interguild Discussion Room}{ }{This is the discussion room for the Interguild community. Players selected as qualified administrative representatives for their respective guilds may discuss issues here as well as on the InterGuild chatline.  A soft glow emanates from behind slightly-raised, subtle paintings that are scattered liberally around the walls, illuminating the large, central table surrounded by plush chairs. }{Mud}{{content}{{noun}{{benches}{{name}{benches}}{candles}{{name}{candles}}{ceiling}{{name}{ceiling}}{chandelier}{{name}{chandelier}}{podium}{{name}{podium}}}}}{}{}{1.000}{}
+E {1}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {8}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {10}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {9}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {28}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+
+R {8}{0}{<178>}{Interview Room}{ }{Untainted by personal touches or frivolous decoration, this is a room designed purely for business. Centered in the middle is a long boardroom style table, which is encircled by evenly spaced chairs. The walls are washed with a calming blue and are unadorned by distracting ornamentation.}{Mud}{{content}{{noun}{{blue}{{name}{blue}}{paint}{{name}{paint}}{room}{{name}{room}}{walls}{{name}{walls}}}{npc}{{Marsden}{{name}{Marsden}}}}}{}{}{1.000}{}
+E {7}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {9}{0}{<109>}{}{ }{}{}{}{}{}{1.000}{}
+E {7}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {10}{0}{<109>}{}{ }{}{}{}{}{}{1.000}{}
+E {7}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {11}{0}{<178>}{Recruitment Hall}{ }{You are standing in a large room with 3 archways leading out to the west, east, and north, and a metal staircase leading down.  Back to the south is the Adventurer's guild.  There's a very important sign here for you to read.}{Adventurer}{{content}{{item}{{Storage Container}{{name}{Storage Container box (empty)}}{sign}{{name}{a very important sign}}}{noun}{{sign}{{name}{sign}}}}}{}{}{1.000}{}
+E {3}{s}{s}{4}{1}{}{1.000}{}{0.00}
+E {14}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {15}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {16}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {24}{d}{d}{32}{0}{}{1.000}{}{0.00}
+
+R {12}{0}{<178>}{Adventurer Donation Room}{ }{	Adventurers Guild donation room. Anyone can donate equipment here, but only adventurers are allowed to remove equipment from the bin.}{Adventurer}{{content}{{item}{{newbie bin}{{name}{Donation Bin (empty)}}}}}{}{}{1.000}{}
+E {3}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {13}{0}{<178>}{Adventurer Board Room}{ }{This is the Adventurers Guild board room, where guild members can exchange ideas, information (no quest info!) and advice with each other.  The board will be monitored, so comments/questions about the workings of the guild can also be raised.}{Adventurer}{{content}{{item}{{board}{{name}{The Adventurers Guild Board containing 93 messages (93 unread messages)}}}}}{}{}{1.000}{}
+E {3}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {14}{0}{<068>}{Recruitment Hall}{ }{The Guild Hall for the Sorcerer Guild  There's a small placard here. Commands: advance [level,str,con,int,wis,dex,cha]           cost, tally, required, questansi,           list [name -or- # -or- short] }{Sorcerer Guild}{{content}{{item}{{board}{{name}{The Main Guild Board containing 8 messages (8 unread messages)}}{list}{{name}{List of Strongest Sorcerers}}}{noun}{{placard}{{name}{placard}}}}}{}{}{1.000}{}
+E {11}{s}{out}{4}{0}{}{1.000}{}{0.00}
+
+R {15}{0}{<068>}{Fighter Guild Hall}{ }{The guild hall is decorated with distinctive trophies that come from exotic places. The room is filled with weaponry decor which gives the feel of what could be utilized by a fighter. The armor statues line the hall in salute of the highest members of the guild who have achieved the status of Blade Master.  In the back of the room there is a large shelf filled with steins, and in the center of the room is an enormous oak table. There are many large wooden chairs that surround the table.  Against the eastern wall sits a row of kegs filled with ale.  A large chair, laced with the fur of a great bear,  sits at the head of the table. The brick floor is cracked in places from years of heavy boot traffic.  There's a small placard here. Commands: advance [level,str,con,int,wis,dex,cha]           cost, tally, required, questansi,           list [name -or- # -or- short] }{Fighter Guild}{{content}{{item}{{board}{{name}{The Main Guild Board containing 11 messages (no unread messages)}}{list}{{name}{List of Strongest Fighters}}}{noun}{{placard}{{name}{placard}}}}}{}{}{1.000}{}
+E {11}{e}{out}{2}{0}{}{1.000}{}{0.00}
+
+R {16}{0}{<068>}{Recruitment Hall}{ }{The Guild Hall for the Cleric Guild  There's a small placard here. Commands: advance [level,str,con,int,wis,dex,cha]           cost, tally, required, questansi,           list [name -or- # -or- short] }{Cleric}{{content}{{item}{{board}{{name}{The Main Guild Board containing 16 messages (16 unread messages)}}{list}{{name}{List of Strongest Clerics}}}{noun}{{placard}{{name}{placard}}}}}{}{}{1.000}{}
+E {11}{w}{out}{8}{0}{}{1.000}{}{0.00}
+
+R {17}{0}{<178>}{The Announcements Room}{ }{This basement appears to have been recently constructed.  The roughly hewn stone walls and dark, dank surroundings seem to indicate that the work was done quickly and not terribly well. Lit torches adorn the walls and cast a shadowy light upon the room's only feature: a large bulletin board.  It is used by the wizards of Three Kingdoms to inform the players of any important changes and developments to the mud.}{}{{content}{{item}{{board}{{name}{The Announcements Board containing 803 messages (no unread messages)}}}{noun}{{light}{{name}{light}}{surroundings}{{name}{surroundings}}{torches}{{name}{torches}}{walls}{{name}{walls}}}}}{}{}{1.000}{}
+E {4}{u}{u}{16}{1}{}{1.000}{}{0.00}
+E {23}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {22}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {18}{0}{<178>}{Rules Room}{ }{		Rules Room This is the room where all of the various rules of 3 Kingdoms and their punishments are posted.  It is expected that you should know all of the rules posted on this board.  If you are caught breaking any of these rules, an 'I didn't know' will not be acceptable.  As you will note, the punishments tend to be rather harsh, conversely, the reporting of major bugs to high wizards will be rewarded. Just type 'look at board' to see the various topics covered.}{}{{content}{{item}{{board}{{name}{A board of rules}}}}}{}{}{1.000}{}
+E {4}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {19}{0}{<178>}{Ideas Room}{ }{This is the Ideas room for 3-Kingdoms.  If you think you have a great idea for the game, you may post it on the board for others to read, consider, and discuss.  All notes will be stored if this board becomes full.}{}{{content}{{item}{{board}{{name}{The Idea Board containing 91 messages (91 unread messages)}}}}}{}{}{1.000}{}
+E {4}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {25}{d}{d}{32}{0}{}{1.000}{}{0.00}
+
+R {20}{0}{<178>}{Central Council Chamber}{ }{		Help Room This is the room where you may find out who to contact for specific information.  I'd highly suggest taking advantage of this board and getting all of your questions answered from the appropriate wizards. }{}{{content}{{item}{{board}{{name}{The 3k Help Board containing 85 messages (no unread messages)}}}}}{}{}{1.000}{}
+E {4}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {21}{0}{}{Anteroom to the offices of the High-Mortal Council}{ }{This is the anteroom of the High-Mortal council.  There are doors leading to private offices all around the room.  This area is reserved for the use of council members only.  There is a board here with important information for all members. To the south is a meeting hall. }{Mud}{{content}{{item}{{board}{{name}{The board of the High-Mortal Council containing 44 messages (no unread messages)}}}{noun}{{doors}{{name}{doors}}}}}{}{}{1.000}{}
+E {4}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {29}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {22}{0}{<178>}{Discussion of the Portal MUD Client Area}{ }{You stand in a small, grey stone room. There is little of interest here, little to detract from the opulent magnificence of the bulletin board in the centre of the room. Perhaps this is the intention - you are in this room to see and make use of the board, not to admire the furnishings.}{Mud}{{content}{{item}{{board}{{name}{The Portal Discussion Board containing 97 messages (97 unread messages)}}}{noun}{{room}{{name}{room}}}}}{}{}{1.000}{}
+E {17}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {23}{0}{<178>}{Quest Discussion Room}{ }{	Welcome to the quest discussion room.  Here you can voice 	your thoughts on quest changes or simply ask questions. 	This is only a temporary room and it is to be used for 	constructive thoughts only. }{}{{content}{{item}{{Top Quester List}{{name}{The Top Quester List}}{board}{{name}{The Quest Discussion Board containing 88 messages (no unread messages)}}}}}{}{}{1.000}{}
+E {17}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {26}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {24}{0}{<068>}{Recruitment Hall}{ }{The Guild Hall for the Android Guild  There's a small placard here. Commands: advance [level,str,con,int,wis,dex,cha]           cost, tally, required, questansi,           list [name -or- # -or- short] }{Android Guild}{{content}{{item}{{board}{{name}{The Main Guild Board containing 8 messages (8 unread messages)}}{list}{{name}{List of Strongest Androids}}}{noun}{{placard}{{name}{placard}}}}}{}{}{1.000}{}
+E {11}{u}{out}{16}{0}{}{1.000}{}{0.00}
+
+R {25}{0}{<178>}{Ideas Poll Room}{ }{This is the Ideas poll room for 3-Kingdoms.  If you want to get a vote on an idea for the game, you may post it here.  All votes will be stored if this booth becomes full.}{}{}{}{}{1.000}{}
+E {19}{u}{u}{16}{0}{}{1.000}{}{0.00}
+
+R {26}{0}{<178>}{3-Kingdoms Explorer's Inn}{ }{This wood paneled room deep under the adventurer's guild is where the top explorers of the Three Kingdoms come to register their exploits, share a tale or two, and prepare for their next adventure.  Type: 'explorer' to see your current rating, or       'explorers' to see the top 10. }{Mud}{{content}{{item}{{board}{{name}{The 3K Mud Explorer Discussion Board containing 43 messages (no unread messages)}}}{noun}{{walls}{{name}{walls}}{wood}{{name}{wood}}}}}{}{}{1.000}{}
+E {23}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {27}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {27}{0}{<178>}{The Area Changes Boardroom}{ }{Freshly waxed hardwood floors shine dully in the light provided by floating globes that slowly make their way around the room. There's not a stick of furniture to be seen in this place, just walls and a ceiling painted a soothing shade of blue. The focal point of the room is a large bulletin board that practically demands your attention. Beside that board is an equally important sign.}{}{{content}{{item}{{board}{{name}{The Area Changes Notice Board containing 25 messages (no unread messages)}}{sign}{{name}{A brightly lit sign}}}{noun}{{ceiling}{{name}{ceiling}}{floors}{{name}{floors}}{globes}{{name}{globes}}{hardwood}{{name}{hardwood}}{light}{{name}{light}}{room}{{name}{room}}{walls}{{name}{walls}}}}}{}{}{1.000}{}
+E {26}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {28}{0}{<108>}{}{ }{}{}{}{}{}{1.000}{}
+E {7}{se}{se}{6}{0}{}{1.000}{}{0.00}
+
+R {29}{0}{<178>}{Meeting chambers of the High-Mortal Council.}{ }{This is the meeting chamber of the mighty High-Mortal council. Many decisions that govern the entire course of events in the Kingdoms are made in this room.  The walls are decorated with ancient tapestries and the floor is covered in a plush red carpeting.  A scribe, ready to record the proceedings, sits in the southwest corner of the room. }{Mud}{{content}{{noun}{{floor}{{name}{floor}}{tapestries}{{name}{tapestries}}{walls}{{name}{walls}}}{npc}{{Scribe}{{name}{A Scribe}}}}}{}{}{1.000}{}
+E {21}{n}{n}{1}{0}{}{1.000}{}{0.00}

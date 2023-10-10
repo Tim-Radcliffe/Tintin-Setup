@@ -1,0 +1,410 @@
+C 500
+
+CE <278>
+CH <118>
+CP <138>
+CR <178>
+CB 
+
+F 9
+
+I 22
+
+L ▪ ╹ ╺ ┗ ╻ ┃ ┏ ┣ ╸ ┛ ━ ┻ ┓ ┫ ┳ ╋ X
+
+
+R {    1} {0} {<068>} {Crafter's Lane} { } {A smooth, neatly swept brown brick road leads northwest into a cluster of compact brown and black buildings that seem to swim in a constant symphony of hammering metal.  The road continues south to an intersection with a narrow pebbled country lane and an undulating path of greenish red bricks.  } {} {} {} {} {1.000}
+E {    3} {nw} {nw} {9} {0} {}
+E {    4} {e} {e} {2} {0} {}
+E {    2} {s} {.mapLink {Pinnacle} {28} {s};} {4} {1} {}
+
+R {    2} {0} {<000>} {LINK: Pinnacle} {<138>*} {} {Pinnacle} {{link}{}} {} {} {1.000}
+E {    1} {n} {n} {1} {0} {}
+
+R {    3} {0} {<178>} {Crafter's Lane} { } {The brown brick road splits here, heading off either west to a cluster of four compact brown buildings, or off to the north, where the road eventually meets up with two other brown buildings. The smell of food wafts from the north, and the sound of metal striking metal comes from the west.} {} {} {} {} {1.000}
+E {    1} {se} {se} {6} {0} {}
+E {    6} {n} {n} {1} {0} {}
+E {    7} {w} {w} {8} {0} {}
+
+R {    4} {0} {<178>} {The Consignment Shop} { } {What a warm and inviting place.  The walls are covered in polished wood paneling, and the grain in the panels is accentuated in the swirling patterns in the beige-coloured tile floor.  The room is bright and cheery, and sunlight dapples over the many shelves, each of which hold something wonderful.  You could spend hours in here!  A small red sign has instructions on how to use the store, which are summarized as: 'consign', 'unconsign', 'checkconsign', 'list', 'buy', 'cashout', 'checkexpire', 'reclaim'.  You should read the sign for more information.} {} {} {} {} {1.000}
+E {    1} {w} {w} {8} {0} {}
+E {    5} {u} {u} {16} {0} {}
+
+R {    5} {0} {<178>} {The Crafting Utilities Room} { } {An austere room of pure efficiency sits before you.  A true minimalist design.  The walls are a featureless snow white with nary a crack nor seam to be seen, other than the door through which you entered.  A glowing ball hovers before you, and you instinctively know that you can 'list' to see what the glowing ball can perform.} {} {} {} {} {1.000}
+E {    4} {d} {d} {32} {0} {}
+
+R {    6} {0} {<178>} {Crafter's Lane} { } {The brown brick road curves gently here, turning northeast from the north/south route.  Just over to the northeast, at the end of the path, are two compact brown buildings.  An indescribably wonderful aroma emanates from the northeast.   A few billowing willow trees can be seen just behind the gerberas that line the path.} {} {} {} {} {1.000}
+E {    3} {s} {s} {4} {0} {}
+E {   11} {ne} {ne} {3} {0} {}
+
+R {    7} {0} {<178>} {Crafter's Lane} { } {} {} {} {} {} {1.000}
+E {    3} {e} {e} {2} {0} {}
+E {    8} {n} {n} {1} {0} {}
+E {    9} {s} {s} {4} {0} {}
+E {   10} {w} {w} {8} {0} {}
+
+R {    8} {0} {<178>} {The Wrangler Room} { } {This wing of the crafting guild belongs to the chaos wranglers.  Giant high-backed chairs and elaborate furnishings are scattered throughout the room.  Within the chairs, or more commonly, standing up, or even more commonly, standing up on the furnishings and shouting, are the chaos wranglers.  They are discussing (at very high volume) various topics of interest such as gem capacities and efficient ways of gathering chaotic energy.} {} {} {} {} {1.000}
+E {    7} {s} {s} {4} {0} {}
+
+R {    9} {0} {<068>} {The Enchanter Room} { } {This wing of the crafting guild belongs to the enchanters.  Around you, there is a bustle of activity as enchanters come and go with various magical components.  Deeper into the wing, you can hear the fires of kilns and the occaisional explosion.} {} {} {} {} {1.000}
+E {    7} {n} {n} {1} {0} {}
+E {   18} {e} {e} {2} {0} {}
+E {   24} {w} {kiln} {8} {0} {}
+E {   24} {kiln} {kiln} {0} {0} {}
+
+R {   10} {0} {<178>} {Crafter's Lane} { } {The brown brick road curves gently here, turning southwest from the east/west route.  Just ahead to the southwest are two compact brown buildings, and to the east are two more.  The hammering from the southwest is almost deafening.  A few enormous oak trees can be seen just behind the gerberas that line the path.} {} {} {} {} {1.000}
+E {    7} {e} {e} {2} {0} {}
+E {   19} {sw} {sw} {12} {0} {}
+
+R {   11} {0} {<178>} {Crafter's Lane} { } {} {} {} {} {} {1.000}
+E {    6} {sw} {sw} {12} {0} {}
+E {   12} {nw} {nw} {9} {0} {}
+E {   13} {se} {se} {6} {0} {}
+
+R {   12} {0} {<068>} {The Farming Room.} { } {A long white picket fence stretches away from either side of the gate leading to the sunny farm.  Tractor tracks are visible here, and the smell of fertilizer fills your nostrils.  From here you can visit the various farms.} {} {} {} {} {1.000}
+E {   11} {se} {se} {6} {0} {}
+E {   15} {nw} {nw} {9} {1} {}
+E {   17} {e} {e} {2} {0} {}
+E {   23} {w} {mixing} {8} {0} {}
+E {   23} {mixing} {mixing} {0} {0} {}
+E {   16} {n} {n} {1} {1} {}
+E {   68} {ne} {ne} {3} {1} {}
+
+R {   13} {0} {<068>} {The Chef Room} { } {Women and men in silly white hats mill about this room, heading between various kitchens, their arms full of bowls or pans or, most commonly, fruits and vegetables.  The look on their faces is one of rapture, and they don't even seem to notice the fine leather furnishings, the antique wood cabinets, or the subtle abstract art on the walls.  The clanging sound of pots and pans and lots of arguing filters out from the kitchens.} {} {} {} {} {1.000}
+E {   11} {nw} {nw} {9} {0} {}
+E {   86} {w} {kitchen} {8} {0} {}
+
+R {   14} {0} {<178>} {A sunny farm.} { } {The sun shines down on this wonderful plot of land.  The smell of the rich earth fills your nostrils, mixed with the scent of wildflowers and, well, a slight tingeof manure.  Weeds, mushrooms and bugs love this farming utopia.} {} {} {} {} {1.000}
+E {   16} {w} {w} {8} {0} {}
+E {   56} {n} {n} {1} {0} {}
+E {   63} {e} {e} {2} {0} {}
+
+R {   15} {0} {<068>} {A sunny farm.} { } {The sun shines down on this wonderful plot of land.  The smell of the rich earth fills your nostrils, mixed with the scent of wildflowers and, well, a slight tingeof manure.  Weeds, mushrooms and bugs love this farming utopia.} {} {} {} {} {1.000}
+E {   12} {se} {se} {6} {1} {}
+E {   35} {n} {n} {1} {0} {}
+E {   36} {e} {e} {2} {0} {}
+E {   37} {u} {shed} {16} {0} {}
+
+R {   16} {0} {<068>} {A sunny farm.} { } {The sun shines down on this wonderful plot of land.  The smell of the rich earth fills your nostrils, mixed with the scent of wildflowers and, well, a slight tingeof manure.  Weeds, mushrooms and bugs love this farming utopia.} {} {} {} {} {1.000}
+E {   12} {s} {s} {4} {1} {}
+E {   52} {n} {n} {1} {0} {}
+E {   14} {e} {e} {2} {0} {}
+E {   53} {u} {shed} {16} {1} {}
+
+R {   17} {0} {} {The farm store.} { } {} {} {} {} {} {1.000}
+E {   12} {w} {w} {8} {0} {}
+
+R {   18} {0} {<128>} {The Enchanter Room} {<138>S} {Various pots and jars line the whitewashed walls, but these are clearly for show.  Your keen eye spots the real prize hidden among the jars: the mouldings.  These are the key to the whole enchanting process!  There is no shopkeeper here, but a bobbing ball of light sits at the one end of the sterile room, repeating: 'You can 'list' or 'buy' items here.' You can also 'showitem' to see a specific recipe, or you can 'list nontrivial' if you want to see only those recipes that will provide you with skillups.} {} {{stall}{}} {} {} {1.000}
+E {    9} {w} {w} {8} {0} {}
+
+R {   19} {0} {<178>} {Crafter's Lane} { } {} {} {} {} {} {1.000}
+E {   10} {ne} {ne} {3} {0} {}
+E {   20} {se} {se} {6} {0} {}
+E {   21} {nw} {nw} {9} {0} {}
+
+R {   20} {0} {<068>} {The Miner Room} { } {This wing of the crafting guild belongs to the chaos miners.  The wing is filled with adventurers, both young and old, but all of them grizzled, discussing topics of interest like ores, gems, and the best techniques for digging them up.  A damp cold breeze filters through the room, emanating from the mines.} {} {} {} {} {1.000}
+E {   19} {nw} {nw} {9} {0} {}
+E {   26} {e} {smelt} {2} {0} {}
+E {   26} {smelt} {smelt} {0} {0} {}
+E {   27} {mines 1} {.mapLink {Pinnacle/Crafting/Mines 1} {} {mines 1};} {0} {1} {}
+E {   28} {mines 2} {.mapLink {Pinnacle/Crafting/Mines 2} {} {mines 2};} {0} {1} {}
+E {   29} {mines 3} {.mapLink {Pinnacle/Crafting/Mines 3} {} {mines 3};} {0} {1} {}
+E {   30} {mines 4} {.mapLink {Pinnacle/Crafting/Mines 4} {} {mines 4};} {0} {1} {}
+E {   31} {mines 5} {.mapLink {Pinnacle/Crafting/Mines 5} {} {mines 5};} {0} {1} {}
+E {   32} {mines 6} {.mapLink {Pinnacle/Crafting/Mines 6} {} {mines 6};} {0} {1} {}
+E {   33} {mines 7} {.mapLink {Pinnacle/Crafting/Mines 7} {} {mines 7};} {0} {1} {}
+E {   34} {mines 8} {.mapLink {Pinnacle/Crafting/Mines 8} {} {mines 8};} {0} {1} {}
+
+R {   21} {0} {<068>} {The Blacksmithing Room} { } {This wing of the crafting guild belongs to the blacksmiths.  Around you, there is a bustle of activity as blacksmiths come and go with crafting supplies, and a variety of metal weapons and armours.  Deeper into the wing, you can hear the fires of forges and the clanging of hammers on anvils.} {} {} {} {} {1.000}
+E {   19} {se} {se} {6} {0} {}
+E {   22} {e} {e} {2} {0} {}
+E {   25} {n} {forge} {1} {0} {}
+E {   25} {forge} {forge} {0} {0} {}
+
+R {   22} {0} {<128>} {The Blacksmith Recipe Shop} {<138>S} {} {} {{blacksmithing}{}{stall}{}} {} {} {1.000}
+E {   21} {w} {w} {8} {0} {}
+
+R {   23} {0} {<068>} {The Farmer's Mixing Room} { } {Dirt and mud are scattered around this ramshackle room.  You immediately get the impression that this was built in a very slipshod way, without any real concern to aesthetics or ambience.  The rotting wooden planks are barely held together by the rusty nails. All in all, this room does not inspire confidence.} {} {} {} {} {1.000}
+E {   12} {e} {out} {2} {0} {}
+E {   12} {out} {out} {0} {0} {}
+
+R {   24} {0} {<068>} {The Kiln Room} { } {This room is where gem crafters come to practice their trade.  A small table and chair sit against one wall and a medium sized kiln sets opposite it.  Shelving lines the remaining wall and is filled with vials and canisters.  Various bits of glittering dust and powders litter the floor.} {} {} {} {} {1.000}
+E {    9} {e} {out} {2} {0} {}
+E {    9} {out} {out} {0} {0} {}
+
+R {   25} {0} {<068>} {The Forge Room} { } {Various blacksmithing tools line the wall, hung neatly in their expertly crafted cradles.  Hammers, tongs, and picks are all within easy reach.  A collection of leather straps, various types and sizes of padding are available for crafting armours, and a wide array of wooden hafts are arrayed in soft cushioning.  On the side of the room is a giant forge, with flames billowing out the bottom.  On the other is an anvil that has clearly seen a lot of trade.} {} {} {} {} {1.000}
+E {   21} {s} {out} {4} {0} {}
+E {   21} {out} {out} {0} {0} {}
+
+R {   26} {0} {<068>} {The Smelting Room} { } {This simple room is where miners come to smelt their wares into something useable.  A large smelting pot is present for converting ores to metal bars.  Splashes of metal and dirt rim the edge of the smelting pot.  The room stinks with the fumes of past smeltings.} {} {} {} {} {1.000}
+E {   20} {w} {out} {8} {0} {}
+E {   20} {out} {out} {0} {0} {}
+
+R {   27} {0} {<000>} {LINK: Pinnacle/Crafting/Mines 1} {<138>*} {} {Pinnacle/Crafting/Mines 1} {{link}{}} {} {} {1.000}
+
+R {   28} {0} {<000>} {LINK: Pinnacle/Crafting/Mines 2} {<138>*} {} {Pinnacle/Crafting/Mines 2} {{link}{}} {} {} {1.000}
+
+R {   29} {0} {<000>} {LINK: Pinnacle/Crafting/Mines 3} {<138>*} {} {Pinnacle/Crafting/Mines 3} {{link}{}} {} {} {1.000}
+
+R {   30} {0} {<000>} {LINK: Pinnacle/Crafting/Mines 4} {<138>*} {} {Pinnacle/Crafting/Mines 4} {{link}{}} {} {} {1.000}
+
+R {   31} {0} {<000>} {LINK: Pinnacle/Crafting/Mines 5} {<138>*} {} {Pinnacle/Crafting/Mines 5} {{link}{}} {} {} {1.000}
+
+R {   32} {0} {<000>} {LINK: Pinnacle/Crafting/Mines 6} {<138>*} {} {Pinnacle/Crafting/Mines 6} {{link}{}} {} {} {1.000}
+
+R {   33} {0} {<000>} {LINK: Pinnacle/Crafting/Mines 7} {<138>*} {} {Pinnacle/Crafting/Mines 7} {{link}{}} {} {} {1.000}
+
+R {   34} {0} {<000>} {LINK: Pinnacle/Crafting/Mines 8} {<138>*} {} {Pinnacle/Crafting/Mines 8} {{link}{}} {} {} {1.000}
+
+R {   35} {0} {<178>} {A sunny farm.} { } {The sun shines down on this wonderful plot of land.  The smell of the rich earth fills your nostrils, mixed with the scent of wildflowers and, well, a slight tingeof manure.  Weeds, mushrooms and bugs love this farming utopia.} {} {} {} {} {1.000}
+E {   15} {s} {s} {4} {0} {}
+E {   39} {e} {e} {2} {0} {}
+E {   47} {n} {n} {1} {0} {}
+
+R {   36} {0} {<178>} {A sunny farm.} { } {The sun shines down on this wonderful plot of land.  The smell of the rich earth fills your nostrils, mixed with the scent of wildflowers and, well, a slight tingeof manure.  Weeds, mushrooms and bugs love this farming utopia.} {} {} {} {} {1.000}
+E {   15} {w} {w} {8} {0} {}
+E {   39} {n} {n} {1} {0} {}
+E {   40} {e} {e} {2} {0} {}
+
+R {   37} {0} {<068>} {A small shed.} { } {} {} {} {} {} {1.000}
+E {   15} {d} {out} {32} {0} {}
+E {   38} {e} {e} {2} {0} {}
+
+R {   38} {0} {<178>} {A small shed} { } {Mud and dirt cake the walls, floors, and you suspect even the ceiling, should you dare to look up.  Rusty bent nails can be spotted everywhere.  Best hurry up and do what you came for, and then get on out.} {} {} {} {} {1.000}
+E {   37} {w} {w} {8} {0} {}
+
+R {   39} {0} {<178>} {A sunny farm.} { } {The sun shines down on this wonderful plot of land.  The smell of the rich earth fills your nostrils, mixed with the scent of wildflowers and, well, a slight tingeof manure.  Weeds, mushrooms and bugs love this farming utopia.} {} {} {} {} {1.000}
+E {   36} {s} {s} {4} {0} {}
+E {   41} {e} {e} {2} {0} {}
+E {   46} {n} {n} {1} {0} {}
+E {   35} {w} {w} {8} {0} {}
+
+R {   40} {0} {<178>} {A sunny farm.} { } {The sun shines down on this wonderful plot of land.  The smell of the rich earth fills your nostrils, mixed with the scent of wildflowers and, well, a slight tingeof manure.  Weeds, mushrooms and bugs love this farming utopia.} {} {} {} {} {1.000}
+E {   36} {w} {w} {8} {0} {}
+E {   41} {n} {n} {1} {0} {}
+E {   42} {e} {e} {2} {0} {}
+
+R {   41} {0} {<178>} {A sunny farm.} { } {The sun shines down on this wonderful plot of land.  The smell of the rich earth fills your nostrils, mixed with the scent of wildflowers and, well, a slight tingeof manure.  Weeds, mushrooms and bugs love this farming utopia.} {} {} {} {} {1.000}
+E {   40} {s} {s} {4} {0} {}
+E {   43} {e} {e} {2} {0} {}
+E {   45} {n} {n} {1} {0} {}
+E {   39} {w} {w} {8} {0} {}
+
+R {   42} {0} {<178>} {A sunny farm.} { } {The sun shines down on this wonderful plot of land.  The smell of the rich earth fills your nostrils, mixed with the scent of wildflowers and, well, a slight tingeof manure.  Weeds, mushrooms and bugs love this farming utopia.} {} {} {} {} {1.000}
+E {   40} {w} {w} {8} {0} {}
+E {   43} {n} {n} {1} {0} {}
+
+R {   43} {0} {<178>} {A sunny farm.} { } {The sun shines down on this wonderful plot of land.  The smell of the rich earth fills your nostrils, mixed with the scent of wildflowers and, well, a slight tingeof manure.  Weeds, mushrooms and bugs love this farming utopia.} {} {} {} {} {1.000}
+E {   42} {s} {s} {4} {0} {}
+E {   44} {n} {n} {1} {0} {}
+E {   41} {w} {w} {8} {0} {}
+
+R {   44} {0} {<178>} {A sunny farm.} { } {The sun shines down on this wonderful plot of land.  The smell of the rich earth fills your nostrils, mixed with the scent of wildflowers and, well, a slight tingeof manure.  Weeds, mushrooms and bugs love this farming utopia.} {} {} {} {} {1.000}
+E {   43} {s} {s} {4} {0} {}
+E {   45} {w} {w} {8} {0} {}
+E {   51} {n} {n} {1} {0} {}
+
+R {   45} {0} {<178>} {A sunny farm.} { } {The sun shines down on this wonderful plot of land.  The smell of the rich earth fills your nostrils, mixed with the scent of wildflowers and, well, a slight tingeof manure.  Weeds, mushrooms and bugs love this farming utopia.} {} {} {} {} {1.000}
+E {   41} {s} {s} {4} {0} {}
+E {   46} {w} {w} {8} {0} {}
+E {   50} {n} {n} {1} {0} {}
+E {   44} {e} {e} {2} {0} {}
+
+R {   46} {0} {<178>} {A sunny farm.} { } {The sun shines down on this wonderful plot of land.  The smell of the rich earth fills your nostrils, mixed with the scent of wildflowers and, well, a slight tingeof manure.  Weeds, mushrooms and bugs love this farming utopia.} {} {} {} {} {1.000}
+E {   39} {s} {s} {4} {0} {}
+E {   47} {w} {w} {8} {0} {}
+E {   49} {n} {n} {1} {0} {}
+E {   45} {e} {e} {2} {0} {}
+
+R {   47} {0} {<178>} {A sunny farm.} { } {The sun shines down on this wonderful plot of land.  The smell of the rich earth fills your nostrils, mixed with the scent of wildflowers and, well, a slight tingeof manure.  Weeds, mushrooms and bugs love this farming utopia.} {} {} {} {} {1.000}
+E {   35} {s} {s} {4} {0} {}
+E {   48} {n} {n} {1} {0} {}
+E {   46} {e} {e} {2} {0} {}
+
+R {   48} {0} {<178>} {A sunny farm.} { } {The sun shines down on this wonderful plot of land.  The smell of the rich earth fills your nostrils, mixed with the scent of wildflowers and, well, a slight tingeof manure.  Weeds, mushrooms and bugs love this farming utopia.} {} {} {} {} {1.000}
+E {   47} {s} {s} {4} {0} {}
+E {   49} {e} {e} {2} {0} {}
+
+R {   49} {0} {<178>} {A sunny farm.} { } {The sun shines down on this wonderful plot of land.  The smell of the rich earth fills your nostrils, mixed with the scent of wildflowers and, well, a slight tingeof manure.  Weeds, mushrooms and bugs love this farming utopia.} {} {} {} {} {1.000}
+E {   46} {s} {s} {4} {0} {}
+E {   50} {e} {e} {2} {0} {}
+E {   48} {w} {w} {8} {0} {}
+
+R {   50} {0} {<178>} {A sunny farm.} { } {The sun shines down on this wonderful plot of land.  The smell of the rich earth fills your nostrils, mixed with the scent of wildflowers and, well, a slight tingeof manure.  Weeds, mushrooms and bugs love this farming utopia.} {} {} {} {} {1.000}
+E {   45} {s} {s} {4} {0} {}
+E {   51} {e} {e} {2} {0} {}
+E {   49} {w} {w} {8} {0} {}
+
+R {   51} {0} {<178>} {A sunny farm.} { } {The sun shines down on this wonderful plot of land.  The smell of the rich earth fills your nostrils, mixed with the scent of wildflowers and, well, a slight tingeof manure.  Weeds, mushrooms and bugs love this farming utopia.} {} {} {} {} {1.000}
+E {   44} {s} {s} {4} {0} {}
+E {   50} {w} {w} {8} {0} {}
+
+R {   52} {0} {<178>} {A sunny farm.} { } {The sun shines down on this wonderful plot of land.  The smell of the rich earth fills your nostrils, mixed with the scent of wildflowers and, well, a slight tingeof manure.  Weeds, mushrooms and bugs love this farming utopia.} {} {} {} {} {1.000}
+E {   16} {s} {s} {4} {0} {}
+E {   55} {n} {n} {1} {0} {}
+E {   56} {e} {e} {2} {0} {}
+
+R {   53} {0} {<048>} {A small shed.} { } {} {} {} {} {} {1.000}
+E {   16} {d} {out} {32} {0} {}
+E {   54} {e} {e} {2} {0} {}
+
+R {   54} {0} {<178>} {A small shed} { } {Mud and dirt cake the walls, floors, and you suspect even the ceiling, should you dare to look up.  Rusty bent nails can be spotted everywhere.  Best hurry up and do what you came for, and then get on out.} {} {} {} {} {1.000}
+E {   53} {w} {w} {8} {0} {}
+
+R {   55} {0} {<178>} {A sunny farm.} { } {The sun shines down on this wonderful plot of land.  The smell of the rich earth fills your nostrils, mixed with the scent of wildflowers and, well, a slight tingeof manure.  Weeds, mushrooms and bugs love this farming utopia.} {} {} {} {} {1.000}
+E {   52} {s} {s} {4} {0} {}
+E {   57} {n} {n} {1} {0} {}
+E {   58} {e} {e} {2} {0} {}
+
+R {   56} {0} {<178>} {A sunny farm.} { } {The sun shines down on this wonderful plot of land.  The smell of the rich earth fills your nostrils, mixed with the scent of wildflowers and, well, a slight tingeof manure.  Weeds, mushrooms and bugs love this farming utopia.} {} {} {} {} {1.000}
+E {   52} {w} {w} {8} {0} {}
+E {   58} {n} {n} {1} {0} {}
+E {   14} {s} {s} {4} {0} {}
+E {   62} {e} {e} {2} {0} {}
+
+R {   57} {0} {<178>} {A sunny farm.} { } {The sun shines down on this wonderful plot of land.  The smell of the rich earth fills your nostrils, mixed with the scent of wildflowers and, well, a slight tingeof manure.  Weeds, mushrooms and bugs love this farming utopia.} {} {} {} {} {1.000}
+E {   55} {s} {s} {4} {0} {}
+E {   59} {e} {e} {2} {0} {}
+
+R {   58} {0} {<178>} {A sunny farm.} { } {The sun shines down on this wonderful plot of land.  The smell of the rich earth fills your nostrils, mixed with the scent of wildflowers and, well, a slight tingeof manure.  Weeds, mushrooms and bugs love this farming utopia.} {} {} {} {} {1.000}
+E {   55} {w} {w} {8} {0} {}
+E {   59} {n} {n} {1} {0} {}
+E {   56} {s} {s} {4} {0} {}
+E {   61} {e} {e} {2} {0} {}
+
+R {   59} {0} {<178>} {A sunny farm.} { } {The sun shines down on this wonderful plot of land.  The smell of the rich earth fills your nostrils, mixed with the scent of wildflowers and, well, a slight tingeof manure.  Weeds, mushrooms and bugs love this farming utopia.} {} {} {} {} {1.000}
+E {   57} {w} {w} {8} {0} {}
+E {   58} {s} {s} {4} {0} {}
+E {   60} {e} {e} {2} {0} {}
+
+R {   60} {0} {<178>} {A sunny farm.} { } {The sun shines down on this wonderful plot of land.  The smell of the rich earth fills your nostrils, mixed with the scent of wildflowers and, well, a slight tingeof manure.  Weeds, mushrooms and bugs love this farming utopia.} {} {} {} {} {1.000}
+E {   59} {w} {w} {8} {0} {}
+E {   61} {s} {s} {4} {0} {}
+E {   67} {e} {e} {2} {0} {}
+
+R {   61} {0} {<178>} {A sunny farm.} { } {The sun shines down on this wonderful plot of land.  The smell of the rich earth fills your nostrils, mixed with the scent of wildflowers and, well, a slight tingeof manure.  Weeds, mushrooms and bugs love this farming utopia.} {} {} {} {} {1.000}
+E {   58} {w} {w} {8} {0} {}
+E {   62} {s} {s} {4} {0} {}
+E {   60} {n} {n} {1} {0} {}
+E {   66} {e} {e} {2} {0} {}
+
+R {   62} {0} {<178>} {A sunny farm.} { } {The sun shines down on this wonderful plot of land.  The smell of the rich earth fills your nostrils, mixed with the scent of wildflowers and, well, a slight tingeof manure.  Weeds, mushrooms and bugs love this farming utopia.} {} {} {} {} {1.000}
+E {   56} {w} {w} {8} {0} {}
+E {   63} {s} {s} {4} {0} {}
+E {   61} {n} {n} {1} {0} {}
+E {   65} {e} {e} {2} {0} {}
+
+R {   63} {0} {<178>} {A sunny farm.} { } {The sun shines down on this wonderful plot of land.  The smell of the rich earth fills your nostrils, mixed with the scent of wildflowers and, well, a slight tingeof manure.  Weeds, mushrooms and bugs love this farming utopia.} {} {} {} {} {1.000}
+E {   14} {w} {w} {8} {0} {}
+E {   62} {n} {n} {1} {0} {}
+E {   64} {e} {e} {2} {0} {}
+
+R {   64} {0} {<178>} {A sunny farm.} { } {The sun shines down on this wonderful plot of land.  The smell of the rich earth fills your nostrils, mixed with the scent of wildflowers and, well, a slight tingeof manure.  Weeds, mushrooms and bugs love this farming utopia.} {} {} {} {} {1.000}
+E {   63} {w} {w} {8} {0} {}
+E {   65} {n} {n} {1} {0} {}
+
+R {   65} {0} {<178>} {A sunny farm.} { } {The sun shines down on this wonderful plot of land.  The smell of the rich earth fills your nostrils, mixed with the scent of wildflowers and, well, a slight tingeof manure.  Weeds, mushrooms and bugs love this farming utopia.} {} {} {} {} {1.000}
+E {   62} {w} {w} {8} {0} {}
+E {   66} {n} {n} {1} {0} {}
+E {   64} {s} {s} {4} {0} {}
+
+R {   66} {0} {<178>} {A sunny farm.} { } {The sun shines down on this wonderful plot of land.  The smell of the rich earth fills your nostrils, mixed with the scent of wildflowers and, well, a slight tingeof manure.  Weeds, mushrooms and bugs love this farming utopia.} {} {} {} {} {1.000}
+E {   61} {w} {w} {8} {0} {}
+E {   67} {n} {n} {1} {0} {}
+E {   65} {s} {s} {4} {0} {}
+
+R {   67} {0} {<178>} {A sunny farm.} { } {The sun shines down on this wonderful plot of land.  The smell of the rich earth fills your nostrils, mixed with the scent of wildflowers and, well, a slight tingeof manure.  Weeds, mushrooms and bugs love this farming utopia.} {} {} {} {} {1.000}
+E {   60} {w} {w} {8} {0} {}
+E {   66} {s} {s} {4} {0} {}
+
+R {   68} {0} {<068>} {A sunny farm.} { } {The sun shines down on this wonderful plot of land.  The smell of the rich earth fills your nostrils, mixed with the scent of wildflowers and, well, a slight tingeof manure.  Weeds, mushrooms and bugs love this farming utopia.} {} {} {} {} {1.000}
+E {   12} {sw} {sw} {12} {1} {}
+E {   69} {n} {n} {1} {0} {}
+E {   70} {e} {e} {2} {0} {}
+E {   71} {u} {shed} {16} {0} {}
+
+R {   69} {0} {<178>} {A sunny farm.} { } {The sun shines down on this wonderful plot of land.  The smell of the rich earth fills your nostrils, mixed with the scent of wildflowers and, well, a slight tingeof manure.  Weeds, mushrooms and bugs love this farming utopia.} {} {} {} {} {1.000}
+E {   68} {s} {s} {4} {0} {}
+E {   73} {e} {e} {2} {0} {}
+E {   81} {n} {n} {1} {0} {}
+
+R {   70} {0} {<178>} {A sunny farm.} { } {The sun shines down on this wonderful plot of land.  The smell of the rich earth fills your nostrils, mixed with the scent of wildflowers and, well, a slight tingeof manure.  Weeds, mushrooms and bugs love this farming utopia.} {} {} {} {} {1.000}
+E {   68} {w} {w} {8} {0} {}
+E {   73} {n} {n} {1} {0} {}
+E {   74} {e} {e} {2} {0} {}
+
+R {   71} {0} {<068>} {A small shed.} { } {} {} {} {} {} {1.000}
+E {   68} {d} {out} {32} {0} {}
+E {   72} {e} {e} {2} {0} {}
+
+R {   72} {0} {<178>} {A small shed} { } {Mud and dirt cake the walls, floors, and you suspect even the ceiling, should you dare to look up.  Rusty bent nails can be spotted everywhere.  Best hurry up and do what you came for, and then get on out.} {} {} {} {} {1.000}
+E {   71} {w} {w} {8} {0} {}
+
+R {   73} {0} {<178>} {A sunny farm.} { } {The sun shines down on this wonderful plot of land.  The smell of the rich earth fills your nostrils, mixed with the scent of wildflowers and, well, a slight tingeof manure.  Weeds, mushrooms and bugs love this farming utopia.} {} {} {} {} {1.000}
+E {   70} {s} {s} {4} {0} {}
+E {   75} {e} {e} {2} {0} {}
+E {   80} {n} {n} {1} {0} {}
+E {   69} {w} {w} {8} {0} {}
+
+R {   74} {0} {<178>} {A sunny farm.} { } {The sun shines down on this wonderful plot of land.  The smell of the rich earth fills your nostrils, mixed with the scent of wildflowers and, well, a slight tingeof manure.  Weeds, mushrooms and bugs love this farming utopia.} {} {} {} {} {1.000}
+E {   70} {w} {w} {8} {0} {}
+E {   75} {n} {n} {1} {0} {}
+E {   76} {e} {e} {2} {0} {}
+
+R {   75} {0} {<178>} {A sunny farm.} { } {The sun shines down on this wonderful plot of land.  The smell of the rich earth fills your nostrils, mixed with the scent of wildflowers and, well, a slight tingeof manure.  Weeds, mushrooms and bugs love this farming utopia.} {} {} {} {} {1.000}
+E {   74} {s} {s} {4} {0} {}
+E {   77} {e} {e} {2} {0} {}
+E {   79} {n} {n} {1} {0} {}
+E {   73} {w} {w} {8} {0} {}
+
+R {   76} {0} {<178>} {A sunny farm.} { } {The sun shines down on this wonderful plot of land.  The smell of the rich earth fills your nostrils, mixed with the scent of wildflowers and, well, a slight tingeof manure.  Weeds, mushrooms and bugs love this farming utopia.} {} {} {} {} {1.000}
+E {   74} {w} {w} {8} {0} {}
+E {   77} {n} {n} {1} {0} {}
+
+R {   77} {0} {<178>} {A sunny farm.} { } {The sun shines down on this wonderful plot of land.  The smell of the rich earth fills your nostrils, mixed with the scent of wildflowers and, well, a slight tingeof manure.  Weeds, mushrooms and bugs love this farming utopia.} {} {} {} {} {1.000}
+E {   76} {s} {s} {4} {0} {}
+E {   78} {n} {n} {1} {0} {}
+E {   75} {w} {w} {8} {0} {}
+
+R {   78} {0} {<178>} {A sunny farm.} { } {The sun shines down on this wonderful plot of land.  The smell of the rich earth fills your nostrils, mixed with the scent of wildflowers and, well, a slight tingeof manure.  Weeds, mushrooms and bugs love this farming utopia.} {} {} {} {} {1.000}
+E {   77} {s} {s} {4} {0} {}
+E {   79} {w} {w} {8} {0} {}
+E {   85} {n} {n} {1} {0} {}
+
+R {   79} {0} {<178>} {A sunny farm.} { } {The sun shines down on this wonderful plot of land.  The smell of the rich earth fills your nostrils, mixed with the scent of wildflowers and, well, a slight tingeof manure.  Weeds, mushrooms and bugs love this farming utopia.} {} {} {} {} {1.000}
+E {   75} {s} {s} {4} {0} {}
+E {   80} {w} {w} {8} {0} {}
+E {   84} {n} {n} {1} {0} {}
+E {   78} {e} {e} {2} {0} {}
+
+R {   80} {0} {<178>} {A sunny farm.} { } {The sun shines down on this wonderful plot of land.  The smell of the rich earth fills your nostrils, mixed with the scent of wildflowers and, well, a slight tingeof manure.  Weeds, mushrooms and bugs love this farming utopia.} {} {} {} {} {1.000}
+E {   73} {s} {s} {4} {0} {}
+E {   81} {w} {w} {8} {0} {}
+E {   83} {n} {n} {1} {0} {}
+E {   79} {e} {e} {2} {0} {}
+
+R {   81} {0} {<178>} {A sunny farm.} { } {The sun shines down on this wonderful plot of land.  The smell of the rich earth fills your nostrils, mixed with the scent of wildflowers and, well, a slight tingeof manure.  Weeds, mushrooms and bugs love this farming utopia.} {} {} {} {} {1.000}
+E {   69} {s} {s} {4} {0} {}
+E {   82} {n} {n} {1} {0} {}
+E {   80} {e} {e} {2} {0} {}
+
+R {   82} {0} {<178>} {A sunny farm.} { } {The sun shines down on this wonderful plot of land.  The smell of the rich earth fills your nostrils, mixed with the scent of wildflowers and, well, a slight tingeof manure.  Weeds, mushrooms and bugs love this farming utopia.} {} {} {} {} {1.000}
+E {   81} {s} {s} {4} {0} {}
+E {   83} {e} {e} {2} {0} {}
+
+R {   83} {0} {<178>} {A sunny farm.} { } {The sun shines down on this wonderful plot of land.  The smell of the rich earth fills your nostrils, mixed with the scent of wildflowers and, well, a slight tingeof manure.  Weeds, mushrooms and bugs love this farming utopia.} {} {} {} {} {1.000}
+E {   80} {s} {s} {4} {0} {}
+E {   84} {e} {e} {2} {0} {}
+E {   82} {w} {w} {8} {0} {}
+
+R {   84} {0} {<178>} {A sunny farm.} { } {The sun shines down on this wonderful plot of land.  The smell of the rich earth fills your nostrils, mixed with the scent of wildflowers and, well, a slight tingeof manure.  Weeds, mushrooms and bugs love this farming utopia.} {} {} {} {} {1.000}
+E {   79} {s} {s} {4} {0} {}
+E {   85} {e} {e} {2} {0} {}
+E {   83} {w} {w} {8} {0} {}
+
+R {   85} {0} {<178>} {A sunny farm.} { } {The sun shines down on this wonderful plot of land.  The smell of the rich earth fills your nostrils, mixed with the scent of wildflowers and, well, a slight tingeof manure.  Weeds, mushrooms and bugs love this farming utopia.} {} {} {} {} {1.000}
+E {   78} {s} {s} {4} {0} {}
+E {   84} {w} {w} {8} {0} {}
+
+R {   86} {0} {<068>} {The Chef Room} { } {This is a simple kitchen.  The walls are bare, unvarnished wood, and the floor is made of dirt.  Black tar and soot is smeared all over the walls.} {} {} {} {} {1.000}
+E {   13} {e} {out} {2} {0} {}

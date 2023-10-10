@@ -1,0 +1,8 @@
+#NOP .mobileZone {area object desc} {action} {area path}
+#ALIAS .mobileZone
+{
+    #NOP %1;
+    event_register {e_mapfind} {h_chaos_mobilezone} {.mapLink {%3} {} {%2};event_remove_handler {h_chaos_mobilezone}};
+    auto mapfind {%1};
+};
+

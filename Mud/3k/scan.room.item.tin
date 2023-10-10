@@ -1,0 +1,137 @@
+#ALIAS {.scanRoomItem}
+{
+	#LOCAL {_sRN[match]} {@fGetItemRegex{%3}};
+	#FORMAT {_sRN[hash]} {%H} {$_sRN[match]};
+	event_raise {e_scan_room_item} {$_sRN[match]} {%3} {%2} {$_sRN[hash]};
+	.scanRoomItemID       {$_sRN[match]} {%3} {%2};
+	.scanRoomItemDesc     {$_sRN[match]} {%3} {%2} {$_sRN[hash]};
+	.scanRoomItemLocation {$_sRN[match]};
+	#NOP .scanRoomItemConsider {$_sRN[match]} {%3} {%2} {$_sRN[hash]};
+};
+event_register {e_room_item} {scan.room.item.tin} {.scanRoomItem};
+
+#ALIAS {.scanRoomItemID}
+{
+	#IF {&_item[%1][id] == 0}
+	{
+		#VAR {_item[%1][id]} {%3};
+		#VAR {_item[%1][name]} {%2};
+		.scanRoomItemSave {%1};		
+	};
+};
+
+#ALIAS {.scanRoomItemDesc}
+{
+	#LOCAL {_sRID} {};
+	#CLASS {cScanItem%4} SIZE {_sRID}; 
+	#IF {$_sRID == 0}
+	{
+		#CLASS {cScanItem%4} {kill};
+		#IF {&_item[%1][desc] == 0}
+		{
+			#CLASS {cScanItem%4} {assign}
+			{
+				#ACTION {_scan.room.item.desc.%4}
+				{
+					#LINE GAG;
+					#CLASS {cScanItem%4} {assign} 
+					{
+						#ACTION {{^(.*$)}}
+						{
+							#LIST {_item[%1][desc]} {add} {%%%0};
+						} {2};
+					};
+				} {1};
+
+				#ACTION {_scan.room.item.desc.end.%4}
+				{
+					#LINE GAG;
+					#CLASS {cScanItem%4} {kill};
+					.scanRoomItemSave {%1};
+				} {1};
+			};
+
+			#SEND {!_scan.room.item.desc.%4};
+			#IF {&_item[%1][id] > 0}
+			{
+				#LINE SUBSTITUTE VARIABLES {#SEND {!exa $_item[%1][id] on ground}};
+			};
+			#ELSE 
+			{
+				#SEND {!exa %3 on ground};				
+			};
+			#SEND {!_scan.room.item.desc.end.%4};
+		};
+	};
+};
+
+#ALIAS {.scanRoomItemLocation}
+{
+	#IF {"&_item[%1][location][area]" == "0" && "$_item[%1][nomap]" != "1"}
+	{
+		#IF {&map[area][path] > 0}
+		{
+			#LOCAL {_scanRoomVnum} {};
+			#MAP GET ROOMVNUM {_scanRoomVnum};
+			#VAR {_item[%1][location][$map[area][path]][$_scanRoomVnum]} {};
+			#VAR {_area_index[item][%1][$map[area][path]]} {$_scanRoomVnum};
+		};
+		.scanRoomItemSave {%1};
+	};
+};
+
+/* #ALIAS {.scanRoomNPCConsider}
+{
+	#IF {"&_npc[%1][size][consider]" == "0"}
+	{
+		#ACTION {_scan.room.item.consider.%4}
+		{
+			#LINE GAG;
+			#ACTION {^Monster class: %%%*$}
+			{
+				#VAR {_npc[%1][size][consider]} {%%%1};
+				.scanRoomItemSave {%1};
+				#UNACTION {^Monster class: %%%*$};
+			};				
+			#UNACTION {_scan.room.item.consider.%4};			
+		} {1};
+		#SEND {!_scan.room.item.consider.%4};
+		#IF {&_npc[%1][id] > 0}
+		{
+			#SEND {!consider $_npc[%1][id]};
+		};
+		#ELSE 
+		{
+			#SEND {!consider %3};				
+		};		
+	};
+}; */
+
+#ALIAS {.scanRoomItemSave}
+{
+	#IF {&_item[%1][nomap] == 0 && &map[area][path] > 0}
+	{
+		.mapVariable {_item[%1]} {$_item[%1]};
+	};
+};
+
+#FUNCTION {fGetItemRegex}
+{
+	#UNVAR {_fGNR};
+	#VAR {_fGNR[input]} {%1};
+	#FOREACH {*_item[%*]} {_fGNR[regexp]}
+	{
+		#LINE SUBSTITUTE {variables} 
+		{
+			#REGEXP {$_fGNR[input]} {{$_fGNR[regexp]}}
+			{
+				#VAR {_fGNR[match]} {1};
+			};
+		};
+		#IF {"$_fGNR[match]" == "1"}
+		{
+			#RETURN {$_fGNR[regexp]};
+		};
+	};
+	#RETURN {^@fEscapeString{$_fGNR[input]}$};
+};

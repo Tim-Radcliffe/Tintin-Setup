@@ -1,0 +1,29 @@
+#ALIAS {where}
+{
+  #CLASS {cCommand_where} {open};
+  #ACTION {^You're in %w'%* realm}
+  {
+    #VAR {room[location][wiz]} {%%1};
+    #IF {"$room[location][name]" == ""}
+    {
+      #VAR {room[location][name]} {%%1};
+    };
+    event_oneshot {e_prompt} {h_command_where} {.HandlerCommandWhere}; 
+  } {1};
+
+  #ACTION {^You're in one of our main Realms.}
+  {
+    #VAR {room[location][name]} {Mud};
+    event_oneshot {e_prompt} {h_command_where} {.HandlerCommandWhere}; 
+  } {1};
+
+  #ALIAS {.HandlerCommandWhere}
+  {
+    #NOP %%1;
+    event_raise {e_command_where};
+    #CLASS {cCommand_where} {kill};
+  }
+  #CLASS {cCommand_where} {close};
+  
+  #SEND {!where};
+};

@@ -1,0 +1,81 @@
+#VAR {mapBuffer} {};
+
+#ALIAS {.HandlerWindowMapRoom}
+{
+		#NOP %1;
+		.WindowSetLine {map} {1} {AREA: $map[area][name]};
+		.WindowSetLine {map} {2} {NAME: $map[room][roomvnum]. $map[room][roomname]};
+		.WindowRefresh {map};
+};
+
+#ALIAS {.HandlerWindowMap}
+{
+		#NOP %1;
+		#IF {"$map[file]" == ""} #RETURN;
+		#IF {"$_Window[maproom][on]" == "1"}
+		{
+				#VAR {_Window[maproom][y1]} {@fScreen{{right}{y}}};
+				#VAR {_Window[maproom][x1]} {@fScreen{{right}{x}}};
+				#MATH {_Window[maproom][y2]} {@fScreen{{right}{y}}+5};
+				#VAR {_Window[maproom][x2]} {@fScreen{{right}{x2}}};
+
+				#MATH {_Window[map][y1]} {@fScreen{{right}{y}}+6};
+				#VAR {_Window[map][x1]} {@fScreen{{right}{x}}};
+				#VAR {_Window[map][y2]} {@fScreen{{right}{y2}}};
+				#VAR {_Window[map][x2]} {@fScreen{{right}{x2}}};
+		};
+		#ELSE
+		{
+				#VAR {_Window[map][y1]} {@fScreen{{right}{y}}};
+				#VAR {_Window[map][x1]} {@fScreen{{right}{x}}};
+				#VAR {_Window[map][y2]} {@fScreen{{right}{y2}}};
+				#VAR {_Window[map][x2]} {@fScreen{{right}{x2}}};
+		};
+		#SWITCH {"%1"}
+		{
+				#CASE {"e_mouse_map_pressed"}
+				{
+						#VAR {_Window[maproom][on]} {1};
+						event_register {e_map_room_enter} {h_window_map} {.HandlerWindowMapRoom};
+						.HandlerWindowMap;
+				};
+				#DEFAULT
+				{
+						#IF {@fWindowActive{map}}
+						{
+								#MAP OFFSET {$_Window[map][y1]} {$_Window[map][x1]} {$_Window[map][y2]} {$_Window[map][x2]};
+								#MAP FLAG VTMAP ON;
+						};
+						#ELSE
+						{
+								#MAP FLAG VTMAP OFF;
+						};
+				};
+		};
+};
+event_register {e_map_refresh} {h_window_map} {.HandlerWindowMap};
+event_register {e_window_swap} {h_window_map} {.HandlerWindowMap};
+event_register {e_map_area_enter} {h_window_map} {.HandlerWindowMap};
+
+#ALIAS {.HandlerMapMouseClick}
+{
+	#VAR {_Window[click][y]} {%5};
+	#VAR {_Window[click][x]} {%6};
+	#VAR {_Window[click][room]} {%3};
+	.debug MAP_MOUSE {MAP MOUSE CLICKED : $_Window[click][x] : $_Window[click][y] : $_Window[click][room]};	
+};
+event_register {e_mouse_map_pressed} {h_window_map} {.HandlerMapMouseClick};
+
+#ALIAS {.HandlerMapMouseMove}
+{
+	#LOCAL {move} {};
+	#MATH {move[y]} {$_Window[click][y] - %5};
+	#MATH {move[x]} {%6 - $_Window[click][x]};
+	#VAR {_Window[click][y]} {%5};
+	#VAR {_Window[click][x]} {%6};
+	#MAP CENTER {$move[x]} {$move[y]} {0};
+	.debug MAP_MOUSE {MAP CENTER MOVED: $move[x] : $move[y]};
+};
+event_register {e_mouse_map_moved} {h_window_map} {.HandlerMapMouseMove};
+
+.WindowCreate {map};

@@ -1,0 +1,126 @@
+#EVENT {PROGRAM START}
+{
+    #VAR {_client[name]} {%0};
+    #FORMAT {_client[version]} {%p} {%1};
+};
+
+#MESSAGE {all} {off};
+
+#CLASS {config.tin} {READ} {config.tin};
+
+#IF {&{path} == 0}
+{
+    #CLASS {config.tin} {OPEN};
+        #VAR {path[system]} {System};
+        #VAR {path[tools]}  {System/Tools};
+        #VAR {path[local]}  {Local};
+        #VAR {path[data]}   {Data};
+        #VAR {path[mud]}    {Mud};
+        #VAR {path[temp]}   {/tmp};
+        #VAR {path[log]}    {Log};    
+    #CLASS {config.tin} {CLOSE};
+    #CLASS {config.tin} {WRITE} {config.tin};
+};
+
+#CLASS {$path[system]/debug.tin} {read} {$path[system]/debug.tin};
+#CLASS {$path[system]/files.tin} {read} {$path[system]/files.tin};
+#CLASS {$path[system]/csv.tin}   {read} {$path[system]/csv.tin};
+
+#EVENT {SESSION CONNECTED}
+{
+  #VAR {session[name]} {%0};
+  #REGEXP {%0} {{(.+)\.(.+)}}
+  {
+    #VAR {session[mud]} {&2};
+    #VAR {session[player]} {&3};
+  };
+};
+
+#CLASS {cStart} {kill};
+#CLASS {cStart} {open};
+
+#ALIAS {.UserMacro}
+{
+  #NOP %1;
+  #MACRO {%1}
+  {
+    #SESSION {%4.%2} {%5} {%6};%2;
+    #IF {"%3" != ""}
+    {
+        #SEND {%3};
+    };
+
+    #VAR {path[profile]}  {$path[data]/%4/Profiles/%2};
+    #VAR {path[settings]} {$path[data]/%4/Settings};
+    #VAR {path[mud]}      {$path[mud]/%4};
+    #VAR {path[areas]}    {$path[data]/%4/Areas};
+    #VAR {path[local]}    {$path[local]/%4};
+    #VAR {path[log]}      {$path[log]/%4/%2};
+
+    .file loadall {$path[system]/events.tin};
+    .file loadall {$path[system]/*.tin};
+    .file loadall {$path[settings]/*.tin};
+    .file loadall {$path[profile]/*.tin};
+    .file loadall {$path[mud]/*.tin};
+    .file loadall {$path[local]/*.tin};
+
+    #CLASS {cStart} {kill};
+  };
+};
+
+#ALIAS {.StartMenu}
+{
+  #NOP %1;
+  #IF {@fFileExists{$path[data]/profiles.csv}}
+  {
+
+    #MACRO {0}
+    {
+      #END;
+    };
+
+    #MACRO {+}
+    {
+      #UNMACRO {0};
+      #FOREACH {*users[]} {u} {#UNMACRO {$u};};
+      .file load {$path[tools]/profiles.tin};
+      .profileCreate;
+      #UNMACRO {+};
+    };
+
+    #VAR {users} {@fCSVin{@fFileRead{$path[data]/profiles.csv}}};
+    #VAR {userIndex} {0};
+    #ECHO {};
+    #ECHO {Choose a player};
+    #ECHO {===============};
+    #ECHO {};
+    #FOREACH {*users[]} {u}
+    {
+      #ECHO {$u : $users[$u][name] ($users[$u][gameName])};
+      .UserMacro {$u} {$users[$u][name]} {$users[$u][password]} {$users[$u][gameName]} {$users[$u][gameHost]} {$users[$u][gamePort]};
+    };
+    #ECHO {};
+    #ECHO {Or press '+' to add a new profile or press '0' to exit};
+  };
+  #ELSE
+  {
+    #ECHO {};
+    #ECHO {Profile config file $path[data]/profiles.csv not found.};
+    #ECHO {Please enter mud/account details to continue:};
+    #ECHO {};
+    .file load {$path[tools]/profiles.tin};
+    .profileCreate;
+  };
+  
+};
+.StartMenu;
+
+#EVENT {SESSION ACTIVATED}
+{
+  #INFO SESSION SAVE;
+  #INFO SYSTEM SAVE;
+  #VAR {_info} {$info};
+   #if {"%0" == "gts"} {.StartMenu}
+}
+
+#CLASS {cStart} {close};

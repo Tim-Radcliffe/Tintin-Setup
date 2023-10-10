@@ -1,0 +1,55 @@
+C 500
+
+CE <278>
+CH <118>
+CP <138>
+CR <178>
+CB 
+
+F 8
+
+I 1
+
+L ▪ ╹ ╺ ┗ ╻ ┃ ┏ ┣ ╸ ┛ ━ ┻ ┓ ┫ ┳ ╋ X
+
+
+R {    1} {0} {<068>} {Entrance to a House of Cards} { } {You are surrounded on four sides by giant white walls.  There are no doors here, but you know you can get out the way you came in.  Each wall is adorned with just one symbol.  One big symbol, that is.} {} {} {} {} {1.000}
+E {    2} {leave} {.mapLink {Pinnacle/Newbie} {28} {leave};} {0} {0} {}
+E {    3} {s} {touch club} {4} {0} {}
+E {    5} {w} {touch diamond} {8} {0} {}
+E {    7} {e} {touch heart} {2} {0} {}
+E {    9} {n} {touch spade} {1} {0} {}
+
+R {    2} {0} {<000>} {} {<138>*} {} {..} {link;} {} {} {1.000}
+
+R {    3} {0} {<178>} {The 10 of Clubs Room} { } {This is quite an interesting room.  The walls are white, the floor is white, and the ceiling is white, but they are all covered in clubs.  The clubs all around you are arranged to look like tracks!  It looks like a herd of puppies walked through.} {} {} {} {} {1.000}
+E {    1} {n} {n} {1} {0} {}
+E {    4} {s} {s} {4} {0} {}
+
+R {    4} {0} {<178>} {The Ace of Clubs Room} { } {The dog tracks are toned down a bit. It's a bit more regal, but still seems fun.  The walls and floor are all made of that same laminated paper.} {} {} {} {} {1.000}
+E {    3} {n} {n} {1} {0} {}
+E {    1} {push button} {push button} {0} {0} {}
+
+R {    5} {0} {} {The 3 of Diamonds Room                                      } { } {This room's walls and floor are white, but they are covered in red diamonds.  The walls themselves seem to be made of some sort of laminated paper.  It looks as if someone has tried to draw a mirror on the wall with a red crayon.} {} {} {} {} {1.000}
+E {    1} {e} {e} {2} {0} {}
+E {    6} {w} {w} {8} {0} {}
+
+R {    6} {0} {<178>} {The Ace of Diamonds Room} { } {This room is entirely white.  The walls are white, the floor is white, and the ceiling is white.  The only thing that keeps you from being disoriented is the single, very detailed red diamond on one wall.} {} {} {} {} {1.000}
+E {    5} {e} {e} {2} {0} {}
+E {    1} {push button} {push button} {0} {0} {}
+
+R {    7} {0} {} {The 9 of Hearts Room                                        } { } {This room is warm, in a pleasant way.  The walls are all white, and covered in very pretty hearts.   You feel comfortable.  There is a tenderness to this place, you can feel it in the air.} {} {} {} {} {1.000}
+E {    1} {w} {w} {8} {0} {}
+E {    8} {e} {e} {2} {0} {}
+
+R {    8} {0} {<178>} {The Ace of Hearts Room} { } {This white room is much plainer than the other heart room.  The walls are all white and bare save one.  One wall has a gorgeous red heart draw onto it.   An arrow drawn piercing though it diagonally.  Romance is definitely in the air.} {} {} {} {} {1.000}
+E {    7} {w} {w} {8} {0} {}
+E {    1} {push button} {push button} {0} {0} {}
+
+R {    9} {0} {} {The 5 of Spades Room                                        } { } {This room's white walls are covered in spades.  All the spades are highly polished and seem to emanate pride.  All around each spade are written all sorts of cheesy slogans.  } {} {} {} {} {1.000}
+E {    1} {s} {s} {4} {0} {}
+E {   10} {n} {n} {1} {0} {}
+
+R {   10} {0} {<178>} {The Ace of Spades Room} { } {This is the largest room you have seen so far.  The walls are still white, but only one wall has anything on it:  a very large black spade dominates one wall.  Underneath the image is written 'Spades uber alles!' (Spades over all!).} {} {} {} {} {1.000}
+E {    9} {s} {s} {4} {0} {}
+E {    1} {push button} {push button} {0} {0} {}

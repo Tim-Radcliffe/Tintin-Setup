@@ -1,0 +1,26 @@
+#ALIAS {handler_auto_detectundead}
+{
+    #NOP %1;
+    #IF {"%2" != ""}
+	{
+        #IF {"$_npc[%2][undead]" == ""}
+        {
+            #VAR {_npc[%2][undead]} {0};
+            #CLASS {cNecromancerDetectUndead%5} {open};
+            #ACTION {%4 is undead...}
+            {
+                #VAR {_npc[%2][undead]} {1};
+				.scanRoomNPCSave {%2};               
+            } {3};
+            #ACTION {_necromancer.detect.undead.end.%5}
+            {
+                #LINE GAG;
+                #CLASS {cNecromancerDetectUndead%5} {kill};
+            } {2};
+            #CLASS {cNecromancerDetectUndead%5} {close};
+            #SEND {!detect undead};
+            #SEND {!_necromancer.detect.undead.end.%5};            
+        };
+    };
+};
+event_register e_scan_room_npc {detect_undead.tin} {handler_auto_detectundead};

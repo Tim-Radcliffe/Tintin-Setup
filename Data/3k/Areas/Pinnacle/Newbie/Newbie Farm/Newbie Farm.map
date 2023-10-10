@@ -1,0 +1,121 @@
+C 500
+
+CE <278>
+CH <118>
+CP <138>
+CR <178>
+CB 
+
+F 8
+
+I 1
+
+L ▪ ╹ ╺ ┗ ╻ ┃ ┏ ┣ ╸ ┛ ━ ┻ ┓ ┫ ┳ ╋ X
+
+
+R {    1} {0} {<068>} {(o On a farmyard o)} { } {(o The entrance to a farm o) All around you is farmland.  Crops, animals, barn, tractors, and other various farm items.  To the immediate south is a rather small two story farmhouse which faces a hole in one of the haystacks. } {} {} {} {} {1.000}
+E {    2} {hole} {.mapLink {Pinnacle/Newbie} {26} {hole};} {0} {0} {}
+E {    3} {e} {e} {2} {0} {}
+E {   13} {w} {w} {8} {0} {}
+E {   12} {s} {house} {4} {0} {}
+
+R {    2} {0} {<000>} {} {<138>*} {} {..} {link;} {} {} {1.000}
+
+R {    3} {0} {<178>} {(o On a farmyard o)} { } {(o On a farmyard o) This is the east side of the two story farmhouse, its front wooden door is open and located to the west.  Two yellow tractors sit out in the center of the now empty crop fields.  Not too far to the south is a large red barn and a grassy pasture.  A small box is resting up against the farmhouse's wall. } {} {} {} {} {1.000}
+E {    1} {w} {w} {8} {0} {}
+E {   11} {s} {s} {4} {0} {}
+
+R {    4} {0} {<178>} {(o On a farmyard o)} { } {(o On a farmyard o) All around you is farmland.  Crops, animals, barn, tractors, and other various farm items.  To the southeast is a rather small two story farmhouse which faces the road leading back to Pinnacle.  The barn is clearly visible to the southeast.  Beside the house is a rabbit cage. } {} {} {} {} {1.000}
+E {   13} {e} {e} {2} {0} {}
+E {   10} {s} {s} {4} {0} {}
+
+R {    5} {0} {<178>} {(o In a farmyard. o)} { } {(o In a farmyard. o) This is the southwest corner of the farmyard, and the southwest side of the farmhouse.  To the east of here is both a red barn and the backdoor entrance into the cedar shingled, two story farmhouse.  Two tractors are sitting in the middle of the now empty crop fields, far to the east.  A small chicken coop is located on the side of the house. } {} {} {} {} {1.000}
+E {   10} {n} {n} {1} {0} {}
+E {   14} {e} {e} {2} {0} {}
+
+R {    6} {0} {<178>} {(o In a farmyard. o)} { } {(o In a farmyard. o) You are standing in the east side of this farmyard, the fields of crops are located not much futher to your east.  South of here are grass plains, which is where the cows mindlessly feed.  You are facing the southeast backside of the old farmhouse.  A giant stack of golden hay is piled up against the side of the red barn's wall. } {} {} {} {} {1.000}
+E {   11} {n} {n} {1} {0} {}
+E {    7} {w} {w} {8} {0} {}
+
+R {    7} {0} {<068>} {(o In a farmyard o)} { } {(o In a farmyard o) This is the middle of the back of the farmyard, to the far east are a few tractors sitting out in the middle of the now empty crop fields.  The soil of this farmland is richly fertile, supporting and giving life to the myriad plantlife and animals living on this farm.  A small red barn is located directly to the south, while the backdoor of a large two story farmhouse is directly across from the barn, that is to the north. The sights, smells and noises of country life nearly overwhelm your other senses. } {} {} {} {} {1.000}
+E {    6} {e} {e} {2} {0} {}
+E {   14} {w} {w} {8} {0} {}
+E {   23} {se} {se} {6} {0} {}
+E {   22} {sw} {sw} {12} {0} {}
+E {   12} {n} {house} {1} {0} {}
+E {   26} {s} {barn} {4} {0} {}
+
+R {    8} {0} {<178>} {(o On a pasture o)} { } {(o On a pasture o) The grass covered land is used for feeding the cattle.  Patches of the long bladed grass are missing, leaving the dirt exposed to the elements of nature.  A large mound of dirt has been piled up against the back wall of the red barn.  Some annoying gnats buzz back and forth as they travel to the west part of this grassy pasture. } {} {} {} {} {1.000}
+E {   23} {nw} {nw} {9} {0} {}
+E {   25} {w} {w} {8} {0} {}
+
+R {    9} {0} {<178>} {(o On a pasture o)} { } {(o On a pasture o) The grass covered land is used for feeding the cattle.  Patches of the long bladed grass are missing, leaving the dirt exposed to the elements of nature.  Deep hoof prints are impressed into the richly fertile soil. There really isn't much more out here besides the gnats hovering over and consuming the manure. } {} {} {} {} {1.000}
+E {   22} {ne} {ne} {3} {0} {}
+E {   21} {e} {e} {2} {0} {}
+
+R {   10} {8} {} {} { } {} {} {} {} {} {1.000}
+E {    4} {n} {n} {1} {0} {}
+E {    5} {s} {s} {4} {0} {}
+
+R {   11} {8} {} {} { } {} {} {} {} {} {1.000}
+E {    3} {n} {n} {1} {0} {}
+E {    6} {s} {s} {4} {0} {}
+
+R {   12} {0} {<068>} {(o In the farmhouse livingroom o)} { } {(o In the farmhouse livingroom o) This living room is very cramped, there is a nice looking purple couch, an orange chair, and a green four-legged footstool.  A large broken television sits in the east corner.  There are a few pictures set into glass frames on the walls, and some magazines on an end table beside the couch. } {} {} {} {} {1.000}
+E {    1} {n} {front} {1} {0} {}
+E {    7} {s} {back} {4} {0} {}
+E {   15} {w} {kitchen} {8} {0} {}
+E {   16} {u} {upstairs} {16} {0} {}
+
+R {   13} {8} {} {} { } {} {} {} {} {} {1.000}
+E {    4} {w} {w} {8} {0} {}
+E {    1} {e} {e} {2} {0} {}
+
+R {   14} {8} {} {} { } {} {} {} {} {} {1.000}
+E {    5} {w} {w} {8} {0} {}
+E {    7} {e} {e} {2} {0} {}
+
+R {   15} {0} {<068>} {(o In the farmhouse kitchen o)} { } {(o In the farmhouse kitchen o) In the kitchen is a large cast iron wood burning stove.  There is a double sink next to the stove, and a long island counter in the middle of the kitchen.  Only one long shelf sits on the wall above the sink.  Near the bottom of the shelf, just beside the sink is a double door fridge. } {} {} {} {} {1.000}
+E {   12} {e} {livingroom} {2} {0} {}
+
+R {   16} {0} {<068>} {(o Upstairs in a farmhouse o) (bathroom,bedroom1,downstairs,bedroom2)} { } {(o Upstairs in a farmhouse o) This is the upstairs hallway of the farmhouse.  Straight ahead and to the right of the stairs are bedrooms, while on the left of the stairs is the bathroom.  A small nightlight is plugged into the wall. } {} {} {} {} {1.000}
+E {   12} {d} {downstairs} {32} {0} {}
+E {   17} {s} {bathroom} {4} {0} {}
+E {   18} {w} {bedroom1} {8} {0} {}
+E {   19} {e} {bedroom2} {2} {0} {}
+
+R {   17} {0} {<068>} {(o Upstairs in a farmhouse o) (bathroom,bedroom1,downstairs,bedroom2)} { } {(o In the farmhouse bathroom o) This is the only bathroom in the farmhouse.  A large counter holds two sinks.  Above the counter on the wall hangs a mirror that is the same length as the counter.  Below the counter are two doors which are closed.  Beside the counter is a toilet.  Atop the toilet is a basket of soaps, and a roll of toilet paper.  A long tub, without a shower sits across from the toilet and counter.  A small blue rug lies on the floor in front of the tub. } {} {} {} {} {1.000}
+E {   16} {n} {hallway} {1} {0} {}
+
+R {   18} {0} {<068>} {(o In the master bedroom o)} { } {(o In the master bedroom o) This is the master bedroom across from the stairs.  It is quite large taking up half the upper floor.  There is a bed, an end table, a dresser, and a closet.  The floor is hardwood, and the walls are painted black.  There are no windows in this room making it a little dark. } {} {} {} {} {1.000}
+E {   16} {e} {hallway} {2} {0} {}
+
+R {   19} {0} {<068>} {(o In the boys' bedroom o)} { } {(o In the boys' bedroom o) This is the boys' bedroom, easily identified by the bunkbeds, and the toybox at the foot of the bed.  The room is clean, and the beds are made, everything seems to be in its place except a few scattered toys, laying on the floor.  Like the rest of the house, other then the kitchen this room is missing windows.  A closet is on the north wall, and there is a small dresser by the bunkbeds. } {} {} {} {} {1.000}
+E {   16} {w} {hallway} {8} {0} {}
+
+R {   20} {0} {<178>} {(o On a pasture o)} { } {(o On a pasture o) The grass covered land is used for feeding the cattle.  Patches of the long bladed grass are missing, leaving the dirt exposed to the elements of nature.  A large mound of dirt has been piled up against the back wall of the red barn.  Some annoying gnats buzz back and forth as they travel to the west part of this grassy pasture. } {} {} {} {} {1.000}
+E {   21} {w} {w} {8} {0} {}
+E {    7} {nw} {nw} {9} {0} {}
+
+R {   21} {8} {<109>} {} { } {} {} {} {} {} {1.000}
+E {   24} {e} {e} {2} {0} {}
+E {    9} {w} {w} {8} {0} {}
+
+R {   22} {8} {} {} { } {} {} {} {} {} {1.000}
+E {    9} {sw} {sw} {12} {0} {}
+E {    7} {ne} {ne} {3} {0} {}
+
+R {   23} {8} {} {} { } {} {} {} {} {} {1.000}
+E {    8} {se} {se} {6} {0} {}
+E {    7} {nw} {nw} {9} {0} {}
+
+R {   24} {8} {} {} { } {} {} {} {} {} {1.000}
+E {   21} {w} {w} {8} {0} {}
+E {   25} {e} {e} {2} {0} {}
+
+R {   25} {8} {} {} { } {} {} {} {} {} {1.000}
+E {   24} {w} {w} {8} {0} {}
+E {    8} {e} {e} {2} {0} {}
+
+R {   26} {0} {<068>} {(o Inside a barn o)} { } {(o Inside a barn o) The inside of this barn doesn't look as big as the outside suggests.  There are a dozen or so horse stalls along the outer walls.  Piles of hay cover the floor.  The ceiling of the barn is very high up, and very far out of reach.  A rickety old wood bucket is located near the barn's doors. } {} {} {} {} {1.000}
+E {    7} {n} {out} {1} {0} {}

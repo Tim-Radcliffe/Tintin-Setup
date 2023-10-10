@@ -1,0 +1,27 @@
+C 500
+
+CE <278>
+CH <118>
+CP <138>
+CR <178>
+CB 
+
+F 8
+
+I 3
+
+L ▪ ╹ ╺ ┗ ╻ ┃ ┏ ┣ ╸ ┛ ━ ┻ ┓ ┫ ┳ ╋ X
+
+
+R {    1} {0} {<068>} {Village of New Pinnacle} { } {A sandy path leads north through a thicket of red-leaved trees and west back toward a mirror standing in the middle of the road.  Just to the east stand the charred remains of what was once a lovely little stone cottage.  To the south is an undamaged wooden home.} {} {} {} {} {1.000}
+E {    2} {mirror} {.mapLink {Pinnacle} {121} {mirror};} {0} {0} {}
+E {    3} {s} {s} {4} {0} {}
+E {    4} {n} {n} {1} {0} {}
+
+R {    2} {0} {<000>} {} {<138>*} {} {..} {link;} {} {} {1.000}
+
+R {    3} {0} {<178>} {Village of New Pinnacle} { } {This cheery wood domicile seems to be the only structure in the village left completely undamaged by the invading orcs.  An iron furnace takes up the center of the room.  Rope strung from its chimney pipe to the walls holds up cloth partitions dividing the house into crude rooms.  Some cots have been set up in the partitioned parts of the house.  A scorched oak desk sits near the door.} {} {} {} {} {1.000}
+E {    1} {n} {n} {1} {0} {}
+
+R {    4} {0} {<178>} {Village of New Pinnacle} { } {The village of New Pinnacle is being rebuilt here, rising phoenix-like from its own ashes via the strong wills and strong backs of its inhabitants.  No bodies, blood, or debris litter the road.  The burnt-out hulks of cottages have been cleared, and two new houses stand nearby.  One looks livable.  The other still lacks doors and part of its roof.  All around, you spot villagers teaming up to plant crops, gather construction materials, or haul water.  The percussive bang of a hammer echoes off a large pile of stones beside you.} {} {} {} {} {1.000}
+E {    1} {s} {s} {4} {0} {}

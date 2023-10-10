@@ -1,0 +1,32 @@
+#ALIAS {.Lock} 
+{
+	#IF {"%0" == ""}
+	{
+		#VAR {_lock};
+	};
+	#ELSE
+	{
+		#VAR {_lock[%1]} {@fGetTimeStamp{}};
+	};
+};
+
+#ALIAS {.Unlock}
+{
+	#IF {"%0" == ""}
+	{
+		#VAR {_lock};
+	};
+	#ELSE
+	{
+		#UNVAR {_lock[%1]} {@fGetTimeStamp{}};
+	};
+};
+
+#FUNCTION {fLocked}
+{
+	#IF {&_lock[] > 0}
+	{
+		#RETURN 1;
+	}
+	#RETURN 0;
+};

@@ -1,0 +1,3 @@
+#CONFIG {packet patch} {0.6};
+#NOP #CONFIG {packet patch} {auto};
+#CONFIG {color patch} {on};

@@ -1,0 +1,89 @@
+#VAR {_ansi} 
+{
+  {look_armor}     {{colour}{[36m}{tag}{A}}
+  {look_monster}   {{colour}{[33m}{tag}{M}}
+  {look_other}     {{colour}{[32m}{tag}{O}}
+  {look_player}    {{colour}{[37m}{tag}{P}}
+  {look_weapon}    {{colour}{[31m}{tag}{W}}
+  {room_short}     {{colour}{[37m}{tag}{R}}
+  {room_long}      {{colour}{[33m}{tag}{L}}
+  {world_drop}     {{colour}{[41m}{tag}{D}}
+  {inumbers}       {{colour}{[1m}{tag}{N}}
+  {party}          {{colour}{[33;1m}{tag}{C}}
+  {cwchat}         {{colour}{[1m}{tag}{C}}
+  {shout}          {{colour}{[34;1m}{tag}{C}}
+  {tell}           {{colour}{[32m}{tag}{C}}
+  {soul}           {{colour}{[32;1m}{tag}{C}}
+  {skill_dodge}    {{colour}{[0m}{tag}{S}}
+  {skill_crit}     {{colour}{[0m}{tag}{S}}
+  {shield_block}   {{colour}{[0m}{tag}{S}}
+  {skill_freecast} {{colour}{[0m}{tag}{S}}
+}
+
+#ALIAS {.AnsiFlags}
+{
+  #FOREACH {*_ansi[%*]} {a[i]}
+  {
+    #VAR {a[pref]} {<ESC>$_ansi[$a[i]][colour]};
+    #VAR {a[suff]} {<ESC>[0m};
+    #VAR {my[ansiflags]} {0};    
+    #IF {"%1" == "on" && &_ansi[$a[i]][tag] > 0}
+    {
+      #VAR {a[pref]} {$a[pref]<$_ansi[$a[i]][tag]`};
+      #VAR {a[suff]} {`>$a[suff]};
+      #VAR {my[ansiflags]} {1};      
+    };
+    #SEND {!aset $a[i]_pref $a[pref]};
+    #SEND {!aset $a[i]_suff $a[suff]};
+  };
+  .AnsiFlagTriggers;
+}
+
+#ALIAS {.AnsiFlagTriggers}
+{
+  #NOP %1;
+  #IF {$my[ansiflags]}
+  {
+    #SUBSTITUTE {<%w`} {} {4};
+    #SUBSTITUTE {`>} {} {4};
+    #ACTION {{<(\w)`(.*?)(`>.*|)$}}
+    {
+      #IF {"%%4" != ""}
+      {
+        event_raise {e_ansiflag_%%2} {%%3};
+      };
+      #ELSE
+      {
+        #VAR {_aAF} {%%3};
+        #ACTION {{^(.*?)(`>.*|)$}}
+        {
+          #VAR {_aAF} {${_aAF} %%%2};
+          #IF {"%%%3" != ""}
+          {
+            event_raise {e_ansiflag_%%2} {$_aAF};
+            #UNVAR {_aAF};
+            #UNACTION {{^(.*?)(`>.*|)$}};
+          };
+        } {3};
+      };
+    } {3};
+  };
+  #ELSE
+  {
+    #UNSUBSTITUTE {<%w`} {};
+    #UNSUBSTITUTE {`>} {};	  
+    #UNACTION {{<(\w)`(.*?)(`>|)$}};  
+  };
+};
+
+.AnsiFlagTriggers;
+
+#FUNCTION {fStripAnsi}
+{
+  #LOCAL {_fSA} {%0};
+  #REPLACE {_fSA} {<%w`} {};
+  #REPLACE {_fSA} {`>} {};
+  #RETURN {$_fSA};
+};
+
+

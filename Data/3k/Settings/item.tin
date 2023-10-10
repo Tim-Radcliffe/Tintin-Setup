@@ -1,0 +1,113 @@
+#VARIABLE {_item}
+{
+    {([\(\[])([\-\|\*]{5})[\)\]]\s.*$}
+    {
+        {pickup} {1}
+        {nomap} {1}
+        {pickup_command} {.corpse get}
+    }
+    {^.+ (B|b)oard .* containing \d+ messages}
+    {
+        {pickup} {-1}
+        {desc} 
+        {        
+            {1} {Type 'help board' for a list of commands.}        
+        };
+        {name} {board};
+        {id} {board};
+    };
+    {A single gold coin}
+    {
+        {nomap} {1}
+    }
+    {bag} 
+    {
+        {pickup} {1}
+    }
+    {black stone} 
+    {
+        {nomap} {1}
+        {pickup} {-1}
+    }
+    {coins} 
+    {
+        {nomap} {1}
+        {pickup} {1}
+        {pickup_command} {get coins}
+    }
+    {crystal ball} 
+    {
+        {nomap} {1}
+        {pickup} {-1}
+    }
+    {departing} 
+    {
+        {nomap} {1}
+        {pickup} {-1}
+    }
+    {devouring} 
+    {
+        {nomap} {1}
+        {pickup} {-1}
+    }
+    {empty} 
+    {
+        {nomap} {1}
+        {pickup} {-1}
+    }
+    {fear} 
+    {
+        {nomap} {1}
+        {pickup} {-1}
+    }
+    {fractures} 
+    {
+        {nomap} {1}
+        {pickup} {-1}
+    }
+    {fumbling} 
+    {
+        {nomap} {1}
+        {pickup} {-1}
+    }
+    {grafting} 
+    {
+        {nomap} {1}
+        {pickup} {-1}
+    }
+    {hunger} 
+    {
+        {nomap} {1}
+        {pickup} {-1}
+    }
+    {nullification} 
+    {
+        {nomap} {1}
+        {pickup} {-1}
+    }
+    {obliquity} 
+    {
+        {nomap} {1}
+        {pickup} {-1}
+    }
+    {phial} 
+    {
+        {nomap} {1}
+        {pickup} {1}
+    }
+    {quick digestion} 
+    {
+        {nomap} {1}
+        {pickup} {-1}
+    }
+    {slow digestion} 
+    {
+        {nomap} {1}
+        {pickup} {-1}
+    }
+    {-\d.}
+    {
+        {nomap} {1}
+        {pickup} {-1}
+    }
+}

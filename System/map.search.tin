@@ -1,0 +1,180 @@
+#NOP Map Area/Room path finding
+
+/* Find area map directory names that match the passed parameter */
+#FUNCTION {fSearchArea}
+{
+    #IF {"%0" == ".."} {#RETURN {{1}{@fFileGetPath{$map[area][path]}}}};
+    #LOCAL {_fSearchArea} {};
+    #LINE SUBSTITUTE VARIABLES {#SCRIPT {_fSearchArea} {find $path[areas] -type d -iregex ".*%0[^\/]*" -printf "%P\n"};};
+    #RETURN {$_fSearchArea};
+};
+
+/* Find closest exit match to destination, or the next area closest to it */
+#FUNCTION {fSearchLink}
+{
+    #NOP /* Check a destination was provided */;
+    #IF {"%0" == ""} {#RETURN;};
+    
+    #UNVAR {_fSearchLink};
+
+    #NOP /* Find all LINK rooms in current map */;
+    #MAP list {roomname} {LINK: %*} {variable} {_fSearchLink[list]};
+    
+    #NOP /* No links found */;
+    #IF {&_fSearchLink[list][] < 1} {#RETURN};
+
+    #NOP /* Collect room names for all links */;
+    #FOREACH {*_fSearchLink[list][]} {r}
+    {
+
+        #NOP /* Discard inaccessible rooms (distance -1) */;
+        #IF {$_fSearchLink[list][$r][distance] >= 0}
+        {
+            #MAP AT {$r} {#MAP GET ROOMNAME {_fSearchLink[list][$r][name]}};
+            #REPLACE {_fSearchLink[list][$r][name]} {LINK: } {};
+            .debug MAP {SEARCHLINK: $r : $_fSearchLink[list][$r][distance] : $_fSearchLink[list][$r][name]};
+        };
+        #ELSE
+        {
+            #UNVAR {_fSearchLink[list][$r]};
+        };
+    };
+    
+    #NOP /* Find links that closest match the destination path */;
+    #VAR {_fSearchLink[match]} {%0};
+    #WHILE {"$_fSearchLink[match]" != ""}
+    {
+        
+        #UNVAR {_fSearchLink[matchlist]};
+        #UNVAR {_fSearchLink[exactlist]};
+        
+        #NOP /* Check all links in the list to see if they match filter string */;
+        #FOREACH {*_fSearchLink[list][]} {_fSearchLink[i]}
+        {
+            #NOP /* Match the current match string, saving any overlap */;
+            #REGEXP {$_fSearchLink[list][$_fSearchLink[i]][name]} {{$_fSearchLink[match](|\/.*)$}}
+            {
+                #NOP /* Store matches based on how many nested areas away they are (count the overlapping areas) */;
+                #VAR {_fSearchLink[overlap]} {&2};
+                #REPLACE {_fSearchLink[overlap]} {/} {;};
+                #LIST {_fSearchLink[nest]} {CREATE} {$_fSearchLink[overlap]};
+                
+                #VAR {_fSearchLink[matches][&_fSearchLink[nest][]][$_fSearchLink[i]]} {$_fSearchLink[list][$_fSearchLink[i]]};
+                
+            };
+        };
+        
+        #NOP /* Set the matchlist to the closest list of matches (minimise the overlapping areas) */;
+        #VAR {_fSearchLink[matchlist]} {$_fSearchLink[matches][*_fSearchLink[matches][+1]]};
+       
+        #IF {&_fSearchLink[matchlist][] == 1}
+        {
+            #NOP /* One match found - return matched room number */;
+            #RETURN {*_fSearchLink[matchlist][+1]};
+        };
+        #ELSEIF {&_fSearchLink[matchlist][] > 1}
+        {
+            #NOP /* More than one match - stop matching, move to next stage */;
+            #VAR {_fSearchLinklist]} {$_fSearchLink[matchlist]};
+            #BREAK;
+        };
+        
+        #NOP /* Trim the last level from destination match */;
+        #REGEXP {$_fSearchLink[match]} {{(.*)\/[^\/]*$}}
+        {
+            #VAR {_fSearchLink[match]} {&2};
+        }
+        {
+            #VAR {_fSearchLink[match]} {};
+            #BREAK;
+        };
+    };
+
+    #NOP /* Find closest link room to this room on current map */;
+    #VAR {_fSearchLink[return]} {};
+    #FOREACH {*_fSearchLink[matchlist][]} {_fSearchLink[i]}
+    {
+        #IF {"$_fSearchLink[return]" == ""}
+        {
+            #VAR {_fSearchLink[return]} {$_fSearchLink[i]};
+        };
+        #ELSEIF {$_fSearchLink[list][$_fSearchLink[i]][distance] < $_fSearchLink[list][$_fSearchLink[return]][distance]}
+        {
+            #VAR {_fSearchLink[return]} {$_fSearchLink[i]};
+        };
+    };
+    #RETURN {$_fSearchLink[return]};
+};
+
+/* Run to area specified (full area path). */
+#ALIAS {.areaRun}
+{
+    #NOP %1;
+    #IF {"%1" != "$map[area][path]"}
+    {
+        .Lock {arearun};
+        .mapRun {@fSearchLink{%1}};
+        event_oneshot {e_map_area_enter} {map.search.tin} {#NOP %%1;.areaRun {%1};};
+    };
+    #ELSE 
+    {
+        #ACTION {map.goto.tin.areaRun.complete}
+        {
+          #NOP %%1;
+          #LINE GAG;
+          .Unlock {arearun};
+          #UNACTION {map.goto.tin.areaRun.complete};
+        };
+        #SEND {!map.goto.tin.areaRun.complete};        
+    };
+};
+
+/* User command to go to area. If one match found, goes straight there */
+/* Otherwise offers a list of alternatives to chose from as macros     */
+#ALIAS {.go}
+{
+    #NOP %1;
+    #VAR {_goArea[list]} @fSearchArea{%0};
+    #IF {&_goArea[list][] < 1}
+    {
+        #ECHO {No match found};
+    };
+    #ELSEIF {&_goArea[list][] == 1}
+    {
+        .areaRun {$_goArea[list][1]};
+    };
+    #ELSE
+    {
+        #ECHO {Please select from the list (0 to cancel):};
+        #CLASS {cMapGotoMacros} {open};
+        #MACRO {0}
+        {
+          #CLASS {cMapGotoMacros} {kill};
+          #ECHO {Cancelled};
+        };
+        #ALIAS {.goMacro}
+        {
+          #MACRO {%%1}
+          {
+            #NOP delay added because ticker wouldn't add from macro for some reason;
+            #DELAY {0.2} {.areaRun {%%2}};
+            #CLASS {cMapGotoMacros} {kill};
+          };
+        };
+        #FOREACH {*_goArea[list][]} {v}
+        {
+          #IF {$v < 27}
+          {
+            #FORMAT {_goArea[c]} {%a} {$v+96};
+            .goMacro {$_goArea[c]} {$_goArea[list][$v]};
+            #NOP #ECHO {$_goArea[c] : @fFileGetName{@fFileGetPath{$_goArea[list][$v]}}/@fFileGetName{$_goArea[list][$v]}};
+            #ECHO {$_goArea[c] : $_goArea[list][$v]}; 
+          };
+          #IF {$v == 27}
+          {
+            #ECHO {Further matches not shown.};
+            #BREAK;
+          };
+        };
+    };
+};

@@ -1,0 +1,31 @@
+#VAR {my[hp][colour]} {AFA};
+#VAR {my[sp][colour]} {FFA};
+#VAR {my[gp1][colour]} {AFF};
+#VAR {my[gp2][colour]} {FAF};
+
+#ALIAS {.HandlerStatsFoot}
+{
+	#NOP %1;
+	#LOCAL {_wS} {};
+	#FOREACH {hp;sp;gp1;gp2} {v}
+	{
+		#IF {"$my[$v][current]" == "0" && "$my[$v][max]" == "0"} {}
+		{
+			#IF {"$my[$v][name]" == ""} {#FORMAT {my[$v][name]} {%u} {$v};};
+			#IF {"$_wS[line]" != ""} {#LOCAL {_wS[line]} {$_wS[line]|}};
+			#LOCAL {_wS[line]} {$_wS[line]@fGauge{{$my[$v][name] : $my[$v][current]}{$my[$v][current]}{$my[$v][max]}{$my[$v][colour]}{19}}};
+		};
+	};
+	#LIST {_wS[buffer]} {add} {$_wS[line]};    
+  	#LIST {_wS[buffer]} {add} {@fGauge{{Rounds: ${mip[FFF][N][data]} Vs: ${mip[FFF][K][data]}}{$mip[FFF][L][data]}{100}{FAA}{79}}};
+	#LIST {_wS[buffer]} {add} {Corpse: &my[corpse][held][list][%*]};
+	#NOP    #LIST {_wS} {add} {Rounds : $mip[FFF][N][data]};
+#NOP    #LIST {_wS} {add} {$mip[gline][1]};
+#NOP    #LIST {_wS} {add} {$mip[gline][2]};
+#NOP    #LIST {_wS} {add} {$mip[BAC][data]};
+	.WindowSet {statsfoot} {$_wS[buffer]};
+	.WindowRefresh {statsfoot};
+};
+.WindowCreate {statsfoot} {status};
+event_register {e_mip_FFF} {h_window_statsfoot} {.HandlerStatsFoot};
+.HandlerStatsFoot;

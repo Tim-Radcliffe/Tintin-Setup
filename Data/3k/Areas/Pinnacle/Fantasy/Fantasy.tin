@@ -1,0 +1,18 @@
+#NOP Desert;
+#ACTION {You begin to climb up the dune but slip back down.}
+{
+  #IF {"$map[edit]" == "1"}
+  {
+    #MAP undo;
+    .mapRefresh;
+  };
+};
+
+#ACTION {The sand dunes are too steep in that direction.}
+{
+  #IF {"$map[edit]" == "1"}
+  {
+    #MAP undo;
+    .mapRefresh;
+  };
+};

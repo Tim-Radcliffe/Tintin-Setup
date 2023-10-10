@@ -1,0 +1,31 @@
+C 500
+
+CE <278>
+CH <118>
+CP <138>
+CR <178>
+CB 
+
+F 8
+
+I 1
+
+L ▪ ╹ ╺ ┗ ╻ ┃ ┏ ┣ ╸ ┛ ━ ┻ ┓ ┫ ┳ ╋ X
+
+
+R {    1} {0} {<068>} {Gate to Browning Mansion} { } {No one knows how long Browning Mansion has stood here.  No one alive today can ever remember someone living in the huge estate.  Rumors fly about what happened one fateful night, decades ago.  Did Master Browning really kill his bride-to-be after finding her in the attic with another gentleman?  Or did she truly suffocate in a chest when exploring her new home?  As the gates of Browning Mansion close behind you, questions keep running through your head.  What really happened that night? Is this place really haunted?  How am I going to get out of here?} {} {} {} {} {1.000}
+E {    2} {hole} {.mapLink {Pinnacle/Newbie} {25} {hole};} {0} {0} {}
+E {    3} {n} {n} {1} {0} {}
+E {    4} {e} {e} {2} {0} {}
+E {    5} {ne} {ne} {3} {0} {}
+
+R {    2} {0} {<000>} {} {<138>*} {} {..} {link;} {} {} {1.000}
+
+R {    3} {0} {<109>} {} { } {} {} {} {} {} {1.000}
+E {    1} {s} {s} {4} {0} {}
+
+R {    4} {0} {<109>} {} { } {} {} {} {} {} {1.000}
+E {    1} {w} {w} {8} {0} {}
+
+R {    5} {0} {<109>} {} { } {} {} {} {} {} {1.000}
+E {    1} {sw} {sw} {12} {0} {}

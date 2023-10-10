@@ -1,0 +1,59 @@
+#ALIAS {.mapAreaList}
+{
+  #MAP {get} {worldsize} {map[worldsize]};
+  #MAP {list} {variable} {map[roomlist]};
+  #FOREACH {*map[roomlist][]} {r}
+  {
+    #ECHO {ROOM: $r};
+
+    #IF {"$r" != "" && "$map[roomlist][$r]" != ""}
+    {
+      #MAP at $r
+      {
+        #MAP {get} {roomarea} {map[arealist][areaname]};
+        #MAP {get} {roomname} {map[arealist][roomname]};
+
+        #REPLACE {map[arealist][areaname]} {[} {I};
+        #REPLACE {map[arealist][areaname]} {]} {I};
+
+        #VAR {map[arealist][list][$map[arealist][areaname]]} {$r};
+      };
+    };
+  };
+
+  #UNVAR {map[roomlist]};
+
+  #FOREACH {*map[arealist][list][]} {a}
+  {
+    #ECHO {vnum: %+5d area: %s} {$map[arealist][list][$a]} {$a};
+  };
+};
+
+#ALIAS {.arealist} 
+{
+  #IF {"$map[arealist]" == ""}
+  {
+  
+    #ECHO {PLEASE WAIT....Building Area List};
+    #MAP {get} {worldsize} {map[worldsize]};
+
+    #LOOP {$map[worldsize]} {1} {i} 
+    { 
+      #MAP at $i 
+      { 
+        #MAP {get} {roomarea} {map[arealist][areaname]};
+        #MAP {get} {roomname} {map[arealist][roomname]};
+
+        #REPLACE {map[arealist][areaname]} {[} {I};
+        #REPLACE {map[arealist][areaname]} {]} {I};      
+        
+        #VAR {map[arealist][$map[arealist][areaname]]} {$i};                 
+      }; 
+    };
+  };
+  
+  #FOREACH {*map[arealist][]} {a}
+  {
+    #ECHO {vnum: %+5d area: %s} {$map[arealist][$a]} {$a};
+  };  
+};

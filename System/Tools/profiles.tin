@@ -1,0 +1,112 @@
+#ALIAS {.profileCreate}
+{
+  #NOP %1;
+  .profileQ1;
+};
+
+#ALIAS {.profileQ1}
+{
+  #NOP %1;
+  #ALIAS {%%1} 
+  { 
+    #VAR {_profile[gameName]} {%%0}; 
+    #UNALIAS {%%%1};
+    .profileQ2;
+  };
+  #ECHO {Enter Game/Mud system name (e.g. 3K):};
+};
+
+#ALIAS {.profileQ2}
+{
+  #NOP %1;
+  #ALIAS {%%1} 
+  { 
+    #VAR {_profile[gameHost]} {%%0}; 
+    #UNALIAS {%%%1};
+    .profileQ3;
+  };
+  #ECHO {Enter Game/Mud host address or IP (e.g. 3k.org):};
+};
+
+#ALIAS {.profileQ3}
+{
+  #NOP %1;
+  #ALIAS {%%1}  
+  { 
+    #VAR {_profile[gamePort]} {%%0}; 
+    #UNALIAS {%%%1};
+    .profileQ4;
+  };
+  #ECHO {Enter Game/Mud system port (e.g. 3000):};
+};
+
+
+#ALIAS {.profileQ4}
+{
+  #NOP %1;
+  #ALIAS {%%1}   
+  { 
+    #VAR {_profile[name]} {%%0}; 
+    #UNALIAS {%%%1};  
+    .profileQ5;
+  };
+  #ECHO {Enter character name:};
+};
+
+#ALIAS {.profileQ5}
+{
+  #NOP %1;
+  #ALIAS {%%1}   
+  { 
+    #IF {"%%0" == "no"}
+    {
+        #VAR {_profile[password]} {};
+    };
+    #ELSE
+    {
+        #VAR {_profile[password]} {%%0};
+    };
+    #UNALIAS {%%%1};  
+    #VAR {_profile};
+    .profileConfirm;
+  };
+  #ECHO {Enter password (or enter "no" to type it in every login):};
+};
+
+#ALIAS {.profileConfirm}
+{
+  #NOP %1;
+  #ECHO {Is this correct? (y/N):};
+  #MACRO {y}
+  {
+    #UNMACRO {y};
+    #UNMACRO {n};
+    #UNMACRO {/ea};
+    #LOCAL {null} {@fFileCreateDir{$path[data]/$_profile[gameName]/Profiles/$_profile[name]}};
+    #IF {!@fFileExists{$path[data]/profiles.csv}}
+    {
+      #LINE {log} {$path[data]/profiles.csv} {name,password,gameName,gameHost,gamePort};
+      #ECHO {PROFILE: $path[data]/profile.csv created};
+    };
+    #LINE {log} {$path[data]/profiles.csv} {$_profile[name],$_profile[password],$_profile[gameName],$_profile[gameHost],$_profile[gamePort]};
+    #ECHO {PROFILE: $path[data]/profile.csv updated};
+    #ECHO;
+    .StartMenu;
+  };
+  #MACRO {n}
+  {
+    #UNMACRO {y};
+    #UNMACRO {n};
+    #UNMACRO {/ea};
+    .profileQ1;
+  };
+  #MACRO {/ea}
+  {
+    #UNMACRO {y};
+    #UNMACRO {n};
+    #UNMACRO {/ea};
+    .profileQ1;
+  };
+};
+
+

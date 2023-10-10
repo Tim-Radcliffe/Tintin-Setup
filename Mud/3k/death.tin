@@ -1,0 +1,4 @@
+#ACTION {^Death produces a thick book from beneath his robes:}
+{
+    event_raise e_died;
+};

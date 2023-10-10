@@ -1,0 +1,7 @@
+#ALIAS {.handler_window_comms}
+{
+  #LOCAL {_hWC} {%2};
+  .WindowAppend {messages} {$_hWC[1] $_hWC[5]};
+  .WindowRefresh;
+};
+event_register {e_comms} {window.comms.tin} {.handler_window_comms};

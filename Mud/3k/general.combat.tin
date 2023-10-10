@@ -1,0 +1,52 @@
+#NOP **** Triggers ****
+#NOP #ACTION {^{>\s|}You attack %*.}
+#NOP {
+#NOP	#VAR {opponent} {};
+#NOP	#VAR {opponent[longname]} {%2};
+#NOP	event_raise e_combat {%2};
+#NOP };
+
+#ALIAS {handler_combat_start}
+{
+    #VAR {opponent} {};
+    #IF {"%2" != ""}
+    {
+        #VAR {opponent[longname]} {%2};
+        #ACTION {^{>\s|}{You've killed|(.*) dealt the killing blow to} %*.} 
+        {
+            #IF {"%%3" == "%%4" || "%%3" == "$my[name]" || "%%3" == ""}
+            {
+                #VAR {opponent[shortname]} {%%4};
+                event_raise e_killed_opponent {%%4} {$opponent[longname]};
+                #UNACTION {^{>\s|}{You've killed|(.*) dealt the killing blow to} %*.};
+            };
+        };
+        event_raise e_combat {%2};
+    };
+};
+event_register {e_mip_FFF_K} {general.combat.tin} {handler_combat_start};
+
+#NOP **** Functions/Aliases ****
+#ALIAS {handler_combat}
+{
+	#NOP %1;
+	event_register e_killed_opponent h_combat_finished handler_combat_finished;
+	event_remove_specific e_combat h_combat;
+};
+event_register e_combat h_combat handler_combat;
+
+#ALIAS {handler_combat_finished}
+{
+    #NOP %1;
+    event_remove_specific e_killed_opponent h_combat_finished;
+    event_register e_combat h_combat handler_combat;
+    event_raise e_room_corpse;
+    #BELL;
+};
+
+#ALIAS {handler_combat_round}
+{
+    #NOP %1; 
+    #IF {%2 > 0} {event_raise {e_combat_round} {%2};};
+};
+event_register {e_mip_FFF_N} {h_combat_round} {handler_combat_round};

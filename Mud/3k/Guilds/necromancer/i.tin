@@ -1,0 +1,60 @@
+#ALIAS {i}
+{
+    #CLASS {cNecroI} {open};
+
+    #VAR {_undead}
+    {
+        {Skeleton}{} {Zombie}{}  {Ghoul}{}   {Valpur}{}
+        {Ghast}{}    {Manshi}{}  {Bolwyn}{}  {Greesh}{}
+        {Wight}{}    {Heucuva}{} {Tholen}{}  {Bayen}{}
+        {Quarin}{}   {Mohrg}{}   {Grimare}{} {Valithyn}{}
+    };
+	#ACTION {{^(\w+)\s+\[\s?(\d+)\/\s?(\d+)\|\s?(\d+)\%\|\s?(\d+)c]}}
+    {
+        #IF {"%%2" == "Coffin"}
+        {
+            #VAR {my[corpse][coffin][current]} {%%5};
+            #VAR {my[corpse][coffin][max]}     {%%4};
+        };
+        #ELSEIF {"%%2" == "Smuggling"}
+        {
+            #VAR {my[corpse][smuggle][current]} {%%5};
+            #VAR {my[corpse][smuggle][max]}     {%%4};
+        };
+        #ELSEIF {"%%2" == "Encumberance"}
+        {
+            #VAR {my[encumberance][current]} {%%3};
+            #VAR {my[encumberance][max]} {%%4};
+            #VAR {my[encumberance][percentage]} {%%5};
+            #VAR {my[corpse][held][current]} {%%6};
+            
+            #NOP /* Increase/Decrease max corpses held to keep encumberance between 70% and 80% */;
+            #IF {$my[corpse][held][current] == $my[corpse][held][max]}
+            {
+                #IF {@fEval{((%%3*100)/%%4) < 70}}
+                {
+                    #VAR {my[corpse][held][max]} {@fEval{$my[corpse][held][max] + 1}};
+                };
+                #ELSEIF {@fEval{((%%3*100)/%%4) > 80}}
+                {
+                    #VAR {my[corpse][held][max]} {@fEval{$my[corpse][held][max] - 1}};
+                };                
+            };
+        };
+        #ELSEIF {&_undead[%%2] > 0}
+        {
+            #VAR {my[corpse][minion][current]} {%%5};
+            #IF {%%5 > 0}
+            {
+                #NOP /* Set max corpse capacity of minion based on average weight of current minion corpses */;
+                #VAR {my[corpse][minion][max]} {@fEval{(%%4/(%%3/%%5))-1}};
+            };
+        };
+    } {1};
+
+    #CLASS {cNecroI} {close};
+
+    event_oneshot {e_prompt} {cNecroI} {#NOP %%1;#CLASS {cNecroI} {kill};};    
+   
+    #SEND {!i %0};
+};

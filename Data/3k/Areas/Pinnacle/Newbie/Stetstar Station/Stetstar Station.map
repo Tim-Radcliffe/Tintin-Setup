@@ -1,0 +1,51 @@
+C 500
+
+CE <278>
+CH <118>
+CP <138>
+CR <178>
+CB 
+
+F 8
+
+I 1
+
+L ▪ ╹ ╺ ┗ ╻ ┃ ┏ ┣ ╸ ┛ ━ ┻ ┓ ┫ ┳ ╋ X
+
+
+R {    1} {0} {<048>} {Stetstar Station} { } {You're in an airlock in a gleaming metal space station.  Spacesuits are secured to the aluminum wall with fasteners.  The outer airlock door leads out of the station.  It might lead out into space, or back to the land from whence you came.  Panels on the walls display a dizzying array of blinking lights and incomprehensible controls.  An open airlock door leads into the station.} {} {} {} {} {1.000}
+E {    2} {out} {.mapLink {Pinnacle/Newbie} {25} {out};} {0} {0} {}
+E {    3} {n} {say ziggy open door;enter} {1} {0} {}
+
+R {    2} {0} {<000>} {} {<138>*} {} {..} {link;} {} {} {1.000}
+
+R {    3} {0} {<068>} {Stetstar Station} { } {You're in an aft hallway within a large space station.  The aluminum walls are covered with panels of technical controls.  The ceiling is hidden above a tangle of ducts, pipes, and conduits.  A large circular door here leads to the main airlock - the way in and out of the station.  Sealed bins along one wall hold weapons and ammunition.} {} {} {} {} {1.000}
+E {    1} {s} {airlock} {4} {0} {}
+E {    4} {n} {fore} {1} {0} {}
+
+R {    4} {0} {<048>} {Stetstar Station} { } {The corridor ends here at a gray rectangular door set in a plain gray wall.  The door is now open, offering admittance to the front sections of the spaceship.  Toward the stern of the ship, the main airlock door is visible.} {} {} {} {} {1.000}
+E {    3} {s} {aft} {4} {0} {}
+E {    5} {n} {say ziggy open door;fore} {1} {0} {}
+
+R {    5} {0} {<068>} {Stetstar Station} { } {You're at an intersection of gleaming hallways.  Doors lead aft and fore, while the hall runs across the ship's beam.  A small black keypad is set into the wall next to the forward door.  A faint beep-beep-beep echoes from the hallway to the starboard side.} {} {} {} {} {1.000}
+E {    4} {s} {aft} {4} {0} {}
+E {    6} {e} {starboard} {2} {0} {}
+E {    7} {w} {port} {8} {0} {}
+E {   10} {n} {fore} {1} {0} {}
+
+R {    6} {0} {<068>} {Stetstar Station} { } {At a bend in the corridor sits a disabled service robot.  Its plaintive beeping reverberates faintly down the hallways of the space station.  An electrical switchbox in front of the robot is opened, revealing a tangle of wires, circuit breakers, transistor arrays, and chips.  Down the aft hallway, an open doorway leads to some other room.} {} {} {} {} {1.000}
+E {    5} {w} {port} {8} {0} {}
+E {    8} {s} {aft} {4} {0} {}
+
+R {    7} {0} {<068>} {Stetstar Station} { } {The hallway bends here, heading starboard toward the center of the ship and aft toward parts unknown.  Every surface in sight is clean and shiny, except for a trail of dirt on the floor.  The smell of brewing coffee wafts from the aft corridor.} {} {} {} {} {1.000}
+E {    5} {e} {starboard} {2} {0} {}
+E {    9} {s} {aft} {4} {0} {}
+
+R {    8} {0} {<068>} {Stetstar Station} { } {This barracks area houses sixteen crewmen in a spartan but creatively utilized volume.  Eight bunks line each wall.  Beneath each bunk is a desk area\; at the foot of each is a large locker.  Small chairs are tucked under the desks.  The beds are all neatly made, but clearly the living spaces are utilized.  The desks are piled with books, holopens, correspondence, and knickknacks.} {} {} {} {} {1.000}
+E {    6} {n} {fore} {1} {0} {}
+
+R {    9} {0} {<068>} {Stetstar Station} { } {The ship's galley is small and functional.  A long counter runs along one wall.  Cabinets take up most of the space underneath.  The volume above the countertop contains an assortment of unfamiliar devices that are probably related to food preparation.  You don't recognize a microwave or refrigerator anywhere, though.  A glass coffee carafe sits on the countertop under a nozzle.  Three small tables line the outer wall, separated by bulkheads.} {} {} {} {} {1.000}
+E {    7} {n} {fore} {1} {0} {}
+
+R {   10} {0} {<068>} {Stetstar Station} { } {The central control room of Stetstar Station is lined with video screens showing space in every direction.  Consoles bedecked with arcane lights and controls run almost all the way around the room.  On an elevated platform in the middle of this blinking chaos is a set of three command chairs.} {} {} {} {} {1.000}
+E {    5} {s} {aft} {4} {0} {}

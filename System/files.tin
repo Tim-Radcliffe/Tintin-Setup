@@ -1,0 +1,166 @@
+#NOP {command} {parameters};
+#ALIAS {.file}
+{
+	#NOP %1;
+	#SWITCH {"%1"}
+	{
+		#CASE {"load"}
+		{
+			#RETURN {@fFileLoad{%2}};
+		};
+		#CASE {"loadall"}
+		{
+			#RETURN {@fFileLoadAll{%2}};
+		};
+		#CASE {"read"}
+		{
+			#ECHO {@fFileRead{%2}};
+		};
+		#CASE {"list"}
+		{
+			#VAR {_file[List]} {@fFileList{%1};};
+			#FOREACH {$_file[List][%*]} {_file[Name]} {#ECHO {$_file[Name]};};
+			#UNVAR {_file};
+		};
+		#CASE {"tree"}
+		{
+			#VAR {_file[List]} {@fFileDirTree{%1}};
+			#FOREACH {$_file[List][%*]} {_file[Name]} {#ECHO {$_file[Name]};};
+			#UNVAR {_file};	  
+		};
+		#DEFAULT 
+		{
+			#ECHO {Recognised commands are load,loadall,read,list,tree};
+		};
+	};
+};
+
+#FUNCTION {fFileLoad}
+{
+	.debug FILE {LOAD: %1};
+	#CLASS {%1} {kill};
+	#CLASS {%1} {open};
+	#READ {%1};
+	#CLASS {%1} {close};
+	#RETURN;
+};
+
+#FUNCTION {fFileWrite}
+{
+	.debug FILE {WRITE: %1};
+	#CLASS {%1} {write} {%1};
+};
+
+#FUNCTION {fFileLoadAll}
+{
+	#LOCAL {_fFLA[spec]} {@fParseFilePath{%1}};
+	#LOCAL {_fFLA[list]} {@fFileList{{$_fFLA[spec][path]}{$_fFLA[spec][name].$_fFLA[spec][ext]}}};
+	#IF {"$_fFLA[list]" != ""}
+	{
+		#FOREACH {$_fFLA[list][%*]} {file} 
+		{
+			#LOCAL {_fFLA[output]} {@fFileLoad{$file}};
+		};
+	};
+	#UNVAR {_fFLA};
+	#RETURN {$_fFLA[output]};
+};
+
+#FUNCTION {fFileList}
+{
+  #LOCAL {_fFileList} {};
+	#IF {"%2" != ""}
+	{
+		#SCRIPT {_fFileList} {find "%1" -name "%2" -type f -maxdepth 1 2>/dev/null};
+	};
+	#ELSE
+	{
+		#SCRIPT {_fFileList} {find "%1" -type f -maxdepth 1 2>/dev/null};
+	};
+	#RETURN {$_fFileList};
+};
+
+#FUNCTION {fFileRead}
+{
+	#LOCAL {_fFileRead} {};
+	#LINE SUBSTITUTE VARIABLE {#SCRIPT {_fFileRead} {while read -r line; do echo "$line"; done < %1};};
+	#RETURN {$_fFileRead};
+};
+
+#FUNCTION {fFileExists}
+{
+	.debug FILE {fFileExists : %0}; 
+	#LOCAL {_fFileExists} {};
+	#SCRIPT {_fFileExists} {test -e "%1" && echo "1" || echo "0"};
+	.debug FILE {fFileExists : RETURN : $_fFileExists[1]}; 
+	#RETURN {$_fFileExists[1]};
+};
+
+#FUNCTION {fFileCreateDir}
+{
+	#SCRIPT {mkdir -p "%1"};
+};
+
+#FUNCTION {fFileDirTree}
+{
+	#LOCAL {_fFileDirTree} {}
+	#SCRIPT {_fFileDirTree} {find "%1" -type d};
+	#RETURN {$_fFileDirTree};
+};
+
+#FUNCTION {fFileGetPath}
+{
+	.debug FILE {fFileGetPath : %0};
+	#LOCAL {_fFGP} {};
+	#REGEXP {%1} {{^\/*((.+)\/)*}}
+	{
+		#IF {"&1" != ""}
+		{
+			.debug FILE {fFileGetPath : RETURN : &3};       
+			#FORMAT {_fFGP} %s {&3};
+		};
+	};
+	#RETURN {$_fFGP};	
+};
+
+#FUNCTION {fFileGetName}
+{
+	.debug FILE {fFileGetName : %0};
+	#LOCAL {_fFGN} {}; 
+	#REGEXP {%1} {{^(.*\/|)([^\.]+)(\.(.+)|)$}}
+	{
+		#IF {"&1" != ""}
+		{
+			.debug FILE {fFileGetName : RETURN : &3};            
+			#FORMAT {_fFGN} %s {&3};
+		};
+	};
+	#RETURN {$_fFGN};
+};
+
+#FUNCTION {fFileGetExt}
+{
+	.debug FILE {fFileGetExt : %0};
+	#LOCAL {_fFGE} {};
+	#REGEXP {%1} {{^.*\.(.+)$}}
+	{
+		#IF {"&1" != ""}
+		{
+			.debug FILE {fFileGetExt : RETURN : &2};            
+			#FORMAT {_fFGE} %s {&2};
+		};
+	};
+	#RETURN {$_fFGE};
+};
+
+#FUNCTION {fParseFilePath}
+{
+	#LOCAL {_fParseFilePath} {};
+	#REGEXP {%1} {{^(.*\/|)([^\.]+)\.((.+)|)$}}
+	{
+		#FORMAT {_fParseFilePath[path]} %s {&2};
+		#FORMAT {_fParseFilePath[name]} %s {&3};
+		#FORMAT {_fParseFilePath[ext]} %s {&4};
+	};
+	#RETURN {$_fParseFilePath};
+};

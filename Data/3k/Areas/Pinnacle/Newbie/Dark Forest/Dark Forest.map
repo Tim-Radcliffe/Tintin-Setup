@@ -1,0 +1,67 @@
+C 500
+
+CE <278>
+CH <118>
+CP <138>
+CR <178>
+CB 
+
+F 8
+
+I 1
+
+L ▪ ╹ ╺ ┗ ╻ ┃ ┏ ┣ ╸ ┛ ━ ┻ ┓ ┫ ┳ ╋ X
+
+
+R {    1} {0} {<068>} {trail} { } {You are travelling along a dark path through the forest. Many strange noises come from the woods all around you. The path makes its way deeper into the forest to the south.  A hole is in the middle of the path.} {} {} {} {} {1.000}
+E {    2} {hole} {.mapLink {Pinnacle/Newbie} {26} {hole};} {0} {0} {}
+E {    3} {s} {s} {4} {0} {}
+
+R {    2} {0} {<000>} {} {<138>*} {} {..} {link;} {} {} {1.000}
+
+R {    3} {0} {<178>} {haunted grove} { } {You are travelling along a dark path through the forest. Many strange noises come from the woods all around you. The path makes its way deeper into the forest to the southwest and also to the north.} {} {} {} {} {1.000}
+E {    1} {n} {n} {1} {0} {}
+E {    4} {sw} {sw} {12} {0} {}
+
+R {    4} {0} {<178>} {haunted grove} { } {You are in a dark and haunted grove. Strange noises surround you and you feel like you are being watched.  Dead leaves and branches are scattered on the ground around your feet.} {} {} {} {} {1.000}
+E {    3} {ne} {ne} {3} {0} {}
+E {    5} {s} {s} {4} {0} {}
+E {    6} {w} {w} {8} {0} {}
+E {    7} {e} {e} {2} {0} {}
+
+R {    5} {0} {<178>} {haunted grove} { } {You are in a dark and haunted grove. Strange noises surround you and you feel like you are being watched.  Dead leaves and branches are scattered on the ground around your feet.} {} {} {} {} {1.000}
+E {    4} {n} {n} {1} {0} {}
+E {    8} {w} {w} {8} {0} {}
+E {   10} {e} {e} {2} {0} {}
+
+R {    6} {0} {<178>} {haunted grove} { } {You are in one corner of the grove. There are many bones lying around here.  It looks like most of the bones are human.  Most likely, the bones are being used to create skeletons and such. Usually, there are a few of them here to greet you.} {} {} {} {} {1.000}
+E {    4} {e} {e} {2} {0} {}
+E {    8} {s} {s} {4} {0} {}
+
+R {    7} {0} {<178>} {haunted grove} { } {You are in a dark and haunted grove. Strange noises surround you and you feel like you are being watched.  Dead leaves and branches are scattered on the ground around your feet.} {} {} {} {} {1.000}
+E {    4} {w} {w} {8} {0} {}
+E {   10} {s} {s} {4} {0} {}
+
+R {    8} {0} {<178>} {haunted grove} { } {This part of the haunted grove seems rather old. There are many body parts lying all over and the smell is really bad.  It looks like some of the parts are moving.} {} {} {} {} {1.000}
+E {    6} {n} {n} {1} {0} {}
+E {    9} {s} {s} {4} {0} {}
+E {    5} {e} {e} {2} {0} {}
+
+R {    9} {0} {<178>} {haunted grove} { } {You are at a real dead end in the grove.  The wind whistles through the trees and you feel something is watching you from the underbrush.  All around your feet are dead leaves and old branches that crinkle beneath your weight.} {} {} {} {} {1.000}
+E {    8} {n} {n} {1} {0} {}
+
+R {   10} {0} {<178>} {haunted grove} { } {You are in a dark and haunted grove. Strange noises surround you and you feel like you are being watched.  Dead leaves and branches are scattered on the ground around your feet.} {} {} {} {} {1.000}
+E {    5} {w} {w} {8} {0} {}
+E {    7} {n} {n} {1} {0} {}
+E {   11} {s} {s} {4} {0} {}
+
+R {   11} {0} {<178>} {path} { } {You have found a path leading south from the grove. There is a weird feeling coming from the west.  You think You can see spirits floating in the air.  Anyway, the haunted grove is back to the north.} {} {} {} {} {1.000}
+E {   10} {n} {n} {1} {0} {}
+E {   12} {w} {w} {8} {0} {}
+
+R {   12} {0} {<178>} {path} { } {This is a small path leading through the haunted grove. You can see a small, run-down hut to the south and the path continues to the east.} {} {} {} {} {1.000}
+E {   11} {e} {e} {2} {0} {}
+E {   13} {s} {s} {4} {0} {}
+
+R {   13} {0} {<178>} {hut} { } {You are in a small hut at the end of a forest path. Musty air fills the little building and it's very cold here. Everything is covered with dust and you can barely see through the haze.} {} {} {} {} {1.000}
+E {   12} {n} {n} {1} {0} {}

@@ -1,0 +1,157 @@
+#NOP **** Variables ****
+
+#VAR {room} {};
+
+#NOP **** Triggers ****
+#NOP ** brief no map
+
+#NOP ** brief/verbose with map
+#NOP #ACTION {{^(\S.{68})[?:\@|\+|\^|v|E].*}}
+{
+    #REGEXP {%1} {{(.*) \(([a-z,]*)\).*$}}
+    {
+        #VAR {room} {};
+        #VAR {room[name]} {&2};
+        #NOP handler_parse_room_exits {&3};
+        event_raise {e_room_header};
+    };
+} {2};
+
+#NOP *********** Aliases **************;
+
+#ALIAS {handler_room_contents}
+{
+  #NOP %1;
+  #IF {@fLocked{}} {#RETURN};
+  #LIST {temp[tokenized]} {create} {%2};
+  #VAR {temp[item][id]} {$temp[tokenized][2]};
+  #VAR {temp[item][name]} {$temp[tokenized][3]};
+  #REPLACE {temp[tokenized][4]} {/} {;};
+  #REPLACE {temp[tokenized][4]} {#N} {$temp[tokenized][2]};
+  #LIST {temp[item][actions]} {create} {$temp[tokenized][4]};
+  #LIST {room[contents][$temp[tokenized][1]]} {add} {{$temp[item]}};
+  #SWITCH {"${temp[tokenized][1]}"}
+  {
+    #CASE {"npc"}
+    {
+      #VAR {temp[item][data]} {$_npc[@fGetNPCRegex{$temp[item][name]}]};
+    };
+    #CASE {"item"}
+    {
+      #VAR {temp[item][data]} {$_item[@fGetItemRegex{$temp[item][name]}]};
+    };
+  };
+  event_raise e_room_${temp[tokenized][1]} {$temp[item][id]} {$temp[item][name]} {$temp[item][actions]} {$temp[item][data]};
+};
+event_register e_mip_HAA h_room_contents handler_room_contents;
+event_register e_mip_HAB h_room_contents handler_room_contents;
+
+#ALIAS {handler_room_end}
+{
+  #NOP %1;
+  #IF {&room[contents][player][] <= 0}
+  {
+    event_raise e_roomscan_end;
+    #IF {"&RoomScan[commandqueue][1]" != "0"}
+    {
+      #FOREACH {$RoomScan[commandqueue][%*]} {v} 
+      {
+        #LINE SUBSTITUTE VARIABLES {$v};
+      };
+      #UNVAR {RoomScan[commandqueue]};
+    };
+    #IF {&RoomScan[pause][] <= 0}
+    {
+      event_raise e_roomscan_finished;
+    };
+  }
+  {
+    event_raise e_roomscan_finished;
+  };
+};
+
+#ALIAS {.HandlerRoomExits}
+{
+  #NOP %1;
+  #IF {"$mip[last]" != "BAD"}
+  {
+    #VAR {room[exits]} {%2};
+    #REPLACE {room[exits]} {,} {;};
+  };
+};
+event_register {e_mip_DDD} {h_room_exits} {.HandlerRoomExits};
+
+#ALIAS {.HandlerRoomName}
+{
+  #NOP %1;
+  #VAR {room} {};      
+  #REGEXP {%2} {{^(.*?)\s*\(([a-z\s,]*)\)\s*$}}
+  {
+    #VAR {room[name]} {&2};
+  }
+  {
+    #VAR {room[name]} {%2};
+  };  
+  event_oneshot e_prompt h_room_enter {event_raise e_room_enter {#NOP %%1};};    
+  event_oneshot e_prompt h_room_end handler_room_end;
+};
+#NOP event_register {e_mip_BAD} {h_room_name} {.HandlerRoomName};
+event_register {e_ansiflag_R} {h_room_name} {.HandlerRoomName};
+
+#ALIAS {handler_room_pickup}
+{
+  #NOP %1;
+  
+  #FOREACH {*_item[%*]} {v}
+  {
+    #IF {"$RoomScan[break]" != "1"}
+    {
+      #REGEXP {%3} {{$v}}
+      {
+        .debug PICKUP {MATCH ${v} : %3};
+        #IF {"$_item[$v][pickup]" == "-1"}
+        {
+          #UNVAR {RoomScan[commandbuffer]};
+          #VAR {RoomScan[break]} {1};
+        }
+        {
+          #IF {"$_item[$v][pickup]" == "1"}
+          {
+            #IF {"$_item[$v][pickup_command]" != ""}
+            {
+              #VAR {RoomScan[commandbuffer]} {$_item[$v][pickup_command]};              
+            }
+            #ELSE
+            {
+              #VAR {RoomScan[commandbuffer]} {@fAutoGetCommand{%2}};
+            };
+          };
+        };
+      };
+    };
+  };
+
+  
+  #IF {"$RoomScan[commandbuffer]" != ""}
+  {
+    #LIST {RoomScan[commandqueue]} {add} {$RoomScan[commandbuffer]};
+  };
+  #ELSEIF {"$RoomScan[break]" != "1" && "$flags[autopickup]" == "2"}
+  {
+    #LIST {RoomScan[commandqueue]} {add} {@fAutoGetCommand{%2}};
+  };
+  
+  #UNVAR {RoomScan[break]};
+  #UNVAR {RoomScan[commandbuffer]};
+};
+
+/* Returns all the commands to perform when getting an object */
+#FUNCTION {fAutoGetCommand}
+{
+    #LOCAL {_fAGC} {#SEND {!get %0}};
+    #IF {$auto[bag][status]}
+    {
+        #LOCAL {_fAGC} {${_fAGC};#SEND {!put %0 in bag};};
+    };
+    #RETURN {$_fAGC};
+};

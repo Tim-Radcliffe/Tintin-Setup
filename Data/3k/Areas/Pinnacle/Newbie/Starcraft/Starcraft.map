@@ -1,0 +1,61 @@
+C 500
+
+CE <278>
+CH <118>
+CP <138>
+CR <178>
+CB 
+
+F 9
+
+I 7
+
+L ▪ ╹ ╺ ┗ ╻ ┃ ┏ ┣ ╸ ┛ ━ ┻ ┓ ┫ ┳ ╋ X
+
+
+R {    1} {0} {<068>} {A Lifeless Area} { } {You stand in an area that you can only describe as an absence of life. There is only one tree within your view, but it is only a burnt out shell of its former self. The ground has been churned over and over by mechanized vehicles, massive troop movements and many battles. You can see a bunker to the south, and another one to the southwest.} {} {} {} {} {1.000}
+E {    3} {e} {e} {2} {0} {}
+E {    4} {se} {se} {6} {0} {}
+E {    6} {nw} {nw} {9} {0} {}
+E {    7} {sw} {sw} {12} {0} {}
+E {   10} {hole} {.mapLink {Pinnacle/Newbie} {23} {hole};} {0} {0} {}
+E {    5} {ne} {ne} {3} {0} {}
+E {    1} {n} {n} {1} {0} {}
+E {    1} {w} {w} {8} {0} {}
+E {    7} {s} {s} {4} {0} {}
+
+R {    3} {0} {<109>} {} { } {} {} {} {} {} {1.000}
+E {    1} {w} {w} {8} {0} {}
+
+R {    4} {0} {} {} { } {} {} {} {} {} {1.000}
+E {    1} {nw} {nw} {9} {0} {}
+E {    7} {w} {w} {8} {0} {}
+E {    7} {sw} {sw} {12} {0} {}
+E {    4} {s} {s} {4} {0} {}
+E {    4} {se} {se} {6} {0} {}
+E {    4} {e} {e} {2} {0} {}
+
+R {    5} {0} {<109>} {} { } {} {} {} {} {} {1.000}
+E {    1} {sw} {sw} {12} {0} {}
+
+R {    6} {0} {} {A rocky forest} { } {You stand in the middle of a forest, or at least what used to be one. There are only a few sickly looking trees still standing. There are a few tufts of grass here and there, but the ground is mostly covered with rock. You can see a bunker to the south. There are trails leading south and southeast from here. } {} {} {} {} {1.000}
+E {    1} {se} {se} {6} {0} {}
+E {    6} {e} {e} {2} {0} {}
+E {    6} {ne} {ne} {3} {0} {}
+E {    6} {n} {n} {1} {0} {}
+E {    6} {nw} {nw} {9} {0} {}
+E {    6} {w} {w} {8} {0} {}
+E {    6} {sw} {sw} {12} {0} {}
+E {    7} {s} {s} {4} {0} {}
+
+R {    7} {0} {} {} { } {} {} {} {} {} {1.000}
+E {    1} {ne} {ne} {3} {0} {}
+E {    6} {n} {n} {1} {0} {}
+E {    7} {nw} {nw} {9} {0} {}
+E {    7} {w} {w} {8} {0} {}
+E {    7} {sw} {sw} {12} {0} {}
+E {    7} {s} {s} {4} {0} {}
+E {    7} {se} {se} {6} {0} {}
+E {    4} {e} {e} {2} {0} {}
+
+R {   10} {0} {<000>} {} {<138>*} {} {..} {link;} {} {} {1.000}

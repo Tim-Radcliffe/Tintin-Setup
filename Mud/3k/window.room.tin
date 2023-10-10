@@ -1,0 +1,35 @@
+#VAR {winRoom} {};
+
+#ALIAS {.HandlerWinTitle}
+{
+  #VAR {winRoom[contents]} {};
+  .WindowSetLine {room} {1} {%2};
+};
+event_register {e_ansiflag_R} {h_window_room} {.HandlerWinTitle};
+
+#ALIAS {.HandlerWinExits}
+{
+  #NOP %1;
+  #VAR {winRoom[line]} {%2};
+  #REPLACE {winRoom[line]} {;} {, };
+  .WindowSetLine {room} {2} {Exits: $winRoom[line]};
+};
+event_register {e_mip_DDD} {h_window_room} {.HandlerWinExits};
+
+#ALIAS {.HandlerWinContent}
+{
+  #NOP %1;
+  #VAR {_HWC} {};
+  #LIST {_HWC[data]} {CREATE} {%2};
+  #VAR {winRoom[contents][$_HWC[data][1]][$_HWC[data][2]]} {{name}{$_HWC[data][2]}{desc}{$_HWC[data][3]}{action}{$_HWC[data][4]}};
+  #FOREACH {*winRoom[contents][]} {v}
+  {
+    #VAR {_HWC[$v]} {@fCommaList{*winRoom[contents][$v][]}};    
+  };
+  .WindowSetLine {room} {3} {Noun : $_HWC[noun]};
+  .WindowSetLine {room} {4} {Mob  : $_HWC[npc]};
+  .WindowSetLine {room} {5} {Item : $_HWC[item]};
+  .WindowRefresh {room};
+};
+event_register {e_mip_HAA} {h_window_room} {.HandlerWinContent};
+event_register {e_mip_HAB} {h_window_room} {.HandlerWinContent};

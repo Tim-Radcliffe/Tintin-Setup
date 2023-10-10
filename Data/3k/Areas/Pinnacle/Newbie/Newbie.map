@@ -1,0 +1,224 @@
+C 50000
+
+CE <278>
+CH <118>
+CP <138>
+CR <178>
+CB 
+
+F 9
+
+I 1
+
+L ▪ ╹ ╺ ┗ ╻ ┃ ┏ ┣ ╸ ┛ ━ ┻ ┓ ┫ ┳ ╋ X
+
+
+R {    1} {0} {<178>} {A weathered path} { } {} {} {} {} {} {1.000}
+E {    3} {s} {s} {4} {0} {}
+E {    2} {n} {.mapLink {Pinnacle} {113} {n};} {1} {1} {}
+
+R {    2} {0} {<000>} {LINK: Pinnacle} {<138>*} {} {Pinnacle} {{link}{}} {} {} {1.000}
+E {    1} {s} {s} {4} {0} {}
+
+R {    3} {0} {<178>} {Newbie tower courtyard} { } {} {} {} {} {} {1.000}
+E {    1} {n} {n} {1} {0} {}
+E {    4} {s} {s} {4} {0} {}
+E {    5} {w} {w} {8} {0} {}
+
+R {    4} {0} {<178>} {Newbie Tower: Entrance} { } {} {} {} {} {} {1.000}
+E {    3} {n} {n} {1} {0} {}
+E {    6} {se} {se} {6} {0} {}
+E {    7} {sw} {sw} {12} {0} {}
+E {    8} {s} {s} {4} {0} {}
+
+R {    5} {0} {<178>} {A weathered path.} { } {} {} {} {} {} {1.000}
+E {    3} {e} {e} {2} {0} {}
+
+R {    6} {0} {<178>} {Newbie Tower: Armory} { } {} {} {} {} {} {1.000}
+E {    4} {nw} {nw} {9} {0} {}
+E {    9} {sw} {sw} {12} {0} {}
+E {    8} {w} {w} {8} {0} {}
+
+R {    7} {0} {<178>} {Newbie Tower: Sage} { } {} {} {} {} {} {1.000}
+E {    4} {ne} {ne} {3} {0} {}
+E {    8} {e} {e} {2} {0} {}
+E {    9} {se} {se} {6} {0} {}
+E {   12} {w} {w} {8} {0} {}
+
+R {    8} {0} {<178>} {Newbie Tower: Stairs} { } {} {} {} {} {} {1.000}
+E {    4} {n} {n} {1} {0} {}
+E {    6} {e} {e} {2} {0} {}
+E {   10} {u} {u} {16} {0} {}
+E {    9} {s} {s} {4} {0} {}
+E {    7} {w} {w} {8} {0} {}
+E {   11} {d} {d} {32} {0} {}
+
+R {    9} {0} {<068>} {Newbie Tower: Forest Door} { } {} {} {} {} {} {1.000}
+E {    6} {ne} {ne} {3} {0} {}
+E {    8} {n} {n} {1} {0} {}
+E {    7} {nw} {nw} {9} {0} {}
+E {   13} {s} {out} {4} {0} {}
+
+R {   10} {0} {<048>} {Newbie Tower: Advancement} { } {The epicenter of the Newbie Hall.  Many adventurers run through here on a crusade to hone their skills.  Within these walls, adventurers are able to advance their levels and stats, provided they have earned the required amounts of experience.  Others gather information on various quests available to those that seek them.  The sounds of battle rage from the strange doorway to the south, while the legendary mirror rooms are accessed through the remaining doorway to the north.  A circular staircase leads down from here to the primary level.  A bright blue portal hangs in the air here.  There are indications that it will take you to the adventurer's guild hall in the town of Pinnacle.  You should go there when your treks through newbieland are complete.  There's a small placard here. Commands: advance [level,str,con,int,wis,dex,cha]           cost, tally, required, questansi,           list [name -or- # -or- short] } {} {} {} {} {1.000}
+E {    8} {d} {d} {32} {0} {}
+E {   23} {n} {n} {1} {0} {}
+E {   24} {s} {s} {4} {0} {}
+
+R {   11} {0} {<109>} {} { } {} {} {} {} {} {1.000}
+E {    8} {u} {u} {16} {0} {}
+
+R {   12} {0} {<109>} {} { } {} {} {} {} {} {1.000}
+E {    7} {e} {e} {2} {0} {}
+
+R {   13} {0} {<068>} {Newbie Tower: Forest} { } {} {} {} {} {} {1.000}
+E {    9} {n} {enter} {1} {0} {}
+E {   14} {s} {s} {4} {0} {}
+
+R {   14} {0} {<178>} {Newbie Tower: Forest} { } {} {} {} {} {} {1.000}
+E {   13} {n} {n} {1} {0} {}
+E {   15} {s} {s} {4} {0} {}
+E {   16} {w} {w} {8} {0} {}
+E {   17} {e} {e} {2} {0} {}
+
+R {   15} {0} {<178>} {Newbie Tower: Forest} { } {} {} {} {} {} {1.000}
+E {   14} {n} {n} {1} {0} {}
+E {   19} {w} {w} {8} {0} {}
+E {   20} {s} {s} {4} {0} {}
+E {   21} {e} {e} {2} {0} {}
+
+R {   16} {0} {<178>} {Newbie Tower: Forest} { } {} {} {} {} {} {1.000}
+E {   14} {e} {e} {2} {0} {}
+E {   18} {sw} {sw} {12} {0} {}
+E {   19} {s} {s} {4} {0} {}
+
+R {   17} {0} {<178>} {} { } {} {} {} {} {} {1.000}
+E {   14} {w} {w} {8} {0} {}
+E {   21} {s} {s} {4} {0} {}
+E {   22} {se} {se} {6} {0} {}
+
+R {   18} {0} {<178>} {Newbie Tower: Forest} { } {} {} {} {} {} {1.000}
+E {   16} {ne} {ne} {3} {0} {}
+E {   19} {e} {e} {2} {0} {}
+
+R {   19} {0} {<178>} {Newbie Tower: Forest} { } {} {} {} {} {} {1.000}
+E {   16} {n} {n} {1} {0} {}
+E {   18} {w} {w} {8} {0} {}
+E {   20} {se} {se} {6} {0} {}
+E {   15} {e} {e} {2} {0} {}
+
+R {   20} {0} {<178>} {Newbie Tower: Forest} { } {} {} {} {} {} {1.000}
+E {   19} {nw} {nw} {9} {0} {}
+E {   15} {n} {n} {1} {0} {}
+E {   21} {ne} {ne} {3} {0} {}
+
+R {   21} {0} {<178>} {Newbie Tower: Forest} { } {} {} {} {} {} {1.000}
+E {   15} {w} {w} {8} {0} {}
+E {   20} {sw} {sw} {12} {0} {}
+E {   17} {n} {n} {1} {0} {}
+E {   22} {e} {e} {2} {0} {}
+
+R {   22} {0} {<178>} {Newbie Tower: Forest} { } {} {} {} {} {} {1.000}
+E {   21} {w} {w} {8} {0} {}
+E {   17} {nw} {nw} {9} {0} {}
+
+R {   23} {0} {<068>} {Newbie Tower: Mirror Chamber} { } {The large chamber stretches out in various directions.  The walls are all painted light blue with various colored stars decorating them.  The floor is covered with a plush dark blue carpet from wall to wall, and various mirrors are placed in random locations upon it.  A flowing silver lettered banner floats magically above each group of enchanted mirrors.  The doorway to the south leads back to the Newbie Tower.} {} {} {} {} {1.000}
+E {   10} {s} {s} {4} {0} {}
+E {   25} {ne} {ne} {3} {0} {}
+E {   26} {nw} {nw} {9} {0} {}
+E {   27} {n} {n} {1} {0} {}
+E {   29} {enter mirror 1} {.mapLink {Pinnacle/Newbie/Starcraft} {} {enter mirror 1};} {0} {0} {}
+E {   30} {enter mirror 2} {.mapLink {Pinnacle/Newbie/Halfway's Space Station} {} {enter mirror 2};} {0} {0} {}
+E {   31} {enter mirror 3} {.mapLink {Pinnacle/Newbie/Resource Crisis} {} {enter mirror 3};} {0} {0} {}
+E {   32} {enter mirror 4} {.mapLink {Pinnacle/Newbie/The Golden Hawk Bar} {} {enter mirror 4};} {0} {0} {}
+E {   33} {enter mirror 5} {.mapLink {Pinnacle/Newbie/Codename: Kodiak} {} {enter mirror 5};} {0} {0} {}
+
+R {   24} {0} {<178>} {Newbie Tower:Challenge Room} { } {} {} {} {} {} {1.000}
+E {   10} {n} {n} {1} {0} {}
+
+R {   25} {0} {<068>} {Newbie Tower: Mirror Chamber} { } {Stars upon the walls glow radiantly as they reflect the light from the silver liquid upon each mirror.  A flowing banner overhead details the instructions for the use of each nearby mirror, as well as stating who the creator of each of these magical portals is.  The chamber decor is blue and silver.  The only other variations are the stars upon the wall.} {} {} {} {} {1.000}
+E {   23} {sw} {sw} {12} {0} {}
+E {   28} {nw} {nw} {9} {0} {}
+E {   27} {w} {w} {8} {0} {}
+E {   34} {enter mirror 1} {.mapLink {Pinnacle/Newbie/Lothlarian} {} {enter mirror 1};} {0} {0} {}
+E {   35} {enter mirror 2} {.mapLink {Pinnacle/Newbie/Elven Hills} {} {enter mirror 2};} {0} {0} {}
+E {   36} {enter mirror 3} {.mapLink {Pinnacle/Newbie/Peasant Farm} {} {enter mirror 3};} {0} {0} {}
+E {   37} {enter mirror 4} {.mapLink {Pinnacle/Newbie/Newbie Hell} {} {enter mirror 4};} {0} {0} {}
+E {   38} {enter mirror 5} {.mapLink {Pinnacle/Newbie/Browning Estate} {} {enter mirror 5};} {0} {0} {}
+E {   39} {enter mirror 6} {.mapLink {Pinnacle/Newbie/Stetstar Station} {} {enter mirror 6};} {0} {0} {}
+
+R {   26} {0} {<068>} {Newbie Tower: Mirror Chamber} { } {The chamber stretches out in various directions.  The entrance back into Newbie Tower lies southeast.  The stars upon the walls appear to reflect the light emanating from the liquid upon the mirrors.  Yet another banner floats over the group of mirrors in this section of the mythical 'Mirror Chamber'.  A wise adventurer would read it prior to experimenting with the mirrors' usages.} {} {} {} {} {1.000}
+E {   23} {se} {se} {6} {0} {}
+E {   28} {ne} {ne} {3} {0} {}
+E {   27} {e} {e} {2} {0} {}
+E {   45} {enter mirror 1} {.mapLink {Pinnacle/Newbie/Newbie Farm} {} {enter mirror 1};} {0} {0} {}
+E {   46} {enter mirror 2} {.mapLink {Pinnacle/Newbie/New Kobold Cave} {} {enter mirror 2};} {0} {0} {}
+E {   47} {enter mirror 3} {.mapLink {Pinnacle/Newbie/Newbie Forest} {} {enter mirror 3};} {0} {0} {}
+E {   48} {enter mirror 4} {.mapLink {Pinnacle/Newbie/Dark Forest} {} {enter mirror 4};} {0} {0} {}
+
+R {   27} {0} {<068>} {Newbie Tower: Mirror Chamber} { } {The center of the chamber is littered with mirrors placed in random locations.  Above them all is a floating banner that details the instructions for their use.  Many adventurers are seen wandering around examining each mirror in turn.  Some of the braver souls are stepping within them and vanishing.  The entrance back into the Newbie Tower lies southward across the plush blue carpeting on the floor.} {} {} {} {} {1.000}
+E {   23} {s} {s} {4} {0} {}
+E {   26} {w} {w} {8} {0} {}
+E {   28} {n} {n} {1} {0} {}
+E {   25} {e} {e} {2} {0} {}
+E {   40} {enter mirror 1} {.mapLink {Pinnacle/Newbie/Duploland (II)} {} {enter mirror 1};} {0} {0} {}
+E {   41} {enter mirror 2} {.mapLink {Pinnacle/Newbie/Undead Keep} {} {enter mirror 2};} {0} {0} {}
+E {   42} {enter mirror 3} {.mapLink {Pinnacle/Newbie/Ralintaro's Tower} {} {enter mirror 3};} {0} {0} {}
+E {   43} {enter mirror 4} {.mapLink {Pinnacle/Newbie/Newbie Cathedral} {} {enter mirror 4};} {0} {0} {}
+E {   44} {enter mirror 5} {.mapLink {Pinnacle/Newbie/Newbieland} {} {enter mirror 5};} {0} {0} {}
+
+R {   28} {0} {<068>} {Newbie Tower: Mirror Chamber} { } {The chamber continues on as do the groups of mirrors.  A silver lettered banner hovers overhead as if it were magically suspended in mid-air.  The plush blue carpeting covers every square inch of the floor.  The silver liquid upon each mirror glows ominously and illuminates the entire area.} {} {} {} {} {1.000}
+E {   26} {sw} {sw} {12} {0} {}
+E {   25} {se} {se} {6} {0} {}
+E {   27} {s} {s} {4} {0} {}
+E {   49} {enter mirror 1} {.mapLink {Pinnacle/Newbie/Barracks} {} {enter mirror 1};} {0} {0} {}
+E {   50} {enter mirror 2} {.mapLink {Pinnacle/Newbie/House of Cards} {} {enter mirror 2};} {0} {0} {}
+E {   51} {enter mirror 3} {.mapLink {Pinnacle/Newbie/New World Fitness} {} {enter mirror 3};} {0} {0} {}
+E {   52} {enter mirror 4} {.mapLink {Pinnacle/Newbie/Uslopta's Tower} {} {enter mirror 4};} {0} {0} {}
+
+R {   29} {0} {<000>} {} {<138>*} {} {Starcraft} {link;} {} {} {1.000}
+
+R {   30} {0} {<000>} {} {<138>*} {} {Halfway's Space Station} {link;} {} {} {1.000}
+
+R {   31} {0} {<000>} {} {<138>*} {} {Resource Crisis} {link;} {} {} {1.000}
+
+R {   32} {0} {<000>} {} {<138>*} {} {The Golden Hawk Bar} {link;} {} {} {1.000}
+
+R {   33} {0} {<000>} {} {<138>*} {} {Codename: Kodiak} {link;} {} {} {1.000}
+
+R {   34} {0} {<000>} {} {<138>*} {} {Lothlarian} {link;} {} {} {1.000}
+
+R {   35} {0} {<000>} {} {<138>*} {} {Elven Hills} {link;} {} {} {1.000}
+
+R {   36} {0} {<000>} {} {<138>*} {} {Peasant Farm} {link;} {} {} {1.000}
+
+R {   37} {0} {<000>} {} {<138>*} {} {Newbie Hell} {link;} {} {} {1.000}
+
+R {   38} {0} {<000>} {} {<138>*} {} {Browning Estate} {link;} {} {} {1.000}
+
+R {   39} {0} {<000>} {} {<138>*} {} {Stetstar Station} {link;} {} {} {1.000}
+
+R {   40} {0} {<000>} {} {<138>*} {} {Duploland (II)} {link;} {} {} {1.000}
+
+R {   41} {0} {<000>} {} {<138>*} {} {Undead Keep} {link;} {} {} {1.000}
+
+R {   42} {0} {<000>} {} {<138>*} {} {Ralintaro's Tower} {link;} {} {} {1.000}
+
+R {   43} {0} {<000>} {} {<138>*} {} {Newbie Cathedral} {link;} {} {} {1.000}
+
+R {   44} {0} {<000>} {} {<138>*} {} {Newbieland} {link;} {} {} {1.000}
+
+R {   45} {0} {<000>} {} {<138>*} {} {Newbie Farm} {link;} {} {} {1.000}
+
+R {   46} {0} {<000>} {} {<138>*} {} {New Kobold Cave} {link;} {} {} {1.000}
+
+R {   47} {0} {<000>} {} {<138>*} {} {Newbie Forest} {link;} {} {} {1.000}
+
+R {   48} {0} {<000>} {} {<138>*} {} {Dark Forest} {link;} {} {} {1.000}
+
+R {   49} {0} {<000>} {} {<138>*} {} {Barracks} {link;} {} {} {1.000}
+
+R {   50} {0} {<000>} {} {<138>*} {} {House of Cards} {link;} {} {} {1.000}
+
+R {   51} {0} {<000>} {} {<138>*} {} {New World Fitness} {link;} {} {} {1.000}
+
+R {   52} {0} {<000>} {} {<138>*} {} {Uslopta's Tower} {link;} {} {} {1.000}

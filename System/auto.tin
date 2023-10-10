@@ -1,0 +1,105 @@
+#NOP /* Auto - framework to easily add and turn on/off automatic actions              */;
+#NOP /* By Balthus - 4th April 2016                                                   */;
+#NOP /*                                                                               */;
+#NOP /* Add a new automatic action with:                                              */;
+#NOP /* auto add {name} {start actions} {trigger events} {stop actions}               */;
+#NOP /*                                                                               */;
+#NOP /* Remove an action with:                                                        */;
+#NOP /* auto remove {name}                                                            */;
+#NOP /*                                                                               */;
+#NOP /* start actions defines what to do when turning this auto on                    */;
+#NOP /* and stop actions are cleanup actions when turning it off again                */;
+#NOP /*                                                                               */;
+#NOP /* whenever the trigger event for action "name" is encountered,                  */;
+#NOP /* the action handler_auto_name is fired (if the auto setting is turned on)      */;
+#NOP /*                                                                               */;
+#NOP /* auto            : lists all current settings with on/off status               */;
+#NOP /* auto {name}     : toggles the setting on and off.                             */;
+#NOP /* auto {name} on  : turns the setting on.                                       */;
+#NOP /* auto {name} off : turns it off                                                */;
+
+#NOP ************ Variables ************;
+#NOP #VAR {auto} {};
+#NOP ************ Aliases **************;
+#ALIAS {auto}
+{
+    #IF {"%1" == "" || "%1" == "status"}
+    {
+        #FOREACH {*auto[]} {i}
+        {
+            #IF {"$auto[$i][status]" == "1"}
+            {
+                #ECHO {AUTO: <128>$i on<098> $auto[$1][variable]};
+            }
+            {
+                #ECHO {AUTO: <118>$i off<098>};
+            };
+        };
+    };
+    #ELSEIF {"%1" == "add"}
+    {
+        #IF {"$auto[%2][status]" == ""} {#VAR {auto[%2][status]} {0};};
+        #IF {"%3" != ""} {#VAR {auto[%2][start]}  {%3};};
+        #IF {"%4" != ""} {#VAR {auto[%2][event]}  {%4};};
+        #IF {"%5" != ""} {#VAR {auto[%2][end]}    {%5};};
+    };
+    #ELSEIF {"%1" == "remove"}
+    {
+        #UNVAR {auto[%2]};
+    };
+    #ELSEIF {&auto[%1] != 0}
+    {
+        #IF     {"%2" == "on" || "%2" == "start"} {#VAR {auto[%1][status]} {0}};
+        #ELSEIF {"%2" == "off" || "%2" == "stop"} {#VAR {auto[%1][status]} {1}};
+        #ELSEIF {"%2" != ""}  {#VAR {auto[%1][variable]} {%2};#VAR {auto[%1][status]} {0}};
+
+        #IF {$auto[%1][status] == 0}
+        {
+            #VAR {auto[%1][status]} {1};
+            #IF {&auto[%1][start] != 0}
+            {
+                $auto[%1][start];
+            };
+            #IF {&auto[%1][event] != 0}
+            {
+                #FOREACH {$auto[%1][event]} {e}
+                {
+                    event_register $e h_auto_%1 handler_auto_%1;
+                };
+            };
+            #ECHO {AUTO: <128>%1 on<098> $auto[%1][variable]};
+        }
+        {
+            #VAR {auto[%1][status]} {0};
+            #UNVAR {auto[%1][variable]};
+            #IF {&auto[%1][event] != 0}
+            {
+                event_remove_handler h_auto_%1;
+            };
+            #IF {&auto[%1][end] != 0}
+            {
+                $auto[%1][end];
+            };
+            #ECHO {AUTO: <118>%1 off<098>};
+        };
+    };
+    #ELSE
+    {
+        #ECHO {AUTO: Parameter Not Recognised};
+    };
+};
+
+/* Turn all saved auto settings on after all the other scripts have loaded */
+#DELAY {1}
+{
+    #FOREACH {*auto[]} {i}
+    {
+        #IF {"$auto[$i][status]" == "1"}
+        {
+            auto {$i} on;
+        } 
+        {
+            auto {$i} off;
+        }
+    };
+};

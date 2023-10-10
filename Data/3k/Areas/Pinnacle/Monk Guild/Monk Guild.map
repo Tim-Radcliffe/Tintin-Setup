@@ -1,0 +1,52 @@
+C 500
+
+CE <278>
+CH <118>
+CP <138>
+CR <178>
+CB 
+
+F 9
+
+I 1
+
+L ▪ ╹ ╺ ┗ ╻ ┃ ┏ ┣ ╸ ┛ ━ ┻ ┓ ┫ ┳ ╋ X
+
+
+R {    1} {0} {<068>} {-= Peaceful Path =-} { } {-= Peaceful Path =- Small shrubs line the shaded path on both sides. Tiny black pebbles shine through the dirt. Various flowers, mostly orchids squeeze between the leafy shrubs. In the distance, ornate roof ridges can be seen peeking through the woods. The path is calm and peaceful. The only sounds are the buzzing of a few insects among the orchid blossoms, and the occasional echo of a bell ringing vibrantly from a sloping path leading down and to the west. } {} {} {} {} {1.000}
+E {    2} {e} {.mapLink {Pinnacle} {49} {e};} {2} {1} {}
+E {    3} {d} {d} {32} {0} {}
+
+R {    2} {0} {<000>} {LINK: Pinnacle} {<138>*} {} {Pinnacle} {link;} {} {} {1.000}
+E {    1} {w} {w} {8} {0} {}
+
+R {    3} {0} {<178>} {-= Peaceful Path =-} { } {-= Peaceful Path =- Small stone pillars line the time-worn path. Leafy vines creep up the pillars, their blossoms opening wide, adding splashes of color amid the shrub greenery. Surrounding each shrub and pillar is crushed pale stone. The path continues to the west through the shady trees. } {} {} {} {} {1.000}
+E {    1} {u} {u} {16} {0} {}
+E {    4} {w} {w} {8} {0} {}
+
+R {    4} {0} {<178>} {-= Peaceful Path =-} { } {-= Peaceful Path =- As the path opens up, the buildings housing the Monks begin to emerge from the trees. Tall oaks provide shade and comfort for those seeking refuge from the bright sun. The path is covered with pale stone and crumbling bricks. Small marble benches lie on either side, mixed among the stone tablets that lead travelers towards the Great Hall. } {} {} {} {} {1.000}
+E {    3} {e} {e} {2} {0} {}
+E {    5} {w} {w} {8} {0} {}
+
+R {    5} {0} {<178>} {-= Great Hall Courtyard =-} { } {-= Great Hall Courtyard =- Directly ahead stands the majestic Great Hall.  Slick black stones cover the path leading to the narrow steps. Guarding the entrance to the Great Hall stand two enormous stone lions, their teeth bared against any evil that may try to enter the sacred buildings. The Great Hall is made of earthen clay and covered with an ornate green roof. To the north is the Drum Tower, to the south lies the three-storied Bell Tower. } {} {} {} {} {1.000}
+E {    4} {e} {e} {2} {0} {}
+E {    6} {w} {w} {8} {0} {}
+E {    7} {n} {n} {1} {0} {}
+E {    8} {s} {s} {4} {0} {}
+
+R {    6} {0} {<178>} {-= Monastery Vestibule =-} { } {-= Monastery Vestibule =- Cloud-like carvings, symbolizing stepping up to Heaven, have been etched into the monastery walls. A 30 foot tall bronze incense burner slowly puffs out smoke that is tinged with citrus. A green and gold glazed ceramic lion guards the inner sanctum of the Great Hall.  The Monks are always looking for others to 'join' them. If you would like to learn about the monks, type 'help monk'. You can also be recruited into the guild by another monk. This is the best course of action because you get 2 free Power Levels for being recruited. You won't start out helpless. And, if for some unknown reason you wanted to, you could 'leave the monks'. } {} {} {} {} {1.000}
+E {    5} {e} {e} {2} {0} {}
+E {   10} {w} {w} {8} {0} {}
+
+R {    7} {0} {<178>} {-= Drum Tower =-} { } {-= Drum Tower =- The Drum Tower is truly a marvel. Intricate carvings and inscriptions cover the two-story structure. The roof is covered with ornate ridges. Tall trees gently shelter the tower from the elements. During times of impending danger the Sensei climbs to the top balconey and bangs the large drum to signify that evil is fast approaching. } {} {} {} {} {1.000}
+E {    5} {s} {s} {4} {0} {}
+E {    9} {u} {u} {16} {0} {}
+
+R {    8} {0} {<178>} {-= Bell Tower =-} { } {-= Bell Tower =- The three-storied Bell Tower lies south of the main courtyard. A short brick wall surrounds the base of the tower. Balconies wrap around each story. Intricate carvings cover the outer edges of the balconies symbolizing the fierce battles that the Monks have had to fight. Only on special occassions is the bell now rung. } {} {} {} {} {1.000}
+E {    5} {n} {n} {1} {0} {}
+
+R {    9} {0} {<109>} {} { } {} {} {} {} {} {1.000}
+E {    7} {d} {d} {32} {0} {}
+
+R {   10} {0} {<109>} {} { } {} {} {} {} {} {1.000}
+E {    6} {e} {e} {2} {0} {}
