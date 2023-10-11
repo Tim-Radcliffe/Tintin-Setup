@@ -130,4 +130,10 @@ event_register {e_screen_resize} {h_window_refresh} {.WindowRefresh {$_Window[in
     #RETURN 0;
 };
 
+#FUNCTION {fWindowPosition}
+{
+   #LOCAL {_fWP} {$_Window[names][%1]};
+   #RETURN {{y}{@fScreen{{$_fWP}{y}}}{x}{@fScreen{{$_fWP}{x}}}{y2}{@fScreen{{$_fWP}{y2}}}{x2}{@fScreen{{$_fWP}{x2}}}};
+};
+
 #MACRO {\t} {.WindowSwap};
