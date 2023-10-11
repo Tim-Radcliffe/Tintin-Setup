@@ -5,7 +5,12 @@
         {nomap} {1}
         {nokill} {1}
     }
-    {A tank named}
+    {^A tank named}
+    {
+        {nomap} {1}
+        {nokill} {1}
+    }
+    {^.+ \(bound by \w+)$}
     {
         {nomap} {1}
         {nokill} {1}
