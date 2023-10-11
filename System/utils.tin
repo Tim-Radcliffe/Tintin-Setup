@@ -359,3 +359,49 @@ event_register {e_5_mins} {h_globals} {.aGlobalSave};
   #FORMAT {_fGH} {%H} {%0};
   #RETURN {$_fGH};
 };
+
+#NOP pass in a 2 dimensional array and it returns a formatted table of the data.
+#FUNCTION {fTable}
+{
+  #LOCAL {_fTable[data]} {%0};
+  #LOCAL {_fTable[index]} {0};
+  #FOREACH {*_fTable[data][]} {r}
+  {
+    #UNLOCAL {_fTable[data][$r][desc]};
+    #FOREACH {*_fTable[data][$r][]} {c}
+    {
+      #FORMAT {_fTable[datalength]} {%L} {$_fTable[data][$r][$c]};
+      #FORMAT {_fTable[titlelength]} {%L} {$c};
+      #LOCAL {_fTable[index]} {@fMax{{$_fTable[titlelength]}{$_fTable[index]}}};
+      #IF {&_fTable[columns][$c] == 0} {#LOCAL {_fTable[columns][$c]} {0}};
+      #LOCAL {_fTable[columns][$c]} {@fMax{{$_fTable[datalength]}{$_fTable[titlelength]}{$_fTable[columns][$c]}}};
+    };
+  };
+  #LOCAL {_fTable[format]} {%-$_fTable[index]s };
+  #FOREACH {*_fTable[columns][]} {c}
+  {
+    #LOCAL {_fTable[format]} {$_fTable[format]%-$_fTable[columns][$c]s };
+  };
+
+  #LINE SUBSTITUTE VARIABLES #FORMAT {_fTable[header]} {$_fTable[format]} {Index} *_fTable[columns][];
+  #LIST {_fTable[output]} CREATE {$_fTable[header]};
+
+  #FOREACH {*_fTable[data][]} {r}
+  {
+    #LIST {_fTable[linedata]} CREATE {$r};
+    #FOREACH {*_fTable[columns][]} {c}
+    {
+      #IF {&_fTable[data][$r][$c] > 0}
+      {
+        #LIST {_fTable[linedata]} ADD {$_fTable[data][$r][$c]};
+      };
+      #ELSE 
+      {
+        #LIST {_fTable[linedata]} ADD { };
+      };
+    };
+    #LINE SUBSTITUTE VARIABLES #FORMAT {_fTable[line]} {$_fTable[format]} $_fTable[linedata][];
+    #LIST {_fTable[output]} ADD {$_fTable[line]};
+  };
+  #RETURN {$_fTable[output]};
+};
