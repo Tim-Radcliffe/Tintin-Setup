@@ -11,6 +11,8 @@
     #VAR {opponent} {};
     #IF {"%2" != ""}
     {
+        #VAR {opponent[regexp]} {@fGetNPCRegex{%2}};
+        #VAR {opponent[data]} {$_npc[$opponent[regexp]]};
         #VAR {opponent[longname]} {%2};
         #ACTION {^{>\s|}{You've killed|(.*) dealt the killing blow to} %*.} 
         {
