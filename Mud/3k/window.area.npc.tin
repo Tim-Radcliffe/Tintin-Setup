@@ -1,0 +1,42 @@
+#NOP #line quiet #line capture test #draw scroll box 1 1 3 13 hello world
+#ALIAS {.WindowAreaNPC}
+{
+  #NOP %1;
+  .WindowSet {AreaNPC} {Area NPCs};
+  #VAR {_wANPC} {};
+  
+  #FOREACH {$_npc[]} {m}
+  {
+    #FOREACH {*m[location][]} {l}
+    {
+      #IF {"$l" == "$map[area][path]"}
+      {
+        #IF {&m[nokill]}          {#VAR {_wANPC[data][$m[name]][No Kill]} {1}};
+        #IF {&m[location][$l][]}  {#VAR {_wANPC[data][$m[name]][Locations]} {@fCommaList{*m[location][$l][-3..-1]}}};
+        #IF {&m[kills]}           {#VAR {_wANPC[data][$m[name]][Kills]} {$m[kills]}};
+        #IF {&m[size][]}
+        {
+          #IF {&m[size][avg]} {#VAR {_wANPC[data][$m[name]][Size]} {$m[size][avg]}};
+          #ELSEIF {&m[size][consider]} {#VAR {_wANPC[data][$m[name]][Size]} {$m[size][consider]}};
+        };
+        #IF {&m[autokill]}
+        {
+          #IF {$m[autokill] > 0} {#VAR {_wANPC[data][$m[name]][Auto Kill]} {X}};
+          #IF {$m[autokill] < 0} {#VAR {_wANPC[data][$m[name]][Auto Kill]} { }};
+        };
+      };
+    };
+  };
+  .WindowSet {AreaNPC} {@fTable{$_wANPC[data]}};
+  .WindowRefresh {AreaNPC};
+};
+event_register {e_map_enter} {window.area.npc.tin} {.WindowAreaNPC};
+
+#EVENT {VARIABLE UPDATED _npc}
+{
+  .WindowAreaNPC;
+};
+
+
+
+ 
