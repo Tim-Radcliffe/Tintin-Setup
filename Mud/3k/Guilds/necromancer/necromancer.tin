@@ -141,15 +141,22 @@ auto {add} {protection} {} {e_combat_round} {};
 #ALIAS {handler_auto_veil}
 {
     #NOP %1;
-    #IF {"$mob[%2][undead]" == "1" && "$my[necromancer][veil]" != "ON"}
+#NOP Veil now works for non-undead (just less effective)
+#NOP     #IF {"$_npc[%2][undead]" == "1" && "$my[necromancer][veil]" != "ON"}
+#NOP     {
+#NOP         #SEND {!veil invoke};
+#NOP         #VAR {my[necromancer][veil]} {ON};
+#NOP     };
+#NOP     #ELSEIF {"$_npc[%2][undead]" != "1" && "$my[necromancer][veil]" == "ON"}
+#NOP     {
+#NOP         #SEND {!veil disperse};
+#NOP         #VAR {my[necromancer][veil]} {OFF};
+#NOP     };
+
+    #IF {"$my[necromancer][veil]" != "ON"}
     {
         #SEND {!veil invoke};
         #VAR {my[necromancer][veil]} {ON};
-    };
-    #ELSEIF {"$mob[%2][undead]" != "1" && "$my[necromancer][veil]" == "ON"}
-    {
-        #SEND {!veil disperse};
-        #VAR {my[necromancer][veil]} {OFF};
     };
 };
 auto {add} {veil} {} {e_combat} {};
