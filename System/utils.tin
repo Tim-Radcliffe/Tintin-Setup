@@ -247,6 +247,7 @@ event_register {e_5_mins} {h_globals} {.aGlobalSave};
   #LOCAL {result} {%1};
   #FOREACH {%0} {_fMin}
   {
+    #IF {"$_fMin" == ""} {#LOCAL {_fMin} {0};};    
     #IF {$_fMin < $result} {#LOCAL {result} {$_fMin};};
   }
   #UNVAR {_fMin};
@@ -260,6 +261,7 @@ event_register {e_5_mins} {h_globals} {.aGlobalSave};
   #LOCAL {result} {%1};
   #FOREACH {%0} {_fMax}
   {
+    #IF {"$_fMax" == ""} {#LOCAL {_fMax} {0};};
     #IF {$_fMax > $result} {#LOCAL {result} {$_fMax};};
   }
   #UNVAR {_fMax};
