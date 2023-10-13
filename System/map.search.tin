@@ -5,8 +5,9 @@
 {
     #IF {"%0" == ".."} {#RETURN {{1}{@fFileGetPath{$map[area][path]}}}};
     #LOCAL {_fSearchArea} {};
-    #LINE SUBSTITUTE VARIABLES {#SCRIPT {_fSearchArea} {find $path[areas] -type d -iregex ".*%0[^\/]*" -printf "%P\n"};};
-    #RETURN {$_fSearchArea};
+    #LINE SUBSTITUTE VARIABLES {#SCRIPT {_fSearchArea[unsorted]} {find $path[areas] -type d -iregex ".*%0[^\/]*" -printf "%P\n"};};
+    #LIST {_fSearchArea[sorted]} {sort} {$_fSearchArea[unsorted][]};
+    #RETURN {$_fSearchArea[sorted]};
 };
 
 /* Find closest exit match to destination, or the next area closest to it */
