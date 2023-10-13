@@ -47,7 +47,8 @@
             #IF {%%5 > 0}
             {
                 #NOP /* Set max corpse capacity of minion based on average weight of current minion corpses */;
-                #VAR {my[corpse][minion][max]} {@fEval{(%%4/(%%3/%%5))-1}};
+
+                #VAR {my[corpse][minion][max]} {@fEval{(%%4/(%%3/%%6))-1}};
             };
         };
     } {1};
