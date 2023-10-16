@@ -8,9 +8,9 @@
 
 #ALIAS {handler_combat_start}
 {
-    #VAR {opponent} {};
     #IF {"%2" != ""}
     {
+        #VAR {opponent} {};        
         #VAR {opponent[regexp]} {@fGetNPCRegex{%2}};
         #VAR {opponent[data]} {$_npc[$opponent[regexp]]};
         #VAR {opponent[longname]} {%2};
