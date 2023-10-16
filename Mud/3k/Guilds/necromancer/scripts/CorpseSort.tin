@@ -10,8 +10,8 @@
 #ALIAS {.cs_me_drop}      {#SEND {!drop preservation %1};};
 #ALIAS {.cs_minion_get}   {#SEND {!=get preservation %1};};
 #ALIAS {.cs_minion_drop}  {#SEND {!=drop preservation %1};};
-#ALIAS {.cs_smuggle_get}  {#SEND {!qtrance get preservation %1/smuggle preservation};};
-#ALIAS {.cs_smuggle_drop} {#SEND {!qtrance smuggle remove preservation %1/drop preservation};};
+#NOP #ALIAS {.cs_smuggle_get}  {#SEND {!qtrance get preservation %1/smuggle preservation};};
+#NOP #ALIAS {.cs_smuggle_drop} {#SEND {!qtrance smuggle remove preservation %1/drop preservation};};
 #ALIAS {.cs_coffin_get}   {#SEND {!wrap};};
 #ALIAS {.cs_coffin_drop}  {#SEND {!unwrap %1};};
 
@@ -72,18 +72,18 @@
 
 #ALIAS {.aProcessCorpse}
 {
-    #WHILE {@fSwapCorpse{{me}{smuggle}} > 0}     {#NOP;};
+    #NOP #WHILE {@fSwapCorpse{{me}{smuggle}} > 0}     {#NOP;};
     #WHILE {@fSwapCorpse{{me}{minion}} > 0}      {#NOP;};
     #WHILE {@fSwapCorpse{{me}{coffin}} > 0}      {#NOP;};
-    #WHILE {@fSwapCorpse{{minion}{smuggle}} > 0} {#NOP;};
-    #WHILE {@fSwapCorpse{{minion}{coffin}} > 0}  {#NOP;};
-    #WHILE {@fSwapCorpse{{smuggle}{coffin}} > 0} {#NOP;};
+    #NOP #WHILE {@fSwapCorpse{{minion}{smuggle}} > 0} {#NOP;};
+    #WHILE {@fSwapCorpse{{coffin}{minion}} > 0}  {#NOP;};
+    #NOP #WHILE {@fSwapCorpse{{smuggle}{coffin}} > 0} {#NOP;};
     .aSortCorpse {me};
     .aSortCorpse {minion};
-    .aSortCorpse {smuggle};
+    #NOP .aSortCorpse {smuggle};
     #VAR {my[corpse][held][list]}    {$_corpses[me][list]};
     #VAR {my[corpse][minion][list]}  {$_corpses[minion][list]};
-    #VAR {my[corpse][smuggle][list]} {$_corpses[smuggle][list]};
+    #NOP #VAR {my[corpse][smuggle][list]} {$_corpses[smuggle][list]};
     #VAR {my[corpse][coffin][list]}  {$_corpses[coffin][list]};
     #CLASS {$path[guild]/scripts/CorpseSort.tin} {kill};
 };

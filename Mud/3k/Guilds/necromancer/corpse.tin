@@ -13,24 +13,24 @@
 	{
 		#CASE {"store"}
 		{
-			#IF {$my[corpse][coffin][current] < $my[corpse][coffin][max]}
-			{
-				handler_corpse_move {held} {$_cI} {coffin} {wrap corpse $_cI};
-			};
-			#ELSEIF {$my[corpse][minion][current] < $my[corpse][minion][max] && @fMinionPresent{}}
+			#IF {$my[corpse][minion][current] < $my[corpse][minion][max] && @fMinionPresent{}}
 			{
 				handler_corpse_move {held} {$_cI} {minion} {give corpse $_cI to undead follower};
+			};
+			#ELSEIF {$my[corpse][coffin][current] < $my[corpse][coffin][max]}
+			{
+				handler_corpse_move {held} {$_cI} {coffin} {wrap corpse $_cI};
 			};
 		};
 		#CASE {"retrieve"}
 		{
-			#IF {$my[corpse][minion][current] > 0 && @fMinionPresent{}}
-			{
-				handler_corpse_move {minion} {$_cI} {held} {=give preservation $_cI};
-			};
-			#ELSEIF {$my[corpse][coffin][current] > 0}
+			#IF {$my[corpse][coffin][current] > 0}
 			{
 				handler_corpse_move {coffin} {$_cI} {held} {{unwrap $_cI}{get preservation}};
+			};			
+			#ELSEIF {$my[corpse][minion][current] > 0 && @fMinionPresent{}}
+			{
+				handler_corpse_move {minion} {$_cI} {held} {=give preservation $_cI};
 			};
 		};
 		#CASE {"sort"}
