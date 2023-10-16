@@ -12,7 +12,6 @@
 		};
 		#ACTION {^{\s+1\).{20}\s+(\d+)\s+\*(.*)}$}
 		{
-			#DEBUG ALL;
 			#IF {&_npc[${_hADS[regex]}][size][$map[area][scaler]][] <= 0 || "$_npc[${_hADS[regex]}][size][$map[area][scaler]][min]" == ""} 
 			{
 				#VAR {_npc[${_hADS[regex]}][size][$map[area][scaler]][min]} {%%2};
@@ -24,7 +23,6 @@
 			#MATH {_npc[${_hADS[regex]}][size][$map[area][scaler]][kills]} {$_npc[${_hADS[regex]}][size][$map[area][scaler]][kills] + 1};
 			#VAR {_npc[${_hADS[regex]}][size][$map[area][scaler]][min]} @fMin{{$_npc[${_hADS[regex]}][size][$map[area][scaler]][min]}{%%2}};
 			#VAR {_npc[${_hADS[regex]}][size][$map[area][scaler]][max]} @fMax{{$_npc[${_hADS[regex]}][size][$map[area][scaler]][max]}{%%2}};
-			#DEBUG ALL OFF;
 			.scanRoomNPCSave {$_hADS[regex]};			
 			#UNACTION {^{\s+1\).{20}\s+(\d+)\s+\*(.*)}$};
 		} {3};

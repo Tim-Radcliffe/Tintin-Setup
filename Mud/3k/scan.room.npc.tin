@@ -82,12 +82,12 @@ event_register {e_room_npc} {h_scan_npc} {.scanRoomNPC};
 
 #ALIAS {.scanRoomNPCConsider}
 {
-	#IF {"&_npc[%1][size][consider]" == "0"}
+	#IF {&map[area][scaler] == 0}
 	{
-		#IF {&map[area][scaler] == 0}
-		{
-			scaler
-		};
+		scaler
+	};
+	#IF {"&_npc[%1][size][$map[area][scaler]][consider]" == "0"}
+	{
 		#ACTION {_scan.room.npc.consider.%4}
 		{
 			#LINE GAG;

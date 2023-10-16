@@ -13,11 +13,11 @@
       {
         #IF {&m[nokill]}          {#VAR {_wANPC[data][$m[name]][No Kill]} {1}};
         #IF {&m[location][$l][]}  {#VAR {_wANPC[data][$m[name]][Locations]} {@fCommaList{*m[location][$l][-3..-1]}}};
-        #IF {&m[kills]}           {#VAR {_wANPC[data][$m[name]][Kills]} {$m[kills]}};
-        #IF {&m[size][]}
+        #IF {&m[size][$map[area][scaler]][]}
         {
-          #IF {&m[size][avg]} {#VAR {_wANPC[data][$m[name]][Size]} {$m[size][avg]}};
-          #ELSEIF {&m[size][consider]} {#VAR {_wANPC[data][$m[name]][Size]} {$m[size][consider]}};
+          #IF {&m[size][$map[area][scaler]][avg]} {#VAR {_wANPC[data][$m[name]][Size]} {$m[size][$map[area][scaler]][avg]}};
+          #ELSEIF {&m[size][$map[area][scaler]][consider]} {#VAR {_wANPC[data][$m[name]][Size]} {$m[size][$map[area][scaler]][consider]}};
+          #IF {&m[size][$map[area][scaler]][kills]} {#VAR {_wANPC[data][$m[name]][Kills]} {$m[size][$map[area][scaler]][kills]}};          
         };
         #IF {&m[autokill]}
         {
