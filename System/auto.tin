@@ -84,6 +84,7 @@
             };
             #ECHO {AUTO: <118>%1 off<098>};
         };
+        .aGlobalSave;         
     };
     #ELSE
     {
