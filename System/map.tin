@@ -178,6 +178,7 @@
 				};
 
 				#VAR {map[file]}        {$_mL[path]/$_mL[area].map};
+				#UNVAR {map[area]};
 				#VAR {map[area][path]}  {$_mL[path]};
 				#VAR {map[area][name]}  {$_mL[area]};
 				.debug MAP {READ MAP: $path[areas] : $map[file]};
