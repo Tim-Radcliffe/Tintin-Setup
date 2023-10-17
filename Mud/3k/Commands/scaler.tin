@@ -14,7 +14,7 @@
 		#UNACTION {^Current scaled level of the dungeon you're in: %%d$};
 		#UNACTION {^Your dungeon scaler is currently set to level: %%d$};
 	} {3};
-	#SEND {!scaler};
+	#SEND {!scaler %0};
 };
 
 #ACTION {^%sYou have arrived at a dungeon entrance.}
