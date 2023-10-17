@@ -72,7 +72,8 @@
   {
     #UNSUBSTITUTE {<%w`} {};
     #UNSUBSTITUTE {`>} {};	  
-    #UNACTION {{<(\w)`(.*?)(`>|)$}};  
+    #UNACTION {{<(\w)`(.*?)(`>|)$}};
+    #UNACTION {{^(.*?)(`>.*|)$}}    
   };
 };
 
