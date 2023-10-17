@@ -26,10 +26,10 @@
     #VAR {_corpses[listname]} {minion};
 };
 
-#ACTION {Items you are currently smuggling}
-{
-    #VAR {_corpses[listname]} {smuggle};
-};
+#NOP #ACTION {Items you are currently smuggling}
+#NOP {
+#NOP     #VAR {_corpses[listname]} {smuggle};
+#NOP };
 
 #ACTION {Your enchanted coffin contains}
 {
