@@ -478,7 +478,7 @@
 				#IF {"$room[location][name]" == ""}
 				{
 						#VAR {room[location][name]} {none};
-						#SEND {!rating};
+						rating;
 						event_oneshot {e_command_rating} {map.tin} {.mapFindMe %1};
 						#RETURN;
 				};

@@ -132,11 +132,10 @@ event_register {e_room_enter} {h_map_room_exits} {.mapRoomExits};
       #MAP {set} {roomarea} {$room[location][name]};
       #ECHO {MAP : Area Set : $room[location][name]};
     };
-	#ELSE
-	{
-	  #SEND {!rating};
-	  #SEND {!where};
-	};
+	  #ELSE
+	  {
+      rating;
+	  };
   };
 };
 event_register {e_command_rating} {h_map_room_area} {.mapRoomArea};
