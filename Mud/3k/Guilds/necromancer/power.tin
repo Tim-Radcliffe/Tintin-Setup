@@ -76,6 +76,7 @@
                 #ELSE
                 {
                     #MATH {_necStudy[count]} {$my[necromancer][powerdefaults][$_necStudy[power]] - $my[necromancer][power][$_necStudy[power]]};
+                    #IF {$_necStudy[count] < 1} {#VAR {_necStudy[count]} {0}};
                 };
                 #VAR {_necStudy[$_necStudy[count]][$_necStudy[power]]} {};
             };
