@@ -14,10 +14,17 @@
 		#UNACTION {^Current scaled level of the dungeon you're in: %%d$};
 		#UNACTION {^Your dungeon scaler is currently set to level: %%d$};
 	} {3};
-	#SEND {!scaler %0};
+	#IF {"%1" != ""}
+	{
+		#SEND {!scaler %1};
+	};
+	#ELSE 
+	{
+		#SEND {!scaler};
+	};
 };
 
 #ACTION {^%sYou have arrived at a dungeon entrance.}
 {
-	event_oneshot {e_map_room_enter} {scaler.tin} {scaler};
+	event_oneshot {e_map_room_enter} {scaler.tin} {scaler {};};
 } {1};
