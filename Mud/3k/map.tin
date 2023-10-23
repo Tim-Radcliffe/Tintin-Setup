@@ -127,15 +127,28 @@ event_register {e_room_enter} {h_map_room_exits} {.mapRoomExits};
   };  
   #IF {"$map[edit]" == "1"}
   {
+    #IF {"$map[room][roomarea]" != ""}
+    {
+      #BREAK;
+    };
     #IF {"$room[location][name]" != ""}
     {
       #MAP {set} {roomarea} {$room[location][name]};
       #ECHO {MAP : Area Set : $room[location][name]};
     };
+    #ELSEIF {"%2" != ""}
+    {
+      #MAP {set} {roomarea} {%2};
+    };
 	  #ELSE
 	  {
       rating;
 	  };
+    #IF {"%3" != ""}
+    {
+      #VAR {map[room][roomnote][wiz]} {%3};
+      #MAP SET {roomnote} {$map[room][roomnote]};      
+    };
   };
 };
 event_register {e_command_rating} {h_map_room_area} {.mapRoomArea};

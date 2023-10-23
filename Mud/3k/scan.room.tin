@@ -93,7 +93,7 @@ event_register {e_mip_DDD} {h_room_exits} {.HandlerRoomExits};
   {
     #VAR {room[name]} {%2};
   };  
-  event_oneshot e_prompt h_room_enter {event_raise e_room_enter {#NOP %%1};};    
+  event_oneshot e_prompt h_room_enter {#NOP %%1;event_raise e_room_enter;};    
   event_oneshot e_prompt h_room_end handler_room_end;
 };
 #NOP event_register {e_mip_BAD} {h_room_name} {.HandlerRoomName};

@@ -20,7 +20,7 @@
   #ALIAS {.HandlerCommandWhere}
   {
     #NOP %%1;
-    event_raise {e_command_where};
+    event_raise {e_command_where} {$room[location][name]} {$room[location][wiz]};
     #CLASS {cCommand_where} {kill};
   }
   #CLASS {cCommand_where} {close};
