@@ -79,8 +79,6 @@
 
 
 #NOP MAP MOUSE
-
-
 #EVENT {MAP PRESSED MOUSE BUTTON ONE}
 {
     event_raise {e_mouse_map_pressed} {1} {%0} {%1} {%2} {%3} {%4} {%5};
@@ -97,4 +95,10 @@
 {
     event_raise {e_mouse_map_released} {1} {%0} {%1} {%2} {%3} {%4} {%5};
     .debug MAP_MOUSE {MAP RELEASED MOUSE BUTTON ONE: %0 : %1 : %2 : %3 : %4 : %5};
+};
+
+#EVENT {MAP DOUBLE-CLICKED MOUSE BUTTON ONE}
+{
+    .debug MAP_MOUSE {MAP DOUBLE-CLICKED BUTTON ONE: %0 : %1 : %2 : %3 : %4 : %5};
+    #MAP RUN {%4};
 };

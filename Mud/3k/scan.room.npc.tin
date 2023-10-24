@@ -123,7 +123,7 @@ event_register {e_room_npc} {h_scan_npc} {.scanRoomNPC};
 {
 	#UNVAR {_fGNR};
 	#VAR {_fGNR[input]} {%1};
-	#REGEXP {$_fGNR[input]} {{^(.*) \[(scratched|wounded|dying)\]$}}
+	#REGEXP {$_fGNR[input]} {{^(.+?)(\s\[(scratched|wounded|dying)\])?(\s\<[.?*!^]+\>)?(\sattacking you!)?$}}
 	{
 		#VAR {_fGNR[input]} {&2};
 	};

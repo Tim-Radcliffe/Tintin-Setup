@@ -1,28 +1,37 @@
 #ALIAS {.mapRoomItem}
 {
-  #VAR {map[room][roomnote][content][item][%2][name]} {%3};
-  #IF {"$map[edit]" == "1"}
-  {
-    #MAP SET {roomnote} {$map[room][roomnote]};
+  #IF {"$_item[%2][nomap]" != "1"}
+  {  
+    #VAR {map[room][roomnote][content][item][%2][name]} {%3};
+    #IF {"$map[edit]" == "1"}
+    {
+      .debug {MAP} {ITEM: %0};
+      #MAP SET {roomnote} {$map[room][roomnote]};
+    };
   };
 };
-event_register {e_room_item} {h_map_room_item} {.mapRoomItem};
+event_register {e_scan_room_item} {h_map_room_item} {.mapRoomItem};
 
 #ALIAS {.mapRoomNPC}
 {
-  #VAR {map[room][roomnote][content][npc][%2][name]} {%3};
-  #IF {"$map[edit]" == "1"}
+  #IF {"$_npc[%2][nomap]" != "1"}
   {
-    #MAP SET {roomnote} {$map[room][roomnote]};
+    #VAR {map[room][roomnote][content][npc][%2][name]} {%3};
+    #IF {"$map[edit]" == "1"}
+    {
+      .debug {MAP} {NPC: %0};
+      #MAP SET {roomnote} {$map[room][roomnote]};
+    };
   };
 };
-event_register {e_room_npc} {h_map_room_npc} {.mapRoomNPC};
+event_register {e_scan_room_npc} {h_map_room_npc} {.mapRoomNPC};
 
 #ALIAS {.mapRoomNoun}
 {
   #VAR {map[room][roomnote][content][noun][%2][name]} {%3};
   #IF {"$map[edit]" == "1"}
   {
+    .debug {MAP} {NOUN: %0};
     #MAP SET {roomnote} {$map[room][roomnote]};
   };
 };
