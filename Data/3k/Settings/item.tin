@@ -1,11 +1,6 @@
 #VARIABLE {_item}
 {
-    {([\(\[])([\-\|\*]{5})[\)\]]\s.*$}
-    {
-        {pickup} {1}
-        {nomap} {1}
-        {pickup_command} {.corpse get}
-    }
+
     {^.*oard.? containing \d+ messages}
     {
         {pickup} {-1}
@@ -24,6 +19,7 @@
     {
         {nomap} {1}
     }
+    
     {bag} 
     {
         {pickup} {1}
@@ -100,6 +96,22 @@
     {
         {nomap} {1}
         {pickup} {-1}
+    }
+    {^Mystic Rift$} 
+    {
+        {desc} 
+        {
+            {1} {Mystic Rift}
+            {2} {This unusual item appears to be a small, crystalline structure that}
+            {3} {contains within it a shimmering blackness.  As you study it you catch}
+            {4} {glimpses of a myriad of different colors and views within the rift.}
+            {5} {This appears to be an artifact for the elemental guild.}
+            {6} {It looks light.}
+        }
+        {id} {mystic rift}
+        {name} {Mystic Rift}
+        {nomap} {1}
+        {pickup} {1}
     }
     {nullification} 
     {

@@ -43,31 +43,7 @@
 
 #ACTION {{([\(\[])([\-\|\*]{5})[\)\]]\s.*$}}
 {
-    #IF {"%2" == "["}
-    {
-        #VAR {lvCorpseSize} {11};
-    }
-    {
-        #VAR {lvCorpseLoop} 0;
-        #VAR {lvCorpseSize} {};
-        #PARSE {%3} {i}
-        {
-            #MATH {lvCorpseLoop} {$lvCorpseLoop + 1};
-            #IF {"$i" == "|"}
-            {
-                #VAR {lvCorpseSize} {$lvCorpseLoop};
-                #BREAK;
-            };
-            #ELSEIF {"$i" == "*"}
-            {
-                #MATH {lvCorpseSize} {11 - $lvCorpseLoop};
-                #BREAK;
-            };
-        };
-    };
-    #LIST {_corpses[$_corpses[listname]][list]} {ins} {-1} {$lvCorpseSize};
-    #UNVAR {lvCorpseLoop};
-    #UNVAR {lvCorpseSize};
+    #LIST {_corpses[$_corpses[listname]][list]} {ins} {-1} {@fCorpseSize{%0}};
 };
 
 #ALIAS {.aProcessCorpse}
@@ -178,6 +154,6 @@
 
 #SEND {!ic};
 #SEND {!iu c};
-#SEND {!smuggle};
+#NOP #SEND {!smuggle};
 #SEND {!icof};
 #SEND {!nsay Corpse List Finished};

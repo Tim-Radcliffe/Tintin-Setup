@@ -1,6 +1,5 @@
 #NOP ************* Necromancer Guild *********;
 
-#VAR {_item[a preserved, .* corpse of]} {{nomap}{1}{pickup}{1}{pickup_command}{.corpse get %s}};
 #VAR {_item[crystal charm]}             {{nomap}{1}{pickup}{1}};
 #VAR {_item[platinum coin]}             {{nomap}{1}{pickup}{1}};
 #VAR {_item[small grey stone]}          {{nomap}{1}{pickup}{1}};
@@ -24,51 +23,6 @@
     .mapLoad {Pinnacle/Fantasy/Necromancer Guild};
     #map goto {Receiving room};
 };
-
-/* Preserve when you kill an opponent */
-#ALIAS {handler_auto_preserve}
-{
-    #NOP %1;
-    #IF {$my[corpse][held][current] <= $my[corpse][held][max]}
-    {
-        #SEND {!preserve remains};
-    };
-    #ELSEIF {$auto[consecrate][status]}
-    {
-        #SEND {!consecrate};
-    };
-    #ELSE 
-    {
-        #SEND {!absorb ground};
-        #IF {$my[hp][current] < $my[hp][max]}
-        {
-            #SEND {!absorb prime};
-        };
-        #ELSE
-        {
-            #SEND {!absorb};
-        };
-        #SEND {!absorb inventory};
-    };
-    #SEND {!glance};
-};
-auto {add} {preserve} {} {e_killed_opponent} {}; 
-auto {add} {consecrate} {#ACTION {^  You are already at 100% consecration master.} {auto consecrate off};} {} {}; 
-
-/* Clean up corpses if you can't carry them */
-#ACTION {^  You can't carry any more master, leaving it on the ground.}
-{
-    #SEND {!absorb ground};
-    #IF {$my[hp][current] < $my[hp][max]}
-    {
-        #SEND {!absorb prime};
-    };
-    #ELSE
-    {
-        #SEND {!absorb};
-    };
-    #SEND {!absorb inventory};
-} {3};
 
 /* Call your familiar into combat automatically when you "kill" */
 #ALIAS {handler_auto_call}
@@ -209,3 +163,34 @@ auto {add} {necrogag} {necro_gag_on} {} {necro_gag_off};
     };
 };
 auto {add} {glamor} {} {e_combat_round} {};
+
+#FUNCTION {fMinionPresent}
+{
+	#LOCAL {_fMPi} {};
+	#LOCAL {_fMPt} {};
+	#FORMAT {_fMPt} {%n} {$my[necromancer][undead][type]};
+	#FOREACH {$room[contents][npc]} {_fMPi}
+	{
+		#IF {"$room[contents][npc][$_fMPi][id]" == ""}
+		{
+			#CONTINUE;
+		};
+		#ELSEIF {"$room[contents][npc][$_fMPi][id]" == "$my[necromancer][undead][name] the $_fMPt"}
+		{
+			#RETURN 1;
+		};
+		#ELSEIF {&_guild[minions][$room[contents][npc][$_fMPi][id]] > 0}
+		{
+			#RETURN 1;
+		};
+	};
+	#RETURN 0;
+};
+
+#ACTION {^A {bayen|bolwyn|ghast|ghoul|greesh|grimare|heucuva|manshi|mohrg|quarin|skeleton|tholen|valithyn|valpur|wight|zombie} {trudges in|drifts in on a ghostly vapor}.}
+{
+	#LOCAL {_aMinEnter} {%1};
+	#FORMAT {_aMinEnter} {%n} {$_aMinEnter};
+	#LIST {room[contents][npc]} {ADD} {{{id}{$_aMinEnter}}};
+	handler_auto_corpse;
+};
