@@ -309,7 +309,7 @@ R {13}{0}{<178>}{Eastern US Hub}{ }{A large passage leads to the south from here
 E {11}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {15}{d}{d}{32}{0}{}{1.000}{}{0.00}
 
-R {14}{0}{<178>}{The Arcade}{ }{You are standing in the airport arcade.  This is a small room with many video games strewn around it.  Several businessmen  are glued to the screens while waiting for their respective  flights.  The room is fairly dark except for the lights from  the games themselves, which flash repeatedly in a variety of  colours.}{MK ][ Machine}{{content}{{item}{{Adapter}{{name}{Virtual Adapter}}{computer}{{name}{A Really Nice Looking Computer}}{samurai}{{name}{Samurai Showdown Game}}{sign}{{name}{A LARGE sign}}}{noun}{{airport}{{name}{airport}}{businessmen}{{name}{businessmen}}{games}{{name}{games}}{lights}{{name}{lights}}{room}{{name}{room}}{screens}{{name}{screens}}}{npc}{{Valithyn}{{name}{A valithyn under the control of Blutash}}}}}{}{}{1.000}{}
+R {14}{0}{<178>}{The Arcade}{ }{You are standing in the airport arcade.  This is a small room with many video games strewn around it.  Several businessmen  are glued to the screens while waiting for their respective  flights.  The room is fairly dark except for the lights from  the games themselves, which flash repeatedly in a variety of  colours.}{MK ][ Machine}{{content}{{item}{{Adapter}{{name}{Virtual Adapter}}{computer}{{name}{A Really Nice Looking Computer}}{samurai}{{name}{Samurai Showdown Game}}{sign}{{name}{A LARGE sign}}}{noun}{{airport}{{name}{airport}}{businessmen}{{name}{businessmen}}{games}{{name}{games}}{lights}{{name}{lights}}{room}{{name}{room}}{screens}{{name}{screens}}}{npc}{}}}{}{}{1.000}{}
 E {11}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {1278}{n}{n}{1}{0}{}{1.000}{}{0.00}
 

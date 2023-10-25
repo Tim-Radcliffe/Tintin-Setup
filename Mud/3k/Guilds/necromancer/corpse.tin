@@ -1,4 +1,4 @@
-#VAR {_item[([\(\[])([\-\|\*]{5})[\)\]]\s.*$]} {{pickup} {1}{nomap} {1}{pickup_command}{.corpse get}};
+#VAR {_item[([\(\[])([\-\|\*]{5})[\)\]]\s.*$]} {{global}{1}{pickup}{1}{nomap}{1}{pickup_command}{.corpse get}};
 
 #ALIAS {.cs_held_get}     {#SEND {!get preservation %1};};
 #ALIAS {.cs_held_drop}    {#SEND {!drop preservation %1};};

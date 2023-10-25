@@ -14,11 +14,11 @@ CROOMS <178>
 CSYMBOLS <128>
 CUSER <258>
 
-F 10
+F 11
 
 G 0
 
-I 369
+I 1243
 
 L {ASCII NESW LINE} {NO EXITS} {x}
 L {ASCII NESW LINE} {N} {o}
@@ -1122,25 +1122,25 @@ E {197}{s}{s}{4}{0}{}{1.000}{}{0.00}
 R {199}{0}{<178>}{-= Darklynd Park =-}{ }{You are at the north-west corner of Wayhaven with walls to north and west.  To the south lies open swampy meadow, while passage to the east is blocked by open water.}{}{}{}{}{1.000}{}
 E {196}{s}{s}{4}{0}{}{1.000}{}{0.00}
 
-R {200}{0}{<068>}{Entrance to a garden}{ }{You stand just inside the entrance to the garden maze of Everlynd Park. The sweet aroma of the garden flora fills the air. Magic tingles in the air as the faerie caretakers go about their work. The archway is to the west.}{Everlynd Park Maze}{{content}{{item}{{sign}{{name}{a sign}}}{npc}{{Mynah Bird}{{name}{A mynah bird}}}}}{}{}{1.000}{}
+R {200}{0}{<068>}{A Garden Maze in Everlynd Park}{ }{You stand just inside the entrance to the garden maze of Everlynd Park. The sweet aroma of the garden flora fills the air. Magic tingles in the air as the faerie caretakers go about their work. The archway is to the west.}{Everlynd Park Maze}{{content}{{item}{{sign}{{name}{a sign}}}{npc}{{Mynah Bird}{{name}{A mynah bird}}}}}{}{}{1.000}{}
 E {131}{w}{archway}{8}{0}{}{1.000}{}{0.00}
-E {201}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {202}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {131}{archway}{archway}{0}{0}{}{1.000}{}{0.00}
+E {201}{n}{n}{1}{0}{}{1.000}{}{0.00}
 
-R {201}{0}{<178>}{A Garden Maze in Everlynd Park}{ }{Fluffy white clouds dot the clear sky above. Around you,  stand the tall bushes and shrubs that make up the Everlynd garden maze. There is a tinkling in the air of faerie magic, which is the force behind such a wondrous place.}{Everlynd Park Maze}{{content}{{item}{{corpse}{{name}{(--|--) a preserved, glowing corpse of Dandelion}}}{noun}{{bushes}{{name}{bushes}}{clouds}{{name}{clouds}}{colours}{{name}{colours}}{shrubs}{{name}{shrubs}}}{npc}{{Dandelion}{{name}{A ferocious dandelion}}{Faerie}{{name}{A faerie caretaker (sparkling)}}{Mynah Bird}{{name}{A mynah bird}}}}}{}{}{1.000}{}
-E {200}{s}{s}{4}{0}{}{1.000}{}{0.00}
+R {201}{0}{<178>}{A Garden Maze in Everlynd Park}{ }{Fluffy white clouds dot the clear sky above. Around you,  stand the tall bushes and shrubs that make up the Everlynd garden maze. There is a tinkling in the air of faerie magic, which is the force behind such a wondrous place.}{}{{content}{{noun}{{bushes}{{name}{bushes}}{shrubs}{{name}{shrubs}}}{npc}{{Dandelion}{{name}{A ferocious dandelion}}{Faerie}{{name}{A faerie caretaker (sparkling)}}}}}{}{}{1.000}{}
 E {203}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {200}{s}{s}{4}{0}{}{1.000}{}{0.00}
 
 R {202}{0}{<178>}{A Garden Maze in Everlynd Park}{ }{You are standing in the garden maze in Everlynd Park, surrounded by colours of all shades and hues. The faerie custodians keep their wards well. Everywhere you look shows a different flower. Above, you can see fluffy white clouds in the sky, but cannot determine your position in the maze.}{Everlynd Park Maze}{{content}{{noun}{{clouds}{{name}{clouds}}{colours}{{name}{colours}}{flowers}{{name}{flowers}}}{npc}{{Mynah Bird}{{name}{A mynah bird}}{Sunflower}{{name}{A happy sunflower}}}}}{}{}{1.000}{}
 E {200}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {203}{n}{n}{1}{0}{}{1.000}{}{0.00}
 
-R {203}{0}{<178>}{A Garden Maze in Everlynd Park}{ }{You are standing in the garden maze in Everlynd Park, surrounded by colours of all shades and hues. The faerie custodians keep their wards well. Everywhere you look shows a different flower. Above, you can see fluffy white clouds in the sky, but cannot determine your position in the maze.}{Everlynd Park Maze}{{content}{{noun}{{clouds}{{name}{clouds}}{colours}{{name}{colours}}{flowers}{{name}{flowers}}}{npc}{{Faerie}{{name}{A faerie caretaker (sparkling)}}{Mynah Bird}{{name}{A mynah bird}}}}}{}{}{1.000}{}
-E {201}{w}{w}{8}{0}{}{1.000}{}{0.00}
+R {203}{0}{<178>}{A Garden Maze in Everlynd Park}{ }{You are standing in the garden maze in Everlynd Park, surrounded by colours of all shades and hues. The faerie custodians keep their wards well. Everywhere you look shows a different flower. Above, you can see fluffy white clouds in the sky, but cannot determine your position in the maze.}{Everlynd Park Maze}{{content}{{noun}{{clouds}{{name}{clouds}}{colours}{{name}{colours}}{flowers}{{name}{flowers}}}{npc}{{Faerie}{{name}{A faerie caretaker (sparkling)}}{Mynah Bird}{{name}{A mynah bird}}{Squirrel}{{name}{A small squirrel}}}}}{}{}{1.000}{}
 E {202}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {204}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {205}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {201}{w}{w}{8}{0}{}{1.000}{}{0.00}
 
 R {204}{0}{<178>}{A Garden Maze in Everlynd Park}{ }{Fluffy white clouds dot the clear sky above. Around you,  stand the tall bushes and shrubs that make up the Everlynd garden maze. There is a tinkling in the air of faerie magic, which is the force behind such a wondrous place.}{Everlynd Park Maze}{{content}{{item}{{corpse}{{name}{(-|---) a preserved, glowing corpse of Yucca}}{moth}{{name}{A dead moth}}}{noun}{{bushes}{{name}{bushes}}{shrubs}{{name}{shrubs}}}{npc}{{Yucca}{{name}{A yucky yucca}}}}}{}{}{1.000}{}
 E {203}{s}{s}{4}{0}{}{1.000}{}{0.00}
@@ -1244,7 +1244,6 @@ E {225}{s}{s}{4}{0}{}{1.000}{}{0.00}
 
 R {228}{0}{<178>}{A Garden Maze in Everlynd Park}{ }{You are standing in the garden maze in Everlynd Park, surrounded by colours of all shades and hues. The faerie custodians keep their wards well. Everywhere you look shows a different flower. Above, you can see fluffy white clouds in the sky, but cannot determine your position in the maze.}{Everlynd Park Maze}{{content}{{item}{{cookie}{{name}{A small ladyfinger cookie}}}{noun}{{clouds}{{name}{clouds}}{colours}{{name}{colours}}{flowers}{{name}{flowers}}}{npc}{{Ladyfinger}{{name}{A cute ladyfinger}}{Mynah Bird}{{name}{A mynah bird}}}}}{}{}{1.000}{}
 E {226}{n}{n}{1}{0}{}{1.000}{}{0.00}
-E {201}{s}{s}{4}{0}{}{1.000}{}{0.00}
 
 R {229}{0}{<178>}{A Garden Maze in Everlynd Park}{ }{The magic of the garden maze tingles in the air. Sights of bright colours and rich scents send your senses into a daze. The Everlynd fairies are powerful beings indeed, to have created such a wondrous place.}{Everlynd Park Maze}{{content}{{noun}{{maze}{{name}{maze}}}{npc}{{Faerie}{{name}{A faerie caretaker (sparkling)}}}}}{}{}{1.000}{}
 E {224}{w}{w}{8}{0}{}{1.000}{}{0.00}
@@ -5170,7 +5169,7 @@ E {1150}{path}{.mapLink {Pinnacle/Fantasy/Winter Wonderland} {} {path};}{0}{1}{}
 R {955}{0}{<178>}{Ice Cave}{ }{You have entered the land of snow and ice.  The wind moans like a dying soul.  Snow capped mountains are blocking all directions except south.}{Bear Cave}{}{}{}{1.000}{}
 E {954}{s}{s}{4}{0}{}{1.000}{}{0.00}
 
-R {956}{0}{<068>}{Icelands}{ }{Icelands This is a cold, icy region of the north.  You barely save yourself from falling as you slip on a patch of ice.  In the distance, you see light reflecting off the peak of an icy glacier, glistening in the sunlight.  Ice-covered mountains form an imposing barrier to the north and west, while a sheer wall of glacial ice looms to the east.  The years of shifting glaciers have dragged an ancient ship from the sea, and half-buried it in the ice. }{}{{content}{{item}{{ship}{{name}{An ancient ship}}}{noun}{{barrier}{{name}{barrier}}{glaciers}{{name}{glaciers}}{hull}{{name}{hull}}{ice}{{name}{ice}}{mountains}{{name}{mountains}}{peak}{{name}{peak}}{ship}{{name}{ship}}{wall}{{name}{wall}}}{npc}{{Valithyn}{{name}{A valithyn under the control of Blutash}}}}}{}{}{1.000}{}
+R {956}{0}{<068>}{Icelands}{ }{Icelands This is a cold, icy region of the north.  You barely save yourself from falling as you slip on a patch of ice.  In the distance, you see light reflecting off the peak of an icy glacier, glistening in the sunlight.  Ice-covered mountains form an imposing barrier to the north and west, while a sheer wall of glacial ice looms to the east.  The years of shifting glaciers have dragged an ancient ship from the sea, and half-buried it in the ice. }{}{{content}{{item}{{ship}{{name}{An ancient ship}}}{noun}{{barrier}{{name}{barrier}}{glaciers}{{name}{glaciers}}{hull}{{name}{hull}}{ice}{{name}{ice}}{mountains}{{name}{mountains}}{peak}{{name}{peak}}{ship}{{name}{ship}}{wall}{{name}{wall}}}{npc}{}}}{}{}{1.000}{}
 E {938}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {1298}{climb}{.mapLink {Pinnacle/Fantasy/Pirate Ship} {} {climb};}{0}{1}{}{1.000}{}{0.00}
 
@@ -6348,9 +6347,9 @@ E {1243}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
 R {1243}{0}{<178>}{Inlet Shore}{ }{You are standing on the shore of a small inlet created by a small outcrop of rock to the north and east.  The sun sparkles off the water's surface and a light breeze causes it to ripple slightly.  There is sand here and small waves wash against your feet.  You can sense the ocean on the other side of the rock. }{}{}{}{}{1.000}{}
 E {1242}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
-E {1244}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {1244}{ne}{.mapLink {Pinnacle/Fantasy/Phantom Ship} {} {ne};}{3}{1}{}{1.000}{}{0.00}
 
-R {1244}{0}{<158>}{A rocky outcrop}{<138>?}{You have reached a rocky outcrop that has shoved its way into the  water.  Waves crash against the large boulders, and swirl into a  vicious white foam.  Looking out into the sea, you notice a small shape on the horizon.  It looks to be an old ship, with huge white sails stretching high into the sky.  Your urge to swim to the vessel overshadows your fear of almost certain death.}{Phantom Ship}{{special}{}}{}{}{1.000}{}
+R {1244}{0}{<000>}{LINK: Pinnacle/Fantasy/Phantom Ship}{<138>*}{}{Pinnacle/Fantasy/Phantom Ship}{{content}{{noun}{{inlet}{{name}{inlet}}{ocean}{{name}{ocean}}{sand}{{name}{sand}}{shore}{{name}{shore}}{sun}{{name}{sun}}{surface}{{name}{surface}}{waves}{{name}{waves}}}}{link}{}}{}{}{1.000}{}
 E {1243}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 
 R {1245}{0}{<000>}{LINK: Pinnacle/Fantasy/Woodman's Hut}{<138>*}{}{Pinnacle/Fantasy/Woodman's Hut}{{link}{}}{}{}{1.000}{}
@@ -6483,7 +6482,7 @@ E {1297}{s}{s}{4}{0}{}{1.000}{}{0.00}
 R {1297}{0}{<178>}{-= Hackaway Estate =-}{ }{In the courtyard before the stately mansion you look to the north and admire the field of so-called wildflowers.  You worry about the pit bulls you saw mentioned on the fence though.}{Houses of the Rich}{{content}{{item}{{bone}{{name}{Rawhide bone}}}{noun}{{arches}{{name}{arches}}{beams}{{name}{beams}}{door}{{name}{door}}{fence}{{name}{fence}}{field}{{name}{field}}{handle}{{name}{handle}}{hinges}{{name}{hinges}}{home}{{name}{home}}{mansion}{{name}{mansion}}{stone}{{name}{stone}}}}}{}{}{1.000}{}
 E {1296}{n}{n}{1}{0}{}{1.000}{}{0.00}
 
-R {1298}{0}{<000>}{LINK: Pinnacle/Fantasy/Pirate Ship}{<138>*}{}{Pinnacle/Fantasy/Pirate Ship}{{content}{{item}{{ship}{{name}{An ancient ship}}}{noun}{{barrier}{{name}{barrier}}{cave}{{name}{cave}}{cracks}{{name}{cracks}}{glaciers}{{name}{glaciers}}{holes}{{name}{holes}}{hull}{{name}{hull}}{ice}{{name}{ice}}{ladder}{{name}{ladder}}{monolith}{{name}{monolith}}{mountain}{{name}{mountain}}{mountains}{{name}{mountains}}{mouth}{{name}{mouth}}{peak}{{name}{peak}}{peaks}{{name}{peaks}}{range}{{name}{range}}{ship}{{name}{ship}}{snow}{{name}{snow}}{valleys}{{name}{valleys}}{wall}{{name}{wall}}}{npc}{{Skeletal Pirate}{{name}{A skeletal pirate}}{Valithyn}{{name}{A valithyn under the control of Blutash}}}}{link}{}}{}{}{1.000}{}
+R {1298}{0}{<000>}{LINK: Pinnacle/Fantasy/Pirate Ship}{<138>*}{}{Pinnacle/Fantasy/Pirate Ship}{{content}{{item}{{ship}{{name}{An ancient ship}}}{noun}{{barrier}{{name}{barrier}}{cave}{{name}{cave}}{cracks}{{name}{cracks}}{glaciers}{{name}{glaciers}}{holes}{{name}{holes}}{hull}{{name}{hull}}{ice}{{name}{ice}}{ladder}{{name}{ladder}}{monolith}{{name}{monolith}}{mountain}{{name}{mountain}}{mountains}{{name}{mountains}}{mouth}{{name}{mouth}}{peak}{{name}{peak}}{peaks}{{name}{peaks}}{range}{{name}{range}}{ship}{{name}{ship}}{snow}{{name}{snow}}{valleys}{{name}{valleys}}{wall}{{name}{wall}}}{npc}{{Skeletal Pirate}{{name}{A skeletal pirate}}}}{link}{}}{}{}{1.000}{}
 
 R {1299}{0}{<000>}{LINK: Pinnacle/Fantasy/Tower of Fire}{<138>*}{}{Pinnacle/Fantasy/Tower of Fire}{{content}{{item}{{crates}{{name}{crates and barrels clutter the room}}{torch}{{name}{a flickering torch lights your way}}{tower}{{name}{A grey stone tower}}}{noun}{{arch}{{name}{arch}}{archway}{{name}{archway}}{bay}{{name}{bay}}{cape}{{name}{cape}}{door}{{name}{door}}{entrance}{{name}{entrance}}{headland}{{name}{headland}}{landscape}{{name}{landscape}}{lighthouse}{{name}{lighthouse}}{north}{{name}{north}}{ocean}{{name}{ocean}}{rip}{{name}{rip}}{road}{{name}{road}}{south}{{name}{south}}{stairway}{{name}{stairway}}{stone}{{name}{stone}}{walls}{{name}{walls}}{waters}{{name}{waters}}{waves}{{name}{waves}}}}{link}{}}{}{}{1.000}{}
 

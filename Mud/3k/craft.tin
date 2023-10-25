@@ -1,10 +1,10 @@
 #VAR {_craft[quality][specific]} {{1}{legendary}{2}{superior}{3}{good}{4}{average}{5}{poor}{6}{crude}{7}{worthless}};
 #VAR {_craft[quality][all]} {{best}{worst}{all}{any}${_craft[quality][specific]}};
 
-#VAR {_item[fragment of]}    {{nomap}{1}{pickup}{1}{pickup_command}{handler_craft_pickup {%s}}};
-#VAR {_item[essence of]}     {{nomap}{1}{pickup}{1}{pickup_command}{handler_craft_pickup {%s}}};
-#VAR {_item[heart of]}       {{nomap}{1}{pickup}{1}{pickup_command}{handler_craft_pickup {%s}}};
-#VAR {_item[^A Tome of \']}   {{nomap}{1}{pickup}{1}};
+#VAR {_item[fragment of]}     {{global}{1}{nomap}{1}{pickup}{1}{pickup_command}{handler_craft_pickup {%s}}};
+#VAR {_item[essence of]}      {{global}{1}{nomap}{1}{pickup}{1}{pickup_command}{handler_craft_pickup {%s}}};
+#VAR {_item[heart of]}        {{global}{1}{nomap}{1}{pickup}{1}{pickup_command}{handler_craft_pickup {%s}}};
+#VAR {_item[^A Tome of \']}   {{global}{1}{nomap}{1}{pickup}{1}};
 
 #action {^{>\s|}%sWhat luck!  You have found %1} 
 {
@@ -25,7 +25,6 @@
 		sl &2;
     };
 };
-
 
 #NOP ############## Craft Satchel ###########
 

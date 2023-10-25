@@ -1,102 +1,155 @@
 #VARIABLE {_item}
 {
 
-    {^.*oard.? containing \d+ messages}
+    {containing \d+ messages}
     {
-        {pickup} {-1}
         {desc} 
         {        
             {1} {Type 'help board' for a list of commands.}        
-        };
-        {name} {board};
-        {id} {board};
-    };
-    {A single gold coin}
+        }
+        {global} {1}
+        {id} {board}
+        {name} {board}
+        {pickup} {-1}
+    }
+    {^A jagged, steel club \x28enchanted\x29$} 
     {
+        {desc} 
+        {
+            {1} {A jagged, steel club (enchanted)}
+            {2} {This club is made of steel and it looks jagged. You can not judge what}
+            {3} {kind of powers this weapon has. You'll have to identify it to learn}
+            {4} {more.}
+            {5} {This weapon is in excellent condition.}
+            {6} {This weapon's classifications: 15 (blunt)  }
+            {7} {This weapon gains benefits from your mace weapon skill.}
+            {8} {It doesn't look too heavy.}
+        }
+        {global} {1}
+        {nomap} {1}
+        {id} {club}
+        {name} {A jagged, steel club (enchanted)}
+    }    
+    {^A single gold coin$}
+    {
+        {global} {1}
         {nomap} {1}
     }
     {^Bag$}
     {
+        {global} {1}
         {nomap} {1}
     }
-    
     {bag} 
     {
         {pickup} {1}
     }
     {black stone} 
     {
+        {global} {1}
         {nomap} {1}
         {pickup} {-1}
     }
     {^brown gemstone$}
     {
+        {global} {1}
         {nomap} {1}
     }
     {^candle$}
     {
+        {global} {1}
         {nomap} {1}
     }
     {coins} 
     {
+        {global} {1}
         {nomap} {1}
         {pickup} {1}
         {pickup_command} {get coins}
     }
     {^Crystal ball$}
     {
+        {global} {1}
         {nomap} {1}
         {pickup} {-1}
     }
     {crystal ball} 
     {
+        {global} {1}
         {nomap} {1}
         {pickup} {-1}
     }
     {departing} 
     {
+        {global} {1}
         {nomap} {1}
         {pickup} {-1}
     }
     {devouring} 
     {
+        {global} {1}
         {nomap} {1}
         {pickup} {-1}
     }
     {empty} 
     {
+        {global} {1}
         {nomap} {1}
         {pickup} {-1}
     }
     {fear} 
     {
+        {global} {1}
         {nomap} {1}
         {pickup} {-1}
     }
     {fractures} 
     {
+        {global} {1}
         {nomap} {1}
         {pickup} {-1}
     }
     {fumbling} 
     {
+        {global} {1}
         {nomap} {1}
         {pickup} {-1}
     }
     {^Gloves$}
     {
+        {global} {1}
         {nomap} {1}
     }
     {grafting} 
     {
+        {global} {1}
         {nomap} {1}
         {pickup} {-1}
     }
     {hunger} 
     {
+        {global} {1}
         {nomap} {1}
         {pickup} {-1}
     }
+    {^a weathered catchpocket$} 
+    {
+        {desc} 
+        {
+            {1} {a weathered catchpocket}
+            {2} {A weathered catchpocket with a watertube attachment on one end. }
+            {3} {Moisture neither leaks nor condenses on the outside of the pouch\; it}
+            {4} {is as if whoever created it went to great lengths to preserve any and}
+            {5} {all water it may hold.  The attachment looks as if it is supposed to}
+            {6} {be engaged into some sort of filtration system.}
+            {7} {This appears to be an artifact for the fremen guild.}
+        }
+        {global} {1}
+        {id} {catchpocket}
+        {name} {a weathered catchpocket}
+        {nomap} {1}
+        {pickup} {1}
+    }    
     {^Mystic Rift$} 
     {
         {desc} 
@@ -108,38 +161,63 @@
             {5} {This appears to be an artifact for the elemental guild.}
             {6} {It looks light.}
         }
+        {global} {1}
         {id} {mystic rift}
         {name} {Mystic Rift}
         {nomap} {1}
         {pickup} {1}
     }
+    {^Nectar Of The Gods$} 
+    {
+        {desc} 
+        {
+            {1} {Nectar Of The Gods}
+            {2} {A small golden drop of fluid, this nectar is considered the finest}
+            {3} {libation in all existence. Gods drink it heavily, but any more than}
+            {4} {the small morsel you hold would be far too much for any mortal to}
+            {5} {imbibe safely. Perhaps you should 'taste' it to see why the gods find}
+            {6} {it so refreshing?}
+            {7} {This appears to be an artifact for the priest guild.}
+        }
+        {global} {1}
+        {id} {nectar}
+        {name} {Nectar Of The Gods}
+        {nomap} {1}
+        {pickup} {1}
+    }
     {nullification} 
     {
+        {global} {1}
         {nomap} {1}
         {pickup} {-1}
     }
     {obliquity} 
     {
+        {global} {1}
         {nomap} {1}
         {pickup} {-1}
     }
     {phial} 
     {
+        {global} {1}
         {nomap} {1}
         {pickup} {1}
     }
     {quick digestion} 
     {
+        {global} {1}
         {nomap} {1}
         {pickup} {-1}
     }
     {slow digestion} 
     {
+        {global} {1}
         {nomap} {1}
         {pickup} {-1}
     }
     {-\d.}
     {
+        {global} {1}
         {nomap} {1}
         {pickup} {-1}
     }

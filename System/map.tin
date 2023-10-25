@@ -186,7 +186,14 @@
 
 				#FOREACH {*_mapVariable[]} {v}
 				{
+					#IF {"${${v}[global]}" == "1"}
+					{
+						#UNVAR {${${v}[location]}};
+					};
+					#ELSE
+					{
 						#UNVAR {$v};
+					};
 				};
 				#UNVAR {_mapVariable};        
 				

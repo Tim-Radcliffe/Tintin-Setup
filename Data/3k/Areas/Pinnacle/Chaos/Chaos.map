@@ -18,7 +18,7 @@ F 10
 
 G 0
 
-I 19
+I 141
 
 L {ASCII NESW LINE} {NO EXITS} {x}
 L {ASCII NESW LINE} {N} {o}
@@ -252,7 +252,7 @@ T {} { } {}
 
 
 
-R {1}{0}{<068>}{The center of Chaos}{<138>@}{This is the dead center of the Realm of Chaos.  All around you lies a bleak and desolate land tormented by the wrath of unknown forces. You are standing at the edge of a raging vortex that seems to fall into infinity.  There are paths leading away from the vortex in several directions.  What you might find there is so changeable that you aren't certain how to proceed.  Some hard-won experience is related on the plaque.  But don't trust it.  This is CHAOS!}{}{{portal}{}}{}{}{1.000}{}
+R {1}{0}{<068>}{The center of Chaos}{<138>@}{This is the dead center of the Realm of Chaos.  All around you lies a bleak and desolate land tormented by the wrath of unknown forces. You are standing at the edge of a raging vortex that seems to fall into infinity.  There are paths leading away from the vortex in several directions.  What you might find there is so changeable that you aren't certain how to proceed.  Some hard-won experience is related on the plaque.  But don't trust it.  This is CHAOS!}{Mud}{{content}{{item}{{^A bronze plaque$}{{name}{A bronze plaque}}{^A fairy \x28Twinkling\x29$}{{name}{A fairy (Twinkling)}}}{noun}{{center}{{name}{center}}{land}{{name}{land}}{paths}{{name}{paths}}{vortex}{{name}{vortex}}}}{portal}{}}{}{}{1.000}{}
 E {3}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {4}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {5}{w}{w}{8}{0}{}{1.000}{}{0.00}
@@ -263,7 +263,7 @@ E {173}{Erratio Forest}{.mobileZone {Erratio Forest} {enter forest} {Pinnacle/Ch
 
 R {2}{0}{<000>}{LINK: Pinnacle}{<138>*}{}{Pinnacle}{{link}{}{portal}{}}{}{}{1.000}{}
 
-R {3}{0}{<068>}{Crazy Road}{ }{You step away from the void and into insanity.  You hear wailing coming from the distance and the room begins to spin before your eyes. Who knows where you are heading now but wherever it is, it's likely to be odd.  There seems to be a path off to the west, but you can't be sure.}{Mud}{}{}{}{1.000}{}
+R {3}{0}{<068>}{Crazy Road}{ }{You step away from the void and into insanity.  You hear wailing coming from the distance and the room begins to spin before your eyes. Who knows where you are heading now but wherever it is, it's likely to be odd.  There seems to be a path off to the west, but you can't be sure.}{Mud}{{content}{{item}{{^A fairy \x28Twinkling\x29$}{{name}{A fairy (Twinkling)}}{^A funky-looking fog$}{{name}{A funky-looking fog}}{^A purple haze$}{{name}{A purple haze}}{^A silvery tower$}{{name}{A silvery tower}}}{noun}{{path}{{name}{path}}}}}{}{}{1.000}{}
 E {1}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {41}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {7}{w}{.mapLink {Pinnacle/Chaos/Mouse House} {} {w};}{8}{1}{}{1.000}{}{0.00}
@@ -271,20 +271,20 @@ E {152}{climb tower}{.mapLink {Pinnacle/Chaos/Night of Colour} {} {climb tower};
 E {169}{leap haze}{.mapLink {Pinnacle/Chaos/Hyperfunkzone 2} {} {leap haze};}{0}{1}{}{1.000}{}{0.00}
 E {179}{shop}{.mapLink {Pinnacle/Chaos/The Soda Jerk} {} {shop};}{0}{1}{}{1.000}{}{0.00}
 
-R {4}{0}{<068>}{A road heading south {maybe}}{ }{Well, for some unexplained reason you are now standing in a vast pasture.  The sun is shining, and grass is growing.  This is too weird.  You look back north but the vortex is no longer visible.  Come to mention it, nothing is very visible there, except for a lush green hill further to the east.}{}{}{}{}{1.000}{}
+R {4}{0}{<068>}{A road heading south {maybe}}{ }{Well, for some unexplained reason you are now standing in a vast pasture.  The sun is shining, and grass is growing.  This is too weird.  You look back north but the vortex is no longer visible.  Come to mention it, nothing is very visible there, except for a lush green hill further to the east.}{Mud}{{content}{{item}{{^A piglet$}{{name}{A piglet}}}{noun}{{grass}{{name}{grass}}{hill}{{name}{hill}}{sun}{{name}{sun}}}}}{}{}{1.000}{}
 E {1}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {54}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {55}{e}{.mapLink {Pinnacle/Chaos/Leprechaun Village} {} {e};}{2}{1}{}{1.000}{}{0.00}
 E {159}{turn flag}{.mapLink {Pinnacle/Chaos/Rampage of the Piggies} {} {turn flag};}{0}{1}{}{1.000}{}{0.00}
 
-R {5}{0}{<068>}{Eastwick}{ }{This is the Eastwick road.  It leads to you know not where. At the northern edge of the road, there is a ladder that  climbs up to the sky. Follow your feet and see where you go.}{}{}{}{}{1.000}{}
+R {5}{0}{<068>}{Eastwick}{ }{This is the Eastwick road.  It leads to you know not where. At the northern edge of the road, there is a ladder that  climbs up to the sky. Follow your feet and see where you go.}{Mud}{{content}{{item}{{^A large ladder$}{{name}{A large ladder}}}}}{}{}{1.000}{}
 E {1}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {8}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {9}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {44}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {50}{ladder}{.mapLink {Pinnacle/Chaos/Chinese Checkers} {} {ladder};}{0}{1}{}{1.000}{}{0.00}
 
-R {6}{0}{<068>}{A road leading north-south}{ }{You are on a road moving east-west.  Looking to the south you can see a huge range of mountains in the distance.  To the north the ground is all charred.  You can see an occasional geyser of fire shoot up from the ground.  The land to the east seems to phase in and out periodically.  You can't be sure but it just might be the remains of the old Kingdom capital now called, aptly enough, Kayos.}{}{}{}{}{1.000}{}
+R {6}{0}{<068>}{The center of Chaos}{ }{You are on a road moving east-west.  Looking to the south you can see a huge range of mountains in the distance.  To the north the ground is all charred.  You can see an occasional geyser of fire shoot up from the ground.  The land to the east seems to phase in and out periodically.  You can't be sure but it just might be the remains of the old Kingdom capital now called, aptly enough, Kayos.}{Mud}{{content}{{item}{{^A Crazily Canted and Odd Pipe$}{{name}{A Crazily Canted and Odd Pipe}}}{noun}{{capital}{{name}{capital}}{fire}{{name}{fire}}{geyser}{{name}{geyser}}{ground}{{name}{ground}}{mountains}{{name}{mountains}}{range}{{name}{range}}{remains}{{name}{remains}}{road}{{name}{road}}}}}{}{}{1.000}{}
 E {1}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {15}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {16}{climb}{.mapLink {Pinnacle/Chaos/Chess Board} {} {climb};}{0}{1}{}{1.000}{}{0.00}
@@ -294,20 +294,20 @@ E {14}{s}{.mapLink {Pinnacle/Chaos/Smurfland} {} {s};}{4}{1}{}{1.000}{}{0.00}
 R {7}{0}{<000>}{LINK: Pinnacle/Chaos/Mouse House}{<138>*}{}{Pinnacle/Chaos/Mouse House}{{link}{}}{}{}{1.000}{}
 E {3}{e}{e}{2}{0}{}{1.000}{}{0.00}
 
-R {8}{0}{<068>}{South Forest}{ }{Branching off from the main road, you enter a plain forest. The ground beneath you is simply dirt with random tufts of grass shooting up through the ground. There is a marking of some sort etched in the dirt.}{}{}{}{}{1.000}{}
+R {8}{0}{<068>}{South Forest}{ }{Branching off from the main road, you enter a plain forest. The ground beneath you is simply dirt with random tufts of grass shooting up through the ground. There is a marking of some sort etched in the dirt.}{Mud}{{content}{{item}{{^A very greasy hamburger$}{{name}{A very greasy hamburger}}{^Overgrown swamp$}{{name}{Overgrown swamp}}}{noun}{{dirt}{{name}{dirt}}{grass}{{name}{grass}}{ground}{{name}{ground}}{tufts}{{name}{tufts}}}}}{}{}{1.000}{}
 E {5}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {59}{s}{s}{4}{0}{}{1.000}{}{0.00}
-E {11}{w}{.mapLink {Pinnacle/Chaos/Gremlins} {} {w};}{8}{1}{}{1.000}{}{0.00}
 E {145}{smile}{.mapLink {Pinnacle/Chaos/Smileyland} {} {smile};}{0}{1}{}{1.000}{}{0.00}
+E {198}{w}{.mapLink {Pinnacle/Chaos/Gremlins} {} {w};}{8}{1}{}{1.000}{}{0.00}
 
-R {9}{0}{<178>}{Eastwick Road}{ }{This is the road of Eastwick.  It leads to you know not where. Follow your feet and see where you go. There is a manhole here in the ground.}{}{}{}{}{1.000}{}
+R {9}{0}{<068>}{Eastwick Road}{ }{This is the road of Eastwick.  It leads to you know not where. Follow your feet and see where you go. There is a manhole here in the ground.}{Mud}{{content}{{item}{{^A HUGE refrigerator$}{{name}{A HUGE refrigerator}}{^A small dispensing machine$}{{name}{A small dispensing machine}}{^An eighteenth hole flag$}{{name}{An eighteenth hole flag}}}{noun}{{feet}{{name}{feet}}{road}{{name}{road}}}{npc}{{^villager$}{{name}{villager}}}}}{}{}{1.000}{}
 E {5}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {10}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {12}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {62}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {193}{open manhole}{.mapLink {Pinnacle/Chaos/BBN Planet} {} {open manhole};}{0}{1}{}{1.000}{}{0.00}
 
-R {10}{0}{<068>}{Wickward Path}{ }{A brand-spanking new path! How 'bout that? It's made out of some kind of spongy material that adds a bounce to your step. The land around the path is as flat as Leeloo Dallas and looks like it's covered in AstroTurf.}{}{}{}{}{1.000}{}
+R {10}{0}{<068>}{Wickward Path}{ }{A brand-spanking new path! How 'bout that? It's made out of some kind of spongy material that adds a bounce to your step. The land around the path is as flat as Leeloo Dallas and looks like it's covered in AstroTurf.}{Mud}{{content}{{item}{{^A HUGE refrigerator$}{{name}{A HUGE refrigerator}}{^A set of puppy tracks$}{{name}{A set of puppy tracks}}}{noun}{{land}{{name}{land}}{material}{{name}{material}}{path}{{name}{path}}}}}{}{}{1.000}{}
 E {9}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {17}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {18}{follow tracks}{.mapLink {Pinnacle/Chaos/Puppy Mill} {} {follow tracks};}{0}{1}{}{1.000}{}{0.00}
@@ -315,7 +315,7 @@ E {18}{follow tracks}{.mapLink {Pinnacle/Chaos/Puppy Mill} {} {follow tracks};}{
 R {11}{0}{<000>}{LINK: Pinnacle/Chaos/Gremlins}{<138>*}{}{Pinnacle/Chaos/Gremlins}{{link}{}}{}{}{1.000}{}
 E {8}{e}{e}{2}{0}{}{1.000}{}{0.00}
 
-R {12}{0}{<068>}{Eastwick}{ }{You continue along the road of Eastwick.  Something smells just slightly wrong.  Turning, you notice bubbling tarpits off to the south.  Not at all extreme for chaos...}{}{}{}{}{1.000}{}
+R {12}{0}{<068>}{Eastwick}{ }{You continue along the road of Eastwick.  Something smells just slightly wrong.  Turning, you notice bubbling tarpits off to the south.  Not at all extreme for chaos...}{Mud}{{content}{{item}{{^A strange boy$}{{name}{A strange boy}}{^An eighteenth hole flag$}{{name}{An eighteenth hole flag}}}{noun}{{road}{{name}{road}}{tarpits}{{name}{tarpits}}}}}{}{}{1.000}{}
 E {9}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {19}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {20}{s}{s}{4}{0}{}{1.000}{}{0.00}
@@ -328,7 +328,7 @@ E {6}{s}{s}{4}{0}{}{1.000}{}{0.00}
 R {14}{0}{<000>}{LINK: Pinnacle/Chaos/Smurfland}{<138>*}{}{Pinnacle/Chaos/Smurfland}{{link}{}}{}{}{1.000}{}
 E {6}{n}{n}{1}{0}{}{1.000}{}{0.00}
 
-R {15}{0}{<068>}{A roadside}{ }{You have come to an intersection with a highway that appears to go nowhere.  There are tractor trailer trucks wizzing by on both sides.  After watching for a couple of minutes you could swear you have been watching the same trucks go back and forth, over and over again.  There is a really bad smell around here that you can't pin down.  Maybe those geysers?  Maybe Lovecraftian flatulence?  There is a manhole cover here as well.  It seems loose--perhaps you could go down here...But to where? }{}{}{}{}{1.000}{}
+R {15}{0}{<068>}{A path of yellow dirt}{ }{You have come to an intersection with a highway that appears to go nowhere.  There are tractor trailer trucks wizzing by on both sides.  After watching for a couple of minutes you could swear you have been watching the same trucks go back and forth, over and over again.  There is a really bad smell around here that you can't pin down.  Maybe those geysers?  Maybe Lovecraftian flatulence?  There is a manhole cover here as well.  It seems loose--perhaps you could go down here...But to where? }{Mud}{{content}{{item}{{^A Chocolate Cake$}{{name}{A Chocolate Cake}}{^A big frankfurter$}{{name}{A big frankfurter}}}{noun}{{cover}{{name}{cover}}{highway}{{name}{highway}}{intersection}{{name}{intersection}}{manhole}{{name}{manhole}}{trucks}{{name}{trucks}}}{npc}{{^A foul-smelling Armadillo$}{{name}{A foul-smelling Armadillo}}}}}{}{}{1.000}{}
 E {6}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {26}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {27}{s}{s}{4}{0}{}{1.000}{}{0.00}
@@ -337,24 +337,24 @@ E {25}{d}{.mapLink {Pinnacle/Chaos/Alphabet Land} {} {d};}{32}{1}{}{1.000}{}{0.0
 
 R {16}{0}{<000>}{LINK: Pinnacle/Chaos/Chess Board}{<138>*}{}{Pinnacle/Chaos/Chess Board}{{link}{}}{}{}{1.000}{}
 
-R {17}{0}{<068>}{Wickward Path}{ }{This portion of the path is as bouncy as a trampoline. It's all you can do to avoid doing a backflip! The surrounding AstroTurf is now bright red and decorated with shiny white polka-dots. What looks like a giant glazed donut hovers overhead, occasionally dripping sugary sweetness upon the ground.}{}{}{}{}{1.000}{}
+R {17}{0}{<068>}{Wickward Path}{ }{This portion of the path is as bouncy as a trampoline. It's all you can do to avoid doing a backflip! The surrounding AstroTurf is now bright red and decorated with shiny white polka-dots. What looks like a giant glazed donut hovers overhead, occasionally dripping sugary sweetness upon the ground.}{Mud}{{content}{{item}{{^A fortune cookie$}{{name}{A fortune cookie}}}{noun}{{donut}{{name}{donut}}{path}{{name}{path}}{sweetness}{{name}{sweetness}}}}}{}{}{1.000}{}
 E {10}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {155}{break cookie}{.mapLink {Pinnacle/Chaos/Mortal Kombat} {} {break cookie};}{0}{1}{}{1.000}{}{0.00}
 
 R {18}{0}{<000>}{LINK: Pinnacle/Chaos/Puppy Mill}{<138>*}{}{Pinnacle/Chaos/Puppy Mill}{{link}{}}{}{}{1.000}{}
 
-R {19}{0}{<068>}{A road leading north-south}{ }{You are on a road leading north-south.  You're traveling through some really messed up mountains.  It smells like charred flesh... or maybe it's Snuggle Fabric Softener, it's hard to tell. There is a cave entrance with a path leading up to it.}{}{{content}{{item}{{hockey puck}{{name}{A hockey puck}}}{noun}{{background}{{name}{background}}{sign}{{name}{sign}}{tree}{{name}{tree}}}{npc}{{Valithyn}{{name}{A valithyn under the control of Blutash}}}}{link}{}}{}{}{1.000}{}
+R {19}{0}{<068>}{A road leading north-south}{ }{You are on a road leading north-south.  You're traveling through some really messed up mountains.  It smells like charred flesh... or maybe it's Snuggle Fabric Softener, it's hard to tell. There is a cave entrance with a path leading up to it.}{Mud}{{content}{{item}{{^A hockey puck$}{{name}{A hockey puck}}{^An eighteenth hole flag$}{{name}{An eighteenth hole flag}}{hockey puck}{{name}{A hockey puck}}}{noun}{{background}{{name}{background}}{sign}{{name}{sign}}{tree}{{name}{tree}}}{npc}{}}{link}{}}{}{}{1.000}{}
 E {12}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {70}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {195}{enter}{.mapLink {Pinnacle/Chaos/Terra's Terrific Treehouse} {} {enter};}{0}{1}{}{1.000}{}{0.00}
 
-R {20}{0}{<068>}{A Cosmic Dishwasher}{ }{You are abruptly doused with hot, soapy water.  Shaking your head you look around and shrink in fear.  You are in a giant dishwasher. A whirling rubber hose nearly takes your head off as you duck behind the silverware.  Some tarpits these turned out to be!}{}{{content}{{item}{{bucket}{{name}{A bucket of water}}{ice cream truck}{{name}{The Good Humor, Ice Cream Truck}}}{noun}{{hose}{{name}{hose}}}}}{}{}{1.000}{}
+R {20}{0}{<068>}{A Cosmic Dishwasher}{ }{You are abruptly doused with hot, soapy water.  Shaking your head you look around and shrink in fear.  You are in a giant dishwasher. A whirling rubber hose nearly takes your head off as you duck behind the silverware.  Some tarpits these turned out to be!}{Mud}{{content}{{item}{{^A bucket of water$}{{name}{A bucket of water}}{^Erratio Forest$}{{name}{Erratio Forest}}{bucket}{{name}{A bucket of water}}{ice cream truck}{{name}{The Good Humor, Ice Cream Truck}}}{noun}{{hose}{{name}{hose}}}}}{}{}{1.000}{}
 E {12}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {22}{u}{u}{16}{0}{}{1.000}{}{0.00}
 E {23}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {24}{dive into bucket}{.mapLink {Pinnacle/Chaos/Atlantis} {} {dive into bucket};}{0}{1}{}{1.000}{}{0.00}
 
-R {21}{0}{<068>}{Eastwick}{ }{This is further down the road of Eastwick.  The sky is turning a brownish yellow. You get the feeling something is not quite right. You feel as if up is down, east is west, and north is south. There is a void swirling in the middle of the road.}{}{}{}{}{1.000}{}
+R {21}{0}{<068>}{Eastwick}{ }{This is further down the road of Eastwick.  The sky is turning a brownish yellow. You get the feeling something is not quite right. You feel as if up is down, east is west, and north is south. There is a void swirling in the middle of the road.}{Mud}{{content}{{item}{{^A swirling void$}{{name}{A swirling void}}{^Magic mushroom magically stuck in the ground$}{{name}{Magic mushroom magically stuck in the ground}}}{noun}{{sky}{{name}{sky}}}{npc}{{^villager$}{{name}{villager}}}}}{}{}{1.000}{}
 E {65}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {12}{w}{w}{8}{1}{}{1.000}{}{0.00}
 E {167}{enter void}{.mapLink {Pinnacle/Chaos/Tree of Life} {} {enter void};}{0}{1}{}{1.000}{}{0.00}
@@ -363,7 +363,7 @@ R {22}{0}{<068>}{The Upper Rack}{ }{You're now standing in the middle of the upp
 E {20}{d}{d}{32}{0}{}{1.000}{}{0.00}
 E {73}{slide spoon}{.mapLink {Pinnacle/Chaos/Cap'n Crunch Land} {} {slide spoon};}{0}{1}{}{1.000}{}{0.00}
 
-R {23}{0}{<048>}{A Cosmic Dishwasher}{ }{Suds are popping out of the dishwasher to the north.  That must be how you ended up in this neck of the woods in the first place. While you aren't sure you want to go through that again, the current sparse rocky landscape doesn't look all that promising either.  All these rocks seem out of place, given that there aren't any mountains or rivers anywhere nearby.  Go figure.}{}{{content}{{item}{{CD}{{name}{A CD. (pirated)}}{mist}{{name}{A patch of mist}}{puddle}{{name}{A mud puddle}}{waypoint}{{name}{a writhing tendril}}}{noun}{{landscape}{{name}{landscape}}{rocks}{{name}{rocks}}}}}{}{}{1.000}{}
+R {23}{0}{<068>}{A road leading north}{ }{Suds are popping out of the dishwasher to the north.  That must be how you ended up in this neck of the woods in the first place. While you aren't sure you want to go through that again, the current sparse rocky landscape doesn't look all that promising either.  All these rocks seem out of place, given that there aren't any mountains or rivers anywhere nearby.  Go figure.}{Mud}{{content}{{item}{{CD}{{name}{A CD. (pirated)}}{^A CD. \x28pirated\x29$}{{name}{A CD. (pirated)}}{^A strange boy$}{{name}{A strange boy}}{^a writhing tendril$}{{name}{a writhing tendril}}{mist}{{name}{A patch of mist}}{puddle}{{name}{A mud puddle}}{waypoint}{{name}{a writhing tendril}}}{noun}{{landscape}{{name}{landscape}}{rocks}{{name}{rocks}}}}}{}{}{1.000}{}
 E {20}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {74}{s}{.mapLink {Pinnacle/Chaos/Burdog Gorge} {} {s};}{4}{1}{}{1.000}{}{0.00}
 E {194}{listen to cd}{.mapLink {Pinnacle/Chaos/MP3 CD} {} {listen to cd};}{0}{1}{}{1.000}{}{0.00}
@@ -378,25 +378,25 @@ E {15}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {38}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {170}{doorway}{.mapLink {Pinnacle/Chaos/Lostar's Bedroom} {} {doorway};}{0}{1}{}{1.000}{}{0.00}
 
-R {27}{0}{<068>}{A path of yellow dirt}{ }{That highway definitely didn't go anywhere.  As you move south it totally disappears.  No trucks, no asphalt, nothing except a small manhole in the ground.  You suddenly find yourself on a road of yellow dirt.  You almost imagine that you can see the outlines of bricks.  This has got to be your imagination.}{}{}{}{}{1.000}{}
+R {27}{0}{<068>}{A path of yellow dirt}{ }{That highway definitely didn't go anywhere.  As you move south it totally disappears.  No trucks, no asphalt, nothing except a small manhole in the ground.  You suddenly find yourself on a road of yellow dirt.  You almost imagine that you can see the outlines of bricks.  This has got to be your imagination.}{Mud}{{content}{{item}{{^a writhing tendril$}{{name}{a writhing tendril}}}{noun}{{highway}{{name}{highway}}{manhole}{{name}{manhole}}{road}{{name}{road}}}}}{}{}{1.000}{}
 E {15}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {48}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {49}{e}{.mapLink {Pinnacle/Chaos/Mouse Trails Cottage} {} {e};}{2}{1}{}{1.000}{}{0.00}
 E {47}{d}{.mapLink {Pinnacle/Chaos/Radioactive Sewer} {} {d};}{32}{1}{}{1.000}{}{0.00}
 
-R {28}{0}{<068>}{elbow joint}{ }{As you turn the corner, you note that you have entered a steel gray tunnel.  You plink your finger off the rounded wall and realize that you are walking inside a giant junction pipe.}{}{}{}{}{1.000}{}
+R {28}{0}{<068>}{elbow joint}{ }{As you turn the corner, you note that you have entered a steel gray tunnel.  You plink your finger off the rounded wall and realize that you are walking inside a giant junction pipe.}{Mud}{{content}{{item}{{^A Weird Hanging Ladder$}{{name}{A Weird Hanging Ladder}}}{noun}{{wall}{{name}{wall}}}}}{}{}{1.000}{}
 E {15}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {29}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {30}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {31}{e}{.mapLink {Pinnacle/Chaos/Jag's Bar} {} {e};}{2}{1}{}{1.000}{}{0.00}
 
-R {29}{0}{<068>}{Pipe Outlet}{ }{After crawling through the pipe, you are abruptly discharged by a burst of water.  Standing up, you realize that you have emerged in a ditch in a fog-clouded night.  Of course, the fog isn't fog, and the ditch isn't a ditch, but....}{}{}{}{}{1.000}{}
+R {29}{0}{<068>}{Pipe Outlet}{ }{After crawling through the pipe, you are abruptly discharged by a burst of water.  Standing up, you realize that you have emerged in a ditch in a fog-clouded night.  Of course, the fog isn't fog, and the ditch isn't a ditch, but....}{Mud}{{content}{{item}{{^A staircase$}{{name}{A staircase}}}{noun}{{burst}{{name}{burst}}{ditch}{{name}{ditch}}{fog}{{name}{fog}}}}}{}{}{1.000}{}
 E {28}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {32}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {37}{climb staircase}{.mapLink {Pinnacle/Chaos/NetHack} {} {climb staircase};}{0}{1}{}{1.000}{}{0.00}
 E {33}{e}{.mapLink {Pinnacle/Chaos/A Gigantic Bedroom} {} {e};}{2}{1}{}{1.000}{}{0.00}
 
-R {30}{0}{<068>}{Slide Street}{ }{Whoa!  You nearly fall on your butt as you scramble around trying to keep your balance.  The floor here is a slippery, wet, yellow plastic sheet.  It looks kinda like one of those Wet Run things that you hook up to your sprinkler in the summertime.  A multicolored rainbow extends up majestically into the sky.}{}{}{}{}{1.000}{}
+R {30}{0}{<068>}{elbow joint}{ }{Whoa!  You nearly fall on your butt as you scramble around trying to keep your balance.  The floor here is a slippery, wet, yellow plastic sheet.  It looks kinda like one of those Wet Run things that you hook up to your sprinkler in the summertime.  A multicolored rainbow extends up majestically into the sky.}{Mud}{{content}{{item}{{^A bright, colorful rainbow$}{{name}{A bright, colorful rainbow}}{^An ancient runestone$}{{name}{An ancient runestone}}}{noun}{{floor}{{name}{floor}}}}}{}{}{1.000}{}
 E {28}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {45}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {46}{w}{.mapLink {Pinnacle/Chaos/Veggie Garden} {} {w};}{8}{1}{}{1.000}{}{0.00}
@@ -405,7 +405,7 @@ E {178}{climb rainbow}{.mapLink {Pinnacle/Chaos/Care Bears} {} {climb rainbow};}
 R {31}{0}{<000>}{LINK: Pinnacle/Chaos/Jag's Bar}{<138>*}{}{Pinnacle/Chaos/Jag's Bar}{{link}{}}{}{}{1.000}{}
 E {28}{w}{w}{8}{0}{}{1.000}{}{0.00}
 
-R {32}{0}{<068>}{Visiting a Crack House}{ }{As you leave the `ditch' and head north you are suddenly catapulted into another dimension.  As you go flying through the `air', you see dark shapes lying around the floor, smoking some noxious substance from little glass tubes.  You hope the ride comes to a quick end somewhere else because this view is very depressing.}{}{}{}{}{1.000}{}
+R {32}{0}{<068>}{Visiting a Crack House}{ }{As you leave the `ditch' and head north you are suddenly catapulted into another dimension.  As you go flying through the `air', you see dark shapes lying around the floor, smoking some noxious substance from little glass tubes.  You hope the ride comes to a quick end somewhere else because this view is very depressing.}{Mud}{{content}{{noun}{{shapes}{{name}{shapes}}{substance}{{name}{substance}}}}}{}{}{1.000}{}
 E {29}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {36}{w}{.mapLink {Pinnacle/Chaos/Chaos Museum} {} {w};}{8}{1}{}{1.000}{}{0.00}
 E {35}{n}{.mapLink {Pinnacle/Chaos/Old London} {} {n};}{1}{1}{}{1.000}{}{0.00}
@@ -425,7 +425,7 @@ E {32}{e}{e}{2}{0}{}{1.000}{}{0.00}
 
 R {37}{0}{<000>}{LINK: Pinnacle/Chaos/NetHack}{<138>*}{}{Pinnacle/Chaos/NetHack}{{link}{}}{}{}{1.000}{}
 
-R {38}{0}{<178>}{A path of yellow dirt}{ }{The ground beneath you is made of solid gold bricks.  You look  around cautiously, in sudden fear that a house may drop out of  the sky from nowhere and land on your head.  A crowd of drooling idiots is crowding into the passage north.}{}{}{}{}{1.000}{}
+R {38}{0}{<068>}{The Yellow Brick Road}{ }{The ground beneath you is made of solid gold bricks.  You look  around cautiously, in sudden fear that a house may drop out of  the sky from nowhere and land on your head.  A crowd of drooling idiots is crowding into the passage north.}{Mud}{{content}{{item}{{^Hall of Game Shows$}{{name}{Hall of Game Shows}}}{noun}{{crowd}{{name}{crowd}}{idiots}{{name}{idiots}}{passage}{{name}{passage}}{sky}{{name}{sky}}}}}{}{}{1.000}{}
 E {26}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {40}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {39}{n}{.mapLink {Pinnacle/Chaos/Game Show} {} {n};}{1}{1}{}{1.000}{}{0.00}
@@ -433,12 +433,12 @@ E {39}{n}{.mapLink {Pinnacle/Chaos/Game Show} {} {n};}{1}{1}{}{1.000}{}{0.00}
 R {39}{0}{<000>}{LINK: Pinnacle/Chaos/Game Show}{<138>*}{}{Pinnacle/Chaos/Game Show}{{link}{}}{}{}{1.000}{}
 E {38}{s}{s}{4}{0}{}{1.000}{}{0.00}
 
-R {40}{0}{<068>}{Crazy Road}{ }{You are crossing a bridge of mist.  In places, the mist gives way to hideous shapes made out of gold.  Which, you suddenly realize is absolutely impossible.  The more you look at them the more you start to look like them.  And anyone with an ounce of sense wouldn't like that!  Of course, they wouldn't be here either but you ignore that thought.}{}{}{}{}{1.000}{}
+R {40}{0}{<068>}{A bridge}{ }{You are crossing a bridge of mist.  In places, the mist gives way to hideous shapes made out of gold.  Which, you suddenly realize is absolutely impossible.  The more you look at them the more you start to look like them.  And anyone with an ounce of sense wouldn't like that!  Of course, they wouldn't be here either but you ignore that thought.}{Mud}{{content}{{item}{{^A piece of USA\x28r\x29 Today$}{{name}{A piece of USA(r) Today}}{^A sign pointing to the Mist$}{{name}{A sign pointing to the Mist}}}{noun}{{bridge}{{name}{bridge}}{mist}{{name}{mist}}{shapes}{{name}{shapes}}}}}{}{}{1.000}{}
 E {38}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {41}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {164}{enter frame}{.mapLink {Pinnacle/Chaos/JJJ Enterprises} {} {enter frame};}{0}{1}{}{1.000}{}{0.00}
 
-R {41}{0}{<068>}{Crazy Road}{ }{Your brain is under a serious assault now.  Images of horror and mayhem surround you. Maybe those stores to the north will be a refuge of sanity. Or otherwise that weird stairway over there might lead up to something better? Probably not though.}{}{}{}{}{1.000}{}
+R {41}{0}{<068>}{A bridge}{ }{Your brain is under a serious assault now.  Images of horror and mayhem surround you. Maybe those stores to the north will be a refuge of sanity. Or otherwise that weird stairway over there might lead up to something better? Probably not though.}{Mud}{{content}{{item}{{^A long leather leash hangs in midair$}{{name}{A long leather leash hangs in midair}}}{noun}{{horror}{{name}{horror}}{mayhem}{{name}{mayhem}}{stairway}{{name}{stairway}}{stores}{{name}{stores}}}}}{}{}{1.000}{}
 E {40}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {3}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {43}{n}{.mapLink {Pinnacle/Chaos/Grocery Store} {} {n};}{1}{1}{}{1.000}{}{0.00}
@@ -451,12 +451,12 @@ E {41}{d}{d}{32}{0}{}{1.000}{}{0.00}
 R {43}{0}{<000>}{LINK: Pinnacle/Chaos/Grocery Store}{<138>*}{}{Pinnacle/Chaos/Grocery Store}{{link}{}}{}{}{1.000}{}
 E {41}{s}{s}{4}{0}{}{1.000}{}{0.00}
 
-R {44}{0}{<068>}{Lollipop Lane}{ }{As you move north the road gives way to a cutesy little street lined by tall lollipop trees.  The smell of sugar is so intense here that you can almost hear the zits rising on your face and back.  I'd move on fast if I were you!}{}{}{}{}{1.000}{}
+R {44}{0}{<068>}{Lollipop Lane}{ }{As you move north the road gives way to a cutesy little street lined by tall lollipop trees.  The smell of sugar is so intense here that you can almost hear the zits rising on your face and back.  I'd move on fast if I were you!}{Mud}{{content}{{item}{{^A gumball machine$}{{name}{A gumball machine}}}{noun}{{street}{{name}{street}}}}}{}{}{1.000}{}
 E {5}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {51}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {53}{twist knob}{.mapLink {Pinnacle/Chaos/Kandy Mountain} {} {twist knob};}{0}{1}{}{1.000}{}{0.00}
 
-R {45}{0}{<068>}{Grass Street}{ }{Ahhhh.. what nice soft grass.  The ground is covered with lush green grass.  That yellow slide must definitely have an effect on this place. You hear the distant sounds of circus music to the west.}{}{}{}{}{1.000}{}
+R {45}{0}{<068>}{Grass Street}{ }{Ahhhh.. what nice soft grass.  The ground is covered with lush green grass.  That yellow slide must definitely have an effect on this place. You hear the distant sounds of circus music to the west.}{Mud}{{content}{{item}{{^A big BLACK and WHITE inflatable cow$}{{name}{A big BLACK and WHITE inflatable cow}}}{noun}{{ground}{{name}{ground}}{slide}{{name}{slide}}}}}{}{}{1.000}{}
 E {30}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {89}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {91}{e}{e}{2}{0}{}{1.000}{}{0.00}
@@ -470,7 +470,7 @@ E {30}{e}{e}{2}{0}{}{1.000}{}{0.00}
 R {47}{0}{<000>}{LINK: Pinnacle/Chaos/Radioactive Sewer}{<138>*}{}{Pinnacle/Chaos/Radioactive Sewer}{{link}{}}{}{}{1.000}{}
 E {27}{u}{u}{16}{0}{}{1.000}{}{0.00}
 
-R {48}{0}{<068>}{A path of yellow dirt}{ }{The yellow brick road, or so you think it might be, comes to an abrupt ending here.  Further to the south, you think you see the yellow bricks give way to Lego blocks.  That's impossible of course!}{}{}{}{}{1.000}{}
+R {48}{0}{<068>}{A path of yellow dirt}{ }{The yellow brick road, or so you think it might be, comes to an abrupt ending here.  Further to the south, you think you see the yellow bricks give way to Lego blocks.  That's impossible of course!}{Mud}{{content}{{item}{{^A small box of Laundry Detergent$}{{name}{A small box of Laundry Detergent}}}{noun}{{brick}{{name}{brick}}{bricks}{{name}{bricks}}}}}{}{}{1.000}{}
 E {27}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {60}{sw}{.mapLink {Pinnacle/Chaos/Brewery Swamp} {} {sw};}{12}{1}{}{1.000}{}{0.00}
 E {61}{s}{.mapLink {Pinnacle/Chaos/New Legoland} {} {s};}{4}{1}{}{1.000}{}{0.00}
@@ -481,7 +481,7 @@ E {27}{w}{w}{8}{0}{}{1.000}{}{0.00}
 
 R {50}{0}{<000>}{LINK: Pinnacle/Chaos/Chinese Checkers}{<138>*}{}{Pinnacle/Chaos/Chinese Checkers}{{link}{}}{}{}{1.000}{}
 
-R {51}{0}{<068>}{Small side road}{ }{The lollipop trees give way abruptly to a narrow concrete road. To the north you can see a massive gray edifice.  Maybe the lollipops were former dwellers of that structure.  But if they were, you probably wouldn't want to chance going that way.  But if you were smart, you wouldn't be in Chaos anyway.}{Mud}{}{}{}{1.000}{}
+R {51}{0}{<068>}{Small side road}{ }{The lollipop trees give way abruptly to a narrow concrete road. To the north you can see a massive gray edifice.  Maybe the lollipops were former dwellers of that structure.  But if they were, you probably wouldn't want to chance going that way.  But if you were smart, you wouldn't be in Chaos anyway.}{Mud}{{content}{{item}{{^A toddler's sippy cup$}{{name}{A toddler's sippy cup}}}}}{}{}{1.000}{}
 E {44}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {144}{sip cup}{.mapLink {Pinnacle/Chaos/Toddler House} {} {sip cup};}{0}{1}{}{1.000}{}{0.00}
 E {52}{n}{.mapLink {Pinnacle/Chaos/Shady Oaks Asylum} {} {n};}{1}{1}{}{1.000}{}{0.00}
@@ -491,7 +491,7 @@ E {51}{s}{s}{4}{0}{}{1.000}{}{0.00}
 
 R {53}{0}{<000>}{LINK: Pinnacle/Chaos/Kandy Mountain}{<138>*}{}{Pinnacle/Chaos/Kandy Mountain}{{link}{}}{}{}{1.000}{}
 
-R {54}{0}{<068>}{A Chagall Mosaic (maybe)}{}{The grass gives way to innumerable little bits of glass.  They are arranged in intricate but non-linear rows.  It is night time here but the stars are out and a blazing comet casts sufficient light to see.}{Pinnacle/Chaos/Humpty Dumpty}{{link}{}}{}{}{1.000}{}
+R {54}{0}{<068>}{A road heading south {maybe}}{}{The grass gives way to innumerable little bits of glass.  They are arranged in intricate but non-linear rows.  It is night time here but the stars are out and a blazing comet casts sufficient light to see.}{Pinnacle/Chaos/Humpty Dumpty}{{content}{{item}{{^A blazing comet$}{{name}{A blazing comet}}{^An old dusty book$}{{name}{An old dusty book}}}{noun}{{bits}{{name}{bits}}}}{link}{}}{}{}{1.000}{}
 E {4}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {57}{w}{.mapLink {Pinnacle/Chaos/Carina's Observatory} {} {w};}{8}{1}{}{1.000}{}{0.00}
 E {56}{s}{.mapLink {Pinnacle/Chaos/Forest of Wolves} {} {s};}{4}{1}{}{1.000}{}{0.00}
@@ -511,7 +511,7 @@ E {54}{e}{e}{2}{0}{}{1.000}{}{0.00}
 R {58}{0}{<000>}{LINK: Pinnacle/Chaos/Toy Store}{<138>*}{}{Pinnacle/Chaos/Toy Store}{{link}{}}{}{}{1.000}{}
 E {54}{w}{w}{8}{0}{}{1.000}{}{0.00}
 
-R {59}{0}{<068>}{South Forest}{ }{The non-forest continues south.  But now the `ground' is beginning to take on a purplish tint which seems to be coming from that obloid to the south. There is a dense patch of purple mist in this area through which you can dimly see huge shapes moving.}{}{}{}{}{1.000}{}
+R {59}{0}{<068>}{South Forest}{ }{The non-forest continues south.  But now the `ground' is beginning to take on a purplish tint which seems to be coming from that obloid to the south. There is a dense patch of purple mist in this area through which you can dimly see huge shapes moving.}{Mud}{{content}{{item}{{^A playhouse$}{{name}{A playhouse}}}{noun}{{mist}{{name}{mist}}{non-forest}{{name}{non-forest}}{obloid}{{name}{obloid}}{tint}{{name}{tint}}}}}{}{}{1.000}{}
 E {8}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {69}{s}{.mapLink {Pinnacle/Chaos/Barney's Studio} {} {s};}{4}{1}{}{1.000}{}{0.00}
 E {171}{enter mist}{.mapLink {Pinnacle/Chaos/Land of the Dinosaurs} {} {enter mist};}{0}{1}{}{1.000}{}{0.00}
@@ -522,28 +522,28 @@ E {48}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 R {61}{0}{<000>}{LINK: Pinnacle/Chaos/New Legoland}{<138>*}{}{Pinnacle/Chaos/New Legoland}{{link}{}}{}{}{1.000}{}
 E {48}{n}{n}{1}{0}{}{1.000}{}{0.00}
 
-R {62}{0}{<068>}{Wickland Street}{ }{This appears to be a new side street. The pavement looks fresh and clean. Nary a pothole to be found! Too bad the same can't be said for the ground just beyond the curb on each side of this pleasant little avenue. It seems to be littered with craters.}{}{}{}{}{1.000}{}
+R {62}{0}{<068>}{Wickland Street}{ }{This appears to be a new side street. The pavement looks fresh and clean. Nary a pothole to be found! Too bad the same can't be said for the ground just beyond the curb on each side of this pleasant little avenue. It seems to be littered with craters.}{Mud}{{content}{{item}{{^A street sign$}{{name}{A street sign}}}{noun}{{curb}{{name}{curb}}{feet}{{name}{feet}}{ground}{{name}{ground}}{pavement}{{name}{pavement}}{pothole}{{name}{pothole}}{road}{{name}{road}}}}}{}{}{1.000}{}
 E {9}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {63}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {146}{count 123}{.mapLink {Pinnacle/Chaos/Sesame Street} {} {count 123};}{0}{1}{}{1.000}{}{0.00}
 
-R {63}{0}{<068>}{Wickland Street}{ }{Wickland Street continues merrily along, now winding through what appears to be a bamboo forest. A thick one at that! The trees of the forest are so thick on each side of the street that they almost run right up against the curbs.}{}{}{}{}{1.000}{}
+R {63}{0}{<068>}{Wickland Street}{ }{Wickland Street continues merrily along, now winding through what appears to be a bamboo forest. A thick one at that! The trees of the forest are so thick on each side of the street that they almost run right up against the curbs.}{Mud}{{content}{{item}{{^A Mahjongg tile$}{{name}{A Mahjongg tile}}}{noun}{{bamboo}{{name}{bamboo}}{forest}{{name}{forest}}{street}{{name}{street}}{trees}{{name}{trees}}}}}{}{}{1.000}{}
 E {62}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {68}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {147}{draw tile}{.mapLink {Pinnacle/Chaos/Mahjongg} {} {draw tile};}{0}{1}{}{1.000}{}{0.00}
 
-R {64}{0}{<178>}{Eastwick Road}{ }{You are on the Eastwick road.  There is a road to the west and another to the south.  Which way do you go, you do not know.}{}{}{}{}{1.000}{}
+R {64}{0}{<178>}{Eastwick Road}{ }{You are on the Eastwick road.  There is a road to the west and another to the south.  Which way do you go, you do not know.}{Mud}{{content}{{item}{{^A HUGE refrigerator$}{{name}{A HUGE refrigerator}}{^Zippo Case$}{{name}{Zippo Case}}}{noun}{{road}{{name}{road}}}}}{}{}{1.000}{}
 E {65}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {140}{w}{w}{8}{0}{}{1.000}{}{0.00}
 
-R {65}{0}{<068>}{Eastwick}{ }{The road splits into four directions from here. You can go to the north and the south or back to the center. Maybe.  You never really can know in chaos.  The future lies to the north.  The past to the south.  Or is it to the east? Well, head on in and find out for yourself.}{}{}{}{}{1.000}{}
+R {65}{0}{<068>}{Eastwick Road}{ }{The road splits into four directions from here. You can go to the north and the south or back to the center. Maybe.  You never really can know in chaos.  The future lies to the north.  The past to the south.  Or is it to the east? Well, head on in and find out for yourself.}{Mud}{{content}{{item}{{^A hip doorway$}{{name}{A hip doorway}}{^A toy chest$}{{name}{A toy chest}}}{noun}{{road}{{name}{road}}}{npc}{{^Judge Dredd$}{{name}{Judge Dredd}}}}}{}{}{1.000}{}
 E {21}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {64}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {66}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {67}{e}{.mapLink {Pinnacle/Chaos/Waldo's House} {} {e};}{2}{1}{}{1.000}{}{0.00}
 E {177}{open chest}{.mapLink {Pinnacle/Chaos/Winnie the Pooh} {} {open chest};}{0}{1}{}{1.000}{}{0.00}
 
-R {66}{0}{<068>}{South/North Fork}{ }{This is a narrow road north of Eastwick.  Or maybe south. It really is hard to say.  You can see a big gray building to the east, or west, or north.  Directions really are pretty meaningless in this part of Chaos.}{Mud}{}{}{}{1.000}{}
+R {66}{0}{<068>}{South/North Fork}{ }{This is a narrow road north of Eastwick.  Or maybe south. It really is hard to say.  You can see a big gray building to the east, or west, or north.  Directions really are pretty meaningless in this part of Chaos.}{Mud}{{content}{{item}{{^A chromatic mutant plant$}{{name}{A chromatic mutant plant}}{^A quaint candy store$}{{name}{A quaint candy store}}}{noun}{{building}{{name}{building}}{road}{{name}{road}}}}}{}{}{1.000}{}
 E {65}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {75}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {76}{e}{.mapLink {Pinnacle/Chaos/Physics Lab} {} {e};}{2}{1}{}{1.000}{}{0.00}
@@ -552,16 +552,17 @@ E {151}{enter store}{.mapLink {Pinnacle/Chaos/Chaos Candy Store} {} {enter store
 R {67}{0}{<000>}{LINK: Pinnacle/Chaos/Waldo's House}{<138>*}{}{Pinnacle/Chaos/Waldo's House}{{link}{}}{}{}{1.000}{}
 E {65}{w}{w}{8}{0}{}{1.000}{}{0.00}
 
-R {68}{0}{<178>}{Wickwood Forest}{ }{The ground underfoot is hard-packed dirt and a multitude of strange trees surrounds you. You recognize a few varieties such as bamboo and palm, but what are these others? Some of the wood is bright red, others are purple, and some of these 'trees' actually appear to be giant Q-tips!}{}{}{}{}{1.000}{}
+R {68}{0}{<178>}{Wickwood Forest}{ }{The ground underfoot is hard-packed dirt and a multitude of strange trees surrounds you. You recognize a few varieties such as bamboo and palm, but what are these others? Some of the wood is bright red, others are purple, and some of these 'trees' actually appear to be giant Q-tips!}{Mud}{{content}{{noun}{{bamboo}{{name}{bamboo}}{dirt}{{name}{dirt}}{ground}{{name}{ground}}{others}{{name}{others}}{trees}{{name}{trees}}{varieties}{{name}{varieties}}{wood}{{name}{wood}}}}}{}{}{1.000}{}
 E {63}{n}{n}{1}{0}{}{1.000}{}{0.00}
 
 R {69}{0}{<000>}{LINK: Pinnacle/Chaos/Barney's Studio}{<138>*}{}{Pinnacle/Chaos/Barney's Studio}{{link}{}}{}{}{1.000}{}
 E {59}{n}{n}{1}{0}{}{1.000}{}{0.00}
 
-R {70}{0}{<068>}{A road leading north-south}{ }{All around you fiery geysers explode from the land, showering you in harmless ashes.  Though, you can imagine it wouldn't be quite so harmless if you were standing on top of one of them when it decided to erupt.  You'd best watch where you step.  A small path branches off here, and in defiance of common sense, someone has set up a notice board here as well.}{}{}{}{}{1.000}{}
+R {70}{0}{<068>}{A road leading north-south}{ }{All around you fiery geysers explode from the land, showering you in harmless ashes.  Though, you can imagine it wouldn't be quite so harmless if you were standing on top of one of them when it decided to erupt.  You'd best watch where you step.  A small path branches off here, and in defiance of common sense, someone has set up a notice board here as well.}{Mud}{{content}{{item}{{^An accommodation notice board$}{{name}{An accommodation notice board}}}{noun}{{geysers}{{name}{geysers}}{path}{{name}{path}}}}}{}{}{1.000}{}
 E {19}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {71}{se}{.mapLink {Pinnacle/Chaos/Fidohell} {} {se};}{6}{1}{}{1.000}{}{0.00}
 E {72}{n}{.mapLink {Pinnacle/Chaos/Electric Cave} {} {n};}{1}{1}{}{1.000}{}{0.00}
+E {197}{visit flat}{.mapLink {Pinnacle/Chaos/11 Melville Terrace} {} {visit flat};}{0}{1}{}{1.000}{}{0.00}
 
 R {71}{0}{<000>}{LINK: Pinnacle/Chaos/Fidohell}{<138>*}{}{Pinnacle/Chaos/Fidohell}{{link}{}}{}{}{1.000}{}
 E {70}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
@@ -574,22 +575,23 @@ R {73}{0}{<000>}{LINK: Pinnacle/Chaos/Cap'n Crunch Land}{<138>*}{}{Pinnacle/Chao
 R {74}{0}{<000>}{LINK: Pinnacle/Chaos/Burdog Gorge}{<138>*}{}{Pinnacle/Chaos/Burdog Gorge}{{link}{}}{}{}{1.000}{}
 E {23}{n}{n}{1}{0}{}{1.000}{}{0.00}
 
-R {75}{0}{<178>}{Eastwick}{ }{This is the Eastwick road.  There is a path running south and another to the east.  There is also a big white portal here. Which way do you go, I do not know!}{}{}{}{}{1.000}{}
+R {75}{0}{<178>}{Eastwick}{ }{This is the Eastwick road.  There is a path running south and another to the east.  There is also a big white portal here. Which way do you go, I do not know!}{Mud}{{content}{{item}{{^erratic light$}{{name}{erratic light}}}{noun}{{portal}{{name}{portal}}}}}{}{}{1.000}{}
 E {66}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {77}{s}{s}{4}{0}{}{1.000}{}{0.00}
 
 R {76}{0}{<000>}{LINK: Pinnacle/Chaos/Physics Lab}{<138>*}{}{Pinnacle/Chaos/Physics Lab}{{link}{}}{}{}{1.000}{}
 E {66}{w}{w}{8}{0}{}{1.000}{}{0.00}
 
-R {77}{0}{<178>}{Eastwick Road}{ }{The road suddenly leads through the reading room of a small library.  There is a passage north and another to the east. Which way do you go, you do not know.}{}{}{}{}{1.000}{}
+R {77}{0}{<068>}{Eastwick Road}{ }{The road suddenly leads through the reading room of a small library.  There is a passage north and another to the east. Which way do you go, you do not know.}{Mud}{{content}{{item}{{^A Book$}{{name}{A Book}}}{noun}{{passage}{{name}{passage}}{road}{{name}{road}}}}}{}{}{1.000}{}
 E {75}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {78}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {196}{read book}{.mapLink {Pinnacle/Chaos/The Chronicles of Thomas Covenant} {} {read book};}{0}{1}{}{1.000}{}{0.00}
 
-R {78}{0}{<178>}{Eastwick}{ }{You are back on the Eastwick road.  There is a road to the east and another to the west.  Which way do you go, you do not know. }{}{}{}{}{1.000}{}
+R {78}{0}{<178>}{Eastwick}{ }{You are back on the Eastwick road.  There is a road to the east and another to the west.  Which way do you go, you do not know. }{Mud}{{content}{{item}{{^An Outhouse$}{{name}{An Outhouse}}}{noun}{{road}{{name}{road}}}}}{}{}{1.000}{}
 E {77}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {79}{e}{e}{2}{0}{}{1.000}{}{0.00}
 
-R {79}{0}{<068>}{Eastwick}{ }{This is the Eastwick road.  There is a road to the north and one to the west.  Which way do you go, you do not know.  There is a deep dark hole here.  Oddly enough, it goes up, not down.}{Mud}{}{}{}{1.000}{}
+R {79}{0}{<048>}{Eastwick}{ }{This is the Eastwick road.  There is a road to the north and one to the west.  Which way do you go, you do not know.  There is a deep dark hole here.  Oddly enough, it goes up, not down.}{Mud}{{content}{{item}{{^A joystick$}{{name}{A joystick}}{^A mud puddle$}{{name}{A mud puddle}}}{noun}{{hole}{{name}{hole}}{road}{{name}{road}}}}}{}{}{1.000}{}
 E {78}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {81}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {82}{e}{.mapLink {Pinnacle/Chaos/The Book Nook} {} {e};}{2}{1}{}{1.000}{}{0.00}
@@ -599,36 +601,36 @@ E {143}{grab joystick}{.mapLink {Pinnacle/Chaos/Gamer's House} {} {grab joystick
 R {80}{0}{<000>}{LINK: Pinnacle/Chaos/Crydee}{<138>*}{}{Pinnacle/Chaos/Crydee}{{link}{}}{}{}{1.000}{}
 E {79}{d}{d}{32}{0}{}{1.000}{}{0.00}
 
-R {81}{0}{<178>}{Eastwick Road}{ }{This is the Eastwick road.  The lurching, sidewinding street leads straight as an arrow north and south, or rather south and north, or perhaps both at the same time.  The mottled sky is dark and shadowy, caused both by the existence and non- existence of a fixed source of light, and the giant warehouse that floats happily over your halo.  Which way to head?  Which way to feet?  Which way to the nearest nail factory?  Questions, questions.}{}{}{}{}{1.000}{}
+R {81}{0}{<178>}{Eastwick Road}{ }{This is the Eastwick road.  The lurching, sidewinding street leads straight as an arrow north and south, or rather south and north, or perhaps both at the same time.  The mottled sky is dark and shadowy, caused both by the existence and non- existence of a fixed source of light, and the giant warehouse that floats happily over your halo.  Which way to head?  Which way to feet?  Which way to the nearest nail factory?  Questions, questions.}{Mud}{{content}{{item}{{^A spectral warehouse$}{{name}{A spectral warehouse}}}{noun}{{sky}{{name}{sky}}}}}{}{}{1.000}{}
 E {79}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {83}{n}{n}{1}{0}{}{1.000}{}{0.00}
 
 R {82}{0}{<000>}{LINK: Pinnacle/Chaos/The Book Nook}{<138>*}{}{Pinnacle/Chaos/The Book Nook}{{link}{}}{}{}{1.000}{}
 E {79}{w}{w}{8}{0}{}{1.000}{}{0.00}
 
-R {83}{0}{<178>}{Eastwick Road}{ }{This is the Eastwick road.  Somehow it suddenly veered in direction. There is a road to the west and another to the east.  Which way do you go, you do not know.}{}{}{}{}{1.000}{}
+R {83}{0}{<178>}{Eastwick Road}{ }{This is the Eastwick road.  Somehow it suddenly veered in direction. There is a road to the west and another to the east.  Which way do you go, you do not know.}{Mud}{{content}{{item}{{^A large whirlpool$}{{name}{A large whirlpool}}}{noun}{{road}{{name}{road}}}}}{}{}{1.000}{}
 E {85}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {81}{w}{w}{8}{0}{}{1.000}{}{0.00}
 
 R {84}{0}{<109>}{}{ }{}{}{}{}{}{1.000}{}
 E {85}{s}{s}{4}{0}{}{1.000}{}{0.00}
 
-R {85}{0}{<178>}{Eastwick Road}{ }{As you travel west you start to realize... You are going south. The world in eastwick is chaotic and turned around.  To the south is a barren wasteland.  It looks as though it has been hit by an atomic weapon.  The gooey tar-like substance was once an asphalt road.  You can almost feel the radiation pouring through your shoes.  The road to the north leads into eastwick.  The road south trails off into a steamy, twisted world.}{}{}{}{}{1.000}{}
+R {85}{0}{<178>}{Eastwick Road}{ }{As you travel west you start to realize... You are going south. The world in eastwick is chaotic and turned around.  To the south is a barren wasteland.  It looks as though it has been hit by an atomic weapon.  The gooey tar-like substance was once an asphalt road.  You can almost feel the radiation pouring through your shoes.  The road to the north leads into eastwick.  The road south trails off into a steamy, twisted world.}{Mud}{{content}{{item}{{^a writhing tendril$}{{name}{a writhing tendril}}}{noun}{{substance}{{name}{substance}}}}}{}{}{1.000}{}
 E {86}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {83}{n}{n}{1}{0}{}{1.000}{}{0.00}
 
-R {86}{0}{<068>}{Nuclear Wasteland}{ }{You meander through a glowing rockpile glancing nervously over you shoulder as you hear slight rustlings on all sides.}{}{}{}{}{1.000}{}
+R {86}{0}{<068>}{Nuclear Wasteland}{ }{You meander through a glowing rockpile glancing nervously over you shoulder as you hear slight rustlings on all sides.}{Mud}{{content}{{item}{{^A big red shoe$}{{name}{A big red shoe}}{^A magical sleigh$}{{name}{A magical sleigh}}}{noun}{{rockpile}{{name}{rockpile}}}}}{}{}{1.000}{}
 E {85}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {87}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {158}{enter sleigh}{.mapLink {Pinnacle/Chaos/Toy Factory} {} {enter sleigh};}{0}{1}{}{1.000}{}{0.00}
 
-R {87}{0}{<068>}{Nuclear Wasteland}{ }{There is a vast, bubbling pool to the east.  It looks like you're going to have to jump the pool and hope for the best!}{}{}{}{}{1.000}{}
+R {87}{0}{<068>}{Nuclear Wasteland}{ }{There is a vast, bubbling pool to the east.  It looks like you're going to have to jump the pool and hope for the best!}{Mud}{{content}{{noun}{{pool}{{name}{pool}}}}}{}{}{1.000}{}
 E {86}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {141}{jump pool}{jump pool}{0}{0}{}{1.000}{}{0.00}
 
 R {88}{0}{<000>}{LINK: Pinnacle/Chaos/Chaos Laundry}{<138>*}{}{Pinnacle/Chaos/Chaos Laundry}{{link}{}}{}{}{1.000}{}
 
-R {89}{0}{<068>}{Country Road}{ }{You're on a small country road.  All you can see around you are fields of corn. It appears that the WPA has reached this sleepy countryside.  Workers are encamped along the road, manning a stand selling Mentos. }{}{}{}{}{1.000}{}
+R {89}{0}{<068>}{Country Road}{ }{You're on a small country road.  All you can see around you are fields of corn. It appears that the WPA has reached this sleepy countryside.  Workers are encamped along the road, manning a stand selling Mentos. }{Mud}{{content}{{item}{{^A stand selling Mentos$}{{name}{A stand selling Mentos}}}{noun}{{fields}{{name}{fields}}}}}{}{}{1.000}{}
 E {45}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {92}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {93}{w}{.mapLink {Pinnacle/Chaos/Funkytown} {} {w};}{8}{1}{}{1.000}{}{0.00}
@@ -643,7 +645,7 @@ E {94}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {96}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {95}{s}{.mapLink {Pinnacle/Chaos/Tornado} {} {s};}{4}{1}{}{1.000}{}{0.00}
 
-R {92}{0}{<068>}{Forest path}{ }{You're on a tiny deer trail, deep in the middle of a forest.  Only a little sunlight filters through the branches above you, but you can see enough to avoid the trees in your path.   Small animals scurry away at your approach.}{}{}{}{}{1.000}{}
+R {92}{0}{<068>}{Forest path}{ }{You're on a tiny deer trail, deep in the middle of a forest.  Only a little sunlight filters through the branches above you, but you can see enough to avoid the trees in your path.   Small animals scurry away at your approach.}{Mud}{{content}{{item}{{^A plastic magnifying glass$}{{name}{A plastic magnifying glass}}{^A small playing card$}{{name}{A small playing card}}}{noun}{{animals}{{name}{animals}}{sunlight}{{name}{sunlight}}{trees}{{name}{trees}}}}}{}{}{1.000}{}
 E {89}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {97}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {98}{w}{w}{8}{0}{}{1.000}{}{0.00}
@@ -666,7 +668,7 @@ E {103}{s}{.mapLink {Pinnacle/Chaos/Chaos Cinemaplex} {} {s};}{4}{1}{}{1.000}{}{
 E {163}{fix typo}{.mapLink {Pinnacle/Chaos/Dayln's Mind} {} {fix typo};}{0}{1}{}{1.000}{}{0.00}
 E {180}{skip rope}{.mapLink {Pinnacle/Chaos/Club Chaos} {} {skip rope};}{0}{1}{}{1.000}{}{0.00}
 
-R {97}{0}{<068>}{Swirling mist (sideways,out2,out1)                          }{ }{You suddenly find yourself floating in a white, swirling mist.  There's  no sense of up or down, just two openings, like breaks in a cloud, where you can see out.  Strangely enough, there is a concrete ramp here that, as far as you can tell, leads sideways.}{}{}{}{}{1.000}{}
+R {97}{0}{<068>}{Swirling mist (sideways,out2,out1)}{ }{You suddenly find yourself floating in a white, swirling mist.  There's  no sense of up or down, just two openings, like breaks in a cloud, where you can see out.  Strangely enough, there is a concrete ramp here that, as far as you can tell, leads sideways.}{Mud}{{content}{{item}{{^A Black Digital VCR$}{{name}{A Black Digital VCR}}}{noun}{{concrete}{{name}{concrete}}{ramp}{{name}{ramp}}}}}{}{}{1.000}{}
 E {92}{n}{out1}{1}{0}{}{1.000}{}{0.00}
 E {99}{s}{out2}{4}{0}{}{1.000}{}{0.00}
 E {189}{sideways}{.mapLink {Pinnacle/Chaos/Disney World} {} {sideways};}{0}{1}{}{1.000}{}{0.00}
@@ -675,7 +677,7 @@ E {190}{press play}{.mapLink {Pinnacle/Chaos/The Secret of Nimh} {} {press play}
 R {98}{0}{<178>}{Field of Daisies}{ }{Blinding sunlight shines down on this lovely field of white and yellow daisies.  The flowers are everywhere, literally thousands of them. Buzzing about this fragrant patch of land are more dragonflies than you can count.  Watch out or they might fly right into you!}{}{}{}{}{1.000}{}
 E {92}{e}{e}{2}{0}{}{1.000}{}{0.00}
 
-R {99}{0}{<068>}{Hedge maze}{ }{You're at an intersection in what appears to be a hedge maze.  Which way will you go?}{Mud}{}{}{}{1.000}{}
+R {99}{0}{<068>}{The center of Chaos}{ }{This is the dead center of the Realm of Chaos.  All around you lies a bleak and desolate land tormented by the wrath of unknown forces. You are standing at the edge of a raging vortex that seems to fall into infinity.  There are paths leading away from the vortex in several directions.  What you might find there is so changeable that you aren't certain how to proceed.  Some hard-won experience is related on the plaque.  But don't trust it.  This is CHAOS! }{Mud}{{content}{{item}{{^A beautiful gold engagement ring$}{{name}{A beautiful gold engagement ring}}}}}{}{}{1.000}{}
 E {97}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {1}{e}{e}{2}{1}{}{1.000}{}{0.00}
 E {100}{s}{.mapLink {Pinnacle/Chaos/Body Mansion} {} {s};}{4}{1}{}{1.000}{}{0.00}
@@ -847,18 +849,19 @@ E {133}{s}{s}{4}{0}{}{1.000}{}{0.00}
 R {139}{0}{<000>}{LINK: Pinnacle/Chaos/Aquarium}{<138>*}{}{Pinnacle/Chaos/Aquarium}{{link}{}}{}{}{1.000}{}
 E {133}{w}{w}{8}{0}{}{1.000}{}{0.00}
 
-R {140}{0}{<068>}{Eastwick Road}{ }{You are on the Eastwick road.  There is a road to the east and another to the north.  Which way do you go, you do not know.}{}{}{}{}{1.000}{}
+R {140}{0}{<068>}{Eastwick Road}{ }{You are on the Eastwick road.  There is a road to the east and another to the north.  Which way do you go, you do not know.}{Mud}{{content}{{item}{{^A White Fence$}{{name}{A White Fence}}{^Erratio Forest$}{{name}{Erratio Forest}}}{noun}{{road}{{name}{road}}}}}{}{}{1.000}{}
 E {64}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {141}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {149}{push fence}{.mapLink {Pinnacle/Chaos/Summerset Warrens} {} {push fence};}{0}{1}{}{1.000}{}{0.00}
 
-R {141}{0}{<068>}{Eastwick Road}{ }{Your sense of direction suffers a new jolt.  There is a bubbling pool to the west and a road heading south.  The only way you can see around the pool is by jumping it.}{}{}{}{}{1.000}{}
+R {141}{0}{<068>}{Eastwick Road}{ }{Your sense of direction suffers a new jolt.  There is a bubbling pool to the west and a road heading south.  The only way you can see around the pool is by jumping it.}{Mud}{{content}{{noun}{{pool}{{name}{pool}}}}}{}{}{1.000}{}
 E {140}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {142}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {87}{jump pool}{jump pool}{0}{0}{}{1.000}{}{0.00}
 
-R {142}{0}{<048>}{Eastwick Road Food Court}{ }{The road ends here at a series of entrances to various food emporiums. So, if you're hungry, you've come to the right place! Several of the doors' signs say 'CLOSED' with no indication of what they even are.  A few other doors seem to be wide open, ready for you to wander in and fill your gut.}{}{}{}{}{1.000}{}
+R {142}{0}{<048>}{Eastwick Road Food Court}{ }{The road ends here at a series of entrances to various food emporiums. So, if you're hungry, you've come to the right place! Several of the doors' signs say 'CLOSED' with no indication of what they even are.  A few other doors seem to be wide open, ready for you to wander in and fill your gut.}{Mud}{{content}{{noun}{{doors}{{name}{doors}}{road}{{name}{road}}}}}{}{}{1.000}{}
 E {141}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {199}{mcd}{.mapLink {Pinnacle/Chaos/Mcdonald's} {} {mcd};}{0}{1}{}{1.000}{}{0.00}
 
 R {143}{0}{<000>}{LINK: Pinnacle/Chaos/Gamer's House}{<138>*}{}{Pinnacle/Chaos/Gamer's House}{{link}{}}{}{}{1.000}{}
 
@@ -970,3 +973,12 @@ R {193}{0}{<000>}{LINK: Pinnacle/Chaos/BBN Planet}{<138>*}{}{Pinnacle/Chaos/BBN 
 R {194}{0}{<000>}{LINK: Pinnacle/Chaos/MP3 CD}{<138>*}{}{Pinnacle/Chaos/MP3 CD}{{content}{{item}{{CD}{{name}{A CD. (pirated)}}{instructions}{{name}{A sheet of instructions}}{puddle}{{name}{A mud puddle}}{waypoint}{{name}{a writhing tendril}}}{noun}{{darkness}{{name}{darkness}}{landscape}{{name}{landscape}}{rocks}{{name}{rocks}}{spot}{{name}{spot}}}}{link}{}}{}{}{1.000}{}
 
 R {195}{0}{<000>}{LINK: Pinnacle/Chaos/Terra's Terrific Treehouse}{<138>*}{}{Pinnacle/Chaos/Terra's Terrific Treehouse}{{content}{{item}{{hockey puck}{{name}{A hockey puck}}}{noun}{{background}{{name}{background}}{sign}{{name}{sign}}{tree}{{name}{tree}}}}{link}{}}{}{}{1.000}{}
+
+R {196}{0}{<000>}{LINK: Pinnacle/Chaos/The Chronicles of Thomas Covenant}{<138>*}{}{Pinnacle/Chaos/The Chronicles of Thomas Covenant}{{link}{}}{}{}{1.000}{}
+
+R {197}{0}{<000>}{LINK: Pinnacle/Chaos/11 Melville Terrace}{<138>*}{}{Pinnacle/Chaos/11 Melville Terrace}{{content}{{item}{{^A hockey puck$}{{name}{A hockey puck}}{^An accommodation notice board$}{{name}{An accommodation notice board}}}{noun}{{buttons}{{name}{buttons}}{door}{{name}{door}}{fence}{{name}{fence}}{geysers}{{name}{geysers}}{number}{{name}{number}}{panel}{{name}{panel}}{path}{{name}{path}}{wall}{{name}{wall}}}}{link}{}}{}{}{1.000}{}
+
+R {198}{0}{<000>}{LINK: Pinnacle/Chaos/Gremlins}{<138>*}{}{Pinnacle/Chaos/Gremlins}{{content}{{item}{{^A very greasy hamburger$}{{name}{A very greasy hamburger}}{^Overgrown swamp$}{{name}{Overgrown swamp}}}{noun}{{dirt}{{name}{dirt}}{grass}{{name}{grass}}{ground}{{name}{ground}}{tufts}{{name}{tufts}}}}{link}{}}{}{}{1.000}{}
+E {8}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {199}{0}{<000>}{LINK: Pinnacle/Chaos/Mcdonald's}{<138>*}{}{Pinnacle/Chaos/Mcdonald's}{{content}{{noun}{{doors}{{name}{doors}}{road}{{name}{road}}}}{link}{}}{}{}{1.000}{}
