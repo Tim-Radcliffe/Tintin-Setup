@@ -478,83 +478,82 @@
 /* Repeatedly check the map looking for rooms that match the current room name/exits */
 #ALIAS {.mapFindMe}
 {
-		#NOP %1;
+	#NOP %1;
+	#IF {&{_mFM[mapfile]} < 1}
+	{
+			#IF {"$room[location][name]" == ""}
+			{
+					#VAR {room[location][name]} {none};
+					rating;
+					event_oneshot {e_command_rating} {map.tin} {.mapFindMe %1};
+					#RETURN;
+			};
+			#ELSEIF {"$map[area][name]" != "$room[location][name]"}
+			{
+					#VAR {_mFM[mapfile]} {@fSearchArea{$room[location][name]}};
+					#IF {&_mFM[mapfile] == 1}
+					{
+							.mapLoad {$_mFM[mapfile][1]};
+							event_oneshot {e_prompt} {map.tin} {.mapFindMe %1};
+					};
+			};
+			#ELSE 
+			{
+					#VAR {_mFM[mapfile][1]} {$map[file]};
+			};
+	};
 
-		#IF {&{_mFM[mapfile]} < 1}
-		{
-				#IF {"$room[location][name]" == ""}
-				{
-						#VAR {room[location][name]} {none};
-						rating;
-						event_oneshot {e_command_rating} {map.tin} {.mapFindMe %1};
-						#RETURN;
-				};
-				#ELSEIF {"$map[area][name]" != "$room[location][name]"}
-				{
-						#VAR {_mFM[mapfile]} {@fSearchArea{$room[location][name]}};
-						#IF {&_mFM[mapfile] == 1}
-						{
-								.mapLoad {$_mFM[mapfile][1]};
-								event_oneshot {e_prompt} {map.tin} {.mapFindMe %1};
-						};
-				};
-				#ELSE 
-				{
-						#VAR {_mFM[mapfile][1]} {$map[file]};
-				};
-		};
+	#IF {"%1" == "nonames"}
+	{
+			#MAP {list} {roomexits} {$room[exits]} {variable} {_mFM[currRooms]};
+	};
+	#ELSE
+	{
+			#MAP {list} {roomname} {$room[name]} {roomexits} {$room[exits]} {variable} {_mFM[currRooms]};
+	};    
 
-		#IF {"%1" == "nonames"}
-		{
-				#MAP {list} {roomexits} {$room[exits]} {variable} {_mFM[currRooms]};
-		};
-		#ELSE
-		{
-				#MAP {list} {roomname} {$room[name]} {roomexits} {$room[exits]} {variable} {_mFM[currRooms]};
-		};    
+	#IF {&_mFM[linkRooms][] > 0 && &_mFM[currRooms][] > 1 && &_mFM[currRooms][] < 500}
+	{
+			#VAR {_mFM[checkRooms]} {$_mFM[currRooms]};
+			#UNVAR {_mFM[currRooms]};
+			#FOREACH {*_mFM[checkRooms][]} {r}
+			{
+					#IF {&_mFM[linkRooms][$r] > 0}
+					{
+							#VAR {_mFM[currRooms][$r]} {$_mFM[checkRooms][$r]};
+							#UNVAR {_mFM[checkRooms]};
+					};
+			};
+	};
 
-		#IF {&_mFM[linkRooms][] > 0 && &_mFM[currRooms][] > 1 && &_mFM[currRooms][] < 500}
-		{
-				#VAR {_mFM[checkRooms]} {$_mFM[currRooms]};
-				#UNVAR {_mFM[currRooms]};
-				#FOREACH {*_mFM[checkRooms][]} {r}
-				{
-						#IF {&_mFM[linkRooms][$r] > 0}
-						{
-								#VAR {_mFM[currRooms][$r]} {$_mFM[checkRooms][$r]};
-						};
-				};
-		};
-
-		#IF {&_mFM[currRooms][] == 1}
-		{
-				#ECHO {INFO: 1 match found - Located!};
-				#MAP GOTO {*_mFM[currRooms][+1]};
-				#UNVAR {_mFM};
-				event_remove_specific {e_roomscan_finished} {map.tin};
-		};
-		#ELSEIF {&_mFM[currRooms][] > 1}
-		{
-				#UNVAR {_mFM[linkRooms]};
-				#FOREACH {*_mFM[currRooms][]} {r}
-				{
-						#MAP AT {$r} {#MAP GET ROOMEXITS {_mFM[linkExits]}};
-						#FOREACH {$_mFM[linkExits][1..-1]} {e}
-						{
-								#VAR {_mFM[linkRooms][$e]} {1};
-						};
-				};
-				#ECHO {INFO: &_mFM[currRooms][] matches - keep moving};
-				#UNVAR {_mFM[currRooms]};
-				event_register {e_roomscan_finished} {map.tin} {.mapFindMe %1};
-		};
-		#ELSE
-		{
-				#ECHO {INFO: No Match Found};
-				#UNVAR {_mFM};
-				event_remove_specific {e_roomscan_finished} {map.tin};
-		};
-
+	#IF {&_mFM[currRooms][] == 1}
+	{
+			#ECHO {INFO: 1 match found - Room *_mFM[currRooms][+1] - Located!};
+			#MAP GOTO {*_mFM[currRooms][+1]};
+			#UNVAR {_mFM};
+			event_remove_specific {e_roomscan_finished} {map.tin};
+	};
+	#ELSEIF {&_mFM[currRooms][] > 1}
+	{
+			#UNVAR {_mFM[linkRooms]};
+			#FOREACH {*_mFM[currRooms][]} {r}
+			{
+					#MAP AT {$r} {#MAP GET ROOMEXITS {_mFM[linkExits]}};
+					#FOREACH {$_mFM[linkExits][]} {e}
+					{
+							#VAR {_mFM[linkRooms][$e]} {1};
+					};
+			};
+			#ECHO {INFO: &_mFM[currRooms][] matches - keep moving};
+			#UNVAR {_mFM[currRooms]};
+			event_register {e_roomscan_finished} {map.tin} {.mapFindMe %1};
+	};
+	#ELSE
+	{
+			#ECHO {INFO: No Match Found};
+			#UNVAR {_mFM};
+			event_remove_specific {e_roomscan_finished} {map.tin};
+	};
 };
 
 #ALIAS {.mapRoom}
