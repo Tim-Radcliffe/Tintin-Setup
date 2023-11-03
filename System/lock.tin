@@ -6,7 +6,7 @@
 	};
 	#ELSE
 	{
-		#VAR {_lock[%1]} {@fGetTimeStamp{}};
+		#VAR {_lock[%1]} {@fGetTimestamp{}};
 	};
 };
 
@@ -18,7 +18,7 @@
 	};
 	#ELSE
 	{
-		#UNVAR {_lock[%1]} {@fGetTimeStamp{}};
+		#UNVAR {_lock[%1]};
 	};
 };
 
