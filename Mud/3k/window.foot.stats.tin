@@ -7,22 +7,21 @@
 {
 	#NOP %1;
 	#LOCAL {_wS} {};
+	#VAR {_wS[fWidth]} {@fEval{$_Screen[body][cols] - 3}};
+	#VAR {_wS[gWidth]} {@fEval{$_wS[fWidth] / 4}};
+	#VAR {_wS[aWidth]} {@fEval{($_wS[gWidth] * 4) + 3}};
 	#FOREACH {hp;sp;gp1;gp2} {v}
 	{
 		#IF {"$my[$v][current]" == "0" && "$my[$v][max]" == "0"} {}
 		{
 			#IF {"$my[$v][name]" == ""} {#FORMAT {my[$v][name]} {%u} {$v};};
 			#IF {"$_wS[line]" != ""} {#LOCAL {_wS[line]} {$_wS[line]|}};
-			#LOCAL {_wS[line]} {$_wS[line]@fGauge{{$my[$v][name] : $my[$v][current]}{$my[$v][current]}{$my[$v][max]}{$my[$v][colour]}{19}}};
+			#LOCAL {_wS[line]} {$_wS[line]@fGauge{{$my[$v][name] : $my[$v][current]}{$my[$v][current]}{$my[$v][max]}{$my[$v][colour]}{$_wS[gWidth]}}};
 		};
 	};
 	#LIST {_wS[buffer]} {add} {$_wS[line]};    
-  	#LIST {_wS[buffer]} {add} {@fGauge{{Rounds: ${mip[FFF][N][data]} Vs: ${mip[FFF][K][data]}}{$mip[FFF][L][data]}{100}{FAA}{79}}};
-	#LIST {_wS[buffer]} {add} {Corpse: $my[corpse][held][current] (C: $my[corpse][coffin][current] U: $my[corpse][minion][current])};
-	#NOP    #LIST {_wS} {add} {Rounds : $mip[FFF][N][data]};
-#NOP    #LIST {_wS} {add} {$mip[gline][1]};
-#NOP    #LIST {_wS} {add} {$mip[gline][2]};
-#NOP    #LIST {_wS} {add} {$mip[BAC][data]};
+  	#LIST {_wS[buffer]} {add} {@fGauge{{Rounds: ${mip[FFF][N][data]} Vs: ${mip[FFF][K][data]}}{$mip[FFF][L][data]}{100}{FAA}{$_wS[aWidth]}}};
+	#LIST {_wS[buffer]} {add} {$mip[gline][1]};
 	.WindowSet {statsfoot} {$_wS[buffer]};
 	.WindowRefresh {statsfoot};
 };
