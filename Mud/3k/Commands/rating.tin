@@ -7,6 +7,8 @@
     {
       #VAR {map[area][name]} {%%2};
       #VAR {map[area][wiz]} {%%3};
+      #VAR {room[location][name]} {%%2};
+      #VAR {room[location][wiz]} {%%3};
     };
     event_raise {e_command_rating} {%%2} {%%3};
     event_oneshot {e_prompt} {h_command_rating} {#NOP %%%1;#CLASS {cRating} {KILL};};
@@ -17,6 +19,8 @@
     {
       #VAR {map[area][name]} {%%2};
       #VAR {map[area][wiz]} {};
+      #VAR {room[location][name]} {%%2};
+      #VAR {room[location][wiz]} {};      
     };
     event_raise {e_command_rating} {%%2} {};
     event_oneshot {e_prompt} {h_command_rating} {#NOP %%%1;#CLASS {cRating} {KILL};};
@@ -26,6 +30,7 @@
     #IF {"$map[area][name]" != ""}
     {
       #VAR {map[area][name]} {};
+      #VAR {room[location][name]} {};
     };
     event_raise {e_command_rating} {} {};
     event_oneshot {e_prompt} {h_command_rating} {#NOP %%%1;#CLASS {cRating} {KILL};};
