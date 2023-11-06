@@ -1,0 +1,24 @@
+#VAR {_item[^Frosted helmet of Aylin$]} 
+{
+	{desc} 
+	{
+		{1} {Frosted helmet of Aylin}
+		{2} {Magnificently crafted, this steel helmet has an icy shimmer to it. }
+		{3} {Legend has it that this helmet was worn by the paladin Aylin in his}
+		{4} {battles against the Mordon.  You feel a compelling urge to rub this}
+		{5} {helmet for good luck. }
+		{6} {This item will bind to you when equipped.}
+		{7} {The helmet is in perfect condition.}
+		{8} {It has a magical glow about it.}
+		{9} {This armor has the following resistances:}
+		{10} {impressive edged, impressive blunt, impressive ice, very good electric,}
+		{11} {good energy, good radiation}
+		{12} {You must be level 17 to wear this.}
+		{13} {It doesn't look too heavy.}
+	}
+	{global} {1}
+	{id} {helmet}
+	{name} {Frosted helmet of Aylin}
+	{nomap} {1}
+	{pickup} {1}
+}   

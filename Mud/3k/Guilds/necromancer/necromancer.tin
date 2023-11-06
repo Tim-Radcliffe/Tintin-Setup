@@ -1,13 +1,4 @@
 #NOP ************* Necromancer Guild *********;
-
-#VAR {_item[crystal charm]}             {{nomap}{1}{pickup}{1}};
-#VAR {_item[platinum coin]}             {{nomap}{1}{pickup}{1}};
-#VAR {_item[small grey stone]}          {{nomap}{1}{pickup}{1}};
-#VAR {_item[dark leather strap]}        {{nomap}{1}{pickup}{1}};
-#VAR {_item[cloudy glass sphere]}       {{nomap}{1}{pickup}{1}};
-#VAR {_item[dark skull key]}            {{nomap}{1}{pickup}{1}};
-#VAR {_item[shattered jaw bone]}        {{nomap}{1}{pickup}{1}};
-
 #VAR {_guild[minions]}
 {
     {Skeleton}{} {Zombie}{} {Ghoul}{} {Valpur}{}

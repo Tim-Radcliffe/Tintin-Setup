@@ -1,0 +1,60 @@
+#VAR {_item[^a weathered catchpocket$]} 
+{
+	{desc} 
+	{
+		{1} {a weathered catchpocket}
+		{2} {A weathered catchpocket with a watertube attachment on one end. }
+		{3} {Moisture neither leaks nor condenses on the outside of the pouch\; it}
+		{4} {is as if whoever created it went to great lengths to preserve any and}
+		{5} {all water it may hold.  The attachment looks as if it is supposed to}
+		{6} {be engaged into some sort of filtration system.}
+		{7} {This appears to be an artifact for the fremen guild.}
+	}
+	{global} {1}
+	{id} {catchpocket}
+	{name} {a weathered catchpocket}
+	{nomap} {1}
+	{pickup} {1}
+}
+#VAR {_item[^Mystic Rift$]} 
+{
+	{desc} 
+	{
+		{1} {Mystic Rift}
+		{2} {This unusual item appears to be a small, crystalline structure that}
+		{3} {contains within it a shimmering blackness.  As you study it you catch}
+		{4} {glimpses of a myriad of different colors and views within the rift.}
+		{5} {This appears to be an artifact for the elemental guild.}
+		{6} {It looks light.}
+	}
+	{global} {1}
+	{id} {mystic rift}
+	{name} {Mystic Rift}
+	{nomap} {1}
+	{pickup} {1}
+}
+#VAR {_item[^Nectar Of The Gods$]} 
+{
+	{desc} 
+	{
+		{1} {Nectar Of The Gods}
+		{2} {A small golden drop of fluid, this nectar is considered the finest}
+		{3} {libation in all existence. Gods drink it heavily, but any more than}
+		{4} {the small morsel you hold would be far too much for any mortal to}
+		{5} {imbibe safely. Perhaps you should 'taste' it to see why the gods find}
+		{6} {it so refreshing?}
+		{7} {This appears to be an artifact for the priest guild.}
+	}
+	{global} {1}
+	{id} {nectar}
+	{name} {Nectar Of The Gods}
+	{nomap} {1}
+	{pickup} {1}
+}
+#VAR {_item[crystal charm]}             {{nomap}{1}{pickup}{1}};
+#VAR {_item[platinum coin]}             {{nomap}{1}{pickup}{1}};
+#VAR {_item[small grey stone]}          {{nomap}{1}{pickup}{1}};
+#VAR {_item[dark leather strap]}        {{nomap}{1}{pickup}{1}};
+#VAR {_item[cloudy glass sphere]}       {{nomap}{1}{pickup}{1}};
+#VAR {_item[dark skull key]}            {{nomap}{1}{pickup}{1}};
+#VAR {_item[shattered jaw bone]}        {{nomap}{1}{pickup}{1}};
