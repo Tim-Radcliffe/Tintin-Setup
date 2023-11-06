@@ -132,16 +132,19 @@ event_register {e_5_mins} {h_globals} {.aGlobalSave};
   #LOCAL {_fG[max]} {@fMin{${_fG[len]};$_fG[width]}};
   #IF {${_fG[len]} > ${_fG[max]}}
   {
+#NOP    #FORMAT {_fG[result]} {<%4><aaa>%s<AAA><fff>} {@fLinePad{{@fTrunc{{${_fG[text]}}{@fEval{$_fG[width]-1}}}}{+}{$_fG[width]}}};
     #FORMAT {_fG[result]} {<%4><aaa>%s<AAA><fff>} {@fLinePad{{@fTrunc{{${_fG[text]}}{@fEval{$_fG[width]-1}}}}{+}{$_fG[width]}}};
-  }
+}
   {
     #REGEXP {@fLinePad{{${_fG[text]}}{}{$_fG[width]}}} {^{.{${_fG[max]}}}{.*}}
     {
-      #FORMAT {_fG[result]} {<%4><aaa>%s<G05><fff>%s<AAA>} {&1} {&2};
-    }
+#NOP      #FORMAT {_fG[result]} {<%4><aaa>%s<G05><fff>%s<AAA>} {&1} {&2};
+      #FORMAT {_fG[result]} {<%4><aaa>%s<099>%s<099>} {&1} {&2};
+}
     {
-      #FORMAT {_fG[result]} {<%4><aaa>%s<AAA><fff>} {${_fG[text]}};
-    };
+#NOP      #FORMAT {_fG[result]} {<%4><aaa>%s<AAA><fff>} {${_fG[text]}};
+      #FORMAT {_fG[result]} {<%4><aaa>%s<099>} {${_fG[text]}};
+};
   };
   #RETURN {$_fG[result]};
 };
