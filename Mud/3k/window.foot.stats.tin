@@ -20,7 +20,7 @@
 		};
 	};
 	#LIST {_wS[buffer]} {add} {|$_wS[line]|};    
-  	#LIST {_wS[buffer]} {add} {|@fGauge{{Rounds: ${mip[FFF][N][data]} Vs: ${mip[FFF][K][data]}}{$mip[FFF][L][data]}{100}{FAA}{$_wS[aWidth]}}|};
+  	#LIST {_wS[buffer]} {add} {|@fGauge{{Rounds: ${mip[FFF][N][data]} Vs: ${mip[FFF][K][data]} (${mip[FFF][L][data]}%)}{$mip[FFF][L][data]}{100}{FAA}{$_wS[aWidth]}}|};
 	#LIST {_wS[buffer]} {add} {$mip[gline][1]};
 	.WindowSet {statsfoot} {$_wS[buffer]};
 	.WindowRefresh {statsfoot};
