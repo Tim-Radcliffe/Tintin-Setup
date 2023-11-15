@@ -14,11 +14,11 @@ CROOMS <178>
 CSYMBOLS <128>
 CUSER <258>
 
-F 10
+F 9
 
 G 0
 
-I 141
+I 91
 
 L {ASCII NESW LINE} {NO EXITS} {x}
 L {ASCII NESW LINE} {N} {o}
@@ -639,7 +639,7 @@ E {188}{buy mentos}{.mapLink {Pinnacle/Chaos/Mentos} {} {buy mentos};}{0}{1}{}{1
 R {90}{0}{<000>}{LINK: Pinnacle/Chaos/Billy Bob's Big Top Circus}{<138>*}{}{Pinnacle/Chaos/Billy Bob's Big Top Circus}{{link}{}}{}{}{1.000}{}
 E {45}{e}{e}{2}{0}{}{1.000}{}{0.00}
 
-R {91}{0}{<068>}{Voodoo Grove}{ }{Surrounding you are large, closely grown palm trees.  Thick, green vines hang from intertwined leaves and branches making the clearing in which you stand fairly isolated.  The vines sway gently as a breeze from the south blows through.  Storm clouds are gathering to the south and the faint smell of ozone tickles your nose.  Standing at the northern end of the dirt circle is a wooden totem pole with three large heads. The bottom-most head is a carving of an owl, and the middle head is a carving of a dragon.  The top head is eerily different from the rest in the sense that you can't quite determine what is being represented.  There seems to be an opening in the totem pole to the north.}{Mud}{}{}{}{1.000}{}
+R {91}{0}{}{Voodoo Grove}{<138>?}{Surrounding you are large, closely grown palm trees.  Thick, green vines hang from intertwined leaves and branches making the clearing in which you stand fairly isolated.  The vines sway gently as a breeze from the south blows through.  Storm clouds are gathering to the south and the faint smell of ozone tickles your nose.  Standing at the northern end of the dirt circle is a wooden totem pole with three large heads. The bottom-most head is a carving of an owl, and the middle head is a carving of a dragon.  The top head is eerily different from the rest in the sense that you can't quite determine what is being represented.  There seems to be an opening in the totem pole to the north.}{Mud}{{content}{{item}{{^A Pumpkin$}{{name}{A Pumpkin}}}}{pry eye from top head}{}}{}{}{1.000}{}
 E {45}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {94}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {96}{e}{e}{2}{0}{}{1.000}{}{0.00}

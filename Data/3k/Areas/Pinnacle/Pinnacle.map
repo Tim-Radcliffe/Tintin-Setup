@@ -14,11 +14,11 @@ CROOMS <178>
 CSYMBOLS <128>
 CUSER <258>
 
-F 11
+F 8
 
 G 0
 
-I 64
+I 201
 
 L {ASCII NESW LINE} {NO EXITS} {x}
 L {ASCII NESW LINE} {N} {o}
@@ -1058,8 +1058,9 @@ R {200}{0}{}{A Peaceful Cemetery}{ }{Surrounding you are manicured lawns covered
 E {118}{u}{u}{16}{0}{}{1.000}{}{0.00}
 E {201}{d}{d}{32}{0}{}{1.000}{}{0.00}
 
-R {201}{0}{<178>}{}{ }{}{}{}{}{}{1.000}{}
+R {201}{0}{<178>}{Ethereal Tomb}{ }{Ethereal Tomb. You are encased in a sealed tomb, buried deep below the living world. Near one end of the long room is a white sarcophagus resting on a stone platform. The opposite end of the room has no wall, there is nothing there but a narrow staircase leading downwards toward dense mists and ethereal vapors. Voiceless souls are emerging into the tomb from the earth above and passing into the mists on their way to the land of the dead. In the exact center is a plain brazier in which a single colorless flame eternally burns.                                                 }{}{{content}{{noun}{{brazier}{{name}{brazier}}{earth}{{name}{earth}}{flame}{{name}{flame}}{mists}{{name}{mists}}{sarcophagus}{{name}{sarcophagus}}{souls}{{name}{souls}}{staircase}{{name}{staircase}}{stone}{{name}{stone}}{tomb}{{name}{tomb}}}}}{}{}{1.000}{}
 E {200}{u}{u}{16}{0}{}{1.000}{}{0.00}
+E {201}{d}{d}{32}{0}{}{1.000}{}{0.00}
 
 R {202}{0}{<068>}{Dark Chapel}{ }{You stand in what appears to be an abandoned chapel far beneath the city of Pinnacle.  The air here is musty and you feel the coldness of evil and darkness surrounding your very soul.  The room is very unadorned, save a jet black marble dais sitting peacefully in the center.  A small black sphere hovers above the altar, floating gently in the stale air.  An intense feeling of absolute dread radiates from the entire room, sending waves of revulsion through your very soul.}{Mud}{{content}{{noun}{{altar}{{name}{altar}}{dais}{{name}{dais}}{marble}{{name}{marble}}{sphere}{{name}{sphere}}}}}{}{}{1.000}{}
 E {66}{u}{stairs}{16}{0}{}{1.000}{}{0.00}

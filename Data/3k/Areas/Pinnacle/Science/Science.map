@@ -18,7 +18,7 @@ F 10
 
 G 0
 
-I 1278
+I 617
 
 L {ASCII NESW LINE} {NO EXITS} {x}
 L {ASCII NESW LINE} {N} {o}
@@ -1059,11 +1059,12 @@ E {155}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {126}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {157}{e}{e}{2}{0}{}{1.000}{}{0.00}
 
-R {157}{0}{<048>}{The Badlands}{ }{The Badlands You travel over hard packed earth, cracked and pitted from months without rain.  Nothing grows at all, not even a pesky weed stubbornly holding on to life.  The howl of the wind and the flying dust make it nearly impossible to hear or see anything out here.  You hope nothing comes looking for you.  Huge clouds of dust and ash rise in the distance, whipped into a killing funnel by the torturous winds.  To the north, south and west you vaguely make out the continuation of the badlands.  There appears to be some kind of disused road leading off from here. }{}{}{}{}{1.000}{}
+R {157}{0}{<068>}{The Badlands}{ }{The Badlands You wonder if you'll ever find the end of this rolling expanse.  You travel over hard packed earth, cracked and pitted from months without rain.  Nothing grows at all, not even a pesky weed stubbornly holding on to life.  A foul wind whips by you as you survey this desolate landscape bringing with it dust and grit with the force of a sandblaster.  To the west, south and east you barely detect the continuation of the badlands. There appears to be some kind of disused road leading off from here. }{Mud}{{content}{{noun}{{dust}{{name}{dust}}{wind}{{name}{wind}}}}}{}{}{1.000}{}
 E {156}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {158}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {184}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {183}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {1281}{road}{.mapLink {Pinnacle/Science/Last Chance Truck Stop} {} {road};}{0}{1}{}{1.000}{}{0.00}
 
 R {158}{0}{<178>}{The Badlands}{ }{The Badlands Huge clouds of dust and ash rise in the distance, whipped into a killing funnel by the torturous winds.  The howl of the wind and the flying dust make it nearly impossible to hear or see anything out here.  You hope nothing comes looking for you.  You travel over hard packed earth, cracked and pitted from months without rain.  Nothing grows at all, not even a pesky weed stubbornly holding on to life.  To the west and north you just barely see the continuation of the badlands.   }{}{}{}{}{1.000}{}
 E {126}{w}{w}{8}{0}{}{1.000}{}{0.00}
@@ -1212,7 +1213,7 @@ E {180}{e}{e}{2}{0}{}{1.000}{}{0.00}
 R {182}{0}{<000>}{LINK: Pinnacle/Science/Gas Station}{<138>*}{}{Pinnacle/Science/Gas Station}{{link}{}}{}{}{1.000}{}
 E {160}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
-R {183}{0}{<178>}{The Badlands}{ }{The Badlands You wonder if you'll ever find the end of this rolling expanse.  You travel over hard packed earth, cracked and pitted from months without rain.  Nothing grows at all, not even a pesky weed stubbornly holding on to life.  Huge clouds of dust and ash rise in the distance, whipped into a killing funnel by the torturous winds.  To the south and east you vaguely detect the continuation of the badlands.   }{}{}{}{}{1.000}{}
+R {183}{0}{<178>}{The Badlands}{ }{The Badlands You wonder if you'll ever find the end of this rolling expanse.  You travel over hard packed earth, cracked and pitted from months without rain.  Nothing grows at all, not even a pesky weed stubbornly holding on to life.  A foul wind whips by you as you survey this desolate landscape bringing with it dust and grit with the force of a sandblaster.  To the north, south and west you make out the continuation of the badlands.   }{Mud}{{content}{{noun}{{dust}{{name}{dust}}{wind}{{name}{wind}}}}}{}{}{1.000}{}
 E {159}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {157}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {185}{n}{n}{1}{0}{}{1.000}{}{0.00}
@@ -1260,11 +1261,12 @@ E {191}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {306}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {189}{w}{w}{8}{0}{}{1.000}{}{0.00}
 
-R {191}{0}{<048>}{The Badlands}{ }{Dust whips through the air on harsh, burning winds.  The low rolling hills do nothing to stop the airborn grit from scouring the countryside clean of life.  There is a path here that leads towards a low cliff in the side of one of the hills.}{}{}{}{}{1.000}{}
+R {191}{0}{<068>}{The Badlands}{ }{Dust whips through the air on harsh, burning winds.  The low rolling hills do nothing to stop the airborn grit from scouring the countryside clean of life.  There is a path here that leads towards a low cliff in the side of one of the hills.}{Mud}{}{}{}{1.000}{}
 E {175}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {192}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {305}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {190}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {1280}{path}{.mapLink {Pinnacle/Science/Antimammonist Vault} {} {path};}{0}{1}{}{1.000}{}{0.00}
 
 R {192}{0}{<178>}{The Badlands}{ }{The Badlands The howl of the wind and the flying dust make it nearly impossible to hear or see anything out here.  You hope nothing comes looking for you.  Nothing grows here in the post apocalyptic wastelands.  Dust whips through the air on harsh, burning winds.  The low rolling hills do nothing to stop the airborn grit from scouring the countryside clean of life.   }{}{}{}{}{1.000}{}
 E {174}{s}{s}{4}{0}{}{1.000}{}{0.00}
@@ -1895,7 +1897,7 @@ E {305}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {321}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {303}{e}{e}{2}{0}{}{1.000}{}{0.00}
 
-R {305}{0}{<178>}{The Badlands}{ }{The Badlands You travel over hard packed earth, cracked and pitted from months without rain.  Nothing grows at all, not even a pesky weed stubbornly holding on to life.  You've got to wonder how anything could survive way out here.  Nothing grows here in the post apocalyptic wastelands.  To the south you see the continuation of the badlands.   }{}{}{}{}{1.000}{}
+R {305}{0}{<178>}{The Badlands}{ }{The Badlands You travel over hard packed earth, cracked and pitted from months without rain.  Nothing grows at all, not even a pesky weed stubbornly holding on to life.  You've got to wonder how anything could survive way out here.  Nothing grows here in the post apocalyptic wastelands.  To the south you see the continuation of the badlands.   }{Mud}{}{}{}{1.000}{}
 E {191}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {306}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {320}{n}{n}{1}{0}{}{1.000}{}{0.00}
@@ -3734,7 +3736,7 @@ E {615}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {621}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {612}{w}{w}{8}{0}{}{1.000}{}{0.00}
 
-R {615}{0}{<178>}{Coastal Wastelands}{ }{Coastal Wastelands Before you stretches a vast expanse of destruction and desolation.  You wonder if you'll ever find the end of this rolling expanse.  You catch the smell of something rancid burning. You probably don't want to find out what it could be that could be burning.  To the south, east and north you just barely see the continuation of the wasteland.  The once proud city of Washington D.C. lies here in a state of chaos. }{}{}{}{}{1.000}{}
+R {615}{0}{<178>}{Coastal Wastelands}{ }{Coastal Wastelands You catch the smell of something rancid burning. You probably don't want to find out what it could be that could be burning.  Huge clouds of dust and ash rise in the distance as you look around.  Could it be your imagination, or is that the smell of burning flesh?  The once proud city of Washington D.C. lies here in a state of chaos. }{}{{content}{{noun}{{ash}{{name}{ash}}{city}{{name}{city}}{clouds}{{name}{clouds}}{dust}{{name}{dust}}{smell}{{name}{smell}}}}}{}{}{1.000}{}
 E {538}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {616}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {617}{e}{e}{2}{0}{}{1.000}{}{0.00}
@@ -3746,10 +3748,11 @@ E {621}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {697}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {618}{e}{e}{2}{0}{}{1.000}{}{0.00}
 
-R {617}{0}{<048>}{Coastal Wastelands}{ }{Coastal Wastelands The ground under your feet cracks and snaps as you walk. The dirt is jet black, with soot, ash, and pieces of bone strewn throughout.  Could it be your imagination, or is that the smell of burning flesh?  A foul wind whips by you as you survey this desolate landscape.  To the west and east you barely detect the continuation of the wasteland.  An old road runs off towards a tattered chain link fence. }{}{}{}{}{1.000}{}
+R {617}{0}{<068>}{Coastal Wastelands}{ }{Coastal Wastelands The clouds above you move in over the sun and block out its light.  The ground under your feet cracks and snaps as you walk. The dirt is jet black, with soot, ash, and pieces of bone strewn throughout.  You wonder if you'll ever find the end of this rolling expanse.  To the north and east you vaguely detect the continuation of the wasteland.  An old road runs off towards a tattered chain link fence. }{Mud}{{content}{{noun}{{bone}{{name}{bone}}{clouds}{{name}{clouds}}{ground}{{name}{ground}}{road}{{name}{road}}}}}{}{}{1.000}{}
 E {615}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {618}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {619}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {1282}{road}{.mapLink {Pinnacle/Science/Air Force Base} {} {road};}{0}{1}{}{1.000}{}{0.00}
 
 R {618}{0}{<178>}{Coastal Wastelands}{ }{Coastal Wastelands Before you stretches a vast expanse of destruction and desolation.  Could it be your imagination, or is that the smell of burning flesh?  A gigantic crater lies before you. It's hard to imagine what could have exploded and caused something as impressive as this.  The Atlantic Ocean stretches out to the east. }{}{}{}{}{1.000}{}
 E {617}{s}{s}{4}{0}{}{1.000}{}{0.00}
@@ -4648,6 +4651,7 @@ E {771}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {786}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {769}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {1098}{enter}{.mapLink {Pinnacle/Science/Kilton Research} {} {enter};}{0}{1}{}{1.000}{}{0.00}
+E {1279}{break glass}{.mapLink {Pinnacle/Science/Kilton Research, Inc. v2.0} {} {break glass};}{0}{1}{}{1.000}{}{0.00}
 
 R {771}{0}{<178>}{The Appalachian Mountains}{ }{The Appalachian Mountains You can hear the roar of some far off motor. Who'd be way out here?  The mountains around you rise and fall in a never ending pattern.  Huge stumps of old trees surround you here. It looks like something must have come through here and cut everything down.  To the east, north and west you vaguely detect the continuation of the Appalachians.   }{}{}{}{}{1.000}{}
 E {701}{s}{s}{4}{0}{}{1.000}{}{0.00}
@@ -7206,3 +7210,11 @@ E {5}{d}{exit}{32}{0}{}{1.000}{}{0.00}
 
 R {1278}{0}{<048>}{The Arcade}{ }{You are in a corner of the arcade.  This small nook stands off to the side of the main game room, and has only one game cabinet.  The room is quite dark, and lit only by the game's screen.}{Section Z}{{content}{{item}{{game}{{name}{Section Z game cabinet}}}}}{}{}{1.000}{}
 E {14}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {1279}{0}{<000>}{LINK: Pinnacle/Science/Kilton Research, Inc. v2.0}{<138>*}{}{Pinnacle/Science/Kilton Research, Inc. v2.0}{{content}{{item}{{^A large three story building$}{{name}{A large three story building}}}{noun}{{building}{{name}{building}}{cliffs}{{name}{cliffs}}{concrete}{{name}{concrete}}{door}{{name}{door}}{elevators}{{name}{elevators}}{floor}{{name}{floor}}{foyer}{{name}{foyer}}{glass}{{name}{glass}}{hardwood}{{name}{hardwood}}{marks}{{name}{marks}}{mountains}{{name}{mountains}}{set}{{name}{set}}{wall}{{name}{wall}}{wreckage}{{name}{wreckage}}}}{link}{}}{}{}{1.000}{}
+
+R {1280}{0}{<000>}{LINK: Pinnacle/Science/Antimammonist Vault}{<138>*}{}{Pinnacle/Science/Antimammonist Vault}{{content}{{noun}{{arch}{{name}{arch}}{cliff}{{name}{cliff}}{crest}{{name}{crest}}{door}{{name}{door}}{icon}{{name}{icon}}{pillars}{{name}{pillars}}{posts}{{name}{posts}}}{npc}{{^A cybernetically enhanced door warden$}{{name}{A cybernetically enhanced door warden}}{^A thin starving coyote$}{{name}{A thin starving coyote}}}}{link}{}}{}{}{1.000}{}
+
+R {1281}{0}{<000>}{LINK: Pinnacle/Science/Last Chance Truck Stop}{<138>*}{}{Pinnacle/Science/Last Chance Truck Stop}{{content}{{noun}{{clouds}{{name}{clouds}}{crater}{{name}{crater}}{desert}{{name}{desert}}{dust}{{name}{dust}}{gate}{{name}{gate}}{message}{{name}{message}}{sand}{{name}{sand}}{skyline}{{name}{skyline}}{smell}{{name}{smell}}{wind}{{name}{wind}}}{npc}{{^A well armed guard$}{{name}{A well armed guard}}}}{link}{}}{}{}{1.000}{}
+
+R {1282}{0}{<000>}{LINK: Pinnacle/Science/Air Force Base}{<138>*}{}{Pinnacle/Science/Air Force Base}{{content}{{noun}{{ash}{{name}{ash}}{barrier}{{name}{barrier}}{bay}{{name}{bay}}{bone}{{name}{bone}}{city}{{name}{city}}{clouds}{{name}{clouds}}{dust}{{name}{dust}}{fence}{{name}{fence}}{grass}{{name}{grass}}{ground}{{name}{ground}}{highway}{{name}{highway}}{house}{{name}{house}}{road}{{name}{road}}{smell}{{name}{smell}}{wind}{{name}{wind}}}{npc}{{^A lean member of the Talons$}{{name}{A lean member of the Talons}}}}{link}{}}{}{}{1.000}{}

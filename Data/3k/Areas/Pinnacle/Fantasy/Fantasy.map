@@ -18,7 +18,7 @@ F 11
 
 G 0
 
-I 1243
+I 958
 
 L {ASCII NESW LINE} {NO EXITS} {x}
 L {ASCII NESW LINE} {N} {o}
@@ -1717,10 +1717,11 @@ E {336}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 E {337}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {338}{w}{w}{8}{0}{}{1.000}{}{0.00}
 
-R {336}{0}{<178>}{Plains}{ }{Plains The land seems quite empty but you spot some movement not too far away.  It looks as if you might find some wild rabbits around.  The bright sun is warm on your back as you look out on the plains.  A river thunders its way southwest, towards Wayhaven.  There is a dark forest on the other shore.  Further to the north you see that the plains continue, while to the west you can see plains.  The river turns due west at this point. }{}{}{}{}{1.000}{}
+R {336}{0}{<178>}{Plains}{ }{Plains The plains seem to stretch on as far as your eyes can see.  The grass sways in the breeze and wavy patterns appear all over the place.  The cloudless skies stretch in all directions without fault.  A river thunders its way southwest, towards Wayhaven.  There is a dark forest on the other shore.  Further to the north and northeast you can see that the plains continue.  The river turns due west at this point. }{Mud}{{content}{{noun}{{forest}{{name}{forest}}{grass}{{name}{grass}}{plains}{{name}{plains}}{river}{{name}{river}}}}}{}{}{1.000}{}
 E {335}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 E {338}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {339}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {340}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
 R {337}{0}{<178>}{Plains}{ }{Plains A slight wind blows across the plains and the grass shimmers slightly.  The plains stretch out to the horizon.  The ground is soft beneath your feet but the grassy cover allows you to step comfortably.  To the southeast, a dark forest lies across the shore of a fast-running river.  Further to the west you can see plains.  A small dam has been built along the bank of the river at this point. }{}{}{}{}{1.000}{}
 E {335}{s}{s}{4}{0}{}{1.000}{}{0.00}
@@ -1728,152 +1729,208 @@ E {427}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 E {428}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {426}{w}{w}{8}{0}{}{1.000}{}{0.00}
 
-R {338}{0}{<178>}{Plains}{ }{Plains The cloudless skies stretch in all directions without fault.  There is a river to the southeast, winding its way towards Wayhaven.  Beyond the river lies an enormous forest.  The plains seem to stretch on as far as your eyes can see.  The grass sways in the breeze and wavy patterns appear all over the place.  Further to the west you notice plains, while to the south you notice that the plains continue.   }{}{}{}{}{1.000}{}
+R {338}{0}{<178>}{Plains}{ }{Plains There is a river to the southeast, winding its way towards Wayhaven.  Beyond the river lies an enormous forest.  The plains seem to stretch on as far as your eyes can see.  The grass sways in the breeze and wavy patterns appear all over the place.  The bright sun is warm on your back as you look out on the plains.  Further to the west you can see plains, while to the south you note that the plains continue.   }{Mud}{{content}{{noun}{{grass}{{name}{grass}}{plains}{{name}{plains}}{river}{{name}{river}}{sun}{{name}{sun}}}}}{}{}{1.000}{}
 E {335}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {336}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {340}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {426}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {339}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 
-R {339}{0}{<178>}{Plains}{ }{Plains A slight wind blows across the plains and the grass shimmers slightly.  The plains stretch out to the horizon.  The ground is soft beneath your feet but the grassy cover allows you to step comfortably.  You notice some light tracks but you have no idea where they lead.  Further to the north you can see that the plains continue, while to the east you note plains.  To the southwest lies the great city of Wayhaven.  The main entry gate seems to be a distance off to the west.  At this point, the Wayhaven River flows in from the east and plunges through an enormous grate in the wall of the city.  On the other side of the river, running up to the eastern wall of the city, lie more plains. }{}{}{}{}{1.000}{}
+R {339}{0}{<178>}{On a Road}{ }{Plains The long grass sways in the breeze and parts easily beneath your step.  The plains stretch out to the horizon.  The ground is soft beneath your feet but the grassy cover allows you to step comfortably.  You notice some light tracks but you have no idea where they lead.  Further to the west you note a road.  To the southwest lies the great city of Wayhaven. The main entry gate seems to be a distance off to the west.  At this point, the Wayhaven River flows in from the east and plunges through an enormous grate in the wall of the city.  On the other side of the river, running up to the eastern wall of the city, lie more plains. }{Mud}{{content}{{noun}{{city}{{name}{city}}{gate}{{name}{gate}}{grass}{{name}{grass}}{grate}{{name}{grate}}{ground}{{name}{ground}}{plains}{{name}{plains}}{tracks}{{name}{tracks}}{wall}{{name}{wall}}}}}{}{}{1.000}{}
 E {336}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {340}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {341}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {342}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {338}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {340}{0}{<178>}{On a Road}{ }{Plains The plains seem to stretch on as far as your eyes can see.  The grass sways in the breeze and wavy patterns appear all over the place.  The bright sun is warm on your back as you look out on the plains.  You look back the way you came and see the crushed grass of your path.  Further to the east you note plains, while to the north you can see that the plains continue.   }{}{}{}{}{1.000}{}
+R {340}{0}{<178>}{Plains}{ }{Plains The bright sun is warm on your back as you look out on the plains.  A lone bird glides effortlessly over your head and into the distance.  The land seems quite empty but you spot some movement not too far away.  It looks as if you might find some wild rabbits around.  Further to the north you see that the plains continue, while to the east you note plains.   }{Mud}{{content}{{noun}{{bird}{{name}{bird}}{plains}{{name}{plains}}{sun}{{name}{sun}}}}}{}{}{1.000}{}
 E {339}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {342}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {425}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {338}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {336}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {341}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 
-R {341}{0}{<068>}{On a Road}{ }{On a Road The sky is clear and a light breeze tickles your cheek.  The plains on either side look quite barren but they may hold something.  You are standing on a road that is frequently used by travelers.  Further to the east you can see plains, while to the north you can see that the road continues.  To the south stand the walls of the colossal city of Wayhaven. Great gates lie open before you. }{}{}{}{}{1.000}{}
+R {341}{0}{<068>}{Plains}{ }{On a Road This road bears the evidence of many years of frequent travel.  The sun is shining and it's a nice day to be out.  The road winds its way through the plains and you could easily leave the road.  Further to the north you can see that the road continues, while to the west you can see plains.  To the south stand the walls of the colossal city of Wayhaven. Great gates lie open before you. }{Mud}{{content}{{item}{{^A piece of oakwood$}{{name}{A piece of oakwood}}{^A small dandelion$}{{name}{A small dandelion}}{^Small flute$}{{name}{Small flute}}{^Spices$}{{name}{Spices}}}{noun}{{city}{{name}{city}}{evidence}{{name}{evidence}}{gates}{{name}{gates}}{plains}{{name}{plains}}{road}{{name}{road}}{sun}{{name}{sun}}{walls}{{name}{walls}}}}}{}{}{1.000}{}
 E {339}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {342}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {24}{enter}{enter}{0}{0}{}{1.000}{}{0.00}
 E {343}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {340}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {345}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
-R {342}{0}{<238>}{On a Road}{}{On a Road The sun is shining and it's a nice day to be out.  The road winds its way through the plains and you could easily leave the road.  You are standing on a well traveled road leading through the plains.  Further to the north you see that the road continues, while to the east you see plains.  The road here runs north and south with open plains on either side.  To the south you see a city. }{}{{road}{}}{}{}{1.000}{}
+R {342}{0}{<238>}{On a Road}{}{On a Road You are standing on a well traveled road leading through the plains.  The sun is shining and it's a nice day to be out.  The road winds its way through the plains and you could easily leave the road.  Further to the west you note plains.  The road here runs north and south with open plains on either side.  To the south you see a city. }{Mud}{{content}{{noun}{{plains}{{name}{plains}}{road}{{name}{road}}{sun}{{name}{sun}}}{npc}{{^Human Traveller$}{{name}{Human Traveller}}}}{road}{}}{}{}{1.000}{}
 E {341}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {345}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {424}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {340}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {343}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {339}{se}{se}{6}{0}{}{1.000}{}{0.00}
 
-R {343}{0}{}{Plains}{}{Plains The plains look pretty much the same all around you.  The place appears to get enough rain but there still isn't much life around.  A lone bird glides effortlessly over your head and into the distance.  The long grass sways in the breeze and parts easily beneath your step.  Further to the west and north you note that the plains continue, while to the south you can see a road.  To the southeast stand the walls of the colossal city of Wayhaven.  There is no way to enter at this point, however you think you can see gates both further south and further east. }{}{special;}{}{}{1.000}{}
+R {343}{0}{}{Plains}{}{Plains A lone bird glides effortlessly over your head and into the distance.  The plains stretch out to the horizon.  The ground is soft beneath your feet but the grassy cover allows you to step comfortably.  The cloudless skies stretch in all directions without fault.  Further to the east you see a road, while to the west you note that the plains continue.  To the southeast stand the walls of the colossal city of Wayhaven.  There is no way to enter at this point, however you think you can see gates both further south and further east. }{Mud}{{content}{{item}{{^A small dandelion$}{{name}{A small dandelion}}}{noun}{{bird}{{name}{bird}}{city}{{name}{city}}{gates}{{name}{gates}}{ground}{{name}{ground}}{plains}{{name}{plains}}{walls}{{name}{walls}}}}}{}{}{1.000}{}
 E {341}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {344}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {345}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {346}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {347}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {422}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {342}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {344}{0}{<068>}{On a Road}{ }{On a Road. Before you to the east lie the gates of the colossal city of Wayhaven.  The wide gates stand open, beckoning you forward to experience some adventure.  The road extends far off to the west and the open plains extend to the north as far as the eye can see.  To the south and southeast, below rocky cliffs, stretches an enormous bay.  The tang of the ocean breeze is strong in the air. }{}{}{}{}{1.000}{}
+R {344}{0}{<068>}{Plains}{ }{On a Road. Before you to the east lie the gates of the colossal city of Wayhaven.  The wide gates stand open, beckoning you forward to experience some adventure.  The road extends far off to the west and the open plains extend to the north as far as the eye can see.  To the south and southeast, below rocky cliffs, stretches an enormous bay.  The tang of the ocean breeze is strong in the air. }{Mud}{{content}{{item}{{^A piece of oakwood$}{{name}{A piece of oakwood}}}{noun}{{city}{{name}{city}}{gates}{{name}{gates}}{ocean}{{name}{ocean}}{plains}{{name}{plains}}{road}{{name}{road}}}{npc}{{^Human Traveller$}{{name}{Human Traveller}}}}}{}{}{1.000}{}
 E {343}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {347}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {92}{enter}{enter}{0}{0}{}{1.000}{}{0.00}
 E {351}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {346}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
-R {345}{0}{<178>}{Plains}{ }{Plains You look back the way you came and see the crushed grass of your path.  The cloudless skies stretch in all directions without fault.  The plains seem to stretch on as far as your eyes can see.  The grass sways in the breeze and wavy patterns appear all over the place.  Further to the west you can see that the plains continue.   }{}{}{}{}{1.000}{}
+R {345}{0}{<178>}{On a Road}{ }{Plains A lone bird glides effortlessly over your head and into the distance.  The long grass sways in the breeze and parts easily beneath your step.  The land seems quite empty but you spot some movement not too far away.  It looks as if you might find some wild rabbits around.  Further to the north, west and south you see that the plains continue.   }{Mud}{{content}{{noun}{{bird}{{name}{bird}}{grass}{{name}{grass}}{plains}{{name}{plains}}}}}{}{}{1.000}{}
 E {343}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {423}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {342}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {422}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {341}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {346}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 
-R {346}{0}{<178>}{Plains}{ }{Plains A lone bird glides effortlessly over your head and into the distance.  The plains look pretty much the same all around you.  The place appears to get enough rain but there still isn't much life around.  The cloudless skies stretch in all directions without fault.  Further to the east and north you can see that the plains continue.   }{}{}{}{}{1.000}{}
+R {346}{0}{<178>}{Plains}{ }{Plains The bright sun is warm on your back as you look out on the plains.  A lone bird glides effortlessly over your head and into the distance.  The land seems quite empty but you spot some movement not too far away.  It looks as if you might find some wild rabbits around.  Further to the west you see that the plains continue.   }{Mud}{{content}{{noun}{{bird}{{name}{bird}}{plains}{{name}{plains}}{sun}{{name}{sun}}}}}{}{}{1.000}{}
 E {343}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {420}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {347}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {422}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {348}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {344}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {345}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {419}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
-R {347}{0}{<238>}{Plains}{}{On a Road You are standing on a road that is frequently used by travelers.  The sky is clear and a light breeze tickles your cheek.  The plains on either side look quite barren but they may hold something.  Further to the west and east you can see that the road continues, while to the north you see plains.  The main road runs east west here, while a small road leads to the southwest.  A city lies further to the east.  Off to the southeast, you can make out the sparkling waters of Dragonspire Bay. }{}{{road}{}}{}{}{1.000}{}
+R {347}{0}{<238>}{On a Road}{}{On a Road The sky is clear and a light breeze tickles your cheek.  The plains on either side look quite barren but they may hold something.  This road bears the evidence of many years of frequent travel.  Further to the east you notice that the road continues, while to the north you note plains.  The main road runs east west here, while a small road leads to the southwest.  A city lies further to the east.  Off to the southeast, you can make out the sparkling waters of Dragonspire Bay. }{Mud}{{content}{{noun}{{city}{{name}{city}}{evidence}{{name}{evidence}}{gates}{{name}{gates}}{grass}{{name}{grass}}{plains}{{name}{plains}}{road}{{name}{road}}{walls}{{name}{walls}}{waters}{{name}{waters}}}{npc}{{^Merchant$}{{name}{Merchant}}}}{road}{}}{}{}{1.000}{}
 E {344}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {348}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {351}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {353}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 E {346}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {343}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {420}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
-R {348}{0}{<238>}{On a Road}{}{On a Road The sun is shining and it's a nice day to be out.  The road winds its way through the plains and you could easily leave the road.  You are standing on a well traveled road leading through the plains.  Further to the west you notice that the road continues, while to the north you notice plains.  The road runs east west here.  A city lies to the east. }{}{{road}{}}{}{}{1.000}{}
+R {348}{0}{<238>}{Plains}{}{On a Road This road bears the evidence of many years of frequent travel.  Your back is warmed slightly by the shining sun.  The plains to either side of the road look to hold some interesting exploring.  Further to the east you notice that the road continues, while to the north you see plains.  The road runs east west here.  A city lies to the east. }{Mud}{{content}{{noun}{{city}{{name}{city}}{evidence}{{name}{evidence}}{plains}{{name}{plains}}{road}{{name}{road}}}{npc}{{^Human Traveller$}{{name}{Human Traveller}}{^Merchant$}{{name}{Merchant}}}}{road}{}}{}{}{1.000}{}
 E {347}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {349}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {420}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {353}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {418}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {346}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {351}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {375}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 
-R {349}{0}{<238>}{On a Road}{}{On a Road This road bears the evidence of many years of frequent travel.  Your back is warmed slightly by the shining sun.  The plains to either side of the road look to hold some interesting exploring.  Further to the west you note that the road continues, while to the north you notice plains.  The road runs east west here.  A city lies to the east. }{}{{road}{}}{}{}{1.000}{}
+R {349}{0}{<238>}{Plains}{}{On a Road This road bears the evidence of many years of frequent travel.  The sky is clear and a light breeze tickles your cheek.  The plains on either side look quite barren but they may hold something.  Further to the north you can see plains.  The road runs east west here.  A city lies to the east. }{Mud}{{content}{{noun}{{city}{{name}{city}}{evidence}{{name}{evidence}}{plains}{{name}{plains}}{road}{{name}{road}}{sun}{{name}{sun}}}{npc}{{^Merchant$}{{name}{Merchant}}}}{road}{}}{}{}{1.000}{}
 E {348}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {350}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {418}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {375}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {420}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {392}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {376}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {353}{se}{se}{6}{0}{}{1.000}{}{0.00}
 
-R {350}{0}{<238>}{On a Road}{}{On a Road The sky is clear and a light breeze tickles your cheek.  The plains on either side look quite barren but they may hold something.  You are standing on a road that is frequently used by travelers.  Further to the east you can see that the road continues, while to the west you note plains.  The road bends here to the north and east.  To the west you see the plains eventually make way into desert, while to the east you see the walls of a city in the distance. }{}{{road}{}}{}{}{1.000}{}
+R {350}{0}{<238>}{On a Road}{}{On a Road Your back is warmed slightly by the shining sun.  The plains to either side of the road look to hold some interesting exploring.  You are standing on a road that is frequently used by travelers.  Further to the west you see plains, while to the north you notice that the road continues.  The road bends here to the north and east.  To the west you see the plains eventually make way into desert, while to the east you see the walls of a city in the distance. }{Mud}{{content}{{item}{{^A piece of oakwood$}{{name}{A piece of oakwood}}}{noun}{{city}{{name}{city}}{plains}{{name}{plains}}{road}{{name}{road}}{walls}{{name}{walls}}}{npc}{{^Elf Traveller$}{{name}{Elf Traveller}}{^Rattle Snake$}{{name}{Rattle Snake}}{^Rul'taasa \x28nomad\x29$}{{name}{Rul'taasa (nomad)}}}}{road}{}}{}{}{1.000}{}
 E {349}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {376}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {378}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {392}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {377}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {391}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {418}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {375}{se}{se}{6}{0}{}{1.000}{}{0.00}
 
-R {351}{0}{<048>}{Plains}{ }{Plains The plains stretch out to the horizon.  The ground is soft beneath your feet but the grassy cover allows you to step comfortably.  The long grass sways in the breeze and parts easily beneath your step.  You notice some light tracks but you have no idea where they lead.  Further to the south you note cliffs.  A trail meanders off into the distance.  To the southeast, below steep cliffs, you note the beginnings of the great Dragonspire Bay. }{Mud}{}{}{}{1.000}{}
+R {351}{0}{<068>}{Cape Road}{ }{Plains The cloudless skies stretch in all directions without fault.  The plains look pretty much the same all around you.  The place appears to get enough rain but there still isn't much life around.  It seems quite peaceful here as you look upon your surroundings.  Further to the south you see cliffs.  A trail meanders off into the distance.  To the southeast, below steep cliffs, you note the beginnings of the great Dragonspire Bay. }{Mud}{{content}{{item}{{^A small dandelion$}{{name}{A small dandelion}}}{noun}{{plains}{{name}{plains}}{trail}{{name}{trail}}}}}{}{}{1.000}{}
 E {347}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {352}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {353}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {344}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 E {1282}{trail}{.mapLink {Pinnacle/Fantasy/Boggart Vale} {} {trail};}{0}{1}{}{1.000}{}{0.00}
+E {348}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {355}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 
-R {352}{0}{<178>}{Clifftop}{ }{Clifftop The cliffs to your east overlook the foaming waves of Dragonspire Bay.  A number of miles westward, you can barely make out another body of water.  Curling far south into the sea, this enormous promontory is known commonly as Worm's Talon.  The sound of gulls cuts through the roaring wind, as they circle the clifftop.  Further to the west you notice a road, while to the south you notice that the cliffs continue.   }{}{}{}{}{1.000}{}
+R {352}{0}{<178>}{Clifftop}{ }{Clifftop The cape is bordered to the east and west by the sea.  Just to the east, rocky cliffs plummet into the sparkling waters of Dragonspire Bay.  Curling far south into the sea, this enormous promontory is known commonly as Worm's Talon.  Not much more than wiry heath and stunted shrubs grow out in the strong sea breeze.  Further to the west you notice a road, while to the south you can see that the cliffs continue.   }{Mud}{{content}{{noun}{{cape}{{name}{cape}}{cliffs}{{name}{cliffs}}{east}{{name}{east}}{heath}{{name}{heath}}{promontory}{{name}{promontory}}{sea}{{name}{sea}}{shrubs}{{name}{shrubs}}{waters}{{name}{waters}}{west}{{name}{west}}}}}{}{}{1.000}{}
 E {351}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {354}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {355}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {353}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {357}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 
-R {353}{0}{<178>}{Plains}{ }{Plains You look back the way you came and see the crushed grass of your path.  The plains stretch out to the horizon.  The ground is soft beneath your feet but the grassy cover allows you to step comfortably.  The cloudless skies stretch in all directions without fault.  The land to the south appears to be a peninsula.  In the distance, you can make out two great bodies of water to the southeast and southwest.  An old road runs northeast and south from here. }{Mud}{}{}{}{1.000}{}
+R {353}{0}{<178>}{Plains}{ }{Plains The cloudless skies stretch in all directions without fault.  You notice some light tracks but you have no idea where they lead.  The plains seem to stretch on as far as your eyes can see.  The grass sways in the breeze and wavy patterns appear all over the place.  Further to the north you note a road, while to the east you notice that the plains continue.  The land to the south appears to be a peninsula.  In the distance, you can make out two great bodies of water to the southeast and southwest.  An old road runs northeast and south from here. }{Mud}{{content}{{noun}{{grass}{{name}{grass}}{plains}{{name}{plains}}{road}{{name}{road}}{tracks}{{name}{tracks}}{water}{{name}{water}}}}}{}{}{1.000}{}
 E {351}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {355}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {348}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {375}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {347}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {349}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {352}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {374}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 
-R {354}{0}{<178>}{Clifftop}{ }{Clifftop The air is sharp with the tang of kelp and salt.  Only tough heath and scrub manages to grow out on this exposed clifftop.  This broad peninsula is rocky and windswept, and stretches far to the south.  You stand atop rocky cliffs overlooking the immense Dragonspire Bay.  Further to the southwest you note a beach, while to the north you see that the cliffs continue.   }{}{}{}{}{1.000}{}
+R {354}{0}{<178>}{Clifftop}{ }{Clifftop The cape is bordered to the east and west by the sea.  Just to the east, rocky cliffs plummet into the sparkling waters of Dragonspire Bay.  This peninsula sweeps from the plains to the north, far south to the open ocean.  The air is sharp with the tang of kelp and salt.  Only tough heath and scrub manages to grow out on this exposed clifftop.  Further to the west you note a road, while to the north you notice that the cliffs continue.   }{Mud}{{content}{{noun}{{cape}{{name}{cape}}{cliffs}{{name}{cliffs}}{east}{{name}{east}}{heath}{{name}{heath}}{peninsula}{{name}{peninsula}}{scrub}{{name}{scrub}}{waters}{{name}{waters}}{west}{{name}{west}}}}}{}{}{1.000}{}
 E {352}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {356}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 E {357}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {355}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
-R {355}{0}{<178>}{Cape Road}{ }{Cape Road Not much more than wiry heath and stunted shrubs grow out in the strong sea breeze.  The cape is bordered on two sides by the sea\; Zahar Bay further to the west, and Dragonspire Bay further to the east.  This broad peninsula is rocky and windswept, and stretches far to the south.  Further to the west you notice cliffs.  You notice that a rough road runs south along the peninsula. }{}{}{}{}{1.000}{}
+R {355}{0}{<178>}{Clifftop}{ }{Cape Road A number of miles to both the west and east, you can make out the sea.  The sound of gulls cuts through the roaring wind, as they circle the cape.  This broad cape, known as Worm's Talon, is windswept and stark.  Further to the north you can see plains.  You notice that a rough road runs south along the peninsula. }{Mud}{{content}{{noun}{{gulls}{{name}{gulls}}{road}{{name}{road}}{west}{{name}{west}}}}}{}{}{1.000}{}
 E {352}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {357}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {353}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {374}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {375}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {351}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {354}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {373}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 
-R {356}{0}{<178>}{Beach}{ }{Beach At this point the cliffs have collapsed, forming a sandy beach front to Dragonspire Bay, which is just to the east.  Further off to the west, the land rises.  The air is sharp with the tang of kelp and salt.  Only tough heath and scrub manages to grow along this windswept beach.  This broad cape, known as Worm's Talon, is windswept and stark.  The land rises sharply to the north and northeast.  An old road runs by, north and south, passing well to the west of the beach front. }{}{}{}{}{1.000}{}
+R {356}{0}{<178>}{Cape Road}{ }{Beach This broad peninsula is rocky and windswept, and stretches far to the south.  At this point the cliffs have collapsed, forming a sandy beach front to Dragonspire Bay, which is just to the east.  Further off to the west, the land rises.  The air is sharp with the tang of kelp and salt.  Only tough heath and scrub manages to grow along this windswept beach.  Further to the south you note a road.  The land rises sharply to the north and northeast.  An old road runs by, north and south, passing well to the west of the beach front. }{Mud}{{content}{{noun}{{beach}{{name}{beach}}{cliffs}{{name}{cliffs}}{front}{{name}{front}}{heath}{{name}{heath}}{peninsula}{{name}{peninsula}}{road}{{name}{road}}{scrub}{{name}{scrub}}{west}{{name}{west}}}}}{}{}{1.000}{}
 E {354}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 E {357}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {358}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {359}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {360}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {373}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {372}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 
-R {357}{0}{<178>}{Cape Road}{ }{Cape Road This broad cape, known as Worm's Talon, is windswept and stark.  A number of miles to both the west and east, you can make out the sea.  The air is sharp with the tang of kelp and salt.  Only tough heath and scrub manages to grow out on this exposed clifftop.  Further to the west you notice cliffs.  Directly to the southeast, rocky cliffs overlook Dragonspire Bay.  An old road runs north-south along the length of the cape. }{}{}{}{}{1.000}{}
+R {357}{0}{<178>}{Cape Road}{ }{Cape Road You stand atop a rocky promontory overlooking the waters of two great bays a number of miles off to the west and east.  This broad cape, known as Worm's Talon, is windswept and stark.  The air is sharp with the tang of kelp and salt.  Only tough heath and scrub manages to grow out on this exposed clifftop.  Further to the north you notice that the road continues.  Directly to the southeast, rocky cliffs overlook Dragonspire Bay.  An old road runs north-south along the length of the cape. }{Mud}{{content}{{noun}{{cliffs}{{name}{cliffs}}{heath}{{name}{heath}}{promontory}{{name}{promontory}}{road}{{name}{road}}{scrub}{{name}{scrub}}{waters}{{name}{waters}}{west}{{name}{west}}}}}{}{}{1.000}{}
 E {354}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {356}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {373}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {355}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {374}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {352}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {359}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 
-R {358}{0}{<178>}{Cape Road}{ }{Cape Road Not much more than wiry heath and stunted shrubs grow out in the strong sea breeze.  Curling far south into the sea, this enormous promontory is known commonly as Worm's Talon.  Dragonspire Bay lies just to the northeast, bordered by sandy beach.  Just to the southwest, beyond rocky cliffs, Zahar Bay meets the open ocean.  Further to the west you can see cliffs.  A rough road runs north and southeast along the cape. }{}{}{}{}{1.000}{}
+R {358}{0}{<178>}{Clifftop}{ }{Cape Road Curling far south into the sea, this enormous promontory is known commonly as Worm's Talon.  Dragonspire Bay lies just to the northeast, bordered by sandy beach.  Just to the southwest, beyond rocky cliffs, Zahar Bay meets the open ocean.  The air is sharp with the tang of kelp and salt.  Only tough heath and scrub manages to grow out on this exposed cape.  Further to the west you can see cliffs.  A rough road runs north and southeast along the cape. }{Mud}{{content}{{noun}{{heath}{{name}{heath}}{promontory}{{name}{promontory}}{road}{{name}{road}}{scrub}{{name}{scrub}}{west}{{name}{west}}}}}{}{}{1.000}{}
 E {356}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {360}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {371}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {372}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {359}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {361}{se}{se}{6}{0}{}{1.000}{}{0.00}
 
-R {359}{0}{<178>}{Clifftop}{ }{Clifftop The cliffs to your west overlook the foaming waves of Zahar Bay.  A number of miles eastward, you can barely make out another body of water. The sound of gulls cuts through the roaring wind, as they circle the clifftop.  This broad peninsula is rocky and windswept, and stretches far to the south.   }{Mud}{{content}{{noun}{{cliffs}{{actions}{{1}{exa cliffs}{2}{search cliffs}}{name}{cliffs}}{gulls}{{actions}{{1}{exa gulls}{2}{search gulls}}{name}{gulls}}{peninsula}{{actions}{{1}{exa peninsula}{2}{search peninsula}}{name}{peninsula}}{waves}{{actions}{{1}{exa waves}{2}{search waves}}{name}{waves}}}}}{}{}{1.000}{}
+R {359}{0}{<178>}{Cape Road}{ }{Clifftop The cape is bordered to the east and west by the sea.  Just to the west, steep cliffs descend sharply into the dark waters of Zahar Bay.  The air is sharp with the tang of kelp and salt.  Only tough heath and scrub manages to grow out on this exposed clifftop.  This broad cape, known as Worm's Talon, is windswept and stark.  Further to the south you see that the cliffs continue, while to the east you note a beach.   }{Mud}{{content}{{item}{{^A piece of oakwood$}{{name}{A piece of oakwood}}}{noun}{{cape}{{name}{cape}}{cliffs}{{actions}{{1}{exa cliffs}{2}{search cliffs}}{name}{cliffs}}{east}{{name}{east}}{gulls}{{actions}{{1}{exa gulls}{2}{search gulls}}{name}{gulls}}{heath}{{name}{heath}}{peninsula}{{actions}{{1}{exa peninsula}{2}{search peninsula}}{name}{peninsula}}{scrub}{{name}{scrub}}{waters}{{name}{waters}}{waves}{{actions}{{1}{exa waves}{2}{search waves}}{name}{waves}}}}}{}{}{1.000}{}
 E {356}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {372}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {373}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {357}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {358}{se}{se}{6}{0}{}{1.000}{}{0.00}
 
-R {360}{0}{<178>}{Beach}{ }{Beach Further off to the west, the land rises dramatically.  Just to the east, a sandy beach fronts the sparkling waters of Dragonspire Bay.  The air is sharp with the tang of kelp and salt.  Only tough heath and scrub manages to grow along this windswept beach.  This peninsula sweeps from the plains to the north, far south to the open ocean.  Further to the northwest you note that the beach continues, while to the west you can see a road.   }{Mud}{}{}{}{1.000}{}
+R {360}{0}{<068>}{Beach}{ }{Beach Further off to the west, the land rises dramatically.  Just to the east, a sandy beach fronts the sparkling waters of Dragonspire Bay.  The vegetation here is predominantly tough and stunted scrub.  This broad cape, known as Worm's Talon, is windswept and stark.  Further to the southeast and northwest you see that the beach continues, while to the west you notice a road.   }{Mud}{{content}{{noun}{{beach}{{name}{beach}}{vegetation}{{name}{vegetation}}{waters}{{name}{waters}}{west}{{name}{west}}}}}{}{}{1.000}{}
 E {356}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 E {361}{s}{s}{4}{0}{}{1.000}{}{0.00}
-E {362}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {358}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {363}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {371}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {362}{e}{.mapLink {Pinnacle/Fantasy/The Lost Village of Willothorn} {} {e};}{2}{1}{}{1.000}{}{0.00}
 
-R {361}{0}{<178>}{Cape Road}{ }{Cape Road Not much more than wiry heath and stunted shrubs grow out in the strong sea breeze.  Just to the northeast lies a sandy beach, which fronts the great Dragonspire Bay.  Cliffs to the southwest overlook the sea, where Zahar Bay becomes open ocean.  This broad cape, known as Worm's Talon, is windswept and stark.  Further to the west you notice cliffs.  A road runs northwest and southeast along the cape. }{}{}{}{}{1.000}{}
+R {361}{0}{<178>}{Cape Road}{ }{Cape Road Just to the northeast lies a sandy beach, which fronts the great Dragonspire Bay.  Cliffs to the southwest overlook the sea, where Zahar Bay becomes open ocean.  The vegetation here is predominantly tough and stunted scrub.  Curling far south into the sea, this enormous promontory is known commonly as Worm's Talon.  Further to the north you see a beach.  A road runs northwest and southeast along the cape. }{Mud}{{content}{{item}{{^A piece of oakwood$}{{name}{A piece of oakwood}}}{noun}{{promontory}{{name}{promontory}}{road}{{name}{road}}{vegetation}{{name}{vegetation}}}}}{}{}{1.000}{}
 E {360}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {363}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {365}{se}{se}{6}{0}{}{1.000}{}{0.00}
 E {371}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {358}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
-R {362}{0}{<048>}{A Beach}{ }{You are standing on a sandy beach. Sand and rocks surround you here and the ocean crashes against your feet. Looking out at the ocean, it seems to go on forever as it calmly ebbs and flows. There is a dock which extends out from the beach.}{The Lost Village of Willothorn}{}{}{}{1.000}{}
+R {362}{0}{<000>}{LINK: Pinnacle/Fantasy/The Lost Village of Willothorn}{<138>*}{}{Pinnacle/Fantasy/The Lost Village of Willothorn}{{content}{{noun}{{beach}{{name}{beach}}{vegetation}{{name}{vegetation}}{waters}{{name}{waters}}{west}{{name}{west}}}}{link}{}}{}{}{1.000}{}
 E {360}{w}{w}{8}{0}{}{1.000}{}{0.00}
 
 R {363}{0}{<178>}{Beach}{ }{Beach The sound of gulls cuts through the roaring wind, as they hover over the surf.  You look east across a sandy beach, to the immense Dragonspire Bay.  Curling far south into the sea, this enormous promontory is known commonly as Worm's Talon.  Looking out over the water to the east, you can make out a small island not that far from shore.  The waters are calm enough in these parts that you might chance swimming. }{}{}{}{}{1.000}{}
@@ -1912,172 +1969,257 @@ E {1299}{enter}{.mapLink {Pinnacle/Fantasy/Tower of Fire} {} {enter};}{0}{1}{}{1
 R {370}{0}{<000>}{LINK: Pinnacle/Fantasy/Seacave}{<138>*}{}{Pinnacle/Fantasy/Seacave}{{link}{}}{}{}{1.000}{}
 E {365}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
-R {371}{0}{<178>}{Clifftop}{ }{Clifftop The air is sharp with the tang of kelp and salt.  Only tough heath and scrub manages to grow out on this exposed clifftop.  This peninsula sweeps from the plains to the north, far south to the open ocean.  The cliffs to your west overlook the foaming waves of Zahar Bay.  A number of miles eastward, you can barely make out another body of water.   }{}{}{}{}{1.000}{}
+R {371}{0}{<178>}{Clifftop}{ }{Clifftop This broad cape, known as Worm's Talon, is windswept and stark.  The cliffs to your west overlook the foaming waves of Zahar Bay.  A number of miles eastward, you can barely make out another body of water.  The air is sharp with the tang of kelp and salt.  Only tough heath and scrub manages to grow out on this exposed clifftop.  Further to the east you see a road.   }{Mud}{{content}{{item}{{^A piece of oakwood$}{{name}{A piece of oakwood}}}{noun}{{cliffs}{{name}{cliffs}}{east}{{name}{east}}{heath}{{name}{heath}}{scrub}{{name}{scrub}}{waves}{{name}{waves}}}}}{}{}{1.000}{}
 E {361}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {358}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {372}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {360}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {372}{0}{<068>}{Clifftop}{ }{Clifftop The cliffs to your west overlook the foaming waves of Zahar Bay.  A number of miles eastward, you can barely make out another body of water. Not much more than wiry heath and stunted shrubs grow out in the strong sea breeze.  This broad peninsula is rocky and windswept, and stretches far to the south.  Further to the north you can see that the cliffs continue.   }{Mud}{{content}{{noun}{{cliffs}{{actions}{{1}{exa cliffs}{2}{search cliffs}}{name}{cliffs}}{heath}{{actions}{{1}{exa heath}{2}{search heath}}{name}{heath}}{peninsula}{{actions}{{1}{exa peninsula}{2}{search peninsula}}{name}{peninsula}}{sea}{{actions}{{1}{exa sea}{2}{search sea}}{name}{sea}}{shrubs}{{actions}{{1}{exa shrubs}{2}{search shrubs}}{name}{shrubs}}{waves}{{actions}{{1}{exa waves}{2}{search waves}}{name}{waves}}}}}{}{}{1.000}{}
+R {372}{0}{<068>}{Beach}{ }{Clifftop The sound of gulls cuts through the roaring wind, as they circle the clifftop.  Curling far south into the sea, this enormous promontory is known commonly as Worm's Talon.  The cliffs to your west overlook the foaming waves of Zahar Bay.  A number of miles eastward, you can barely make out another body of water.  Further to the east you notice a road, while to the north you notice that the cliffs continue.   }{Mud}{{content}{{item}{{^A small dandelion$}{{name}{A small dandelion}}}{noun}{{cliffs}{{actions}{{1}{exa cliffs}{2}{search cliffs}}{name}{cliffs}}{east}{{name}{east}}{gulls}{{name}{gulls}}{heath}{{actions}{{1}{exa heath}{2}{search heath}}{name}{heath}}{peninsula}{{actions}{{1}{exa peninsula}{2}{search peninsula}}{name}{peninsula}}{promontory}{{name}{promontory}}{sea}{{actions}{{1}{exa sea}{2}{search sea}}{name}{sea}}{shrubs}{{actions}{{1}{exa shrubs}{2}{search shrubs}}{name}{shrubs}}{waves}{{actions}{{1}{exa waves}{2}{search waves}}{name}{waves}}}}}{}{}{1.000}{}
 E {371}{se}{se}{6}{0}{}{1.000}{}{0.00}
 E {359}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {358}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {1287}{dock}{.mapLink {Pinnacle/Fantasy/Worm's Talon Airship Docks} {} {dock};}{0}{1}{}{1.000}{}{0.00}
+E {356}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {373}{0}{<178>}{Clifftop}{ }{Clifftop You stand atop rocky cliffs overlooking the dark waters of Zahar Bay.  The sound of gulls cuts through the roaring wind, as they circle the clifftop.  This broad peninsula is rocky and windswept, and stretches far to the south.  Further to the north and south you can see that the cliffs continue.   }{}{}{}{}{1.000}{}
+R {373}{0}{<178>}{Clifftop}{ }{Clifftop This broad peninsula is rocky and windswept, and stretches far to the south.  Just to the west, rocky cliffs look down over the broad bay known as Zahar.  A number of miles off to the east, on the other side of the cape, lies the great Dragonspire Bay.  The sound of gulls cuts through the roaring wind, as they circle the clifftop.  Further to the east you see a road, while to the south you see that the cliffs continue.   }{Mud}{{content}{{noun}{{bay}{{name}{bay}}{cliffs}{{name}{cliffs}}{east}{{name}{east}}{gulls}{{name}{gulls}}{peninsula}{{name}{peninsula}}}}}{}{}{1.000}{}
 E {359}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {374}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {357}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {355}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {356}{se}{se}{6}{0}{}{1.000}{}{0.00}
 
-R {374}{0}{<178>}{Clifftop}{ }{Clifftop The vegetation here is predominantly tough and stunted scrub.  This peninsula sweeps from the plains to the north, far south to the open ocean.  The cape is bordered to the east and west by the sea.  Just to the west, steep cliffs descend sharply into the dark waters of Zahar Bay.  Further to the north you can see plains.   }{}{}{}{}{1.000}{}
+R {374}{0}{<178>}{Clifftop}{ }{Clifftop Just to the west, rocky cliffs look down over the broad bay known as Zahar.  A number of miles off to the east, on the other side of the cape, lies the great Dragonspire Bay.  This broad cape, known as Worm's Talon, is windswept and stark.  The sound of gulls cuts through the roaring wind, as they circle the clifftop.  Further to the east you can see a road, while to the south you notice that the cliffs continue.   }{Mud}{{content}{{noun}{{bay}{{name}{bay}}{cliffs}{{name}{cliffs}}{east}{{name}{east}}{gulls}{{name}{gulls}}}}}{}{}{1.000}{}
 E {373}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {355}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {375}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {376}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {353}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {357}{se}{se}{6}{0}{}{1.000}{}{0.00}
 
-R {375}{0}{<178>}{Plains}{ }{Plains You notice some light tracks but you have no idea where they lead.  The land seems quite empty but you spot some movement not too far away.  It looks as if you might find some wild rabbits around.  The long grass sways in the breeze and parts easily beneath your step.  Further to the east you note that the plains continue.  To the southwest, below steep cliffs, you note the beginnings of a great bay. }{}{}{}{}{1.000}{}
+R {375}{0}{<178>}{Plains}{ }{Plains You notice some light tracks but you have no idea where they lead.  A slight wind blows across the plains and the grass shimmers slightly.  The land seems quite empty but you spot some movement not too far away.  It looks as if you might find some wild rabbits around.  Further to the south you notice cliffs, while to the west you note that the plains continue.  To the southwest, below steep cliffs, you note the beginnings of a great bay. }{Mud}{{content}{{noun}{{grass}{{name}{grass}}{plains}{{name}{plains}}{tracks}{{name}{tracks}}}}}{}{}{1.000}{}
 E {374}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {376}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {353}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {349}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {348}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {350}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {355}{se}{se}{6}{0}{}{1.000}{}{0.00}
 
-R {376}{0}{<178>}{Plains}{ }{Plains A lone bird glides effortlessly over your head and into the distance.  The cloudless skies stretch in all directions without fault.  The plains seem to stretch on as far as your eyes can see.  The grass sways in the breeze and wavy patterns appear all over the place.  Further to the north you can see a road.  To the west, the grass of the plains seems to die off rapidly, leading to a desolate land.  To the south, below steep cliffs, you note the beginnings of a great bay. }{}{}{}{}{1.000}{}
+R {376}{0}{<178>}{Plains}{ }{Plains You notice some light tracks but you have no idea where they lead.  The plains seem to stretch on as far as your eyes can see.  The grass sways in the breeze and wavy patterns appear all over the place.  The cloudless skies stretch in all directions without fault.  To the west, the grass of the plains seems to die off rapidly, leading to a desolate land.  To the south, below steep cliffs, you note the beginnings of a great bay. }{Mud}{{content}{{noun}{{bird}{{name}{bird}}{grass}{{name}{grass}}{plains}{{name}{plains}}{tracks}{{name}{tracks}}}}}{}{}{1.000}{}
 E {374}{se}{se}{6}{0}{}{1.000}{}{0.00}
 E {350}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {377}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {375}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {378}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {349}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {377}{0}{<178>}{Desert}{ }{Desert The midday sun is high in a cloudless sky, baking the desert sands.  The desert seems quite barren but you spot some movement on the next dune. Then again, maybe the heat is playing tricks on your mind.  You see some footsteps in the sand and you wonder where they lead.  The desert blends into plains to the north and a road lies east. }{}{}{}{}{1.000}{}
+R {377}{0}{<178>}{Desert}{ }{Desert The desert sands shift about as a gust of wind whips around you.  The dry desert heat continually sucks moisture from your body.  The desert stretches on as far as your eyes can see. The sands shift in the wind and ripples appear all over the sand dunes.  The desert blends into plains to the north and a road lies east. }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{moisture}{{name}{moisture}}{sand}{{name}{sand}}{sands}{{name}{sands}}{sun}{{name}{sun}}{wind}{{name}{wind}}}}}{}{}{1.000}{}
 E {376}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {378}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {379}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {380}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {382}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {389}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {350}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {378}{0}{<178>}{On a Road}{ }{Plains The long grass sways in the breeze and parts easily beneath your step.  The plains look pretty much the same all around you.  The place appears to get enough rain but there still isn't much life around.  A lone bird glides effortlessly over your head and into the distance.  Further to the east you see a road.   }{}{}{}{}{1.000}{}
+R {378}{0}{<178>}{On a Road}{ }{Plains The bright sun is warm on your back as you look out on the plains.  You look back the way you came and see the crushed grass of your path.  The plains look pretty much the same all around you.  The place appears to get enough rain but there still isn't much life around.   }{Mud}{{content}{{item}{{^A dwindling portal \x28glowing\x29$}{{name}{A dwindling portal (glowing)}}}{noun}{{grass}{{name}{grass}}{plains}{{name}{plains}}{sun}{{name}{sun}}}}}{}{}{1.000}{}
 E {377}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {389}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {391}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {350}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {376}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {380}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {392}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {390}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
-R {379}{0}{<178>}{Desert}{ }{Desert You see some footsteps in the sand and you wonder where they lead.  The desert stretches on as far as your eyes can see. The sands shift in the wind and ripples appear all over the sand dunes.  The desert sands shift about as a gust of wind whips around you.   }{}{}{}{}{1.000}{}
+R {379}{0}{<178>}{Desert}{ }{Desert The heat is taking its toll on you as you begin to hallucinate.  A strong wind blows across the desert, whipping sand into the air.  The desert seems quite barren but you spot some movement on the next dune. Then again, maybe the heat is playing tricks on your mind.   }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{sand}{{name}{sand}}{wind}{{name}{wind}}}}}{}{}{1.000}{}
 E {377}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {382}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {380}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {379}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {379}{s}{s}{4}{0}{}{1.000}{}{0.00}
 
-R {380}{0}{<178>}{Desert}{ }{Desert A strong wind blows across the baking desert, whipping sand into the air.  The desert seems the same every way you look. You see an oasis in the distance, however on second inspection it turns out to be just a mirage.  You see some footsteps in the sand and you wonder where they lead.   }{}{}{}{}{1.000}{}
+R {380}{0}{<178>}{Desert}{ }{Desert The desert stretches on as far as your eyes can see. The sands shift in the wind and ripples appear all over the sand dunes.  A strong wind blows across the bleak hot landscape, whipping sand into the air.  The heat is taking its toll on you as you begin to hallucinate.   }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{sand}{{name}{sand}}{sands}{{name}{sands}}{wind}{{name}{wind}}}}}{}{}{1.000}{}
 E {377}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {382}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {383}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {389}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {384}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {379}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {378}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {386}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
-R {381}{0}{<178>}{Desert}{ }{Desert A strong wind blows across the bleak hot landscape, whipping sand into the air.  The desert seems quite barren but you spot some movement on the next dune. Then again, maybe the heat is playing tricks on your mind.  The dry desert heat continually sucks moisture from your body.   }{}{}{}{}{1.000}{}
+R {381}{0}{<178>}{Desert}{ }{Desert You look back the way you came and see your footsteps in the sand.  The desert seems quite barren but you spot some movement on the next dune. Then again, maybe the heat is playing tricks on your mind.  The boiling sun burns your back as you look out across the baking desert.   }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{footsteps}{{name}{footsteps}}{sun}{{name}{sun}}}}}{}{}{1.000}{}
 E {384}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {388}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {381}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {381}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {385}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
-R {382}{0}{}{Desert}{ }{Desert The desert sands shift about as a gust of wind whips around you.  The desert seems quite barren but you spot some movement on the next dune. Then again, maybe the heat is playing tricks on your mind.  You look back the way you came and see your footsteps in the sand.   }{}{}{}{}{1.000}{}
+R {382}{0}{}{Desert}{ }{Desert The boiling sun burns your back as you look out across the bleak hot landscape.  The heat is taking its toll on you as you begin to hallucinate.  The desert seems the same every way you look. You see an oasis in the distance, however on second inspection it turns out to be just a mirage.   }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{oasis}{{name}{oasis}}{sun}{{name}{sun}}}}}{}{}{1.000}{}
 E {379}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {380}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {384}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {377}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {382}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {383}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
-R {383}{0}{<178>}{Desert}{ }{Desert The desert sands shift about as a gust of wind whips around you.  The dry desert heat continually sucks moisture from your body.  The desert seems quite barren but you spot some movement on the next dune. Then again, maybe the heat is playing tricks on your mind.   }{}{}{}{}{1.000}{}
+R {383}{0}{<178>}{Desert}{ }{Desert The desert sands shift about as a gust of wind whips around you.  The desert seems the same every way you look. You see an oasis in the distance, however on second inspection it turns out to be just a mirage. You look back the way you came and see your footsteps in the sand.   }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{footsteps}{{name}{footsteps}}{oasis}{{name}{oasis}}{sands}{{name}{sands}}{wind}{{name}{wind}}}}}{}{}{1.000}{}
 E {384}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {386}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {380}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {387}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {382}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {385}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {399}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {389}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {384}{0}{<178>}{Desert}{ }{Desert The midday sun is high in a cloudless sky, baking the desert sands.  You see some footsteps in the sand and you wonder where they lead.  The desert stretches out to the horizon. Your feet sink into the sand beneath you and every step you take drains your mind and body.   }{}{}{}{}{1.000}{}
+R {384}{0}{<178>}{Desert}{ }{Desert You see some footsteps in the sand and you wonder where they lead.  The midday sun is high in a cloudless sky, baking the desert sands.  The desert stretches on as far as your eyes can see. The sands shift in the wind and ripples appear all over the sand dunes.   }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{footsteps}{{name}{footsteps}}{sand}{{name}{sand}}{sands}{{name}{sands}}{sun}{{name}{sun}}{wind}{{name}{wind}}}}}{}{}{1.000}{}
 E {382}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {381}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {383}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {385}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {388}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {387}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {380}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {385}{0}{<178>}{Desert}{ }{Desert You look back the way you came and see your footsteps in the sand.  The desert sands shift about as a gust of wind whips around you.  The desert stretches out to the horizon. Your feet sink into the sand beneath you and every step you take drains your mind and body.   }{}{}{}{}{1.000}{}
+R {385}{0}{<178>}{Desert}{ }{Desert The boiling sun burns your back as you look out across the baking desert.  The heat is taking its toll on you as you begin to hallucinate. The desert stretches out to the horizon. Your feet sink into the sand beneath you and every step you take drains your mind and body.   }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{sand}{{name}{sand}}{sun}{{name}{sun}}}}}{}{}{1.000}{}
 E {384}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {387}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {388}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {987}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {381}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {988}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {383}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {965}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
-R {386}{0}{<178>}{Desert}{ }{Desert You look back the way you came and see your footsteps in the sand.  The desert sands shift about as a gust of wind whips around you.  The desert seems the same every way you look. You see an oasis in the distance, however on second inspection it turns out to be just a mirage.   }{}{}{}{}{1.000}{}
+R {386}{0}{<178>}{Desert}{ }{Desert The heat is taking its toll on you as you begin to hallucinate.  A strong wind blows across the baking desert, whipping sand into the air.  The desert stretches out to the horizon. Your feet sink into the sand beneath you and every step you take drains your mind and body.   }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{sand}{{name}{sand}}{wind}{{name}{wind}}}}}{}{}{1.000}{}
 E {383}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {389}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {396}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {399}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {380}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {387}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {390}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {398}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
-R {387}{0}{<178>}{Desert}{ }{Desert The midday sun is high in a cloudless sky, baking the desert sands.  The desert stretches out to the horizon. Your feet sink into the sand beneath you and every step you take drains your mind and body.  You see some footsteps in the sand and you wonder where they lead.   }{}{}{}{}{1.000}{}
+R {387}{0}{<178>}{Desert}{ }{Desert A strong wind blows across the bleak hot landscape, whipping sand into the air.  You see some footsteps in the sand and you wonder where they lead.  The desert stretches on as far as your eyes can see. The sands shift in the wind and ripples appear all over the sand dunes.   }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{footsteps}{{name}{footsteps}}{sand}{{name}{sand}}{sands}{{name}{sands}}{wind}{{name}{wind}}}}}{}{}{1.000}{}
 E {383}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {399}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {965}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {385}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {987}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {384}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {386}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {964}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
-R {388}{0}{<158>}{Desert}{<138>@}{Desert A strong wind blows across the bleak hot landscape, whipping sand into the air.  You see some footsteps in the sand and you wonder where they lead.  The desert seems the same every way you look. You see an oasis in the distance, however on second inspection it turns out to be just a mirage.  The remains of an old road lie off to the south. }{}{{Desert Portal}{}}{}{}{1.000}{}
+R {388}{0}{<068>}{Desert}{<138>@}{Desert The boiling sun burns your back as you look out across the baking desert.  The desert seems the same every way you look. You see an oasis in the distance, however on second inspection it turns out to be just a mirage.  The heat is taking its toll on you as you begin to hallucinate. The remains of an old road lie off to the south. }{Mud}{{Desert Portal}{}{content}{{item}{{^A glowing portal$}{{name}{A glowing portal}}}{noun}{{desert}{{name}{desert}}{oasis}{{name}{oasis}}{sun}{{name}{sun}}}}}{}{}{1.000}{}
 E {381}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {385}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {988}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {1004}{portal}{.mapLink {Pinnacle} {175} {portal};}{0}{1}{}{1.000}{}{0.00}
 E {1003}{s}{.mapLink {Pinnacle/Fantasy/Ruins of an Old City} {} {s};}{4}{1}{}{1.000}{}{0.00}
 E {2000}{enter portal}{portal;#NOP %1}{0}{0}{}{1.000}{}{0.00}
+E {987}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {384}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {389}{0}{<178>}{Desert}{ }{Desert The desert seems quite barren but you spot some movement on the next dune. Then again, maybe the heat is playing tricks on your mind.  You look back the way you came and see your footsteps in the sand.  The boiling sun burns your back as you look out across the baking desert.  The desert blends into the plains to the north and east. }{}{}{}{}{1.000}{}
+R {389}{0}{<178>}{Desert}{ }{Desert The desert seems the same every way you look. You see an oasis in the distance, however on second inspection it turns out to be just a mirage. The midday sun is high in a cloudless sky, baking the desert sands.  The dry desert heat continually sucks moisture from your body.  The desert blends into the plains to the north and east. }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{footsteps}{{name}{footsteps}}{moisture}{{name}{moisture}}{oasis}{{name}{oasis}}{sand}{{name}{sand}}{sun}{{name}{sun}}{wind}{{name}{wind}}}}}{}{}{1.000}{}
 E {380}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {390}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {378}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {386}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {383}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {377}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {396}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {391}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {390}{0}{<178>}{Plains}{ }{Plains A lone bird glides effortlessly over your head and into the distance.  The cloudless skies stretch in all directions without fault.  The land seems quite empty but you spot some movement not too far away.  It looks as if you might find some wild rabbits around.  Further to the east you can see that the plains continue.   }{}{}{}{}{1.000}{}
+R {390}{0}{<178>}{Plains}{ }{Plains The land seems quite empty but you spot some movement not too far away.  It looks as if you might find some wild rabbits around.  It seems quite peaceful here as you look upon your surroundings.  A slight wind blows across the plains and the grass shimmers slightly.   }{Mud}{{content}{{item}{{^A piece of oakwood$}{{name}{A piece of oakwood}}}{noun}{{grass}{{name}{grass}}{plains}{{name}{plains}}}}}{}{}{1.000}{}
 E {389}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {391}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {395}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {396}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {378}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {386}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {397}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {394}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {391}{0}{<178>}{Plains}{ }{Plains It seems quite peaceful here as you look upon your surroundings.  The plains stretch out to the horizon.  The ground is soft beneath your feet but the grassy cover allows you to step comfortably.  A slight wind blows across the plains and the grass shimmers slightly.  Further to the west and south you note that the plains continue, while to the east you can see a road.   }{}{}{}{}{1.000}{}
+R {391}{0}{<178>}{On a Road}{ }{Plains The plains stretch out to the horizon.  The ground is soft beneath your feet but the grassy cover allows you to step comfortably.  A slight wind blows across the plains and the grass shimmers slightly.  You notice some light tracks but you have no idea where they lead.  Further to the south and west you note that the plains continue.   }{Mud}{{content}{{noun}{{grass}{{name}{grass}}{ground}{{name}{ground}}{plains}{{name}{plains}}{sun}{{name}{sun}}{tracks}{{name}{tracks}}}{npc}{{^A buzzard$}{{name}{A buzzard}}}}}{}{}{1.000}{}
 E {378}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {392}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {394}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {390}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {389}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {350}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {393}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {395}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
-R {392}{0}{<238>}{On a Road}{}{On a Road You are standing on a road that is frequently used by travelers.  The sun is shining and it's a nice day to be out.  The road winds its way through the plains and you could easily leave the road.  Further to the north you note that the road continues.  The road here runs north and south.  Across the plains to the southeast you see the walls of a city. }{}{{road}{}}{}{}{1.000}{}
+R {392}{0}{<238>}{Plains}{}{On a Road You are standing on a road that is frequently used by travelers.  The sky is clear and a light breeze tickles your cheek.  The plains on either side look quite barren but they may hold something.  Further to the south and north you notice that the road continues.  The road here runs north and south.  Across the plains to the southeast you see the walls of a city. }{Mud}{{content}{{item}{{^A piece of oakwood$}{{name}{A piece of oakwood}}}{noun}{{evidence}{{name}{evidence}}{plains}{{name}{plains}}{road}{{name}{road}}{sun}{{name}{sun}}{walls}{{name}{walls}}}{npc}{{^Bandit$}{{name}{Bandit}}{^Human Traveller$}{{name}{Human Traveller}}}}{road}{}}{}{}{1.000}{}
 E {350}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {393}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {391}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {418}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {349}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {378}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {394}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {416}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {393}{0}{<238>}{On a Road}{}{On a Road You are standing on a well traveled road leading through the plains.  The sun is shining and it's a nice day to be out.  The road winds its way through the plains and you could easily leave the road.  Further to the south you can see that the road continues, while to the east you can see plains.  The road here runs north and south.  Across the plains to the southeast you see the walls of a city. }{}{{road}{}}{}{}{1.000}{}
+R {393}{0}{<238>}{On a Road}{}{On a Road The sky is clear and a light breeze tickles your cheek.  The plains on either side look quite barren but they may hold something.  This road bears the evidence of many years of frequent travel.  Further to the west you notice plains, while to the south you can see that the road continues.  The road here runs north and south.  Across the plains to the southeast you see the walls of a city. }{Mud}{{content}{{item}{{^A small dandelion$}{{name}{A small dandelion}}{^Armour$}{{name}{Armour}}{^Small flute$}{{name}{Small flute}}}{noun}{{evidence}{{name}{evidence}}{plains}{{name}{plains}}{road}{{name}{road}}{walls}{{name}{walls}}}}{road}{}}{}{}{1.000}{}
 E {392}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {394}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {404}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {416}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {418}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {391}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 
-R {394}{0}{<178>}{Plains}{ }{Plains The plains seem to stretch on as far as your eyes can see.  The grass sways in the breeze and wavy patterns appear all over the place.  It seems quite peaceful here as you look upon your surroundings.  The bright sun is warm on your back as you look out on the plains.  The plains are overtaken by forest to the north. }{}{}{}{}{1.000}{}
+R {394}{0}{<178>}{Plains}{ }{Plains The plains seem to stretch on as far as your eyes can see.  The grass sways in the breeze and wavy patterns appear all over the place.  The cloudless skies stretch in all directions without fault.  A lone bird glides effortlessly over your head and into the distance.  Further to the west and south you notice that the plains continue.  The plains are overtaken by forest to the north. }{Mud}{{content}{{item}{{^A small dandelion$}{{name}{A small dandelion}}}{noun}{{bird}{{name}{bird}}{grass}{{name}{grass}}{plains}{{name}{plains}}}}}{}{}{1.000}{}
 E {391}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {395}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {403}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {393}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {390}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {392}{se}{se}{6}{0}{}{1.000}{}{0.00}
 
-R {395}{0}{<178>}{Plains}{ }{Plains The bright sun is warm on your back as you look out on the plains.  You look back the way you came and see the crushed grass of your path.  The land seems quite empty but you spot some movement not too far away.  It looks as if you might find some wild rabbits around.  The plains are overtaken by forest to the north. }{}{}{}{}{1.000}{}
+R {395}{0}{<178>}{Plains}{ }{Plains The plains stretch out to the horizon.  The ground is soft beneath your feet but the grassy cover allows you to step comfortably.  You notice some light tracks but you have no idea where they lead.  The long grass sways in the breeze and parts easily beneath your step.  Further to the east you can see that the plains continue.  The plains are overtaken by forest to the north. }{}{{content}{{noun}{{grass}{{name}{grass}}{ground}{{name}{ground}}{plains}{{name}{plains}}{tracks}{{name}{tracks}}}}}{}{}{1.000}{}
 E {390}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {397}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {402}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {394}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {391}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {396}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 
-R {396}{0}{<178>}{Desert}{ }{Desert A strong wind blows across the bleak hot landscape, whipping sand into the air.  The desert seems the same every way you look. You see an oasis in the distance, however on second inspection it turns out to be just a mirage.  You see some footsteps in the sand and you wonder where they lead.  The desert blends into the plains to the north and east. }{}{}{}{}{1.000}{}
+R {396}{0}{<178>}{Plains}{ }{Desert The desert stretches out to the horizon. Your feet sink into the sand beneath you and every step you take drains your mind and body.  The boiling sun burns your back as you look out across the bleak hot landscape.  You see some footsteps in the sand and you wonder where they lead.  The desert blends into the plains to the north and east. }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{footsteps}{{name}{footsteps}}{sand}{{name}{sand}}{sands}{{name}{sands}}{sun}{{name}{sun}}{wind}{{name}{wind}}}}}{}{}{1.000}{}
 E {390}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {397}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {386}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {398}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {399}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {389}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {395}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
 R {397}{0}{<178>}{Plains}{ }{Plains The plains seem to stretch on as far as your eyes can see.  The grass sways in the breeze and wavy patterns appear all over the place.  You notice some light tracks but you have no idea where they lead.  The cloudless skies stretch in all directions without fault.  Further to the east you note that the plains continue.  The grassy plain is bordered by thick forest to the north and a sandy, desolate wasteland to the south.  Something is surely amiss with the land.  Enormous mountains tower to the west, preventing any travel in that direction. }{}{}{}{}{1.000}{}
 E {396}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {400}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {395}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {390}{se}{se}{6}{0}{}{1.000}{}{0.00}
 
-R {398}{0}{<178>}{Desert}{ }{Desert The desert stretches on as far as your eyes can see. The sands shift in the wind and ripples appear all over the sand dunes.  The midday sun is high in a cloudless sky, baking the desert sands.  You see some footsteps in the sand and you wonder where they lead.   }{}{}{}{}{1.000}{}
+R {398}{0}{<178>}{Desert}{ }{Desert The desert sands shift about as a gust of wind whips around you.  The dry desert heat continually sucks moisture from your body.  The desert seems the same every way you look. You see an oasis in the distance, however on second inspection it turns out to be just a mirage.   }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{moisture}{{name}{moisture}}{oasis}{{name}{oasis}}{sands}{{name}{sands}}{wind}{{name}{wind}}}}}{}{}{1.000}{}
 E {396}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {399}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {963}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {386}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {964}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {398}{n}{n}{1}{0}{}{1.000}{}{0.00}
 
-R {399}{0}{<178>}{Desert}{ }{Desert The desert seems the same every way you look. You see an oasis in the distance, however on second inspection it turns out to be just a mirage. You look back the way you came and see your footsteps in the sand.  The boiling sun burns your back as you look out across the desert.   }{}{}{}{}{1.000}{}
+R {399}{0}{<178>}{Desert}{ }{Desert The dry desert heat continually sucks moisture from your body.  The boiling sun burns your back as you look out across the desert.  The desert seems the same every way you look. You see an oasis in the distance, however on second inspection it turns out to be just a mirage.  }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{moisture}{{name}{moisture}}{oasis}{{name}{oasis}}{sun}{{name}{sun}}}}}{}{}{1.000}{}
 E {386}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {398}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {387}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {964}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {965}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {383}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {963}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {396}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
 R {400}{0}{<178>}{Forest}{ }{Forest A small gust of wind causes the branches above you to sway slightly.  Birds are singing in the trees and you see a squirrel run along a branch overhead. The forest seems to be buzzing with animal-life.  Looking up through the canopy of branches you see the sky is clear.  Further to the north and east you note that the forest continues.  The forest is impenetrable to the west and plains begin to the south. }{}{}{}{}{1.000}{}
 E {397}{s}{s}{4}{0}{}{1.000}{}{0.00}
@@ -2178,11 +2320,13 @@ E {417}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {436}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {438}{n}{n}{1}{0}{}{1.000}{}{0.00}
 
-R {416}{0}{<178>}{Plains}{ }{Plains The land seems quite empty but you spot some movement not too far away.  It looks as if you might find some wild rabbits around.  A lone bird glides effortlessly over your head and into the distance.  The cloudless skies stretch in all directions without fault.  Further to the east you see that the plains continue.  The plains are overtaken by forest to the north. }{}{}{}{}{1.000}{}
+R {416}{0}{<178>}{On a Road}{ }{Plains A lone bird glides effortlessly over your head and into the distance.  A slight wind blows across the plains and the grass shimmers slightly.  The land seems quite empty but you spot some movement not too far away.  It looks as if you might find some wild rabbits around.  Further to the south you notice that the plains continue.  The plains are overtaken by forest to the north. }{Mud}{{content}{{item}{{^A pulsing portal \x28glowing\x29$}{{name}{A pulsing portal (glowing)}}{^A small dandelion$}{{name}{A small dandelion}}}{noun}{{bird}{{name}{bird}}{grass}{{name}{grass}}{plains}{{name}{plains}}{road}{{name}{road}}{walls}{{name}{walls}}}}}{}{}{1.000}{}
 E {414}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {418}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {393}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {419}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {392}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {420}{se}{se}{6}{0}{}{1.000}{}{0.00}
 
 R {417}{0}{<048>}{Plains}{ }{Plains You notice some light tracks but you have no idea where they lead.  The plains look pretty much the same all around you.  The place appears to get enough rain but there still isn't much life around.  The bright sun is warm on your back as you look out on the plains.  Further to the east you notice that the plains continue.  The plains are overtaken by forest to the west.  Almost hidden by the encroaching forest here, you see a hut. }{Mud}{}{}{}{1.000}{}
 E {414}{w}{w}{8}{0}{}{1.000}{}{0.00}
@@ -2190,24 +2334,34 @@ E {419}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {415}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {421}{e}{e}{2}{0}{}{1.000}{}{0.00}
 
-R {418}{0}{<178>}{Plains}{ }{Plains You notice some light tracks but you have no idea where they lead.  The cloudless skies stretch in all directions without fault.  The plains stretch out to the horizon.  The ground is soft beneath your feet but the grassy cover allows you to step comfortably.  Further to the east you note that the plains continue.   }{}{}{}{}{1.000}{}
+R {418}{0}{<178>}{Plains}{ }{Plains You look back the way you came and see the crushed grass of your path.  The plains seem to stretch on as far as your eyes can see.  The grass sways in the breeze and wavy patterns appear all over the place.  The long grass sways in the breeze and parts easily beneath your step.   }{Mud}{{content}{{item}{{^A piece of oakwood$}{{name}{A piece of oakwood}}}{noun}{{grass}{{name}{grass}}{plains}{{name}{plains}}}{npc}{{^Plainsman$}{{name}{Plainsman}}}}}{}{}{1.000}{}
 E {416}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {349}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {392}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {420}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {350}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {348}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {419}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {393}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
-R {419}{0}{<178>}{Plains}{ }{Plains The plains look pretty much the same all around you.  The place appears to get enough rain but there still isn't much life around.  The long grass sways in the breeze and parts easily beneath your step.  A lone bird glides effortlessly over your head and into the distance.  Further to the west you notice that the plains continue.   }{}{}{}{}{1.000}{}
+R {419}{0}{<178>}{Plains}{ }{Plains The cloudless skies stretch in all directions without fault.  You notice some light tracks but you have no idea where they lead.  The plains stretch out to the horizon.  The ground is soft beneath your feet but the grassy cover allows you to step comfortably.  Further to the north, west and east you notice that the plains continue.   }{Mud}{{content}{{noun}{{ground}{{name}{ground}}{plains}{{name}{plains}}{tracks}{{name}{tracks}}}}}{}{}{1.000}{}
 E {416}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {417}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {420}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {422}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {346}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {418}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 
-R {420}{0}{<068>}{Plains}{}{Plains The long grass sways in the breeze and parts easily beneath your step.  It seems quite peaceful here as you look upon your surroundings.  The plains stretch out to the horizon.  The ground is soft beneath your feet but the grassy cover allows you to step comfortably.  Further to the west and north you note that the plains continue.   }{Pinnacle/Fantasy/Maze}{{link}{}}{}{}{1.000}{}
+R {420}{0}{<068>}{Plains}{}{Plains The plains seem to stretch on as far as your eyes can see.  The grass sways in the breeze and wavy patterns appear all over the place.  A lone bird glides effortlessly over your head and into the distance.  The long grass sways in the breeze and parts easily beneath your step.  Further to the west you note that the plains continue, while to the south you see a road.   }{Pinnacle/Fantasy/Maze}{{content}{{item}{{^A pile of rubble$}{{name}{A pile of rubble}}}{noun}{{bird}{{name}{bird}}{grass}{{name}{grass}}{plains}{{name}{plains}}}}{link}{}}{}{}{1.000}{}
 E {418}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {419}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {348}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {346}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {1222}{d}{d}{32}{0}{}{1.000}{}{0.00}
+E {347}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {349}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {416}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {422}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
 R {421}{0}{<178>}{Plains}{ }{Plains You notice some light tracks but you have no idea where they lead.  The long grass sways in the breeze and parts easily beneath your step.  The plains look pretty much the same all around you.  The place appears to get enough rain but there still isn't much life around.  Further to the west, north and east you see that the plains continue.   }{}{}{}{}{1.000}{}
 E {417}{w}{w}{8}{0}{}{1.000}{}{0.00}
@@ -2215,11 +2369,13 @@ E {422}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {423}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {436}{n}{n}{1}{0}{}{1.000}{}{0.00}
 
-R {422}{0}{<178>}{Plains}{ }{Plains You notice some light tracks but you have no idea where they lead.  The long grass sways in the breeze and parts easily beneath your step.  The land seems quite empty but you spot some movement not too far away.  It looks as if you might find some wild rabbits around.  Further to the east you notice that the plains continue.   }{}{}{}{}{1.000}{}
+R {422}{0}{<178>}{Plains}{ }{Plains A lone bird glides effortlessly over your head and into the distance.  The long grass sways in the breeze and parts easily beneath your step.  The plains stretch out to the horizon.  The ground is soft beneath your feet but the grassy cover allows you to step comfortably.  Further to the west and south you notice that the plains continue.   }{Mud}{{content}{{item}{{^A small dandelion$}{{name}{A small dandelion}}}{noun}{{bird}{{name}{bird}}{grass}{{name}{grass}}{ground}{{name}{ground}}{plains}{{name}{plains}}}}}{}{}{1.000}{}
 E {419}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {346}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {345}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {421}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {420}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {343}{se}{se}{6}{0}{}{1.000}{}{0.00}
 
 R {423}{0}{<178>}{Plains}{ }{Plains A lone bird glides effortlessly over your head and into the distance.  The plains seem to stretch on as far as your eyes can see.  The grass sways in the breeze and wavy patterns appear all over the place.  The bright sun is warm on your back as you look out on the plains.  Further to the west and north you see that the plains continue, while to the east you see a road.   }{}{}{}{}{1.000}{}
 E {345}{s}{s}{4}{0}{}{1.000}{}{0.00}
@@ -2335,11 +2491,12 @@ E {432}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {440}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {450}{n}{n}{1}{0}{}{1.000}{}{0.00}
 
-R {442}{0}{<048>}{Plains}{ }{Plains It seems quite peaceful here as you look upon your surroundings.  The cloudless skies stretch in all directions without fault.  The plains seem to stretch on as far as your eyes can see.  The grass sways in the breeze and wavy patterns appear all over the place.  Further to the west and north you note that the plains continue.   }{}{}{}{}{1.000}{}
+R {442}{0}{<068>}{Plains}{ }{Plains The long grass sways in the breeze and parts easily beneath your step.  A lone bird glides effortlessly over your head and into the distance.  The plains stretch out to the horizon.  The ground is soft beneath your feet but the grassy cover allows you to step comfortably.  Further to the east and west you notice that the plains continue.   }{Mud}{{content}{{item}{{^An Orc Encampment$}{{name}{An Orc Encampment}}}{noun}{{bird}{{name}{bird}}{grass}{{name}{grass}}{ground}{{name}{ground}}{plains}{{name}{plains}}}}}{}{}{1.000}{}
 E {429}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {446}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {493}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {444}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {1300}{enter}{.mapLink {Pinnacle/Fantasy/Longshadow Camp} {} {enter};}{0}{1}{}{1.000}{}{0.00}
 
 R {443}{0}{<178>}{Plains}{ }{Plains A lone bird glides effortlessly over your head and into the distance.  The long grass sways in the breeze and parts easily beneath your step.  The plains look pretty much the same all around you.  The place appears to get enough rain but there still isn't much life around.  Further to the east you see plains, while to the north you can see that the plains continue.  There is a huge lake just to the south, turbulent and dark. }{}{}{}{}{1.000}{}
 E {429}{w}{w}{8}{0}{}{1.000}{}{0.00}
@@ -5188,236 +5345,369 @@ R {960}{0}{<000>}{LINK: Pinnacle/Fantasy/Garrison}{<138>*}{}{Pinnacle/Fantasy/Ga
 
 R {961}{0}{<000>}{LINK: Pinnacle/Fantasy/A Missionary Camp}{<138>*}{}{Pinnacle/Fantasy/A Missionary Camp}{{link}{}}{}{}{1.000}{}
 
-R {962}{0}{<178>}{Desert}{ }{Desert The desert seems quite barren but you spot some movement on the next dune. Then again, maybe the heat is playing tricks on your mind.  A strong wind blows across the bleak hot landscape, whipping sand into the air.  You look back the way you came and see your footsteps in the sand.  }{}{}{}{}{1.000}{}
+R {962}{0}{<178>}{Desert}{ }{Desert You look back the way you came and see your footsteps in the sand.  The desert stretches out to the horizon. Your feet sink into the sand beneath you and every step you take drains your mind and body.  The midday sun is high in a cloudless sky, baking the desert sands.   }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{footsteps}{{name}{footsteps}}{sand}{{name}{sand}}{sun}{{name}{sun}}}}}{}{}{1.000}{}
 E {963}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {1006}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {967}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {962}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {962}{n}{n}{1}{0}{}{1.000}{}{0.00}
 
-R {963}{0}{<178>}{Desert}{ }{Desert You look back the way you came and see your footsteps in the sand.  The desert sands shift about as a gust of wind whips around you.  The desert stretches on as far as your eyes can see. The sands shift in the wind and ripples appear all over the sand dunes.   }{}{}{}{}{1.000}{}
+R {963}{0}{<178>}{Desert}{ }{Desert The desert sands shift about as a gust of wind whips around you.  The desert stretches on as far as your eyes can see. The sands shift in the wind and ripples appear all over the sand dunes.  You look back the way you came and see your footsteps in the sand.   }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{footsteps}{{name}{footsteps}}{sand}{{name}{sand}}{sands}{{name}{sands}}{wind}{{name}{wind}}}}}{}{}{1.000}{}
 E {398}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {964}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {962}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {967}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {966}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {399}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {1006}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
-R {964}{0}{<178>}{Desert}{ }{Desert The dry desert heat continually sucks moisture from your body.  The desert stretches on as far as your eyes can see. The sands shift in the wind and ripples appear all over the sand dunes.  A strong wind blows across the desert, whipping sand into the air.   }{}{}{}{}{1.000}{}
+R {964}{0}{<178>}{Desert}{ }{Desert The desert stretches on as far as your eyes can see. The sands shift in the wind and ripples appear all over the sand dunes.  The dry desert heat continually sucks moisture from your body.  The boiling sun burns your back as you look out across the bleak hot landscape.   }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{moisture}{{name}{moisture}}{sand}{{name}{sand}}{sands}{{name}{sands}}{sun}{{name}{sun}}{wind}{{name}{wind}}}}}{}{}{1.000}{}
 E {399}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {963}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {965}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {966}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {387}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {968}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {398}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {967}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
-R {965}{0}{<178>}{Desert}{ }{Desert A strong wind blows across the baking desert, whipping sand into the air.  The desert stretches out to the horizon. Your feet sink into the sand beneath you and every step you take drains your mind and body.  The dry desert heat continually sucks moisture from your body.   }{}{}{}{}{1.000}{}
+R {965}{0}{<178>}{Desert}{ }{Desert A strong wind blows across the bleak hot landscape, whipping sand into the air.  The heat is taking its toll on you as you begin to hallucinate.  The desert seems quite barren but you spot some movement on the next dune. Then again, maybe the heat is playing tricks on your mind.   }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{sand}{{name}{sand}}{wind}{{name}{wind}}}{npc}{{^A buzzard$}{{name}{A buzzard}}}}}{}{}{1.000}{}
 E {964}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {968}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {987}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {387}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {385}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {986}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {966}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {399}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {966}{0}{<178>}{Desert}{ }{Desert You look back the way you came and see your footsteps in the sand.  The desert seems the same every way you look. You see an oasis in the distance, however on second inspection it turns out to be just a mirage. The midday sun is high in a cloudless sky, baking the desert sands.   }{}{}{}{}{1.000}{}
+R {966}{0}{<178>}{Desert}{ }{Desert The dry desert heat continually sucks moisture from your body.  The midday sun is high in a cloudless sky, baking the desert sands.  The desert stretches out to the horizon. Your feet sink into the sand beneath you and every step you take drains your mind and body.   }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{moisture}{{name}{moisture}}{sand}{{name}{sand}}{sun}{{name}{sun}}}}}{}{}{1.000}{}
 E {964}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {967}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {968}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {969}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {971}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {965}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {970}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {963}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {967}{0}{<178>}{Desert}{ }{Desert The desert seems quite barren but you spot some movement on the next dune. Then again, maybe the heat is playing tricks on your mind.  The heat is taking its toll on you as you begin to hallucinate.  A strong wind blows across the baking desert, whipping sand into the air.   }{}{}{}{}{1.000}{}
+R {967}{0}{<178>}{Desert}{ }{Desert The boiling sun burns your back as you look out across the desert.  You see some footsteps in the sand and you wonder where they lead.  The desert stretches on as far as your eyes can see. The sands shift in the wind and ripples appear all over the sand dunes.   }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{footsteps}{{name}{footsteps}}{sand}{{name}{sand}}{sands}{{name}{sands}}{sun}{{name}{sun}}{wind}{{name}{wind}}}}}{}{}{1.000}{}
 E {966}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {963}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {1006}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {970}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {964}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {969}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {1007}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {962}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {968}{0}{<068>}{Desert}{ }{Desert The midday sun is high in a cloudless sky, baking the desert sands.  The dry desert heat continually sucks moisture from your body.  The desert stretches out to the horizon. Your feet sink into the sand beneath you and every step you take drains your mind and body.  In the haze of the heat here, you can make out a trail leading up a dune. }{}{}{}{}{1.000}{}
+R {968}{0}{<068>}{Desert}{ }{Desert You see some footsteps in the sand and you wonder where they lead.  The desert sands shift about as a gust of wind whips around you.  The desert stretches on as far as your eyes can see. The sands shift in the wind and ripples appear all over the sand dunes.  In the haze of the heat here, you can make out a trail leading up a dune. }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{footsteps}{{name}{footsteps}}{sand}{{name}{sand}}{sands}{{name}{sands}}{trail}{{name}{trail}}{wind}{{name}{wind}}}}}{}{}{1.000}{}
 E {966}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {971}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {986}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {965}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {1168}{trail}{.mapLink {Pinnacle/Fantasy/Rampage} {} {trail};}{0}{1}{}{1.000}{}{0.00}
+E {985}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {987}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {964}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {969}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
-R {969}{0}{<068>}{Desert}{ }{Desert You see some footsteps in the sand and you wonder where they lead.  The midday sun is high in a cloudless sky, baking the desert sands.  The desert seems quite barren but you spot some movement on the next dune. Then again, maybe the heat is playing tricks on your mind.  There is a spot of darkness that comes from a hole in the ground from the swirling sands. }{}{}{}{}{1.000}{}
+R {969}{0}{<068>}{Desert}{ }{Desert You look back the way you came and see your footsteps in the sand.  The boiling sun burns your back as you look out across the desert.  The desert seems the same every way you look. You see an oasis in the distance, however on second inspection it turns out to be just a mirage. There is a spot of darkness that comes from a hole in the ground from the swirling sands. }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{footsteps}{{name}{footsteps}}{hole}{{name}{hole}}{oasis}{{name}{oasis}}{sun}{{name}{sun}}}}}{}{}{1.000}{}
 E {966}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {970}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {971}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {972}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {1148}{enter}{.mapLink {Pinnacle/Fantasy/Scorpion Caves} {} {enter};}{0}{1}{}{1.000}{}{0.00}
+E {968}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {974}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {967}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {973}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
-R {970}{0}{<178>}{Desert}{ }{Desert A strong wind blows across the desert, whipping sand into the air.  The desert stretches out to the horizon. Your feet sink into the sand beneath you and every step you take drains your mind and body.  You look back the way you came and see your footsteps in the sand.   }{}{}{}{}{1.000}{}
+R {970}{0}{<178>}{Desert}{ }{Desert The boiling sun burns your back as you look out across the bleak hot landscape.  The dry desert heat continually sucks moisture from your body.  The desert stretches on as far as your eyes can see. The sands shift in the wind and ripples appear all over the sand dunes.   }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{moisture}{{name}{moisture}}{sand}{{name}{sand}}{sands}{{name}{sands}}{sun}{{name}{sun}}{wind}{{name}{wind}}}}}{}{}{1.000}{}
 E {969}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {1007}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {973}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {967}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {972}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {966}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {1006}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {1010}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
-R {971}{0}{<178>}{Desert}{ }{Desert A strong wind blows across the baking desert, whipping sand into the air.  The dry desert heat continually sucks moisture from your body.  The desert stretches out to the horizon. Your feet sink into the sand beneath you and every step you take drains your mind and body.   }{}{}{}{}{1.000}{}
+R {971}{0}{<178>}{Desert}{ }{Desert The desert seems quite barren but you spot some movement on the next dune. Then again, maybe the heat is playing tricks on your mind.  You look back the way you came and see your footsteps in the sand.  The desert sands shift about as a gust of wind whips around you.   }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{footsteps}{{name}{footsteps}}{sands}{{name}{sands}}{wind}{{name}{wind}}}}}{}{}{1.000}{}
 E {969}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {974}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {985}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {968}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {986}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {984}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {972}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {966}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {972}{0}{<178>}{Desert}{ }{Desert The desert seems quite barren but you spot some movement on the next dune. Then again, maybe the heat is playing tricks on your mind.  You look back the way you came and see your footsteps in the sand.  The desert sands shift about as a gust of wind whips around you.   }{}{}{}{}{1.000}{}
+R {972}{0}{<178>}{Desert}{ }{Desert The boiling sun burns your back as you look out across the desert.  The heat is taking its toll on you as you begin to hallucinate.  The desert seems the same every way you look. You see an oasis in the distance, however on second inspection it turns out to be just a mirage.   }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{oasis}{{name}{oasis}}{sun}{{name}{sun}}}}}{}{}{1.000}{}
 E {969}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {973}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {974}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {975}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {977}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {971}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {976}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {970}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {973}{0}{<178>}{Desert}{ }{Desert You look back the way you came and see your footsteps in the sand.  The midday sun is high in a cloudless sky, baking the desert sands.  The desert stretches on as far as your eyes can see. The sands shift in the wind and ripples appear all over the sand dunes.   }{}{}{}{}{1.000}{}
+R {973}{0}{<178>}{Desert}{ }{Desert The desert stretches out to the horizon. Your feet sink into the sand beneath you and every step you take drains your mind and body.  The heat is taking its toll on you as you begin to hallucinate.  The boiling sun burns your back as you look out across the baking desert.   }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{sand}{{name}{sand}}{sun}{{name}{sun}}}}}{}{}{1.000}{}
 E {972}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {1010}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {976}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {970}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {969}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {975}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {1007}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {974}{0}{<068>}{<< The Gates of Xaxis >>}{}{You stand within the magnificent entrance to the fabled floating city of Xaxis. Towering gates crafted of gold and onyx stand before you, ushering you down the streets of this magical municipality. The gates are triple-arched, leading east and west as well as north, back out toward the frightening drop to the desert below. The streets are smoothly paved in black flagstones and the outer walls that protect you from falling over the edge of the city limit are made of glittering gold. Further down the streets to either side of you come the sounds of merchants eager to sell you their exotic wares.}{}{special;}{}{}{1.000}{}
+R {974}{0}{<068>}{Desert}{}{Desert The desert seems quite barren but you spot some movement on the next dune. Then again, maybe the heat is playing tricks on your mind.  The heat is taking its toll on you as you begin to hallucinate.  The desert sands shift about as a gust of wind whips around you.  High overhead floats a magic city. Amazingly it just hovers there, overlooking the sands. }{Mud}{{content}{{item}{{^The floating city of Xaxis$}{{name}{The floating city of Xaxis}}}{noun}{{desert}{{name}{desert}}{sands}{{name}{sands}}{wind}{{name}{wind}}}{npc}{{^Ahkbad the Carpet Merchant$}{{name}{Ahkbad the Carpet Merchant}}}}}{}{}{1.000}{}
 E {972}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {977}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {984}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {971}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {1174}{rent carpet}{.mapLink {Pinnacle/Fantasy/Xaxis} {} {rent carpet};}{0}{1}{}{1.000}{}{0.00}
+E {981}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {985}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {969}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {975}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
-R {975}{0}{<178>}{Desert}{ }{Desert The desert sands shift about as a gust of wind whips around you.  The dry desert heat continually sucks moisture from your body.  The desert seems the same every way you look. You see an oasis in the distance, however on second inspection it turns out to be just a mirage.   }{}{}{}{}{1.000}{}
+R {975}{0}{<178>}{Desert}{ }{Desert The desert seems the same every way you look. You see an oasis in the distance, however on second inspection it turns out to be just a mirage. The dry desert heat continually sucks moisture from your body.  The desert sands shift about as a gust of wind whips around you.   }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{moisture}{{name}{moisture}}{oasis}{{name}{oasis}}{sands}{{name}{sands}}{wind}{{name}{wind}}}}}{}{}{1.000}{}
 E {972}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {976}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {977}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {978}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {974}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {980}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {973}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {976}{0}{<068>}{Desert}{ }{Desert The desert seems quite barren but you spot some movement on the next dune. Then again, maybe the heat is playing tricks on your mind.  A strong wind blows across the desert, whipping sand into the air.  The dry desert heat continually sucks moisture from your body.  The ground here is littered with rocks and rubble.  Sheer, rocky mountains stretch off to the north and west. }{}{}{}{}{1.000}{}
+R {976}{0}{<068>}{Desert}{ }{Desert A strong wind blows across the bleak hot landscape, whipping sand into the air.  The desert stretches on as far as your eyes can see. The sands shift in the wind and ripples appear all over the sand dunes.  The dry desert heat continually sucks moisture from your body.  The ground here is littered with rocks and rubble.  Sheer, rocky mountains stretch off to the north and west. }{Mud}{{content}{{item}{{^An Interdimensional Portal$}{{name}{An Interdimensional Portal}}}{noun}{{desert}{{name}{desert}}{ground}{{name}{ground}}{moisture}{{name}{moisture}}{mountains}{{name}{mountains}}{rocks}{{name}{rocks}}{sand}{{name}{sand}}{sands}{{name}{sands}}{wind}{{name}{wind}}}}}{}{}{1.000}{}
 E {975}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {973}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {1266}{enter cleft}{.mapLink {Pinnacle/Fantasy/Temple of Light} {} {enter cleft};}{0}{1}{}{1.000}{}{0.00}
+E {976}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {976}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {972}{se}{se}{6}{0}{}{1.000}{}{0.00}
 
-R {977}{0}{<178>}{Desert}{ }{Desert The midday sun is high in a cloudless sky, baking the desert sands.  The desert stretches on as far as your eyes can see. The sands shift in the wind and ripples appear all over the sand dunes.  The heat is taking its toll on you as you begin to hallucinate.   }{}{}{}{}{1.000}{}
+R {977}{0}{<178>}{Desert}{ }{Desert A strong wind blows across the desert, whipping sand into the air.  The heat is taking its toll on you as you begin to hallucinate.  The desert seems quite barren but you spot some movement on the next dune. Then again, maybe the heat is playing tricks on your mind.   }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{sand}{{name}{sand}}{wind}{{name}{wind}}}}}{}{}{1.000}{}
 E {975}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {981}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {980}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {974}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {984}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {982}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {978}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {972}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {978}{0}{<178>}{Desert}{ }{Desert A strong wind blows across the baking desert, whipping sand into the air.  The desert stretches out to the horizon. Your feet sink into the sand beneath you and every step you take drains your mind and body.  You look back the way you came and see your footsteps in the sand.  Cliffs rise up on the horizon to the west. }{}{}{}{}{1.000}{}
+R {978}{0}{<178>}{Desert}{ }{Desert The boiling sun burns your back as you look out across the baking desert.  You see some footsteps in the sand and you wonder where they lead.  The desert stretches out to the horizon. Your feet sink into the sand beneath you and every step you take drains your mind and body.  Cliffs rise up on the horizon to the west. }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{footsteps}{{name}{footsteps}}{horizon}{{name}{horizon}}{sand}{{name}{sand}}{sun}{{name}{sun}}}}}{}{}{1.000}{}
 E {975}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {980}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {978}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {978}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {977}{se}{se}{6}{0}{}{1.000}{}{0.00}
 
 R {979}{0}{<000>}{LINK: Pinnacle/Fantasy/Desert Palace}{<138>*}{}{Pinnacle/Fantasy/Desert Palace}{{link}{}}{}{}{1.000}{}
 E {996}{n}{n}{1}{0}{}{1.000}{}{0.00}
 
-R {980}{0}{<178>}{Desert}{ }{Desert A strong wind blows across the baking desert, whipping sand into the air.  The dry desert heat continually sucks moisture from your body.  The desert stretches out to the horizon. Your feet sink into the sand beneath you and every step you take drains your mind and body.   }{}{}{}{}{1.000}{}
+R {980}{0}{<178>}{Desert}{ }{Desert The dry desert heat continually sucks moisture from your body.  The desert sands shift about as a gust of wind whips around you.  The desert stretches on as far as your eyes can see. The sands shift in the wind and ripples appear all over the sand dunes.   }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{moisture}{{name}{moisture}}{sand}{{name}{sand}}{sands}{{name}{sands}}{wind}{{name}{wind}}}}}{}{}{1.000}{}
 E {978}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {977}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {982}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {983}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {981}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {975}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {981}{0}{<178>}{Desert}{ }{Desert The desert seems the same every way you look. You see an oasis in the distance, however on second inspection it turns out to be just a mirage. You see some footsteps in the sand and you wonder where they lead.  The midday sun is high in a cloudless sky, baking the desert sands.  There is a deep pit here in the sand. }{}{}{}{}{1.000}{}
+R {981}{0}{<068>}{Desert}{ }{Desert The desert stretches out to the horizon. Your feet sink into the sand beneath you and every step you take drains your mind and body.  The boiling sun burns your back as you look out across the bleak hot landscape.  You look back the way you came and see your footsteps in the sand.  There is a deep pit here in the sand. }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{footsteps}{{name}{footsteps}}{pit}{{name}{pit}}{sand}{{name}{sand}}{sun}{{name}{sun}}}}}{}{}{1.000}{}
 E {977}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {984}{e}{e}{2}{0}{}{1.000}{}{0.00}
-E {992}{d}{d}{32}{0}{}{1.000}{}{0.00}
 E {993}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {982}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {992}{d}{.mapLink {Pinnacle/Fantasy/Sand Pit} {} {d};}{32}{1}{}{1.000}{}{0.00}
+E {994}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {991}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {980}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {974}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {982}{0}{<178>}{Desert}{ }{Desert The desert sands shift about as a gust of wind whips around you.  You see some footsteps in the sand and you wonder where they lead.  The desert stretches out to the horizon. Your feet sink into the sand beneath you and every step you take drains your mind and body.   }{}{}{}{}{1.000}{}
+R {982}{0}{<178>}{Desert}{ }{Desert The desert seems the same every way you look. You see an oasis in the distance, however on second inspection it turns out to be just a mirage. You look back the way you came and see your footsteps in the sand.  The midday sun is high in a cloudless sky, baking the desert sands.   }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{footsteps}{{name}{footsteps}}{oasis}{{name}{oasis}}{sun}{{name}{sun}}}}}{}{}{1.000}{}
 E {980}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {981}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {994}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {995}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {993}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {997}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {977}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {983}{0}{<158>}{Desert}{<138>?}{This section of sand feels eerily different than the rest of the desert. The sand here is unaffected by the wind, as if some strange force is holding it down. Whatever is causing this peculiar occurrence is something magical indeed.}{}{special;}{}{}{1.000}{}
+R {983}{0}{<158>}{Desert}{<138>?}{This section of sand feels eerily different than the rest of the desert. The sand here is unaffected by the wind, as if some strange force is holding it down. Whatever is causing this peculiar occurrence is something magical indeed.}{Sphinx}{{content}{{item}{{^A statue of a sphinx$}{{name}{A statue of a sphinx}}}{noun}{{force}{{name}{force}}{sand}{{name}{sand}}}}{wiz}{Olower}}{}{}{1.000}{}
 E {980}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {995}{s}{s}{4}{0}{}{1.000}{}{0.00}
 
-R {984}{0}{<178>}{Desert}{ }{Desert The dry desert heat continually sucks moisture from your body.  The midday sun is high in a cloudless sky, baking the desert sands.  The desert stretches on as far as your eyes can see. The sands shift in the wind and ripples appear all over the sand dunes.   }{}{}{}{}{1.000}{}
+R {984}{0}{<178>}{Desert}{ }{Desert You see some footsteps in the sand and you wonder where they lead.  The desert stretches on as far as your eyes can see. The sands shift in the wind and ripples appear all over the sand dunes.  The desert sands shift about as a gust of wind whips around you.   }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{footsteps}{{name}{footsteps}}{sand}{{name}{sand}}{sands}{{name}{sands}}{wind}{{name}{wind}}}}}{}{}{1.000}{}
 E {974}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {985}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {991}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {981}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {990}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {993}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {971}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {977}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
-R {985}{0}{<178>}{Desert}{ }{Desert You see some footsteps in the sand and you wonder where they lead.  The boiling sun burns your back as you look out across the desert.  The desert seems quite barren but you spot some movement on the next dune. Then again, maybe the heat is playing tricks on your mind.   }{}{}{}{}{1.000}{}
+R {985}{0}{<178>}{Desert}{ }{Desert The desert stretches out to the horizon. Your feet sink into the sand beneath you and every step you take drains your mind and body.  The boiling sun burns your back as you look out across the desert.  The dry desert heat continually sucks moisture from your body.   }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{moisture}{{name}{moisture}}{sand}{{name}{sand}}{sun}{{name}{sun}}}}}{}{}{1.000}{}
 E {971}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {986}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {990}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {984}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {991}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {989}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {974}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {968}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {986}{0}{<178>}{Desert}{ }{Desert The desert sands shift about as a gust of wind whips around you.  The desert seems the same every way you look. You see an oasis in the distance, however on second inspection it turns out to be just a mirage. You look back the way you came and see your footsteps in the sand.   }{}{}{}{}{1.000}{}
+R {986}{0}{<178>}{Desert}{ }{Desert The desert seems quite barren but you spot some movement on the next dune. Then again, maybe the heat is playing tricks on your mind.  You look back the way you came and see your footsteps in the sand.  The midday sun is high in a cloudless sky, baking the desert sands.   }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{footsteps}{{name}{footsteps}}{sun}{{name}{sun}}}}}{}{}{1.000}{}
 E {968}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {987}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {989}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {985}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {988}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {990}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {965}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {971}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
-R {987}{0}{<178>}{Desert}{ }{Desert The desert stretches on as far as your eyes can see. The sands shift in the wind and ripples appear all over the sand dunes.  The boiling sun burns your back as you look out across the bleak hot landscape.  You see some footsteps in the sand and you wonder where they lead.   }{}{}{}{}{1.000}{}
+R {987}{0}{<178>}{Desert}{ }{Desert The desert stretches out to the horizon. Your feet sink into the sand beneath you and every step you take drains your mind and body.  You see some footsteps in the sand and you wonder where they lead.  The midday sun is high in a cloudless sky, baking the desert sands.   }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{footsteps}{{name}{footsteps}}{sand}{{name}{sand}}{sun}{{name}{sun}}}{npc}{{^Nomad$}{{name}{Nomad}}}}}{}{}{1.000}{}
 E {965}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {385}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {988}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {986}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {989}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {388}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {968}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {387}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {988}{0}{<178>}{Desert}{ }{Desert The desert seems the same every way you look. You see an oasis in the distance, however on second inspection it turns out to be just a mirage. The desert sands shift about as a gust of wind whips around you.  You see some footsteps in the sand and you wonder where they lead.   }{}{}{}{}{1.000}{}
+R {988}{0}{<178>}{Desert}{ }{Desert The desert sands shift about as a gust of wind whips around you.  The desert seems quite barren but you spot some movement on the next dune. Then again, maybe the heat is playing tricks on your mind.  You look back the way you came and see your footsteps in the sand.   }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{footsteps}{{name}{footsteps}}{sands}{{name}{sands}}{wind}{{name}{wind}}}}}{}{}{1.000}{}
 E {987}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {989}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {1002}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {388}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {1001}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {385}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {986}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
-R {989}{0}{<178>}{Desert}{ }{Desert The midday sun is high in a cloudless sky, baking the desert sands.  You see some footsteps in the sand and you wonder where they lead.  The desert seems quite barren but you spot some movement on the next dune. Then again, maybe the heat is playing tricks on your mind.   }{}{}{}{}{1.000}{}
+R {989}{0}{<178>}{Desert}{ }{Desert The desert seems quite barren but you spot some movement on the next dune. Then again, maybe the heat is playing tricks on your mind.  The desert sands shift about as a gust of wind whips around you.  The dry desert heat continually sucks moisture from your body.   }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{moisture}{{name}{moisture}}{sands}{{name}{sands}}{wind}{{name}{wind}}}}}{}{}{1.000}{}
 E {986}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {990}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {1001}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {988}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {1000}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {1002}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {985}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {987}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {990}{0}{<178>}{Desert}{ }{Desert You see some footsteps in the sand and you wonder where they lead.  The desert sands shift about as a gust of wind whips around you.  The desert stretches on as far as your eyes can see. The sands shift in the wind and ripples appear all over the sand dunes.   }{}{}{}{}{1.000}{}
+R {990}{0}{<178>}{Desert}{ }{Desert The heat is taking its toll on you as you begin to hallucinate.  The desert sands shift about as a gust of wind whips around you.  The desert seems quite barren but you spot some movement on the next dune. Then again, maybe the heat is playing tricks on your mind.   }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{sands}{{name}{sands}}{wind}{{name}{wind}}}{npc}{{^Nomad$}{{name}{Nomad}}}}}{}{}{1.000}{}
 E {985}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {991}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {1000}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {989}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {999}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {1001}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {984}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {986}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {991}{0}{<178>}{Desert}{ }{Desert The dry desert heat continually sucks moisture from your body.  The desert stretches on as far as your eyes can see. The sands shift in the wind and ripples appear all over the sand dunes.  The desert sands shift about as a gust of wind whips around you.   }{}{}{}{}{1.000}{}
+R {991}{0}{<178>}{Desert}{ }{Desert A strong wind blows across the desert, whipping sand into the air.  The desert seems the same every way you look. You see an oasis in the distance, however on second inspection it turns out to be just a mirage. The dry desert heat continually sucks moisture from your body.   }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{moisture}{{name}{moisture}}{oasis}{{name}{oasis}}{sand}{{name}{sand}}{wind}{{name}{wind}}}}}{}{}{1.000}{}
 E {984}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {993}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {999}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {990}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {998}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {1000}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {981}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {985}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {992}{0}{<109>}{}{ }{}{}{}{}{}{1.000}{}
+R {992}{0}{<000>}{LINK: Pinnacle/Fantasy/Sand Pit}{<138>*}{}{Pinnacle/Fantasy/Sand Pit}{{link}{}}{}{}{1.000}{}
 E {981}{u}{u}{16}{0}{}{1.000}{}{0.00}
 
-R {993}{0}{<178>}{Desert}{ }{Desert The desert seems quite barren but you spot some movement on the next dune. Then again, maybe the heat is playing tricks on your mind.  The boiling sun burns your back as you look out across the bleak hot landscape.  The heat is taking its toll on you as you begin to hallucinate.   }{}{}{}{}{1.000}{}
+R {993}{0}{<178>}{Desert}{ }{Desert The desert sands shift about as a gust of wind whips around you.  The dry desert heat continually sucks moisture from your body.  The desert seems quite barren but you spot some movement on the next dune. Then again, maybe the heat is playing tricks on your mind.   }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{moisture}{{name}{moisture}}{sands}{{name}{sands}}{wind}{{name}{wind}}}}}{}{}{1.000}{}
 E {981}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {994}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {998}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {991}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {996}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {999}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {984}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {982}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
-R {994}{0}{<178>}{Desert}{ }{Desert The desert stretches out to the horizon. Your feet sink into the sand beneath you and every step you take drains your mind and body.  The heat is taking its toll on you as you begin to hallucinate.  The midday sun is high in a cloudless sky, baking the desert sands.   }{}{}{}{}{1.000}{}
+R {994}{0}{<178>}{Desert}{ }{Desert The boiling sun burns your back as you look out across the baking desert.  The desert seems quite barren but you spot some movement on the next dune. Then again, maybe the heat is playing tricks on your mind.  You look back the way you came and see your footsteps in the sand.   }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{footsteps}{{name}{footsteps}}{sun}{{name}{sun}}}}}{}{}{1.000}{}
 E {982}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {996}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {993}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {997}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {998}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {995}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {981}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {995}{0}{<178>}{Desert}{ }{Desert You look back the way you came and see your footsteps in the sand.  The desert seems the same every way you look. You see an oasis in the distance, however on second inspection it turns out to be just a mirage. The boiling sun burns your back as you look out across the baking desert.  A steep cliffside rises up in the west. }{Mud}{}{}{}{1.000}{}
+R {995}{0}{<178>}{Desert}{ }{Desert The heat is taking its toll on you as you begin to hallucinate.  The desert sands shift about as a gust of wind whips around you.  The desert stretches on as far as your eyes can see. The sands shift in the wind and ripples appear all over the sand dunes.  A steep cliffside rises up in the west. }{Mud}{{content}{{noun}{{cliffside}{{name}{cliffside}}{desert}{{name}{desert}}{sand}{{name}{sand}}{sands}{{name}{sands}}{wind}{{name}{wind}}}}}{}{}{1.000}{}
 E {982}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {983}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {997}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {995}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {994}{se}{se}{6}{0}{}{1.000}{}{0.00}
 
-R {996}{0}{<178>}{Desert}{ }{Desert A strong wind blows across the desert, whipping sand into the air.  The desert seems quite barren but you spot some movement on the next dune. Then again, maybe the heat is playing tricks on your mind.  The dry desert heat continually sucks moisture from your body.  Cliffs rise from the sand to the west. }{Mud}{}{}{}{1.000}{}
+R {996}{0}{<068>}{Desert}{ }{Desert The dry desert heat continually sucks moisture from your body.  The desert seems the same every way you look. You see an oasis in the distance, however on second inspection it turns out to be just a mirage. The midday sun is high in a cloudless sky, baking the desert sands.  Cliffs rise from the sand to the west. }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{moisture}{{name}{moisture}}{oasis}{{name}{oasis}}{sand}{{name}{sand}}{sun}{{name}{sun}}}{npc}{{^A vulture$}{{name}{A vulture}}}}}{}{}{1.000}{}
 E {994}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {998}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {979}{s}{.mapLink {Pinnacle/Fantasy/Desert Palace} {} {s};}{4}{1}{}{1.000}{}{0.00}
+E {996}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {993}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {997}{0}{<178>}{Desert}{ }{Desert The midday sun is high in a cloudless sky, baking the desert sands.  The heat is taking its toll on you as you begin to hallucinate.  The desert seems the same every way you look. You see an oasis in the distance, however on second inspection it turns out to be just a mirage.  Off to the west rises a series of mighty cliffs. }{}{}{}{}{1.000}{}
+R {997}{0}{<178>}{Desert}{ }{Desert The dry desert heat continually sucks moisture from your body.  The desert seems quite barren but you spot some movement on the next dune. Then again, maybe the heat is playing tricks on your mind.  The boiling sun burns your back as you look out across the baking desert.  Off to the west rises a series of mighty cliffs. }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{moisture}{{name}{moisture}}{sun}{{name}{sun}}}}}{}{}{1.000}{}
 E {994}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {995}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {982}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {997}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {997}{w}{w}{8}{0}{}{1.000}{}{0.00}
 
-R {998}{0}{<178>}{Desert}{ }{Desert You see some footsteps in the sand and you wonder where they lead.  The desert stretches on as far as your eyes can see. The sands shift in the wind and ripples appear all over the sand dunes.  A strong wind blows across the baking desert, whipping sand into the air.   }{}{}{}{}{1.000}{}
+R {998}{0}{<178>}{Desert}{ }{Desert The boiling sun burns your back as you look out across the desert.  The desert stretches out to the horizon. Your feet sink into the sand beneath you and every step you take drains your mind and body.  You see some footsteps in the sand and you wonder where they lead.   }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{footsteps}{{name}{footsteps}}{sand}{{name}{sand}}{sun}{{name}{sun}}}}}{}{}{1.000}{}
 E {993}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {996}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {1009}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {999}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {1013}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {994}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {991}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {999}{0}{<178>}{Desert}{ }{Desert A strong wind blows across the desert, whipping sand into the air.  You see some footsteps in the sand and you wonder where they lead.  The desert seems the same every way you look. You see an oasis in the distance, however on second inspection it turns out to be just a mirage.  }{}{}{}{}{1.000}{}
+R {999}{0}{<178>}{Desert}{ }{Desert The desert stretches on as far as your eyes can see. The sands shift in the wind and ripples appear all over the sand dunes.  The dry desert heat continually sucks moisture from your body.  The midday sun is high in a cloudless sky, baking the desert sands.   }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{moisture}{{name}{moisture}}{sand}{{name}{sand}}{sands}{{name}{sands}}{sun}{{name}{sun}}{wind}{{name}{wind}}}}}{}{}{1.000}{}
 E {991}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {998}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {1013}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {1000}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {1012}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {1009}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {993}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {990}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {1000}{0}{<178>}{Desert}{ }{Desert The boiling sun burns your back as you look out across the baking desert.  The desert seems quite barren but you spot some movement on the next dune. Then again, maybe the heat is playing tricks on your mind.  You look back the way you came and see your footsteps in the sand.   }{}{}{}{}{1.000}{}
+R {1000}{0}{<178>}{Desert}{ }{Desert The dry desert heat continually sucks moisture from your body.  The midday sun is high in a cloudless sky, baking the desert sands.  The desert seems quite barren but you spot some movement on the next dune. Then again, maybe the heat is playing tricks on your mind.   }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{moisture}{{name}{moisture}}{sun}{{name}{sun}}}}}{}{}{1.000}{}
 E {990}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {999}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {1012}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {1001}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {1015}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {1013}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {991}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {989}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {1001}{0}{<178>}{Desert}{ }{Desert The desert stretches out to the horizon. Your feet sink into the sand beneath you and every step you take drains your mind and body.  A strong wind blows across the bleak hot landscape, whipping sand into the air.  You see some footsteps in the sand and you wonder where they lead.   }{}{}{}{}{1.000}{}
+R {1001}{0}{<178>}{Desert}{ }{Desert The desert seems quite barren but you spot some movement on the next dune. Then again, maybe the heat is playing tricks on your mind.  The boiling sun burns your back as you look out across the desert.  The heat is taking its toll on you as you begin to hallucinate.   }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{sun}{{name}{sun}}}}}{}{}{1.000}{}
 E {989}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {1000}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {1015}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {1002}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {1012}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {988}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {990}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
-R {1002}{0}{<178>}{Desert}{ }{Desert The desert sands shift about as a gust of wind whips around you.  The desert seems quite barren but you spot some movement on the next dune. Then again, maybe the heat is playing tricks on your mind.  You look back the way you came and see your footsteps in the sand.   }{}{}{}{}{1.000}{}
+R {1002}{0}{<178>}{Desert}{ }{Desert The dry desert heat continually sucks moisture from your body.  A strong wind blows across the desert, whipping sand into the air.  The desert seems quite barren but you spot some movement on the next dune. Then again, maybe the heat is playing tricks on your mind.   }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{moisture}{{name}{moisture}}{sand}{{name}{sand}}{wind}{{name}{wind}}}}}{}{}{1.000}{}
 E {988}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {1001}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {989}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {1002}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {1002}{e}{e}{2}{0}{}{1.000}{}{0.00}
 
 R {1003}{0}{<000>}{LINK: Pinnacle/Fantasy/Ruins of an Old City}{<138>*}{}{Pinnacle/Fantasy/Ruins of an Old City}{{link}{}}{}{}{1.000}{}
 E {388}{n}{n}{1}{0}{}{1.000}{}{0.00}
@@ -5428,56 +5718,82 @@ R {1005}{0}{<178>}{A Rocky Hill}{ }{A rocky hill rises above the desert here, dw
 E {1006}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {1008}{u}{u}{16}{0}{}{1.000}{}{0.00}
 
-R {1006}{0}{<178>}{Desert}{ }{Desert You look back the way you came and see your footsteps in the sand.  The desert stretches on as far as your eyes can see. The sands shift in the wind and ripples appear all over the sand dunes.  The boiling sun burns your back as you look out across the desert.  A large rocky hill rises above the dunes to the north. }{Mud}{}{}{}{1.000}{}
+R {1006}{0}{<178>}{Desert}{ }{Desert The desert seems quite barren but you spot some movement on the next dune. Then again, maybe the heat is playing tricks on your mind.  The boiling sun burns your back as you look out across the bleak hot landscape.  The dry desert heat continually sucks moisture from your body.  A large rocky hill rises above the dunes to the north. }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{dunes}{{name}{dunes}}{hill}{{name}{hill}}{moisture}{{name}{moisture}}{sun}{{name}{sun}}}}}{}{}{1.000}{}
 E {962}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {1005}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {967}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {1007}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {963}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {970}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 
-R {1007}{0}{<178>}{Desert}{ }{Desert The desert seems quite barren but you spot some movement on the next dune. Then again, maybe the heat is playing tricks on your mind.  The desert sands shift about as a gust of wind whips around you.  You look back the way you came and see your footsteps in the sand.   }{}{}{}{}{1.000}{}
+R {1007}{0}{<178>}{Desert}{ }{Desert You look back the way you came and see your footsteps in the sand.  The desert stretches out to the horizon. Your feet sink into the sand beneath you and every step you take drains your mind and body.  A strong wind blows across the desert, whipping sand into the air.   }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{footsteps}{{name}{footsteps}}{sand}{{name}{sand}}{wind}{{name}{wind}}}}}{}{}{1.000}{}
 E {1006}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {970}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {1010}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {973}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {1007}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {967}{se}{se}{6}{0}{}{1.000}{}{0.00}
 
 R {1008}{0}{<109>}{}{ }{}{}{}{}{}{1.000}{}
 E {1005}{d}{d}{32}{0}{}{1.000}{}{0.00}
 
-R {1009}{0}{<178>}{Desert}{ }{Desert You see some footsteps in the sand and you wonder where they lead.  The desert sands shift about as a gust of wind whips around you.  The desert stretches out to the horizon. Your feet sink into the sand beneath you and every step you take drains your mind and body.  Mighty cliffs rise to the west. }{}{}{}{}{1.000}{}
+R {1009}{0}{<178>}{Desert}{ }{Desert You look back the way you came and see your footsteps in the sand.  The desert stretches out to the horizon. Your feet sink into the sand beneath you and every step you take drains your mind and body.  A strong wind blows across the bleak hot landscape, whipping sand into the air.  Mighty cliffs rise to the west. }{Mud}{{content}{{noun}{{cliffs}{{name}{cliffs}}{desert}{{name}{desert}}{footsteps}{{name}{footsteps}}{sand}{{name}{sand}}{wind}{{name}{wind}}}}}{}{}{1.000}{}
 E {998}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {1013}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {999}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {1009}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {1009}{s}{s}{4}{0}{}{1.000}{}{0.00}
 
-R {1010}{0}{<178>}{Desert}{ }{Desert The boiling sun burns your back as you look out across the baking desert.  The desert stretches on as far as your eyes can see. The sands shift in the wind and ripples appear all over the sand dunes.  The dry desert heat continually sucks moisture from your body.  Cliffs border the desert further to the west. }{}{}{}{}{1.000}{}
+R {1010}{0}{<178>}{Desert}{ }{Desert The desert seems the same every way you look. You see an oasis in the distance, however on second inspection it turns out to be just a mirage. The dry desert heat continually sucks moisture from your body.  The boiling sun burns your back as you look out across the baking desert.  Cliffs border the desert further to the west. }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{moisture}{{name}{moisture}}{oasis}{{name}{oasis}}{sun}{{name}{sun}}}{npc}{{^A vulture$}{{name}{A vulture}}}}}{}{}{1.000}{}
 E {1007}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {973}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {970}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {1010}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {1010}{w}{w}{8}{0}{}{1.000}{}{0.00}
 
-R {1011}{0}{<178>}{Desert}{ }{Desert The heat is taking its toll on you as you begin to hallucinate.  A strong wind blows across the bleak hot landscape, whipping sand into the air.  The desert seems quite barren but you spot some movement on the next dune. Then again, maybe the heat is playing tricks on your mind.  A series of cliffs border the desert to the west. }{}{}{}{}{1.000}{}
+R {1011}{0}{<178>}{Desert}{ }{Desert The heat is taking its toll on you as you begin to hallucinate.  The boiling sun burns your back as you look out across the desert.  The desert stretches on as far as your eyes can see. The sands shift in the wind and ripples appear all over the sand dunes.  A series of cliffs border the desert to the west. }{Mud}{{content}{{noun}{{cliffs}{{name}{cliffs}}{desert}{{name}{desert}}{sand}{{name}{sand}}{sands}{{name}{sands}}{sun}{{name}{sun}}{wind}{{name}{wind}}}}}{}{}{1.000}{}
 E {1013}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {1016}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {1012}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {1011}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {1011}{s}{s}{4}{0}{}{1.000}{}{0.00}
 
-R {1012}{0}{<178>}{Desert}{ }{Desert You look back the way you came and see your footsteps in the sand.  The desert seems the same every way you look. You see an oasis in the distance, however on second inspection it turns out to be just a mirage. The desert sands shift about as a gust of wind whips around you.   }{}{}{}{}{1.000}{}
+R {1012}{0}{<178>}{Desert}{ }{Desert You see some footsteps in the sand and you wonder where they lead.  The desert stretches out to the horizon. Your feet sink into the sand beneath you and every step you take drains your mind and body.  The boiling sun burns your back as you look out across the baking desert.   }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{footsteps}{{name}{footsteps}}{sand}{{name}{sand}}{sun}{{name}{sun}}}}}{}{}{1.000}{}
 E {1013}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {1000}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {1016}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {1015}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {1001}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {1011}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {999}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
-R {1013}{0}{<178>}{Desert}{ }{Desert The midday sun is high in a cloudless sky, baking the desert sands.  The desert stretches on as far as your eyes can see. The sands shift in the wind and ripples appear all over the sand dunes.  You see some footsteps in the sand and you wonder where they lead.   }{}{}{}{}{1.000}{}
+R {1013}{0}{<178>}{Desert}{ }{Desert You see some footsteps in the sand and you wonder where they lead.  The boiling sun burns your back as you look out across the baking desert.  The desert stretches out to the horizon. Your feet sink into the sand beneath you and every step you take drains your mind and body.   }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{footsteps}{{name}{footsteps}}{sand}{{name}{sand}}{sun}{{name}{sun}}}}}{}{}{1.000}{}
 E {1009}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {1011}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {999}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {1012}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {1016}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {1000}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {998}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
 R {1014}{0}{<158>}{Forest}{<138>?}{The sunlight shines through the canopy of branches, making everything  clear and bright. Trees, grass surround you. Birds sing cheerfully above your head. Everything looks so peaceful. }{Cave}{special;}{}{}{1.000}{}
 E {589}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {1017}{w}{w}{8}{0}{}{1.000}{}{0.00}
 
-R {1015}{0}{<048>}{Desert}{ }{Desert The desert sands shift about as a gust of wind whips around you.  The dry desert heat continually sucks moisture from your body.  The desert seems the same every way you look. You see an oasis in the distance, however on second inspection it turns out to be just a mirage.  You see a path made of footprints in the sand and wonder where it leads. }{}{}{}{}{1.000}{}
+R {1015}{0}{<068>}{Desert}{ }{Desert The midday sun is high in a cloudless sky, baking the desert sands.  The desert seems quite barren but you spot some movement on the next dune. Then again, maybe the heat is playing tricks on your mind.  The heat is taking its toll on you as you begin to hallucinate.  You see a path made of footprints in the sand and wonder where it leads. }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{footprints}{{name}{footprints}}{path}{{name}{path}}{sand}{{name}{sand}}{sun}{{name}{sun}}}}}{}{}{1.000}{}
 E {1012}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {1001}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {1230}{path}{.mapLink {Pinnacle/Fantasy/Nomad Camp} {} {path};}{0}{1}{}{1.000}{}{0.00}
+E {1015}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {1015}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {1000}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
-R {1016}{0}{<178>}{Desert}{ }{Desert You look back the way you came and see your footsteps in the sand.  The desert seems quite barren but you spot some movement on the next dune. Then again, maybe the heat is playing tricks on your mind.  The boiling sun burns your back as you look out across the baking desert.   }{}{}{}{}{1.000}{}
+R {1016}{0}{<178>}{Desert}{ }{Desert The heat is taking its toll on you as you begin to hallucinate.  The desert stretches out to the horizon. Your feet sink into the sand beneath you and every step you take drains your mind and body.  The boiling sun burns your back as you look out across the bleak hot landscape.   }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{sand}{{name}{sand}}{sun}{{name}{sun}}}}}{}{}{1.000}{}
 E {1011}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {1012}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {1016}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {1016}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {1013}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
 R {1017}{0}{<178>}{Forest}{ }{The sky is clear. Sunlight shines through branches of the trees, casting  silhouettes on the ground. Once in awhile, you can hear birds singing  above your head. The forest around you looks so peaceful. Mountains lie to the north and west. It is impossible to scale them from this side. }{Cave}{}{}{}{1.000}{}
 E {1014}{e}{e}{2}{0}{}{1.000}{}{0.00}
@@ -6485,6 +6801,8 @@ E {1296}{n}{n}{1}{0}{}{1.000}{}{0.00}
 R {1298}{0}{<000>}{LINK: Pinnacle/Fantasy/Pirate Ship}{<138>*}{}{Pinnacle/Fantasy/Pirate Ship}{{content}{{item}{{ship}{{name}{An ancient ship}}}{noun}{{barrier}{{name}{barrier}}{cave}{{name}{cave}}{cracks}{{name}{cracks}}{glaciers}{{name}{glaciers}}{holes}{{name}{holes}}{hull}{{name}{hull}}{ice}{{name}{ice}}{ladder}{{name}{ladder}}{monolith}{{name}{monolith}}{mountain}{{name}{mountain}}{mountains}{{name}{mountains}}{mouth}{{name}{mouth}}{peak}{{name}{peak}}{peaks}{{name}{peaks}}{range}{{name}{range}}{ship}{{name}{ship}}{snow}{{name}{snow}}{valleys}{{name}{valleys}}{wall}{{name}{wall}}}{npc}{{Skeletal Pirate}{{name}{A skeletal pirate}}}}{link}{}}{}{}{1.000}{}
 
 R {1299}{0}{<000>}{LINK: Pinnacle/Fantasy/Tower of Fire}{<138>*}{}{Pinnacle/Fantasy/Tower of Fire}{{content}{{item}{{crates}{{name}{crates and barrels clutter the room}}{torch}{{name}{a flickering torch lights your way}}{tower}{{name}{A grey stone tower}}}{noun}{{arch}{{name}{arch}}{archway}{{name}{archway}}{bay}{{name}{bay}}{cape}{{name}{cape}}{door}{{name}{door}}{entrance}{{name}{entrance}}{headland}{{name}{headland}}{landscape}{{name}{landscape}}{lighthouse}{{name}{lighthouse}}{north}{{name}{north}}{ocean}{{name}{ocean}}{rip}{{name}{rip}}{road}{{name}{road}}{south}{{name}{south}}{stairway}{{name}{stairway}}{stone}{{name}{stone}}{walls}{{name}{walls}}{waters}{{name}{waters}}{waves}{{name}{waves}}}}{link}{}}{}{}{1.000}{}
+
+R {1300}{0}{<000>}{LINK: Pinnacle/Fantasy/Longshadow Camp}{<138>*}{}{Pinnacle/Fantasy/Longshadow Camp}{{content}{{item}{{^An Orc Encampment$}{{name}{An Orc Encampment}}}{noun}{{bird}{{name}{bird}}{bodies}{{name}{bodies}}{chest}{{name}{chest}}{grass}{{name}{grass}}{ground}{{name}{ground}}{mark}{{name}{mark}}{path}{{name}{path}}{plains}{{name}{plains}}}}{link}{}}{}{}{1.000}{}
 
 R {2000}{0}{<158>}{The entrance to Fantasy}{<138>?}{The road ends at a large portal here in the forest.  The portal itself is large and circular, with sprays of color shooting across it, and strange, mystical energy flickering within.  A road into Pinnacle lies to the east, while you can vaguely make out the outlines of a mysterious tower to the west. }{Mud}{{special}{}}{}{}{1.000}{}
 E {1}{portal wayhaven}{portal wayhaven}{0}{0}{}{1.000}{}{0.00}
