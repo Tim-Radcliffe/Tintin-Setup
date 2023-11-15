@@ -91,24 +91,6 @@
 	{global} {1}
 	{name} {A curved gray wand}
 }
-#VAR {_item[^A double-bladed, silver shortsword$]} 
-{
-	{desc} 
-	{
-		{1} {A double-bladed, silver shortsword}
-		{2} {This shortsword is made of silver and it looks double-bladed. You can}
-		{3} {not judge what kind of powers this weapon has. You'll have to identify}
-		{4} {it to learn more.}
-		{5} {This weapon is in excellent condition.}
-		{6} {This weapon's classifications: 5 (edged)  }
-		{7} {This weapon gains benefits from your sword weapon skill.}
-		{8} {It looks light.}
-	}
-	{id} {shortsword}
-    {nomap} {1}
-	{global} {1}
-	{name} {A double-bladed, silver shortsword}
-}
 #VAR {_item[^A dull white wand$]} 
 {
 	{desc} 
@@ -124,114 +106,6 @@
     {nomap} {1}
 	{global} {1}
 	{name} {A dull white wand}
-}
-#VAR {_item[^A finely crafted hatchet \x28enchanted\x29$]} 
-{
-	{desc} 
-	{
-		{1} {A finely crafted hatchet (enchanted)}
-		{2} {This hatchet looks finely crafted. You can not judge what kind of}
-		{3} {powers this weapon has. You'll have to identify it to learn more.}
-		{4} {This weapon is in excellent condition.}
-		{5} {This weapon's classifications: 10 (edged)  }
-		{6} {This weapon gains benefits from your axe weapon skill.}
-		{7} {It looks light.}
-	}
-	{id} {hatchet}
-    {nomap} {1}
-	{global} {1}
-	{name} {A finely crafted hatchet (enchanted)}
-}
-#VAR {_item[^A finely crafted pickaxe \x28enchanted\x29$]} 
-{
-	{desc} 
-	{
-		{1} {A finely crafted pickaxe (enchanted)}
-		{2} {This pickaxe looks finely crafted. You can not judge what kind of}
-		{3} {powers this weapon has. You'll have to identify it to learn more.}
-		{4} {This weapon is in excellent condition.}
-		{5} {This weapon's classifications: 10 (edged)  }
-		{6} {This weapon gains benefits from your axe weapon skill.}
-		{7} {It looks light.}
-	}
-	{id} {pickaxe}
-    {nomap} {1}
-	{global} {1}
-	{name} {A finely crafted pickaxe (enchanted)}
-}
-#VAR {_item[^A finely crafted war-axe \x28enchanted\x29$]} 
-{
-	{desc} 
-	{
-		{1} {A finely crafted war-axe (enchanted)}
-		{2} {This war-axe looks finely crafted. You can not judge what kind of}
-		{3} {powers this weapon has. You'll have to identify it to learn more.}
-		{4} {This weapon is in excellent condition.}
-		{5} {This weapon's classifications: 10 (edged)  }
-		{6} {This weapon gains benefits from your two-handed axe weapon skill.}
-		{7} {It looks light.}
-	}
-	{id} {war-axe}
-    {nomap} {1}
-	{global} {1}
-	{name} {A finely crafted war-axe (enchanted)}
-}
-#VAR {_item[^A finely cut, adamantium cutlass \x28enchanted\x29$]} 
-{
-	{desc} 
-	{
-		{1} {A finely cut, adamantium cutlass (enchanted)}
-		{2} {This cutlass is made of adamantium and it looks finely cut. You can}
-		{3} {not judge what kind of powers this weapon has. You'll have to identify}
-		{4} {it to learn more.}
-		{5} {This weapon is in excellent condition.}
-		{6} {This weapon's classifications: 16 (edged)  }
-		{7} {This weapon gains benefits from your sword weapon skill.}
-		{8} {You must be level 10 to wield this weapon.}
-		{9} {It looks light.}
-	}
-	{id} {cutlass}
-    {nomap} {1}
-	{global} {1}
-	{name} {A finely cut, adamantium cutlass (enchanted)}
-}
-#VAR {_item[^A finely cut, adamantium sabre \x28enchanted\x29$]} 
-{
-	{desc} 
-	{
-		{1} {A finely cut, adamantium sabre (enchanted)}
-		{2} {This sabre is made of adamantium and it looks finely cut. You can not}
-		{3} {judge what kind of powers this weapon has. You'll have to identify it}
-		{4} {to learn more.}
-		{5} {This weapon is in excellent condition.}
-		{6} {This weapon's classifications: 16 (edged)  }
-		{7} {This weapon gains benefits from your sword weapon skill.}
-		{8} {You must be level 10 to wield this weapon.}
-		{9} {It looks light.}
-	}
-	{id} {sabre}
-    {nomap} {1}
-	{global} {1}
-	{name} {A finely cut, adamantium sabre (enchanted)}
-}
-#VAR {_item[^A finely cut, adamantium scimitar \x28enchanted\x29$]} 
-{
-	{desc} 
-	{
-		{1} {A finely cut, adamantium scimitar (enchanted)}
-		{2} {This scimitar is made of adamantium and it looks finely cut. You can}
-		{3} {not judge what kind of powers this weapon has. You'll have to identify}
-		{4} {it to learn more.}
-		{5} {This weapon is in excellent condition.}
-		{6} {This weapon's classifications: 16 (edged)  }
-		{7} {This weapon gains benefits from your sword weapon skill.}
-		{8} {You must be level 10 to wield this weapon.}
-		{9} {It looks light.}
-	}
-	{global} {1}
-	{id} {scimitar}
-	{nomap} {1}
-	{name} {A finely cut, adamantium scimitar (enchanted)}
 }
 #VAR {_item[^A glowing white wand$]} 
 {
@@ -250,78 +124,20 @@
 	{global} {1}
 	{name} {A glowing white wand}
 }
-#VAR {_item[^A glowing, iron stiletto \x28enchanted\x29$]} 
+#VAR {_item[^A golden staff$]} 
 {
 	{desc} 
 	{
-		{1} {A glowing, iron stiletto (enchanted)}
-		{2} {This stiletto is made of iron and it looks glowing. You can not judge}
-		{3} {what kind of powers this weapon has. You'll have to identify it to}
-		{4} {learn more.}
-		{5} {This weapon is in excellent condition.}
-		{6} {This weapon's classifications: 16 (edged)  }
-		{7} {This weapon gains benefits from your dagger weapon skill.}
-		{8} {You must be level 10 to wield this weapon.}
-		{9} {It doesn't look too heavy.}
+		{1} {A golden staff}
+		{2} {This golden staff looks interesting.  You'll have to identify to learn more.}
+		{3} {This weapon is in excellent condition.}
+		{4} {This weapon's classifications: 13 (blunt)  13 (electric)  }
+		{5} {It doesn't look too heavy.}
 	}
-	{id} {stiletto}
-    {nomap} {1}
+	{id} {golden staff}
 	{global} {1}
-	{name} {A glowing, iron stiletto (enchanted)}
-}
-#VAR {_item[^A glowing, balsam club$]} 
-{
-	{desc} 
-	{
-		{1} {A glowing, balsam club}
-		{2} {This club is made of balsam and it looks glowing. You can not judge}
-		{3} {what kind of powers this weapon has. You'll have to identify it to}
-		{4} {learn more.}
-		{5} {This weapon is in excellent condition.}
-		{6} {This weapon's classifications: 10 (blunt)  }
-		{7} {It doesn't look too heavy.}
-	}
-	{id} {club}
-    {global} {1}
 	{nomap} {1}
-	{name} {A glowing, balsam club}
-}
-#VAR {_item[^A glowing, onyx dirk \x28enchanted\x29$]} 
-{
-	{desc} 
-	{
-		{1} {A glowing, onyx dirk (enchanted)}
-		{2} {This dirk is made of onyx and it looks glowing. You can not judge what}
-		{3} {kind of powers this weapon has. You'll have to identify it to learn}
-		{4} {more.}
-		{5} {This weapon is in excellent condition.}
-		{6} {This weapon's classifications: 15 (edged)  }
-		{7} {This weapon gains benefits from your dagger weapon skill.}
-		{8} {It doesn't look too heavy.}
-	}
-	{id} {dirk}
-    {global} {1}
-	{nomap} {1}
-	{name} {A glowing, onyx dirk (enchanted)}
-}
-#VAR {_item[^A glowing, titanium trident$]} 
-{
-	{desc} 
-	{
-		{1} {A glowing, titanium trident}
-		{2} {This trident is made of titanium and it looks glowing. You can not}
-		{3} {judge what kind of powers this weapon has. You'll have to identify it}
-		{4} {to learn more.}
-		{5} {This weapon is in excellent condition.}
-		{6} {This weapon's classifications: 22 (edged)  }
-		{7} {This weapon gains benefits from your polearm weapon skill.}
-		{8} {You must be level 10 to wield this weapon.}
-		{9} {It looks heavy.}
-	}
-	{id} {trident}
-    {global} {1}
-	{nomap} {1}
-	{name} {A glowing, titanium trident}
+	{name} {A golden staff}
 }
 #VAR {_item[^A gray staff$]} 
 {
@@ -354,419 +170,6 @@
 	{global} {1}
 	{name} {A hammer}
 }
-#VAR {_item[^A heavy, granite knife \x28enchanted\x29$]} 
-{
-	{desc} 
-	{
-		{1} {A heavy, granite knife (enchanted)}
-		{2} {This knife is made of granite and it looks heavy. You can not judge}
-		{3} {what kind of powers this weapon has. You'll have to identify it to}
-		{4} {learn more.}
-		{5} {This weapon is in excellent condition.}
-		{6} {This weapon's classifications: 5 (edged)  5 (fire)  }
-		{7} {This weapon gains benefits from your dagger weapon skill.}
-		{8} {It looks light.}
-	}
-	{id} {knife}
-    {global} {1}
-	{nomap} {1}
-	{name} {A heavy, granite knife (enchanted)}
-}
-{_item[^A heavy, maple club$]} 
-{
-	{desc} 
-	{
-		{1} {A heavy, maple club}
-		{2} {This club is made of maple and it looks heavy. You can not judge what}
-		{3} {kind of powers this weapon has. You'll have to identify it to learn}
-		{4} {more.}
-		{5} {This weapon is in excellent condition.}
-		{6} {This weapon's classifications: 10 (blunt)  }
-		{7} {It doesn't look too heavy.}
-	}
-	{global} {1}
-	{id} {club}
-	{nomap} {1}
-	{name} {A heavy, maple club}
-}
-#VAR {_item[^A heavy, obsidian mattock \x28enchanted\x29$]} 
-{
-	{desc} 
-	{
-		{1} {A heavy, obsidian mattock (enchanted)}
-		{2} {This mattock is made of obsidian and it looks heavy. You can not judge}
-		{3} {what kind of powers this weapon has. You'll have to identify it to}
-		{4} {learn more.}
-		{5} {This weapon is in excellent condition.}
-		{6} {This weapon's classifications: 10 (blunt)  4 (fire)  }
-		{7} {This weapon gains benefits from your mace weapon skill.}
-		{8} {It looks light.}
-	}
-	{id} {mattock}
-    {nomap} {1}
-	{global} {1}
-	{name} {A heavy, obsidian mattock (enchanted)}
-}
-#VAR {_item[^A heavy, sardonyx jo \x28enchanted\x29$]} 
-{
-	{desc} 
-	{
-		{1} {A heavy, sardonyx jo (enchanted)}
-		{2} {This jo is made of sardonyx and it looks heavy. You can not judge what}
-		{3} {kind of powers this weapon has. You'll have to identify it to learn}
-		{4} {more.}
-		{5} {This weapon is in excellent condition.}
-		{6} {This weapon's classifications: 16 (blunt)  }
-		{7} {This weapon gains benefits from your mace weapon skill.}
-		{8} {You must be level 10 to wield this weapon.}
-		{9} {It doesn't look too heavy.}
-	}
-	{id} {jo}
-    {global} {1}
-	{nomap} {1}
-	{name} {A heavy, sardonyx jo (enchanted)}
-}
-#VAR {_item[^A heavy, silver longsword \x28enchanted\x29$]} 
-{
-	{desc} 
-	{
-		{1} {A heavy, silver longsword (enchanted)}
-		{2} {This longsword is made of silver and it looks heavy. You can not judge}
-		{3} {what kind of powers this weapon has. You'll have to identify it to}
-		{4} {learn more.}
-		{5} {This weapon is in excellent condition.}
-		{6} {This weapon's classifications: 10 (edged)  4 (ice)  }
-		{7} {This weapon gains benefits from your sword weapon skill.}
-		{8} {It doesn't look too heavy.}
-	}
-	{id} {longsword}
-    {global} {1}
-	{nomap} {1}
-	{name} {A heavy, silver longsword (enchanted)}
-}
-#VAR {_item[^A hooked, platinum kynac \x28enchanted\x29$]} 
-{
-	{desc} 
-	{
-		{1} {A hooked, platinum kynac (enchanted)}
-		{2} {This kynac is made of platinum and it looks hooked. You can not judge}
-		{3} {what kind of powers this weapon has. You'll have to identify it to}
-		{4} {learn more.}
-		{5} {This weapon is in excellent condition.}
-		{6} {This weapon's classifications: 15 (edged)  }
-		{7} {This weapon gains benefits from your dagger weapon skill.}
-		{8} {It doesn't look too heavy.}
-	}
-	{id} {kynac}
-    {nomap} {1}
-	{global} {1}
-	{name} {A hooked, platinum kynac (enchanted)}
-}
-#VAR {_item[^A jagged, steel club \x28enchanted\x29$]}
-{
-	{desc} 
-	{
-		{1} {A jagged, steel club (enchanted)}
-		{2} {This club is made of steel and it looks jagged. You can not judge what}
-		{3} {kind of powers this weapon has. You'll have to identify it to learn}
-		{4} {more.}
-		{5} {This weapon is in excellent condition.}
-		{6} {This weapon's classifications: 15 (blunt)  }
-		{7} {This weapon gains benefits from your mace weapon skill.}
-		{8} {It doesn't look too heavy.}
-	}
-	{global} {1}
-	{nomap} {1}
-	{id} {club}
-	{name} {A jagged, steel club (enchanted)}
-}
-#VAR {_item[^A jagged trident$]} 
-{
-	{desc} 
-	{
-		{1} {A jagged trident}
-		{2} {This trident looks jagged. You can not judge what kind of powers this}
-		{3} {weapon has. You'll have to identify it to learn more.}
-		{4} {This weapon is in excellent condition.}
-		{5} {This weapon's classifications: 15 (edged)  }
-		{6} {This weapon gains benefits from your polearm weapon skill.}
-		{7} {It doesn't look too heavy.}
-	}
-	{id} {trident}
-	{global} {1}
-	{nomap} {1}
-	{name} {A jagged trident}
-}
-#VAR {_item[^A light blue wand$]} 
-{
-	{desc} 
-	{
-		{1} {A light blue wand}
-		{2} {This wand is a thick oak rod wrapped in pale blue cloth which has been}
-		{3} {tied in a intricate knot at one end.  The cloth has frozen solid, and}
-		{4} {small particles of ice hang from the narrow end.}
-		{5} {To use this wand you must hold it.}
-		{6} {It looks light.}
-	}
-	{id} {wand}
-    {global} {1}
-	{nomap} {1}
-	{name} {A light blue wand}
-}
-#VAR {_item[^A light, ash club$]} 
-{
-	{desc} 
-	{
-		{1} {A light, ash club}
-		{2} {This club is made of ash and it looks light. You can not judge what}
-		{3} {kind of powers this weapon has. You'll have to identify it to learn}
-		{4} {more.}
-		{5} {This weapon is in excellent condition.}
-		{6} {This weapon's classifications: 10 (blunt)  }
-		{7} {It doesn't look too heavy.}
-	}
-	{id} {club}
-	{global} {1}
-	{nomap} {1}
-	{name} {A light, ash club}
-}
-#VAR {_item[^A light, ash staff \x28enchanted\x29$]} 
-{
-	{desc} 
-	{
-		{1} {A light, ash staff (enchanted)}
-		{2} {This staff is made of ash and it looks light. You can not judge what}
-		{3} {kind of powers this weapon has. You'll have to identify it to learn}
-		{4} {more.}
-		{5} {This weapon is in excellent condition.}
-		{6} {This weapon's classifications: 9 (blunt)  }
-		{7} {This weapon gains benefits from your polearm weapon skill.}
-		{8} {It looks light.}
-	}
-	{id} {staff}
-    {nomap} {1}
-	{global} {1}
-	{name} {A light, ash staff (enchanted)}
-}
-#VAR {_item[^A light, onyx blade \x28enchanted\x29$]} 
-{
-	{desc} 
-	{
-		{1} {A light, onyx blade (enchanted)}
-		{2} {This blade is made of onyx and it looks light. You can not judge what}
-		{3} {kind of powers this weapon has. You'll have to identify it to learn}
-		{4} {more.}
-		{5} {This weapon is in excellent condition.}
-		{6} {This weapon's classifications: 9 (edged)  }
-		{7} {This weapon gains benefits from your sword weapon skill.}
-		{8} {It looks light.}
-	}
-	{id} {blade}
-    {global} {1}
-	{nomap} {1}
-	{name} {A light, onyx blade (enchanted)}
-}
-#VAR {_item[^A lightly glowing, ebony dagger \x28enchanted\x29$]} 
-{
-	{desc} 
-	{
-		{1} {A lightly glowing, ebony dagger (enchanted)}
-		{2} {This dagger is made of ebony and it looks lightly glowing. You can not}
-		{3} {judge what kind of powers this weapon has. You'll have to identify it}
-		{4} {to learn more.}
-		{5} {This weapon is in excellent condition.}
-		{6} {This weapon's classifications: 5 (edged)  5 (fire)  }
-		{7} {This weapon gains benefits from your dagger weapon skill.}
-		{8} {It looks light.}
-	}
-	{id} {dagger}
-    {nomap} {1}
-	{global} {1}
-	{name} {A lightly glowing, ebony dagger (enchanted)}
-}
-#VAR {_item[^A lightly glowing, onyx blackjack \x28enchanted\x29$]} 
-{
-	{desc} 
-	{
-		{1} {A lightly glowing, onyx blackjack (enchanted)}
-		{2} {This blackjack is made of onyx and it looks lightly glowing. You can}
-		{3} {not judge what kind of powers this weapon has. You'll have to identify}
-		{4} {it to learn more.}
-		{5} {This weapon is in excellent condition.}
-		{6} {This weapon's classifications: 16 (blunt)  }
-		{7} {This weapon gains benefits from your mace weapon skill.}
-		{8} {You must be level 10 to wield this weapon.}
-		{9} {It doesn't look too heavy.}
-	}
-	{id} {blackjack}
-	{global} {1}
-	{nomap} {1}
-	{name} {A lightly glowing, onyx blackjack (enchanted)}
-}
-#VAR {_item[^A lightly glowing, platinum falchion \x28enchanted\x29$]} 
-{
-	{desc} 
-	{
-		{1} {A lightly glowing, platinum falchion (enchanted)}
-		{2} {This falchion is made of platinum and it looks lightly glowing. You}
-		{3} {can not judge what kind of powers this weapon has. You'll have to}
-		{4} {identify it to learn more.}
-		{5} {This weapon is in excellent condition.}
-		{6} {This weapon's classifications: 10 (edged)  6 (ice)  }
-		{7} {This weapon gains benefits from your sword weapon skill.}
-		{8} {It doesn't look too heavy.}
-	}
-	{id} {falchion}
-    {nomap} {1}
-	{global} {1}
-	{name} {A lightly glowing, platinum falchion (enchanted)}
-}
-#VAR {_item[^A lightly glowing, titanium trident$]} 
-{
-	{desc} 
-	{
-		{1} {A lightly glowing, titanium trident}
-		{2} {This trident is made of titanium and it looks lightly glowing. You can}
-		{3} {not judge what kind of powers this weapon has. You'll have to identify}
-		{4} {it to learn more.}
-		{5} {This weapon is in excellent condition.}
-		{6} {This weapon's classifications: 22 (edged)  }
-		{7} {This weapon gains benefits from your polearm weapon skill.}
-		{8} {You must be level 10 to wield this weapon.}
-		{9} {It looks heavy.}
-	}
-	{id} {trident}
-    {global} {1}
-	{nomap} {1}
-	{name} {A lightly glowing, titanium trident}
-}
-#VAR {_item[^A long blade \x28enchanted\x29$]} 
-{
-	{desc} 
-	{
-		{1} {A long blade (enchanted)}
-		{2} {This blade looks long. You can not judge what kind of powers this}
-		{3} {weapon has. You'll have to identify it to learn more.}
-		{4} {This weapon is in excellent condition.}
-		{5} {This weapon's classifications: 10 (edged)  }
-		{6} {This weapon gains benefits from your sword weapon skill.}
-		{7} {It doesn't look too heavy.}
-	}
-	{id} {blade}
-    {global} {1}
-	{nomap} {1}
-	{name} {A long blade (enchanted)}
-}
-#VAR {_item[^A long thin, titanium kynac \x28enchanted\x29$]} 
-{
-	{desc} 
-	{
-		{1} {A long thin, titanium kynac (enchanted)}
-		{2} {This kynac is made of titanium and it looks long thin. You can not}
-		{3} {judge what kind of powers this weapon has. You'll have to identify it}
-		{4} {to learn more.}
-		{5} {This weapon is in excellent condition.}
-		{6} {This weapon's classifications: 15 (edged)  }
-		{7} {This weapon gains benefits from your dagger weapon skill.}
-		{8} {It doesn't look too heavy.}
-	}
-	{id} {kynac}
-    {nomap} {1}
-	{global} {1}
-	{name} {A long thin, titanium kynac (enchanted)}
-}
-#VAR {_item[^A long thin, titanium trident$]} 
-{
-	{desc} 
-	{
-		{1} {A long thin, titanium trident}
-		{2} {This trident is made of titanium and it looks long thin. You can not}
-		{3} {judge what kind of powers this weapon has. You'll have to identify it}
-		{4} {to learn more.}
-		{5} {This weapon is in excellent condition.}
-		{6} {This weapon's classifications: 22 (edged)  }
-		{7} {This weapon gains benefits from your polearm weapon skill.}
-		{8} {You must be level 10 to wield this weapon.}
-		{9} {It looks heavy.}
-	}
-	{id} {trident}
-	{global} {1}
-	{nomap} {1}
-	{name} {A long thin, titanium trident}
-}
-#VAR {_item[^A long trident$]} 
-{
-	{desc} 
-	{
-		{1} {A long trident}
-		{2} {This trident looks long. You can not judge what kind of powers this}
-		{3} {weapon has. You'll have to identify it to learn more.}
-		{4} {This weapon is in excellent condition.}
-		{5} {This weapon's classifications: 15 (edged)  }
-		{6} {This weapon gains benefits from your polearm weapon skill.}
-		{7} {It doesn't look too heavy.}
-	}
-	{id} {trident}
-    {nomap} {1}
-	{global} {1}
-	{name} {A long trident}
-}
-#VAR {_item[^A long, granite dirk \x28enchanted\x29$]} 
-{
-	{desc} 
-	{
-		{1} {A long, granite dirk (enchanted)}
-		{2} {This dirk is made of granite and it looks long. You can not judge what}
-		{3} {kind of powers this weapon has. You'll have to identify it to learn}
-		{4} {more.}
-		{5} {This weapon is in excellent condition.}
-		{6} {This weapon's classifications: 5 (edged)  5 (fire)  }
-		{7} {This weapon gains benefits from your dagger weapon skill.}
-		{8} {It looks light.}
-	}
-	{id} {dirk}
-    {nomap} {1}
-	{global} {1}
-	{name} {A long, granite dirk (enchanted)}
-}
-#VAR {_item[^A long, mithril jo \x28enchanted\x29$]} 
-{
-	{desc} 
-	{
-		{1} {A long, mithril jo (enchanted)}
-		{2} {This jo is made of mithril and it looks long. You can not judge what}
-		{3} {kind of powers this weapon has. You'll have to identify it to learn}
-		{4} {more.}
-		{5} {This weapon is in excellent condition.}
-		{6} {This weapon's classifications: 16 (blunt)  }
-		{7} {This weapon gains benefits from your mace weapon skill.}
-		{8} {You must be level 10 to wield this weapon.}
-		{9} {It doesn't look too heavy.}
-	}
-	{id} {jo}
-    {nomap} {1}
-	{global} {1}
-	{name} {A long, mithril jo (enchanted)}
-}
-#VAR {_item[^A long, obsidian jo \x28enchanted\x29$]} 
-{
-	{desc} 
-	{
-		{1} {A long, obsidian jo (enchanted)}
-		{2} {This jo is made of obsidian and it looks long. You can not judge what}
-		{3} {kind of powers this weapon has. You'll have to identify it to learn}
-		{4} {more.}
-		{5} {This weapon is in excellent condition.}
-		{6} {This weapon's classifications: 16 (blunt)  }
-		{7} {This weapon gains benefits from your mace weapon skill.}
-		{8} {You must be level 10 to wield this weapon.}
-		{9} {It doesn't look too heavy.}
-	}
-	{id} {jo}
-    {nomap} {1}
-	{global} {1}
-	{name} {A long, obsidian jo (enchanted)}
-}
 #VAR {_item[^A magic scroll$]} 
 {
 	{desc} 
@@ -782,83 +185,6 @@
     {nomap} {1}
 	{global} {1}
 	{name} {A magic scroll}
-}
-#VAR {_item[^A nasty nunchaku$]} 
-{
-	{desc} 
-	{
-		{1} {A nasty nunchaku}
-		{2} {This nunchaku looks nasty. You can not judge what kind of powers this}
-		{3} {weapon has. You'll have to identify it to learn more.}
-		{4} {This weapon is in excellent condition.}
-		{5} {This weapon's classifications: 3 (blunt)  }
-		{6} {It looks light.}
-	}
-	{id} {nunchaku}
-	{global} {1}
-	{nomap} {1}
-	{name} {A nasty nunchaku}
-}
-#VAR {_item[^A nasty club$]} 
-{
-	{id} {club}
-    {global} {1}
-	{nomap} {1}
-	{name} {A nasty club}
-}
-#VAR {_item[^A nasty, silver war-mattock \x28enchanted\x29$]} 
-{
-	{desc} 
-	{
-		{1} {A nasty, silver war-mattock (enchanted)}
-		{2} {This war-mattock is made of silver and it looks nasty. You can not}
-		{3} {judge what kind of powers this weapon has. You'll have to identify it}
-		{4} {to learn more.}
-		{5} {This weapon is in excellent condition.}
-		{6} {This weapon's classifications: 10 (blunt)  4 (fire)  }
-		{7} {This weapon gains benefits from your mace weapon skill.}
-		{8} {It looks light.}
-	}
-	{id} {war-mattock}
-	{global} {1}
-	{nomap} {1}
-	{name} {A nasty, silver war-mattock (enchanted)}
-}
-#VAR {_item[^A nasty, titanium trident$]} 
-{
-	{desc} 
-	{
-		{1} {A nasty, titanium trident}
-		{2} {This trident is made of titanium and it looks nasty. You can not judge}
-		{3} {what kind of powers this weapon has. You'll have to identify it to}
-		{4} {learn more.}
-		{5} {This weapon is in excellent condition.}
-		{6} {This weapon's classifications: 22 (edged)  }
-		{7} {This weapon gains benefits from your polearm weapon skill.}
-		{8} {You must be level 10 to wield this weapon.}
-		{9} {It looks heavy.}
-	}
-	{id} {trident}
-    {global} {1}
-	{nomap} {1}
-	{name} {A nasty, titanium trident}
-}
-#VAR {_item[^A nicked sword$]} 
-{
-	{desc} 
-	{
-		{1} {A nicked sword}
-		{2} {This sword looks nicked. You can not judge what kind of powers this}
-		{3} {weapon has. You'll have to identify it to learn more.}
-		{4} {This weapon is in excellent condition.}
-		{5} {This weapon's classifications: 12 (edged)  }
-		{6} {This weapon gains benefits from your sword weapon skill.}
-		{7} {It doesn't look too heavy.}
-	}
-	{id} {sword}
-	{global} {1}
-	{nomap} {1}
-	{name} {A nicked sword}
 }
 #VAR {_item[^A pair of dirty gloves$]} 
 {
@@ -890,112 +216,36 @@
 	{global} {1}
 	{name} {A pair of gloves}
 }
-#VAR {_item[^A polished, titanium two-handed sword$]} 
+#VAR {_item[^A rifle$]} 
 {
 	{desc} 
 	{
-		{1} {A polished, titanium two-handed sword}
-		{2} {This two-handed sword is made of titanium and it looks polished. You}
-		{3} {can not judge what kind of powers this weapon has. You'll have to}
-		{4} {identify it to learn more.}
-		{5} {This weapon is in excellent condition.}
-		{6} {This weapon's classifications: 11 (edged)  }
-		{7} {This weapon gains benefits from your two-handed sword weapon skill.}
-		{8} {It looks light.}
-	}
-	{id} {two-handed sword}
-    {nomap} {1}
-	{global} {1}
-	{name} {A polished, titanium two-handed sword}
-}
-#VAR {_item[^A polished trident$]} 
-{
-	{desc} 
-	{
-		{1} {A polished trident}
-		{2} {This trident looks polished. You can not judge what kind of powers}
-		{3} {this weapon has. You'll have to identify it to learn more.}
-		{4} {This weapon is in excellent condition.}
-		{5} {This weapon's classifications: 15 (edged)  }
-		{6} {This weapon gains benefits from your polearm weapon skill.}
+		{1} {A rifle}
+		{2} {This rifle should be identified to learn more about it.}
+		{3} {This weapon is in excellent condition.}
+		{4} {This weapon's classifications: 14 (edged)  }
+		{5} {This weapon gains benefits from your gun weapon skill.}
+		{6} {The rifle is currently not loaded.}
 		{7} {It doesn't look too heavy.}
 	}
-	{id} {trident}
+	{id} {rifle}
+    {nomap} {1}
+	{global} {1}
+	{name} {A rifle}
+}
+#VAR {_item[^A ruby necklace$]} 
+{
+	{desc} 
+	{
+		{1} {A ruby necklace}
+		{2} {This amulet looks very curious.}
+		{3} {An identification spell may reveal more information.}
+		{4} {It looks light.}
+	}
+	{id} {amulet}
 	{global} {1}
 	{nomap} {1}
-	{name} {A polished trident}
-}
-#VAR {_item[^A razor-sharp, onyx scimitar$]} 
-{
-	{desc} 
-	{
-		{1} {A razor-sharp, onyx scimitar}
-		{2} {This scimitar is made of onyx and it looks razor-sharp. You can not}
-		{3} {judge what kind of powers this weapon has. You'll have to identify it}
-		{4} {to learn more.}
-		{5} {This weapon is in excellent condition.}
-		{6} {This weapon's classifications: 9 (edged)  }
-		{7} {This weapon gains benefits from your sword weapon skill.}
-		{8} {It looks light.}
-	}
-	{id} {scimitar}
-    {nomap} {1}
-	{global} {1}
-	{name} {A razor-sharp, onyx scimitar}
-}
-#VAR {_item[^A sharp, mithril claymore$]} 
-{
-	{desc} 
-	{
-		{1} {A sharp, mithril claymore}
-		{2} {This claymore is made of mithril and it looks sharp. You can not judge}
-		{3} {what kind of powers this weapon has. You'll have to identify it to}
-		{4} {learn more.}
-		{5} {This weapon is in excellent condition.}
-		{6} {This weapon's classifications: 6 (edged)  }
-		{7} {This weapon gains benefits from your two-handed sword weapon skill.}
-		{8} {It looks heavy.}
-	}
-	{id} {claymore}
-	{global} {1}
-	{nomap} {1}
-	{name} {A sharp, mithril claymore}
-}
-#VAR {_item[^A sharp, titanium trident$]} 
-{
-	{desc} 
-	{
-		{1} {A sharp, titanium trident}
-		{2} {This trident is made of titanium and it looks sharp. You can not judge}
-		{3} {what kind of powers this weapon has. You'll have to identify it to}
-		{4} {learn more.}
-		{5} {This weapon is in excellent condition.}
-		{6} {This weapon's classifications: 22 (edged)  }
-		{7} {This weapon gains benefits from your polearm weapon skill.}
-		{8} {You must be level 10 to wield this weapon.}
-		{9} {It looks heavy.}
-	}
-	{id} {trident}
-    {nomap} {1}
-	{global} {1}
-	{name} {A sharp, titanium trident}
-}
-#VAR {_item[^A shining trident$]} 
-{
-	{desc} 
-	{
-		{1} {A shining trident}
-		{2} {This trident looks shining. You can not judge what kind of powers this}
-		{3} {weapon has. You'll have to identify it to learn more.}
-		{4} {This weapon is in excellent condition.}
-		{5} {This weapon's classifications: 15 (edged)  }
-		{6} {This weapon gains benefits from your polearm weapon skill.}
-		{7} {It doesn't look too heavy.}
-	}
-	{id} {trident}
-    {nomap} {1}
-	{global} {1}
-	{name} {A shining trident}
+	{name} {A ruby necklace}
 }
 #VAR {_item[^A short green wand$]} 
 {
@@ -1015,61 +265,6 @@
 	{global} {1}
 	{name} {A short green wand}
 }
-#VAR {_item[^A short, iron morningstar \x28enchanted\x29$]} 
-{
-	{desc} 
-	{
-		{1} {A short, iron morningstar (enchanted)}
-		{2} {This morningstar is made of iron and it looks short. You can not judge}
-		{3} {what kind of powers this weapon has. You'll have to identify it to}
-		{4} {learn more.}
-		{5} {This weapon is in excellent condition.}
-		{6} {This weapon's classifications: 10 (blunt)  10 (fire)  }
-		{7} {This weapon gains benefits from your mace weapon skill.}
-		{8} {It looks light.}
-	}
-	{id} {morningstar}
-    {nomap} {1}
-	{global} {1}
-	{name} {A short, iron morningstar (enchanted)}
-}
-#VAR {_item[^A short, obsidian stiletto \x28enchanted\x29$]} 
-{
-	{desc} 
-	{
-		{1} {A short, obsidian stiletto (enchanted)}
-		{2} {This stiletto is made of obsidian and it looks short. You can not}
-		{3} {judge what kind of powers this weapon has. You'll have to identify it}
-		{4} {to learn more.}
-		{5} {This weapon is in excellent condition.}
-		{6} {This weapon's classifications: 5 (edged)  20 (fire)  }
-		{7} {This weapon gains benefits from your dagger weapon skill.}
-		{8} {You must be level 10 to wield this weapon.}
-		{9} {It looks light.}
-	}
-	{id} {stiletto}
-    {global} {1}
-	{nomap} {1}
-	{name} {A short, obsidian stiletto (enchanted)}
-}
-#VAR {_item[^A singled edged, sardonyx cutlass \x28enchanted\x29$]} 
-{
-	{desc} 
-	{
-		{1} {A singled edged, sardonyx cutlass (enchanted)}
-		{2} {This cutlass is made of sardonyx and it looks singled edged. You can}
-		{3} {not judge what kind of powers this weapon has. You'll have to identify}
-		{4} {it to learn more.}
-		{5} {This weapon is in excellent condition.}
-		{6} {This weapon's classifications: 10 (edged)  6 (ice)  }
-		{7} {This weapon gains benefits from your sword weapon skill.}
-		{8} {It doesn't look too heavy.}
-	}
-	{id} {cutlass}
-    {nomap} {1}
-	{global} {1}
-	{name} {A singled edged, sardonyx cutlass (enchanted)}
-}
 #VAR {_item[^A slender crystal wand$]} 
 {
 	{desc} 
@@ -1083,96 +278,6 @@
     {nomap} {1}
 	{global} {1}
 	{name} {A slender crystal wand}
-}
-#VAR {_item[^A small, bronze mattock \x28enchanted\x29$]} 
-{
-	{desc} 
-	{
-		{1} {A small, bronze mattock (enchanted)}
-		{2} {This mattock is made of bronze and it looks small. You can not judge}
-		{3} {what kind of powers this weapon has. You'll have to identify it to}
-		{4} {learn more.}
-		{5} {This weapon is in excellent condition.}
-		{6} {This weapon's classifications: 10 (blunt)  6 (fire)  }
-		{7} {This weapon gains benefits from your mace weapon skill.}
-		{8} {It looks light.}
-	}
-	{id} {mattock}
-	{global} {1}
-	{nomap} {1}
-	{name} {A small, bronze mattock (enchanted)}
-}
-#VAR {_item[^A small, ebony kynac$]} 
-{
-	{desc} 
-	{
-		{1} {A small, ebony kynac}
-		{2} {This kynac is made of ebony and it looks small. You can not judge what}
-		{3} {kind of powers this weapon has. You'll have to identify it to learn}
-		{4} {more.}
-		{5} {This weapon is in excellent condition.}
-		{6} {This weapon's classifications: 5 (edged)  }
-		{7} {This weapon gains benefits from your dagger weapon skill.}
-		{8} {It looks light.}
-	}
-	{id} {kynac}
-    {nomap} {1}
-	{global} {1}
-	{name} {A small, ebony kynac}
-}
-#VAR {_item[^A small, iron machete$]} 
-{
-	{desc} 
-	{
-		{1} {A small, iron machete}
-		{2} {This machete is made of iron and it looks small. You can not judge}
-		{3} {what kind of powers this weapon has. You'll have to identify it to}
-		{4} {learn more.}
-		{5} {This weapon is in excellent condition.}
-		{6} {This weapon's classifications: 3 (edged)  }
-		{7} {This weapon gains benefits from your dagger weapon skill.}
-		{8} {It looks light.}
-	}
-	{id} {machete}
-    {nomap} {1}
-	{global} {1}
-	{name} {A small, iron machete}
-}
-#VAR {_item[^A small, mithril sai$]} 
-{
-	{desc} 
-	{
-		{1} {A small, mithril sai}
-		{2} {This sai is made of mithril and it looks small. You can not judge what}
-		{3} {kind of powers this weapon has. You'll have to identify it to learn}
-		{4} {more.}
-		{5} {This weapon is in excellent condition.}
-		{6} {This weapon's classifications: 5 (edged)  }
-		{7} {This weapon gains benefits from your dagger weapon skill.}
-		{8} {It looks light.}
-	}
-	{id} {sai}
-    {global} {1}
-	{nomap} {1}
-	{name} {A small, mithril sai}
-}
-#VAR {_item[^A small, steel machete$]} 
-{
-	{desc} 
-	{
-		{1} {A small, steel machete}
-		{2} {This machete is made of steel and it looks small. You can not judge}
-		{3} {what kind of powers this weapon has. You'll have to identify it to}
-		{4} {learn more.}
-		{5} {This weapon is in excellent condition.}
-		{6} {This weapon's classifications: 4 (edged)  }
-		{7} {This weapon gains benefits from your dagger weapon skill.}
-		{8} {It looks light.}
-	}
-	{id} {machete}
-	{global} {1}
-	{nomap} {1}
-	{name} {A small, steel machete}
 }
 {_item[^A spear \x28enchanted\x29$]} 
 {
@@ -1190,22 +295,19 @@
 	{nomap} {1}
 	{name} {A spear (enchanted)}
 }
-#VAR {_item[^A spiked club$]} 
+#VAR {_item[^A Statue of a Smiling Leprechaun$]} 
 {
 	{desc} 
 	{
-		{1} {A spiked club}
-		{2} {This club looks spiked. You can not judge what kind of powers this}
-		{3} {weapon has. You'll have to identify it to learn more.}
-		{4} {This weapon is in excellent condition.}
-		{5} {This weapon's classifications: 21 (blunt)  }
-		{6} {You must be level 10 to wield this weapon.}
-		{7} {It doesn't look too heavy.}
+		{1} {A Statue of a Smiling Leprechaun}
+		{2} {The symbol of the leprechaun has brought luck to many people for many generations}
+		{3} {Some even say that if you rub its belly it will bring you good luck.}
+		{4} {It looks light.}
 	}
-	{id} {club}
-    {nomap} {1}
 	{global} {1}
-	{name} {A spiked club}
+	{id} {statue}
+	{nomap} {1}
+	{name} {A Statue of a Smiling Leprechaun}
 }
 #VAR {_item[^A steel longsword$]} 
 {
@@ -1274,133 +376,6 @@
     {nomap} {1}
 	{global} {1}
 	{name} {A suit of armor}
-}
-#VAR {_item[^A very sharp, steel blade$]} 
-{
-	{desc} 
-	{
-		{1} {A very sharp, steel blade}
-		{2} {This blade is made of steel and it looks very sharp. You can not judge}
-		{3} {what kind of powers this weapon has. You'll have to identify it to}
-		{4} {learn more.}
-		{5} {This weapon is in excellent condition.}
-		{6} {This weapon's classifications: 20 (edged)  }
-		{7} {This weapon gains benefits from your sword weapon skill.}
-		{8} {You must be level 10 to wield this weapon.}
-		{9} {It looks light.}
-	}
-	{id} {blade}
-	{global} {1}
-	{nomap} {1}
-	{name} {A very sharp, steel blade}
-}
-#VAR {_item[^A very sharp trident$]} 
-{
-	{desc} 
-	{
-		{1} {A very sharp trident}
-		{2} {This trident looks very sharp. You can not judge what kind of powers}
-		{3} {this weapon has. You'll have to identify it to learn more.}
-		{4} {This weapon is in excellent condition.}
-		{5} {This weapon's classifications: 15 (edged)  }
-		{6} {This weapon gains benefits from your polearm weapon skill.}
-		{7} {It doesn't look too heavy.}
-	}
-	{id} {trident}
-	{global} {1}
-	{nomap} {1}
-	{name} {A very sharp trident}
-}
-#VAR {_item[^A wicked, mithril warhammer$]} 
-{
-	{desc} 
-	{
-		{1} {A wicked, mithril warhammer}
-		{2} {This warhammer is made of mithril and it looks wicked. You can not}
-		{3} {judge what kind of powers this weapon has. You'll have to identify it}
-		{4} {to learn more.}
-		{5} {This weapon is in excellent condition.}
-		{6} {This weapon's classifications: 16 (blunt)  }
-		{7} {This weapon gains benefits from your mace weapon skill.}
-		{8} {You must be level 10 to wield this weapon.}
-		{9} {It looks light.}
-	}
-	{id} {warhammer}
-    {global} {1}
-	{nomap} {1}
-	{name} {A wicked, mithril warhammer}
-}
-#VAR {_item[^A wicked, steel dirk$]} 
-{
-	{desc} 
-	{
-		{1} {A wicked, steel dirk}
-		{2} {This dirk is made of steel and it looks wicked. You can not judge what}
-		{3} {kind of powers this weapon has. You'll have to identify it to learn}
-		{4} {more.}
-		{5} {This weapon is in excellent condition.}
-		{6} {This weapon's classifications: 16 (edged)  }
-		{7} {This weapon gains benefits from your dagger weapon skill.}
-		{8} {You must be level 10 to wield this weapon.}
-		{9} {It looks light.}
-	}
-	{id} {dirk}
-    {nomap} {1}
-	{global} {1}
-	{name} {A wicked, steel dirk}
-}
-#VAR {_item[^A wicked, stone mace$]} 
-{
-	{desc} 
-	{
-		{1} {A wicked, stone mace}
-		{2} {This mace is made of stone and it looks wicked. You can not judge what}
-		{3} {kind of powers this weapon has. You'll have to identify it to learn}
-		{4} {more.}
-		{5} {This weapon is in excellent condition.}
-		{6} {This weapon's classifications: 12 (blunt)  }
-		{7} {This weapon gains benefits from your mace weapon skill.}
-		{8} {It looks heavy.}
-	}
-	{id} {mace}
-	{global} {1}
-	{nomap} {1}
-	{name} {A wicked, stone mace}
-}
-#VAR {_item[^An extremely sharp trident$]} 
-{
-	{desc} 
-	{
-		{1} {An extremely sharp trident}
-		{2} {This trident looks extremely sharp. You can not judge what kind of}
-		{3} {powers this weapon has. You'll have to identify it to learn more.}
-		{4} {This weapon is in excellent condition.}
-		{5} {This weapon's classifications: 15 (edged)  }
-		{6} {This weapon gains benefits from your polearm weapon skill.}
-		{7} {It doesn't look too heavy.}
-	}
-	{id} {trident}
-    {global} {1}
-	{nomap} {1}
-	{name} {An extremely sharp trident}
-}
-#VAR {_item[^An ornate, jade blade$]} 
-{
-	{desc} 
-	{
-		{1} {An ornate, jade blade}
-		{2} {This blade is made of jade and it looks ornate. You can not judge what}
-		{3} {kind of powers this weapon has. You'll have to identify it to learn}
-		{4} {more.}
-		{5} {This weapon is in excellent condition.}
-		{6} {This weapon's classifications: 8 (edged)  }
-		{7} {This weapon gains benefits from your sword weapon skill.}
-		{8} {It looks light.}
-	}
-	{id} {blade}
-	{global} {1}
-	{nomap} {1}
-	{name} {An ornate, jade blade}
 }
 #VAR {_item[^Armour$]} 
 {
@@ -1582,6 +557,20 @@
 	{global} {1}
 	{name} {Cloak}
 }
+{_item[^Cloth Armour$]} 
+{
+	{desc} 
+	{
+		{1} {Cloth Armour}
+		{2} {A cloth armour.  You cannot surmise what powers it may possess.  }
+		{3} {An identification spell may reveal more information.}
+		{4} {It looks light.}
+	}
+	{id} {armour}
+	{global} {1}
+	{nomap} {1}
+	{name} {Cloth Armour}
+}
 #VAR {_item[^Cloth Cloak$]} 
 {
 	{desc} 
@@ -1622,6 +611,7 @@
 	{id} {ball}
     {global} {1}
 	{nomap} {1}
+	{pickup} {-1}
 	{name} {Crystal ball}
 }
 #VAR {_item[^crystal ball$]} 
@@ -1634,6 +624,7 @@
 	{id} {crystal ball}
     {global} {1}
 	{nomap} {1}
+	{pickup} {-1}	
 	{name} {crystal ball}
 }
 #VAR {_item[^Crystalline Cloak$]} 
@@ -1710,7 +701,6 @@
 	{global} {1}
 	{name} {Gold Amulet}
 }
-
 #VAR {_item[^Gold Cloth cloak$]} 
 {
 	{desc} 
@@ -1726,6 +716,20 @@
     {global} {1}
 	{nomap} {1}
 	{name} {Gold Cloth cloak}
+}
+#VAR {_item[^Gold Helmet$]} 
+{
+	{desc} 
+	{
+		{1} {Gold Helmet}
+		{2} {A gold helmet.  You cannot surmise what powers it may possess.  }
+		{3} {An identification spell may reveal more information.}
+		{4} {It looks light.}
+	}
+	{id} {helmet}
+	{global} {1}
+	{nomap} {1}
+	{name} {Gold Helmet}
 }
 #VAR {_item[^Helmet$]} 
 {
@@ -1857,6 +861,20 @@
 	{global} {1}
 	{name} {Leather Girdle}
 }
+#VAR {_item[^Leather Gloves$]} 
+{
+	{desc} 
+	{
+		{1} {Leather Gloves}
+		{2} {A pair of soft leather gloves. }
+		{3} {An identification spell may reveal more information.}
+		{4} {It looks light.}
+	}
+	{id} {gloves}
+    {nomap} {1}
+	{global} {1}
+	{name} {Leather Gloves}
+}
 #VAR {_item[^Leather Helmet$]} 
 {
 	{desc} 
@@ -1963,6 +981,21 @@
 	{global} {1}
 	{name} {Scaley Helmet}
 }
+#VAR {_item[^set of dice$]} 
+{
+	{desc} 
+	{
+		{1} {set of dice}
+		{2} {A small set of dice, carved from ivory.  Each of their six sides}
+		{3} {features a number of small black pips, between one and six.  There is a}
+		{4} {quiet rattle from inside each of the dice, as if they were hollow.}
+		{5} {It looks light.}
+	}
+	{id} {set of dice}
+    {nomap} {1}
+	{global} {1}
+	{name} {set of dice}
+}
 #VAR {_item[^Silver Codpiece$]} 
 {
 	{desc} 
@@ -2019,6 +1052,20 @@
     {nomap} {1}
 	{global} {1}
 	{name} {Steel Codpiece}
+}
+#VAR {_item[^Steel Helmet$]} 
+{
+	{desc} 
+	{
+		{1} {Steel Helmet}
+		{2} {A steel helmet.  You cannot surmise what powers it may possess.  }
+		{3} {An identification spell may reveal more information.}
+		{4} {It looks light.}
+	}
+	{id} {helmet}
+	{global} {1}
+	{nomap} {1}
+	{name} {Steel Helmet}
 }
 #VAR {_item[^Steel Platemail Gauntlets$]} 
 {
@@ -2077,7 +1124,7 @@
 	{global} {1}
 	{name} {Stone Boots}
 }
-#VAR {_item[^(Aluminum|Amber|Amethyst|Bloodstone|Brass|Bronze|Ceramic|Copper|Coral|Diamond|Ebony|Electrum|Emerald|Garnet|Glass|Gold|Granite|Jacinth|Lead|Ivory|Jasper|Mahogany|Malachite|Maple|Marble|Moonstone|Onyx|Pearl|Peridot|Platinum|Pyrite|Quartz|Ruby|Sapphire|Sardonyx|Silver|Steel|Stone|Tin|Titanium|Turquoise|Zirconian) ring$]} 
+#VAR {_item[^(Aluminum|Amber|Amethyst|Aquamarine|Bloodstone|Bone|Brass|Bronze|Ceramic|Copper|Coral|Diamond|Ebony|Electrum|Emerald|Garnet|Glass|Gold|Granite|Jacinth|Lead|Iron|Ivory|Jade|Jasper|Mahogany|Malachite|Maple|Marble|Moonstone|Oak|Onyx|Pearl|Peridot|Platinum|Pyrite|Quartz|Ruby|Sapphire|Sardonyx|Silver|Steel|Stone|Tin|Titanium|Turquoise|Zirconian) ring$]} 
 {
 	{desc} 
 	{
@@ -2092,6 +1139,24 @@
 	{global} {1}
 	{name} {Amber ring}
 }
+#VAR {_item[^A(n|) (double-bladed|extremely sharp|finely cut|finely crafted|glowing|heavy|hooked|jagged|light|lightly glowing|long|long thin|nasty|nicked|old|ornate|polished|razor-sharp|runed|sharp|shining|short|single edged|small|spiked|very sharp|wicked|)(, |)(adamantium|ash|balsam|bronze|ebony|elm|gold|granite|iron|jade|mahogany|maple|mithril|obsidian|onyx|platinum|sardonyx|silver|steel|stone|titanium|) (battleaxe|blackjack|blade|claymore|club|cutlass|dagger|dirk|falchion|handaxe|hatchet|jo|knife|kynac|longsword|mace|machete|mattock|morningstar|pickaxe|sabre|sai|scimitar|shortsword|sledgehammer|staff|stiletto|sword|trident|two-handed sword|warhammer|war-axe|war-mattock|woodsman's axe)( \x28enchanted\x29|)$]} 
+{
+	{desc} 
+	{
+		{1} {A double-bladed, silver shortsword}
+		{2} {This shortsword is made of silver and it looks double-bladed. You can}
+		{3} {not judge what kind of powers this weapon has. You'll have to identify}
+		{4} {it to learn more.}
+		{5} {This weapon is in excellent condition.}
+		{6} {This weapon's classifications: 5 (edged)  }
+		{7} {This weapon gains benefits from your sword weapon skill.}
+		{8} {It looks light.}
+	}
+	{id} {shortsword}
+    {nomap} {1}
+	{global} {1}
+	{name} {A double-bladed, silver shortsword}
+}
 #VAR {_item[^candle$]} 
 {
 	{desc} 
@@ -2105,7 +1170,7 @@
 	{nomap} {1}
 	{name} {candle}
 }
-{_item[^(brown|green|red|yellow) gemstone$]} 
+{_item[^(brown|green|red|violet|yellow) gemstone$]} 
 {
 	{desc} 
 	{
@@ -2133,6 +1198,19 @@
     {nomap} {1}
 	{global} {1}
 	{name} {miniature tools}
+}
+{_item[^set of three dice$]} 
+{
+	{desc} 
+	{
+		{1} {set of three dice}
+		{2} {A set of three dice.  It is currently unidentified.}
+		{3} {It looks light.}
+	}
+	{id} {set of three dice}
+    {nomap} {1}
+	{global} {1}
+	{name} {set of three dice}
 }
 #VAR {_item[bag]} 
 {
