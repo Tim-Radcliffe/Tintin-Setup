@@ -106,35 +106,6 @@ auto {add} {protection} {} {e_combat_round} {};
 };
 auto {add} {veil} {} {e_combat} {};
 
-/* Gag Necro message spam */
-#ALIAS {necro_gag_on}
-{
-    #GAG {^-You activate your atrance-};
-    #GAG {^-Your atrance is complete-};
-    #GAG {^* You blink into unconsciousness *};
-    #GAG {^* You recover your senses *};
-    #GAG {^>>Atrancing};
-    #GAG {^$my[necromancer][familiar] tells you:};
-    #GAG {^  You'll have to wait a moment master.};
-    #GAG {^  You will now absorb corpses from %+ first master.};
-    #GAG {^Shadowy powers compel you to %+};
-};
-
-/* Ungag Necro message spam */
-#ALIAS {necro_gag_off}
-{
-    #UNGAG {^-You activate your atrance-};
-    #UNGAG {^-Your atrance is complete-};
-    #UNGAG {^* You blink into unconsciousness *};
-    #UNGAG {^* You recover your senses *};
-    #UNGAG {^>>Atrancing};
-    #UNGAG {^$my[necromancer][familiar] tells you:};
-    #UNGAG {^  You'll have to wait a moment master.};
-    #UNGAG {^  You will now absorb corpses from %+ first master.};    
-    #UNGAG {^Shadowy powers compel you to %+};
-}
-auto {add} {necrogag} {necro_gag_on} {} {necro_gag_off};
-
 /* Automatically fire glamors */
 #ALIAS {handler_auto_glamor}
 {

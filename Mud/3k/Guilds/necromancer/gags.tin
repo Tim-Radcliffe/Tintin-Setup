@@ -1,0 +1,48 @@
+#ALIAS {necro_gag_on}
+{
+    #GAG {^-You activate your atrance-};
+    #GAG {^-Your atrance is complete-};
+    #GAG {^* You blink into unconsciousness *};
+    #GAG {^* You recover your senses *};
+    #GAG {^>>Atrancing};
+    #GAG {^$my[necromancer][familiar] tells you:};
+    #GAG {^  You'll have to wait a moment %+.};
+    #GAG {^  You will now absorb corpses from %+ first %+.};
+    #GAG {^Shadowy powers compel you to %+};
+	#GAG {^Radiant energy races along %+ body.};
+	#GAG {^Death tells you:};
+	#GAG {^From afar, Death favors you.$};
+	#GAG {^  %+, my %+, I will embrace you soon.};
+	#GAG {^  Don't worry my %+, I always collect my debts...eventually.};
+	#GAG {^  I can feel you moving closer to me, my child.};
+	#GAG {^  I can wait for you %+.  I can wait a very long time.};
+	#GAG {^  Live onward my %+.};
+	#GAG {^  We will be together soon enough %+.};
+	#GAG {^  You escaped my grasp this time %+... this time.};
+	#GAG {^  Your destiny will wait a bit longer %+.};
+};
+
+#ALIAS {necro_gag_off}
+{
+    #UNGAG {^-You activate your atrance-};
+    #UNGAG {^-Your atrance is complete-};
+    #UNGAG {^* You blink into unconsciousness *};
+    #UNGAG {^* You recover your senses *};
+    #UNGAG {^>>Atrancing};
+    #UNGAG {^$my[necromancer][familiar] tells you:};
+    #UNGAG {^  You'll have to wait a moment %+.};
+    #UNGAG {^  You will now absorb corpses from %+ first %+.};    
+    #UNGAG {^Shadowy powers compel you to %+};
+	#UNGAG {^Radiant energy races along %+ body.};
+	#UNGAG {^Death tells you:};
+	#UNGAG {^From afar, Death favors you.$};
+	#UNGAG {^  %+, my %+, I will embrace you soon.};
+	#UNGAG {^  Don't worry my %+, I always collect my debts...eventually.};
+	#UNGAG {^  I can feel you moving closer to me, my child.};
+	#UNGAG {^  I can wait for you %+.  I can wait a very long time.};
+	#UNGAG {^  Live onward my %+.};
+	#UNGAG {^  We will be together soon enough %+.};
+	#UNGAG {^  You escaped my grasp this time %+... this time.};
+	#UNGAG {^  Your destiny will wait a bit longer %+.};	
+}
+auto {add} {necrogag} {necro_gag_on} {} {necro_gag_off};
