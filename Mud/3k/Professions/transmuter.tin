@@ -1,0 +1,73 @@
+#NOP .transmute <quality> <item_name> 
+#NOP .transmute train
+#NOP .transmute refine
+#ALIAS {.transmute}
+{
+	#LOCAL {_t[data]}
+	{
+		{worthless}{{quality}{7}{quantity}{2}{upgrade}{average}}
+		{crude}    {{quality}{6}{quantity}{2}{upgrade}{average}}
+		{poor}     {{quality}{5}{quantity}{2}{upgrade}{average}}
+		{average}  {{quality}{4}{quantity}{3}{upgrade}{good}}
+		{good}     {{quality}{3}{quantity}{4}{upgrade}{superior}}
+		{superior} {{quality}{2}{quantity}{5}{upgrade}{legendary}}
+	};
+
+	#SWITCH {"%1"}
+	{
+		#CASE {"train"}
+		{
+			#ECHO {Checking satchel for ingredients that will give PXP:};
+			#FOREACH {*_craft[ingredients][]} {i}
+			{
+				#IF { $my[professions][Transmuter][level] >= $_craft[ingredients][$i][level][transmuter][min] &&
+				      $my[professions][Transmuter][level] <= $_craft[ingredients][$i][level][transmuter][max] }
+				{
+					#ECHO {$i};
+					#FOREACH {*_t[data][]} {q}
+					{
+						#IF {$_craft[satchel][$i][subtotal][$_t[data][$q][quality]] >= $_t[data][$q][quantity]}
+						{
+							.transmute $q $i;
+						};
+					};
+				};
+			};
+		};
+		#CASE {"refine"}
+		{
+			#ECHO {Refining satchel ingredients:};
+			#FOREACH {*_craft[ingredients][]} {i}
+			{
+				#IF { $my[professions][Transmuter][level] >= $_craft[ingredients][$i][level][transmuter][min] }				
+				#FOREACH {*_t[data][]} {q}
+				{
+					#IF {$_craft[satchel][$i][subtotal][$_t[data][$q][quality]] >= $_t[data][$q][quantity]}
+					{
+						.transmute $q $i;
+					};
+				};
+			};
+		};
+		#DEFAULT 
+		{
+			#REGEXP {%0} {{^(\w+)\s+(.*)$}}
+			{
+				#FORMAT {_t[quality_name]} {%l} {&2};
+				#FORMAT {_t[item]} {%l} {&3};
+			};
+			#LOCAL {_t[settings]}  {$_t[data][$_t[quality_name]]};
+		
+			#IF {$_craft[satchel][$_t[item]][subtotal][$_t[settings][quality]] < $_t[settings][quantity]}
+			{
+				#SHOWME {You don't have enough $_t[item] in your satchel!};
+			};
+			#ELSE 
+			{
+				#SEND {unstash2 $_t[settings][quantity] $_t[quality_name] $_t[item]};
+				#SEND {transmute $_t[settings][quantity] $_t[item] quality to $_t[settings][upgrade]};
+				#SEND {stash $_t[item]};
+			};					
+		};	
+	};
+};
