@@ -4,7 +4,7 @@
 #ALIAS {.cs_held_drop}    {#SEND {!drop preservation %1};};
 #ALIAS {.cs_minion_get}   {#SEND {!=get preservation %1};};
 #ALIAS {.cs_minion_drop}  {#SEND {!=drop preservation %1};};
-#ALIAS {.cs_coffin_get}   {#SEND {!wrap};};
+#ALIAS {.cs_coffin_get}   {#SEND {get preservation};#SEND {!wrap};};
 #ALIAS {.cs_coffin_drop}  {#SEND {!unwrap %1};};
 
 #ALIAS {.corpse}
@@ -137,6 +137,10 @@ auto {add} {preserve} {} {e_killed_opponent} {};
 	{
 		#LIST {my[corpse][held][list]} {ins} {1} {@fCorpseSize{%%1}};
 		#VAR {my[corpse][held][current]} {&my[corpse][held][list][]};
+		#IF {@fMinionPresent{}}
+		{
+			#IF {@fSwapCorpse{{held}{minion}}} {};
+		};
 		#UNACTION {{([\(\[])([\-\|\*]{5})[\)\]]\s.*$}}
 	} {2};
 	.cs_held_get {$_hcg[get]};
