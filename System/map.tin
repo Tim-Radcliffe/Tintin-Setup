@@ -160,66 +160,67 @@
 
 #ALIAS {.mapLoad}
 {
-		#NOP %1;
-		#IF {"%1" == ""}
+	#NOP %1;
+	#IF {"%1" == ""}
+	{
+			#ECHO {You must define a path};
+	};
+	#ELSE
+	{
+		#VAR {_mL} {};
+		#VAR {_mL[path]} {%1};
+		#REGEX {%1} {{^(.*)/([^\/]*)$}} 
 		{
-				#ECHO {You must define a path};
+			#VAR {_mL[area]} {&3};
+		}
+		{
+			#VAR {_mL[area]} {%1};
 		};
+
+		#FOREACH {*_mapVariable[]} {v}
+		{
+			#IF {"${${v}[global]}" == "1"}
+			{
+				#UNVAR {${${v}[location]}};
+			};
+			#ELSE
+			{
+				#UNVAR {$v};
+			};
+		};
+		#UNVAR {_mapVariable};        
+		
+		#LOCAL {_mapOldDir} {@fFileGetPath{$map[file]}};
+		#IF {"$_mapOldDir" != ""}
+		{
+			#KILL {class} {$path[areas]/$_mapOldDir/%*};
+		};
+
+		#VAR {map[file]}        {$_mL[path]/$_mL[area].map};
+		#UNVAR {map[area]};
+		#VAR {map[area][path]}  {$_mL[path]};
+		#VAR {map[area][name]}  {$_mL[area]};
+		.debug MAP {READ MAP: $path[areas] : $map[file]};
+		#MAP {read} {$path[areas]/$map[file]};		
+
+		.debug MAP {READ FILES: $path[areas]/${_mL[path]}/*.tin}; 
+		.file loadall {$path[areas]/${_mL[path]}/*.tin};
+
+		#FOREACH {*_mapVariable[]} {v}
+		{
+			#VAR {$v} {$_mapVariable[$v]};
+		};
+		
+		#IF {"%2" == ""}
+		{
+			#MAP GOTO 1;
+		}
 		#ELSE
 		{
-				#VAR {_mL} {};
-				#VAR {_mL[path]} {%1};
-				#REGEX {%1} {{^(.*)/([^\/]*)$}} 
-				{
-						#VAR {_mL[area]} {&3};
-				}
-				{
-						#VAR {_mL[area]} {%1};
-				};
-
-				#VAR {map[file]}        {$_mL[path]/$_mL[area].map};
-				#UNVAR {map[area]};
-				#VAR {map[area][path]}  {$_mL[path]};
-				#VAR {map[area][name]}  {$_mL[area]};
-				.debug MAP {READ MAP: $path[areas] : $map[file]};
-				#MAP {read} {$path[areas]/$map[file]};
-
-				#FOREACH {*_mapVariable[]} {v}
-				{
-					#IF {"${${v}[global]}" == "1"}
-					{
-						#UNVAR {${${v}[location]}};
-					};
-					#ELSE
-					{
-						#UNVAR {$v};
-					};
-				};
-				#UNVAR {_mapVariable};        
-				
-				#IF {"@fMapResolvePath{..}" != ""}
-				{
-						#KILL {class} {%*@fMapResolvePath{..}/%*};
-				};
-			 
-				.debug MAP {READ FILES: $path[areas]/${_mL[path]}/*.tin}; 
-				.file loadall {$path[areas]/${_mL[path]}/*.tin};
-
-				#FOREACH {*_mapVariable[]} {v}
-				{
-						#VAR {$v} {$_mapVariable[$v]};
-				};
-				
-				#IF {"%2" == ""}
-				{
-						#MAP GOTO 1;
-				}
-				#ELSE
-				{
-						#MAP GOTO %2;
-				};
-				#UNVAR {_mL};   
+			#MAP GOTO %2;
 		};
+		#UNVAR {_mL};   
+	};
 };
 
 /* Set a variable in the map area specific data file */
