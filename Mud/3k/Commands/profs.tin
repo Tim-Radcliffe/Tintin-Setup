@@ -1,0 +1,8 @@
+#ALIAS {profs}
+{
+	#ACTION {{^\s+Profession #\d : (\w+)\s+\(Level (\d+)\) \[([.o]+)\]$}}
+	{
+		#VAR {my[professions][%%2][level]} {%%3};
+	};
+	#SEND {profs};
+};
