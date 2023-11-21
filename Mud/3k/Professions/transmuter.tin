@@ -18,10 +18,10 @@
 		#CASE {"train"}
 		{
 			#ECHO {Checking satchel for ingredients that will give PXP:};
-			#FOREACH {*_craft[ingredients][]} {i}
+			#FOREACH {*craft_ingredients[]} {i}
 			{
-				#IF { $my[professions][Transmuter][level] >= $_craft[ingredients][$i][level][transmuter][min] &&
-				      $my[professions][Transmuter][level] <= $_craft[ingredients][$i][level][transmuter][max] }
+				#IF { $my[professions][Transmuter][level] >= $craft_ingredients[$i][level][Transmuter][min] &&
+				      $my[professions][Transmuter][level] <= $craft_ingredients[$i][level][Transmuter][max] }
 				{
 					#ECHO {$i};
 					#FOREACH {*_t[data][]} {q}
@@ -37,9 +37,9 @@
 		#CASE {"refine"}
 		{
 			#ECHO {Refining satchel ingredients:};
-			#FOREACH {*_craft[ingredients][]} {i}
+			#FOREACH {*craft_ingredients[]} {i}
 			{
-				#IF { $my[professions][Transmuter][level] >= $_craft[ingredients][$i][level][transmuter][min] }				
+				#IF { $my[professions][Transmuter][level] >= $craft_ingredients[$i][level][Transmuter][min] }				
 				#FOREACH {*_t[data][]} {q}
 				{
 					#IF {$_craft[satchel][$i][subtotal][$_t[data][$q][quality]] >= $_t[data][$q][quantity]}
