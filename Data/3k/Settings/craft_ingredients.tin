@@ -1,0 +1,2716 @@
+#CLASS {Data/3k/Settings/craft_ingredients.tin} OPEN
+
+#VARIABLE {craft_ingredients}
+{
+    {adamantium bar} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {77}
+                {min} {61}
+            }
+        }
+    }
+    {adamantium shards} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {95}
+                {min} {68}
+            }
+            {Enchanter} 
+            {
+                {max} {65}
+                {min} {55}
+            }
+            {Transmuter} 
+            {
+                {max} {65}
+                {min} {55}
+            }            
+        }
+    }
+    {alexandrite} 
+    {
+        {level} 
+        {
+            {Enchanter} 
+            {
+                {max} {24}
+                {min} {15}
+            }
+            {Transmuter} 
+            {
+                {max} {20}
+                {min} {10}
+            }
+        }
+    }
+    {alexandrite dust} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {50}
+                {min} {18}
+            }
+            {Enchanter} 
+            {
+                {max} {24}
+                {min} {18}
+            }
+            {Transmuter} 
+            {
+                {max} {20}
+                {min} {10}
+            }
+        }
+    }
+    {amethyst} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {53}
+                {min} {40}
+            }
+            {Enchanter} 
+            {
+                {max} {45}
+                {min} {33}
+            }
+            {Transmuter} 
+            {
+                {max} {35}
+                {min} {25}
+            }
+        }
+    }
+    {amethyst dust} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {64}
+                {min} {38}
+            }
+            {Enchanter} 
+            {
+                {max} {35}
+                {min} {31}
+            }
+            {Transmuter} 
+            {
+                {max} {35}
+                {min} {25}
+            }
+        }
+    }
+    {aquamarine} 
+    {
+        {level} 
+        {
+            {Enchanter} 
+            {
+                {max} {8}
+                {min} {1}
+            }
+            {Transmuter} 
+            {
+                {max} {10}
+                {min} {1}
+            }
+        }
+    }
+    {aquamarine dust} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {25}
+                {min} {12}
+            }
+            {Enchanter} 
+            {
+                {max} {5}
+                {min} {1}
+            }
+            {Transmuter} 
+            {
+                {max} {10}
+                {min} {1}
+            }
+        }
+    }
+    {beryl} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {33}
+                {min} {29}
+            }
+            {Enchanter} 
+            {
+                {max} {32}
+                {min} {21}
+            }
+            {Transmuter} 
+            {
+                {max} {30}
+                {min} {20}
+            }
+        }
+    }
+    {beryl dust} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {59}
+                {min} {28}
+            }
+            {Enchanter} 
+            {
+                {max} {32}
+                {min} {28}
+            }
+            {Transmuter} 
+            {
+                {max} {30}
+                {min} {20}
+            }
+        }
+    }
+    {bronze bar} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {21}
+                {min} {6}
+            }
+        }
+    }
+    {bronze shards} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {59}
+                {min} {11}
+            }
+            {Enchanter} 
+            {
+                {max} {17}
+                {min} {10}
+            }
+            {Transmuter} 
+            {
+                {max} {15}
+                {min} {7}
+            }
+        }
+    }
+    {cancer's tears} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {100}
+                {min} {90}
+            }
+            {Enchanter} 
+            {
+                {max} {102}
+                {min} {92}
+            }
+        }
+    }
+    {cat's eye} 
+    {
+        {level} 
+        {
+            {Enchanter} 
+            {
+                {max} {17}
+                {min} {10}
+            }
+            {Transmuter} 
+            {
+                {max} {15}
+                {min} {7}
+            }
+        }
+    }
+    {cat's eye dust} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {21}
+                {min} {17}
+            }
+            {Enchanter} 
+            {
+                {max} {19}
+                {min} {11}
+            }
+            {Transmuter} 
+            {
+                {max} {15}
+                {min} {7}
+            }
+        }
+    }
+    {chaostone bar} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {102}
+                {min} {86}
+            }
+        }
+    }
+    {chaostone ore} 
+    {
+        {level} 
+        {
+            {Transmuter} 
+            {
+                {max} {100}
+                {min} {90}
+            }
+        }
+    }
+    {chaostone shards} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {102}
+                {min} {97}
+            }
+            {Enchanter} 
+            {
+                {max} {99}
+                {min} {92}
+            }
+            {Transmuter} 
+            {
+                {max} {100}
+                {min} {90}
+            }
+        }
+    }
+    {copper bar} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {15}
+                {min} {1}
+            }
+        }
+    }
+    {copper shards} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {22}
+                {min} {5}
+            }
+            {Enchanter} 
+            {
+                {max} {7}
+                {min} {1}
+            }
+            {Transmuter} 
+            {
+                {max} {10}
+                {min} {1}
+            }
+        }
+    }
+    {core of air} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {86}
+                {min} {71}
+            }
+            {Enchanter} 
+            {
+                {max} {66}
+                {min} {59}
+            }
+            {Transmuter} 
+            {
+                {max} {65}
+                {min} {55}
+            }
+        }
+    }
+    {core of earth} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {80}
+                {min} {61}
+            }
+            {Enchanter} 
+            {
+                {max} {62}
+                {min} {50}
+            }
+            {Transmuter} 
+            {
+                {max} {60}
+                {min} {50}
+            }
+        }
+    }
+    {core of flame} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {65}
+                {min} {53}
+            }
+            {Enchanter} 
+            {
+                {max} {57}
+                {min} {37}
+            }
+            {Transmuter} 
+            {
+                {max} {43}
+                {min} {33}
+            }
+        }
+    }
+    {core of frost} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {76}
+                {min} {60}
+            }
+            {Enchanter} 
+            {
+                {max} {57}
+                {min} {42}
+            }
+            {Transmuter} 
+            {
+                {max} {52}
+                {min} {42}
+            }
+        }
+    }
+    {diamond} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {87}
+                {min} {78}
+            }
+            {Enchanter} 
+            {
+                {max} {84}
+                {min} {75}
+            }
+            {Transmuter} 
+            {
+                {max} {83}
+                {min} {73}
+            }
+        }
+    }
+    {diamond dust} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {98}
+                {min} {80}
+            }
+            {Enchanter} 
+            {
+                {max} {85}
+                {min} {75}
+            }
+            {Transmuter} 
+            {
+                {max} {83}
+                {min} {73}
+            }
+        }
+    }
+    {ebon bar} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {72}
+                {min} {56}
+            }
+        }
+    }
+    {ebon ore} 
+    {
+        {level} 
+        {
+            {Transmuter} 
+            {
+                {max} {60}
+                {min} {50}
+            }
+        }
+    }
+    {ebon shards} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {95}
+                {min} {66}
+            }
+            {Enchanter} 
+            {
+                {max} {58}
+                {min} {50}
+            }
+            {Transmuter} 
+            {
+                {max} {60}
+                {min} {50}
+            }
+        }
+    }
+    {emerald} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {92}
+                {min} {85}
+            }
+            {Enchanter} 
+            {
+                {max} {92}
+                {min} {80}
+            }
+            {Transmuter} 
+            {
+                {max} {90}
+                {min} {80}
+            }
+        }
+    }
+    {emerald dust} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {100}
+                {min} {81}
+            }
+            {Enchanter} 
+            {
+                {max} {90}
+                {min} {80}
+            }
+            {Transmuter} 
+            {
+                {max} {90}
+                {min} {80}
+            }
+        }
+    }
+    {essence of ascension} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {58}
+                {min} {50}
+            }
+            {Enchanter} 
+            {
+                {max} {58}
+                {min} {52}
+            }
+            {Transmuter} 
+            {
+                {max} {62}
+                {min} {52}
+            }
+        }
+    }
+    {essence of blasting} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {60}
+                {min} {52}
+            }
+            {Enchanter} 
+            {
+                {max} {59}
+                {min} {54}
+            }
+            {Transmuter} 
+            {
+                {max} {64}
+                {min} {54}
+            }
+        }
+    }
+    {essence of compassion} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {67}
+                {min} {60}
+            }
+            {Enchanter} 
+            {
+                {max} {66}
+                {min} {60}
+            }
+            {Transmuter} 
+            {
+                {max} {71}
+                {min} {61}
+            }
+        }
+    }
+    {essence of damnation} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {62}
+                {min} {54}
+            }
+            {Enchanter} 
+            {
+                {max} {61}
+                {min} {55}
+            }
+            {Transmuter} 
+            {
+                {max} {65}
+                {min} {55}
+            }
+        }
+    }
+    {essence of destruction} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {65}
+                {min} {60}
+            }
+            {Enchanter} 
+            {
+                {max} {65}
+                {min} {59}
+            }
+            {Transmuter} 
+            {
+                {max} {69}
+                {min} {59}
+            }
+        }
+    }
+    {essence of knowledge} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {70}
+                {min} {64}
+            }
+            {Enchanter} 
+            {
+                {max} {69}
+                {min} {60}
+            }
+            {Transmuter} 
+            {
+                {max} {73}
+                {min} {63}
+            }
+        }
+    }
+    {essence of light} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {51}
+                {min} {40}
+            }
+            {Enchanter} 
+            {
+                {max} {42}
+                {min} {33}
+            }
+            {Transmuter} 
+            {
+                {max} {43}
+                {min} {33}
+            }
+        }
+    }
+    {essence of might} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {62}
+                {min} {40}
+            }
+            {Enchanter} 
+            {
+                {max} {47}
+                {min} {40}
+            }
+            {Transmuter} 
+            {
+                {max} {50}
+                {min} {40}
+            }
+        }
+    }
+    {essence of rage} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {61}
+                {min} {44}
+            }
+            {Enchanter} 
+            {
+                {max} {52}
+                {min} {44}
+            }
+            {Transmuter} 
+            {
+                {max} {54}
+                {min} {44}
+            }
+        }
+    }
+    {essence of rejuvenation} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {61}
+                {min} {42}
+            }
+            {Enchanter} 
+            {
+                {max} {50}
+                {min} {43}
+            }
+            {Transmuter} 
+            {
+                {max} {53}
+                {min} {43}
+            }
+        }
+    }
+    {essence of shadow} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {43}
+                {min} {38}
+            }
+            {Enchanter} 
+            {
+                {max} {49}
+                {min} {37}
+            }
+            {Transmuter} 
+            {
+                {max} {47}
+                {min} {37}
+            }
+        }
+    }
+    {essence of soul} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {54}
+                {min} {46}
+            }
+            {Enchanter} 
+            {
+                {max} {54}
+                {min} {47}
+            }
+            {Transmuter} 
+            {
+                {max} {56}
+                {min} {46}
+            }
+        }
+    }
+    {essence of the unseen} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {65}
+                {min} {48}
+            }
+            {Enchanter} 
+            {
+                {max} {57}
+                {min} {50}
+            }
+            {Transmuter} 
+            {
+                {max} {59}
+                {min} {49}
+            }
+        }
+    }
+    {essence of water} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {47}
+                {min} {36}
+            }
+            {Enchanter} 
+            {
+                {max} {47}
+                {min} {35}
+            }
+            {Transmuter} 
+            {
+                {max} {46}
+                {min} {36}
+            }
+        }
+    }
+    {essence of willy} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {65}
+                {min} {58}
+            }
+            {Enchanter} 
+            {
+                {max} {62}
+                {min} {56}
+            }
+            {Transmuter} 
+            {
+                {max} {68}
+                {min} {58}
+            }
+        }
+    }
+    {eye of air} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {50}
+                {min} {36}
+            }
+            {Enchanter} 
+            {
+                {max} {39}
+                {min} {30}
+            }
+            {Transmuter} 
+            {
+                {max} {35}
+                {min} {25}
+            }
+        }
+    }
+    {eye of earth} 
+    {
+        {level} 
+        {
+            {Enchanter} 
+            {
+                {max} {28}
+                {min} {19}
+            }
+            {Transmuter} 
+            {
+                {max} {30}
+                {min} {20}
+            }
+        }
+    }
+    {eye of flame} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {26}
+                {min} {20}
+            }
+            {Enchanter} 
+            {
+                {max} {25}
+                {min} {5}
+            }
+            {Transmuter} 
+            {
+                {max} {15}
+                {min} {7}
+            }
+        }
+    }
+    {eye of frost} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {25}
+                {min} {20}
+            }
+            {Enchanter} 
+            {
+                {max} {25}
+                {min} {8}
+            }
+            {Transmuter} 
+            {
+                {max} {20}
+                {min} {10}
+            }
+        }
+    }
+    {fragment of ascension} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {25}
+                {min} {19}
+            }
+            {Enchanter} 
+            {
+                {max} {26}
+                {min} {20}
+            }
+            {Transmuter} 
+            {
+                {max} {31}
+                {min} {21}
+            }
+        }
+    }
+    {fragment of blasting} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {42}
+                {min} {22}
+            }
+            {Enchanter} 
+            {
+                {max} {27}
+                {min} {22}
+            }
+            {Transmuter} 
+            {
+                {max} {33}
+                {min} {23}
+            }
+        }
+    }
+    {fragment of compassion} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {35}
+                {min} {30}
+            }
+            {Enchanter} 
+            {
+                {max} {34}
+                {min} {28}
+            }
+            {Transmuter} 
+            {
+                {max} {40}
+                {min} {30}
+            }
+        }
+    }
+    {fragment of damnation} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {30}
+                {min} {23}
+            }
+            {Enchanter} 
+            {
+                {max} {28}
+                {min} {23}
+            }
+            {Transmuter} 
+            {
+                {max} {34}
+                {min} {24}
+            }
+        }
+    }
+    {fragment of destruction} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {41}
+                {min} {26}
+            }
+            {Enchanter} 
+            {
+                {max} {33}
+                {min} {27}
+            }
+            {Transmuter} 
+            {
+                {max} {38}
+                {min} {28}
+            }
+        }
+    }
+    {fragment of knowledge} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {40}
+                {min} {32}
+            }
+            {Enchanter} 
+            {
+                {max} {35}
+                {min} {28}
+            }
+            {Transmuter} 
+            {
+                {max} {42}
+                {min} {32}
+            }
+        }
+    }
+    {fragment of light} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {12}
+                {min} {1}
+            }
+            {Enchanter} 
+            {
+                {max} {10}
+                {min} {1}
+            }
+            {Transmuter} 
+            {
+                {max} {12}
+                {min} {2}
+            }
+        }
+    }
+    {fragment of might} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {19}
+                {min} {7}
+            }
+            {Enchanter} 
+            {
+                {max} {15}
+                {min} {10}
+            }
+            {Transmuter} 
+            {
+                {max} {19}
+                {min} {9}
+            }
+        }
+    }
+    {fragment of rage} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {20}
+                {min} {13}
+            }
+            {Enchanter} 
+            {
+                {max} {20}
+                {min} {12}
+            }
+            {Transmuter} 
+            {
+                {max} {23}
+                {min} {13}
+            }
+        }
+    }
+    {fragment of rejuvenation} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {17}
+                {min} {9}
+            }
+            {Transmuter} 
+            {
+                {max} {22}
+                {min} {12}
+            }
+        }
+    }
+    {fragment of shadow} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {29}
+                {min} {5}
+            }
+            {Enchanter} 
+            {
+                {max} {17}
+                {min} {7}
+            }
+            {Transmuter} 
+            {
+                {max} {16}
+                {min} {6}
+            }
+        }
+    }
+    {fragment of soul} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {32}
+                {min} {15}
+            }
+            {Enchanter} 
+            {
+                {max} {22}
+                {min} {15}
+            }
+            {Transmuter} 
+            {
+                {max} {25}
+                {min} {15}
+            }
+        }
+    }
+    {fragment of the unseen} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {23}
+                {min} {17}
+            }
+            {Enchanter} 
+            {
+                {max} {25}
+                {min} {18}
+            }
+            {Transmuter} 
+            {
+                {max} {28}
+                {min} {18}
+            }
+        }
+    }
+    {fragment of water} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {31}
+                {min} {3}
+            }
+            {Enchanter} 
+            {
+                {max} {13}
+                {min} {3}
+            }
+            {Transmuter} 
+            {
+                {max} {15}
+                {min} {5}
+            }
+        }
+    }
+    {fragment of willy} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {31}
+                {min} {20}
+            }
+            {Enchanter} 
+            {
+                {max} {30}
+                {min} {24}
+            }
+            {Transmuter} 
+            {
+                {max} {37}
+                {min} {27}
+            }
+        }
+    }
+    {garnet} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {29}
+                {min} {25}
+            }
+            {Enchanter} 
+            {
+                {max} {22}
+                {min} {15}
+            }
+            {Transmuter} 
+            {
+                {max} {15}
+                {min} {7}
+            }
+        }
+    }
+    {garnet dust} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {36}
+                {min} {16}
+            }
+            {Enchanter} 
+            {
+                {max} {25}
+                {min} {15}
+            }
+            {Transmuter} 
+            {
+                {max} {15}
+                {min} {7}
+            }
+        }
+    }
+    {ghoti's tears} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {85}
+                {min} {75}
+            }
+            {Enchanter} 
+            {
+                {max} {73}
+                {min} {64}
+            }
+            {Transmuter} 
+            {
+                {max} {70}
+                {min} {60}
+            }
+        }
+    }
+    {gold bar} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {52}
+                {min} {36}
+            }
+        }
+    }
+    {gold shards} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {72}
+                {min} {46}
+            }
+            {Enchanter} 
+            {
+                {max} {38}
+                {min} {29}
+            }
+            {Transmuter} 
+            {
+                {max} {35}
+                {min} {25}
+            }
+        }
+    }
+    {happy ed's tears} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {60}
+                {min} {50}
+            }
+            {Enchanter} 
+            {
+                {max} {49}
+                {min} {37}
+            }
+            {Transmuter} 
+            {
+                {max} {35}
+                {min} {25}
+            }
+        }
+    }
+    {heart of ascension} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {90}
+                {min} {84}
+            }
+            {Enchanter} 
+            {
+                {max} {91}
+                {min} {85}
+            }
+            {Transmuter} 
+            {
+                {max} {95}
+                {min} {85}
+            }
+        }
+    }
+    {heart of blasting} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {92}
+                {min} {86}
+            }
+            {Enchanter} 
+            {
+                {max} {92}
+                {min} {87}
+            }
+            {Transmuter} 
+            {
+                {max} {97}
+                {min} {87}
+            }
+        }
+    }
+    {heart of compassion} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {98}
+                {min} {91}
+            }
+            {Enchanter} 
+            {
+                {max} {99}
+                {min} {93}
+            }
+            {Transmuter} 
+            {
+                {max} {104}
+                {min} {94}
+            }
+        }
+    }
+    {heart of damnation} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {96}
+                {min} {88}
+            }
+            {Enchanter} 
+            {
+                {max} {94}
+                {min} {88}
+            }
+            {Transmuter} 
+            {
+                {max} {98}
+                {min} {88}
+            }
+        }
+    }
+    {heart of destruction} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {97}
+                {min} {92}
+            }
+            {Enchanter} 
+            {
+                {max} {98}
+                {min} {92}
+            }
+            {Transmuter} 
+            {
+                {max} {102}
+                {min} {92}
+            }
+        }
+    }
+    {heart of knowledge} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {100}
+                {min} {90}
+            }
+            {Enchanter} 
+            {
+                {max} {102}
+                {min} {93}
+            }
+            {Transmuter} 
+            {
+                {max} {106}
+                {min} {96}
+            }
+        }
+    }
+    {heart of light} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {71}
+                {min} {61}
+            }
+            {Enchanter} 
+            {
+                {max} {75}
+                {min} {66}
+            }
+            {Transmuter} 
+            {
+                {max} {76}
+                {min} {66}
+            }
+        }
+    }
+    {heart of might} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {98}
+                {min} {72}
+            }
+            {Enchanter} 
+            {
+                {max} {80}
+                {min} {75}
+            }
+            {Transmuter} 
+            {
+                {max} {83}
+                {min} {73}
+            }
+        }
+    }
+    {heart of rage} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {97}
+                {min} {77}
+            }
+            {Enchanter} 
+            {
+                {max} {85}
+                {min} {77}
+            }
+            {Transmuter} 
+            {
+                {max} {87}
+                {min} {77}
+            }
+        }
+    }
+    {heart of rejuvenation} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {81}
+                {min} {70}
+            }
+            {Enchanter} 
+            {
+                {max} {83}
+                {min} {76}
+            }
+            {Transmuter} 
+            {
+                {max} {86}
+                {min} {76}
+            }
+        }
+    }
+    {heart of shadow} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {82}
+                {min} {69}
+            }
+            {Enchanter} 
+            {
+                {max} {82}
+                {min} {70}
+            }
+            {Transmuter} 
+            {
+                {max} {80}
+                {min} {70}
+            }
+        }
+    }
+    {heart of soul} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {90}
+                {min} {79}
+            }
+            {Enchanter} 
+            {
+                {max} {87}
+                {min} {80}
+            }
+            {Transmuter} 
+            {
+                {max} {89}
+                {min} {79}
+            }
+        }
+    }
+    {heart of the unseen} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {87}
+                {min} {80}
+            }
+            {Enchanter} 
+            {
+                {max} {90}
+                {min} {83}
+            }
+            {Transmuter} 
+            {
+                {max} {92}
+                {min} {82}
+            }
+        }
+    }
+    {heart of water} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {79}
+                {min} {65}
+            }
+            {Enchanter} 
+            {
+                {max} {78}
+                {min} {68}
+            }
+            {Transmuter} 
+            {
+                {max} {79}
+                {min} {69}
+            }
+        }
+    }
+    {heart of willy} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {99}
+                {min} {90}
+            }
+            {Enchanter} 
+            {
+                {max} {95}
+                {min} {89}
+            }
+            {Transmuter} 
+            {
+                {max} {101}
+                {min} {91}
+            }
+        }
+    }
+    {heliodor} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {70}
+                {min} {54}
+            }
+            {Enchanter} 
+            {
+                {max} {56}
+                {min} {43}
+            }
+            {Transmuter} 
+            {
+                {max} {43}
+                {min} {33}
+            }
+        }
+    }
+    {heliodor dust} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {69}
+                {min} {53}
+            }
+            {Enchanter} 
+            {
+                {max} {58}
+                {min} {42}
+            }
+            {Transmuter} 
+            {
+                {max} {43}
+                {min} {33}
+            }
+        }
+    }
+    {hematite} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {70}
+                {min} {52}
+            }
+            {Enchanter} 
+            {
+                {max} {54}
+                {min} {47}
+            }
+            {Transmuter} 
+            {
+                {max} {43}
+                {min} {33}
+            }
+        }
+    }
+    {hematite dust} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {69}
+                {min} {50}
+            }
+            {Enchanter} 
+            {
+                {max} {51}
+                {min} {37}
+            }
+            {Transmuter} 
+            {
+                {max} {43}
+                {min} {33}
+            }
+        }
+    }
+    {iron bar} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {27}
+                {min} {11}
+            }
+        }
+    }
+    {iron shards} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {34}
+                {min} {16}
+            }
+            {Enchanter} 
+            {
+                {max} {17}
+                {min} {10}
+            }
+            {Transmuter} 
+            {
+                {max} {20}
+                {min} {10}
+            }
+        }
+    }
+    {major gem} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {100}
+                {min} {52}
+            }
+        }
+    }
+    {minor gem} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {95}
+                {min} {12}
+            }
+        }
+    }
+    {mithril bar} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {62}
+                {min} {46}
+            }
+        }
+    }
+    {mithril ore} 
+    {
+        {level} 
+        {
+            {Transmuter} 
+            {
+                {max} {43}
+                {min} {33}
+            }
+        }
+    }
+    {mithril shards} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {70}
+                {min} {51}
+            }
+            {Enchanter} 
+            {
+                {max} {47}
+                {min} {35}
+            }
+            {Transmuter} 
+            {
+                {max} {43}
+                {min} {33}
+            }
+        }
+    }
+    {morganite} 
+    {
+        {level} 
+        {
+            {Enchanter} 
+            {
+                {max} {15}
+                {min} {2}
+            }
+            {Transmuter} 
+            {
+                {max} {10}
+                {min} {1}
+            }
+        }
+    }
+    {morganite dust} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {25}
+                {min} {14}
+            }
+            {Enchanter} 
+            {
+                {max} {13}
+                {min} {5}
+            }
+            {Transmuter} 
+            {
+                {max} {10}
+                {min} {1}
+            }
+        }
+    }
+    {nethernium bar} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {87}
+                {min} {71}
+            }
+        }
+    }
+    {nethernium ore} 
+    {
+        {level} 
+        {
+            {Transmuter} 
+            {
+                {max} {75}
+                {min} {65}
+            }
+        }
+    }
+    {nethernium shards} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {100}
+                {min} {80}
+            }
+            {Enchanter} 
+            {
+                {max} {75}
+                {min} {68}
+            }
+            {Transmuter} 
+            {
+                {max} {75}
+                {min} {65}
+            }
+        }
+    }
+    {obsidian bar} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {82}
+                {min} {66}
+            }
+        }
+    }
+    {obsidian ore} 
+    {
+        {level} 
+        {
+            {Transmuter} 
+            {
+                {max} {70}
+                {min} {60}
+            }
+        }
+    }
+    {obsidian shards} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {95}
+                {min} {75}
+            }
+            {Enchanter} 
+            {
+                {max} {71}
+                {min} {61}
+            }
+            {Transmuter} 
+            {
+                {max} {70}
+                {min} {60}
+            }
+        }
+    }
+    {opal} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {96}
+                {min} {65}
+            }
+            {Enchanter} 
+            {
+                {max} {70}
+                {min} {60}
+            }
+            {Transmuter} 
+            {
+                {max} {70}
+                {min} {60}
+            }
+        }
+    }
+    {opal dust} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {96}
+                {min} {70}
+            }
+            {Enchanter} 
+            {
+                {max} {83}
+                {min} {60}
+            }
+            {Transmuter} 
+            {
+                {max} {70}
+                {min} {60}
+            }
+        }
+    }
+    {pearl} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {76}
+                {min} {65}
+            }
+            {Enchanter} 
+            {
+                {max} {69}
+                {min} {55}
+            }
+            {Transmuter} 
+            {
+                {max} {65}
+                {min} {55}
+            }
+        }
+    }
+    {pearl dust} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {89}
+                {min} {66}
+            }
+            {Enchanter} 
+            {
+                {max} {68}
+                {min} {57}
+            }
+            {Transmuter} 
+            {
+                {max} {65}
+                {min} {55}
+            }
+        }
+    }
+    {peridot} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {75}
+                {min} {55}
+            }
+            {Enchanter} 
+            {
+                {max} {61}
+                {min} {49}
+            }
+            {Transmuter} 
+            {
+                {max} {52}
+                {min} {42}
+            }
+        }
+    }
+    {peridot dust} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {80}
+                {min} {61}
+            }
+            {Enchanter} 
+            {
+                {max} {63}
+                {min} {48}
+            }
+            {Transmuter} 
+            {
+                {max} {52}
+                {min} {42}
+            }
+        }
+    }
+    {phasemetal bar} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {98}
+                {min} {81}
+            }
+        }
+    }
+    {phasemetal ore} 
+    {
+        {level} 
+        {
+            {Transmuter} 
+            {
+                {max} {90}
+                {min} {80}
+            }
+        }
+    }
+    {phasemetal shards} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {102}
+                {min} {86}
+            }
+            {Enchanter} 
+            {
+                {max} {95}
+                {min} {80}
+            }
+            {Transmuter} 
+            {
+                {max} {90}
+                {min} {80}
+            }
+        }
+    }
+    {pyrite} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {50}
+                {min} {22}
+            }
+            {Enchanter} 
+            {
+                {max} {31}
+                {min} {23}
+            }
+            {Transmuter} 
+            {
+                {max} {30}
+                {min} {20}
+            }
+        }
+    }
+    {pyrite dust} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {49}
+                {min} {24}
+            }
+            {Enchanter} 
+            {
+                {max} {29}
+                {min} {22}
+            }
+            {Transmuter} 
+            {
+                {max} {30}
+                {min} {20}
+            }
+        }
+    }
+    {roan's tears} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {40}
+                {min} {26}
+            }
+            {Enchanter} 
+            {
+                {max} {33}
+                {min} {21}
+            }
+            {Transmuter} 
+            {
+                {max} {30}
+                {min} {20}
+            }
+        }
+    }
+    {ruby} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {97}
+                {min} {86}
+            }
+            {Enchanter} 
+            {
+                {max} {101}
+                {min} {92}
+            }
+            {Transmuter} 
+            {
+                {max} {100}
+                {min} {90}
+            }
+        }
+    }
+    {ruby dust} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {96}
+                {min} {91}
+            }
+            {Enchanter} 
+            {
+                {max} {102}
+                {min} {90}
+            }
+        }
+    }
+    {sapphire} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {93}
+                {min} {85}
+            }
+            {Enchanter} 
+            {
+                {max} {97}
+                {min} {85}
+            }
+            {Transmuter} 
+            {
+                {max} {90}
+                {min} {80}
+            }
+        }
+    }
+    {sapphire dust} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {99}
+                {min} {82}
+            }
+            {Enchanter} 
+            {
+                {max} {100}
+                {min} {85}
+            }
+            {Transmuter} 
+            {
+                {max} {90}
+                {min} {80}
+            }
+        }
+    }
+    {shansabyk's tears} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {90}
+                {min} {81}
+            }
+            {Enchanter} 
+            {
+                {max} {87}
+                {min} {75}
+            }
+        }
+    }
+    {shansabyks tears} 
+    {
+        {level} 
+        {
+            {Transmuter} 
+            {
+                {max} {83}
+                {min} {73}
+            }
+        }
+    }
+    {silver bar} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {42}
+                {min} {26}
+            }
+        }
+    }
+    {silver shards} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {62}
+                {min} {36}
+            }
+            {Enchanter} 
+            {
+                {max} {33}
+                {min} {18}
+            }
+            {Transmuter} 
+            {
+                {max} {30}
+                {min} {20}
+            }
+        }
+    }
+    {standard gem} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {102}
+                {min} {27}
+            }
+        }
+    }
+    {star of air} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {95}
+                {min} {84}
+            }
+            {Enchanter} 
+            {
+                {max} {91}
+                {min} {82}
+            }
+            {Transmuter} 
+            {
+                {max} {90}
+                {min} {80}
+            }
+        }
+    }
+    {star of earth} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {97}
+                {min} {93}
+            }
+            {Enchanter} 
+            {
+                {max} {95}
+                {min} {89}
+            }
+            {Transmuter} 
+            {
+                {max} {90}
+                {min} {80}
+            }
+        }
+    }
+    {star of flame} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {95}
+                {min} {76}
+            }
+            {Enchanter} 
+            {
+                {max} {90}
+                {min} {68}
+            }
+            {Transmuter} 
+            {
+                {max} {75}
+                {min} {65}
+            }
+        }
+    }
+    {star of frost} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {90}
+                {min} {79}
+            }
+            {Enchanter} 
+            {
+                {max} {90}
+                {min} {73}
+            }
+            {Transmuter} 
+            {
+                {max} {83}
+                {min} {73}
+            }
+        }
+    }
+    {steel bar} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {32}
+                {min} {16}
+            }
+        }
+    }
+    {steel shards} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {40}
+                {min} {26}
+            }
+            {Enchanter} 
+            {
+                {max} {22}
+                {min} {15}
+            }
+            {Transmuter} 
+            {
+                {max} {25}
+                {min} {15}
+            }
+        }
+    }
+    {tiger's eye} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {22}
+                {min} {18}
+            }
+            {Enchanter} 
+            {
+                {max} {7}
+                {min} {1}
+            }
+            {Transmuter} 
+            {
+                {max} {10}
+                {min} {1}
+            }
+        }
+    }
+    {tiger's eye dust} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {24}
+                {min} {11}
+            }
+            {Enchanter} 
+            {
+                {max} {11}
+                {min} {3}
+            }
+            {Transmuter} 
+            {
+                {max} {10}
+                {min} {1}
+            }
+        }
+    }
+    {titanium bar} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {67}
+                {min} {51}
+            }
+        }
+    }
+    {titanium ore} 
+    {
+        {level} 
+        {
+            {Transmuter} 
+            {
+                {max} {52}
+                {min} {42}
+            }
+        }
+    }
+    {titanium shards} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {95}
+                {min} {58}
+            }
+            {Enchanter} 
+            {
+                {max} {54}
+                {min} {44}
+            }
+            {Transmuter} 
+            {
+                {max} {52}
+                {min} {42}
+            }
+        }
+    }
+    {topaz} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {67}
+                {min} {41}
+            }
+            {Enchanter} 
+            {
+                {max} {47}
+                {min} {33}
+            }
+            {Transmuter} 
+            {
+                {max} {35}
+                {min} {25}
+            }
+        }
+    }
+    {topaz dust} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {60}
+                {min} {40}
+            }
+            {Enchanter} 
+            {
+                {max} {39}
+                {min} {33}
+            }
+            {Transmuter} 
+            {
+                {max} {35}
+                {min} {25}
+            }
+        }
+    }
+    {tourmaline} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {60}
+                {min} {31}
+            }
+            {Enchanter} 
+            {
+                {max} {35}
+                {min} {28}
+            }
+            {Transmuter} 
+            {
+                {max} {30}
+                {min} {20}
+            }
+        }
+    }
+    {tourmaline dust} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {58}
+                {min} {30}
+            }
+            {Enchanter} 
+            {
+                {max} {34}
+                {min} {27}
+            }
+            {Transmuter} 
+            {
+                {max} {30}
+                {min} {20}
+            }
+        }
+    }
+    {voidstone bar} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {92}
+                {min} {76}
+            }
+        }
+    }
+    {voidstone ore} 
+    {
+        {level} 
+        {
+            {Transmuter} 
+            {
+                {max} {83}
+                {min} {73}
+            }
+        }
+    }
+    {voidstone shards} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {102}
+                {min} {86}
+            }
+            {Enchanter} 
+            {
+                {max} {82}
+                {min} {73}
+            }
+            {Transmuter} 
+            {
+                {max} {83}
+                {min} {73}
+            }
+        }
+    }
+}
+
+#CLASS {Data/3k/Settings/craft_ingredients.tin} CLOSE

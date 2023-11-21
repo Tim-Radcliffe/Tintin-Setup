@@ -1,0 +1,4455 @@
+#CLASS {Data/3k/Settings/craft_recipes_blacksmith.tin} OPEN
+
+#VARIABLE {craft_recipes_blacksmith}
+{
+    {1-handed adamantium axe} 
+    {
+        {ingredients} 
+        {
+            {adamantium bar} {3}
+            {core of frost} {1}
+            {heart of water} {1}
+            {major gem} {1}
+            {titanium shards} {1}
+        }
+        {level} 
+        {
+            {max} {71}
+            {min} {67}
+        }
+    }
+    {1-handed adamantium dagger} 
+    {
+        {ingredients} 
+        {
+            {adamantium bar} {3}
+            {core of earth} {1}
+            {heart of shadow} {1}
+            {major gem} {1}
+            {titanium shards} {1}
+        }
+        {level} 
+        {
+            {max} {73}
+            {min} {69}
+        }
+    }
+    {1-handed adamantium lance} 
+    {
+        {ingredients} 
+        {
+            {adamantium bar} {3}
+            {core of frost} {1}
+            {heart of light} {1}
+            {major gem} {1}
+            {titanium shards} {1}
+        }
+        {level} 
+        {
+            {max} {67}
+            {min} {63}
+        }
+    }
+    {1-handed adamantium mace} 
+    {
+        {ingredients} 
+        {
+            {adamantium bar} {3}
+            {heart of water} {1}
+            {major gem} {1}
+            {peridot} {1}
+            {titanium shards} {1}
+        }
+        {level} 
+        {
+            {max} {69}
+            {min} {65}
+        }
+    }
+    {1-handed adamantium spear} 
+    {
+        {ingredients} 
+        {
+            {adamantium bar} {3}
+            {heart of light} {1}
+            {major gem} {1}
+            {peridot dust} {1}
+            {titanium shards} {1}
+        }
+        {level} 
+        {
+            {max} {65}
+            {min} {61}
+        }
+    }
+    {1-handed adamantium sword} 
+    {
+        {ingredients} 
+        {
+            {adamantium bar} {3}
+            {core of earth} {1}
+            {heart of shadow} {1}
+            {major gem} {1}
+            {titanium shards} {1}
+        }
+        {level} 
+        {
+            {max} {74}
+            {min} {70}
+        }
+    }
+    {1-handed bronze axe} 
+    {
+        {ingredients} 
+        {
+            {bronze bar} {3}
+            {copper shards} {1}
+            {fragment of rejuvenation} {1}
+        }
+        {level} 
+        {
+            {max} {16}
+            {min} {12}
+        }
+    }
+    {1-handed bronze dagger} 
+    {
+        {ingredients} 
+        {
+            {bronze bar} {3}
+            {copper shards} {1}
+            {fragment of rage} {1}
+        }
+        {level} 
+        {
+            {max} {18}
+            {min} {14}
+        }
+    }
+    {1-handed bronze lance} 
+    {
+        {ingredients} 
+        {
+            {bronze bar} {3}
+            {copper shards} {1}
+            {fragment of shadow} {1}
+        }
+        {level} 
+        {
+            {max} {12}
+            {min} {8}
+        }
+    }
+    {1-handed bronze mace} 
+    {
+        {ingredients} 
+        {
+            {bronze bar} {3}
+            {copper shards} {1}
+            {fragment of might} {1}
+        }
+        {level} 
+        {
+            {max} {14}
+            {min} {10}
+        }
+    }
+    {1-handed bronze spear} 
+    {
+        {ingredients} 
+        {
+            {bronze bar} {3}
+            {copper shards} {1}
+            {fragment of water} {1}
+        }
+        {level} 
+        {
+            {max} {10}
+            {min} {6}
+        }
+    }
+    {1-handed bronze sword} 
+    {
+        {ingredients} 
+        {
+            {bronze bar} {3}
+            {copper shards} {1}
+            {fragment of rage} {1}
+        }
+        {level} 
+        {
+            {max} {19}
+            {min} {15}
+        }
+    }
+    {1-handed chaostone axe} 
+    {
+        {ingredients} 
+        {
+            {chaostone bar} {3}
+            {heart of destruction} {1}
+            {major gem} {2}
+            {nethernium shards} {3}
+            {phasemetal shards} {3}
+            {ruby dust} {1}
+            {voidstone shards} {3}
+        }
+        {level} 
+        {
+            {max} {96}
+            {min} {92}
+        }
+    }
+    {1-handed chaostone dagger} 
+    {
+        {ingredients} 
+        {
+            {cancer's tears} {1}
+            {chaostone bar} {3}
+            {heart of compassion} {1}
+            {major gem} {2}
+            {nethernium shards} {3}
+            {phasemetal shards} {3}
+            {voidstone shards} {3}
+        }
+        {level} 
+        {
+            {max} {98}
+            {min} {94}
+        }
+    }
+    {1-handed chaostone lance} 
+    {
+        {ingredients} 
+        {
+            {chaostone bar} {3}
+            {heart of damnation} {1}
+            {major gem} {2}
+            {nethernium shards} {3}
+            {phasemetal shards} {3}
+            {sapphire dust} {1}
+            {voidstone shards} {3}
+        }
+        {level} 
+        {
+            {max} {92}
+            {min} {88}
+        }
+    }
+    {1-handed chaostone mace} 
+    {
+        {ingredients} 
+        {
+            {chaostone bar} {3}
+            {heart of willy} {1}
+            {major gem} {2}
+            {nethernium shards} {3}
+            {phasemetal shards} {3}
+            {ruby} {1}
+            {voidstone shards} {3}
+        }
+        {level} 
+        {
+            {max} {94}
+            {min} {90}
+        }
+    }
+    {1-handed chaostone spear} 
+    {
+        {ingredients} 
+        {
+            {chaostone bar} {3}
+            {heart of blasting} {1}
+            {major gem} {2}
+            {nethernium shards} {3}
+            {phasemetal shards} {3}
+            {ruby} {2}
+            {voidstone shards} {3}
+        }
+        {level} 
+        {
+            {max} {90}
+            {min} {86}
+        }
+    }
+    {1-handed chaostone sword} 
+    {
+        {ingredients} 
+        {
+            {cancer's tears} {2}
+            {chaostone bar} {3}
+            {heart of knowledge} {1}
+            {major gem} {2}
+            {nethernium shards} {3}
+            {phasemetal shards} {3}
+            {voidstone shards} {3}
+        }
+        {level} 
+        {
+            {max} {99}
+            {min} {95}
+        }
+    }
+    {1-handed copper axe} 
+    {
+        {ingredients} 
+        {
+            {copper bar} {3}
+            {fragment of might} {1}
+        }
+        {level} 
+        {
+            {max} {11}
+            {min} {7}
+        }
+    }
+    {1-handed copper dagger} 
+    {
+        {ingredients} 
+        {
+            {copper bar} {3}
+            {fragment of rejuvenation} {1}
+        }
+        {level} 
+        {
+            {max} {13}
+            {min} {9}
+        }
+    }
+    {1-handed copper lance} 
+    {
+        {ingredients} 
+        {
+            {copper bar} {3}
+            {fragment of water} {1}
+        }
+        {level} 
+        {
+            {max} {7}
+            {min} {3}
+        }
+    }
+    {1-handed copper mace} 
+    {
+        {ingredients} 
+        {
+            {copper bar} {3}
+            {fragment of shadow} {1}
+        }
+        {level} 
+        {
+            {max} {9}
+            {min} {5}
+        }
+    }
+    {1-handed copper spear} 
+    {
+        {ingredients} 
+        {
+            {copper bar} {3}
+            {fragment of light} {1}
+        }
+        {level} 
+        {
+            {max} {5}
+            {min} {1}
+        }
+    }
+    {1-handed copper sword} 
+    {
+        {ingredients} 
+        {
+            {copper bar} {3}
+            {fragment of rejuvenation} {1}
+        }
+        {level} 
+        {
+            {max} {14}
+            {min} {10}
+        }
+    }
+    {1-handed ebon axe} 
+    {
+        {ingredients} 
+        {
+            {ebon bar} {3}
+            {essence of compassion} {1}
+            {hematite dust} {2}
+            {mithril shards} {1}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {66}
+            {min} {62}
+        }
+    }
+    {1-handed ebon dagger} 
+    {
+        {ingredients} 
+        {
+            {ebon bar} {3}
+            {essence of knowledge} {1}
+            {heliodor dust} {2}
+            {mithril shards} {1}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {68}
+            {min} {64}
+        }
+    }
+    {1-handed ebon lance} 
+    {
+        {ingredients} 
+        {
+            {ebon bar} {3}
+            {essence of willy} {1}
+            {heliodor dust} {2}
+            {mithril shards} {1}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {62}
+            {min} {58}
+        }
+    }
+    {1-handed ebon mace} 
+    {
+        {ingredients} 
+        {
+            {core of flame} {2}
+            {ebon bar} {3}
+            {essence of destruction} {1}
+            {mithril shards} {1}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {64}
+            {min} {60}
+        }
+    }
+    {1-handed ebon spear} 
+    {
+        {ingredients} 
+        {
+            {ebon bar} {3}
+            {essence of damnation} {1}
+            {hematite dust} {2}
+            {mithril shards} {1}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {60}
+            {min} {56}
+        }
+    }
+    {1-handed ebon sword} 
+    {
+        {ingredients} 
+        {
+            {ebon bar} {3}
+            {essence of knowledge} {1}
+            {heliodor} {2}
+            {mithril shards} {1}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {69}
+            {min} {65}
+        }
+    }
+    {1-handed gold axe} 
+    {
+        {ingredients} 
+        {
+            {amethyst} {1}
+            {essence of rejuvenation} {1}
+            {gold bar} {3}
+            {silver shards} {1}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {46}
+            {min} {42}
+        }
+    }
+    {1-handed gold dagger} 
+    {
+        {ingredients} 
+        {
+            {essence of rage} {1}
+            {gold bar} {3}
+            {silver shards} {1}
+            {standard gem} {1}
+            {topaz dust} {1}
+        }
+        {level} 
+        {
+            {max} {48}
+            {min} {44}
+        }
+    }
+    {1-handed gold lance} 
+    {
+        {ingredients} 
+        {
+            {amethyst dust} {1}
+            {essence of shadow} {1}
+            {gold bar} {3}
+            {silver shards} {1}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {42}
+            {min} {38}
+        }
+    }
+    {1-handed gold mace} 
+    {
+        {ingredients} 
+        {
+            {essence of might} {1}
+            {gold bar} {3}
+            {silver shards} {1}
+            {standard gem} {1}
+            {topaz dust} {1}
+        }
+        {level} 
+        {
+            {max} {44}
+            {min} {40}
+        }
+    }
+    {1-handed gold spear} 
+    {
+        {ingredients} 
+        {
+            {essence of water} {1}
+            {gold bar} {3}
+            {pyrite dust} {1}
+            {silver shards} {1}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {40}
+            {min} {36}
+        }
+    }
+    {1-handed gold sword} 
+    {
+        {ingredients} 
+        {
+            {essence of rage} {1}
+            {gold bar} {3}
+            {silver shards} {1}
+            {standard gem} {1}
+            {topaz} {1}
+        }
+        {level} 
+        {
+            {max} {49}
+            {min} {45}
+        }
+    }
+    {1-handed iron axe} 
+    {
+        {ingredients} 
+        {
+            {bronze shards} {1}
+            {copper shards} {1}
+            {fragment of the unseen} {1}
+            {iron bar} {3}
+        }
+        {level} 
+        {
+            {max} {21}
+            {min} {17}
+        }
+    }
+    {1-handed iron dagger} 
+    {
+        {ingredients} 
+        {
+            {aquamarine dust} {1}
+            {bronze shards} {1}
+            {fragment of ascension} {1}
+            {iron bar} {3}
+        }
+        {level} 
+        {
+            {max} {23}
+            {min} {19}
+        }
+    }
+    {1-handed iron lance} 
+    {
+        {ingredients} 
+        {
+            {bronze shards} {1}
+            {copper shards} {1}
+            {fragment of rage} {1}
+            {iron bar} {3}
+        }
+        {level} 
+        {
+            {max} {17}
+            {min} {13}
+        }
+    }
+    {1-handed iron mace} 
+    {
+        {ingredients} 
+        {
+            {bronze shards} {1}
+            {fragment of soul} {1}
+            {iron bar} {3}
+            {tiger's eye dust} {1}
+        }
+        {level} 
+        {
+            {max} {19}
+            {min} {15}
+        }
+    }
+    {1-handed iron spear} 
+    {
+        {ingredients} 
+        {
+            {bronze shards} {1}
+            {fragment of rejuvenation} {1}
+            {iron bar} {3}
+            {tiger's eye dust} {1}
+        }
+        {level} 
+        {
+            {max} {15}
+            {min} {11}
+        }
+    }
+    {1-handed iron sword} 
+    {
+        {ingredients} 
+        {
+            {bronze shards} {1}
+            {fragment of ascension} {1}
+            {iron bar} {3}
+            {tiger's eye dust} {1}
+        }
+        {level} 
+        {
+            {max} {24}
+            {min} {20}
+        }
+    }
+    {1-handed mithril axe} 
+    {
+        {ingredients} 
+        {
+            {amethyst dust} {1}
+            {essence of blasting} {1}
+            {gold shards} {1}
+            {mithril bar} {3}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {56}
+            {min} {52}
+        }
+    }
+    {1-handed mithril dagger} 
+    {
+        {ingredients} 
+        {
+            {essence of damnation} {1}
+            {gold shards} {1}
+            {mithril bar} {3}
+            {standard gem} {1}
+            {tourmaline dust} {1}
+        }
+        {level} 
+        {
+            {max} {58}
+            {min} {54}
+        }
+    }
+    {1-handed mithril lance} 
+    {
+        {ingredients} 
+        {
+            {amethyst dust} {1}
+            {essence of the unseen} {1}
+            {gold shards} {1}
+            {mithril bar} {3}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {52}
+            {min} {48}
+        }
+    }
+    {1-handed mithril mace} 
+    {
+        {ingredients} 
+        {
+            {essence of ascension} {1}
+            {gold shards} {1}
+            {happy ed's tears} {1}
+            {mithril bar} {3}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {54}
+            {min} {50}
+        }
+    }
+    {1-handed mithril spear} 
+    {
+        {ingredients} 
+        {
+            {essence of soul} {1}
+            {gold shards} {1}
+            {mithril bar} {3}
+            {pyrite} {1}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {50}
+            {min} {46}
+        }
+    }
+    {1-handed mithril sword} 
+    {
+        {ingredients} 
+        {
+            {essence of damnation} {1}
+            {gold shards} {1}
+            {mithril bar} {3}
+            {standard gem} {1}
+            {tourmaline} {1}
+        }
+        {level} 
+        {
+            {max} {59}
+            {min} {55}
+        }
+    }
+    {1-handed nethernium axe} 
+    {
+        {ingredients} 
+        {
+            {adamantium shards} {1}
+            {heart of rage} {1}
+            {major gem} {1}
+            {minor gem} {1}
+            {nethernium bar} {3}
+            {opal dust} {1}
+            {titanium shards} {1}
+        }
+        {level} 
+        {
+            {max} {81}
+            {min} {77}
+        }
+    }
+    {1-handed nethernium dagger} 
+    {
+        {ingredients} 
+        {
+            {adamantium shards} {1}
+            {heart of soul} {1}
+            {major gem} {1}
+            {minor gem} {1}
+            {nethernium bar} {3}
+            {opal dust} {1}
+            {titanium shards} {1}
+        }
+        {level} 
+        {
+            {max} {83}
+            {min} {79}
+        }
+    }
+    {1-handed nethernium lance} 
+    {
+        {ingredients} 
+        {
+            {adamantium shards} {1}
+            {core of air} {1}
+            {heart of shadow} {1}
+            {major gem} {1}
+            {minor gem} {1}
+            {nethernium bar} {3}
+            {titanium shards} {1}
+        }
+        {level} 
+        {
+            {max} {77}
+            {min} {73}
+        }
+    }
+    {1-handed nethernium mace} 
+    {
+        {ingredients} 
+        {
+            {adamantium shards} {1}
+            {heart of rejuvenation} {1}
+            {major gem} {1}
+            {minor gem} {1}
+            {nethernium bar} {3}
+            {pearl dust} {1}
+            {titanium shards} {1}
+        }
+        {level} 
+        {
+            {max} {79}
+            {min} {75}
+        }
+    }
+    {1-handed nethernium spear} 
+    {
+        {ingredients} 
+        {
+            {adamantium shards} {1}
+            {heart of shadow} {1}
+            {major gem} {1}
+            {minor gem} {1}
+            {nethernium bar} {3}
+            {pearl} {1}
+            {titanium shards} {1}
+        }
+        {level} 
+        {
+            {max} {75}
+            {min} {71}
+        }
+    }
+    {1-handed nethernium sword} 
+    {
+        {ingredients} 
+        {
+            {adamantium shards} {1}
+            {ghoti's tears} {1}
+            {heart of the unseen} {1}
+            {major gem} {1}
+            {minor gem} {1}
+            {nethernium bar} {3}
+            {titanium shards} {1}
+        }
+        {level} 
+        {
+            {max} {84}
+            {min} {80}
+        }
+    }
+    {1-handed obsidian axe} 
+    {
+        {ingredients} 
+        {
+            {core of frost} {2}
+            {ebon shards} {1}
+            {heart of might} {1}
+            {major gem} {1}
+            {obsidian bar} {3}
+        }
+        {level} 
+        {
+            {max} {76}
+            {min} {72}
+        }
+    }
+    {1-handed obsidian dagger} 
+    {
+        {ingredients} 
+        {
+            {core of earth} {2}
+            {ebon shards} {1}
+            {heart of rejuvenation} {1}
+            {major gem} {1}
+            {obsidian bar} {3}
+        }
+        {level} 
+        {
+            {max} {78}
+            {min} {74}
+        }
+    }
+    {1-handed obsidian lance} 
+    {
+        {ingredients} 
+        {
+            {core of frost} {2}
+            {ebon shards} {1}
+            {heart of water} {1}
+            {major gem} {1}
+            {obsidian bar} {3}
+        }
+        {level} 
+        {
+            {max} {72}
+            {min} {68}
+        }
+    }
+    {1-handed obsidian mace} 
+    {
+        {ingredients} 
+        {
+            {ebon shards} {1}
+            {heart of shadow} {1}
+            {major gem} {1}
+            {obsidian bar} {3}
+            {peridot dust} {2}
+        }
+        {level} 
+        {
+            {max} {74}
+            {min} {70}
+        }
+    }
+    {1-handed obsidian spear} 
+    {
+        {ingredients} 
+        {
+            {ebon shards} {1}
+            {heart of light} {1}
+            {major gem} {1}
+            {obsidian bar} {3}
+            {peridot dust} {2}
+        }
+        {level} 
+        {
+            {max} {70}
+            {min} {66}
+        }
+    }
+    {1-handed obsidian sword} 
+    {
+        {ingredients} 
+        {
+            {core of earth} {2}
+            {ebon shards} {1}
+            {heart of rejuvenation} {1}
+            {major gem} {1}
+            {obsidian bar} {3}
+        }
+        {level} 
+        {
+            {max} {79}
+            {min} {75}
+        }
+    }
+    {1-handed phasemetal axe} 
+    {
+        {ingredients} 
+        {
+            {adamantium shards} {1}
+            {ebon shards} {1}
+            {emerald dust} {1}
+            {major gem} {1}
+            {minor gem} {1}
+            {obsidian shards} {1}
+            {phasemetal bar} {3}
+            {titanium shards} {1}
+        }
+        {level} 
+        {
+            {max} {91}
+            {min} {87}
+        }
+    }
+    {1-handed phasemetal dagger} 
+    {
+        {ingredients} 
+        {
+            {adamantium shards} {1}
+            {ebon shards} {1}
+            {major gem} {1}
+            {minor gem} {1}
+            {obsidian shards} {1}
+            {phasemetal bar} {3}
+            {sapphire} {1}
+            {titanium shards} {1}
+        }
+        {level} 
+        {
+            {max} {93}
+            {min} {89}
+        }
+    }
+    {1-handed phasemetal lance} 
+    {
+        {ingredients} 
+        {
+            {adamantium shards} {1}
+            {ebon shards} {1}
+            {major gem} {1}
+            {minor gem} {1}
+            {obsidian shards} {1}
+            {phasemetal bar} {3}
+            {sapphire dust} {1}
+            {titanium shards} {1}
+        }
+        {level} 
+        {
+            {max} {87}
+            {min} {83}
+        }
+    }
+    {1-handed phasemetal mace} 
+    {
+        {ingredients} 
+        {
+            {adamantium shards} {1}
+            {ebon shards} {1}
+            {emerald dust} {1}
+            {major gem} {1}
+            {minor gem} {1}
+            {obsidian shards} {1}
+            {phasemetal bar} {3}
+            {titanium shards} {1}
+        }
+        {level} 
+        {
+            {max} {89}
+            {min} {85}
+        }
+    }
+    {1-handed phasemetal spear} 
+    {
+        {ingredients} 
+        {
+            {adamantium shards} {1}
+            {ebon shards} {1}
+            {emerald dust} {1}
+            {major gem} {1}
+            {minor gem} {1}
+            {obsidian shards} {1}
+            {phasemetal bar} {3}
+            {titanium shards} {1}
+        }
+        {level} 
+        {
+            {max} {85}
+            {min} {81}
+        }
+    }
+    {1-handed phasemetal sword} 
+    {
+        {ingredients} 
+        {
+            {adamantium shards} {1}
+            {ebon shards} {1}
+            {major gem} {1}
+            {minor gem} {1}
+            {obsidian shards} {1}
+            {phasemetal bar} {3}
+            {star of air} {1}
+            {titanium shards} {1}
+        }
+        {level} 
+        {
+            {max} {94}
+            {min} {90}
+        }
+    }
+    {1-handed silver axe} 
+    {
+        {ingredients} 
+        {
+            {fragment of knowledge} {1}
+            {minor gem} {1}
+            {roan's tears} {1}
+            {silver bar} {3}
+            {steel shards} {1}
+        }
+        {level} 
+        {
+            {max} {36}
+            {min} {32}
+        }
+    }
+    {1-handed silver dagger} 
+    {
+        {ingredients} 
+        {
+            {fragment of knowledge} {1}
+            {minor gem} {1}
+            {silver bar} {3}
+            {steel shards} {1}
+            {tourmaline dust} {1}
+        }
+        {level} 
+        {
+            {max} {38}
+            {min} {34}
+        }
+    }
+    {1-handed silver lance} 
+    {
+        {ingredients} 
+        {
+            {beryl dust} {1}
+            {fragment of destruction} {1}
+            {minor gem} {1}
+            {silver bar} {3}
+            {steel shards} {1}
+        }
+        {level} 
+        {
+            {max} {32}
+            {min} {28}
+        }
+    }
+    {1-handed silver mace} 
+    {
+        {ingredients} 
+        {
+            {fragment of compassion} {1}
+            {minor gem} {1}
+            {silver bar} {3}
+            {steel shards} {1}
+            {tourmaline dust} {1}
+        }
+        {level} 
+        {
+            {max} {34}
+            {min} {30}
+        }
+    }
+    {1-handed silver spear} 
+    {
+        {ingredients} 
+        {
+            {fragment of willy} {1}
+            {minor gem} {1}
+            {pyrite dust} {1}
+            {silver bar} {3}
+            {steel shards} {1}
+        }
+        {level} 
+        {
+            {max} {30}
+            {min} {26}
+        }
+    }
+    {1-handed silver sword} 
+    {
+        {ingredients} 
+        {
+            {beryl dust} {1}
+            {fragment of knowledge} {1}
+            {minor gem} {1}
+            {silver bar} {3}
+            {steel shards} {1}
+        }
+        {level} 
+        {
+            {max} {39}
+            {min} {35}
+        }
+    }
+    {1-handed steel axe} 
+    {
+        {ingredients} 
+        {
+            {fragment of blasting} {1}
+            {iron shards} {1}
+            {pyrite} {1}
+            {steel bar} {3}
+        }
+        {level} 
+        {
+            {max} {26}
+            {min} {22}
+        }
+    }
+    {1-handed steel dagger} 
+    {
+        {ingredients} 
+        {
+            {fragment of damnation} {1}
+            {iron shards} {1}
+            {pyrite dust} {1}
+            {steel bar} {3}
+        }
+        {level} 
+        {
+            {max} {28}
+            {min} {24}
+        }
+    }
+    {1-handed steel lance} 
+    {
+        {ingredients} 
+        {
+            {alexandrite dust} {1}
+            {fragment of the unseen} {1}
+            {iron shards} {1}
+            {steel bar} {3}
+        }
+        {level} 
+        {
+            {max} {22}
+            {min} {18}
+        }
+    }
+    {1-handed steel mace} 
+    {
+        {ingredients} 
+        {
+            {eye of flame} {1}
+            {fragment of ascension} {1}
+            {iron shards} {1}
+            {steel bar} {3}
+        }
+        {level} 
+        {
+            {max} {24}
+            {min} {20}
+        }
+    }
+    {1-handed steel spear} 
+    {
+        {ingredients} 
+        {
+            {fragment of soul} {1}
+            {garnet dust} {1}
+            {iron shards} {1}
+            {steel bar} {3}
+        }
+        {level} 
+        {
+            {max} {20}
+            {min} {16}
+        }
+    }
+    {1-handed steel sword} 
+    {
+        {ingredients} 
+        {
+            {fragment of damnation} {1}
+            {iron shards} {1}
+            {pyrite} {1}
+            {steel bar} {3}
+        }
+        {level} 
+        {
+            {max} {29}
+            {min} {25}
+        }
+    }
+    {1-handed titanium axe} 
+    {
+        {ingredients} 
+        {
+            {essence of damnation} {1}
+            {hematite dust} {1}
+            {mithril shards} {1}
+            {standard gem} {1}
+            {titanium bar} {3}
+        }
+        {level} 
+        {
+            {max} {61}
+            {min} {57}
+        }
+    }
+    {1-handed titanium dagger} 
+    {
+        {ingredients} 
+        {
+            {essence of willy} {1}
+            {heliodor dust} {1}
+            {mithril shards} {1}
+            {standard gem} {1}
+            {titanium bar} {3}
+        }
+        {level} 
+        {
+            {max} {63}
+            {min} {59}
+        }
+    }
+    {1-handed titanium lance} 
+    {
+        {ingredients} 
+        {
+            {essence of ascension} {1}
+            {heliodor dust} {1}
+            {mithril shards} {1}
+            {standard gem} {1}
+            {titanium bar} {3}
+        }
+        {level} 
+        {
+            {max} {57}
+            {min} {53}
+        }
+    }
+    {1-handed titanium mace} 
+    {
+        {ingredients} 
+        {
+            {core of flame} {1}
+            {essence of blasting} {1}
+            {mithril shards} {1}
+            {standard gem} {1}
+            {titanium bar} {3}
+        }
+        {level} 
+        {
+            {max} {59}
+            {min} {55}
+        }
+    }
+    {1-handed titanium spear} 
+    {
+        {ingredients} 
+        {
+            {essence of the unseen} {1}
+            {hematite dust} {1}
+            {mithril shards} {1}
+            {standard gem} {1}
+            {titanium bar} {3}
+        }
+        {level} 
+        {
+            {max} {55}
+            {min} {51}
+        }
+    }
+    {1-handed titanium sword} 
+    {
+        {ingredients} 
+        {
+            {essence of willy} {1}
+            {heliodor} {1}
+            {mithril shards} {1}
+            {standard gem} {1}
+            {titanium bar} {3}
+        }
+        {level} 
+        {
+            {max} {64}
+            {min} {60}
+        }
+    }
+    {1-handed voidstone axe} 
+    {
+        {ingredients} 
+        {
+            {diamond dust} {1}
+            {ebon shards} {1}
+            {heart of the unseen} {1}
+            {major gem} {1}
+            {minor gem} {1}
+            {obsidian shards} {1}
+            {voidstone bar} {3}
+        }
+        {level} 
+        {
+            {max} {86}
+            {min} {82}
+        }
+    }
+    {1-handed voidstone dagger} 
+    {
+        {ingredients} 
+        {
+            {diamond dust} {1}
+            {ebon shards} {1}
+            {heart of ascension} {1}
+            {major gem} {1}
+            {minor gem} {1}
+            {obsidian shards} {1}
+            {voidstone bar} {3}
+        }
+        {level} 
+        {
+            {max} {88}
+            {min} {84}
+        }
+    }
+    {1-handed voidstone lance} 
+    {
+        {ingredients} 
+        {
+            {diamond} {1}
+            {ebon shards} {1}
+            {heart of rage} {1}
+            {major gem} {1}
+            {minor gem} {1}
+            {obsidian shards} {1}
+            {voidstone bar} {3}
+        }
+        {level} 
+        {
+            {max} {82}
+            {min} {78}
+        }
+    }
+    {1-handed voidstone mace} 
+    {
+        {ingredients} 
+        {
+            {ebon shards} {1}
+            {heart of soul} {1}
+            {major gem} {1}
+            {minor gem} {1}
+            {obsidian shards} {1}
+            {star of frost} {1}
+            {voidstone bar} {3}
+        }
+        {level} 
+        {
+            {max} {84}
+            {min} {80}
+        }
+    }
+    {1-handed voidstone spear} 
+    {
+        {ingredients} 
+        {
+            {ebon shards} {1}
+            {heart of rejuvenation} {1}
+            {major gem} {1}
+            {minor gem} {1}
+            {obsidian shards} {1}
+            {star of flame} {1}
+            {voidstone bar} {3}
+        }
+        {level} 
+        {
+            {max} {80}
+            {min} {76}
+        }
+    }
+    {1-handed voidstone sword} 
+    {
+        {ingredients} 
+        {
+            {ebon shards} {1}
+            {heart of ascension} {2}
+            {major gem} {1}
+            {minor gem} {1}
+            {obsidian shards} {1}
+            {shansabyk's tears} {2}
+            {voidstone bar} {3}
+        }
+        {level} 
+        {
+            {max} {89}
+            {min} {85}
+        }
+    }
+    {2-handed adamantium axe} 
+    {
+        {ingredients} 
+        {
+            {adamantium bar} {5}
+            {core of earth} {1}
+            {heart of water} {2}
+            {major gem} {1}
+            {standard gem} {1}
+            {titanium shards} {3}
+        }
+        {level} 
+        {
+            {max} {72}
+            {min} {68}
+        }
+    }
+    {2-handed adamantium lance} 
+    {
+        {ingredients} 
+        {
+            {adamantium bar} {5}
+            {core of frost} {2}
+            {heart of light} {2}
+            {major gem} {1}
+            {standard gem} {1}
+            {titanium shards} {3}
+        }
+        {level} 
+        {
+            {max} {68}
+            {min} {64}
+        }
+    }
+    {2-handed adamantium mace} 
+    {
+        {ingredients} 
+        {
+            {adamantium bar} {5}
+            {heart of water} {2}
+            {major gem} {1}
+            {peridot} {2}
+            {standard gem} {1}
+            {titanium shards} {3}
+        }
+        {level} 
+        {
+            {max} {70}
+            {min} {66}
+        }
+    }
+    {2-handed adamantium spear} 
+    {
+        {ingredients} 
+        {
+            {adamantium bar} {5}
+            {heart of light} {2}
+            {major gem} {1}
+            {peridot} {1}
+            {standard gem} {1}
+            {titanium shards} {3}
+        }
+        {level} 
+        {
+            {max} {66}
+            {min} {62}
+        }
+    }
+    {2-handed adamantium sword} 
+    {
+        {ingredients} 
+        {
+            {adamantium bar} {5}
+            {core of earth} {2}
+            {heart of shadow} {2}
+            {major gem} {1}
+            {standard gem} {1}
+            {titanium shards} {3}
+        }
+        {level} 
+        {
+            {max} {75}
+            {min} {71}
+        }
+    }
+    {2-handed bronze axe} 
+    {
+        {ingredients} 
+        {
+            {bronze bar} {5}
+            {copper shards} {3}
+            {fragment of rejuvenation} {2}
+        }
+        {level} 
+        {
+            {max} {17}
+            {min} {13}
+        }
+    }
+    {2-handed bronze lance} 
+    {
+        {ingredients} 
+        {
+            {bronze bar} {5}
+            {copper shards} {3}
+            {fragment of shadow} {2}
+        }
+        {level} 
+        {
+            {max} {13}
+            {min} {9}
+        }
+    }
+    {2-handed bronze mace} 
+    {
+        {ingredients} 
+        {
+            {bronze bar} {5}
+            {copper shards} {3}
+            {fragment of might} {2}
+        }
+        {level} 
+        {
+            {max} {15}
+            {min} {11}
+        }
+    }
+    {2-handed bronze spear} 
+    {
+        {ingredients} 
+        {
+            {bronze bar} {5}
+            {copper shards} {3}
+            {fragment of water} {2}
+        }
+        {level} 
+        {
+            {max} {11}
+            {min} {7}
+        }
+    }
+    {2-handed bronze sword} 
+    {
+        {ingredients} 
+        {
+            {bronze bar} {5}
+            {copper shards} {3}
+            {fragment of rage} {2}
+        }
+        {level} 
+        {
+            {max} {20}
+            {min} {16}
+        }
+    }
+    {2-handed chaostone axe} 
+    {
+        {ingredients} 
+        {
+            {chaostone bar} {5}
+            {heart of destruction} {2}
+            {major gem} {3}
+            {nethernium shards} {6}
+            {phasemetal shards} {6}
+            {ruby} {2}
+            {voidstone shards} {6}
+        }
+        {level} 
+        {
+            {max} {97}
+            {min} {93}
+        }
+    }
+    {2-handed chaostone lance} 
+    {
+        {ingredients} 
+        {
+            {chaostone bar} {5}
+            {heart of damnation} {2}
+            {major gem} {3}
+            {nethernium shards} {6}
+            {phasemetal shards} {6}
+            {sapphire} {2}
+            {voidstone shards} {6}
+        }
+        {level} 
+        {
+            {max} {93}
+            {min} {89}
+        }
+    }
+    {2-handed chaostone mace} 
+    {
+        {ingredients} 
+        {
+            {chaostone bar} {5}
+            {heart of willy} {2}
+            {major gem} {3}
+            {nethernium shards} {6}
+            {phasemetal shards} {6}
+            {ruby} {2}
+            {voidstone shards} {6}
+        }
+        {level} 
+        {
+            {max} {95}
+            {min} {91}
+        }
+    }
+    {2-handed chaostone spear} 
+    {
+        {ingredients} 
+        {
+            {chaostone bar} {5}
+            {heart of blasting} {2}
+            {major gem} {3}
+            {nethernium shards} {6}
+            {phasemetal shards} {6}
+            {ruby} {4}
+            {voidstone shards} {6}
+        }
+        {level} 
+        {
+            {max} {91}
+            {min} {87}
+        }
+    }
+    {2-handed chaostone sword} 
+    {
+        {ingredients} 
+        {
+            {cancer's tears} {4}
+            {chaostone bar} {5}
+            {heart of knowledge} {2}
+            {major gem} {3}
+            {nethernium shards} {6}
+            {phasemetal shards} {6}
+            {voidstone shards} {6}
+        }
+        {level} 
+        {
+            {max} {100}
+            {min} {96}
+        }
+    }
+    {2-handed copper axe} 
+    {
+        {ingredients} 
+        {
+            {copper bar} {5}
+            {fragment of might} {2}
+        }
+        {level} 
+        {
+            {max} {12}
+            {min} {8}
+        }
+    }
+    {2-handed copper lance} 
+    {
+        {ingredients} 
+        {
+            {copper bar} {5}
+            {fragment of water} {2}
+        }
+        {level} 
+        {
+            {max} {8}
+            {min} {4}
+        }
+    }
+    {2-handed copper mace} 
+    {
+        {ingredients} 
+        {
+            {copper bar} {5}
+            {fragment of shadow} {2}
+        }
+        {level} 
+        {
+            {max} {10}
+            {min} {6}
+        }
+    }
+    {2-handed copper spear} 
+    {
+        {ingredients} 
+        {
+            {copper bar} {5}
+            {fragment of light} {2}
+        }
+        {level} 
+        {
+            {max} {6}
+            {min} {2}
+        }
+    }
+    {2-handed copper sword} 
+    {
+        {ingredients} 
+        {
+            {copper bar} {5}
+            {fragment of rejuvenation} {2}
+        }
+        {level} 
+        {
+            {max} {15}
+            {min} {11}
+        }
+    }
+    {2-handed ebon axe} 
+    {
+        {ingredients} 
+        {
+            {ebon bar} {5}
+            {essence of compassion} {2}
+            {hematite} {2}
+            {major gem} {1}
+            {mithril shards} {3}
+        }
+        {level} 
+        {
+            {max} {67}
+            {min} {63}
+        }
+    }
+    {2-handed ebon lance} 
+    {
+        {ingredients} 
+        {
+            {ebon bar} {5}
+            {essence of willy} {2}
+            {heliodor} {2}
+            {major gem} {1}
+            {mithril shards} {3}
+        }
+        {level} 
+        {
+            {max} {63}
+            {min} {59}
+        }
+    }
+    {2-handed ebon mace} 
+    {
+        {ingredients} 
+        {
+            {core of flame} {4}
+            {ebon bar} {5}
+            {essence of destruction} {2}
+            {major gem} {1}
+            {mithril shards} {3}
+        }
+        {level} 
+        {
+            {max} {65}
+            {min} {61}
+        }
+    }
+    {2-handed ebon spear} 
+    {
+        {ingredients} 
+        {
+            {ebon bar} {5}
+            {essence of damnation} {2}
+            {hematite} {2}
+            {major gem} {1}
+            {mithril shards} {3}
+        }
+        {level} 
+        {
+            {max} {61}
+            {min} {57}
+        }
+    }
+    {2-handed ebon sword} 
+    {
+        {ingredients} 
+        {
+            {ebon bar} {5}
+            {essence of knowledge} {2}
+            {heliodor} {4}
+            {major gem} {1}
+            {mithril shards} {3}
+        }
+        {level} 
+        {
+            {max} {70}
+            {min} {66}
+        }
+    }
+    {2-handed gold axe} 
+    {
+        {ingredients} 
+        {
+            {amethyst} {1}
+            {essence of rejuvenation} {2}
+            {gold bar} {5}
+            {silver shards} {3}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {47}
+            {min} {43}
+        }
+    }
+    {2-handed gold lance} 
+    {
+        {ingredients} 
+        {
+            {essence of shadow} {2}
+            {eye of air} {1}
+            {gold bar} {5}
+            {silver shards} {3}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {43}
+            {min} {39}
+        }
+    }
+    {2-handed gold mace} 
+    {
+        {ingredients} 
+        {
+            {essence of might} {2}
+            {gold bar} {5}
+            {silver shards} {3}
+            {standard gem} {1}
+            {topaz} {1}
+        }
+        {level} 
+        {
+            {max} {45}
+            {min} {41}
+        }
+    }
+    {2-handed gold spear} 
+    {
+        {ingredients} 
+        {
+            {essence of water} {2}
+            {gold bar} {5}
+            {silver shards} {3}
+            {standard gem} {1}
+            {tourmaline} {1}
+        }
+        {level} 
+        {
+            {max} {41}
+            {min} {37}
+        }
+    }
+    {2-handed gold sword} 
+    {
+        {ingredients} 
+        {
+            {essence of rage} {2}
+            {eye of air} {1}
+            {gold bar} {5}
+            {silver shards} {3}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {50}
+            {min} {46}
+        }
+    }
+    {2-handed iron axe} 
+    {
+        {ingredients} 
+        {
+            {bronze shards} {3}
+            {fragment of the unseen} {2}
+            {iron bar} {5}
+            {minor gem} {1}
+            {morganite dust} {1}
+        }
+        {level} 
+        {
+            {max} {22}
+            {min} {18}
+        }
+    }
+    {2-handed iron lance} 
+    {
+        {ingredients} 
+        {
+            {bronze shards} {3}
+            {fragment of rage} {2}
+            {iron bar} {5}
+            {minor gem} {1}
+            {morganite dust} {1}
+        }
+        {level} 
+        {
+            {max} {18}
+            {min} {14}
+        }
+    }
+    {2-handed iron mace} 
+    {
+        {ingredients} 
+        {
+            {bronze shards} {3}
+            {fragment of soul} {2}
+            {iron bar} {5}
+            {minor gem} {1}
+            {morganite dust} {1}
+        }
+        {level} 
+        {
+            {max} {20}
+            {min} {16}
+        }
+    }
+    {2-handed iron spear} 
+    {
+        {ingredients} 
+        {
+            {aquamarine dust} {1}
+            {bronze shards} {3}
+            {fragment of rejuvenation} {2}
+            {iron bar} {5}
+            {minor gem} {1}
+        }
+        {level} 
+        {
+            {max} {16}
+            {min} {12}
+        }
+    }
+    {2-handed iron sword} 
+    {
+        {ingredients} 
+        {
+            {aquamarine dust} {1}
+            {bronze shards} {3}
+            {fragment of ascension} {2}
+            {iron bar} {5}
+            {minor gem} {1}
+        }
+        {level} 
+        {
+            {max} {25}
+            {min} {21}
+        }
+    }
+    {2-handed mithril axe} 
+    {
+        {ingredients} 
+        {
+            {essence of blasting} {2}
+            {gold shards} {3}
+            {minor gem} {1}
+            {mithril bar} {5}
+            {standard gem} {1}
+            {tourmaline} {1}
+        }
+        {level} 
+        {
+            {max} {57}
+            {min} {53}
+        }
+    }
+    {2-handed mithril lance} 
+    {
+        {ingredients} 
+        {
+            {amethyst} {1}
+            {essence of the unseen} {2}
+            {gold shards} {3}
+            {minor gem} {1}
+            {mithril bar} {5}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {53}
+            {min} {49}
+        }
+    }
+    {2-handed mithril mace} 
+    {
+        {ingredients} 
+        {
+            {essence of ascension} {2}
+            {gold shards} {3}
+            {happy ed's tears} {1}
+            {minor gem} {1}
+            {mithril bar} {5}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {55}
+            {min} {51}
+        }
+    }
+    {2-handed mithril spear} 
+    {
+        {ingredients} 
+        {
+            {essence of soul} {2}
+            {gold shards} {3}
+            {minor gem} {1}
+            {mithril bar} {5}
+            {standard gem} {1}
+            {tourmaline} {1}
+        }
+        {level} 
+        {
+            {max} {51}
+            {min} {47}
+        }
+    }
+    {2-handed mithril sword} 
+    {
+        {ingredients} 
+        {
+            {essence of damnation} {2}
+            {gold shards} {3}
+            {happy ed's tears} {2}
+            {minor gem} {1}
+            {mithril bar} {5}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {60}
+            {min} {56}
+        }
+    }
+    {2-handed nethernium axe} 
+    {
+        {ingredients} 
+        {
+            {adamantium shards} {3}
+            {heart of rage} {2}
+            {major gem} {2}
+            {nethernium bar} {5}
+            {opal} {1}
+            {titanium shards} {3}
+        }
+        {level} 
+        {
+            {max} {82}
+            {min} {78}
+        }
+    }
+    {2-handed nethernium lance} 
+    {
+        {ingredients} 
+        {
+            {adamantium shards} {3}
+            {core of air} {2}
+            {heart of shadow} {2}
+            {major gem} {2}
+            {nethernium bar} {5}
+            {titanium shards} {3}
+        }
+        {level} 
+        {
+            {max} {78}
+            {min} {74}
+        }
+    }
+    {2-handed nethernium mace} 
+    {
+        {ingredients} 
+        {
+            {adamantium shards} {3}
+            {heart of rejuvenation} {2}
+            {major gem} {2}
+            {nethernium bar} {5}
+            {pearl dust} {2}
+            {titanium shards} {3}
+        }
+        {level} 
+        {
+            {max} {80}
+            {min} {76}
+        }
+    }
+    {2-handed nethernium spear} 
+    {
+        {ingredients} 
+        {
+            {adamantium shards} {3}
+            {heart of shadow} {2}
+            {major gem} {2}
+            {nethernium bar} {5}
+            {pearl} {2}
+            {titanium shards} {3}
+        }
+        {level} 
+        {
+            {max} {76}
+            {min} {72}
+        }
+    }
+    {2-handed nethernium sword} 
+    {
+        {ingredients} 
+        {
+            {adamantium shards} {3}
+            {ghoti's tears} {3}
+            {heart of the unseen} {2}
+            {major gem} {2}
+            {nethernium bar} {5}
+            {titanium shards} {3}
+        }
+        {level} 
+        {
+            {max} {85}
+            {min} {81}
+        }
+    }
+    {2-handed obsidian axe} 
+    {
+        {ingredients} 
+        {
+            {core of earth} {2}
+            {ebon shards} {3}
+            {heart of might} {2}
+            {major gem} {1}
+            {obsidian bar} {5}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {77}
+            {min} {73}
+        }
+    }
+    {2-handed obsidian lance} 
+    {
+        {ingredients} 
+        {
+            {core of frost} {4}
+            {ebon shards} {3}
+            {heart of water} {2}
+            {major gem} {1}
+            {obsidian bar} {5}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {73}
+            {min} {69}
+        }
+    }
+    {2-handed obsidian mace} 
+    {
+        {ingredients} 
+        {
+            {ebon shards} {3}
+            {heart of shadow} {2}
+            {major gem} {1}
+            {obsidian bar} {5}
+            {peridot} {4}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {75}
+            {min} {71}
+        }
+    }
+    {2-handed obsidian spear} 
+    {
+        {ingredients} 
+        {
+            {ebon shards} {3}
+            {heart of light} {2}
+            {major gem} {1}
+            {obsidian bar} {5}
+            {peridot} {2}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {71}
+            {min} {67}
+        }
+    }
+    {2-handed obsidian sword} 
+    {
+        {ingredients} 
+        {
+            {core of earth} {4}
+            {ebon shards} {3}
+            {heart of rejuvenation} {2}
+            {major gem} {1}
+            {obsidian bar} {5}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {80}
+            {min} {76}
+        }
+    }
+    {2-handed phasemetal axe} 
+    {
+        {ingredients} 
+        {
+            {adamantium shards} {3}
+            {ebon shards} {3}
+            {emerald} {1}
+            {major gem} {2}
+            {obsidian shards} {3}
+            {phasemetal bar} {5}
+            {titanium shards} {3}
+        }
+        {level} 
+        {
+            {max} {92}
+            {min} {88}
+        }
+    }
+    {2-handed phasemetal lance} 
+    {
+        {ingredients} 
+        {
+            {adamantium shards} {3}
+            {ebon shards} {3}
+            {major gem} {2}
+            {obsidian shards} {3}
+            {phasemetal bar} {5}
+            {star of air} {1}
+            {titanium shards} {3}
+        }
+        {level} 
+        {
+            {max} {88}
+            {min} {84}
+        }
+    }
+    {2-handed phasemetal mace} 
+    {
+        {ingredients} 
+        {
+            {adamantium shards} {3}
+            {ebon shards} {3}
+            {emerald} {1}
+            {major gem} {2}
+            {obsidian shards} {3}
+            {phasemetal bar} {5}
+            {titanium shards} {3}
+        }
+        {level} 
+        {
+            {max} {90}
+            {min} {86}
+        }
+    }
+    {2-handed phasemetal spear} 
+    {
+        {ingredients} 
+        {
+            {adamantium shards} {3}
+            {ebon shards} {3}
+            {major gem} {2}
+            {obsidian shards} {3}
+            {phasemetal bar} {5}
+            {sapphire dust} {1}
+            {titanium shards} {3}
+        }
+        {level} 
+        {
+            {max} {86}
+            {min} {82}
+        }
+    }
+    {2-handed phasemetal sword} 
+    {
+        {ingredients} 
+        {
+            {adamantium shards} {3}
+            {ebon shards} {3}
+            {major gem} {2}
+            {obsidian shards} {3}
+            {phasemetal bar} {5}
+            {star of air} {2}
+            {titanium shards} {3}
+        }
+        {level} 
+        {
+            {max} {95}
+            {min} {91}
+        }
+    }
+    {2-handed silver axe} 
+    {
+        {ingredients} 
+        {
+            {fragment of knowledge} {2}
+            {roan's tears} {1}
+            {silver bar} {5}
+            {standard gem} {1}
+            {steel shards} {3}
+        }
+        {level} 
+        {
+            {max} {37}
+            {min} {33}
+        }
+    }
+    {2-handed silver lance} 
+    {
+        {ingredients} 
+        {
+            {beryl} {1}
+            {fragment of destruction} {2}
+            {silver bar} {5}
+            {standard gem} {1}
+            {steel shards} {3}
+        }
+        {level} 
+        {
+            {max} {33}
+            {min} {29}
+        }
+    }
+    {2-handed silver mace} 
+    {
+        {ingredients} 
+        {
+            {fragment of compassion} {2}
+            {silver bar} {5}
+            {standard gem} {1}
+            {steel shards} {3}
+            {tourmaline} {1}
+        }
+        {level} 
+        {
+            {max} {35}
+            {min} {31}
+        }
+    }
+    {2-handed silver spear} 
+    {
+        {ingredients} 
+        {
+            {fragment of willy} {2}
+            {pyrite dust} {1}
+            {silver bar} {5}
+            {standard gem} {1}
+            {steel shards} {3}
+        }
+        {level} 
+        {
+            {max} {31}
+            {min} {27}
+        }
+    }
+    {2-handed silver sword} 
+    {
+        {ingredients} 
+        {
+            {eye of air} {1}
+            {fragment of knowledge} {2}
+            {silver bar} {5}
+            {standard gem} {1}
+            {steel shards} {3}
+        }
+        {level} 
+        {
+            {max} {40}
+            {min} {36}
+        }
+    }
+    {2-handed steel axe} 
+    {
+        {ingredients} 
+        {
+            {fragment of blasting} {2}
+            {iron shards} {3}
+            {minor gem} {1}
+            {pyrite} {1}
+            {steel bar} {5}
+        }
+        {level} 
+        {
+            {max} {27}
+            {min} {23}
+        }
+    }
+    {2-handed steel lance} 
+    {
+        {ingredients} 
+        {
+            {alexandrite dust} {1}
+            {fragment of the unseen} {2}
+            {iron shards} {3}
+            {minor gem} {1}
+            {steel bar} {5}
+        }
+        {level} 
+        {
+            {max} {23}
+            {min} {19}
+        }
+    }
+    {2-handed steel mace} 
+    {
+        {ingredients} 
+        {
+            {eye of frost} {1}
+            {fragment of ascension} {2}
+            {iron shards} {3}
+            {minor gem} {1}
+            {steel bar} {5}
+        }
+        {level} 
+        {
+            {max} {25}
+            {min} {21}
+        }
+    }
+    {2-handed steel spear} 
+    {
+        {ingredients} 
+        {
+            {fragment of soul} {2}
+            {garnet dust} {1}
+            {iron shards} {3}
+            {minor gem} {1}
+            {steel bar} {5}
+        }
+        {level} 
+        {
+            {max} {21}
+            {min} {17}
+        }
+    }
+    {2-handed steel sword} 
+    {
+        {ingredients} 
+        {
+            {fragment of damnation} {2}
+            {iron shards} {3}
+            {minor gem} {1}
+            {roan's tears} {1}
+            {steel bar} {5}
+        }
+        {level} 
+        {
+            {max} {30}
+            {min} {26}
+        }
+    }
+    {2-handed titanium axe} 
+    {
+        {ingredients} 
+        {
+            {essence of damnation} {2}
+            {hematite} {1}
+            {major gem} {1}
+            {mithril shards} {3}
+            {titanium bar} {5}
+        }
+        {level} 
+        {
+            {max} {62}
+            {min} {58}
+        }
+    }
+    {2-handed titanium lance} 
+    {
+        {ingredients} 
+        {
+            {essence of ascension} {2}
+            {heliodor} {1}
+            {major gem} {1}
+            {mithril shards} {3}
+            {titanium bar} {5}
+        }
+        {level} 
+        {
+            {max} {58}
+            {min} {54}
+        }
+    }
+    {2-handed titanium mace} 
+    {
+        {ingredients} 
+        {
+            {core of flame} {2}
+            {essence of blasting} {2}
+            {major gem} {1}
+            {mithril shards} {3}
+            {titanium bar} {5}
+        }
+        {level} 
+        {
+            {max} {60}
+            {min} {56}
+        }
+    }
+    {2-handed titanium spear} 
+    {
+        {ingredients} 
+        {
+            {essence of the unseen} {2}
+            {hematite} {1}
+            {major gem} {1}
+            {mithril shards} {3}
+            {titanium bar} {5}
+        }
+        {level} 
+        {
+            {max} {56}
+            {min} {52}
+        }
+    }
+    {2-handed titanium sword} 
+    {
+        {ingredients} 
+        {
+            {essence of willy} {2}
+            {heliodor} {2}
+            {major gem} {1}
+            {mithril shards} {3}
+            {titanium bar} {5}
+        }
+        {level} 
+        {
+            {max} {65}
+            {min} {61}
+        }
+    }
+    {2-handed voidstone axe} 
+    {
+        {ingredients} 
+        {
+            {diamond} {2}
+            {ebon shards} {3}
+            {heart of the unseen} {2}
+            {major gem} {2}
+            {obsidian shards} {3}
+            {voidstone bar} {5}
+        }
+        {level} 
+        {
+            {max} {87}
+            {min} {83}
+        }
+    }
+    {2-handed voidstone lance} 
+    {
+        {ingredients} 
+        {
+            {ebon shards} {3}
+            {heart of rage} {2}
+            {major gem} {2}
+            {obsidian shards} {3}
+            {star of frost} {1}
+            {voidstone bar} {5}
+        }
+        {level} 
+        {
+            {max} {83}
+            {min} {79}
+        }
+    }
+    {2-handed voidstone mace} 
+    {
+        {ingredients} 
+        {
+            {ebon shards} {3}
+            {heart of soul} {2}
+            {major gem} {2}
+            {obsidian shards} {3}
+            {shansabyk's tears} {1}
+            {voidstone bar} {5}
+        }
+        {level} 
+        {
+            {max} {85}
+            {min} {81}
+        }
+    }
+    {2-handed voidstone spear} 
+    {
+        {ingredients} 
+        {
+            {ebon shards} {3}
+            {heart of rejuvenation} {2}
+            {major gem} {2}
+            {obsidian shards} {3}
+            {star of flame} {2}
+            {voidstone bar} {5}
+        }
+        {level} 
+        {
+            {max} {81}
+            {min} {77}
+        }
+    }
+    {2-handed voidstone sword} 
+    {
+        {ingredients} 
+        {
+            {ebon shards} {3}
+            {heart of ascension} {3}
+            {major gem} {2}
+            {obsidian shards} {3}
+            {star of frost} {3}
+            {voidstone bar} {5}
+        }
+        {level} 
+        {
+            {max} {90}
+            {min} {86}
+        }
+    }
+    {adamantium boots} 
+    {
+        {ingredients} 
+        {
+            {adamantium bar} {2}
+            {ebon shards} {1}
+            {heart of shadow} {1}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {77}
+            {min} {73}
+        }
+    }
+    {adamantium breastplate} 
+    {
+        {ingredients} 
+        {
+            {adamantium bar} {3}
+            {heart of light} {1}
+            {minor gem} {1}
+            {pearl dust} {1}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {70}
+            {min} {66}
+        }
+    }
+    {adamantium codpiece} 
+    {
+        {ingredients} 
+        {
+            {adamantium bar} {2}
+            {heart of water} {1}
+            {peridot dust} {1}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {74}
+            {min} {70}
+        }
+    }
+    {adamantium gloves} 
+    {
+        {ingredients} 
+        {
+            {adamantium bar} {2}
+            {ebon shards} {1}
+            {heart of might} {1}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {76}
+            {min} {72}
+        }
+    }
+    {adamantium greaves} 
+    {
+        {ingredients} 
+        {
+            {adamantium bar} {2}
+            {ebon shards} {1}
+            {heart of light} {1}
+            {minor gem} {1}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {71}
+            {min} {67}
+        }
+    }
+    {adamantium helmet} 
+    {
+        {ingredients} 
+        {
+            {adamantium bar} {2}
+            {core of air} {1}
+            {standard gem} {1}
+            {titanium shards} {1}
+        }
+        {level} 
+        {
+            {max} {75}
+            {min} {71}
+        }
+    }
+    {adamantium platemail} 
+    {
+        {ingredients} 
+        {
+            {adamantium bar} {5}
+            {heart of water} {1}
+            {major gem} {1}
+            {minor gem} {1}
+            {opal} {1}
+            {pearl} {2}
+        }
+        {level} 
+        {
+            {max} {69}
+            {min} {65}
+        }
+    }
+    {adamantium shield} 
+    {
+        {ingredients} 
+        {
+            {adamantium bar} {4}
+            {adamantium shards} {1}
+            {minor gem} {1}
+            {peridot dust} {1}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {72}
+            {min} {68}
+        }
+    }
+    {bronze boots} 
+    {
+        {ingredients} 
+        {
+            {bronze bar} {2}
+            {bronze shards} {2}
+            {cat's eye dust} {1}
+        }
+        {level} 
+        {
+            {max} {21}
+            {min} {17}
+        }
+    }
+    {bronze breastplate} 
+    {
+        {ingredients} 
+        {
+            {bronze bar} {3}
+        }
+        {level} 
+        {
+            {max} {15}
+            {min} {11}
+        }
+    }
+    {bronze codpiece} 
+    {
+        {ingredients} 
+        {
+            {bronze bar} {2}
+            {bronze shards} {1}
+        }
+        {level} 
+        {
+            {max} {18}
+            {min} {14}
+        }
+    }
+    {bronze gloves} 
+    {
+        {ingredients} 
+        {
+            {aquamarine dust} {1}
+            {bronze bar} {2}
+            {bronze shards} {2}
+        }
+        {level} 
+        {
+            {max} {20}
+            {min} {16}
+        }
+    }
+    {bronze greaves} 
+    {
+        {ingredients} 
+        {
+            {bronze bar} {2}
+        }
+        {level} 
+        {
+            {max} {16}
+            {min} {12}
+        }
+    }
+    {bronze helmet} 
+    {
+        {ingredients} 
+        {
+            {bronze bar} {2}
+            {bronze shards} {1}
+        }
+        {level} 
+        {
+            {max} {19}
+            {min} {15}
+        }
+    }
+    {bronze platemail} 
+    {
+        {ingredients} 
+        {
+            {bronze bar} {5}
+        }
+        {level} 
+        {
+            {max} {14}
+            {min} {10}
+        }
+    }
+    {bronze shield} 
+    {
+        {ingredients} 
+        {
+            {bronze bar} {4}
+        }
+        {level} 
+        {
+            {max} {17}
+            {min} {13}
+        }
+    }
+    {chaostone boots} 
+    {
+        {ingredients} 
+        {
+            {chaostone bar} {2}
+            {chaostone shards} {1}
+            {phasemetal shards} {1}
+            {standard gem} {1}
+            {voidstone shards} {1}
+        }
+        {level} 
+        {
+            {max} {102}
+            {min} {98}
+        }
+    }
+    {chaostone breastplate} 
+    {
+        {ingredients} 
+        {
+            {cancer's tears} {1}
+            {chaostone bar} {3}
+            {heart of compassion} {1}
+            {major gem} {1}
+            {minor gem} {1}
+            {ruby dust} {1}
+        }
+        {level} 
+        {
+            {max} {95}
+            {min} {91}
+        }
+    }
+    {chaostone codpiece} 
+    {
+        {ingredients} 
+        {
+            {chaostone bar} {2}
+            {heart of willy} {1}
+            {sapphire dust} {1}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {99}
+            {min} {95}
+        }
+    }
+    {chaostone gloves} 
+    {
+        {ingredients} 
+        {
+            {chaostone bar} {2}
+            {chaostone shards} {1}
+            {phasemetal shards} {1}
+            {standard gem} {1}
+            {voidstone shards} {1}
+        }
+        {level} 
+        {
+            {max} {101}
+            {min} {97}
+        }
+    }
+    {chaostone greaves} 
+    {
+        {ingredients} 
+        {
+            {chaostone bar} {2}
+            {heart of damnation} {1}
+            {major gem} {1}
+            {ruby} {1}
+            {sapphire dust} {1}
+        }
+        {level} 
+        {
+            {max} {96}
+            {min} {92}
+        }
+    }
+    {chaostone helmet} 
+    {
+        {ingredients} 
+        {
+            {chaostone bar} {2}
+            {emerald dust} {1}
+            {phasemetal shards} {1}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {100}
+            {min} {96}
+        }
+    }
+    {chaostone platemail} 
+    {
+        {ingredients} 
+        {
+            {cancer's tears} {2}
+            {chaostone bar} {5}
+            {heart of knowledge} {1}
+            {major gem} {2}
+            {ruby} {2}
+        }
+        {level} 
+        {
+            {max} {94}
+            {min} {90}
+        }
+    }
+    {chaostone shield} 
+    {
+        {ingredients} 
+        {
+            {chaostone bar} {4}
+            {major gem} {1}
+            {ruby} {1}
+            {star of earth} {1}
+        }
+        {level} 
+        {
+            {max} {97}
+            {min} {93}
+        }
+    }
+    {copper boots} 
+    {
+        {ingredients} 
+        {
+            {copper bar} {2}
+            {copper shards} {2}
+            {fragment of light} {1}
+        }
+        {level} 
+        {
+            {max} {12}
+            {min} {8}
+        }
+    }
+    {copper breastplate} 
+    {
+        {ingredients} 
+        {
+            {copper bar} {3}
+        }
+        {level} 
+        {
+            {max} {6}
+            {min} {2}
+        }
+    }
+    {copper codpiece} 
+    {
+        {ingredients} 
+        {
+            {copper bar} {2}
+            {copper shards} {1}
+        }
+        {level} 
+        {
+            {max} {9}
+            {min} {5}
+        }
+    }
+    {copper greaves} 
+    {
+        {ingredients} 
+        {
+            {copper bar} {2}
+        }
+        {level} 
+        {
+            {max} {7}
+            {min} {3}
+        }
+    }
+    {copper helmet} 
+    {
+        {ingredients} 
+        {
+            {copper bar} {2}
+            {copper shards} {1}
+        }
+        {level} 
+        {
+            {max} {10}
+            {min} {6}
+        }
+    }
+    {copper platemail} 
+    {
+        {ingredients} 
+        {
+            {copper bar} {5}
+        }
+        {level} 
+        {
+            {max} {5}
+            {min} {1}
+        }
+    }
+    {copper shield} 
+    {
+        {ingredients} 
+        {
+            {copper bar} {4}
+        }
+        {level} 
+        {
+            {max} {8}
+            {min} {4}
+        }
+    }
+    {ebon boots} 
+    {
+        {ingredients} 
+        {
+            {ebon bar} {2}
+            {gold shards} {1}
+            {peridot dust} {1}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {72}
+            {min} {68}
+        }
+    }
+    {ebon breastplate} 
+    {
+        {ingredients} 
+        {
+            {core of earth} {1}
+            {ebon bar} {3}
+            {essence of the unseen} {1}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {65}
+            {min} {61}
+        }
+    }
+    {ebon codpiece} 
+    {
+        {ingredients} 
+        {
+            {ebon bar} {2}
+            {heliodor dust} {1}
+            {hematite dust} {1}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {69}
+            {min} {65}
+        }
+    }
+    {ebon gloves} 
+    {
+        {ingredients} 
+        {
+            {ebon bar} {2}
+            {gold shards} {1}
+            {peridot dust} {1}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {71}
+            {min} {67}
+        }
+    }
+    {ebon greaves} 
+    {
+        {ingredients} 
+        {
+            {ebon bar} {2}
+            {hematite dust} {1}
+            {mithril shards} {1}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {66}
+            {min} {62}
+        }
+    }
+    {ebon helmet} 
+    {
+        {ingredients} 
+        {
+            {ebon bar} {2}
+            {hematite} {1}
+            {standard gem} {1}
+            {titanium shards} {1}
+        }
+        {level} 
+        {
+            {max} {70}
+            {min} {66}
+        }
+    }
+    {ebon platemail} 
+    {
+        {ingredients} 
+        {
+            {core of flame} {1}
+            {core of frost} {1}
+            {ebon bar} {5}
+            {essence of compassion} {1}
+            {major gem} {1}
+        }
+        {level} 
+        {
+            {max} {64}
+            {min} {60}
+        }
+    }
+    {ebon shield} 
+    {
+        {ingredients} 
+        {
+            {ebon bar} {4}
+            {standard gem} {1}
+            {titanium shards} {1}
+            {topaz} {1}
+        }
+        {level} 
+        {
+            {max} {67}
+            {min} {63}
+        }
+    }
+    {gold boots} 
+    {
+        {ingredients} 
+        {
+            {amethyst dust} {1}
+            {essence of might} {1}
+            {gold bar} {2}
+            {gold shards} {1}
+            {minor gem} {1}
+        }
+        {level} 
+        {
+            {max} {52}
+            {min} {48}
+        }
+    }
+    {gold breastplate} 
+    {
+        {ingredients} 
+        {
+            {essence of light} {1}
+            {gold bar} {3}
+            {standard gem} {1}
+            {tourmaline} {1}
+        }
+        {level} 
+        {
+            {max} {45}
+            {min} {41}
+        }
+    }
+    {gold codpiece} 
+    {
+        {ingredients} 
+        {
+            {gold bar} {2}
+            {minor gem} {1}
+            {pyrite dust} {1}
+            {silver shards} {1}
+        }
+        {level} 
+        {
+            {max} {49}
+            {min} {45}
+        }
+    }
+    {gold gloves} 
+    {
+        {ingredients} 
+        {
+            {essence of light} {1}
+            {gold bar} {2}
+            {gold shards} {1}
+            {minor gem} {1}
+            {topaz dust} {1}
+        }
+        {level} 
+        {
+            {max} {51}
+            {min} {47}
+        }
+    }
+    {gold greaves} 
+    {
+        {ingredients} 
+        {
+            {essence of water} {1}
+            {gold bar} {2}
+            {minor gem} {1}
+            {topaz} {1}
+        }
+        {level} 
+        {
+            {max} {46}
+            {min} {42}
+        }
+    }
+    {gold helmet} 
+    {
+        {ingredients} 
+        {
+            {alexandrite dust} {1}
+            {essence of might} {1}
+            {gold bar} {2}
+            {minor gem} {1}
+        }
+        {level} 
+        {
+            {max} {50}
+            {min} {46}
+        }
+    }
+    {gold platemail} 
+    {
+        {ingredients} 
+        {
+            {amethyst} {2}
+            {essence of light} {1}
+            {gold bar} {5}
+            {minor gem} {1}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {44}
+            {min} {40}
+        }
+    }
+    {gold shield} 
+    {
+        {ingredients} 
+        {
+            {essence of water} {1}
+            {gold bar} {4}
+            {silver shards} {1}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {47}
+            {min} {43}
+        }
+    }
+    {iron boots} 
+    {
+        {ingredients} 
+        {
+            {bronze shards} {1}
+            {fragment of damnation} {1}
+            {iron bar} {2}
+            {iron shards} {1}
+        }
+        {level} 
+        {
+            {max} {27}
+            {min} {23}
+        }
+    }
+    {iron breastplate} 
+    {
+        {ingredients} 
+        {
+            {copper shards} {1}
+            {fragment of rage} {1}
+            {iron bar} {3}
+            {minor gem} {1}
+        }
+        {level} 
+        {
+            {max} {20}
+            {min} {16}
+        }
+    }
+    {iron codpiece} 
+    {
+        {ingredients} 
+        {
+            {fragment of willy} {1}
+            {iron bar} {2}
+            {iron shards} {1}
+        }
+        {level} 
+        {
+            {max} {24}
+            {min} {20}
+        }
+    }
+    {iron gloves} 
+    {
+        {ingredients} 
+        {
+            {bronze shards} {1}
+            {fragment of blasting} {1}
+            {iron bar} {2}
+            {iron shards} {1}
+        }
+        {level} 
+        {
+            {max} {26}
+            {min} {22}
+        }
+    }
+    {iron greaves} 
+    {
+        {ingredients} 
+        {
+            {copper shards} {1}
+            {iron bar} {2}
+        }
+        {level} 
+        {
+            {max} {21}
+            {min} {17}
+        }
+    }
+    {iron helmet} 
+    {
+        {ingredients} 
+        {
+            {iron bar} {2}
+            {iron shards} {1}
+            {morganite dust} {1}
+        }
+        {level} 
+        {
+            {max} {25}
+            {min} {21}
+        }
+    }
+    {iron platemail} 
+    {
+        {ingredients} 
+        {
+            {copper shards} {1}
+            {fragment of might} {1}
+            {iron bar} {5}
+            {minor gem} {1}
+        }
+        {level} 
+        {
+            {max} {19}
+            {min} {15}
+        }
+    }
+    {iron shield} 
+    {
+        {ingredients} 
+        {
+            {copper shards} {1}
+            {iron bar} {4}
+            {tiger's eye} {1}
+        }
+        {level} 
+        {
+            {max} {22}
+            {min} {18}
+        }
+    }
+    {mithril boots} 
+    {
+        {ingredients} 
+        {
+            {essence of might} {1}
+            {minor gem} {1}
+            {mithril bar} {2}
+            {silver shards} {1}
+        }
+        {level} 
+        {
+            {max} {62}
+            {min} {58}
+        }
+    }
+    {mithril breastplate} 
+    {
+        {ingredients} 
+        {
+            {amethyst dust} {1}
+            {essence of rage} {1}
+            {gold shards} {1}
+            {mithril bar} {3}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {55}
+            {min} {51}
+        }
+    }
+    {mithril codpiece} 
+    {
+        {ingredients} 
+        {
+            {beryl dust} {1}
+            {bronze shards} {1}
+            {minor gem} {1}
+            {mithril bar} {2}
+        }
+        {level} 
+        {
+            {max} {59}
+            {min} {55}
+        }
+    }
+    {mithril gloves} 
+    {
+        {ingredients} 
+        {
+            {essence of rage} {1}
+            {minor gem} {1}
+            {mithril bar} {2}
+            {silver shards} {1}
+        }
+        {level} 
+        {
+            {max} {61}
+            {min} {57}
+        }
+    }
+    {mithril greaves} 
+    {
+        {ingredients} 
+        {
+            {gold shards} {1}
+            {minor gem} {1}
+            {mithril bar} {2}
+            {topaz dust} {1}
+        }
+        {level} 
+        {
+            {max} {56}
+            {min} {52}
+        }
+    }
+    {mithril helmet} 
+    {
+        {ingredients} 
+        {
+            {essence of the unseen} {1}
+            {minor gem} {1}
+            {mithril bar} {2}
+            {tourmaline} {1}
+        }
+        {level} 
+        {
+            {max} {60}
+            {min} {56}
+        }
+    }
+    {mithril platemail} 
+    {
+        {ingredients} 
+        {
+            {essence of soul} {1}
+            {gold shards} {1}
+            {hematite dust} {1}
+            {minor gem} {1}
+            {mithril bar} {5}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {54}
+            {min} {50}
+        }
+    }
+    {mithril shield} 
+    {
+        {ingredients} 
+        {
+            {core of flame} {1}
+            {mithril bar} {4}
+            {silver shards} {1}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {57}
+            {min} {53}
+        }
+    }
+    {nethernium boots} 
+    {
+        {ingredients} 
+        {
+            {heart of rage} {1}
+            {nethernium bar} {2}
+            {obsidian shards} {1}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {87}
+            {min} {83}
+        }
+    }
+    {nethernium breastplate} 
+    {
+        {ingredients} 
+        {
+            {major gem} {1}
+            {nethernium bar} {3}
+            {peridot dust} {1}
+            {star of flame} {1}
+        }
+        {level} 
+        {
+            {max} {80}
+            {min} {76}
+        }
+    }
+    {nethernium codpiece} 
+    {
+        {ingredients} 
+        {
+            {adamantium shards} {1}
+            {nethernium bar} {2}
+            {obsidian shards} {1}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {84}
+            {min} {80}
+        }
+    }
+    {nethernium gloves} 
+    {
+        {ingredients} 
+        {
+            {adamantium shards} {1}
+            {heart of the unseen} {1}
+            {nethernium bar} {2}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {86}
+            {min} {82}
+        }
+    }
+    {nethernium greaves} 
+    {
+        {ingredients} 
+        {
+            {nethernium bar} {2}
+            {opal} {1}
+            {opal dust} {1}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {81}
+            {min} {77}
+        }
+    }
+    {nethernium helmet} 
+    {
+        {ingredients} 
+        {
+            {nethernium bar} {2}
+            {opal dust} {1}
+            {pearl dust} {1}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {85}
+            {min} {81}
+        }
+    }
+    {nethernium platemail} 
+    {
+        {ingredients} 
+        {
+            {ghoti's tears} {2}
+            {heart of shadow} {1}
+            {major gem} {1}
+            {nethernium bar} {5}
+            {obsidian shards} {1}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {79}
+            {min} {75}
+        }
+    }
+    {nethernium shield} 
+    {
+        {ingredients} 
+        {
+            {heart of shadow} {1}
+            {minor gem} {1}
+            {nethernium bar} {4}
+            {opal dust} {1}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {82}
+            {min} {78}
+        }
+    }
+    {obsidian boots} 
+    {
+        {ingredients} 
+        {
+            {heart of rage} {1}
+            {obsidian bar} {2}
+            {pearl dust} {1}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {82}
+            {min} {78}
+        }
+    }
+    {obsidian breastplate} 
+    {
+        {ingredients} 
+        {
+            {heart of shadow} {1}
+            {minor gem} {1}
+            {obsidian bar} {3}
+            {opal dust} {1}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {75}
+            {min} {71}
+        }
+    }
+    {obsidian codpiece} 
+    {
+        {ingredients} 
+        {
+            {heart of water} {1}
+            {obsidian bar} {2}
+            {peridot dust} {1}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {79}
+            {min} {75}
+        }
+    }
+    {obsidian gloves} 
+    {
+        {ingredients} 
+        {
+            {heart of might} {1}
+            {obsidian bar} {2}
+            {opal dust} {1}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {81}
+            {min} {77}
+        }
+    }
+    {obsidian greaves} 
+    {
+        {ingredients} 
+        {
+            {minor gem} {1}
+            {obsidian bar} {2}
+            {pearl dust} {2}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {76}
+            {min} {72}
+        }
+    }
+    {obsidian helmet} 
+    {
+        {ingredients} 
+        {
+            {adamantium shards} {1}
+            {obsidian bar} {2}
+            {pearl dust} {1}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {80}
+            {min} {76}
+        }
+    }
+    {obsidian platemail} 
+    {
+        {ingredients} 
+        {
+            {heart of rejuvenation} {1}
+            {major gem} {1}
+            {minor gem} {1}
+            {obsidian bar} {5}
+            {opal} {1}
+            {opal dust} {1}
+        }
+        {level} 
+        {
+            {max} {74}
+            {min} {70}
+        }
+    }
+    {obsidian shield} 
+    {
+        {ingredients} 
+        {
+            {adamantium shards} {1}
+            {ebon shards} {1}
+            {minor gem} {1}
+            {obsidian bar} {4}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {77}
+            {min} {73}
+        }
+    }
+    {phasemetal boots} 
+    {
+        {ingredients} 
+        {
+            {diamond dust} {1}
+            {heart of might} {1}
+            {phasemetal bar} {2}
+            {standard gem} {1}
+            {voidstone shards} {1}
+        }
+        {level} 
+        {
+            {max} {98}
+            {min} {94}
+        }
+    }
+    {phasemetal breastplate} 
+    {
+        {ingredients} 
+        {
+            {diamond dust} {1}
+            {heart of soul} {1}
+            {major gem} {1}
+            {phasemetal bar} {3}
+            {sapphire} {1}
+        }
+        {level} 
+        {
+            {max} {90}
+            {min} {86}
+        }
+    }
+    {phasemetal codpiece} 
+    {
+        {ingredients} 
+        {
+            {diamond dust} {1}
+            {phasemetal bar} {2}
+            {standard gem} {1}
+            {star of flame} {1}
+        }
+        {level} 
+        {
+            {max} {95}
+            {min} {91}
+        }
+    }
+    {phasemetal gloves} 
+    {
+        {ingredients} 
+        {
+            {diamond dust} {1}
+            {heart of rage} {1}
+            {phasemetal bar} {2}
+            {standard gem} {1}
+            {voidstone shards} {1}
+        }
+        {level} 
+        {
+            {max} {97}
+            {min} {93}
+        }
+    }
+    {phasemetal greaves} 
+    {
+        {ingredients} 
+        {
+            {nethernium shards} {1}
+            {phasemetal bar} {2}
+            {sapphire dust} {1}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {91}
+            {min} {87}
+        }
+    }
+    {phasemetal helmet} 
+    {
+        {ingredients} 
+        {
+            {opal} {3}
+            {opal dust} {1}
+            {phasemetal bar} {2}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {96}
+            {min} {92}
+        }
+    }
+    {phasemetal platemail} 
+    {
+        {ingredients} 
+        {
+            {emerald} {2}
+            {emerald dust} {1}
+            {major gem} {1}
+            {phasemetal bar} {5}
+            {sapphire} {1}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {89}
+            {min} {85}
+        }
+    }
+    {phasemetal shield} 
+    {
+        {ingredients} 
+        {
+            {emerald} {1}
+            {heart of blasting} {1}
+            {minor gem} {1}
+            {phasemetal bar} {4}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {92}
+            {min} {88}
+        }
+    }
+    {silver boots} 
+    {
+        {ingredients} 
+        {
+            {fragment of blasting} {1}
+            {silver bar} {2}
+            {silver shards} {1}
+            {tourmaline dust} {1}
+        }
+        {level} 
+        {
+            {max} {42}
+            {min} {38}
+        }
+    }
+    {silver breastplate} 
+    {
+        {ingredients} 
+        {
+            {beryl dust} {1}
+            {pyrite dust} {1}
+            {silver bar} {3}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {35}
+            {min} {31}
+        }
+    }
+    {silver codpiece} 
+    {
+        {ingredients} 
+        {
+            {fragment of knowledge} {1}
+            {silver bar} {2}
+        }
+        {level} 
+        {
+            {max} {39}
+            {min} {35}
+        }
+    }
+    {silver gloves} 
+    {
+        {ingredients} 
+        {
+            {fragment of destruction} {1}
+            {silver bar} {2}
+            {silver shards} {1}
+            {tourmaline dust} {1}
+        }
+        {level} 
+        {
+            {max} {41}
+            {min} {37}
+        }
+    }
+    {silver greaves} 
+    {
+        {ingredients} 
+        {
+            {garnet dust} {1}
+            {silver bar} {2}
+        }
+        {level} 
+        {
+            {max} {36}
+            {min} {32}
+        }
+    }
+    {silver helmet} 
+    {
+        {ingredients} 
+        {
+            {roan's tears} {1}
+            {silver bar} {2}
+        }
+        {level} 
+        {
+            {max} {40}
+            {min} {36}
+        }
+    }
+    {silver platemail} 
+    {
+        {ingredients} 
+        {
+            {beryl dust} {1}
+            {fragment of compassion} {1}
+            {iron shards} {1}
+            {silver bar} {5}
+            {standard gem} {1}
+        }
+        {level} 
+        {
+            {max} {34}
+            {min} {30}
+        }
+    }
+    {silver shield} 
+    {
+        {ingredients} 
+        {
+            {alexandrite dust} {1}
+            {minor gem} {1}
+            {silver bar} {4}
+            {steel shards} {1}
+        }
+        {level} 
+        {
+            {max} {37}
+            {min} {33}
+        }
+    }
+    {steel boots} 
+    {
+        {ingredients} 
+        {
+            {bronze shards} {1}
+            {fragment of soul} {1}
+            {steel bar} {2}
+            {steel shards} {1}
+        }
+        {level} 
+        {
+            {max} {32}
+            {min} {28}
+        }
+    }
+    {steel breastplate} 
+    {
+        {ingredients} 
+        {
+            {eye of flame} {1}
+            {eye of frost} {1}
+            {minor gem} {1}
+            {steel bar} {3}
+        }
+        {level} 
+        {
+            {max} {25}
+            {min} {21}
+        }
+    }
+    {steel codpiece} 
+    {
+        {ingredients} 
+        {
+            {fragment of shadow} {1}
+            {fragment of willy} {1}
+            {garnet} {1}
+            {steel bar} {2}
+        }
+        {level} 
+        {
+            {max} {29}
+            {min} {25}
+        }
+    }
+    {steel gloves} 
+    {
+        {ingredients} 
+        {
+            {bronze shards} {1}
+            {fragment of water} {1}
+            {steel bar} {2}
+            {steel shards} {1}
+        }
+        {level} 
+        {
+            {max} {31}
+            {min} {27}
+        }
+    }
+    {steel greaves} 
+    {
+        {ingredients} 
+        {
+            {eye of flame} {2}
+            {steel bar} {2}
+        }
+        {level} 
+        {
+            {max} {26}
+            {min} {22}
+        }
+    }
+    {steel helmet} 
+    {
+        {ingredients} 
+        {
+            {alexandrite dust} {1}
+            {fragment of destruction} {1}
+            {steel bar} {2}
+        }
+        {level} 
+        {
+            {max} {30}
+            {min} {26}
+        }
+    }
+    {steel platemail} 
+    {
+        {ingredients} 
+        {
+            {alexandrite dust} {1}
+            {eye of flame} {1}
+            {eye of frost} {1}
+            {fragment of ascension} {1}
+            {minor gem} {1}
+            {steel bar} {5}
+        }
+        {level} 
+        {
+            {max} {24}
+            {min} {20}
+        }
+    }
+    {steel shield} 
+    {
+        {ingredients} 
+        {
+            {fragment of damnation} {1}
+            {garnet dust} {1}
+            {steel bar} {4}
+        }
+        {level} 
+        {
+            {max} {27}
+            {min} {23}
+        }
+    }
+    {titanium boots} 
+    {
+        {ingredients} 
+        {
+            {heliodor dust} {1}
+            {mithril shards} {1}
+            {standard gem} {1}
+            {titanium bar} {2}
+        }
+        {level} 
+        {
+            {max} {67}
+            {min} {63}
+        }
+    }
+    {titanium breastplate} 
+    {
+        {ingredients} 
+        {
+            {heliodor} {1}
+            {standard gem} {1}
+            {titanium bar} {3}
+            {topaz dust} {1}
+        }
+        {level} 
+        {
+            {max} {60}
+            {min} {56}
+        }
+    }
+    {titanium codpiece} 
+    {
+        {ingredients} 
+        {
+            {amethyst dust} {1}
+            {essence of the unseen} {1}
+            {standard gem} {1}
+            {titanium bar} {2}
+        }
+        {level} 
+        {
+            {max} {64}
+            {min} {60}
+        }
+    }
+    {titanium gloves} 
+    {
+        {ingredients} 
+        {
+            {hematite dust} {1}
+            {mithril shards} {1}
+            {standard gem} {1}
+            {titanium bar} {2}
+        }
+        {level} 
+        {
+            {max} {66}
+            {min} {62}
+        }
+    }
+    {titanium greaves} 
+    {
+        {ingredients} 
+        {
+            {essence of rejuvenation} {1}
+            {heliodor dust} {1}
+            {standard gem} {1}
+            {titanium bar} {2}
+        }
+        {level} 
+        {
+            {max} {61}
+            {min} {57}
+        }
+    }
+    {titanium helmet} 
+    {
+        {ingredients} 
+        {
+            {gold shards} {1}
+            {standard gem} {1}
+            {titanium bar} {2}
+            {topaz} {1}
+        }
+        {level} 
+        {
+            {max} {65}
+            {min} {61}
+        }
+    }
+    {titanium platemail} 
+    {
+        {ingredients} 
+        {
+            {essence of damnation} {1}
+            {happy ed's tears} {1}
+            {major gem} {1}
+            {peridot} {2}
+            {titanium bar} {5}
+        }
+        {level} 
+        {
+            {max} {59}
+            {min} {55}
+        }
+    }
+    {titanium shield} 
+    {
+        {ingredients} 
+        {
+            {hematite dust} {1}
+            {standard gem} {1}
+            {titanium bar} {4}
+            {titanium shards} {1}
+        }
+        {level} 
+        {
+            {max} {62}
+            {min} {58}
+        }
+    }
+    {voidstone boots} 
+    {
+        {ingredients} 
+        {
+            {heart of might} {1}
+            {nethernium shards} {1}
+            {standard gem} {1}
+            {voidstone bar} {2}
+        }
+        {level} 
+        {
+            {max} {92}
+            {min} {88}
+        }
+    }
+    {voidstone breastplate} 
+    {
+        {ingredients} 
+        {
+            {heart of rage} {1}
+            {major gem} {1}
+            {opal dust} {1}
+            {star of flame} {1}
+            {voidstone bar} {3}
+        }
+        {level} 
+        {
+            {max} {85}
+            {min} {81}
+        }
+    }
+    {voidstone codpiece} 
+    {
+        {ingredients} 
+        {
+            {obsidian shards} {1}
+            {opal dust} {1}
+            {pearl dust} {1}
+            {standard gem} {1}
+            {voidstone bar} {2}
+        }
+        {level} 
+        {
+            {max} {89}
+            {min} {85}
+        }
+    }
+    {voidstone gloves} 
+    {
+        {ingredients} 
+        {
+            {nethernium shards} {1}
+            {opal dust} {1}
+            {standard gem} {1}
+            {voidstone bar} {2}
+        }
+        {level} 
+        {
+            {max} {91}
+            {min} {87}
+        }
+    }
+    {voidstone greaves} 
+    {
+        {ingredients} 
+        {
+            {core of air} {1}
+            {opal} {1}
+            {standard gem} {1}
+            {voidstone bar} {2}
+        }
+        {level} 
+        {
+            {max} {86}
+            {min} {82}
+        }
+    }
+    {voidstone helmet} 
+    {
+        {ingredients} 
+        {
+            {heart of might} {1}
+            {shansabyk's tears} {1}
+            {standard gem} {1}
+            {voidstone bar} {2}
+        }
+        {level} 
+        {
+            {max} {90}
+            {min} {86}
+        }
+    }
+    {voidstone platemail} 
+    {
+        {ingredients} 
+        {
+            {diamond} {1}
+            {diamond dust} {1}
+            {heart of soul} {1}
+            {major gem} {1}
+            {nethernium shards} {1}
+            {standard gem} {1}
+            {voidstone bar} {5}
+        }
+        {level} 
+        {
+            {max} {84}
+            {min} {80}
+        }
+    }
+    {voidstone shield} 
+    {
+        {ingredients} 
+        {
+            {heart of rage} {1}
+            {heart of soul} {1}
+            {minor gem} {1}
+            {standard gem} {1}
+            {voidstone bar} {4}
+        }
+        {level} 
+        {
+            {max} {87}
+            {min} {83}
+        }
+    }
+}
+
+#CLASS {Data/3k/Settings/craft_recipes_blacksmith.tin} CLOSE

@@ -1,0 +1,285 @@
+#var {mouldings_blacksmith} {{copper platemail}{}
+{1-handed copper spear}{}
+{2-handed copper spear}{}
+{copper breastplate}{}
+{1-handed copper lance}{}
+{copper greaves}{}
+{2-handed copper lance}{}
+{copper shield}{}
+{copper codpiece}{}
+{1-handed copper mace}{}
+{2-handed copper mace}{}
+{copper helmet}{}
+{1-handed bronze spear}{}
+{2-handed bronze spear}{}
+{copper glove}{}
+{1-handed copper axe}{}
+{1-handed bronze lance}{}
+{copper boots}{}
+{2-handed copper axe}{}
+{2-handed bronze lance}{}
+{1-handed copper dagger}{}
+{1-handed copper sword}{}
+{bronze platemail}{}
+{1-handed bronze mace}{}
+{1-handed iron spear}{}
+{bronze breastplate}{}
+{2-handed bronze mace}{}
+{2-handed copper sword}{}
+{bronze greaves}{}
+{1-handed bronze axe}{}
+{2-handed iron spear}{}
+{bronze shield}{}
+{2-handed bronze axe}{}
+{1-handed iron lance}{}
+{2-handed iron lance}{}
+{bronze codpiece}{}
+{1-handed bronze dagger}{}
+{iron platemail}{}
+{bronze helmet}{}
+{1-handed iron mace}{}
+{1-handed bronze sword}{}
+{bronze gloves}{}
+{1-handed steel spear}{}
+{2-handed iron mace}{}
+{2-handed bronze sword}{}
+{iron breastplate}{}
+{bronze boots}{}
+{2-handed steel spear}{}
+{1-handed iron axe}{}
+{iron greaves}{}
+{2-handed iron axe}{}
+{iron shield}{}
+{1-handed steel lance}{}
+{1-handed iron dagger}{}
+{2-handed steel lance}{}
+{1-handed steel mace}{}
+{steel platemail}{}
+{iron codpiece}{}
+{1-handed iron sword}{}
+{iron helmet}{}
+{steel breastplate}{}
+{2-handed iron sword}{}
+{2-handed steel mace}{}
+{steel greaves}{}
+{1-handed steel axe}{}
+{iron gloves}{}
+{iron boots}{}
+{2-handed steel axe}{}
+{steel shield}{}
+{1-handed steel dagger}{}
+{1-handed steel sword}{}
+{steel codpiece}{}
+{2-handed steel sword}{}
+{1-handed silver spear}{}
+{steel helmet}{}
+{steel gloves}{}
+{2-handed silver spear}{}
+{steel boots}{}
+{1-handed silver lance}{}
+{2-handed silver lance}{}
+{1-handed silver mace}{}
+{silver platemail}{}
+{silver breastplate}{}
+{2-handed silver mace}{}
+{silver greaves}{}
+{1-handed silver axe}{}
+{2-handed silver axe}{}
+{silver shield}{}
+{1-handed silver dagger}{}
+{1-handed silver sword}{}
+{silver codpiece}{}
+{1-handed gold spear}{}
+{silver helmet}{}
+{2-handed silver sword}{}
+{silver gloves}{}
+{2-handed gold spear}{}
+{silver boots}{}
+{1-handed gold lance}{}
+{2-handed gold lance}{}
+{gold platemail}{}
+{1-handed gold mace}{}
+{gold breastplate}{}
+{2-handed gold mace}{}
+{gold greaves}{}
+{1-handed gold axe}{}
+{gold shield}{}
+{2-handed gold axe}{}
+{1-handed gold dagger}{}
+{gold codpiece}{}
+{1-handed gold sword}{}
+{2-handed gold sword}{}
+{1-handed mithril spear}{}
+{gold helmet}{}
+{gold gloves}{}
+{2-handed mithril spear}{}
+{gold boots}{}
+{1-handed mithril lance}{}
+{2-handed mithril lance}{}
+{mithril platemail}{}
+{1-handed mithril mace}{}
+{1-handed titanium spear}{}
+{mithril breastplate}{}
+{2-handed mithril mace}{}
+{2-handed titanium spear}{}
+{1-handed mithril axe}{}
+{mithril greaves}{}
+{1-handed titanium lance}{}
+{2-handed mithril axe}{}
+{mithril shield}{}
+{1-handed mithril dagger}{}
+{2-handed titanium lance}{}
+{titanium platemail}{}
+{1-handed titanium mace}{}
+{1-handed mithril sword}{}
+{mithril codpiece}{}
+{mithril helmet}{}
+{1-handed ebon spear}{}
+{2-handed mithril sword}{}
+{2-handed titanium mace}{}
+{titanium breastplate}{}
+{1-handed titanium axe}{}
+{mithril gloves}{}
+{titanium greaves}{}
+{2-handed ebon spear}{}
+{2-handed titanium axe}{}
+{mithril boots}{}
+{1-handed ebon lance}{}
+{titanium shield}{}
+{2-handed ebon lance}{}
+{1-handed titanium dagger}{}
+{1-handed titanium sword}{}
+{titanium codpiece}{}
+{1-handed ebon mace}{}
+{ebon platemail}{}
+{titanium helmet}{}
+{1-handed adamantium spear}{}
+{2-handed titanium sword}{}
+{ebon breastplate}{}
+{2-handed ebon mace}{}
+{ebon greaves}{}
+{titanium gloves}{}
+{1-handed ebon axe}{}
+{2-handed adamantium spear}{}
+{1-handed adamantium lance}{}
+{ebon shield}{}
+{2-handed ebon axe}{}
+{titanium boots}{}
+{2-handed adamantium lance}{}
+{1-handed ebon dagger}{}
+{adamantium platemail}{}
+{1-handed ebon sword}{}
+{ebon codpiece}{}
+{1-handed adamantium mace}{}
+{adamantium breastplate}{}
+{2-handed adamantium mace}{}
+{2-handed ebon sword}{}
+{ebon helmet}{}
+{1-handed obsidian spear}{}
+{ebon gloves}{}
+{1-handed adamantium axe}{}
+{2-handed obsidian spear}{}
+{adamantium greaves}{}
+{adamantium shield}{}
+{1-handed obsidian lance}{}
+{2-handed adamantium axe}{}
+{ebon boots}{}
+{2-handed obsidian lance}{}
+{1-handed adamantium dagger}{}
+{1-handed adamantium sword}{}
+{adamantium codpiece}{}
+{obsidian platemail}{}
+{1-handed obsidian mace}{}
+{1-handed nethernium spear}{}
+{adamantium helmet}{}
+{2-handed adamantium sword}{}
+{2-handed obsidian mace}{}
+{obsidian breastplate}{}
+{1-handed obsidian axe}{}
+{2-handed nethernium spear}{}
+{adamantium gloves}{}
+{obsidian greaves}{}
+{2-handed obsidian axe}{}
+{1-handed nethernium lance}{}
+{obsidian shield}{}
+{adamantium boots}{}
+{2-handed nethernium lance}{}
+{1-handed obsidian dagger}{}
+{1-handed obsidian sword}{}
+{nethernium platemail}{}
+{obsidian codpiece}{}
+{1-handed nethernium mace}{}
+{nethernium breastplate}{}
+{obsidian helmet}{}
+{2-handed obsidian sword}{}
+{1-handed voidstone spear}{}
+{2-handed nethernium mace}{}
+{2-handed voidstone spear}{}
+{obsidian gloves}{}
+{1-handed nethernium axe}{}
+{nethernium greaves}{}
+{nethernium shield}{}
+{obsidian boots}{}
+{1-handed voidstone lance}{}
+{2-handed nethernium axe}{}
+{1-handed nethernium dagger}{}
+{2-handed voidstone lance}{}
+{1-handed nethernium sword}{}
+{nethernium codpiece}{}
+{voidstone platemail}{}
+{1-handed voidstone mace}{}
+{nethernium helmet}{}
+{1-handed phasemetal spear}{}
+{2-handed nethernium sword}{}
+{voidstone breastplate}{}
+{2-handed voidstone mace}{}
+{nethernium gloves}{}
+{1-handed voidstone axe}{}
+{2-handed phasemetal spear}{}
+{voidstone greaves}{}
+{voidstone shield}{}
+{nethernium boots}{}
+{1-handed phasemetal lance}{}
+{2-handed voidstone axe}{}
+{1-handed voidstone dagger}{}
+{2-handed phasemetal lance}{}
+{voidstone codpiece}{}
+{1-handed phasemetal mace}{}
+{1-handed voidstone sword}{}
+{phasemetal platemail}{}
+{2-handed voidstone sword}{}
+{voidstone helmet}{}
+{1-handed chaostone spear}{}
+{2-handed phasemetal mace}{}
+{phasemetal breastplate}{}
+{voidstone gloves}{}
+{phasemetal greaves}{}
+{1-handed phasemetal axe}{}
+{2-handed chaostone spear}{}
+{1-handed chaostone lance}{}
+{phasemetal shield}{}
+{voidstone boots}{}
+{2-handed phasemetal axe}{}
+{1-handed phasemetal dagger}{}
+{2-handed chaostone lance}{}
+{chaostone platemail}{}
+{1-handed chaostone mace}{}
+{1-handed phasemetal sword}{}
+{phasemetal codpiece}{}
+{2-handed chaostone mace}{}
+{2-handed phasemetal sword}{}
+{chaostone breastplate}{}
+{chaostone greaves}{}
+{phasemetal helmet}{}
+{1-handed chaostone axe}{}
+{2-handed chaostone axe}{}
+{chaostone shield}{}
+{phasemetal gloves}{}
+{1-handed chaostone dagger}{}
+{phasemetal boots}{}
+{chaostone codpiece}{}
+{1-handed chaostone sword}{}
+{2-handed chaostone sword}{}
+{chaostone helmet}{}
+{chaostone gloves}{}
+{chaostone boots}{}}

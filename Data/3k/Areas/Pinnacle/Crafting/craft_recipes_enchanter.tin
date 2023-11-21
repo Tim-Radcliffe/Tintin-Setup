@@ -1,0 +1,2602 @@
+#CLASS {Data/3k/Settings/craft_recipes_enchanter.tin} OPEN
+
+#VARIABLE {craft_recipes_enchanter}
+{
+    {gem of major abbot} 
+    {
+        {ingredients} 
+        {
+            {heart of destruction} {1}
+            {ruby} {1}
+            {ruby dust} {1}
+        }
+        {level} 
+        {
+            {max} {96}
+            {min} {92}
+        }
+        {type} {Enchanter}
+    }
+    {gem of major acid aggression} 
+    {
+        {ingredients} 
+        {
+            {heart of might} {1}
+            {shansabyk's tears} {1}
+            {voidstone shards} {1}
+        }
+        {level} 
+        {
+            {max} {80}
+            {min} {76}
+        }
+        {type} {Enchanter}
+    }
+    {gem of major acid protection} 
+    {
+        {ingredients} 
+        {
+            {heart of might} {1}
+            {shansabyk's tears} {1}
+            {voidstone shards} {1}
+        }
+        {level} 
+        {
+            {max} {79}
+            {min} {75}
+        }
+        {type} {Enchanter}
+    }
+    {gem of major agent} 
+    {
+        {ingredients} 
+        {
+            {heart of compassion} {1}
+            {sapphire} {1}
+            {sapphire dust} {1}
+        }
+        {level} 
+        {
+            {max} {97}
+            {min} {93}
+        }
+        {type} {Enchanter}
+    }
+    {gem of major agility} 
+    {
+        {ingredients} 
+        {
+            {heart of light} {1}
+            {opal dust} {1}
+            {star of flame} {1}
+        }
+        {level} 
+        {
+            {max} {72}
+            {min} {68}
+        }
+        {type} {Enchanter}
+    }
+    {gem of major assault aggression} 
+    {
+        {ingredients} 
+        {
+            {heart of the unseen} {1}
+            {phasemetal shards} {1}
+            {star of air} {1}
+        }
+        {level} 
+        {
+            {max} {88}
+            {min} {84}
+        }
+        {type} {Enchanter}
+    }
+    {gem of major assault protection} 
+    {
+        {ingredients} 
+        {
+            {heart of the unseen} {1}
+            {phasemetal shards} {1}
+            {star of air} {1}
+        }
+        {level} 
+        {
+            {max} {87}
+            {min} {83}
+        }
+        {type} {Enchanter}
+    }
+    {gem of major athlete} 
+    {
+        {ingredients} 
+        {
+            {heart of knowledge} {1}
+            {ruby} {1}
+            {ruby dust} {1}
+        }
+        {level} 
+        {
+            {max} {97}
+            {min} {93}
+        }
+        {type} {Enchanter}
+    }
+    {gem of major barbarian} 
+    {
+        {ingredients} 
+        {
+            {emerald} {1}
+            {emerald dust} {1}
+            {heart of the unseen} {1}
+        }
+        {level} 
+        {
+            {max} {88}
+            {min} {84}
+        }
+        {type} {Enchanter}
+    }
+    {gem of major blades aggression} 
+    {
+        {ingredients} 
+        {
+            {ghoti's tears} {1}
+            {heart of light} {1}
+            {obsidian shards} {1}
+        }
+        {level} 
+        {
+            {max} {70}
+            {min} {66}
+        }
+        {type} {Enchanter}
+    }
+    {gem of major blades protection} 
+    {
+        {ingredients} 
+        {
+            {ghoti's tears} {1}
+            {heart of light} {1}
+            {obsidian shards} {1}
+        }
+        {level} 
+        {
+            {max} {71}
+            {min} {67}
+        }
+        {type} {Enchanter}
+    }
+    {gem of major clever thief} 
+    {
+        {ingredients} 
+        {
+            {diamond dust} {1}
+            {heart of shadow} {1}
+            {star of flame} {1}
+        }
+        {level} 
+        {
+            {max} {82}
+            {min} {78}
+        }
+        {type} {Enchanter}
+    }
+    {gem of major crushing aggression} 
+    {
+        {ingredients} 
+        {
+            {ghoti's tears} {1}
+            {heart of water} {1}
+            {nethernium shards} {1}
+        }
+        {level} 
+        {
+            {max} {73}
+            {min} {69}
+        }
+        {type} {Enchanter}
+    }
+    {gem of major crushing protection} 
+    {
+        {ingredients} 
+        {
+            {ghoti's tears} {1}
+            {heart of water} {1}
+            {nethernium shards} {1}
+        }
+        {level} 
+        {
+            {max} {72}
+            {min} {68}
+        }
+        {type} {Enchanter}
+    }
+    {gem of major despot} 
+    {
+        {ingredients} 
+        {
+            {heart of knowledge} {1}
+            {ruby} {1}
+            {ruby dust} {1}
+        }
+        {level} 
+        {
+            {max} {101}
+            {min} {97}
+        }
+        {type} {Enchanter}
+    }
+    {gem of major detective} 
+    {
+        {ingredients} 
+        {
+            {heart of blasting} {1}
+            {sapphire} {1}
+            {sapphire dust} {1}
+        }
+        {level} 
+        {
+            {max} {91}
+            {min} {87}
+        }
+        {type} {Enchanter}
+    }
+    {gem of major devouring aggression} 
+    {
+        {ingredients} 
+        {
+            {heart of willy} {1}
+            {phasemetal shards} {1}
+            {star of earth} {1}
+        }
+        {level} 
+        {
+            {max} {95}
+            {min} {91}
+        }
+        {type} {Enchanter}
+    }
+    {gem of major devouring protection} 
+    {
+        {ingredients} 
+        {
+            {heart of willy} {1}
+            {phasemetal shards} {1}
+            {star of earth} {1}
+        }
+        {level} 
+        {
+            {max} {93}
+            {min} {89}
+        }
+        {type} {Enchanter}
+    }
+    {gem of major domination aggression} 
+    {
+        {ingredients} 
+        {
+            {cancer's tears} {1}
+            {chaostone shards} {1}
+            {heart of destruction} {1}
+        }
+        {level} 
+        {
+            {max} {98}
+            {min} {94}
+        }
+        {type} {Enchanter}
+    }
+    {gem of major domination protection} 
+    {
+        {ingredients} 
+        {
+            {cancer's tears} {1}
+            {chaostone shards} {1}
+            {heart of destruction} {1}
+        }
+        {level} 
+        {
+            {max} {96}
+            {min} {92}
+        }
+        {type} {Enchanter}
+    }
+    {gem of major electric aggression} 
+    {
+        {ingredients} 
+        {
+            {heart of rage} {1}
+            {shansabyk's tears} {1}
+            {voidstone shards} {1}
+        }
+        {level} 
+        {
+            {max} {82}
+            {min} {78}
+        }
+        {type} {Enchanter}
+    }
+    {gem of major electric protection} 
+    {
+        {ingredients} 
+        {
+            {heart of rage} {1}
+            {shansabyk's tears} {1}
+            {voidstone shards} {1}
+        }
+        {level} 
+        {
+            {max} {81}
+            {min} {77}
+        }
+        {type} {Enchanter}
+    }
+    {gem of major elements aggression} 
+    {
+        {ingredients} 
+        {
+            {heart of the unseen} {1}
+            {star of flame} {1}
+            {star of frost} {1}
+        }
+        {level} 
+        {
+            {max} {90}
+            {min} {86}
+        }
+        {type} {Enchanter}
+    }
+    {gem of major elements protection} 
+    {
+        {ingredients} 
+        {
+            {heart of the unseen} {1}
+            {star of flame} {1}
+            {star of frost} {1}
+        }
+        {level} 
+        {
+            {max} {89}
+            {min} {85}
+        }
+        {type} {Enchanter}
+    }
+    {gem of major elephant} 
+    {
+        {ingredients} 
+        {
+            {heart of willy} {1}
+            {ruby dust} {1}
+            {star of earth} {1}
+        }
+        {level} 
+        {
+            {max} {94}
+            {min} {90}
+        }
+        {type} {Enchanter}
+    }
+    {gem of major endurance} 
+    {
+        {ingredients} 
+        {
+            {heart of shadow} {1}
+            {opal dust} {1}
+            {star of flame} {1}
+        }
+        {level} 
+        {
+            {max} {76}
+            {min} {72}
+        }
+        {type} {Enchanter}
+    }
+    {gem of major energy aggression} 
+    {
+        {ingredients} 
+        {
+            {heart of soul} {1}
+            {phasemetal shards} {1}
+            {star of air} {1}
+        }
+        {level} 
+        {
+            {max} {87}
+            {min} {83}
+        }
+        {type} {Enchanter}
+    }
+    {gem of major energy protection} 
+    {
+        {ingredients} 
+        {
+            {heart of soul} {1}
+            {phasemetal shards} {1}
+            {star of air} {1}
+        }
+        {level} 
+        {
+            {max} {86}
+            {min} {82}
+        }
+        {type} {Enchanter}
+    }
+    {gem of major excessive health} 
+    {
+        {ingredients} 
+        {
+            {diamond} {1}
+            {heart of rejuvenation} {1}
+            {opal dust} {1}
+        }
+        {level} 
+        {
+            {max} {83}
+            {min} {79}
+        }
+        {type} {Enchanter}
+    }
+    {gem of major excessive health and spirit} 
+    {
+        {ingredients} 
+        {
+            {cancer's tears} {1}
+            {heart of knowledge} {1}
+            {ruby dust} {1}
+        }
+        {level} 
+        {
+            {max} {102}
+            {min} {98}
+        }
+        {type} {Enchanter}
+    }
+    {gem of major excessive spirit} 
+    {
+        {ingredients} 
+        {
+            {emerald dust} {1}
+            {heart of soul} {1}
+            {shansabyk's tears} {1}
+        }
+        {level} 
+        {
+            {max} {87}
+            {min} {83}
+        }
+        {type} {Enchanter}
+    }
+    {gem of major flame aggression} 
+    {
+        {ingredients} 
+        {
+            {heart of light} {1}
+            {nethernium shards} {1}
+            {star of flame} {1}
+        }
+        {level} 
+        {
+            {max} {75}
+            {min} {71}
+        }
+        {type} {Enchanter}
+    }
+    {gem of major flame protection} 
+    {
+        {ingredients} 
+        {
+            {heart of light} {1}
+            {nethernium shards} {1}
+            {star of flame} {1}
+        }
+        {level} 
+        {
+            {max} {74}
+            {min} {70}
+        }
+        {type} {Enchanter}
+    }
+    {gem of major frost aggression} 
+    {
+        {ingredients} 
+        {
+            {heart of water} {1}
+            {star of frost} {1}
+            {voidstone shards} {1}
+        }
+        {level} 
+        {
+            {max} {78}
+            {min} {74}
+        }
+        {type} {Enchanter}
+    }
+    {gem of major frost protection} 
+    {
+        {ingredients} 
+        {
+            {heart of water} {1}
+            {star of frost} {1}
+            {voidstone shards} {1}
+        }
+        {level} 
+        {
+            {max} {77}
+            {min} {73}
+        }
+        {type} {Enchanter}
+    }
+    {gem of major health} 
+    {
+        {ingredients} 
+        {
+            {heart of shadow} {1}
+            {opal dust} {1}
+            {star of flame} {1}
+        }
+        {level} 
+        {
+            {max} {74}
+            {min} {70}
+        }
+        {type} {Enchanter}
+    }
+    {gem of major insight} 
+    {
+        {ingredients} 
+        {
+            {emerald} {1}
+            {emerald dust} {1}
+            {heart of soul} {1}
+        }
+        {level} 
+        {
+            {max} {85}
+            {min} {81}
+        }
+        {type} {Enchanter}
+    }
+    {gem of major irradiation aggression} 
+    {
+        {ingredients} 
+        {
+            {chaostone shards} {1}
+            {heart of compassion} {1}
+            {ruby} {1}
+        }
+        {level} 
+        {
+            {max} {98}
+            {min} {94}
+        }
+        {type} {Enchanter}
+    }
+    {gem of major irradiation protection} 
+    {
+        {ingredients} 
+        {
+            {chaostone shards} {1}
+            {heart of compassion} {1}
+            {ruby} {1}
+        }
+        {level} 
+        {
+            {max} {99}
+            {min} {95}
+        }
+        {type} {Enchanter}
+    }
+    {gem of major jackal} 
+    {
+        {ingredients} 
+        {
+            {heart of ascension} {1}
+            {sapphire} {1}
+            {sapphire dust} {1}
+        }
+        {level} 
+        {
+            {max} {89}
+            {min} {85}
+        }
+        {type} {Enchanter}
+    }
+    {gem of major koala} 
+    {
+        {ingredients} 
+        {
+            {cancer's tears} {1}
+            {heart of knowledge} {1}
+            {sapphire dust} {1}
+        }
+        {level} 
+        {
+            {max} {100}
+            {min} {96}
+        }
+        {type} {Enchanter}
+    }
+    {gem of major lion} 
+    {
+        {ingredients} 
+        {
+            {diamond} {1}
+            {diamond dust} {1}
+            {heart of might} {1}
+        }
+        {level} 
+        {
+            {max} {79}
+            {min} {75}
+        }
+        {type} {Enchanter}
+    }
+    {gem of major mental aggression} 
+    {
+        {ingredients} 
+        {
+            {emerald} {1}
+            {heart of rage} {1}
+            {phasemetal shards} {1}
+        }
+        {level} 
+        {
+            {max} {85}
+            {min} {81}
+        }
+        {type} {Enchanter}
+    }
+    {gem of major mental protection} 
+    {
+        {ingredients} 
+        {
+            {emerald} {1}
+            {heart of rage} {1}
+            {phasemetal shards} {1}
+        }
+        {level} 
+        {
+            {max} {84}
+            {min} {80}
+        }
+        {type} {Enchanter}
+    }
+    {gem of major might} 
+    {
+        {ingredients} 
+        {
+            {heart of light} {1}
+            {opal} {1}
+            {opal dust} {1}
+        }
+        {level} 
+        {
+            {max} {70}
+            {min} {66}
+        }
+        {type} {Enchanter}
+    }
+    {gem of major persuasiveness} 
+    {
+        {ingredients} 
+        {
+            {emerald dust} {1}
+            {heart of the unseen} {1}
+            {star of frost} {1}
+        }
+        {level} 
+        {
+            {max} {87}
+            {min} {83}
+        }
+        {type} {Enchanter}
+    }
+    {gem of major poison aggression} 
+    {
+        {ingredients} 
+        {
+            {heart of ascension} {1}
+            {phasemetal shards} {1}
+            {star of air} {1}
+        }
+        {level} 
+        {
+            {max} {91}
+            {min} {87}
+        }
+        {type} {Enchanter}
+    }
+    {gem of major poison protection} 
+    {
+        {ingredients} 
+        {
+            {heart of ascension} {1}
+            {phasemetal shards} {1}
+            {star of air} {1}
+        }
+        {level} 
+        {
+            {max} {90}
+            {min} {86}
+        }
+        {type} {Enchanter}
+    }
+    {gem of major radiation aggression} 
+    {
+        {ingredients} 
+        {
+            {heart of damnation} {1}
+            {phasemetal shards} {1}
+            {sapphire} {1}
+        }
+        {level} 
+        {
+            {max} {93}
+            {min} {89}
+        }
+        {type} {Enchanter}
+    }
+    {gem of major radiation protection} 
+    {
+        {ingredients} 
+        {
+            {heart of damnation} {1}
+            {phasemetal shards} {1}
+            {sapphire} {1}
+        }
+        {level} 
+        {
+            {max} {92}
+            {min} {88}
+        }
+        {type} {Enchanter}
+    }
+    {gem of major scholar} 
+    {
+        {ingredients} 
+        {
+            {diamond} {1}
+            {diamond dust} {1}
+            {heart of soul} {1}
+        }
+        {level} 
+        {
+            {max} {84}
+            {min} {80}
+        }
+        {type} {Enchanter}
+    }
+    {gem of major smarts} 
+    {
+        {ingredients} 
+        {
+            {diamond} {1}
+            {diamond dust} {1}
+            {heart of shadow} {1}
+        }
+        {level} 
+        {
+            {max} {81}
+            {min} {77}
+        }
+        {type} {Enchanter}
+    }
+    {gem of major spirit} 
+    {
+        {ingredients} 
+        {
+            {diamond} {1}
+            {heart of rejuvenation} {1}
+            {opal dust} {1}
+        }
+        {level} 
+        {
+            {max} {80}
+            {min} {76}
+        }
+        {type} {Enchanter}
+    }
+    {gem of major spirit and excessive health} 
+    {
+        {ingredients} 
+        {
+            {heart of damnation} {1}
+            {sapphire dust} {1}
+            {star of earth} {1}
+        }
+        {level} 
+        {
+            {max} {94}
+            {min} {90}
+        }
+        {type} {Enchanter}
+    }
+    {gem of major suave thief} 
+    {
+        {ingredients} 
+        {
+            {diamond dust} {1}
+            {heart of soul} {1}
+            {star of frost} {1}
+        }
+        {level} 
+        {
+            {max} {85}
+            {min} {81}
+        }
+        {type} {Enchanter}
+    }
+    {gem of major terminator} 
+    {
+        {ingredients} 
+        {
+            {diamond dust} {1}
+            {heart of might} {1}
+            {star of frost} {1}
+        }
+        {level} 
+        {
+            {max} {80}
+            {min} {76}
+        }
+        {type} {Enchanter}
+    }
+    {gem of major thespian} 
+    {
+        {ingredients} 
+        {
+            {emerald dust} {1}
+            {heart of ascension} {1}
+            {sapphire} {1}
+        }
+        {level} 
+        {
+            {max} {90}
+            {min} {86}
+        }
+        {type} {Enchanter}
+    }
+    {gem of major thief at large} 
+    {
+        {ingredients} 
+        {
+            {emerald} {1}
+            {heart of blasting} {1}
+            {sapphire dust} {1}
+        }
+        {level} 
+        {
+            {max} {92}
+            {min} {88}
+        }
+        {type} {Enchanter}
+    }
+    {gem of major wolf} 
+    {
+        {ingredients} 
+        {
+            {emerald} {1}
+            {emerald dust} {1}
+            {heart of soul} {1}
+        }
+        {level} 
+        {
+            {max} {84}
+            {min} {80}
+        }
+        {type} {Enchanter}
+    }
+    {gem of minor abbot} 
+    {
+        {ingredients} 
+        {
+            {fragment of destruction} {1}
+            {pyrite} {1}
+            {tourmaline dust} {1}
+        }
+        {level} 
+        {
+            {max} {31}
+            {min} {27}
+        }
+        {type} {Enchanter}
+    }
+    {gem of minor acid aggression} 
+    {
+        {ingredients} 
+        {
+            {bronze shards} {1}
+            {fragment of might} {1}
+            {morganite} {1}
+        }
+        {level} 
+        {
+            {max} {15}
+            {min} {11}
+        }
+        {type} {Enchanter}
+    }
+    {gem of minor acid protection} 
+    {
+        {ingredients} 
+        {
+            {bronze shards} {1}
+            {fragment of might} {1}
+            {morganite} {1}
+        }
+        {level} 
+        {
+            {max} {14}
+            {min} {10}
+        }
+        {type} {Enchanter}
+    }
+    {gem of minor agent} 
+    {
+        {ingredients} 
+        {
+            {beryl dust} {1}
+            {fragment of compassion} {1}
+            {tourmaline} {1}
+        }
+        {level} 
+        {
+            {max} {32}
+            {min} {28}
+        }
+        {type} {Enchanter}
+    }
+    {gem of minor agility} 
+    {
+        {ingredients} 
+        {
+            {copper shards} {1}
+            {fragment of light} {1}
+            {tiger's eye} {1}
+        }
+        {level} 
+        {
+            {max} {7}
+            {min} {3}
+        }
+        {type} {Enchanter}
+    }
+    {gem of minor assault aggression} 
+    {
+        {ingredients} 
+        {
+            {eye of earth} {1}
+            {fragment of the unseen} {1}
+            {silver shards} {1}
+        }
+        {level} 
+        {
+            {max} {23}
+            {min} {19}
+        }
+        {type} {Enchanter}
+    }
+    {gem of minor assault protection} 
+    {
+        {ingredients} 
+        {
+            {alexandrite} {1}
+            {fragment of the unseen} {1}
+            {silver shards} {1}
+        }
+        {level} 
+        {
+            {max} {22}
+            {min} {18}
+        }
+        {type} {Enchanter}
+    }
+    {gem of minor athlete} 
+    {
+        {ingredients} 
+        {
+            {beryl} {1}
+            {fragment of knowledge} {1}
+            {tourmaline dust} {1}
+        }
+        {level} 
+        {
+            {max} {32}
+            {min} {28}
+        }
+        {type} {Enchanter}
+    }
+    {gem of minor barbarian} 
+    {
+        {ingredients} 
+        {
+            {alexandrite} {1}
+            {alexandrite dust} {1}
+            {fragment of the unseen} {1}
+        }
+        {level} 
+        {
+            {max} {23}
+            {min} {19}
+        }
+        {type} {Enchanter}
+    }
+    {gem of minor blades aggression} 
+    {
+        {ingredients} 
+        {
+            {copper shards} {1}
+            {fragment of light} {1}
+            {tiger's eye} {1}
+        }
+        {level} 
+        {
+            {max} {5}
+            {min} {1}
+        }
+        {type} {Enchanter}
+    }
+    {gem of minor blades protection} 
+    {
+        {ingredients} 
+        {
+            {copper shards} {1}
+            {fragment of light} {1}
+            {morganite} {1}
+        }
+        {level} 
+        {
+            {max} {6}
+            {min} {2}
+        }
+        {type} {Enchanter}
+    }
+    {gem of minor clever thief} 
+    {
+        {ingredients} 
+        {
+            {eye of flame} {1}
+            {fragment of shadow} {1}
+            {iron shards} {1}
+        }
+        {level} 
+        {
+            {max} {17}
+            {min} {13}
+        }
+        {type} {Enchanter}
+    }
+    {gem of minor crushing aggression} 
+    {
+        {ingredients} 
+        {
+            {aquamarine} {1}
+            {fragment of water} {1}
+            {tiger's eye dust} {1}
+        }
+        {level} 
+        {
+            {max} {8}
+            {min} {4}
+        }
+        {type} {Enchanter}
+    }
+    {gem of minor crushing protection} 
+    {
+        {ingredients} 
+        {
+            {aquamarine} {1}
+            {fragment of water} {1}
+            {tiger's eye dust} {1}
+        }
+        {level} 
+        {
+            {max} {7}
+            {min} {3}
+        }
+        {type} {Enchanter}
+    }
+    {gem of minor despot} 
+    {
+        {ingredients} 
+        {
+            {amethyst dust} {1}
+            {fragment of knowledge} {1}
+            {tourmaline} {1}
+        }
+        {level} 
+        {
+            {max} {35}
+            {min} {31}
+        }
+        {type} {Enchanter}
+    }
+    {gem of minor detective} 
+    {
+        {ingredients} 
+        {
+            {eye of earth} {1}
+            {fragment of blasting} {1}
+            {pyrite dust} {1}
+        }
+        {level} 
+        {
+            {max} {26}
+            {min} {22}
+        }
+        {type} {Enchanter}
+    }
+    {gem of minor devouring aggression} 
+    {
+        {ingredients} 
+        {
+            {beryl} {1}
+            {fragment of willy} {1}
+            {silver shards} {1}
+        }
+        {level} 
+        {
+            {max} {30}
+            {min} {26}
+        }
+        {type} {Enchanter}
+    }
+    {gem of minor devouring protection} 
+    {
+        {ingredients} 
+        {
+            {eye of earth} {1}
+            {fragment of willy} {1}
+            {silver shards} {1}
+        }
+        {level} 
+        {
+            {max} {28}
+            {min} {24}
+        }
+        {type} {Enchanter}
+    }
+    {gem of minor domination aggression} 
+    {
+        {ingredients} 
+        {
+            {fragment of destruction} {1}
+            {roan's tears} {1}
+            {silver shards} {1}
+        }
+        {level} 
+        {
+            {max} {33}
+            {min} {29}
+        }
+        {type} {Enchanter}
+    }
+    {gem of minor domination protection} 
+    {
+        {ingredients} 
+        {
+            {fragment of destruction} {1}
+            {roan's tears} {1}
+            {silver shards} {1}
+        }
+        {level} 
+        {
+            {max} {31}
+            {min} {27}
+        }
+        {type} {Enchanter}
+    }
+    {gem of minor electric aggression} 
+    {
+        {ingredients} 
+        {
+            {bronze shards} {1}
+            {cat's eye} {1}
+            {fragment of rage} {1}
+        }
+        {level} 
+        {
+            {max} {17}
+            {min} {13}
+        }
+        {type} {Enchanter}
+    }
+    {gem of minor electric protection} 
+    {
+        {ingredients} 
+        {
+            {bronze shards} {1}
+            {cat's eye} {1}
+            {fragment of rage} {1}
+        }
+        {level} 
+        {
+            {max} {16}
+            {min} {12}
+        }
+        {type} {Enchanter}
+    }
+    {gem of minor elements aggression} 
+    {
+        {ingredients} 
+        {
+            {eye of flame} {1}
+            {eye of frost} {1}
+            {fragment of the unseen} {1}
+        }
+        {level} 
+        {
+            {max} {25}
+            {min} {21}
+        }
+        {type} {Enchanter}
+    }
+    {gem of minor elements protection} 
+    {
+        {ingredients} 
+        {
+            {eye of flame} {1}
+            {eye of frost} {1}
+            {fragment of the unseen} {1}
+        }
+        {level} 
+        {
+            {max} {24}
+            {min} {20}
+        }
+        {type} {Enchanter}
+    }
+    {gem of minor elephant} 
+    {
+        {ingredients} 
+        {
+            {fragment of willy} {1}
+            {pyrite dust} {1}
+            {roan's tears} {1}
+        }
+        {level} 
+        {
+            {max} {29}
+            {min} {25}
+        }
+        {type} {Enchanter}
+    }
+    {gem of minor endurance} 
+    {
+        {ingredients} 
+        {
+            {fragment of shadow} {1}
+            {morganite} {1}
+            {tiger's eye dust} {1}
+        }
+        {level} 
+        {
+            {max} {11}
+            {min} {7}
+        }
+        {type} {Enchanter}
+    }
+    {gem of minor energy aggression} 
+    {
+        {ingredients} 
+        {
+            {fragment of soul} {1}
+            {garnet} {1}
+            {steel shards} {1}
+        }
+        {level} 
+        {
+            {max} {22}
+            {min} {18}
+        }
+        {type} {Enchanter}
+    }
+    {gem of minor energy protection} 
+    {
+        {ingredients} 
+        {
+            {fragment of soul} {1}
+            {garnet} {1}
+            {steel shards} {1}
+        }
+        {level} 
+        {
+            {max} {21}
+            {min} {17}
+        }
+        {type} {Enchanter}
+    }
+    {gem of minor flame aggression} 
+    {
+        {ingredients} 
+        {
+            {eye of flame} {1}
+            {fragment of light} {1}
+            {morganite dust} {1}
+        }
+        {level} 
+        {
+            {max} {10}
+            {min} {6}
+        }
+        {type} {Enchanter}
+    }
+    {gem of minor flame protection} 
+    {
+        {ingredients} 
+        {
+            {eye of flame} {1}
+            {fragment of light} {1}
+            {morganite dust} {1}
+        }
+        {level} 
+        {
+            {max} {9}
+            {min} {5}
+        }
+        {type} {Enchanter}
+    }
+    {gem of minor frost aggression} 
+    {
+        {ingredients} 
+        {
+            {eye of frost} {1}
+            {fragment of water} {1}
+            {morganite dust} {1}
+        }
+        {level} 
+        {
+            {max} {13}
+            {min} {9}
+        }
+        {type} {Enchanter}
+    }
+    {gem of minor frost protection} 
+    {
+        {ingredients} 
+        {
+            {eye of frost} {1}
+            {fragment of water} {1}
+            {morganite dust} {1}
+        }
+        {level} 
+        {
+            {max} {12}
+            {min} {8}
+        }
+        {type} {Enchanter}
+    }
+    {gem of minor insight} 
+    {
+        {ingredients} 
+        {
+            {fragment of soul} {1}
+            {garnet} {1}
+            {garnet dust} {1}
+        }
+        {level} 
+        {
+            {max} {20}
+            {min} {16}
+        }
+        {type} {Enchanter}
+    }
+    {gem of minor irradiation aggression} 
+    {
+        {ingredients} 
+        {
+            {fragment of compassion} {1}
+            {gold shards} {1}
+            {tourmaline} {1}
+        }
+        {level} 
+        {
+            {max} {33}
+            {min} {29}
+        }
+        {type} {Enchanter}
+    }
+    {gem of minor irradiation protection} 
+    {
+        {ingredients} 
+        {
+            {fragment of compassion} {1}
+            {gold shards} {1}
+            {tourmaline} {1}
+        }
+        {level} 
+        {
+            {max} {34}
+            {min} {30}
+        }
+        {type} {Enchanter}
+    }
+    {gem of minor jackal} 
+    {
+        {ingredients} 
+        {
+            {alexandrite} {1}
+            {alexandrite dust} {1}
+            {fragment of ascension} {1}
+        }
+        {level} 
+        {
+            {max} {24}
+            {min} {20}
+        }
+        {type} {Enchanter}
+    }
+    {gem of minor koala} 
+    {
+        {ingredients} 
+        {
+            {eye of air} {1}
+            {fragment of knowledge} {1}
+            {tourmaline dust} {1}
+        }
+        {level} 
+        {
+            {max} {34}
+            {min} {30}
+        }
+        {type} {Enchanter}
+    }
+    {gem of minor lion} 
+    {
+        {ingredients} 
+        {
+            {cat's eye} {1}
+            {fragment of might} {1}
+            {iron shards} {1}
+        }
+        {level} 
+        {
+            {max} {14}
+            {min} {10}
+        }
+        {type} {Enchanter}
+    }
+    {gem of minor mental aggression} 
+    {
+        {ingredients} 
+        {
+            {alexandrite} {1}
+            {fragment of rage} {1}
+            {steel shards} {1}
+        }
+        {level} 
+        {
+            {max} {20}
+            {min} {16}
+        }
+        {type} {Enchanter}
+    }
+    {gem of minor mental protection} 
+    {
+        {ingredients} 
+        {
+            {alexandrite} {1}
+            {fragment of rage} {1}
+            {steel shards} {1}
+        }
+        {level} 
+        {
+            {max} {19}
+            {min} {15}
+        }
+        {type} {Enchanter}
+    }
+    {gem of minor might} 
+    {
+        {ingredients} 
+        {
+            {aquamarine} {1}
+            {aquamarine dust} {1}
+            {fragment of light} {1}
+        }
+        {level} 
+        {
+            {max} {5}
+            {min} {1}
+        }
+        {type} {Enchanter}
+    }
+    {gem of minor persuasiveness} 
+    {
+        {ingredients} 
+        {
+            {alexandrite dust} {1}
+            {fragment of the unseen} {1}
+            {garnet} {1}
+        }
+        {level} 
+        {
+            {max} {22}
+            {min} {18}
+        }
+        {type} {Enchanter}
+    }
+    {gem of minor poison aggression} 
+    {
+        {ingredients} 
+        {
+            {fragment of ascension} {1}
+            {roan's tears} {1}
+            {silver shards} {1}
+        }
+        {level} 
+        {
+            {max} {26}
+            {min} {22}
+        }
+        {type} {Enchanter}
+    }
+    {gem of minor poison protection} 
+    {
+        {ingredients} 
+        {
+            {fragment of ascension} {1}
+            {roan's tears} {1}
+            {silver shards} {1}
+        }
+        {level} 
+        {
+            {max} {25}
+            {min} {21}
+        }
+        {type} {Enchanter}
+    }
+    {gem of minor radiation aggression} 
+    {
+        {ingredients} 
+        {
+            {fragment of damnation} {1}
+            {pyrite} {1}
+            {silver shards} {1}
+        }
+        {level} 
+        {
+            {max} {28}
+            {min} {24}
+        }
+        {type} {Enchanter}
+    }
+    {gem of minor radiation protection} 
+    {
+        {ingredients} 
+        {
+            {fragment of damnation} {1}
+            {pyrite} {1}
+            {silver shards} {1}
+        }
+        {level} 
+        {
+            {max} {27}
+            {min} {23}
+        }
+        {type} {Enchanter}
+    }
+    {gem of minor scholar} 
+    {
+        {ingredients} 
+        {
+            {cat's eye dust} {1}
+            {fragment of soul} {1}
+            {garnet} {1}
+        }
+        {level} 
+        {
+            {max} {19}
+            {min} {15}
+        }
+        {type} {Enchanter}
+    }
+    {gem of minor smarts} 
+    {
+        {ingredients} 
+        {
+            {cat's eye} {1}
+            {fragment of shadow} {1}
+            {iron shards} {1}
+        }
+        {level} 
+        {
+            {max} {16}
+            {min} {12}
+        }
+        {type} {Enchanter}
+    }
+    {gem of minor suave thief} 
+    {
+        {ingredients} 
+        {
+            {eye of frost} {1}
+            {fragment of soul} {1}
+            {garnet dust} {1}
+        }
+        {level} 
+        {
+            {max} {20}
+            {min} {16}
+        }
+        {type} {Enchanter}
+    }
+    {gem of minor terminator} 
+    {
+        {ingredients} 
+        {
+            {cat's eye dust} {1}
+            {eye of flame} {1}
+            {fragment of might} {1}
+        }
+        {level} 
+        {
+            {max} {15}
+            {min} {11}
+        }
+        {type} {Enchanter}
+    }
+    {gem of minor thespian} 
+    {
+        {ingredients} 
+        {
+            {beryl} {1}
+            {fragment of ascension} {1}
+            {garnet dust} {1}
+        }
+        {level} 
+        {
+            {max} {25}
+            {min} {21}
+        }
+        {type} {Enchanter}
+    }
+    {gem of minor thief at large} 
+    {
+        {ingredients} 
+        {
+            {fragment of blasting} {1}
+            {pyrite} {1}
+            {pyrite dust} {1}
+        }
+        {level} 
+        {
+            {max} {27}
+            {min} {23}
+        }
+        {type} {Enchanter}
+    }
+    {gem of minor wolf} 
+    {
+        {ingredients} 
+        {
+            {eye of flame} {1}
+            {fragment of soul} {1}
+            {garnet dust} {1}
+        }
+        {level} 
+        {
+            {max} {19}
+            {min} {15}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard abbot} 
+    {
+        {ingredients} 
+        {
+            {core of air} {1}
+            {essence of destruction} {1}
+            {peridot dust} {1}
+        }
+        {level} 
+        {
+            {max} {63}
+            {min} {59}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard acid aggression} 
+    {
+        {ingredients} 
+        {
+            {amethyst} {1}
+            {essence of might} {1}
+            {mithril shards} {1}
+        }
+        {level} 
+        {
+            {max} {45}
+            {min} {41}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard acid protection} 
+    {
+        {ingredients} 
+        {
+            {amethyst} {1}
+            {essence of might} {1}
+            {mithril shards} {1}
+        }
+        {level} 
+        {
+            {max} {44}
+            {min} {40}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard agent} 
+    {
+        {ingredients} 
+        {
+            {essence of compassion} {1}
+            {opal} {1}
+            {opal dust} {1}
+        }
+        {level} 
+        {
+            {max} {64}
+            {min} {60}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard agility} 
+    {
+        {ingredients} 
+        {
+            {essence of light} {1}
+            {eye of air} {1}
+            {topaz dust} {1}
+        }
+        {level} 
+        {
+            {max} {39}
+            {min} {35}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard assault aggression} 
+    {
+        {ingredients} 
+        {
+            {core of earth} {1}
+            {ebon shards} {1}
+            {essence of the unseen} {1}
+        }
+        {level} 
+        {
+            {max} {55}
+            {min} {51}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard assault protection} 
+    {
+        {ingredients} 
+        {
+            {core of earth} {1}
+            {ebon shards} {1}
+            {essence of the unseen} {1}
+        }
+        {level} 
+        {
+            {max} {54}
+            {min} {50}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard athlete} 
+    {
+        {ingredients} 
+        {
+            {essence of knowledge} {1}
+            {opal} {1}
+            {pearl dust} {1}
+        }
+        {level} 
+        {
+            {max} {64}
+            {min} {60}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard barbarian} 
+    {
+        {ingredients} 
+        {
+            {essence of the unseen} {1}
+            {heliodor} {1}
+            {peridot dust} {1}
+        }
+        {level} 
+        {
+            {max} {55}
+            {min} {51}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard blades aggression} 
+    {
+        {ingredients} 
+        {
+            {amethyst} {1}
+            {essence of light} {1}
+            {gold shards} {1}
+        }
+        {level} 
+        {
+            {max} {37}
+            {min} {33}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard blades protection} 
+    {
+        {ingredients} 
+        {
+            {essence of light} {1}
+            {gold shards} {1}
+            {topaz} {1}
+        }
+        {level} 
+        {
+            {max} {38}
+            {min} {34}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard clever thief} 
+    {
+        {ingredients} 
+        {
+            {essence of shadow} {1}
+            {happy ed's tears} {1}
+            {heliodor dust} {1}
+        }
+        {level} 
+        {
+            {max} {49}
+            {min} {45}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard crushing aggression} 
+    {
+        {ingredients} 
+        {
+            {amethyst} {1}
+            {essence of water} {1}
+            {mithril shards} {1}
+        }
+        {level} 
+        {
+            {max} {40}
+            {min} {36}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard crushing protection} 
+    {
+        {ingredients} 
+        {
+            {essence of water} {1}
+            {mithril shards} {1}
+            {topaz} {1}
+        }
+        {level} 
+        {
+            {max} {39}
+            {min} {35}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard despot} 
+    {
+        {ingredients} 
+        {
+            {essence of knowledge} {1}
+            {ghoti's tears} {1}
+            {pearl dust} {1}
+        }
+        {level} 
+        {
+            {max} {68}
+            {min} {64}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard detective} 
+    {
+        {ingredients} 
+        {
+            {essence of blasting} {1}
+            {heliodor dust} {1}
+            {peridot} {1}
+        }
+        {level} 
+        {
+            {max} {58}
+            {min} {54}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard devouring aggression} 
+    {
+        {ingredients} 
+        {
+            {adamantium shards} {1}
+            {core of earth} {1}
+            {essence of willy} {1}
+        }
+        {level} 
+        {
+            {max} {62}
+            {min} {58}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard devouring protection} 
+    {
+        {ingredients} 
+        {
+            {adamantium shards} {1}
+            {core of earth} {1}
+            {essence of willy} {1}
+        }
+        {level} 
+        {
+            {max} {60}
+            {min} {56}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard domination aggression} 
+    {
+        {ingredients} 
+        {
+            {adamantium shards} {1}
+            {core of air} {1}
+            {essence of destruction} {1}
+        }
+        {level} 
+        {
+            {max} {65}
+            {min} {61}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard domination protection} 
+    {
+        {ingredients} 
+        {
+            {adamantium shards} {1}
+            {core of air} {1}
+            {essence of destruction} {1}
+        }
+        {level} 
+        {
+            {max} {63}
+            {min} {59}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard electric aggression} 
+    {
+        {ingredients} 
+        {
+            {core of flame} {1}
+            {essence of rage} {1}
+            {titanium shards} {1}
+        }
+        {level} 
+        {
+            {max} {49}
+            {min} {45}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard electric protection} 
+    {
+        {ingredients} 
+        {
+            {core of flame} {1}
+            {essence of rage} {1}
+            {titanium shards} {1}
+        }
+        {level} 
+        {
+            {max} {48}
+            {min} {44}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard elements aggression} 
+    {
+        {ingredients} 
+        {
+            {core of flame} {1}
+            {core of frost} {1}
+            {essence of the unseen} {1}
+        }
+        {level} 
+        {
+            {max} {57}
+            {min} {53}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard elements protection} 
+    {
+        {ingredients} 
+        {
+            {core of flame} {1}
+            {core of frost} {1}
+            {essence of the unseen} {1}
+        }
+        {level} 
+        {
+            {max} {56}
+            {min} {52}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard elephant} 
+    {
+        {ingredients} 
+        {
+            {essence of willy} {1}
+            {pearl} {1}
+            {pearl dust} {1}
+        }
+        {level} 
+        {
+            {max} {61}
+            {min} {57}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard endurance} 
+    {
+        {ingredients} 
+        {
+            {essence of shadow} {1}
+            {happy ed's tears} {1}
+            {hematite dust} {1}
+        }
+        {level} 
+        {
+            {max} {43}
+            {min} {39}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard energy aggression} 
+    {
+        {ingredients} 
+        {
+            {essence of soul} {1}
+            {peridot} {1}
+            {titanium shards} {1}
+        }
+        {level} 
+        {
+            {max} {54}
+            {min} {50}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard energy protection} 
+    {
+        {ingredients} 
+        {
+            {essence of soul} {1}
+            {peridot} {1}
+            {titanium shards} {1}
+        }
+        {level} 
+        {
+            {max} {53}
+            {min} {49}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard excessive health} 
+    {
+        {ingredients} 
+        {
+            {essence of rejuvenation} {1}
+            {heliodor} {1}
+            {hematite dust} {1}
+        }
+        {level} 
+        {
+            {max} {50}
+            {min} {46}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard excessive health and spirit} 
+    {
+        {ingredients} 
+        {
+            {essence of knowledge} {1}
+            {opal dust} {1}
+            {pearl} {1}
+        }
+        {level} 
+        {
+            {max} {69}
+            {min} {65}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard excessive spirit} 
+    {
+        {ingredients} 
+        {
+            {essence of soul} {1}
+            {peridot} {1}
+            {peridot dust} {1}
+        }
+        {level} 
+        {
+            {max} {54}
+            {min} {50}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard flame aggression} 
+    {
+        {ingredients} 
+        {
+            {core of flame} {1}
+            {essence of light} {1}
+            {mithril shards} {1}
+        }
+        {level} 
+        {
+            {max} {42}
+            {min} {38}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard flame protection} 
+    {
+        {ingredients} 
+        {
+            {core of flame} {1}
+            {essence of light} {1}
+            {mithril shards} {1}
+        }
+        {level} 
+        {
+            {max} {41}
+            {min} {37}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard frost aggression} 
+    {
+        {ingredients} 
+        {
+            {core of frost} {1}
+            {essence of water} {1}
+            {mithril shards} {1}
+        }
+        {level} 
+        {
+            {max} {47}
+            {min} {43}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard frost protection} 
+    {
+        {ingredients} 
+        {
+            {core of frost} {1}
+            {essence of water} {1}
+            {mithril shards} {1}
+        }
+        {level} 
+        {
+            {max} {46}
+            {min} {42}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard health} 
+    {
+        {ingredients} 
+        {
+            {essence of shadow} {1}
+            {happy ed's tears} {1}
+            {hematite dust} {1}
+        }
+        {level} 
+        {
+            {max} {41}
+            {min} {37}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard health and excessive spirit} 
+    {
+        {ingredients} 
+        {
+            {essence of destruction} {1}
+            {opal} {1}
+            {pearl dust} {1}
+        }
+        {level} 
+        {
+            {max} {64}
+            {min} {60}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard health and spirit} 
+    {
+        {ingredients} 
+        {
+            {essence of the unseen} {1}
+            {heliodor} {1}
+            {peridot dust} {1}
+        }
+        {level} 
+        {
+            {max} {56}
+            {min} {52}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard insight} 
+    {
+        {ingredients} 
+        {
+            {essence of soul} {1}
+            {hematite} {1}
+            {peridot dust} {1}
+        }
+        {level} 
+        {
+            {max} {52}
+            {min} {48}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard irradiation aggression} 
+    {
+        {ingredients} 
+        {
+            {core of air} {1}
+            {essence of compassion} {1}
+            {obsidian shards} {1}
+        }
+        {level} 
+        {
+            {max} {65}
+            {min} {61}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard irradiation protection} 
+    {
+        {ingredients} 
+        {
+            {core of air} {1}
+            {essence of compassion} {1}
+            {obsidian shards} {1}
+        }
+        {level} 
+        {
+            {max} {66}
+            {min} {62}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard jackal} 
+    {
+        {ingredients} 
+        {
+            {essence of ascension} {1}
+            {heliodor dust} {1}
+            {peridot} {1}
+        }
+        {level} 
+        {
+            {max} {56}
+            {min} {52}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard koala} 
+    {
+        {ingredients} 
+        {
+            {essence of knowledge} {1}
+            {opal} {1}
+            {opal dust} {1}
+        }
+        {level} 
+        {
+            {max} {67}
+            {min} {63}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard lion} 
+    {
+        {ingredients} 
+        {
+            {essence of might} {1}
+            {heliodor dust} {1}
+            {topaz} {1}
+        }
+        {level} 
+        {
+            {max} {46}
+            {min} {42}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard mental aggression} 
+    {
+        {ingredients} 
+        {
+            {core of frost} {1}
+            {essence of rage} {1}
+            {titanium shards} {1}
+        }
+        {level} 
+        {
+            {max} {52}
+            {min} {48}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard mental protection} 
+    {
+        {ingredients} 
+        {
+            {core of frost} {1}
+            {essence of rage} {1}
+            {titanium shards} {1}
+        }
+        {level} 
+        {
+            {max} {51}
+            {min} {47}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard might} 
+    {
+        {ingredients} 
+        {
+            {essence of light} {1}
+            {topaz} {1}
+            {topaz dust} {1}
+        }
+        {level} 
+        {
+            {max} {37}
+            {min} {33}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard persuasiveness} 
+    {
+        {ingredients} 
+        {
+            {essence of the unseen} {1}
+            {hematite} {1}
+            {peridot dust} {1}
+        }
+        {level} 
+        {
+            {max} {54}
+            {min} {50}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard poison aggression} 
+    {
+        {ingredients} 
+        {
+            {core of earth} {1}
+            {ebon shards} {1}
+            {essence of ascension} {1}
+        }
+        {level} 
+        {
+            {max} {58}
+            {min} {54}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard poison protection} 
+    {
+        {ingredients} 
+        {
+            {core of earth} {1}
+            {ebon shards} {1}
+            {essence of ascension} {1}
+        }
+        {level} 
+        {
+            {max} {57}
+            {min} {53}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard radiation aggression} 
+    {
+        {ingredients} 
+        {
+            {adamantium shards} {1}
+            {essence of damnation} {1}
+            {pearl} {1}
+        }
+        {level} 
+        {
+            {max} {60}
+            {min} {56}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard radiation protection} 
+    {
+        {ingredients} 
+        {
+            {adamantium shards} {1}
+            {essence of damnation} {1}
+            {pearl} {1}
+        }
+        {level} 
+        {
+            {max} {59}
+            {min} {55}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard scholar} 
+    {
+        {ingredients} 
+        {
+            {essence of soul} {1}
+            {hematite} {1}
+            {hematite dust} {1}
+        }
+        {level} 
+        {
+            {max} {51}
+            {min} {47}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard smarts} 
+    {
+        {ingredients} 
+        {
+            {core of frost} {1}
+            {essence of shadow} {1}
+            {hematite dust} {1}
+        }
+        {level} 
+        {
+            {max} {48}
+            {min} {44}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard spirit} 
+    {
+        {ingredients} 
+        {
+            {essence of rejuvenation} {1}
+            {hematite dust} {1}
+            {topaz} {1}
+        }
+        {level} 
+        {
+            {max} {47}
+            {min} {43}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard spirit and excessive health} 
+    {
+        {ingredients} 
+        {
+            {essence of damnation} {1}
+            {pearl dust} {1}
+            {peridot} {1}
+        }
+        {level} 
+        {
+            {max} {61}
+            {min} {57}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard suave thief} 
+    {
+        {ingredients} 
+        {
+            {essence of soul} {1}
+            {heliodor dust} {1}
+            {hematite} {1}
+        }
+        {level} 
+        {
+            {max} {52}
+            {min} {48}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard terminator} 
+    {
+        {ingredients} 
+        {
+            {essence of might} {1}
+            {heliodor} {1}
+            {heliodor dust} {1}
+        }
+        {level} 
+        {
+            {max} {47}
+            {min} {43}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard thespian} 
+    {
+        {ingredients} 
+        {
+            {essence of ascension} {1}
+            {peridot} {1}
+            {peridot dust} {1}
+        }
+        {level} 
+        {
+            {max} {57}
+            {min} {53}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard thief at large} 
+    {
+        {ingredients} 
+        {
+            {essence of blasting} {1}
+            {pearl} {1}
+            {peridot dust} {1}
+        }
+        {level} 
+        {
+            {max} {59}
+            {min} {55}
+        }
+        {type} {Enchanter}
+    }
+    {gem of standard wolf} 
+    {
+        {ingredients} 
+        {
+            {essence of soul} {1}
+            {heliodor} {1}
+            {heliodor dust} {1}
+        }
+        {level} 
+        {
+            {max} {51}
+            {min} {47}
+        }
+        {type} {Enchanter}
+    }
+}
+
+#CLASS {Data/3k/Settings/craft_recipes_enchanter.tin} CLOSE
