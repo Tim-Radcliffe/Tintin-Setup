@@ -15,6 +15,10 @@
 
 	#SWITCH {"%1"}
 	{
+		#CASE {""}
+		{
+			#ECHO {.transmute train/refine/<ingredient>};
+		};
 		#CASE {"train"}
 		{
 			#ECHO {Checking satchel for ingredients that will give PXP:};
