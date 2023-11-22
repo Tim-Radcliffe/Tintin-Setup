@@ -66,20 +66,11 @@
     #NOP %1;
     #IF {"$map[file]" == ""} #RETURN;
     .WindowComboSplit;
-    #IF {"$_client[version]" > "2.01.1"}
-    {
-        #MAP MAP {@fScreen{{head}{rows}}} {${_WC[split][r]}} {LIST} {_WC[map]};
-        #FOREACH {*_WC[map][]} {v}
-        {
+    #MAP MAP {@fScreen{{head}{rows}}} {${_WC[split][r]}} {LIST} {_WC[map]};
+#NOP    #FOREACH {*_WC[map][]} {v}
+#NOP    {
 #NOP            #REPLACE {_WC[map][$v]} {\\} {\\};
-        };
-    };
-    #ELSE
-    {
-        #MAP MAP {${_WC[split][r]}x@fScreen{{head}{rows}}} {/tmp/map_combo.txt};
-        #SYSTEM {sed -i 's/\\/\\\\/g' /tmp/map_combo.txt};
-        #SCRIPT {_WC[map]} {cat /tmp/map_combo.txt};
-    }
+#NOP    };
 
     .WindowComboRefresh;
 };
