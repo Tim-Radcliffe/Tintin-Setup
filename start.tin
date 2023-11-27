@@ -1,5 +1,7 @@
 #EVENT {PROGRAM START}
 {
+    #INFO SYSTEM SAVE;
+    #VAR {_client} {$info[SYSTEM]};
     #VAR {_client[name]} {%0};
     #FORMAT {_client[version]} {%p} {%1};
 };

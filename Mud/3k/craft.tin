@@ -1,9 +1,9 @@
 #VAR {_craft[quality][specific]} {{1}{legendary}{2}{superior}{3}{good}{4}{average}{5}{poor}{6}{crude}{7}{worthless}};
 #VAR {_craft[quality][all]} {{best}{worst}{all}{any}${_craft[quality][specific]}};
 
-#VAR {_item[fragment of]}     {{global}{1}{nomap}{1}{pickup}{1}{pickup_command}{handler_craft_pickup {%s}}};
-#VAR {_item[essence of]}      {{global}{1}{nomap}{1}{pickup}{1}{pickup_command}{handler_craft_pickup {%s}}};
-#VAR {_item[heart of]}        {{global}{1}{nomap}{1}{pickup}{1}{pickup_command}{handler_craft_pickup {%s}}};
+#VAR {_item[fragment of]}     {{global}{1}{nomap}{1}{pickup}{1}{pickup_command}{handler_craft_pickup {fragment}}};
+#VAR {_item[essence of]}      {{global}{1}{nomap}{1}{pickup}{1}{pickup_command}{handler_craft_pickup {essence}}};
+#VAR {_item[heart of]}        {{global}{1}{nomap}{1}{pickup}{1}{pickup_command}{handler_craft_pickup {heart}}};
 #VAR {_item[^A Tome of \']}   {{global}{1}{nomap}{1}{pickup}{1}};
 
 #action {^{>\s|}%sWhat luck!  You have found %1} 
@@ -18,12 +18,8 @@
 #ALIAS {handler_craft_pickup}
 {
     #NOP %1;
-    #REGEXP {%1} {%w %*}
-    {
-        #SEND {!get &2};
-        #SEND {!stash &2};
-		sl &2;
-    };
+    #SEND {!get %1};
+    #SEND {!stash %1};
 };
 
 #NOP ############## Craft Satchel ###########
@@ -85,10 +81,10 @@
             {
                 #REGEXP {%0} {{\sore}}
                 {
-                    #$_craft[delta] {!unstash2 worst %0;!prospect %0};
+                    #$_craft[delta] {unstash2 worst %0;prospect %0};
                 }
                 {
-                    #$_craft[delta] {!unstash2 worst %0};
+                    #$_craft[delta] {unstash2 worst %0};
                 }
                 #VAR {_craft[satchel][%0][total]} {$_craft[limit][current]};
             };
