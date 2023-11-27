@@ -1,0 +1,61 @@
+#ALIAS {showitem}
+{
+	#ACTION {^You ask to inspect %*.$}
+	{
+		#VAR {_sI[name]} {%%1};
+	};
+	#ACTION {^Type: %w$}
+	{
+		#VAR {_sI[type]} {%%1};
+		#VAR {craft_recipes_enchanter[$_sI[name]][type]} {%%1};
+	};
+
+	#ACTION {^Minimum Skill: %d$}
+	{
+		#VAR {_sI[min]} {%%1};
+		#VAR {craft_recipes_enchanter[$_sI[name]][level][min]} {%%1};
+	};
+
+	#ACTION {^Trivial Level: %d$}
+	{
+		#VAR {_sI[max]} {%%1};
+		#VAR {craft_recipes_enchanter[$_sI[name]][level][max]} {%%1};
+	};
+
+	#ACTION {^-INGREDIENTS-}
+    {
+        #ACTION {^%d %*%s$}
+        {
+			#VAR {craft_recipes_enchanter[$_sI[name]][ingredients][%%%2]} {%%%1};
+			#IF {&craft_ingredients[%%%2][level][$_sI[type]] === 0}
+			{
+				#VAR {craft_ingredients[%%%2][level][$_sI[type]][min]} {$_sI[min]};
+				#VAR {craft_ingredients[%%%2][level][$_sI[type]][max]} {$_sI[max]};								
+			};
+			#IF {$craft_ingredients[%%%2][level][$_sI[type]][min] > $_sI[min] || 
+			    "$craft_ingredients[%%%2][level][$_sI[type]][min]" == ""}
+			{
+				#VAR {craft_ingredients[%%%2][level][$_sI[type]][min]} {$_sI[min]};
+			};
+			#IF {$craft_ingredients[%%%2][level][$_sI[type]][max] < $_sI[max] || 
+			    "$craft_ingredients[%%%2][level][$_sI[type]][max]" == ""}
+			{
+				#VAR {craft_ingredients[%%%2][level][$_sI[type]][max]} {$_sI[max]};
+			};
+        };
+    };
+	
+	#SEND {showitem %0};
+	event_oneshot e_prompt {Data/3k/Areas/Pinnacle/Crafting/Crafting.tin} {#NOP %%1;showitem_cleanup};	
+}
+
+#ALIAS {showitem_cleanup}
+{
+	#UNACTION {^You ask to inspect %*.$}	
+	#UNACTION {^Type: %w$};
+	#UNACTION {^Minimum Skill: %d$};
+	#UNACTION {^Trivial Level: %d$};
+	#UNACTION {^-INGREDIENTS-};
+	#UNACTION {^%d %*%s+$};	
+	#UNVAR {_sI};
+};
