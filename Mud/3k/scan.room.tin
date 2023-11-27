@@ -131,7 +131,6 @@ event_register {e_ansiflag_R} {h_room_name} {.HandlerRoomName};
       };
     };
   };
-
   
   #IF {"$room[commandbuffer]" != ""}
   {

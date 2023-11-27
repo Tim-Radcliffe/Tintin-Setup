@@ -56,5 +56,20 @@
 #VAR {_item[small grey stone]}          {{nomap}{1}{pickup}{1}};
 #VAR {_item[dark leather strap]}        {{nomap}{1}{pickup}{1}};
 #VAR {_item[cloudy glass sphere]}       {{nomap}{1}{pickup}{1}};
-#VAR {_item[dark skull key]}            {{nomap}{1}{pickup}{1}};
+#VAR {_item[dark skull key]} 
+{
+	{desc} 
+	{
+		{1} {dark skull key}
+		{2} {A tiny, and strangely ornate key made of a dark metal.  The ring}
+		{3} {is in the form of a grinning skull.  The metal feels very cold}
+		{4} {in your hands.  It seems that only a mortal that is familiar}
+		{5} {with death would know more about such a thing.}
+		{6} {This appears to be an artifact for the necromancer guild.}
+	}
+	{id} {key}
+	{name} {dark skull key}
+	{nomap} {1}
+	{pickup} {1}
+};
 #VAR {_item[shattered jaw bone]}        {{nomap}{1}{pickup}{1}};
