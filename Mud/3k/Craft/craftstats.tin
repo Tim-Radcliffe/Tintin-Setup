@@ -1,0 +1,8 @@
+#ALIAS {craftstats} 
+{
+	#ACTION {{^\s+(\w+)\s+:\s+(\d+) \/\s+(\d+) \(\s*(\d+)\%\) \[\s+(\w+)\s+\]\s*$}}
+	{
+		#VAR {my[craft][%%2]} {%%3};
+	};
+	#SEND {craftstats %0};
+}
