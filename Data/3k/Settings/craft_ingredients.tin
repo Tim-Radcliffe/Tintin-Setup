@@ -13,6 +13,17 @@
             }
         }
     }
+    {adamantium ore} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {77}
+                {min} {61}
+            }
+        }
+    }    
     {adamantium shards} 
     {
         {level} 
@@ -203,6 +214,17 @@
             }
         }
     }
+    {bronze ore} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {21}
+                {min} {6}
+            }
+        }
+    }    
     {bronze shards} 
     {
         {level} 
@@ -292,6 +314,11 @@
     {
         {level} 
         {
+            {Blacksmith} 
+            {
+                {max} {102}
+                {min} {86}
+            }            
             {Transmuter} 
             {
                 {max} {100}
@@ -331,6 +358,17 @@
             }
         }
     }
+    {copper ore} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {15}
+                {min} {1}
+            }
+        }
+    }    
     {copper shards} 
     {
         {level} 
@@ -493,6 +531,11 @@
     {
         {level} 
         {
+            {Blacksmith} 
+            {
+                {max} {72}
+                {min} {56}
+            }
             {Transmuter} 
             {
                 {max} {60}
@@ -1341,6 +1384,17 @@
             }
         }
     }
+    {gold ore} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {52}
+                {min} {36}
+            }
+        }
+    }    
     {gold shards} 
     {
         {level} 
@@ -1793,6 +1847,17 @@
             }
         }
     }
+    {iron ore} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {27}
+                {min} {11}
+            }
+        }
+    }    
     {iron shards} 
     {
         {level} 
@@ -1851,6 +1916,11 @@
     {
         {level} 
         {
+            {Blacksmith} 
+            {
+                {max} {62}
+                {min} {46}
+            }            
             {Transmuter} 
             {
                 {max} {43}
@@ -1931,6 +2001,11 @@
     {
         {level} 
         {
+            {Blacksmith} 
+            {
+                {max} {87}
+                {min} {71}
+            }            
             {Transmuter} 
             {
                 {max} {75}
@@ -1974,6 +2049,11 @@
     {
         {level} 
         {
+            {Blacksmith} 
+            {
+                {max} {82}
+                {min} {66}
+            }            
             {Transmuter} 
             {
                 {max} {70}
@@ -2143,6 +2223,11 @@
     {
         {level} 
         {
+            {Blacksmith} 
+            {
+                {max} {98}
+                {min} {81}
+            }            
             {Transmuter} 
             {
                 {max} {90}
@@ -2351,6 +2436,17 @@
             }
         }
     }
+    {silver ore} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {42}
+                {min} {26}
+            }
+        }
+    }    
     {silver shards} 
     {
         {level} 
@@ -2478,6 +2574,17 @@
             }
         }
     }
+    {steel ore} 
+    {
+        {level} 
+        {
+            {Blacksmith} 
+            {
+                {max} {32}
+                {min} {16}
+            }
+        }
+    }    
     {steel shards} 
     {
         {level} 
@@ -2556,6 +2663,11 @@
     {
         {level} 
         {
+            {Blacksmith} 
+            {
+                {max} {67}
+                {min} {51}
+            }            
             {Transmuter} 
             {
                 {max} {52}
@@ -2683,6 +2795,11 @@
     {
         {level} 
         {
+            {Blacksmith} 
+            {
+                {max} {92}
+                {min} {76}
+            }            
             {Transmuter} 
             {
                 {max} {83}

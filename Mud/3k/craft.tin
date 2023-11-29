@@ -37,7 +37,7 @@
         #VAR {_craft[satchel][$_craft[ingredient]][subtotal][5]} {%%19};
         #VAR {_craft[satchel][$_craft[ingredient]][subtotal][6]} {%%22};
         #VAR {_craft[satchel][$_craft[ingredient]][subtotal][7]} {%%25};
-        .CleanIngredient $_craft[ingredient];
+        .ingredientScan $_craft[ingredient];
     };
     
     #ACTION {You have %%d/%%d items in your satchel.}
@@ -49,7 +49,7 @@
     #SEND {!stashlist %0};
 };
 
-#ALIAS {.CleanIngredient}
+#ALIAS {.ingredientScan}
 {
     #REGEXP {%0} {{fragment|essence}}
     {
@@ -74,20 +74,31 @@
         #MATH {_craft[delta]} {$_craft[satchel][%0][total] - $_craft[limit][current]};
         #IF {$_craft[delta] > 0} 
         {
-            #REGEXP {%0} {heart}
+            #$_craft[delta] {.ingredientRecycle %0};
+        };
+        #LOCAL {_non_trivial} {0};
+        #FOREACH {*craft_ingredients[%0][level][]} {c}
+        {
+            #IF {$my[craft][$c] <= $craft_ingredients[%0][level][$c][max]}
             {
-                #NOP **** Don't discard hearts ever ****;
-            }
-            {
-                #REGEXP {%0} {{\sore}}
-                {
-                    #$_craft[delta] {unstash2 worst %0;prospect %0};
-                }
-                {
-                    #$_craft[delta] {unstash2 worst %0};
-                }
-                #VAR {_craft[satchel][%0][total]} {$_craft[limit][current]};
+                #LOCAL {_non_trivial} {1};
             };
+        };
+        #IF {!$_non_trivial} {.ingredientRecycle {%0}};
+    };
+};
+
+#ALIAS {.ingredientRecycle}
+{
+    #REGEXP {%0} {{heart|gem of}}
+    {
+        #NOP **** Don't discard hearts ever ****;
+    }
+    {
+        #SEND {unstash2 worst %0};
+        #REGEXP {%0} {{\sore}}
+        {
+            #SEND {prospect %0};
         };
     };
 };
