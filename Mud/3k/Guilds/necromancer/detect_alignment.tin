@@ -7,7 +7,7 @@
     #NOP %1;
     #IF {"%2" != ""}
     {
-        #IF {"$_npc[%2][alignment]" == ""}
+        #IF {&_npc[%2][alignment] == 0}
         {
             #CLASS {cNecromancerAlignment%5} {open};
             #ACTION {{^\x7D\x7D\x7D (.*) reflects (.*)$}}
