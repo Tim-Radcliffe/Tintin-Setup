@@ -130,4 +130,20 @@
         {nomap} {1}
         {pickup} {-1}
     }
+    {_item[^A burning funeral pyre$]} 
+    {
+        {desc} 
+        {
+            {1} {A burning funeral pyre}
+            {2} {You see a blazing bonfire burning in effigy of a fallen soul.  The}
+            {3} {flames glow with a unique color, as though azure and white energies}
+            {4} {were dancing in unison.  Standing in the light and warmth of the}
+            {5} {comforting flames, you feel of revitalized and at peace, as if the}
+            {6} {corpse's energy is somehow being transferred to you through death.}
+        }
+        {id} {funeral pyre}
+        {nomap} {1}
+        {name} {A burning funeral pyre}
+        {pickup} {-1}        
+    }    
 }

@@ -1139,7 +1139,7 @@
 	{global} {1}
 	{name} {Amber ring}
 }
-#VAR {_item[^A(n|) (bloody|double-bladed|dull|extremely sharp|finely cut|finely crafted|glowing|heavy|hooked|jagged|light|lightly glowing|long|long thin|nasty|nicked|old|ornate|polished|razor-sharp|runed|sharp|shining|short|single edged|small|spiked|very sharp|wicked|)(, |)(adamantium|ash|balsam|bronze|ebony|elm|gold|granite|iron|jade|mahogany|maple|mithril|obsidian|onyx|platinum|sardonyx|silver|steel|stone|titanium|) (bastardsword|battleaxe|blackjack|blade|claymore|club|cutlass|dagger|dirk|falchion|foil|handaxe|hatchet|jo|khopesh|knife|kynac|longsword|mace|machete|mattock|morningstar|pickaxe|sabre|sai|scimitar|shortsword|sledgehammer|staff|stiletto|sword|trident|two-handed sword|warhammer|war-axe|war-mattock|woodsman's axe)( \x28enchanted\x29|)$]} 
+#VAR {_item[^A(n|) (bloody|double-bladed|dull|extremely sharp|finely cut|finely crafted|glowing|heavy|hooked|jagged|light|lightly glowing|long|long thin|nasty|nicked|old|ornate|polished|razor-sharp|runed|sharp|shining|short|single edged|small|spiked|very sharp|wicked|)(, |)(adamantium|ash|balsam|bronze|ebony|elm|gold|granite|iron|jade|mahogany|maple|mithril|obsidian|onyx|platinum|sardonyx|silver|steel|stone|titanium|) (bastardsword|battleaxe|blackjack|blade|claymore|club|cudgel|cutlass|dagger|dirk|falchion|foil|handaxe|hatchet|jo|khopesh|knife|kynac|longsword|mace|machete|mattock|morningstar|pickaxe|sabre|sai|scimitar|shortsword|sledgehammer|staff|stiletto|sword|trident|two-handed sword|warhammer|war-axe|war-mattock|woodsman's axe)( \x28enchanted\x29|)$]} 
 {
 	{desc} 
 	{
