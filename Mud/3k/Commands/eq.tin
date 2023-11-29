@@ -1,0 +1,26 @@
+#ALIAS {eq}
+{
+	#ACTION {{^(.*)\:\s+(.*)$}}
+	{
+		#IF {"%%2" != "Resistances"}
+		{
+			#IF {"%%3" == "none"} 
+			{
+				#VAR {my[eq][%%2]} {};
+			};
+			#ELSE 
+			{
+				#VAR {my[eq][%%2]} {%%3};
+			};
+		};
+	};
+
+	#ACTION {_command.eq}
+	{
+		#LINE GAG;
+		#UNACTION {{^(.*)\:\s+(.*)$}};
+	};
+
+	#SEND {eq %0};
+	#SEND {_command.eq};
+};
