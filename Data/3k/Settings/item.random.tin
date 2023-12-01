@@ -170,6 +170,22 @@
 	{global} {1}
 	{name} {A hammer}
 }
+#VAR {_item[^A light blue wand$]} 
+{
+	{desc} 
+	{
+		{1} {A light blue wand}
+		{2} {This wand is a thick oak rod wrapped in pale blue cloth which has been}
+		{3} {tied in a intricate knot at one end.  The cloth has frozen solid, and}
+		{4} {small particles of ice hang from the narrow end.}
+		{5} {To use this wand you must hold it.}
+		{6} {It looks light.}
+	}
+	{id} {wand}
+    {nomap} {1}
+	{global} {1}
+	{name} {A light blue wand}
+}
 #VAR {_item[^A magic scroll$]} 
 {
 	{desc} 
@@ -377,6 +393,20 @@
 	{global} {1}
 	{name} {A suit of armor}
 }
+{_item[^Amulet$]} 
+{
+	{desc} 
+	{
+		{1} {Amulet}
+		{2} {A mysterious amulet. }
+		{3} {An identification spell may reveal more information.}
+		{4} {It looks light.}
+	}
+	{id} {amulet}
+    {nomap} {1}
+	{global} {1}
+	{name} {Amulet}
+}
 #VAR {_item[^Armour$]} 
 {
 	{desc} 
@@ -495,7 +525,20 @@
 	{global} {1}
 	{name} {Brass Gloves}
 }
-
+{_item[^Bronze Codpiece$]} 
+{
+	{desc} 
+	{
+		{1} {Bronze Codpiece}
+		{2} {A bronze codpiece.  You cannot surmise what powers it may possess.  }
+		{3} {An identification spell may reveal more information.}
+		{4} {It looks light.}
+	}
+	{id} {other}
+    {nomap} {1}
+	{global} {1}
+	{name} {Bronze Codpiece}
+}
 #VAR {_item[^Bronze Gloves$]} 
 {
 	{desc} 
@@ -673,6 +716,21 @@
 	{global} {1}
 	{name} {Dragonscale Shield}
 }
+{_item[^Electrum Gloves$]} 
+{
+	{desc} 
+	{
+		{1} {Electrum Gloves}
+		{2} {A pair of electrum gloves.  You cannot surmise what powers it may}
+		{3} {possess.  }
+		{4} {An identification spell may reveal more information.}
+		{5} {It looks light.}
+	}
+	{id} {gloves}
+    {nomap} {1}
+	{global} {1}
+	{name} {Electrum Gloves}
+}
 #VAR {_item[^Fur Boots$]} 
 {
 	{desc} 
@@ -772,6 +830,20 @@
 	{global} {1}
 	{nomap} {1}
 	{name} {Iron Chainmail}
+}
+{_item[^Iron Codpiece$]} 
+{
+	{desc} 
+	{
+		{1} {Iron Codpiece}
+		{2} {An iron codpiece.  You cannot surmise what powers it may possess.  }
+		{3} {An identification spell may reveal more information.}
+		{4} {It looks light.}
+	}
+	{id} {other}
+	{global} {1}
+	{nomap} {1}
+	{name} {Iron Codpiece}
 }
 #VAR {_item[^Iron Gauntlets$]} 
 {
@@ -904,6 +976,21 @@
 	{global} {1}
 	{name} {Leather girdle}
 }
+{_item[^Marble Gloves$]} 
+{
+	{desc} 
+	{
+		{1} {Marble Gloves}
+		{2} {A pair of marble gloves.  You cannot surmise what powers it may}
+		{3} {possess.  }
+		{4} {An identification spell may reveal more information.}
+		{5} {It looks light.}
+	}
+	{id} {gloves}
+    {nomap} {1}
+	{global} {1}
+	{name} {Marble Gloves}
+}
 #VAR {_item[^Old Dusty Hat$]} 
 {
 	{desc} 
@@ -951,6 +1038,20 @@
     {nomap} {1}
 	{global} {1}
 	{name} {Sapphire Amulet}
+}
+{_item[^Scaley Armour$]} 
+{
+	{desc} 
+	{
+		{1} {Scaley Armour}
+		{2} {A scaley armour.  You cannot surmise what powers it may possess.  }
+		{3} {An identification spell may reveal more information.}
+		{4} {It doesn't look too heavy.}
+	}
+	{id} {armour}
+    {nomap} {1}
+	{global} {1}
+	{name} {Scaley Armour}
 }
 #VAR {_item[^Scaley Boots$]} 
 {
@@ -1053,6 +1154,21 @@
 	{global} {1}
 	{name} {Steel Codpiece}
 }
+{_item[^Steel Gloves$]} 
+{
+	{desc} 
+	{
+		{1} {Steel Gloves}
+		{2} {A pair of steel gloves.  You cannot surmise what powers it may}
+		{3} {possess.  }
+		{4} {An identification spell may reveal more information.}
+		{5} {It looks light.}
+	}
+	{id} {gloves}
+    {nomap} {1}
+	{global} {1}
+	{name} {Steel Gloves}
+}
 #VAR {_item[^Steel Helmet$]} 
 {
 	{desc} 
@@ -1124,7 +1240,7 @@
 	{global} {1}
 	{name} {Stone Boots}
 }
-#VAR {_item[^(Aluminum|Amber|Amethyst|Aquamarine|Bloodstone|Bone|Brass|Bronze|Ceramic|Copper|Coral|Diamond|Ebony|Electrum|Emerald|Garnet|Glass|Gold|Granite|Jacinth|Lead|Iron|Ivory|Jade|Jasper|Mahogany|Malachite|Maple|Marble|Moonstone|Oak|Onyx|Pearl|Peridot|Platinum|Pyrite|Quartz|Ruby|Sapphire|Sardonyx|Silver|Steel|Stone|Tin|Titanium|Turquoise|Zirconian) ring$]} 
+#VAR {_item[^(Aluminum|Amber|Amethyst|Aquamarine|Bloodstone|Bone|Brass|Bronze|Ceramic|Copper|Coral|Diamond|Ebony|Electrum|Emerald|Garnet|Glass|Gold|Granite|Jacinth|Lead|Iron|Ivory|Jade|Jasper|Mahogany|Malachite|Maple|Marble|Moonstone|Oak|Obsidian|Onyx|Pearl|Peridot|Platinum|Pyrite|Quartz|Ruby|Sapphire|Sardonyx|Silver|Sodalite|Steel|Stone|Tin|Titanium|Topaz|Turquoise|Zinc|Zirconian) ring$]} 
 {
 	{desc} 
 	{
@@ -1139,7 +1255,7 @@
 	{global} {1}
 	{name} {Amber ring}
 }
-#VAR {_item[^A(n|) (bloody|double-bladed|dull|extremely sharp|finely cut|finely crafted|glowing|heavy|hooked|jagged|light|lightly glowing|long|long thin|nasty|nicked|old|ornate|polished|razor-sharp|runed|sharp|shining|short|single edged|small|spiked|very sharp|wicked|)(, |)(adamantium|ash|balsam|bronze|ebony|elm|gold|granite|iron|jade|mahogany|maple|mithril|obsidian|onyx|platinum|sardonyx|silver|steel|stone|titanium|) (bastardsword|battleaxe|blackjack|blade|claymore|club|cudgel|cutlass|dagger|dirk|falchion|foil|handaxe|hatchet|jo|khopesh|knife|kynac|longsword|mace|machete|mattock|morningstar|pickaxe|sabre|sai|scimitar|shortsword|sledgehammer|staff|stiletto|sword|trident|two-handed sword|warhammer|war-axe|war-mattock|woodsman's axe)( \x28enchanted\x29|)$]} 
+#VAR {_item[^A(n|) (bloody|double-bladed|dark|dull|engraved|extremely sharp|finely cut|finely crafted|glowing|heavy|hooked|jagged|light|lightly glowing|long|long thin|nasty|nicked|old|ornate|polished|razor-sharp|runed|sharp|shining|short|single edged|small|spiked|very dull|very sharp|wicked|)(, |)(adamantium|ash|aspen|balsam|bronze|cedar|ebony|elm|gold|granite|iron|jade|mahogany|maple|mithril|obsidian|onyx|pine|platinum|sardonyx|silver|steel|stone|titanium|) (bastardsword|battleaxe|blackjack|blade|claymore|club|cudgel|cutlass|dagger|dirk|double-edged axe|falchion|flail|foil|handaxe|hatchet|jo|khopesh|knife|kynac|longsword|mace|machete|main gauche|mattock|morningstar|no-dachi|nunchaku|pickaxe|quarterstaff|sabre|sai|scimitar|shortsword|sledgehammer|staff|stiletto|sword|trident|two-handed sword|warhammer|war-axe|war-mattock|woodsman's axe)( \x28enchanted\x29|)$]} 
 {
 	{desc} 
 	{
@@ -1170,7 +1286,7 @@
 	{nomap} {1}
 	{name} {candle}
 }
-{_item[^(brown|green|red|violet|yellow) gemstone$]} 
+{_item[^(brown|green|red|violet|yellow|black) gemstone$]} 
 {
 	{desc} 
 	{
