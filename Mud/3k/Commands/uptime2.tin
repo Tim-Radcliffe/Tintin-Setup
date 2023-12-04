@@ -1,0 +1,32 @@
+#NOP %1;
+
+/*
+Current Reboot : #2007 [1 week 1 day 15 hours 10 minutes]                                                                                                                                                                        
+Current Time   : (US EST) Mon Dec 04, 2023 03:51:16 am                                                                                                                                                                           
+Reboot Started : Sun Nov 26 03:14 am                                                                                                                                                                                             
+Current Uptime : 1 week 1 day 37 minutes 1 second (92%)                                                                                                                                                                          
+Reboot Ends    : Mon Dec 4 06:24 pm                                                                                                                                                                                              
+Next Reboot in : 14 hours 33 minutes 17 seconds                                                                                                                                                                                  
+    After That : [2009] Wed Dec 13 06:19 am                                                                                                                                                                                      
+    After That : [2010] Fri Dec 22 05:52 pm 
+*/
+
+#ALIAS {uptime2}
+{
+    #NOP %1;
+    #ACTION {{^\s+Current Reboot \: \#(\d+) \[.*\]}}
+    {
+        #CLASS {$path[profile]/data.tin} {assign} {#VAR {_boot[number]} {%%2};};        
+    };                                                                                                                                                                     
+    #ACTION {{^\s+After That \: .*$}}
+    {
+        #UNACTION {{^\s+Current Reboot \: \#(\d+) \[.*\]}};
+        #UNACTION {{^\s+After That \: .*$}};    
+    };
+
+    event_oneshot {e_prompt} {Mud/3k/Commands/uptime2.tin} {#NOP %%1};
+    
+    #SEND {!uptime2 %0};
+};
+
+uptime2;
