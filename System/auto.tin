@@ -42,12 +42,12 @@
         #IF {"%3" != ""} {#VAR {auto[%2][start]}  {%3};};
         #IF {"%4" != ""} {#VAR {auto[%2][event]}  {%4};};
         #IF {"%5" != ""} {#VAR {auto[%2][end]}    {%5};};
-        .aGlobalSave;        
+        .aProfileSave;        
     };
     #ELSEIF {"%1" == "remove"}
     {
         #UNVAR {auto[%2]};
-        .aGlobalSave;        
+        .aProfileSave;        
     };
     #ELSEIF {&auto[%1] != 0}
     {
@@ -84,7 +84,7 @@
             };
             #ECHO {AUTO: <118>%1 off<098>};
         };
-        .aGlobalSave;         
+        .aProfileSave;         
     };
     #ELSE
     {
