@@ -1,0 +1,300 @@
+#CLASS {Data/3k/Areas/area.npc.index.tin} OPEN
+
+#VARIABLE {_area_npc_index}
+{
+    {^A Lady \x28waiting to use the toilet\x29$} 
+    {
+        {Pinnacle/Science/New York/Carnegie Hall} {90}
+    }
+    {^A Large Usher$} 
+    {
+        {Pinnacle/Science/New York/Carnegie Hall} {41}
+    }
+    {^A New Yorker \x28waiting in line\x29$} 
+    {
+        {Pinnacle/Science/New York/Carnegie Hall} {7}
+    }
+    {^A New Yorker trying to find his seat$} 
+    {
+        {Pinnacle/Science/New York/Carnegie Hall} {35}
+    }
+    {^A bodyguard \x28ex-mafia\x29$} 
+    {
+        {Pinnacle/Science/New York/Carnegie Hall} {38}
+    }
+    {^A buff vampire$} 
+    {
+        {Pinnacle/Chaos/Chaos Cinemaplex/Hotel Transylvania} {72}
+    }
+    {^A polite audience member$} 
+    {
+        {Pinnacle/Science/New York/Carnegie Hall} {129}
+    }
+    {^A sleeping audience member$} 
+    {
+        {Pinnacle/Science/New York/Carnegie Hall} {118}
+    }
+    {^A zombie bell hop waiting to carry your things$} 
+    {
+        {Pinnacle/Chaos/Chaos Cinemaplex/Hotel Transylvania} {18}
+    }
+    {^A zombie cook looking for something to chop$} 
+    {
+        {Pinnacle/Chaos/Chaos Cinemaplex/Hotel Transylvania} {20}
+    }
+    {^A zombie waiter offering drinks$} 
+    {
+        {Pinnacle/Chaos/Chaos Cinemaplex/Hotel Transylvania} {20}
+    }
+    {^Adam Clayton$} 
+    {
+        {Pinnacle/Science/New York/Carnegie Hall} {75}
+    }
+    {^Aegis Sentry Model 60-FT$} 
+    {
+        {Pinnacle/Science/New York/Aegis Global} {32}
+    }
+    {^Aegis Sentry Model 62-CC$} 
+    {
+        {Pinnacle/Science/New York/Aegis Global} {51}
+    }
+    {^Aegis Sentry Model 64-CC$} 
+    {
+        {Pinnacle/Science/New York/Aegis Global} {148}
+    }
+    {^An Usher$} 
+    {
+        {Pinnacle/Science/New York/Carnegie Hall} {10}
+    }
+    {^An angry audience member$} 
+    {
+        {Pinnacle/Science/New York/Carnegie Hall} {140}
+    }
+    {^An ugly vampire$} 
+    {
+        {Pinnacle/Chaos/Chaos Cinemaplex/Hotel Transylvania} {69}
+    }
+    {^Baby Dragon$} 
+    {
+        {Pinnacle/Fantasy/Portal of Life v2} {367}
+    }
+    {^Beyonce$} 
+    {
+        {Pinnacle/Science/New York/Carnegie Hall} {78}
+    }
+    {^Billy Crystal$} 
+    {
+        {Pinnacle/Science/New York/Carnegie Hall} {84}
+    }
+    {^Black Patrol Guard$} 
+    {
+        {Pinnacle/Fantasy/Portal of Life v2} {317}
+    }
+    {^Black Patrol Leader$} 
+    {
+        {Pinnacle/Fantasy/Portal of Life v2} {317}
+    }
+    {^Bono$} 
+    {
+        {Pinnacle/Science/New York/Carnegie Hall} {75}
+    }
+    {^Cancer the tradesman$} 
+    {
+        {Pinnacle} {6}
+    }
+    {^Cleric of Lathander$} 
+    {
+        {Pinnacle/Fantasy/Portal of Life v2} {23}
+    }
+    {^Cold Tiro has a Halibut by the tail\x21$} 
+    {
+        {Pinnacle} {3}
+    }
+    {^Cur, the tradesman's dog$} 
+    {
+        {Pinnacle} {6}
+    }
+    {^Duncan, Keeper of the Dead$} 
+    {
+        {Pinnacle/Fantasy/Necromancer Guild} {48}
+    }
+    {^Faerie Lizard$} 
+    {
+        {Pinnacle/Fantasy/Portal of Life v2} {89}
+    }
+    {^Greater Demon$} 
+    {
+        {Pinnacle/Fantasy/Alizarian Tower} {76}
+    }
+    {^Jay-Z$} 
+    {
+        {Pinnacle/Science/New York/Carnegie Hall} {78}
+    }
+    {^Johney the little boy \x28Pinnacle\x29$} 
+    {
+        {Pinnacle} {3}
+    }
+    {^Larry Mullen Jr$} 
+    {
+        {Pinnacle/Science/New York/Carnegie Hall} {75}
+    }
+    {^Lesser Demon$} 
+    {
+        {Pinnacle/Fantasy/Alizarian Tower} {68}
+    }
+    {^Lynda the librarian \x28neutral\x29$} 
+    {
+        {Pinnacle/Fantasy/Necromancer Guild} {45}
+    }
+    {^Major Henkey, PhD$} 
+    {
+        {Pinnacle/Science} {3}
+    }
+    {^Mel Brooks$} 
+    {
+        {Pinnacle/Science/New York/Carnegie Hall} {80}
+    }
+    {^Michael Rudolph Guilioomberg \x28taking a dump\x29$} 
+    {
+        {Pinnacle/Science/New York/Carnegie Hall} {301}
+    }
+    {^New York Chief of Police$} 
+    {
+        {Pinnacle/Science/New York/Carnegie Hall} {86}
+    }
+    {^New York Fire Chief$} 
+    {
+        {Pinnacle/Science/New York/Carnegie Hall} {86}
+    }
+    {^Planar Spirit$} 
+    {
+        {Pinnacle/Fantasy/Alizarian Tower} {19}
+    }
+    {^Queen's Elite Guardswoman$} 
+    {
+        {Pinnacle/Fantasy/Portal of Life} {4}
+        {Pinnacle/Fantasy/Portal of Life v2} {83}
+    }
+    {^Rabid Wolf$} 
+    {
+        {Pinnacle/Fantasy/Portal of Life v2} {78}
+    }
+    {^Ragged Peasant$} 
+    {
+        {Pinnacle/Fantasy/Portal of Life v2} {1}
+    }
+    {^Raylorn the Prime Necromancer \x28neutral\x29$} 
+    {
+        {Pinnacle/Fantasy/Necromancer Guild} {5}
+    }
+    {^Shadow Guard$} 
+    {
+        {Pinnacle/Fantasy/Portal of Life v2} {324}
+    }
+    {^Soon-Yi$} 
+    {
+        {Pinnacle/Science/New York/Carnegie Hall} {88}
+    }
+    {^Sylvan Elf$} 
+    {
+        {Pinnacle/Fantasy/Portal of Life v2} {197}
+    }
+    {^The Edge$} 
+    {
+        {Pinnacle/Science/New York/Carnegie Hall} {75}
+    }
+    {^Theela the Necromancer \x28moral\x29$} 
+    {
+        {Pinnacle/Fantasy/Necromancer Guild} {46}
+    }
+    {^Trixie Hilton$} 
+    {
+        {Pinnacle/Science/New York/Carnegie Hall} {72}
+    }
+    {^U-Pick Turkey Farmer$} 
+    {
+        {Pinnacle} {8}
+    }
+    {^Undead Ghost$} 
+    {
+        {Pinnacle/Fantasy/Alizarian Tower} {19}
+    }
+    {^Undead Lich$} 
+    {
+        {Pinnacle/Fantasy/Alizarian Tower} {19}
+    }
+    {^Undead Mummy$} 
+    {
+        {Pinnacle/Fantasy/Alizarian Tower} {39}
+    }
+    {^Undead Reaper$} 
+    {
+        {Pinnacle/Fantasy/Alizarian Tower} {19}
+    }
+    {^Undead Vampire$} 
+    {
+        {Pinnacle/Fantasy/Alizarian Tower} {19}
+    }
+    {^Undead Werebeast$} 
+    {
+        {Pinnacle/Fantasy/Alizarian Tower} {19}
+    }
+    {^Wild Stag$} 
+    {
+        {Pinnacle/Fantasy/Portal of Life v2} {122}
+    }
+    {^Woody Allen$} 
+    {
+        {Pinnacle/Science/New York/Carnegie Hall} {88}
+    }
+    {^Wythe the Moneylender \x28serene\x29$} 
+    {
+        {Pinnacle/Fantasy/Necromancer Guild} {73}
+    }
+    {^Wyvern$} 
+    {
+        {Pinnacle/Fantasy/Portal of Life v2} {260}
+    }
+    {^bloody zombie$} 
+    {
+        {Pinnacle/Science/New York/Aegis Global} {59}
+    }
+    {^charred zombie$} 
+    {
+        {Pinnacle/Science/New York/Aegis Global} {90}
+    }
+    {^faceless zombie$} 
+    {
+        {Pinnacle/Science/New York/Aegis Global} {67}
+    }
+    {^one-armed zombie$} 
+    {
+        {Pinnacle/Science/New York/Aegis Global} {9}
+    }
+    {^putrid zombie$} 
+    {
+        {Pinnacle/Science/New York/Aegis Global} {5}
+    }
+    {^rotting zombie$} 
+    {
+        {Pinnacle/Science/New York/Aegis Global} {43}
+    }
+    {^severely burnt zombie$} 
+    {
+        {Pinnacle/Science/New York/Aegis Global} {89}
+    }
+    {^shambling zombie$} 
+    {
+        {Pinnacle/Science/New York/Aegis Global} {17}
+    }
+    {^vomit-splattered zombie$} 
+    {
+        {Pinnacle/Science/New York/Aegis Global} {87}
+    }
+    {^wounded zombie$} 
+    {
+        {Pinnacle/Science/New York/Aegis Global} {42}
+    }
+}
+
+#CLASS {Data/3k/Areas/area.npc.index.tin} CLOSE

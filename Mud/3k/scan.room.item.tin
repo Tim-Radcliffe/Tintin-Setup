@@ -74,38 +74,14 @@ event_register {e_room_item} {scan.room.item.tin} {.scanRoomItem};
 			#LOCAL {_scanRoomVnum} {};
 			#MAP GET ROOMVNUM {_scanRoomVnum};
 			#VAR {_item[%1][location][$map[area][path]][$_scanRoomVnum]} {};
-			#VAR {_area_index[item][%1][$map[area][path]]} {$_scanRoomVnum};
+            #IF {&_area_item_index[%1][$map[area][path]] == 0}
+            {
+			    #VAR {_area_item_index[%1][$map[area][path]]} {$_scanRoomVnum};
+            };
 		};
 		.scanRoomItemSave {%1};
 	};
 };
-
-/* #ALIAS {.scanRoomNPCConsider}
-{
-	#IF {"&_npc[%1][size][consider]" == "0"}
-	{
-		#ACTION {_scan.room.item.consider.%4}
-		{
-			#LINE GAG;
-			#ACTION {^Monster class: %%%*$}
-			{
-				#VAR {_npc[%1][size][consider]} {%%%1};
-				.scanRoomItemSave {%1};
-				#UNACTION {^Monster class: %%%*$};
-			};				
-			#UNACTION {_scan.room.item.consider.%4};			
-		} {1};
-		#SEND {!_scan.room.item.consider.%4};
-		#IF {&_npc[%1][id] > 0}
-		{
-			#SEND {!consider $_npc[%1][id]};
-		};
-		#ELSE 
-		{
-			#SEND {!consider %3};				
-		};		
-	};
-}; */
 
 #ALIAS {.scanRoomItemSave}
 {

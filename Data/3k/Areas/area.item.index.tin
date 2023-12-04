@@ -1,0 +1,169 @@
+#CLASS {Data/3k/Areas/area.item.index.tin} OPEN
+
+#VARIABLE {_area_item_index}
+{
+    {ATM} 
+    {
+        {Pinnacle/Fantasy/Necromancer Guild} {73}
+    }
+    {^A Statue of Cancer the King$} 
+    {
+        {Pinnacle} {1}
+    }
+    {^A Trashcan$} 
+    {
+        {Pinnacle} {6}
+        {Pinnacle/Fantasy/Necromancer Guild} {46}
+    }
+    {^A bottle of pepper spray$} 
+    {
+        {Pinnacle/Science/New York/Carnegie Hall} {301}
+    }
+    {^A glass sign with moving liquid inside, pointing north$} 
+    {
+        {Pinnacle} {25}
+    }
+    {^A gravestone and grave$} 
+    {
+        {Pinnacle/Fantasy/Alizarian Tower} {53}
+    }
+    {^A greenish street sign$} 
+    {
+        {Pinnacle} {42}
+    }
+    {^A large sign$} 
+    {
+        {Pinnacle} {6}
+    }
+    {^A skeleton in tattered robes$} 
+    {
+        {Pinnacle/Fantasy/Alizarian Tower} {19}
+    }
+    {^A small magical globe$} 
+    {
+        {Pinnacle/Fantasy/Alizarian Tower} {102}
+    }
+    {^A small wooden sign$} 
+    {
+        {Pinnacle} {175}
+    }
+    {^A tall street light$} 
+    {
+        {Pinnacle} {48}
+    }
+    {^A weathered wooden sign, pointing west$} 
+    {
+        {Pinnacle} {47}
+    }
+    {^An expensive mens wristwatch$} 
+    {
+        {Pinnacle/Science/New York/Carnegie Hall} {35}
+    }
+    {^An expensive pair of loafers$} 
+    {
+        {Pinnacle/Science/New York/Carnegie Hall} {118}
+    }
+    {^An expensive pair of stilettos$} 
+    {
+        {Pinnacle/Science/New York/Carnegie Hall} {140}
+    }
+    {^An expensive pair of suit pants$} 
+    {
+        {Pinnacle/Science/New York/Carnegie Hall} {118}
+    }
+    {^An expensive pearl necklace$} 
+    {
+        {Pinnacle/Science/New York/Carnegie Hall} {140}
+    }
+    {^An exquisite brick walkway leading into the keep$} 
+    {
+        {Pinnacle/Fantasy/Necromancer Guild} {8}
+    }
+    {^Baby Dragon Talons \x28envenomed\x29$} 
+    {
+        {Pinnacle/Fantasy/Portal of Life v2} {112}
+    }
+    {^Faerie Lizard Wings \x28spritely\x29$} 
+    {
+        {Pinnacle/Fantasy/Portal of Life v2} {184}
+    }
+    {^Large wolf claws$} 
+    {
+        {Pinnacle/Fantasy/Portal of Life v2} {107}
+    }
+    {^Many points of light sparkle beautifully above you$} 
+    {
+        {Pinnacle/Fantasy/Necromancer Guild} {8}
+    }
+    {^Marble obelisk$} 
+    {
+        {Pinnacle/Fantasy/Alizarian Tower} {108}
+    }
+    {^Necromancer Rod$} 
+    {
+        {Pinnacle/Fantasy/Alizarian Tower} {53}
+    }
+    {^Pedestal$} 
+    {
+        {Pinnacle/Fantasy/Alizarian Tower} {111}
+    }
+    {^Rimmon$} 
+    {
+        {Pinnacle/Fantasy/Alizarian Tower} {111}
+    }
+    {^Small flute$} 
+    {
+        {Pinnacle/Fantasy/Alizarian Tower} {37}
+    }
+    {^Stag Antlers \x2815 point\x29$} 
+    {
+        {Pinnacle/Fantasy/Portal of Life v2} {295}
+    }
+    {^Sylvan Sword \x28shimmering\x29$} 
+    {
+        {Pinnacle/Fantasy/Portal of Life v2} {197}
+    }
+    {^Tattered Robe$} 
+    {
+        {Pinnacle/Fantasy/Alizarian Tower} {53}
+    }
+    {^The 3-K Kill List$} 
+    {
+        {Pinnacle} {1}
+    }
+    {^The Necromancers' Standard flying the Lich banner$} 
+    {
+        {Pinnacle/Fantasy/Necromancer Guild} {5}
+    }
+    {^The Necromancers' Tapestry honoring Dracula$} 
+    {
+        {Pinnacle/Fantasy/Necromancer Guild} {20}
+    }
+    {^Wyvern Talons$} 
+    {
+        {Pinnacle/Fantasy/Portal of Life v2} {92}
+    }
+    {^a tall street light$} 
+    {
+        {Pinnacle} {1}
+    }
+    {^a whirring terminal$} 
+    {
+        {Pinnacle/Science} {21}
+    }
+    {^acorn$} 
+    {
+        {Pinnacle/Fantasy/Alizarian Tower} {53}
+    }
+    {^shred of birch bark$} 
+    {
+        {Pinnacle/Fantasy/Alizarian Tower} {19}
+    }
+    {containing \d+ messages} 
+    {
+        {Pinnacle/Chaos/Chaos Cinemaplex/Hotel Transylvania} {17}
+        {Pinnacle/Fantasy/Necromancer Guild} {20}
+    }
+}
+
+#CLASS {Data/3k/Areas/area.item.index.tin} CLOSE

@@ -74,7 +74,10 @@ event_register {e_room_npc} {h_scan_npc} {.scanRoomNPC};
 			#LOCAL {_scanRoomVnum} {};
 			#MAP GET ROOMVNUM {_scanRoomVnum};
 			#VAR {_npc[%1][location][$map[area][path]][$_scanRoomVnum]} {};
-			#VAR {_area_index[npc][%1][$map[area][path]]} {$_scanRoomVnum};
+            #IF {&_area_npc_index[%1][$map[area][path]] == 0}
+            {
+			    #VAR {_area_npc_index[%1][$map[area][path]]} {$_scanRoomVnum};
+            };
 		};
 		.scanRoomNPCSave {%1};
 	};

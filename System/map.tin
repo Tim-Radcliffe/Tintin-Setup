@@ -76,14 +76,17 @@
 	}
 };
 
-#IF {&{_area_index} == 0}
-{
-    #CLASS {$path[areas]/area.index.tin} {ASSIGN} {#VAR {_area_index} {};};
-};
+.file load {$path[areas]/area.item.index.tin};
+.file load {$path[areas]/area.npc.index.tin};
 
-#EVENT {VARIABLE UPDATED _area_index}
+#EVENT {VARIABLE UPDATED _area_item_index}
 {
-	#CLASS {$path[areas]/area.index.tin} {WRITE} {$path[areas]/area.index.tin};
+	#CLASS {$path[areas]/area.item.index.tin} {WRITE} {$path[areas]/area.item.index.tin};
+}; 
+
+#EVENT {VARIABLE UPDATED _area_npc_index}
+{
+	#CLASS {$path[areas]/area.npc.index.tin} {WRITE} {$path[areas]/area.npc.index.tin};
 }; 
 
 #EVENT {MAP ENTER MAP}
