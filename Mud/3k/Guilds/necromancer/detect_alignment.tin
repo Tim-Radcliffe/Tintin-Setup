@@ -1,7 +1,3 @@
-#VAR {_alignments} {{hellish evilness}{-4}{extreme evil}{-3}{evil}{-2}{weak evil}{-1}
-{neutrality}{0}
-{weak goodness}{1}{goodness}{2}{extreme goodness}{3}{divine goodness}{4}};    
-
 #ALIAS {handler_alignment}
 {
     #NOP %1;
@@ -10,9 +6,14 @@
         #IF {&_npc[%2][alignment] == 0}
         {
             #CLASS {cNecromancerAlignment%5} {open};
+            #VAR {_alignments} {{hellish evilness}{-4}{extreme evil}{-3}{evil}{-2}{weak evil}{-1}
+            {neutrality}{0}
+            {weak goodness}{1}{goodness}{2}{extreme goodness}{3}{divine goodness}{4}};            
             #ACTION {{^\x7D\x7D\x7D (.*) reflects (.*)$}}
             {
-                #REGEXP {%%2} {{%2}} 
+                #LOCAL {match} {};
+                #FORMAT {match} {%l} {%%2};
+                #REGEXP {$match} {{%2}} 
                 {
                     #VAR {_npc[%2][alignment]} {$_alignments[%%3]};
                     .scanRoomNPCSave {%2};                      
