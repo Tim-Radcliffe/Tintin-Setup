@@ -126,7 +126,7 @@
 #FUNCTION {fFileGetName}
 {
 	.debug FILE {fFileGetName : %0};
-	#LOCAL {_fFGN} {}; 
+	#LOCAL {_fFGN} {%1}; 
 	#REGEXP {%1} {{^(.*\/)(.*)$}}
 	{
 		#IF {"&1" != ""}
