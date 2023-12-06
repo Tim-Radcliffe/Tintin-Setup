@@ -2,6 +2,66 @@
 
 #VARIABLE {_area_npc_index}
 {
+    {^A 1973 Plymouth Duster, back from the dead$} 
+    {
+        {Pinnacle/Science/Atlanta} {5}
+    }
+    {^A 4th Reich security guard$} 
+    {
+        {Pinnacle/Science/Atlanta} {5}
+    }
+    {^A BMW Poleis$} 
+    {
+        {Pinnacle/Science/Atlanta} {66}
+    }
+    {^A Captain of the Arovian Honor Guard$} 
+    {
+        {Pinnacle/Fantasy/New Arovian Graveyard/Tomb of King Alaren} {13}
+    }
+    {^A Channel 12 news reporter$} 
+    {
+        {Pinnacle/Science/Atlanta} {26}
+    }
+    {^A Channel 41 news reporter$} 
+    {
+        {Pinnacle/Science/Atlanta} {16}
+    }
+    {^A Channel 55 news reporter$} 
+    {
+        {Pinnacle/Science/Atlanta} {10}
+    }
+    {^A Channel 64 news reporter$} 
+    {
+        {Pinnacle/Science/Atlanta} {35}
+    }
+    {^A Channel 8 news reporter$} 
+    {
+        {Pinnacle/Science/Atlanta} {40}
+    }
+    {^A Cure Gang Member$} 
+    {
+        {Pinnacle/Science/Atlanta} {66}
+    }
+    {^A Disoreinted Typo \x28Lost\x29$} 
+    {
+        {Pinnacle/Chaos} {96}
+    }
+    {^A Ghoul Militia$} 
+    {
+        {Pinnacle/Fantasy/Catacombs 2} {76}
+    }
+    {^A Green Lightning gang member$} 
+    {
+        {Pinnacle/Science/Atlanta} {22}
+    }
+    {^A Guide of Catacombs$} 
+    {
+        {Pinnacle/Fantasy/Catacombs 2} {19}
+    }
+    {^A Huge Security Guard$} 
+    {
+        {Pinnacle/Science/Atlanta} {50}
+    }
     {^A Lady \x28waiting to use the toilet\x29$} 
     {
         {Pinnacle/Science/New York/Carnegie Hall} {90}
@@ -18,21 +78,201 @@
     {
         {Pinnacle/Science/New York/Carnegie Hall} {35}
     }
+    {^A Tour Guide who's way too happy$} 
+    {
+        {Pinnacle/Chaos/Carina's Observatory} {10}
+    }
+    {^A Vampire$} 
+    {
+        {Pinnacle/Fantasy/Catacombs 2} {77}
+    }
+    {^A Volkswagon Emperor$} 
+    {
+        {Pinnacle/Science/Atlanta} {10}
+    }
+    {^A black snake$} 
+    {
+        {Pinnacle/Fantasy/Around the town of Angelo/Forest Trail/Encampment} {9}
+    }
     {^A bodyguard \x28ex-mafia\x29$} 
     {
         {Pinnacle/Science/New York/Carnegie Hall} {38}
+    }
+    {^A broom$} 
+    {
+        {Pinnacle/Chaos/Sweetboots' House} {20}
     }
     {^A buff vampire$} 
     {
         {Pinnacle/Chaos/Chaos Cinemaplex/Hotel Transylvania} {72}
     }
+    {^A chubby vampire$} 
+    {
+        {Pinnacle/Chaos/Chaos Cinemaplex/Hotel Transylvania} {69}
+    }
+    {^A city worker$} 
+    {
+        {Pinnacle/Science/Atlanta} {37}
+    }
+    {^A common street thug$} 
+    {
+        {Pinnacle/Science/Atlanta} {10}
+    }
+    {^A fat hairy wandering spider$} 
+    {
+        {Pinnacle} {6}
+    }
+    {^A fearsome Arovian wraithguard$} 
+    {
+        {Pinnacle/Fantasy/New Arovian Graveyard/Tomb of King Alaren} {45}
+    }
+    {^A five-year-old delinquent$} 
+    {
+        {Pinnacle/Science/Atlanta} {1}
+    }
+    {^A foul-smelling Armadillo$} 
+    {
+        {Pinnacle/Chaos} {15}
+    }
+    {^A fuzzy hickabop$} 
+    {
+        {Pinnacle/Fantasy/Around the town of Angelo/Forest Trail/Encampment} {9}
+    }
+    {^A ghoul$} 
+    {
+        {Pinnacle/Fantasy/Catacombs 2} {47}
+    }
+    {^A gibbering trist$} 
+    {
+        {Pinnacle/Fantasy/New Arovian Graveyard} {14}
+    }
+    {^A goblin warrior$} 
+    {
+        {Pinnacle/Fantasy/Catacombs 2} {19}
+    }
+    {^A goblyn$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft} {101}
+    }
+    {^A guard stands lax against the gate$} 
+    {
+        {Pinnacle/Science/Contention Training Grounds} {3}
+    }
+    {^A homeless man$} 
+    {
+        {Pinnacle/Science/Atlanta} {57}
+    }
+    {^A homeless vagrant$} 
+    {
+        {Pinnacle/Science/Atlanta} {57}
+    }
+    {^A homeless woman$} 
+    {
+        {Pinnacle/Science/Atlanta} {38}
+    }
+    {^A horse$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft} {67}
+    }
+    {^A huge rotting corpse$} 
+    {
+        {Pinnacle/Fantasy/Catacombs 2} {45}
+    }
+    {^A hulking bone golem$} 
+    {
+        {Pinnacle/Fantasy/New Arovian Graveyard/Tomb of King Alaren} {11}
+    }
+    {^A large Rat$} 
+    {
+        {Pinnacle/Fantasy/Catacombs 2} {19}
+    }
+    {^A lost and bewildered knight$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Masque} {3}
+    }
+    {^A partially hidden scout$} 
+    {
+        {Pinnacle/Fantasy/Around the town of Angelo/Forest Trail/Encampment} {8}
+    }
     {^A polite audience member$} 
     {
         {Pinnacle/Science/New York/Carnegie Hall} {129}
     }
+    {^A red-crested woodpecker$} 
+    {
+        {Pinnacle/Fantasy} {666}
+    }
+    {^A rift shadow$} 
+    {
+        {Pinnacle/Fantasy/New Arovian Graveyard} {18}
+    }
+    {^A rotting corpse$} 
+    {
+        {Pinnacle/Fantasy/Catacombs 2} {45}
+    }
+    {^A rude tourist$} 
+    {
+        {Pinnacle/Chaos/Carina's Observatory} {5}
+    }
+    {^A scientist$} 
+    {
+        {Pinnacle/Chaos} {113}
+    }
     {^A sleeping audience member$} 
     {
         {Pinnacle/Science/New York/Carnegie Hall} {118}
+    }
+    {^A small boy \x28frightened\x29$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Masque} {5}
+    }
+    {^A small boy$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft} {60}
+    }
+    {^A small skeleton$} 
+    {
+        {Pinnacle/Fantasy/Catacombs 2} {45}
+    }
+    {^A thin lady with blue hair and a nose ring, sipping a latte$} 
+    {
+        {Pinnacle/Chaos/Starbuck's Coffee} {1}
+    }
+    {^A thin starving coyote$} 
+    {
+        {Pinnacle/Science} {26}
+    }
+    {^A toe$} 
+    {
+        {Pinnacle/Chaos} {65}
+    }
+    {^A tourist that looks confused$} 
+    {
+        {Pinnacle/Chaos/Carina's Observatory} {7}
+    }
+    {^A tourist who forgot to shower$} 
+    {
+        {Pinnacle/Chaos/Carina's Observatory} {10}
+    }
+    {^A typical commuter$} 
+    {
+        {Pinnacle/Science/Atlanta} {3}
+    }
+    {^A typical fat driver$} 
+    {
+        {Pinnacle/Science/Atlanta} {21}
+    }
+    {^A typical female driver$} 
+    {
+        {Pinnacle/Science/Atlanta} {12}
+    }
+    {^A vile scum of a politician$} 
+    {
+        {Pinnacle/Science/Atlanta} {28}
+    }
+    {^A wandering tourist$} 
+    {
+        {Pinnacle/Chaos/Carina's Observatory} {5}
     }
     {^A zombie bell hop waiting to carry your things$} 
     {
@@ -62,25 +302,126 @@
     {
         {Pinnacle/Science/New York/Aegis Global} {148}
     }
+    {^Al Pacino Jr$} 
+    {
+        {Pinnacle/Science/New York/Carnegie Hall} {78}
+    }
+    {^Alaren, Last king of the Arovians$} 
+    {
+        {Pinnacle/Fantasy/New Arovian Graveyard/Tomb of King Alaren} {45}
+    }
+    {^Amos the barkeep$} 
+    {
+        {Pinnacle/Science/Atlanta} {55}
+    }
+    {^An Arovian honor guard$} 
+    {
+        {Pinnacle/Fantasy/New Arovian Graveyard/Tomb of King Alaren} {4}
+    }
+    {^An Atlanta Metro police officer$} 
+    {
+        {Pinnacle/Science/Atlanta} {39}
+    }
+    {^An Aztech Uno$} 
+    {
+        {Pinnacle/Science/Atlanta} {50}
+    }
+    {^An Elderly Female Piranha Monkey$} 
+    {
+        {Pinnacle/Science/The Amazon Research Center} {47}
+    }
+    {^An Evil Lich$} 
+    {
+        {Pinnacle/Fantasy/Catacombs 2} {99}
+    }
+    {^An Old Man$} 
+    {
+        {Pinnacle/Chaos} {106}
+    }
     {^An Usher$} 
     {
+        {Pinnacle/Science/New York} {10}
         {Pinnacle/Science/New York/Carnegie Hall} {10}
+    }
+    {^An ancient skeleton$} 
+    {
+        {Pinnacle/Fantasy/Catacombs 2} {26}
     }
     {^An angry audience member$} 
     {
         {Pinnacle/Science/New York/Carnegie Hall} {140}
     }
+    {^An anorexic boy with dark hair and four earrings, writing poetry$} 
+    {
+        {Pinnacle/Chaos/Starbuck's Coffee} {3}
+    }
+    {^An anorexic lady with blue hair and four earrings, writing poetry$} 
+    {
+        {Pinnacle/Chaos/Starbuck's Coffee} {1}
+    }
+    {^An audience member rushing to get to his seat$} 
+    {
+        {Pinnacle/Science/New York/Carnegie Hall} {108}
+    }
+    {^An indecisive customer$} 
+    {
+        {Pinnacle/Chaos/Starbuck's Coffee} {4}
+    }
+    {^An old dwarven smith$} 
+    {
+        {Pinnacle} {52}
+    }
+    {^An overweight man with blue hair and dark makeup, writing poetry$} 
+    {
+        {Pinnacle/Chaos/Starbuck's Coffee} {3}
+    }
     {^An ugly vampire$} 
     {
         {Pinnacle/Chaos/Chaos Cinemaplex/Hotel Transylvania} {69}
+    }
+    {^Antonio, the Estate Agent$} 
+    {
+        {Pinnacle} {22}
+    }
+    {^Ares Roadster, trying to kill you$} 
+    {
+        {Pinnacle/Science/Atlanta} {25}
+    }
+    {^Arik the barkeep$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft} {66}
+    }
+    {^Artful Dodger :: Administrator of Quantum Manipulation [\x2A\x2A\x2A\x2A\x2A] \x28moral\x29$} 
+    {
+        {Pinnacle} {6}
     }
     {^Baby Dragon$} 
     {
         {Pinnacle/Fantasy/Portal of Life v2} {367}
     }
+    {^Bank teller$} 
+    {
+        {Pinnacle/Science/Atlanta} {7}
+    }
+    {^Barovian man$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft} {59}
+    }
+    {^Barovian woman$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft} {59}
+    }
+    {^Benny$} 
+    {
+        {Pinnacle/Science/Bandit Camp} {5}
+    }
     {^Beyonce$} 
     {
         {Pinnacle/Science/New York/Carnegie Hall} {78}
+    }
+    {^Bigger Badder Brother Earl$} 
+    {
+        {Pinnacle/Science/Atlanta} {13}
     }
     {^Billy Crystal$} 
     {
@@ -94,17 +435,49 @@
     {
         {Pinnacle/Fantasy/Portal of Life v2} {317}
     }
+    {^Black wolf$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Schloss Mordenheim} {5}
+    }
     {^Bono$} 
     {
         {Pinnacle/Science/New York/Carnegie Hall} {75}
+    }
+    {^Brown wolf$} 
+    {
+        {Pinnacle/Fantasy/Around the town of Angelo/Forest Trail/Mountain Path} {1}
+    }
+    {^Burger$} 
+    {
+        {Pinnacle/Chaos/Sweetboots' House} {36}
     }
     {^Cancer the tradesman$} 
     {
         {Pinnacle} {6}
     }
+    {^Carina the leading Astronomer$} 
+    {
+        {Pinnacle/Chaos/Carina's Observatory} {11}
+    }
+    {^Cepheus the Stargazer$} 
+    {
+        {Pinnacle/Chaos/Carina's Observatory} {13}
+    }
+    {^Chavee the Crafter$} 
+    {
+        {Pinnacle/Crafting} {1}
+    }
+    {^Choker$} 
+    {
+        {Pinnacle/Fantasy/Wayhaven Docks/Isle of Ao} {187}
+    }
     {^Cleric of Lathander$} 
     {
         {Pinnacle/Fantasy/Portal of Life v2} {23}
+    }
+    {^Coffer Corpse$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft} {115}
     }
     {^Cold Tiro has a Halibut by the tail\x21$} 
     {
@@ -114,25 +487,125 @@
     {
         {Pinnacle} {6}
     }
+    {^Daisy-mae the harlot$} 
+    {
+        {Pinnacle/Chaos/Puppy Mill} {7}
+    }
+    {^Darkmantle$} 
+    {
+        {Pinnacle/Fantasy/Wayhaven Docks/Isle of Ao} {187}
+    }
+    {^Decarabia, Greater Demon \x7BFifth plane\x7D$} 
+    {
+        {Pinnacle/Fantasy/Katin/Necromancer Guild (old)} {117}
+    }
+    {^Demon Minion$} 
+    {
+        {Pinnacle/Fantasy/Katin/Necromancer Guild (old)} {1}
+    }
+    {^Donavich the priest$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft} {107}
+    }
+    {^Dr. Rudolph Van Richten$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft} {50}
+    }
+    {^Drow Palace Guard$} 
+    {
+        {Pinnacle/Fantasy/Rabbit Fields/The Drow Kingdom of fe dar Shad} {238}
+    }
+    {^Drow warrior$} 
+    {
+        {Pinnacle/Fantasy/Rabbit Fields/The Drow Kingdom of fe dar Shad} {4}
+    }
+    {^Duke of Vampires$} 
+    {
+        {Pinnacle/Fantasy/Catacombs 2} {104}
+    }
     {^Duncan, Keeper of the Dead$} 
     {
         {Pinnacle/Fantasy/Necromancer Guild} {48}
+    }
+    {^Eugene$} 
+    {
+        {Pinnacle/Science/Bandit Camp} {5}
     }
     {^Faerie Lizard$} 
     {
         {Pinnacle/Fantasy/Portal of Life v2} {89}
     }
+    {^Female fire giant$} 
+    {
+        {Pinnacle/Fantasy/Fire Giant Lair} {5}
+    }
+    {^Fred the Used Car Salesman$} 
+    {
+        {Pinnacle/Chaos} {108}
+    }
+    {^Friar Tuck \x28jolly\x29$} 
+    {
+        {Pinnacle} {9}
+    }
+    {^Frightened Woman$} 
+    {
+        {Pinnacle/Science/Crashed Plane} {4}
+    }
+    {^George Weathermay \x28ranger\x29 \x28good\x29$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft} {101}
+    }
+    {^Ghoul of the Damned$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Masque} {9}
+    }
+    {^Giant Mack Truck$} 
+    {
+        {Pinnacle/Science/Atlanta} {5}
+    }
+    {^Giant Wasp$} 
+    {
+        {Pinnacle/Fantasy} {671}
+    }
     {^Greater Demon$} 
     {
         {Pinnacle/Fantasy/Alizarian Tower} {76}
+    }
+    {^Ho-San the shopkeeper$} 
+    {
+        {Pinnacle} {31}
+    }
+    {^Huge bat$} 
+    {
+        {Pinnacle/Fantasy/Around the town of Angelo/Forest Trail/Elven Graveyard} {28}
+    }
+    {^Ice golem$} 
+    {
+        {Pinnacle/Fantasy/Around the town of Angelo/Forest Trail/Mountain Path} {40}
+    }
+    {^Ismark the villager$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft} {63}
     }
     {^Jay-Z$} 
     {
         {Pinnacle/Science/New York/Carnegie Hall} {78}
     }
+    {^Joe$} 
+    {
+        {Pinnacle/Chaos/Sweetboots' House} {22}
+    }
     {^Johney the little boy \x28Pinnacle\x29$} 
     {
         {Pinnacle} {3}
+    }
+    {^Julie$} 
+    {
+        {Pinnacle/Chaos/Old Woman in the Shoe} {4}
+    }
+    {^Lady Shadowborn$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Ebonbane} {16}
     }
     {^Larry Mullen Jr$} 
     {
@@ -150,6 +623,14 @@
     {
         {Pinnacle/Science} {3}
     }
+    {^Marilyn Roast$} 
+    {
+        {Pinnacle/Chaos/Sweetboots' House} {31}
+    }
+    {^Mario Fenelli$} 
+    {
+        {Pinnacle} {128}
+    }
     {^Mel Brooks$} 
     {
         {Pinnacle/Science/New York/Carnegie Hall} {80}
@@ -157,6 +638,26 @@
     {^Michael Rudolph Guilioomberg \x28taking a dump\x29$} 
     {
         {Pinnacle/Science/New York/Carnegie Hall} {301}
+    }
+    {^Mistoffolees, the mischievous black cat$} 
+    {
+        {Pinnacle} {20}
+    }
+    {^Mitsubishi Nightliner driven by a couple of five-year-olds$} 
+    {
+        {Pinnacle/Science/Atlanta} {12}
+    }
+    {^Mollig$} 
+    {
+        {Pinnacle/Fantasy/Wayhaven Docks/Isle of Ao} {16}
+    }
+    {^Mr. Johnson$} 
+    {
+        {Pinnacle/Science/Atlanta} {56}
+    }
+    {^Natjoow-Ahild, guardian of the blood realm$} 
+    {
+        {Pinnacle/Fantasy/Around the town of Angelo/Forest Trail/Mountain Path} {45}
     }
     {^New York Chief of Police$} 
     {
@@ -166,9 +667,53 @@
     {
         {Pinnacle/Science/New York/Carnegie Hall} {86}
     }
+    {^O.J. Simpson$} 
+    {
+        {Pinnacle/Chaos/Sweetboots' House} {25}
+    }
+    {^Observatory scientist$} 
+    {
+        {Pinnacle/Chaos/Carina's Observatory} {7}
+    }
+    {^Observatory specialist$} 
+    {
+        {Pinnacle/Chaos/Carina's Observatory} {8}
+    }
+    {^Observatory technician$} 
+    {
+        {Pinnacle/Chaos/Carina's Observatory} {11}
+    }
+    {^Onan$} 
+    {
+        {Pinnacle/Science/Bandit Camp} {8}
+    }
+    {^Ophidian General$} 
+    {
+        {Pinnacle/Fantasy/Wayhaven Docks/Isle of Ao} {194}
+    }
+    {^Ophidian Hunter$} 
+    {
+        {Pinnacle/Fantasy/Wayhaven Docks/Isle of Ao} {177}
+    }
+    {^Orange fox$} 
+    {
+        {Pinnacle/Fantasy/Around the town of Angelo/Forest Trail/Mountain Path} {4}
+    }
+    {^Petunia, the puppy lady$} 
+    {
+        {Pinnacle} {141}
+    }
+    {^Phantom of the Damned$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Masque} {11}
+    }
     {^Planar Spirit$} 
     {
         {Pinnacle/Fantasy/Alizarian Tower} {19}
+    }
+    {^Porsche 944 turbo, driven by a psychotic maniac$} 
+    {
+        {Pinnacle/Science/Atlanta} {34}
     }
     {^Queen's Elite Guardswoman$} 
     {
@@ -187,33 +732,147 @@
     {
         {Pinnacle/Fantasy/Necromancer Guild} {5}
     }
+    {^Rocko the redneck$} 
+    {
+        {Pinnacle/Chaos/Puppy Mill} {16}
+    }
+    {^Rolan the wise sage \x28Pinnacle\x29$} 
+    {
+        {Pinnacle} {114}
+    }
+    {^Rudolph Guiliani \x28taking a dump\x29$} 
+    {
+        {Pinnacle/Science/New York/Carnegie Hall} {301}
+    }
+    {^Sales Clerk$} 
+    {
+        {Pinnacle} {81}
+    }
+    {^Scared Mother$} 
+    {
+        {Pinnacle/Science} {295}
+        {Pinnacle/Science/Crashed Plane} {1}
+    }
+    {^Second Lieutenant Na-Eethe$} 
+    {
+        {Pinnacle} {203}
+    }
     {^Shadow Guard$} 
     {
         {Pinnacle/Fantasy/Portal of Life v2} {324}
+    }
+    {^Skeletal Bat$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Schloss Mordenheim} {12}
+    }
+    {^Skeleton guard$} 
+    {
+        {Pinnacle/Fantasy/Around the town of Angelo/Forest Trail/Elven Graveyard} {20}
+    }
+    {^Some moron with a lead pipe$} 
+    {
+        {Pinnacle/Chaos/Puppy Mill} {15}
+    }
+    {^Some vines$} 
+    {
+        {Pinnacle/Fantasy/New Arovian Graveyard} {19}
     }
     {^Soon-Yi$} 
     {
         {Pinnacle/Science/New York/Carnegie Hall} {88}
     }
+    {^Spirit of a drowned mage$} 
+    {
+        {Pinnacle/Fantasy/Around the town of Angelo/Forest Trail} {19}
+    }
+    {^Steve Roast$} 
+    {
+        {Pinnacle/Chaos/Sweetboots' House} {31}
+    }
+    {^Steve the Grasshopper \x28hopping\x29$} 
+    {
+        {Pinnacle} {56}
+    }
+    {^Sumaren, Vizier to King Alaren$} 
+    {
+        {Pinnacle/Fantasy/New Arovian Graveyard/Tomb of King Alaren} {26}
+    }
+    {^Sylth \x28rotted\x29$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft} {42}
+    }
     {^Sylvan Elf$} 
     {
         {Pinnacle/Fantasy/Portal of Life v2} {197}
+    }
+    {^The Cobra Commander$} 
+    {
+        {Pinnacle/Chaos/Sweetboots' House} {20}
     }
     {^The Edge$} 
     {
         {Pinnacle/Science/New York/Carnegie Hall} {75}
     }
+    {^The Gypsy$} 
+    {
+        {Pinnacle} {20}
+    }
+    {^The Twilight Guardian$} 
+    {
+        {Pinnacle/Fantasy/New Arovian Graveyard/Tomb of King Alaren} {51}
+    }
+    {^The big toe$} 
+    {
+        {Pinnacle/Chaos} {65}
+    }
+    {^The locker clerk$} 
+    {
+        {Pinnacle} {18}
+    }
     {^Theela the Necromancer \x28moral\x29$} 
     {
         {Pinnacle/Fantasy/Necromancer Guild} {46}
+    }
+    {^Timmy the Ghost$} 
+    {
+        {Pinnacle/Crafting} {4}
+    }
+    {^Tiny the store owner$} 
+    {
+        {Pinnacle/Science/Atlanta} {59}
+    }
+    {^Toe lint \x28angry\x29$} 
+    {
+        {Pinnacle/Chaos} {65}
+    }
+    {^Tom Sharpee, Lawyer of Pinnacle$} 
+    {
+        {Pinnacle} {35}
     }
     {^Trixie Hilton$} 
     {
         {Pinnacle/Science/New York/Carnegie Hall} {72}
     }
+    {^Truck driver$} 
+    {
+        {Pinnacle/Science/Atlanta} {16}
+    }
+    {^Tun-gai Hirroshima$} 
+    {
+        {Pinnacle/Chaos/Sweetboots' House} {30}
+    }
     {^U-Pick Turkey Farmer$} 
     {
         {Pinnacle} {8}
+    }
+    {^Ugly Terrorist$} 
+    {
+        {Pinnacle/Science} {295}
+        {Pinnacle/Science/Crashed Plane} {1}
+    }
+    {^Undead Dragon$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft} {114}
     }
     {^Undead Ghost$} 
     {
@@ -239,6 +898,10 @@
     {
         {Pinnacle/Fantasy/Alizarian Tower} {19}
     }
+    {^Vinnie$} 
+    {
+        {Pinnacle/Chaos/Sweetboots' House} {8}
+    }
     {^Wild Stag$} 
     {
         {Pinnacle/Fantasy/Portal of Life v2} {122}
@@ -246,6 +909,10 @@
     {^Woody Allen$} 
     {
         {Pinnacle/Science/New York/Carnegie Hall} {88}
+    }
+    {^Wysath, Medals Archivist$} 
+    {
+        {Pinnacle} {55}
     }
     {^Wythe the Moneylender \x28serene\x29$} 
     {
@@ -255,6 +922,63 @@
     {
         {Pinnacle/Fantasy/Portal of Life v2} {260}
     }
+    {^Xithe the priest$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft} {129}
+    }
+    {^Young Boy$} 
+    {
+        {Pinnacle/Science} {295}
+        {Pinnacle/Science/Crashed Plane} {1}
+    }
+    {^a featureless stone statue$} 
+    {
+        {Pinnacle/Fantasy/Catacombs 2} {98}
+    }
+    {^a ghast \x28elvish\x29$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Der'Thalas} {211}
+    }
+    {^a hideous demon from the lower planes$} 
+    {
+        {Pinnacle/Fantasy/Catacombs 2} {99}
+    }
+    {^a massive creature of iron$} 
+    {
+        {Pinnacle/Fantasy/Catacombs 2} {98}
+    }
+    {^a massive creature of shimmering crystal$} 
+    {
+        {Pinnacle/Fantasy/Catacombs 2} {98}
+    }
+    {^a statue crafted of wood$} 
+    {
+        {Pinnacle/Fantasy/Catacombs 2} {98}
+    }
+    {^a statue of a dwarf$} 
+    {
+        {Pinnacle/Fantasy/Catacombs 2} {16}
+    }
+    {^a stray cat$} 
+    {
+        {Pinnacle} {77}
+    }
+    {^a vampire soldier$} 
+    {
+        {Pinnacle/Fantasy/Catacombs 2} {81}
+    }
+    {^a wandering vampire$} 
+    {
+        {Pinnacle/Fantasy/Catacombs 2} {89}
+    }
+    {^an elf \x28undead\x29$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Der'Thalas} {121}
+    }
+    {^an elven ghast$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Der'Thalas} {211}
+    }
     {^bloody zombie$} 
     {
         {Pinnacle/Science/New York/Aegis Global} {59}
@@ -263,9 +987,53 @@
     {
         {Pinnacle/Science/New York/Aegis Global} {90}
     }
+    {^dark treant \x28adult\x29$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Treant Forest} {42}
+    }
+    {^dark treant \x28young\x29$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Treant Forest} {9}
+    }
+    {^dark wraith \x28elven\x29$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Der'Thalas} {211}
+    }
+    {^elven skeleton \x28undead\x29$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Der'Thalas} {136}
+    }
+    {^elven wraith$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Der'Thalas} {211}
+    }
+    {^elven zombie \x28undead\x29$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Der'Thalas} {9}
+    }
+    {^elvish ghast$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Der'Thalas} {211}
+    }
+    {^elvish ghoul$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Der'Thalas} {144}
+    }
     {^faceless zombie$} 
     {
         {Pinnacle/Science/New York/Aegis Global} {67}
+    }
+    {^giant rat$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft} {55}
+    }
+    {^ice elemental$} 
+    {
+        {Pinnacle/Fantasy/Around the town of Angelo/Forest Trail/Mountain Path} {29}
+    }
+    {^ice wolf$} 
+    {
+        {Pinnacle/Fantasy/Around the town of Angelo/Forest Trail/Mountain Path} {40}
     }
     {^one-armed zombie$} 
     {
@@ -275,9 +1043,17 @@
     {
         {Pinnacle/Science/New York/Aegis Global} {5}
     }
+    {^razor warrior$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft} {114}
+    }
     {^rotting zombie$} 
     {
         {Pinnacle/Science/New York/Aegis Global} {43}
+    }
+    {^scruffy looking man$} 
+    {
+        {Pinnacle/Science/New York} {9}
     }
     {^severely burnt zombie$} 
     {
@@ -286,6 +1062,26 @@
     {^shambling zombie$} 
     {
         {Pinnacle/Science/New York/Aegis Global} {17}
+    }
+    {^skeletal elf$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Der'Thalas} {211}
+    }
+    {^stableboy$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft} {67}
+    }
+    {^undead elf$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Der'Thalas} {11}
+    }
+    {^undead werewolf$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft} {108}
+    }
+    {^vampire bat$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft} {35}
     }
     {^vomit-splattered zombie$} 
     {

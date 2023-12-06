@@ -4,7 +4,67 @@
 {
     {ATM} 
     {
+        {Pinnacle} {7}
+        {Pinnacle/Crafting} {4}
         {Pinnacle/Fantasy/Necromancer Guild} {73}
+        {Pinnacle/Fantasy/Ravenloft} {66}
+        {Pinnacle/Science/Atlanta} {14}
+    }
+    {^A Black Cape \x28glowing\x29$} 
+    {
+        {Pinnacle/Fantasy/Catacombs 2} {104}
+    }
+    {^A Black Digital VCR$} 
+    {
+        {Pinnacle/Chaos} {97}
+    }
+    {^A Bookcase$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Ebonbane} {18}
+    }
+    {^A Bright Red Curb$} 
+    {
+        {Pinnacle/Chaos} {108}
+    }
+    {^A CD. \x28pirated\x29$} 
+    {
+        {Pinnacle/Chaos} {23}
+    }
+    {^A Chocolate Cake$} 
+    {
+        {Pinnacle/Chaos} {9}
+    }
+    {^A Hockey Ticket$} 
+    {
+        {Pinnacle/Chaos} {102}
+    }
+    {^A Jaguar Skin$} 
+    {
+        {Pinnacle/Science/The Amazon Research Center} {47}
+    }
+    {^A Large Clunky Crowbar$} 
+    {
+        {Pinnacle/Chaos/Oj Cow} {3}
+    }
+    {^A Long row of Lockers$} 
+    {
+        {Pinnacle} {18}
+    }
+    {^A Mahjongg tile$} 
+    {
+        {Pinnacle/Chaos} {63}
+    }
+    {^A Pink Plastic Flamingo$} 
+    {
+        {Pinnacle} {116}
+    }
+    {^A Piranha Monkey Claw$} 
+    {
+        {Pinnacle/Science/The Amazon Research Center} {47}
+    }
+    {^A Pumpkin$} 
+    {
+        {Pinnacle/Chaos} {91}
     }
     {^A Statue of Cancer the King$} 
     {
@@ -13,15 +73,163 @@
     {^A Trashcan$} 
     {
         {Pinnacle} {6}
+        {Pinnacle/Chaos} {108}
+        {Pinnacle/Crafting} {4}
         {Pinnacle/Fantasy/Necromancer Guild} {46}
+        {Pinnacle/Science/Atlanta} {59}
+    }
+    {^A Weird Hanging Ladder$} 
+    {
+        {Pinnacle/Chaos} {28}
+    }
+    {^A banana peel$} 
+    {
+        {Pinnacle/Chaos} {105}
+    }
+    {^A barbell$} 
+    {
+        {Pinnacle/Chaos/Sweetboots' House} {30}
+    }
+    {^A beautiful gold engagement ring$} 
+    {
+        {Pinnacle/Chaos} {99}
+    }
+    {^A bed$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft} {60}
+    }
+    {^A big BLACK and WHITE inflatable cow$} 
+    {
+        {Pinnacle/Chaos} {45}
+    }
+    {^A big red shoe$} 
+    {
+        {Pinnacle/Chaos} {65}
+    }
+    {^A black mace$} 
+    {
+        {Pinnacle/Fantasy/Around the town of Angelo/Forest Trail/Elven Graveyard} {20}
+    }
+    {^A black platemail$} 
+    {
+        {Pinnacle/Fantasy/Around the town of Angelo/Forest Trail/Elven Graveyard} {20}
+    }
+    {^A blazing brazier$} 
+    {
+        {Pinnacle/Fantasy/Katin/Necromancer Guild (old)} {118}
+    }
+    {^A blazing comet$} 
+    {
+        {Pinnacle/Chaos} {54}
+    }
+    {^A bone dagger \x28glowing\x29 \x28enchanted\x29$} 
+    {
+        {Pinnacle/Fantasy/Catacombs 2} {100}
     }
     {^A bottle of pepper spray$} 
     {
         {Pinnacle/Science/New York/Carnegie Hall} {301}
     }
+    {^A bouncing frankfurter$} 
+    {
+        {Pinnacle/Chaos} {15}
+    }
+    {^A bright, colorful rainbow$} 
+    {
+        {Pinnacle/Chaos} {30}
+    }
+    {^A bronze plaque$} 
+    {
+        {Pinnacle/Chaos} {1}
+    }
+    {^A broom's bristle$} 
+    {
+        {Pinnacle/Chaos/Sweetboots' House} {20}
+    }
+    {^A bucket of water$} 
+    {
+        {Pinnacle/Chaos} {20}
+    }
+    {^A burning funeral pyre$} 
+    {
+        {Pinnacle/Fantasy/Catacombs 2} {97}
+    }
+    {^A camera with someone's initials on it$} 
+    {
+        {Pinnacle/Chaos/Carina's Observatory} {5}
+    }
+    {^A canon super lens$} 
+    {
+        {Pinnacle/Chaos/Carina's Observatory} {10}
+    }
+    {^A chair$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft} {59}
+    }
+    {^A circle of glowing runes$} 
+    {
+        {Pinnacle/Fantasy/Katin/Necromancer Guild (old)} {182}
+    }
+    {^A coffin of pure obsidian$} 
+    {
+        {Pinnacle/Fantasy/Katin/Necromancer Guild (old)} {118}
+    }
+    {^A crashed plane$} 
+    {
+        {Pinnacle} {1}
+        {Pinnacle/Science} {295}
+    }
+    {^A crowbar$} 
+    {
+        {Pinnacle/Science/Atlanta} {57}
+    }
+    {^A crumbling skeleton$} 
+    {
+        {Pinnacle/Fantasy/Catacombs 2} {19}
+    }
+    {^A dark, ethereal shadow$} 
+    {
+        {Pinnacle/Fantasy/Katin/Necromancer Guild (old)} {184}
+    }
+    {^A fairy \x28Twinkling\x29$} 
+    {
+        {Pinnacle/Chaos} {45}
+    }
+    {^A few chairs$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Ebonbane} {8}
+    }
+    {^A fireplace$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft} {59}
+    }
+    {^A floating orb$} 
+    {
+        {Pinnacle} {203}
+    }
+    {^A fortune cookie$} 
+    {
+        {Pinnacle/Chaos} {17}
+    }
+    {^A funky-looking fog$} 
+    {
+        {Pinnacle/Chaos} {3}
+    }
+    {^A giant faucet$} 
+    {
+        {Pinnacle/Chaos} {105}
+    }
     {^A glass sign with moving liquid inside, pointing north$} 
     {
         {Pinnacle} {25}
+    }
+    {^A glowing portal$} 
+    {
+        {Pinnacle/Fantasy} {671}
+    }
+    {^A goblyn spear$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft} {101}
     }
     {^A gravestone and grave$} 
     {
@@ -31,29 +239,361 @@
     {
         {Pinnacle} {42}
     }
+    {^A gumball machine$} 
+    {
+        {Pinnacle/Chaos} {44}
+    }
+    {^A hip doorway$} 
+    {
+        {Pinnacle/Chaos} {68}
+    }
+    {^A hockey puck$} 
+    {
+        {Pinnacle/Chaos} {19}
+    }
+    {^A jar of peanut butter$} 
+    {
+        {Pinnacle/Chaos/Sweetboots' House} {21}
+    }
+    {^A laboratory building, floating in the void$} 
+    {
+        {Pinnacle/Chaos} {113}
+    }
+    {^A large box \x28contains 3 items\x29$} 
+    {
+        {Pinnacle} {116}
+    }
+    {^A large box \x28contains 4 items\x29$} 
+    {
+        {Pinnacle} {116}
+    }
+    {^A large box \x28contains 8 items\x29$} 
+    {
+        {Pinnacle} {116}
+    }
+    {^A large brazier$} 
+    {
+        {Pinnacle/Fantasy/New Arovian Graveyard/Tomb of King Alaren} {19}
+    }
+    {^A large crystal tree$} 
+    {
+        {Pinnacle/Chaos} {107}
+    }
+    {^A large green metal sign$} 
+    {
+        {Pinnacle} {56}
+    }
+    {^A large ladder$} 
+    {
+        {Pinnacle/Chaos} {5}
+    }
+    {^A large piece of lint$} 
+    {
+        {Pinnacle/Chaos} {65}
+    }
+    {^A large plastic key$} 
+    {
+        {Pinnacle/Chaos} {106}
+    }
     {^A large sign$} 
     {
         {Pinnacle} {6}
+        {Pinnacle/Chaos} {108}
+        {Pinnacle/Science/Atlanta} {59}
+    }
+    {^A little brown monkey doll$} 
+    {
+        {Pinnacle/Chaos} {105}
+    }
+    {^A locket \x28glowing\x29$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Masque} {9}
+    }
+    {^A long leather leash hangs in midair$} 
+    {
+        {Pinnacle/Chaos} {41}
+    }
+    {^A longsword$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft} {101}
+    }
+    {^A menu$} 
+    {
+        {Pinnacle} {128}
+    }
+    {^A mischievous looking imp$} 
+    {
+        {Pinnacle/Fantasy/Katin/Necromancer Guild (old)} {139}
+    }
+    {^A newspaper rack$} 
+    {
+        {Pinnacle} {78}
+    }
+    {^A patch of mist$} 
+    {
+        {Pinnacle/Chaos} {3}
+    }
+    {^A pebble$} 
+    {
+        {Pinnacle/Chaos} {65}
+    }
+    {^A personal homepage list$} 
+    {
+        {Pinnacle} {71}
+    }
+    {^A piece of granite$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft} {117}
+    }
+    {^A piece of ivory$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft} {114}
+    }
+    {^A piglet$} 
+    {
+        {Pinnacle/Chaos} {4}
+    }
+    {^A pile of gleaming trinkets$} 
+    {
+        {Pinnacle/Fantasy/Catacombs 2} {100}
+    }
+    {^A playhouse$} 
+    {
+        {Pinnacle/Chaos} {59}
+    }
+    {^A polaroid camera$} 
+    {
+        {Pinnacle/Chaos/Carina's Observatory} {10}
+    }
+    {^A pristine chinchilla fur pelt$} 
+    {
+        {Pinnacle/Chaos} {119}
+    }
+    {^A purple haze$} 
+    {
+        {Pinnacle/Chaos} {3}
+    }
+    {^A ray of sunlight illuminating a patch of daisies$} 
+    {
+        {Pinnacle/Fantasy/Katin/Necromancer Guild (old)} {98}
+    }
+    {^A red mutant plant$} 
+    {
+        {Pinnacle/Chaos} {45}
+    }
+    {^A rotted, overgrown road sign$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Der'Thalas} {1}
+    }
+    {^A rusty old android$} 
+    {
+        {Pinnacle/Chaos} {104}
+    }
+    {^A rusty ship anchor$} 
+    {
+        {Pinnacle/Chaos} {112}
+    }
+    {^A services offered sign$} 
+    {
+        {Pinnacle} {20}
+    }
+    {^A set of puppy tracks$} 
+    {
+        {Pinnacle/Chaos} {10}
+    }
+    {^A shiny new postcard rack$} 
+    {
+        {Pinnacle/Chaos} {125}
+    }
+    {^A sign listing movie times and prices$} 
+    {
+        {Pinnacle/Chaos/Chaos Cinemaplex} {3}
+    }
+    {^A sign pointing to the Mist$} 
+    {
+        {Pinnacle/Chaos} {40}
+    }
+    {^A sign$} 
+    {
+        {Pinnacle} {37}
+        {Pinnacle/Fantasy/Ravenloft} {7}
+    }
+    {^A sign, hammered into the grass$} 
+    {
+        {Pinnacle/Chaos/Sweetboots' House} {1}
+    }
+    {^A silver whistle$} 
+    {
+        {Pinnacle/Chaos/Carina's Observatory} {10}
+    }
+    {^A silvery tower$} 
+    {
+        {Pinnacle/Chaos} {3}
     }
     {^A skeleton in tattered robes$} 
     {
         {Pinnacle/Fantasy/Alizarian Tower} {19}
     }
+    {^A slim orange rod$} 
+    {
+        {Pinnacle/Fantasy/Catacombs 2} {100}
+    }
+    {^A small box of Laundry Detergent$} 
+    {
+        {Pinnacle/Chaos} {48}
+    }
+    {^A small clipboard$} 
+    {
+        {Pinnacle/Chaos/Carina's Observatory} {21}
+    }
+    {^A small dispensing machine$} 
+    {
+        {Pinnacle/Chaos} {9}
+    }
+    {^A small figurine$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Masque} {5}
+    }
     {^A small magical globe$} 
     {
         {Pinnacle/Fantasy/Alizarian Tower} {102}
+    }
+    {^A small plastic key$} 
+    {
+        {Pinnacle/Chaos} {106}
+    }
+    {^A small playing card$} 
+    {
+        {Pinnacle/Chaos} {92}
+    }
+    {^A small stone bench$} 
+    {
+        {Pinnacle/Fantasy/Katin/Necromancer Guild (old)} {98}
+    }
+    {^A small table$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Ebonbane} {16}
     }
     {^A small wooden sign$} 
     {
         {Pinnacle} {175}
     }
+    {^A small, dark hole$} 
+    {
+        {Pinnacle/Chaos} {119}
+    }
+    {^A sprig of mistletoe$} 
+    {
+        {Pinnacle/Fantasy} {671}
+        {Pinnacle/Fantasy/Ravenloft} {117}
+    }
+    {^A staircase$} 
+    {
+        {Pinnacle/Chaos} {29}
+    }
+    {^A stalk of shimmerweed$} 
+    {
+        {Pinnacle/Fantasy} {675}
+    }
+    {^A stand selling Mentos$} 
+    {
+        {Pinnacle/Chaos} {89}
+    }
+    {^A strange necklace$} 
+    {
+        {Pinnacle} {7}
+    }
+    {^A street sign$} 
+    {
+        {Pinnacle/Chaos} {62}
+    }
+    {^A suit of battered chainmail \x28glowing\x29$} 
+    {
+        {Pinnacle/Fantasy/Catacombs 2} {77}
+    }
+    {^A swirling void$} 
+    {
+        {Pinnacle/Chaos} {21}
+    }
     {^A tall street light$} 
     {
         {Pinnacle} {48}
     }
+    {^A toddler's sippy cup$} 
+    {
+        {Pinnacle/Chaos} {51}
+    }
+    {^A torch lighting your way$} 
+    {
+        {Pinnacle/Fantasy/Katin/Necromancer Guild (old)} {183}
+    }
+    {^A toy chest$} 
+    {
+        {Pinnacle/Chaos} {65}
+    }
+    {^A tree$} 
+    {
+        {Pinnacle} {77}
+    }
+    {^A veil of mists$} 
+    {
+        {Pinnacle/Fantasy/New Arovian Graveyard} {18}
+    }
+    {^A velvet rope$} 
+    {
+        {Pinnacle/Chaos} {96}
+    }
+    {^A velvet witch hat$} 
+    {
+        {Pinnacle/Chaos} {41}
+    }
+    {^A vivitar elite$} 
+    {
+        {Pinnacle/Chaos/Carina's Observatory} {5}
+    }
     {^A weathered wooden sign, pointing west$} 
     {
         {Pinnacle} {47}
+    }
+    {^A welcome mat$} 
+    {
+        {Pinnacle/Chaos/Sweetboots' House} {1}
+    }
+    {^A wicked whip$} 
+    {
+        {Pinnacle/Chaos/Sweetboots' House} {31}
+    }
+    {^A wooden table$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft} {59}
+    }
+    {^Adamantite Dual Staff \x28faintly glowing\x29$} 
+    {
+        {Pinnacle/Fantasy/Portal of Life v2} {4}
+    }
+    {^An Illuminati Pyramid$} 
+    {
+        {Pinnacle/Chaos} {45}
+    }
+    {^An accommodation notice board$} 
+    {
+        {Pinnacle/Chaos} {70}
+    }
+    {^An ancient brazier holding a magical flame$} 
+    {
+        {Pinnacle/Fantasy/Katin/Necromancer Guild (old)} {182}
+    }
+    {^An ancient runestone$} 
+    {
+        {Pinnacle/Chaos} {44}
+    }
+    {^An ancient skeleton$} 
+    {
+        {Pinnacle/Fantasy/Catacombs 2} {16}
+    }
+    {^An eighteenth hole flag$} 
+    {
+        {Pinnacle/Chaos} {4}
     }
     {^An expensive mens wristwatch$} 
     {
@@ -79,17 +619,165 @@
     {
         {Pinnacle/Fantasy/Necromancer Guild} {8}
     }
+    {^An old dusty book$} 
+    {
+        {Pinnacle/Chaos} {54}
+    }
+    {^Anna, the ghostly shopkeeper$} 
+    {
+        {Pinnacle/Fantasy/Catacombs 2} {4}
+    }
+    {^Aon Chainmail$} 
+    {
+        {Pinnacle/Fantasy/Wayhaven Docks/Isle of Ao} {194}
+    }
+    {^Arch of Time$} 
+    {
+        {Pinnacle/Chaos} {107}
+    }
+    {^Armband of the Ancients$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft} {101}
+    }
     {^Baby Dragon Talons \x28envenomed\x29$} 
     {
         {Pinnacle/Fantasy/Portal of Life v2} {112}
+    }
+    {^Bat$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Treant Forest} {9}
+    }
+    {^Blacklight lantern$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft} {117}
+    }
+    {^Bone Ring of Ao$} 
+    {
+        {Pinnacle/Fantasy/Wayhaven Docks/Isle of Ao} {187}
+    }
+    {^Braziers of a shimmering black metal$} 
+    {
+        {Pinnacle/Fantasy/Katin/Necromancer Guild (old)} {181}
+    }
+    {^Copper Ring of Burden$} 
+    {
+        {Pinnacle} {20}
+    }
+    {^Crafter's Donation Box \x28open\x29$} 
+    {
+        {Pinnacle/Crafting} {4}
+    }
+    {^Dark elven mace$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Der'Thalas} {11}
+    }
+    {^Death's Valued Customers List$} 
+    {
+        {Pinnacle} {118}
+    }
+    {^Der'Thalasian helm$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Der'Thalas} {15}
+    }
+    {^Dirty Leather Armor$} 
+    {
+        {Pinnacle/Fantasy/Rabbit Fields/The Drow Kingdom of fe dar Shad} {107}
+    }
+    {^Donation bin \x28contains 32 items\x29$} 
+    {
+        {Pinnacle} {113}
+    }
+    {^Double Attacker Blade \x28glowing\x29 \x28enchanted\x29$} 
+    {
+        {Pinnacle/Fantasy/Catacombs 2} {104}
+    }
+    {^Erratio Forest$} 
+    {
+        {Pinnacle/Chaos} {70}
     }
     {^Faerie Lizard Wings \x28spritely\x29$} 
     {
         {Pinnacle/Fantasy/Portal of Life v2} {184}
     }
+    {^Faintly glowing moss clinging to the stone$} 
+    {
+        {Pinnacle/Fantasy/Catacombs 2} {91}
+    }
+    {^Fireseed Basket containing 0 fireseeds$} 
+    {
+        {Pinnacle} {128}
+    }
+    {^Flesh Whip \x28enchanted\x29$} 
+    {
+        {Pinnacle/Fantasy/Wayhaven Docks/Isle of Ao} {187}
+    }
+    {^Fraggle Rock$} 
+    {
+        {Pinnacle/Chaos/Carina's Observatory} {1}
+    }
+    {^Giant Platemail$} 
+    {
+        {Pinnacle/Fantasy/Fire Giant Lair} {5}
+    }
+    {^Giant axe$} 
+    {
+        {Pinnacle/Fantasy/Fire Giant Lair} {5}
+    }
+    {^Gold Amulet of the Frog$} 
+    {
+        {Pinnacle} {20}
+    }
+    {^Golden Platemail$} 
+    {
+        {Pinnacle/Fantasy/Catacombs 2} {104}
+    }
+    {^Golden coffin \x28Closed\x29$} 
+    {
+        {Pinnacle/Fantasy/New Arovian Graveyard/Tomb of King Alaren} {45}
+    }
+    {^Golden coffin \x28Open\x29$} 
+    {
+        {Pinnacle/Fantasy/New Arovian Graveyard/Tomb of King Alaren} {45}
+    }
+    {^Goodberry Basket containing 0 berries$} 
+    {
+        {Pinnacle} {128}
+    }
+    {^Grenade$} 
+    {
+        {Pinnacle/Science/Bandit Camp} {8}
+    }
+    {^Hall of Game Shows$} 
+    {
+        {Pinnacle/Chaos} {38}
+    }
+    {^Heavy Club$} 
+    {
+        {Pinnacle/Fantasy/Rabbit Fields/The Drow Kingdom of fe dar Shad} {107}
+    }
+    {^Ice wolf pelt$} 
+    {
+        {Pinnacle/Fantasy/Around the town of Angelo/Forest Trail/Mountain Path} {43}
+    }
+    {^Jeep$} 
+    {
+        {Pinnacle/Science/Bandit Camp} {4}
+    }
     {^Large wolf claws$} 
     {
         {Pinnacle/Fantasy/Portal of Life v2} {107}
+    }
+    {^Long Sword$} 
+    {
+        {Pinnacle/Fantasy/Rabbit Fields/The Drow Kingdom of fe dar Shad} {4}
+    }
+    {^Magic mushroom magically stuck in the ground$} 
+    {
+        {Pinnacle/Chaos} {21}
+    }
+    {^Magical globes of light$} 
+    {
+        {Pinnacle/Fantasy/Katin/Necromancer Guild (old)} {179}
     }
     {^Many points of light sparkle beautifully above you$} 
     {
@@ -99,25 +787,101 @@
     {
         {Pinnacle/Fantasy/Alizarian Tower} {108}
     }
+    {^Matt Sweetboots$} 
+    {
+        {Pinnacle/Chaos/Sweetboots' House} {3}
+    }
+    {^Metal case$} 
+    {
+        {Pinnacle/Science/Bandit Camp} {8}
+    }
+    {^Mounds of sparkling gems$} 
+    {
+        {Pinnacle/Fantasy/New Arovian Graveyard/Tomb of King Alaren} {50}
+    }
     {^Necromancer Rod$} 
     {
         {Pinnacle/Fantasy/Alizarian Tower} {53}
+    }
+    {^No one's Cloud \x28open\x29$} 
+    {
+        {Pinnacle/Chaos/Sweetboots' House} {32}
+    }
+    {^Observatory brochure$} 
+    {
+        {Pinnacle/Chaos/Carina's Observatory} {10}
+    }
+    {^Obsidian Ring of Slow Digestion$} 
+    {
+        {Pinnacle} {20}
+    }
+    {^Overgrown swamp$} 
+    {
+        {Pinnacle/Chaos} {8}
+    }
+    {^Peasant's Rags \x28Gloves\x29$} 
+    {
+        {Pinnacle/Fantasy/Portal of Life v2} {1}
     }
     {^Pedestal$} 
     {
         {Pinnacle/Fantasy/Alizarian Tower} {111}
     }
+    {^Pipe wrench$} 
+    {
+        {Pinnacle/Science/Bandit Camp} {5}
+    }
+    {^Rifle$} 
+    {
+        {Pinnacle/Science/Bandit Camp} {5}
+    }
     {^Rimmon$} 
     {
         {Pinnacle/Fantasy/Alizarian Tower} {111}
+    }
+    {^Shadow Staff \x28faintly glowing\x29$} 
+    {
+        {Pinnacle/Fantasy/Portal of Life v2} {317}
     }
     {^Small flute$} 
     {
         {Pinnacle/Fantasy/Alizarian Tower} {37}
     }
+    {^Soul Bead Music Box containing 0 soul beads$} 
+    {
+        {Pinnacle} {128}
+    }
+    {^Spiritual Essence$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Masque} {9}
+    }
+    {^Spiritual gloves \x7BBlessed\x7D$} 
+    {
+        {Pinnacle/Fantasy/Around the town of Angelo/Forest Trail/Mountain Path} {45}
+    }
+    {^Spiritual gloves$} 
+    {
+        {Pinnacle/Fantasy/Around the town of Angelo/Forest Trail} {19}
+    }
+    {^Staff of Freedom$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft} {114}
+    }
     {^Stag Antlers \x2815 point\x29$} 
     {
         {Pinnacle/Fantasy/Portal of Life v2} {295}
+    }
+    {^Statues of the most revered Necromancers$} 
+    {
+        {Pinnacle/Fantasy/Katin/Necromancer Guild (old)} {109}
+    }
+    {^Stone coffin \x28Closed\x29$} 
+    {
+        {Pinnacle/Fantasy/New Arovian Graveyard/Tomb of King Alaren} {26}
+    }
+    {^Stone coffin \x28Open\x29$} 
+    {
+        {Pinnacle/Fantasy/New Arovian Graveyard/Tomb of King Alaren} {26}
     }
     {^Sylvan Sword \x28shimmering\x29$} 
     {
@@ -131,6 +895,18 @@
     {
         {Pinnacle} {1}
     }
+    {^The Book of Necrology$} 
+    {
+        {Pinnacle/Fantasy/Katin/Necromancer Guild (old)} {97}
+    }
+    {^The Cobra Commander's face plate$} 
+    {
+        {Pinnacle/Chaos/Sweetboots' House} {21}
+    }
+    {^The Good Humor, Ice Cream Truck$} 
+    {
+        {Pinnacle/Chaos} {91}
+    }
     {^The Necromancers' Standard flying the Lich banner$} 
     {
         {Pinnacle/Fantasy/Necromancer Guild} {5}
@@ -139,29 +915,308 @@
     {
         {Pinnacle/Fantasy/Necromancer Guild} {20}
     }
+    {^The Observatory Telescope$} 
+    {
+        {Pinnacle/Chaos/Carina's Observatory} {13}
+    }
+    {^The Oldfart List$} 
+    {
+        {Pinnacle} {126}
+    }
+    {^The Ticket Booth: 'Buy your tickets here\x21'$} 
+    {
+        {Pinnacle/Chaos/Chaos Cinemaplex} {3}
+    }
+    {^The amulet of twilight$} 
+    {
+        {Pinnacle/Fantasy/New Arovian Graveyard/Tomb of King Alaren} {27}
+    }
+    {^The armour of twilight$} 
+    {
+        {Pinnacle/Fantasy/New Arovian Graveyard/Tomb of King Alaren} {45}
+    }
+    {^The circlet of twilight$} 
+    {
+        {Pinnacle/Fantasy/New Arovian Graveyard/Tomb of King Alaren} {26}
+    }
+    {^The eye of twilight [dull]$} 
+    {
+        {Pinnacle/Fantasy/New Arovian Graveyard/Tomb of King Alaren} {11}
+    }
+    {^The pants of Vinnie$} 
+    {
+        {Pinnacle/Chaos/Sweetboots' House} {8}
+    }
+    {^The shield of twilight$} 
+    {
+        {Pinnacle/Fantasy/New Arovian Graveyard/Tomb of King Alaren} {29}
+    }
+    {^The sword of twilight$} 
+    {
+        {Pinnacle/Fantasy/New Arovian Graveyard/Tomb of King Alaren} {51}
+    }
+    {^The tattered remains of the Mass XP List$} 
+    {
+        {Pinnacle} {82}
+    }
+    {^Top Dog Plaque$} 
+    {
+        {Pinnacle} {141}
+    }
+    {^Weathermay gloves$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft} {101}
+    }
+    {^Worm's Talon Airship$} 
+    {
+        {Pinnacle/Fantasy/Around the town of Angelo/Forest Trail/Encampment} {12}
+    }
     {^Wyvern Talons$} 
     {
         {Pinnacle/Fantasy/Portal of Life v2} {92}
+    }
+    {^X53.3 high-voltage taser baton$} 
+    {
+        {Pinnacle/Science/New York/Carnegie Hall} {95}
+    }
+    {^a Bullmastiff puppy$} 
+    {
+        {Pinnacle/Chaos/Puppy Mill} {16}
+    }
+    {^a German Wirehaired Pointer puppy$} 
+    {
+        {Pinnacle/Chaos/Puppy Mill} {16}
+    }
+    {^a Manchester Terrier puppy$} 
+    {
+        {Pinnacle/Chaos/Puppy Mill} {15}
+    }
+    {^a battered suit of platemail \x28glowing\x29$} 
+    {
+        {Pinnacle/Fantasy/Catacombs 2} {89}
+    }
+    {^a black cube \x28pulsing\x29$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Treant Forest} {9}
+    }
+    {^a brass ring$} 
+    {
+        {Pinnacle/Fantasy/Alizarian Tower} {37}
+    }
+    {^a broken chest$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Der'Thalas} {182}
+    }
+    {^a broken painting$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Der'Thalas} {170}
+    }
+    {^a campfire$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft} {129}
+    }
+    {^a chalky white club \x28glowing\x29$} 
+    {
+        {Pinnacle/Fantasy/Catacombs 2} {24}
+    }
+    {^a cold hearth$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Der'Thalas} {172}
+    }
+    {^a dark, moldy corpse$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft} {42}
+    }
+    {^a large round shield$} 
+    {
+        {Pinnacle/Fantasy/New Arovian Graveyard/Tomb of King Alaren} {4}
+    }
+    {^a lead pipe$} 
+    {
+        {Pinnacle/Chaos/Puppy Mill} {15}
+    }
+    {^a long, curved steel crowbar$} 
+    {
+        {Pinnacle/Chaos/Puppy Mill} {16}
+    }
+    {^a pair of scuffed boots \x28glowing\x29$} 
+    {
+        {Pinnacle/Fantasy/Catacombs 2} {24}
+    }
+    {^a plumed helmet$} 
+    {
+        {Pinnacle/Fantasy/New Arovian Graveyard/Tomb of King Alaren} {15}
+    }
+    {^a rope ladder hangs from the branches of the desolate tree$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Der'Thalas} {61}
+    }
+    {^a rope ladder, frayed and tattered, sways in the chilling breeze$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Der'Thalas} {11}
+    }
+    {^a rusty sword \x28glowing\x29$} 
+    {
+        {Pinnacle/Fantasy/Catacombs 2} {24}
+    }
+    {^a shard of treant bark$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Treant Forest} {9}
+    }
+    {^a silver ingot$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft} {115}
     }
     {^a tall street light$} 
     {
         {Pinnacle} {1}
     }
+    {^a wavering portal$} 
+    {
+        {Pinnacle/Fantasy/Necromancer Guild} {1}
+    }
     {^a whirring terminal$} 
     {
         {Pinnacle/Science} {21}
+    }
+    {^a wooden rolling pin$} 
+    {
+        {Pinnacle/Chaos/Puppy Mill} {7}
+    }
+    {^a worm eaten shield \x28glowing\x29$} 
+    {
+        {Pinnacle/Fantasy/Catacombs 2} {24}
+    }
+    {^a writhing tendril$} 
+    {
+        {Pinnacle/Chaos} {27}
     }
     {^acorn$} 
     {
         {Pinnacle/Fantasy/Alizarian Tower} {53}
     }
+    {^an Irish Setter puppy$} 
+    {
+        {Pinnacle/Chaos/Puppy Mill} {15}
+    }
+    {^an old rope ladder hangs here$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Der'Thalas} {21}
+    }
+    {^ancient pottery$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Der'Thalas} {180}
+    }
+    {^ancient scimitar$} 
+    {
+        {Pinnacle/Fantasy/New Arovian Graveyard/Tomb of King Alaren} {4}
+    }
+    {^animal remains$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Der'Thalas} {179}
+    }
+    {^bits of pottery$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Der'Thalas} {211}
+    }
+    {^black gemstone$} 
+    {
+        {Pinnacle/Fantasy/Alizarian Tower} {43}
+    }
+    {^bottle bin$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft} {66}
+    }
+    {^broken bookcase$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Der'Thalas} {210}
+    }
+    {^broken nightstand$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Der'Thalas} {179}
+    }
+    {^broken shelving$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Der'Thalas} {171}
+    }
+    {^broken wooden shield$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Der'Thalas} {177}
+    }
+    {^campfire$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft} {101}
+    }
+    {^charred books$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Der'Thalas} {181}
+    }
+    {^cooking utensils$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Der'Thalas} {171}
+    }
+    {^cracked water basin$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Der'Thalas} {175}
+    }
+    {^crucifix$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft} {101}
+    }
+    {^decaying boots$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Der'Thalas} {177}
+    }
+    {^decaying tapestries$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Der'Thalas} {174}
+    }
+    {^hanging from the tall branches, a rope ladder is here$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Der'Thalas} {125}
+    }
+    {^paper ashes$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Der'Thalas} {210}
+    }
+    {^pottery$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Der'Thalas} {173}
+    }
+    {^rotted tunic$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Der'Thalas} {177}
+    }
+    {^rotten curtains, flowing in the wind$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Der'Thalas} {170}
+    }
+    {^rusted elven blade$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Der'Thalas} {175}
+    }
+    {^shattered musicbox$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Der'Thalas} {179}
+    }
     {^shred of birch bark$} 
     {
         {Pinnacle/Fantasy/Alizarian Tower} {19}
     }
+    {^tarnished steel breastplate$} 
+    {
+        {Pinnacle/Fantasy/New Arovian Graveyard/Tomb of King Alaren} {19}
+    }
+    {^wolf pelt$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft} {100}
+    }
     {containing \d+ messages} 
     {
+        {Pinnacle} {37}
         {Pinnacle/Chaos/Chaos Cinemaplex/Hotel Transylvania} {17}
+        {Pinnacle/Crafting} {1}
+        {Pinnacle/Fantasy/Around the town of Angelo/Forest Trail/Encampment} {12}
         {Pinnacle/Fantasy/Necromancer Guild} {20}
     }
 }
