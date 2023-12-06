@@ -51,6 +51,26 @@
 	{nomap} {1}
 	{pickup} {1}
 }
+#VAR {_item[^a vial of holy water$]} 
+{
+    {desc} 
+    {
+        {1} {a vial of holy water}
+        {2} {This vial is blessed by the gods turning any water put into it into}
+        {3} {highly potent holy water. The liquid contained within is highly useful}
+        {4} {at eradicating the undead. You could 'douse' a vile foe with it to let}
+        {5} {its holy power burn their undead flesh. If overwhelmed by the undead}
+        {6} {fiends, you could shatter the vial to rain holy water on your}
+        {7} {surroundings. If the vial's contents run low, you can replenish them}
+        {8} {in any water source. The flask is completely full.}
+        {9} {This appears to be an artifact for the priest guild.}
+    }
+    {global} {1}
+    {id} {vial}
+    {name} {a vial of holy water}
+    {nomap} {1}
+    {pickup} {1}
+}
 #VAR {_item[crystal charm]}             {{nomap}{1}{pickup}{1}};
 #VAR {_item[platinum coin]}             {{nomap}{1}{pickup}{1}};
 #VAR {_item[small grey stone]}          {{nomap}{1}{pickup}{1}};

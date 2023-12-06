@@ -1,1345 +1,1389 @@
 #VAR {_item[^A Parcel$]} 
 {
-	{desc} 
-	{
-		{1} {A Parcel}
-		{2} {Measuring 2 inches square, this little parcel is diligently wrapped}
-		{3} {in fine, cream sheets of paper.  The paper is decorated with}
-		{4} {mysterious glyphs.  It doesn't take a genius to recognize an}
-		{5} {enchantment of some sort.}
-		{6} {It looks light.}
-	}
-	{id} {parcel}
+    {desc} 
+    {
+        {1} {A Parcel}
+        {2} {Measuring 2 inches square, this little parcel is diligently wrapped}
+        {3} {in fine, cream sheets of paper.  The paper is decorated with}
+        {4} {mysterious glyphs.  It doesn't take a genius to recognize an}
+        {5} {enchantment of some sort.}
+        {6} {It looks light.}
+    }
+    {id} {parcel}
     {nomap} {1}
-	{global} {1}
-	{name} {A Parcel}
+    {global} {1}
+    {name} {A Parcel}
 }
 #VAR {_item[^A blue stone necklace$]} 
 {
-	{desc} 
-	{
-		{1} {A blue stone necklace}
-		{2} {A gold link chain supporting a small blue stone carving.}
-		{3} {An identification spell may reveal more information.}
-		{4} {It looks light.}
-	}
-	{id} {amulet}
+    {desc} 
+    {
+        {1} {A blue stone necklace}
+        {2} {A gold link chain supporting a small blue stone carving.}
+        {3} {An identification spell may reveal more information.}
+        {4} {It looks light.}
+    }
+    {id} {amulet}
     {nomap} {1}
-	{global} {1}
-	{name} {A blue stone necklace}
+    {global} {1}
+    {name} {A blue stone necklace}
 }
 #VAR {_item[^A bone wand$]} 
 {
-	{desc} 
-	{
-		{1} {A bone wand}
-		{2} {This bone appears to have once been the thighbone of a large humanoid}
-		{3} {creature.  Feathers have been attached to one end, kept in place by}
-		{4} {strips of dyed leather.  Carvings cover the length of the bone, many of}
-		{5} {which seem to be the same indistinct symbol.}
-		{6} {To use this wand you must hold it.}
-		{7} {It looks light.}
-	}
-	{id} {wand}
+    {desc} 
+    {
+        {1} {A bone wand}
+        {2} {This bone appears to have once been the thighbone of a large humanoid}
+        {3} {creature.  Feathers have been attached to one end, kept in place by}
+        {4} {strips of dyed leather.  Carvings cover the length of the bone, many of}
+        {5} {which seem to be the same indistinct symbol.}
+        {6} {To use this wand you must hold it.}
+        {7} {It looks light.}
+    }
+    {id} {wand}
     {nomap} {1}
-	{global} {1}
-	{name} {A bone wand}
+    {global} {1}
+    {name} {A bone wand}
 }
 #VAR {_item[^A cannister-topped cannon$]} 
 {
-	{desc} 
-	{
-		{1} {A cannister-topped cannon}
-		{2} {A cannister-topped cannon. You may be able to use it, if you know the command word.}
-		{3} {To use this cannon you must hold it.}
-		{4} {It looks light.}
-	}
-	{global} {1}
-	{id} {cannon}
-	{nomap} {1}
-	{name} {A cannister-topped cannon}
+    {desc} 
+    {
+        {1} {A cannister-topped cannon}
+        {2} {A cannister-topped cannon. You may be able to use it, if you know the command word.}
+        {3} {To use this cannon you must hold it.}
+        {4} {It looks light.}
+    }
+    {global} {1}
+    {id} {cannon}
+    {nomap} {1}
+    {name} {A cannister-topped cannon}
 }
 #VAR {_item[^A crooked brown wand$]} 
 {
-	{desc} 
-	{
-		{1} {A crooked brown wand}
-		{2} {This small wand is made from a length of wood taken from an ironbark}
-		{3} {tree, and wrapped in bronze wire.  Several copies of the holy symbol of}
-		{4} {Celeni are carved into its hard surface.}
-		{5} {To use this wand you must hold it.}
-		{6} {It looks light.}
-	}
-	{id} {wand}
+    {desc} 
+    {
+        {1} {A crooked brown wand}
+        {2} {This small wand is made from a length of wood taken from an ironbark}
+        {3} {tree, and wrapped in bronze wire.  Several copies of the holy symbol of}
+        {4} {Celeni are carved into its hard surface.}
+        {5} {To use this wand you must hold it.}
+        {6} {It looks light.}
+    }
+    {id} {wand}
     {nomap} {1}
-	{global} {1}
-	{name} {A crooked brown wand}
+    {global} {1}
+    {name} {A crooked brown wand}
 }
 #VAR {_item[^A curved gray wand$]} 
 {
-	{desc} 
-	{
-		{1} {A curved gray wand}
-		{2} {This wand is little more than a thin twig, curved around so much that it}
-		{3} {is bent almost to right angles.  A single leaf is still attached to the}
-		{4} {wand, hanging limply from the thin twig.}
-		{5} {To use this wand you must hold it.}
-		{6} {It looks light.}
-	}
-	{id} {wand}
+    {desc} 
+    {
+        {1} {A curved gray wand}
+        {2} {This wand is little more than a thin twig, curved around so much that it}
+        {3} {is bent almost to right angles.  A single leaf is still attached to the}
+        {4} {wand, hanging limply from the thin twig.}
+        {5} {To use this wand you must hold it.}
+        {6} {It looks light.}
+    }
+    {id} {wand}
     {nomap} {1}
-	{global} {1}
-	{name} {A curved gray wand}
+    {global} {1}
+    {name} {A curved gray wand}
 }
 #VAR {_item[^A dull white wand$]} 
 {
-	{desc} 
-	{
-		{1} {A dull white wand}
-		{2} {This small, white wand appears at first glance to be nothing more than a}
-		{3} {birch twig dipped in whitewash.  Along the length of the twig someone}
-		{4} {has whittled a series of meaningless scratch marks.}
-		{5} {To use this wand you must hold it.}
-		{6} {It looks light.}
-	}
-	{id} {wand}
+    {desc} 
+    {
+        {1} {A dull white wand}
+        {2} {This small, white wand appears at first glance to be nothing more than a}
+        {3} {birch twig dipped in whitewash.  Along the length of the twig someone}
+        {4} {has whittled a series of meaningless scratch marks.}
+        {5} {To use this wand you must hold it.}
+        {6} {It looks light.}
+    }
+    {id} {wand}
     {nomap} {1}
-	{global} {1}
-	{name} {A dull white wand}
+    {global} {1}
+    {name} {A dull white wand}
 }
 #VAR {_item[^A glowing white wand$]} 
 {
-	{desc} 
-	{
-		{1} {A glowing white wand}
-		{2} {The core of this wand is a small rod made from blue-tinted glass.  The}
-		{3} {glass has been wrapped in a white fabric, the ends of which have been}
-		{4} {dyed in vibrant blue.  One end of the cloth remains untied, and is}
-		{5} {stained with a smear of red ink.}
-		{6} {To use this wand you must hold it.}
-		{7} {It looks light.}
-	}
-	{id} {wand}
+    {desc} 
+    {
+        {1} {A glowing white wand}
+        {2} {The core of this wand is a small rod made from blue-tinted glass.  The}
+        {3} {glass has been wrapped in a white fabric, the ends of which have been}
+        {4} {dyed in vibrant blue.  One end of the cloth remains untied, and is}
+        {5} {stained with a smear of red ink.}
+        {6} {To use this wand you must hold it.}
+        {7} {It looks light.}
+    }
+    {id} {wand}
     {nomap} {1}
-	{global} {1}
-	{name} {A glowing white wand}
+    {global} {1}
+    {name} {A glowing white wand}
 }
 #VAR {_item[^A golden staff$]} 
 {
-	{desc} 
-	{
-		{1} {A golden staff}
-		{2} {This golden staff looks interesting.  You'll have to identify to learn more.}
-		{3} {This weapon is in excellent condition.}
-		{4} {This weapon's classifications: 13 (blunt)  13 (electric)  }
-		{5} {It doesn't look too heavy.}
-	}
-	{id} {golden staff}
-	{global} {1}
-	{nomap} {1}
-	{name} {A golden staff}
+    {desc} 
+    {
+        {1} {A golden staff}
+        {2} {This golden staff looks interesting.  You'll have to identify to learn more.}
+        {3} {This weapon is in excellent condition.}
+        {4} {This weapon's classifications: 13 (blunt)  13 (electric)  }
+        {5} {It doesn't look too heavy.}
+    }
+    {id} {golden staff}
+    {global} {1}
+    {nomap} {1}
+    {name} {A golden staff}
 }
 #VAR {_item[^A gray staff$]} 
 {
-	{desc} 
-	{
-		{1} {A gray staff}
-		{2} {This gray staff looks interesting.  You'll have to identify to learn more.}
-		{3} {This weapon is in excellent condition.}
-		{4} {This weapon's classifications: 5 (blunt)  }
-		{5} {This weapon gains benefits from your polearm weapon skill.}
-		{6} {It looks light.}
-	}
-	{global} {1}
-	{id} {gray staff}
-	{nomap} {1}
-	{name} {A gray staff}
+    {desc} 
+    {
+        {1} {A gray staff}
+        {2} {This gray staff looks interesting.  You'll have to identify to learn more.}
+        {3} {This weapon is in excellent condition.}
+        {4} {This weapon's classifications: 5 (blunt)  }
+        {5} {This weapon gains benefits from your polearm weapon skill.}
+        {6} {It looks light.}
+    }
+    {global} {1}
+    {id} {gray staff}
+    {nomap} {1}
+    {name} {A gray staff}
 }
 #VAR {_item[^A hammer$]} 
 {
-	{desc} 
-	{
-		{1} {A hammer}
-		{2} {This hammer looks interesting.  You'll have to identify to learn more.}
-		{3} {This weapon is in excellent condition.}
-		{4} {This weapon's classifications: 8 (blunt)  }
-		{5} {It doesn't look too heavy.}
-	}
-	{id} {hammer}
+    {desc} 
+    {
+        {1} {A hammer}
+        {2} {This hammer looks interesting.  You'll have to identify to learn more.}
+        {3} {This weapon is in excellent condition.}
+        {4} {This weapon's classifications: 8 (blunt)  }
+        {5} {It doesn't look too heavy.}
+    }
+    {id} {hammer}
     {nomap} {1}
-	{global} {1}
-	{name} {A hammer}
+    {global} {1}
+    {name} {A hammer}
 }
 #VAR {_item[^A light blue wand$]} 
 {
-	{desc} 
-	{
-		{1} {A light blue wand}
-		{2} {This wand is a thick oak rod wrapped in pale blue cloth which has been}
-		{3} {tied in a intricate knot at one end.  The cloth has frozen solid, and}
-		{4} {small particles of ice hang from the narrow end.}
-		{5} {To use this wand you must hold it.}
-		{6} {It looks light.}
-	}
-	{id} {wand}
+    {desc} 
+    {
+        {1} {A light blue wand}
+        {2} {This wand is a thick oak rod wrapped in pale blue cloth which has been}
+        {3} {tied in a intricate knot at one end.  The cloth has frozen solid, and}
+        {4} {small particles of ice hang from the narrow end.}
+        {5} {To use this wand you must hold it.}
+        {6} {It looks light.}
+    }
+    {id} {wand}
     {nomap} {1}
-	{global} {1}
-	{name} {A light blue wand}
+    {global} {1}
+    {name} {A light blue wand}
 }
 #VAR {_item[^A magic scroll$]} 
 {
-	{desc} 
-	{
-		{1} {A magic scroll}
-		{2} {An old, brittle piece of parchment.}
-		{3} {Available Spells:  <cast spellname \x7Boptions\x7D>}
-		{4} {(2) superheal}
-		{5} {(5) superblast}
-		{6} {It looks light.}
-	}
-	{id} {scroll}
+    {desc} 
+    {
+        {1} {A magic scroll}
+        {2} {An old, brittle piece of parchment.}
+        {3} {Available Spells:  <cast spellname \x7Boptions\x7D>}
+        {4} {(2) superheal}
+        {5} {(5) superblast}
+        {6} {It looks light.}
+    }
+    {id} {scroll}
     {nomap} {1}
-	{global} {1}
-	{name} {A magic scroll}
+    {global} {1}
+    {name} {A magic scroll}
 }
 #VAR {_item[^A pair of dirty gloves$]} 
 {
-	{desc} 
-	{
-		{1} {A pair of dirty gloves}
-		{2} {These leather gloves are thick and heavy. They are very dirty and look}
-		{3} {as if they have been used quite a bit. They reek of old sweat. }
-		{4} {An identification spell may reveal more information.}
-		{5} {It looks light.}
-	}
-	{id} {gloves}
+    {desc} 
+    {
+        {1} {A pair of dirty gloves}
+        {2} {These leather gloves are thick and heavy. They are very dirty and look}
+        {3} {as if they have been used quite a bit. They reek of old sweat. }
+        {4} {An identification spell may reveal more information.}
+        {5} {It looks light.}
+    }
+    {id} {gloves}
     {nomap} {1}
-	{global} {1}
-	{name} {A pair of dirty gloves}
+    {global} {1}
+    {name} {A pair of dirty gloves}
 }
 #VAR {_item[^A pair of gloves$]} 
 {
-	{desc} 
-	{
-		{1} {A pair of gloves}
-		{2} {A warm, flexible pair of gloves made from animal hide. They are thick}
-		{3} {and furry, providing good protection for your hands. }
-		{4} {An identification spell may reveal more information.}
-		{5} {It looks light.}
-	}
-	{id} {gloves}
+    {desc} 
+    {
+        {1} {A pair of gloves}
+        {2} {A warm, flexible pair of gloves made from animal hide. They are thick}
+        {3} {and furry, providing good protection for your hands. }
+        {4} {An identification spell may reveal more information.}
+        {5} {It looks light.}
+    }
+    {id} {gloves}
     {nomap} {1}
-	{global} {1}
-	{name} {A pair of gloves}
+    {global} {1}
+    {name} {A pair of gloves}
 }
 #VAR {_item[^A rifle$]} 
 {
-	{desc} 
-	{
-		{1} {A rifle}
-		{2} {This rifle should be identified to learn more about it.}
-		{3} {This weapon is in excellent condition.}
-		{4} {This weapon's classifications: 14 (edged)  }
-		{5} {This weapon gains benefits from your gun weapon skill.}
-		{6} {The rifle is currently not loaded.}
-		{7} {It doesn't look too heavy.}
-	}
-	{id} {rifle}
+    {desc} 
+    {
+        {1} {A rifle}
+        {2} {This rifle should be identified to learn more about it.}
+        {3} {This weapon is in excellent condition.}
+        {4} {This weapon's classifications: 14 (edged)  }
+        {5} {This weapon gains benefits from your gun weapon skill.}
+        {6} {The rifle is currently not loaded.}
+        {7} {It doesn't look too heavy.}
+    }
+    {id} {rifle}
     {nomap} {1}
-	{global} {1}
-	{name} {A rifle}
+    {global} {1}
+    {name} {A rifle}
 }
 #VAR {_item[^A ruby necklace$]} 
 {
-	{desc} 
-	{
-		{1} {A ruby necklace}
-		{2} {This amulet looks very curious.}
-		{3} {An identification spell may reveal more information.}
-		{4} {It looks light.}
-	}
-	{id} {amulet}
-	{global} {1}
-	{nomap} {1}
-	{name} {A ruby necklace}
+    {desc} 
+    {
+        {1} {A ruby necklace}
+        {2} {This amulet looks very curious.}
+        {3} {An identification spell may reveal more information.}
+        {4} {It looks light.}
+    }
+    {id} {amulet}
+    {global} {1}
+    {nomap} {1}
+    {name} {A ruby necklace}
 }
 #VAR {_item[^A short green wand$]} 
 {
-	{desc} 
-	{
-		{1} {A short green wand}
-		{2} {This small wand is made from branches for a weeping willow, twined}
-		{3} {together in an intricate pattern.  The thicker end of the wand is}
-		{4} {wrapped in copper wire, whose surface is slightly corroded.  There are a}
-		{5} {series of words and runes spelled out with the wire, but they are too}
-		{6} {indistinct to make out.}
-		{7} {To use this wand you must hold it.}
-		{8} {It looks light.}
-	}
-	{id} {wand of backfire}
+    {desc} 
+    {
+        {1} {A short green wand}
+        {2} {This small wand is made from branches for a weeping willow, twined}
+        {3} {together in an intricate pattern.  The thicker end of the wand is}
+        {4} {wrapped in copper wire, whose surface is slightly corroded.  There are a}
+        {5} {series of words and runes spelled out with the wire, but they are too}
+        {6} {indistinct to make out.}
+        {7} {To use this wand you must hold it.}
+        {8} {It looks light.}
+    }
+    {id} {wand of backfire}
     {nomap} {1}
-	{global} {1}
-	{name} {A short green wand}
+    {global} {1}
+    {name} {A short green wand}
 }
 #VAR {_item[^A slender crystal wand$]} 
 {
-	{desc} 
-	{
-		{1} {A slender crystal wand}
-		{2} {A slender crystal wand. You may be able to use it, if you know the command word.}
-		{3} {To use this wand you must hold it.}
-		{4} {It looks light.}
-	}
-	{id} {wand}
+    {desc} 
+    {
+        {1} {A slender crystal wand}
+        {2} {A slender crystal wand. You may be able to use it, if you know the command word.}
+        {3} {To use this wand you must hold it.}
+        {4} {It looks light.}
+    }
+    {id} {wand}
     {nomap} {1}
-	{global} {1}
-	{name} {A slender crystal wand}
+    {global} {1}
+    {name} {A slender crystal wand}
 }
 {_item[^A spear \x28enchanted\x29$]} 
 {
-	{desc} 
-	{
-		{1} {A spear (enchanted)}
-		{2} {This spear looks interesting.  You'll have to identify to learn more.}
-		{3} {This weapon is in excellent condition.}
-		{4} {This weapon's classifications: 7 (edged)  7 (electric)  }
-		{5} {This weapon gains benefits from your polearm weapon skill.}
-		{6} {It doesn't look too heavy.}
-	}
-	{global} {1}
-	{id} {spear}
-	{nomap} {1}
-	{name} {A spear (enchanted)}
+    {desc} 
+    {
+        {1} {A spear (enchanted)}
+        {2} {This spear looks interesting.  You'll have to identify to learn more.}
+        {3} {This weapon is in excellent condition.}
+        {4} {This weapon's classifications: 7 (edged)  7 (electric)  }
+        {5} {This weapon gains benefits from your polearm weapon skill.}
+        {6} {It doesn't look too heavy.}
+    }
+    {global} {1}
+    {id} {spear}
+    {nomap} {1}
+    {name} {A spear (enchanted)}
 }
 #VAR {_item[^A Statue of a Smiling Leprechaun$]} 
 {
-	{desc} 
-	{
-		{1} {A Statue of a Smiling Leprechaun}
-		{2} {The symbol of the leprechaun has brought luck to many people for many generations}
-		{3} {Some even say that if you rub its belly it will bring you good luck.}
-		{4} {It looks light.}
-	}
-	{global} {1}
-	{id} {statue}
-	{nomap} {1}
-	{name} {A Statue of a Smiling Leprechaun}
+    {desc} 
+    {
+        {1} {A Statue of a Smiling Leprechaun}
+        {2} {The symbol of the leprechaun has brought luck to many people for many generations}
+        {3} {Some even say that if you rub its belly it will bring you good luck.}
+        {4} {It looks light.}
+    }
+    {global} {1}
+    {id} {statue}
+    {nomap} {1}
+    {name} {A Statue of a Smiling Leprechaun}
 }
 #VAR {_item[^A steel longsword$]} 
 {
-	{desc} 
-	{
-		{1} {A steel longsword}
-		{2} {This longsword is made of steel. You can not judge what kind of powers}
-		{3} {this weapon has. You'll have to identify it to learn more.}
-		{4} {This weapon is in excellent condition.}
-		{5} {This weapon's classifications: 6 (edged)  }
-		{6} {This weapon gains benefits from your sword weapon skill.}
-		{7} {It looks light.}
-	}
-	{id} {longsword}
+    {desc} 
+    {
+        {1} {A steel longsword}
+        {2} {This longsword is made of steel. You can not judge what kind of powers}
+        {3} {this weapon has. You'll have to identify it to learn more.}
+        {4} {This weapon is in excellent condition.}
+        {5} {This weapon's classifications: 6 (edged)  }
+        {6} {This weapon gains benefits from your sword weapon skill.}
+        {7} {It looks light.}
+    }
+    {id} {longsword}
     {global} {1}
-	{nomap} {1}
-	{name} {A steel longsword}
+    {nomap} {1}
+    {name} {A steel longsword}
 }
 #VAR {_item[^A straight black wand$]} 
 {
-	{desc} 
-	{
-		{1} {A straight black wand}
-		{2} {The wood of this wand has been soaked in black ink, the dark black wood}
-		{3} {seeming to absorb all light around it.  Bone-white string has been}
-		{4} {coiled around the thicker end of the wand, providing a stable grip for}
-		{5} {its wielder.  Midnight-blue lettering has been carved into the length of}
-		{6} {the wand, but you are unable to make out the word written there.}
-		{7} {To use this wand you must hold it.}
-		{8} {It looks light.}
-	}
-	{id} {wand}
+    {desc} 
+    {
+        {1} {A straight black wand}
+        {2} {The wood of this wand has been soaked in black ink, the dark black wood}
+        {3} {seeming to absorb all light around it.  Bone-white string has been}
+        {4} {coiled around the thicker end of the wand, providing a stable grip for}
+        {5} {its wielder.  Midnight-blue lettering has been carved into the length of}
+        {6} {the wand, but you are unable to make out the word written there.}
+        {7} {To use this wand you must hold it.}
+        {8} {It looks light.}
+    }
+    {id} {wand}
     {nomap} {1}
-	{global} {1}
-	{name} {A straight black wand}
+    {global} {1}
+    {name} {A straight black wand}
 }
 #VAR {_item[^A sturdy wooden staff$]} 
 {
-	{desc} 
-	{
-		{1} {A sturdy wooden staff}
-		{2} {This large walking staff is topped with feathers attached to its body}
-		{3} {with twinned leather cords.  The body of the staff is carved with}
-		{4} {symbols of the God Jordan, Master of Healing.  A series of runes cover}
-		{5} {the surface of the staff, but you are unable to decipher them.}
-		{6} {To use this staff you must hold it.}
-		{7} {It looks light.}
-	}
-	{id} {staff}
+    {desc} 
+    {
+        {1} {A sturdy wooden staff}
+        {2} {This large walking staff is topped with feathers attached to its body}
+        {3} {with twinned leather cords.  The body of the staff is carved with}
+        {4} {symbols of the God Jordan, Master of Healing.  A series of runes cover}
+        {5} {the surface of the staff, but you are unable to decipher them.}
+        {6} {To use this staff you must hold it.}
+        {7} {It looks light.}
+    }
+    {id} {staff}
     {nomap} {1}
-	{global} {1}
-	{name} {A sturdy wooden staff}
+    {global} {1}
+    {name} {A sturdy wooden staff}
 }
 #VAR {_item[^A suit of armor$]} 
 {
-	{desc} 
-	{
-		{1} {A suit of armor}
-		{2} {This suit of armor is made up of large metal rings, that have been}
-		{3} {sewn into leather armor, providing good protection from slashing and}
-		{4} {bashing attacks at the expense of weight and bulk. }
-		{5} {An identification spell may reveal more information.}
-		{6} {It doesn't look too heavy.}
-	}
-	{id} {armour}
+    {desc} 
+    {
+        {1} {A suit of armor}
+        {2} {This suit of armor is made up of large metal rings, that have been}
+        {3} {sewn into leather armor, providing good protection from slashing and}
+        {4} {bashing attacks at the expense of weight and bulk. }
+        {5} {An identification spell may reveal more information.}
+        {6} {It doesn't look too heavy.}
+    }
+    {id} {armour}
     {nomap} {1}
-	{global} {1}
-	{name} {A suit of armor}
+    {global} {1}
+    {name} {A suit of armor}
 }
 {_item[^Amulet$]} 
 {
-	{desc} 
-	{
-		{1} {Amulet}
-		{2} {A mysterious amulet. }
-		{3} {An identification spell may reveal more information.}
-		{4} {It looks light.}
-	}
-	{id} {amulet}
+    {desc} 
+    {
+        {1} {Amulet}
+        {2} {A mysterious amulet. }
+        {3} {An identification spell may reveal more information.}
+        {4} {It looks light.}
+    }
+    {id} {amulet}
     {nomap} {1}
-	{global} {1}
-	{name} {Amulet}
+    {global} {1}
+    {name} {Amulet}
 }
 #VAR {_item[^Armour$]} 
 {
-	{desc} 
-	{
-		{1} {Armour}
-		{2} {An armour.  You cannot surmise what powers it may possess.  }
-		{3} {An identification spell may reveal more information.}
-		{4} {It doesn't look too heavy.}
-	}
-	{id} {armour}
+    {desc} 
+    {
+        {1} {Armour}
+        {2} {An armour.  You cannot surmise what powers it may possess.  }
+        {3} {An identification spell may reveal more information.}
+        {4} {It doesn't look too heavy.}
+    }
+    {id} {armour}
     {nomap} {1}
-	{global} {1}
-	{name} {Armour}
+    {global} {1}
+    {name} {Armour}
 }
 {_item[^bag$]} 
 {
-	{desc} 
-	{
-		{1} {bag}
-		{2} {A bag.  It is currently unidentified.}
-		{3} {You can put things in it.}
-		{4} {It looks light.}
-	}
-	{global} {1}
-	{id} {bag}
-	{name} {bag}
-	{nomap} {1}
-	{pickup} {1}
+    {desc} 
+    {
+        {1} {bag}
+        {2} {A bag.  It is currently unidentified.}
+        {3} {You can put things in it.}
+        {4} {It looks light.}
+    }
+    {global} {1}
+    {id} {bag}
+    {name} {bag}
+    {nomap} {1}
+    {pickup} {1}
 }
 #VAR {_item[^Belt$]} 
 {
-	{desc} 
-	{
-		{1} {Belt}
-		{2} {A belt.  You cannot surmise what powers it may possess.  }
-		{3} {An identification spell may reveal more information.}
-		{4} {It looks light.}
-	}
-	{global} {1}
-	{id} {belt}
-	{nomap} {1}
-	{name} {Belt}
+    {desc} 
+    {
+        {1} {Belt}
+        {2} {A belt.  You cannot surmise what powers it may possess.  }
+        {3} {An identification spell may reveal more information.}
+        {4} {It looks light.}
+    }
+    {global} {1}
+    {id} {belt}
+    {nomap} {1}
+    {name} {Belt}
 }
 #VAR {_item[^Bone White Armour$]} 
 {
-	{desc} 
-	{
-		{1} {Bone White Armour}
-		{2} {Finely molded, whitened slivers are joined together to form this}
-		{3} {armour.  It is quite durable\; but leaves a cool, ethereal tingle}
-		{4} {in your torso.}
-		{5} {An identification spell may reveal more information.}
-		{6} {It doesn't look too heavy.}
-	}
-	{id} {armour}
-	{global} {1}
-	{nomap} {1}
-	{name} {Bone White Armour}
+    {desc} 
+    {
+        {1} {Bone White Armour}
+        {2} {Finely molded, whitened slivers are joined together to form this}
+        {3} {armour.  It is quite durable\; but leaves a cool, ethereal tingle}
+        {4} {in your torso.}
+        {5} {An identification spell may reveal more information.}
+        {6} {It doesn't look too heavy.}
+    }
+    {id} {armour}
+    {global} {1}
+    {nomap} {1}
+    {name} {Bone White Armour}
 }
 #VAR {_item[^Bone White Shield$]} 
 {
-	{desc} 
-	{
-		{1} {Bone White Shield}
-		{2} {Finely moldly, whitened slivers are jointed together to form this}
-		{3} {shield.  It is quite durable\; but leaves a cool, ethereal tingle}
-		{4} {in your arm.}
-		{5} {An identification spell may reveal more information.}
-		{6} {It doesn't look too heavy.}
-	}
-	{id} {shield}
+    {desc} 
+    {
+        {1} {Bone White Shield}
+        {2} {Finely moldly, whitened slivers are jointed together to form this}
+        {3} {shield.  It is quite durable\; but leaves a cool, ethereal tingle}
+        {4} {in your arm.}
+        {5} {An identification spell may reveal more information.}
+        {6} {It doesn't look too heavy.}
+    }
+    {id} {shield}
     {nomap} {1}
-	{global} {1}
-	{name} {Bone White Shield}
+    {global} {1}
+    {name} {Bone White Shield}
 }
 #VAR {_item[^Boots$]} 
 {
-	{desc} 
-	{
-		{1} {Boots}
-		{2} {A pair of boots.  You cannot surmise what powers it may possess.  }
-		{3} {An identification spell may reveal more information.}
-		{4} {It looks light.}
-	}
-	{id} {boots}
+    {desc} 
+    {
+        {1} {Boots}
+        {2} {A pair of boots.  You cannot surmise what powers it may possess.  }
+        {3} {An identification spell may reveal more information.}
+        {4} {It looks light.}
+    }
+    {id} {boots}
     {nomap} {1}
-	{global} {1}
-	{name} {Boots}
+    {global} {1}
+    {name} {Boots}
 }
 #VAR {_item[^Brass Codpiece$]} 
 {
-	{desc} 
-	{
-		{1} {Brass Codpiece}
-		{2} {A brass codpiece.  You cannot surmise what powers it may possess.  }
-		{3} {An identification spell may reveal more information.}
-		{4} {It looks light.}
-	}
-	{id} {other}
+    {desc} 
+    {
+        {1} {Brass Codpiece}
+        {2} {A brass codpiece.  You cannot surmise what powers it may possess.  }
+        {3} {An identification spell may reveal more information.}
+        {4} {It looks light.}
+    }
+    {id} {other}
     {global} {1}
-	{nomap} {1}
-	{name} {Brass Codpiece}
+    {nomap} {1}
+    {name} {Brass Codpiece}
 }
 #VAR {_item[^Brass Gloves$]} 
 {
-	{desc} 
-	{
-		{1} {Brass Gloves}
-		{2} {A pair of brass gloves.  You cannot surmise what powers it may}
-		{3} {possess.  }
-		{4} {An identification spell may reveal more information.}
-		{5} {It looks light.}
-	}
-	{id} {gloves}
+    {desc} 
+    {
+        {1} {Brass Gloves}
+        {2} {A pair of brass gloves.  You cannot surmise what powers it may}
+        {3} {possess.  }
+        {4} {An identification spell may reveal more information.}
+        {5} {It looks light.}
+    }
+    {id} {gloves}
     {nomap} {1}
-	{global} {1}
-	{name} {Brass Gloves}
+    {global} {1}
+    {name} {Brass Gloves}
 }
 {_item[^Bronze Codpiece$]} 
 {
-	{desc} 
-	{
-		{1} {Bronze Codpiece}
-		{2} {A bronze codpiece.  You cannot surmise what powers it may possess.  }
-		{3} {An identification spell may reveal more information.}
-		{4} {It looks light.}
-	}
-	{id} {other}
+    {desc} 
+    {
+        {1} {Bronze Codpiece}
+        {2} {A bronze codpiece.  You cannot surmise what powers it may possess.  }
+        {3} {An identification spell may reveal more information.}
+        {4} {It looks light.}
+    }
+    {id} {other}
     {nomap} {1}
-	{global} {1}
-	{name} {Bronze Codpiece}
+    {global} {1}
+    {name} {Bronze Codpiece}
 }
 #VAR {_item[^Bronze Gloves$]} 
 {
-	{desc} 
-	{
-		{1} {Bronze Gloves}
-		{2} {A pair of bronze gloves.  You cannot surmise what powers it may}
-		{3} {possess.  }
-		{4} {An identification spell may reveal more information.}
-		{5} {It looks light.}
-	}
-	{id} {gloves}
+    {desc} 
+    {
+        {1} {Bronze Gloves}
+        {2} {A pair of bronze gloves.  You cannot surmise what powers it may}
+        {3} {possess.  }
+        {4} {An identification spell may reveal more information.}
+        {5} {It looks light.}
+    }
+    {id} {gloves}
     {nomap} {1}
-	{global} {1}
-	{name} {Bronze Gloves}
+    {global} {1}
+    {name} {Bronze Gloves}
 }
 #VAR {_item[^Bronze Helmet$]} 
 {
-	{desc} 
-	{
-		{1} {Bronze Helmet}
-		{2} {A bronze helmet.  You cannot surmise what powers it may possess.  }
-		{3} {An identification spell may reveal more information.}
-		{4} {It looks light.}
-	}
-	{id} {helmet}
+    {desc} 
+    {
+        {1} {Bronze Helmet}
+        {2} {A bronze helmet.  You cannot surmise what powers it may possess.  }
+        {3} {An identification spell may reveal more information.}
+        {4} {It looks light.}
+    }
+    {id} {helmet}
     {nomap} {1}
-	{global} {1}
-	{name} {Bronze Helmet}
+    {global} {1}
+    {name} {Bronze Helmet}
 }
 #VAR {_item[^Cloak of Blue Cloth$]} 
 {
-	{desc} 
-	{
-		{1} {Cloak of Blue Cloth}
-		{2} {This is a regal and voluminous blue cloak - fit for heroes to wear}
-		{3} {into battle.  A massive, embroidered lion adorns the majority of}
-		{4} {this magestic mantle.}
-		{5} {An identification spell may reveal more information.}
-		{6} {It looks light.}
-	}
-	{id} {cloak}
+    {desc} 
+    {
+        {1} {Cloak of Blue Cloth}
+        {2} {This is a regal and voluminous blue cloak - fit for heroes to wear}
+        {3} {into battle.  A massive, embroidered lion adorns the majority of}
+        {4} {this magestic mantle.}
+        {5} {An identification spell may reveal more information.}
+        {6} {It looks light.}
+    }
+    {id} {cloak}
     {nomap} {1}
-	{global} {1}
-	{name} {Cloak of Blue Cloth}
+    {global} {1}
+    {name} {Cloak of Blue Cloth}
 }
 #VAR {_item[^Cloak$]} 
 {
-	{desc} 
-	{
-		{1} {Cloak}
-		{2} {A patchwork of pockets of varying sizes adorns this cloak.  The added}
-		{3} {fabric lends to the weight of the mantle\; yet offers an interesting}
-		{4} {addition to your carrying space.}
-		{5} {An identification spell may reveal more information.}
-		{6} {It doesn't look too heavy.}
-	}
-	{id} {cloak}
+    {desc} 
+    {
+        {1} {Cloak}
+        {2} {A patchwork of pockets of varying sizes adorns this cloak.  The added}
+        {3} {fabric lends to the weight of the mantle\; yet offers an interesting}
+        {4} {addition to your carrying space.}
+        {5} {An identification spell may reveal more information.}
+        {6} {It doesn't look too heavy.}
+    }
+    {id} {cloak}
     {nomap} {1}
-	{global} {1}
-	{name} {Cloak}
+    {global} {1}
+    {name} {Cloak}
 }
 {_item[^Cloth Armour$]} 
 {
-	{desc} 
-	{
-		{1} {Cloth Armour}
-		{2} {A cloth armour.  You cannot surmise what powers it may possess.  }
-		{3} {An identification spell may reveal more information.}
-		{4} {It looks light.}
-	}
-	{id} {armour}
-	{global} {1}
-	{nomap} {1}
-	{name} {Cloth Armour}
+    {desc} 
+    {
+        {1} {Cloth Armour}
+        {2} {A cloth armour.  You cannot surmise what powers it may possess.  }
+        {3} {An identification spell may reveal more information.}
+        {4} {It looks light.}
+    }
+    {id} {armour}
+    {global} {1}
+    {nomap} {1}
+    {name} {Cloth Armour}
 }
 #VAR {_item[^Cloth Cloak$]} 
 {
-	{desc} 
-	{
-		{1} {Cloth Cloak}
-		{2} {This soft, velvety cloak is composed of a light, durable material.}
-		{3} {An identification spell may reveal more information.}
-		{4} {It looks light.}
-	}
-	{id} {cloak}
+    {desc} 
+    {
+        {1} {Cloth Cloak}
+        {2} {This soft, velvety cloak is composed of a light, durable material.}
+        {3} {An identification spell may reveal more information.}
+        {4} {It looks light.}
+    }
+    {id} {cloak}
     {nomap} {1}
-	{global} {1}
-	{name} {Cloth Cloak}
+    {global} {1}
+    {name} {Cloth Cloak}
 }
 #VAR {_item[^Cotton Cloak$]} 
 {
-	{desc} 
-	{
-		{1} {Cotton Cloak}
-		{2} {This medium-weight cloak is made of a cotton, cut-pile weave fabric. }
-		{3} {An identification spell may reveal more information.}
-		{4} {It looks light.}
-	}
-	{id} {cloak}
-	{global} {1}
-	{nomap} {1}
-	{name} {Cotton Cloak}
+    {desc} 
+    {
+        {1} {Cotton Cloak}
+        {2} {This medium-weight cloak is made of a cotton, cut-pile weave fabric. }
+        {3} {An identification spell may reveal more information.}
+        {4} {It looks light.}
+    }
+    {id} {cloak}
+    {global} {1}
+    {nomap} {1}
+    {name} {Cotton Cloak}
 }
 #VAR {_item[^Crystal ball$]} 
 {
-	{desc} 
-	{
-		{1} {Crystal ball}
-		{2} {This translucent, crystal-colored ball radiates with a peculiar}
-		{3} {inner light.  A strange foggy substance swirls in its interior.}
-		{4} {You get the distinct impression that it is magical in nature.}
-	}
-	{id} {ball}
+    {desc} 
+    {
+        {1} {Crystal ball}
+        {2} {This translucent, crystal-colored ball radiates with a peculiar}
+        {3} {inner light.  A strange foggy substance swirls in its interior.}
+        {4} {You get the distinct impression that it is magical in nature.}
+    }
+    {id} {ball}
     {global} {1}
-	{nomap} {1}
-	{pickup} {-1}
-	{name} {Crystal ball}
+    {nomap} {1}
+    {pickup} {-1}
+    {name} {Crystal ball}
 }
 #VAR {_item[^crystal ball$]} 
 {
-	{desc} 
-	{
-		{1} {crystal ball}
-		{2} {A crystal ball.  It is currently unidentified.}
-	}
-	{id} {crystal ball}
+    {desc} 
+    {
+        {1} {crystal ball}
+        {2} {A crystal ball.  It is currently unidentified.}
+    }
+    {id} {crystal ball}
     {global} {1}
-	{nomap} {1}
-	{pickup} {-1}	
-	{name} {crystal ball}
+    {nomap} {1}
+    {pickup} {-1}	
+    {name} {crystal ball}
 }
 #VAR {_item[^Crystalline Cloak$]} 
 {
-	{desc} 
-	{
-		{1} {Crystalline Cloak}
-		{2} {The fabric of this cloak is deeply embedded with overlapping,}
-		{3} {smokey-hued crystals.  Altering your point of view creates}
-		{4} {a radiant dazzle of light.}
-		{5} {An identification spell may reveal more information.}
-		{6} {It looks light.}
-	}
-	{id} {cloak}
+    {desc} 
+    {
+        {1} {Crystalline Cloak}
+        {2} {The fabric of this cloak is deeply embedded with overlapping,}
+        {3} {smokey-hued crystals.  Altering your point of view creates}
+        {4} {a radiant dazzle of light.}
+        {5} {An identification spell may reveal more information.}
+        {6} {It looks light.}
+    }
+    {id} {cloak}
     {nomap} {1}
-	{global} {1}
-	{name} {Crystalline Cloak}
+    {global} {1}
+    {name} {Crystalline Cloak}
 }
 #VAR {_item[^Dragonscale Gloves$]} 
 {
-	{desc} 
-	{
-		{1} {Dragonscale Gloves}
-		{2} {A pair of dragonscale gloves.  You cannot surmise what powers it may}
-		{3} {possess.  }
-		{4} {An identification spell may reveal more information.}
-		{5} {It looks light.}
-	}
-	{id} {gloves}
+    {desc} 
+    {
+        {1} {Dragonscale Gloves}
+        {2} {A pair of dragonscale gloves.  You cannot surmise what powers it may}
+        {3} {possess.  }
+        {4} {An identification spell may reveal more information.}
+        {5} {It looks light.}
+    }
+    {id} {gloves}
     {nomap} {1}
-	{global} {1}
-	{name} {Dragonscale Gloves}
+    {global} {1}
+    {name} {Dragonscale Gloves}
 }
 #VAR {_item[^Dragonscale Shield$]} 
 {
-	{desc} 
-	{
-		{1} {Dragonscale Shield}
-		{2} {Composed primarily of large scales, the shield glimmers malevolently}
-		{3} {in the light.  There almost appears to be an inhuman energy in it.}
-		{4} {An identification spell may reveal more information.}
-		{5} {It doesn't look too heavy.}
-	}
-	{id} {shield}
+    {desc} 
+    {
+        {1} {Dragonscale Shield}
+        {2} {Composed primarily of large scales, the shield glimmers malevolently}
+        {3} {in the light.  There almost appears to be an inhuman energy in it.}
+        {4} {An identification spell may reveal more information.}
+        {5} {It doesn't look too heavy.}
+    }
+    {id} {shield}
     {nomap} {1}
-	{global} {1}
-	{name} {Dragonscale Shield}
+    {global} {1}
+    {name} {Dragonscale Shield}
 }
 {_item[^Electrum Gloves$]} 
 {
-	{desc} 
-	{
-		{1} {Electrum Gloves}
-		{2} {A pair of electrum gloves.  You cannot surmise what powers it may}
-		{3} {possess.  }
-		{4} {An identification spell may reveal more information.}
-		{5} {It looks light.}
-	}
-	{id} {gloves}
+    {desc} 
+    {
+        {1} {Electrum Gloves}
+        {2} {A pair of electrum gloves.  You cannot surmise what powers it may}
+        {3} {possess.  }
+        {4} {An identification spell may reveal more information.}
+        {5} {It looks light.}
+    }
+    {id} {gloves}
     {nomap} {1}
-	{global} {1}
-	{name} {Electrum Gloves}
+    {global} {1}
+    {name} {Electrum Gloves}
 }
 #VAR {_item[^Fur Boots$]} 
 {
-	{desc} 
-	{
-		{1} {Fur Boots}
-		{2} {A pair of fur boots.  You cannot surmise what powers it may possess.  }
-		{3} {An identification spell may reveal more information.}
-		{4} {It looks light.}
-	}
-	{id} {boots}
+    {desc} 
+    {
+        {1} {Fur Boots}
+        {2} {A pair of fur boots.  You cannot surmise what powers it may possess.  }
+        {3} {An identification spell may reveal more information.}
+        {4} {It looks light.}
+    }
+    {id} {boots}
     {nomap} {1}
-	{global} {1}
-	{name} {Fur Boots}
+    {global} {1}
+    {name} {Fur Boots}
 }
 #VAR {_item[^Gold Amulet$]} 
 {
-	{desc} 
-	{
-		{1} {Gold Amulet}
-		{2} {A gold amulet.  You cannot surmise what powers it may possess.  }
-		{3} {An identification spell may reveal more information.}
-		{4} {It looks light.}
-	}
-	{id} {amulet}
+    {desc} 
+    {
+        {1} {Gold Amulet}
+        {2} {A gold amulet.  You cannot surmise what powers it may possess.  }
+        {3} {An identification spell may reveal more information.}
+        {4} {It looks light.}
+    }
+    {id} {amulet}
     {nomap} {1}
-	{global} {1}
-	{name} {Gold Amulet}
+    {global} {1}
+    {name} {Gold Amulet}
 }
 #VAR {_item[^Gold Cloth cloak$]} 
 {
-	{desc} 
-	{
-		{1} {Gold Cloth cloak}
-		{2} {This cloak is extremely cumbersome.  Even the slightest movement}
-		{3} {results in an impressive clinking sound -- as if it were filled}
-		{4} {entirely with coinage.}
-		{5} {An identification spell may reveal more information.}
-		{6} {It looks very heavy.}
-	}
-	{id} {cloak}
+    {desc} 
+    {
+        {1} {Gold Cloth cloak}
+        {2} {This cloak is extremely cumbersome.  Even the slightest movement}
+        {3} {results in an impressive clinking sound -- as if it were filled}
+        {4} {entirely with coinage.}
+        {5} {An identification spell may reveal more information.}
+        {6} {It looks very heavy.}
+    }
+    {id} {cloak}
     {global} {1}
-	{nomap} {1}
-	{name} {Gold Cloth cloak}
+    {nomap} {1}
+    {name} {Gold Cloth cloak}
 }
 #VAR {_item[^Gold Helmet$]} 
 {
-	{desc} 
-	{
-		{1} {Gold Helmet}
-		{2} {A gold helmet.  You cannot surmise what powers it may possess.  }
-		{3} {An identification spell may reveal more information.}
-		{4} {It looks light.}
-	}
-	{id} {helmet}
-	{global} {1}
-	{nomap} {1}
-	{name} {Gold Helmet}
+    {desc} 
+    {
+        {1} {Gold Helmet}
+        {2} {A gold helmet.  You cannot surmise what powers it may possess.  }
+        {3} {An identification spell may reveal more information.}
+        {4} {It looks light.}
+    }
+    {id} {helmet}
+    {global} {1}
+    {nomap} {1}
+    {name} {Gold Helmet}
 }
 #VAR {_item[^Helmet$]} 
 {
-	{desc} 
-	{
-		{1} {Helmet}
-		{2} {A helmet.  You cannot surmise what powers it may possess.  }
-		{3} {An identification spell may reveal more information.}
-		{4} {It looks light.}
-	}
-	{id} {helmet}
-	{global} {1}
-	{nomap} {1}
-	{name} {Helmet}
+    {desc} 
+    {
+        {1} {Helmet}
+        {2} {A helmet.  You cannot surmise what powers it may possess.  }
+        {3} {An identification spell may reveal more information.}
+        {4} {It looks light.}
+    }
+    {id} {helmet}
+    {global} {1}
+    {nomap} {1}
+    {name} {Helmet}
 }
 #VAR {_item[^Hide boots$]} 
 {
-	{desc} 
-	{
-		{1} {Hide boots}
-		{2} {A pair of hide boots.  You cannot surmise what powers it may possess. }
-		{3} {An identification spell may reveal more information.}
-		{4} {It looks light.}
-	}
-	{id} {boots}
+    {desc} 
+    {
+        {1} {Hide boots}
+        {2} {A pair of hide boots.  You cannot surmise what powers it may possess. }
+        {3} {An identification spell may reveal more information.}
+        {4} {It looks light.}
+    }
+    {id} {boots}
     {nomap} {1}
-	{global} {1}
-	{name} {Hide boots}
+    {global} {1}
+    {name} {Hide boots}
 }
 #VAR {_item[^Iron Chainmail$]} 
 {
-	{desc} 
-	{
-		{1} {Iron Chainmail}
-		{2} {An iron chainmail.  You cannot surmise what powers it may possess.  }
-		{3} {An identification spell may reveal more information.}
-		{4} {It looks light.}
-	}
-	{id} {armour}
-	{global} {1}
-	{nomap} {1}
-	{name} {Iron Chainmail}
+    {desc} 
+    {
+        {1} {Iron Chainmail}
+        {2} {An iron chainmail.  You cannot surmise what powers it may possess.  }
+        {3} {An identification spell may reveal more information.}
+        {4} {It looks light.}
+    }
+    {id} {armour}
+    {global} {1}
+    {nomap} {1}
+    {name} {Iron Chainmail}
 }
 {_item[^Iron Codpiece$]} 
 {
-	{desc} 
-	{
-		{1} {Iron Codpiece}
-		{2} {An iron codpiece.  You cannot surmise what powers it may possess.  }
-		{3} {An identification spell may reveal more information.}
-		{4} {It looks light.}
-	}
-	{id} {other}
-	{global} {1}
-	{nomap} {1}
-	{name} {Iron Codpiece}
+    {desc} 
+    {
+        {1} {Iron Codpiece}
+        {2} {An iron codpiece.  You cannot surmise what powers it may possess.  }
+        {3} {An identification spell may reveal more information.}
+        {4} {It looks light.}
+    }
+    {id} {other}
+    {global} {1}
+    {nomap} {1}
+    {name} {Iron Codpiece}
 }
 #VAR {_item[^Iron Gauntlets$]} 
 {
-	{desc} 
-	{
-		{1} {Iron Gauntlets}
-		{2} {A pair of iron gauntlets.  You cannot surmise what powers it may}
-		{3} {possess.  }
-		{4} {An identification spell may reveal more information.}
-		{5} {It looks light.}
-	}
-	{id} {gloves}
+    {desc} 
+    {
+        {1} {Iron Gauntlets}
+        {2} {A pair of iron gauntlets.  You cannot surmise what powers it may}
+        {3} {possess.  }
+        {4} {An identification spell may reveal more information.}
+        {5} {It looks light.}
+    }
+    {id} {gloves}
     {nomap} {1}
-	{global} {1}
-	{name} {Iron Gauntlets}
+    {global} {1}
+    {name} {Iron Gauntlets}
 }
 #VAR {_item[^Iron Gloves$]} 
 {
-	{desc} 
-	{
-		{1} {Iron Gloves}
-		{2} {A pair of iron gloves.  You cannot surmise what powers it may possess.}
-		{3} {An identification spell may reveal more information.}
-		{4} {It looks light.}
-	}
-	{id} {gloves}
+    {desc} 
+    {
+        {1} {Iron Gloves}
+        {2} {A pair of iron gloves.  You cannot surmise what powers it may possess.}
+        {3} {An identification spell may reveal more information.}
+        {4} {It looks light.}
+    }
+    {id} {gloves}
     {nomap} {1}
-	{global} {1}
-	{name} {Iron Gloves}
+    {global} {1}
+    {name} {Iron Gloves}
 }
 #VAR {_item[^Iron Helmet$]} 
 {
-	{desc} 
-	{
-		{1} {Iron Helmet}
-		{2} {An iron helmet.  You cannot surmise what powers it may possess.  }
-		{3} {An identification spell may reveal more information.}
-		{4} {It looks light.}
-	}
-	{id} {helmet}
+    {desc} 
+    {
+        {1} {Iron Helmet}
+        {2} {An iron helmet.  You cannot surmise what powers it may possess.  }
+        {3} {An identification spell may reveal more information.}
+        {4} {It looks light.}
+    }
+    {id} {helmet}
     {nomap} {1}
-	{global} {1}
-	{name} {Iron Helmet}
+    {global} {1}
+    {name} {Iron Helmet}
 }
 #VAR {_item[^Leather Armour$]} 
 {
-	{desc} 
-	{
-		{1} {Leather Armour}
-		{2} {A leather armour.  You cannot surmise what powers it may possess.  }
-		{3} {An identification spell may reveal more information.}
-		{4} {It looks light.}
-	}
-	{id} {armour}
+    {desc} 
+    {
+        {1} {Leather Armour}
+        {2} {A leather armour.  You cannot surmise what powers it may possess.  }
+        {3} {An identification spell may reveal more information.}
+        {4} {It looks light.}
+    }
+    {id} {armour}
     {nomap} {1}
-	{global} {1}
-	{name} {Leather Armour}
+    {global} {1}
+    {name} {Leather Armour}
 }
 #VAR {_item[^Leather Boots$]} 
 {
-	{desc} 
-	{
-		{1} {Leather Boots}
-		{2} {A pair of leather boots.  You cannot surmise what powers it may}
-		{3} {possess.  }
-		{4} {An identification spell may reveal more information.}
-		{5} {It looks light.}
-	}
-	{id} {boots}
+    {desc} 
+    {
+        {1} {Leather Boots}
+        {2} {A pair of leather boots.  You cannot surmise what powers it may}
+        {3} {possess.  }
+        {4} {An identification spell may reveal more information.}
+        {5} {It looks light.}
+    }
+    {id} {boots}
     {nomap} {1}
-	{global} {1}
-	{name} {Leather Boots}
+    {global} {1}
+    {name} {Leather Boots}
 }
 #VAR {_item[^Leather Girdle$]} 
 {
-	{desc} 
-	{
-		{1} {Leather Girdle}
-		{2} {This item is fairly mundane.  The only signficant feature is a}
-		{3} {peculiar symbol adorning the inner portion of the girdle.  It appears}
-		{4} {to be a mix between a circle, plus sign, and an arrow. }
-		{5} {An identification spell may reveal more information.}
-		{6} {It looks light.}
-	}
-	{id} {other}
+    {desc} 
+    {
+        {1} {Leather Girdle}
+        {2} {This item is fairly mundane.  The only signficant feature is a}
+        {3} {peculiar symbol adorning the inner portion of the girdle.  It appears}
+        {4} {to be a mix between a circle, plus sign, and an arrow. }
+        {5} {An identification spell may reveal more information.}
+        {6} {It looks light.}
+    }
+    {id} {other}
     {nomap} {1}
-	{global} {1}
-	{name} {Leather Girdle}
+    {global} {1}
+    {name} {Leather Girdle}
 }
 #VAR {_item[^Leather Gloves$]} 
 {
-	{desc} 
-	{
-		{1} {Leather Gloves}
-		{2} {A pair of soft leather gloves. }
-		{3} {An identification spell may reveal more information.}
-		{4} {It looks light.}
-	}
-	{id} {gloves}
+    {desc} 
+    {
+        {1} {Leather Gloves}
+        {2} {A pair of soft leather gloves. }
+        {3} {An identification spell may reveal more information.}
+        {4} {It looks light.}
+    }
+    {id} {gloves}
     {nomap} {1}
-	{global} {1}
-	{name} {Leather Gloves}
+    {global} {1}
+    {name} {Leather Gloves}
 }
 #VAR {_item[^Leather Helmet$]} 
 {
-	{desc} 
-	{
-		{1} {Leather Helmet}
-		{2} {A sturdy looking helmet which appears to be continually bleeding}
-		{3} {a peculiar clear liquid.}
-		{4} {An identification spell may reveal more information.}
-		{5} {It looks light.}
-	}
-	{id} {helmet}
+    {desc} 
+    {
+        {1} {Leather Helmet}
+        {2} {A sturdy looking helmet which appears to be continually bleeding}
+        {3} {a peculiar clear liquid.}
+        {4} {An identification spell may reveal more information.}
+        {5} {It looks light.}
+    }
+    {id} {helmet}
     {nomap} {1}
-	{global} {1}
-	{name} {Leather Helmet}
+    {global} {1}
+    {name} {Leather Helmet}
 }
 #VAR {_item[^Leather girdle$]} 
 {
-	{desc} 
-	{
-		{1} {Leather girdle}
-		{2} {A leather girdle.  You cannot surmise what powers it may possess.  }
-		{3} {An identification spell may reveal more information.}
-		{4} {It looks light.}
-	}
-	{id} {girdle}
+    {desc} 
+    {
+        {1} {Leather girdle}
+        {2} {A leather girdle.  You cannot surmise what powers it may possess.  }
+        {3} {An identification spell may reveal more information.}
+        {4} {It looks light.}
+    }
+    {id} {girdle}
     {nomap} {1}
-	{global} {1}
-	{name} {Leather girdle}
+    {global} {1}
+    {name} {Leather girdle}
 }
-{_item[^Marble Gloves$]} 
+#VAR {_item[^Marble Gloves$]} 
 {
-	{desc} 
-	{
-		{1} {Marble Gloves}
-		{2} {A pair of marble gloves.  You cannot surmise what powers it may}
-		{3} {possess.  }
-		{4} {An identification spell may reveal more information.}
-		{5} {It looks light.}
-	}
-	{id} {gloves}
+    {desc} 
+    {
+        {1} {Marble Gloves}
+        {2} {A pair of marble gloves.  You cannot surmise what powers it may}
+        {3} {possess.  }
+        {4} {An identification spell may reveal more information.}
+        {5} {It looks light.}
+    }
+    {id} {gloves}
     {nomap} {1}
-	{global} {1}
-	{name} {Marble Gloves}
+    {global} {1}
+    {name} {Marble Gloves}
+}
+#VAR {_item[^Mylar Straps$]} 
+{
+    {desc} 
+    {
+        {1} {Mylar Straps}
+        {2} {These are small straps that look like they could be wrapped around}
+        {3} {your feet.}
+        {4} {An identification spell may reveal more information.}
+        {5} {It looks light.}
+    }
+    {id} {boots}
+    {nomap} {1}
+    {global} {1}
+    {name} {Mylar Straps}
+}
+#VAR {_item[^Obsidian Gloves$]} 
+{
+    {desc} 
+    {
+        {1} {Obsidian Gloves}
+        {2} {A pair of obsidian gloves.  You cannot surmise what powers it may}
+        {3} {possess.  }
+        {4} {An identification spell may reveal more information.}
+        {5} {It looks light.}
+    }
+    {id} {gloves}
+    {nomap} {1}
+    {global} {1}
+    {name} {Obsidian Gloves}
 }
 #VAR {_item[^Old Dusty Hat$]} 
 {
-	{desc} 
-	{
-		{1} {Old Dusty Hat}
-		{2} {This dusty old leather hat is in poor condition.  Several of its}
-		{3} {stitches are broken and it's a wonder this hat still holds together. }
-		{4} {The brow is crumpled and several smears of grime are permanently}
-		{5} {ground into the crown.  Yet, the hat still has a comforting feeling}
-		{6} {about it.  Like a young child would feel about a security blanket. }
-		{7} {The inside rim is still in fair condition, and the hat could be}
-		{8} {comfortably worn.}
-		{9} {An identification spell may reveal more information.}
-		{10} {It looks light.}
-	}
-	{id} {helmet}
-	{global} {1}
-	{nomap} {1}
-	{name} {Old Dusty Hat}
+    {desc} 
+    {
+        {1} {Old Dusty Hat}
+        {2} {This dusty old leather hat is in poor condition.  Several of its}
+        {3} {stitches are broken and it's a wonder this hat still holds together. }
+        {4} {The brow is crumpled and several smears of grime are permanently}
+        {5} {ground into the crown.  Yet, the hat still has a comforting feeling}
+        {6} {about it.  Like a young child would feel about a security blanket. }
+        {7} {The inside rim is still in fair condition, and the hat could be}
+        {8} {comfortably worn.}
+        {9} {An identification spell may reveal more information.}
+        {10} {It looks light.}
+    }
+    {id} {helmet}
+    {global} {1}
+    {nomap} {1}
+    {name} {Old Dusty Hat}
 }
 #VAR {_item[^Platinum Codpiece$]} 
 {
-	{desc} 
-	{
-		{1} {Platinum Codpiece}
-		{2} {A platinum codpiece.  You cannot surmise what powers it may possess.  }
-		{3} {An identification spell may reveal more information.}
-		{4} {It looks light.}
-	}
-	{id} {other}
-	{global} {1}
-	{nomap} {1}
-	{name} {Platinum Codpiece}
+    {desc} 
+    {
+        {1} {Platinum Codpiece}
+        {2} {A platinum codpiece.  You cannot surmise what powers it may possess.  }
+        {3} {An identification spell may reveal more information.}
+        {4} {It looks light.}
+    }
+    {id} {other}
+    {global} {1}
+    {nomap} {1}
+    {name} {Platinum Codpiece}
+}
+{_item[^Random Codpiece$]} 
+{
+    {desc} 
+    {
+        {1} {Random Codpiece}
+        {2} {A random codpiece.  You cannot surmise what powers it may possess.  }
+        {3} {An identification spell may reveal more information.}
+        {4} {It looks light.}
+    }
+    {id} {other}
+    {global} {1}
+    {nomap} {1}
+    {name} {Random Codpiece}
 }
 #VAR {_item[^Sapphire Amulet$]} 
 {
-	{desc} 
-	{
-		{1} {Sapphire Amulet}
-		{2} {A sapphire amulet.  You cannot surmise what powers it may possess.  }
-		{3} {An identification spell may reveal more information.}
-		{4} {It looks light.}
-	}
-	{id} {amulet}
+    {desc} 
+    {
+        {1} {Sapphire Amulet}
+        {2} {A sapphire amulet.  You cannot surmise what powers it may possess.  }
+        {3} {An identification spell may reveal more information.}
+        {4} {It looks light.}
+    }
+    {id} {amulet}
     {nomap} {1}
-	{global} {1}
-	{name} {Sapphire Amulet}
+    {global} {1}
+    {name} {Sapphire Amulet}
 }
 {_item[^Scaley Armour$]} 
 {
-	{desc} 
-	{
-		{1} {Scaley Armour}
-		{2} {A scaley armour.  You cannot surmise what powers it may possess.  }
-		{3} {An identification spell may reveal more information.}
-		{4} {It doesn't look too heavy.}
-	}
-	{id} {armour}
+    {desc} 
+    {
+        {1} {Scaley Armour}
+        {2} {A scaley armour.  You cannot surmise what powers it may possess.  }
+        {3} {An identification spell may reveal more information.}
+        {4} {It doesn't look too heavy.}
+    }
+    {id} {armour}
     {nomap} {1}
-	{global} {1}
-	{name} {Scaley Armour}
+    {global} {1}
+    {name} {Scaley Armour}
 }
 #VAR {_item[^Scaley Boots$]} 
 {
-	{desc} 
-	{
-		{1} {Scaley Boots}
-		{2} {A pair of scaley boots.  You cannot surmise what powers it may}
-		{3} {possess.  }
-		{4} {An identification spell may reveal more information.}
-		{5} {It looks light.}
-	}
-	{id} {boots}
+    {desc} 
+    {
+        {1} {Scaley Boots}
+        {2} {A pair of scaley boots.  You cannot surmise what powers it may}
+        {3} {possess.  }
+        {4} {An identification spell may reveal more information.}
+        {5} {It looks light.}
+    }
+    {id} {boots}
     {nomap} {1}
-	{global} {1}
-	{name} {Scaley Boots}
+    {global} {1}
+    {name} {Scaley Boots}
 }
 #VAR {_item[^Scaley Helmet$]} 
 {
-	{desc} 
-	{
-		{1} {Scaley Helmet}
-		{2} {A scaley helmet.  You cannot surmise what powers it may possess.  }
-		{3} {An identification spell may reveal more information.}
-		{4} {It looks light.}
-	}
-	{id} {helmet}
+    {desc} 
+    {
+        {1} {Scaley Helmet}
+        {2} {A scaley helmet.  You cannot surmise what powers it may possess.  }
+        {3} {An identification spell may reveal more information.}
+        {4} {It looks light.}
+    }
+    {id} {helmet}
     {nomap} {1}
-	{global} {1}
-	{name} {Scaley Helmet}
+    {global} {1}
+    {name} {Scaley Helmet}
 }
 #VAR {_item[^set of dice$]} 
 {
-	{desc} 
-	{
-		{1} {set of dice}
-		{2} {A small set of dice, carved from ivory.  Each of their six sides}
-		{3} {features a number of small black pips, between one and six.  There is a}
-		{4} {quiet rattle from inside each of the dice, as if they were hollow.}
-		{5} {It looks light.}
-	}
-	{id} {set of dice}
+    {desc} 
+    {
+        {1} {set of dice}
+        {2} {A small set of dice, carved from ivory.  Each of their six sides}
+        {3} {features a number of small black pips, between one and six.  There is a}
+        {4} {quiet rattle from inside each of the dice, as if they were hollow.}
+        {5} {It looks light.}
+    }
+    {id} {set of dice}
     {nomap} {1}
-	{global} {1}
-	{name} {set of dice}
+    {global} {1}
+    {name} {set of dice}
 }
 #VAR {_item[^Silver Codpiece$]} 
 {
-	{desc} 
-	{
-		{1} {Silver Codpiece}
-		{2} {A silver codpiece.  You cannot surmise what powers it may possess.  }
-		{3} {An identification spell may reveal more information.}
-		{4} {It looks light.}
-	}
-	{id} {other}
-	{global} {1}
-	{nomap} {1}
-	{name} {Silver Codpiece}
+    {desc} 
+    {
+        {1} {Silver Codpiece}
+        {2} {A silver codpiece.  You cannot surmise what powers it may possess.  }
+        {3} {An identification spell may reveal more information.}
+        {4} {It looks light.}
+    }
+    {id} {other}
+    {global} {1}
+    {nomap} {1}
+    {name} {Silver Codpiece}
 }
 #VAR {_item[^Silver Gloves$]} 
 {
-	{desc} 
-	{
-		{1} {Silver Gloves}
-		{2} {A pair of silver gloves.  You cannot surmise what powers it may}
-		{3} {possess.  }
-		{4} {An identification spell may reveal more information.}
-		{5} {It looks light.}
-	}
-	{id} {gloves}
+    {desc} 
+    {
+        {1} {Silver Gloves}
+        {2} {A pair of silver gloves.  You cannot surmise what powers it may}
+        {3} {possess.  }
+        {4} {An identification spell may reveal more information.}
+        {5} {It looks light.}
+    }
+    {id} {gloves}
     {nomap} {1}
-	{global} {1}
-	{name} {Silver Gloves}
+    {global} {1}
+    {name} {Silver Gloves}
 }
 #VAR {_item[^Steel Chainmail$]} 
 {
-	{desc} 
-	{
-		{1} {Steel Chainmail}
-		{2} {A steel chainmail.  You cannot surmise what powers it may possess.  }
-		{3} {An identification spell may reveal more information.}
-		{4} {It looks light.}
-	}
-	{id} {armour}
+    {desc} 
+    {
+        {1} {Steel Chainmail}
+        {2} {A steel chainmail.  You cannot surmise what powers it may possess.  }
+        {3} {An identification spell may reveal more information.}
+        {4} {It looks light.}
+    }
+    {id} {armour}
     {nomap} {1}
-	{global} {1}
-	{name} {Steel Chainmail}
+    {global} {1}
+    {name} {Steel Chainmail}
 }
 #VAR {_item[^Steel Codpiece$]} 
 {
-	{desc} 
-	{
-		{1} {Steel Codpiece}
-		{2} {A steel codpiece.  You cannot surmise what powers it may possess.  }
-		{3} {An identification spell may reveal more information.}
-		{4} {It looks light.}
-	}
-	{id} {other}
+    {desc} 
+    {
+        {1} {Steel Codpiece}
+        {2} {A steel codpiece.  You cannot surmise what powers it may possess.  }
+        {3} {An identification spell may reveal more information.}
+        {4} {It looks light.}
+    }
+    {id} {other}
     {nomap} {1}
-	{global} {1}
-	{name} {Steel Codpiece}
+    {global} {1}
+    {name} {Steel Codpiece}
 }
 {_item[^Steel Gloves$]} 
 {
-	{desc} 
-	{
-		{1} {Steel Gloves}
-		{2} {A pair of steel gloves.  You cannot surmise what powers it may}
-		{3} {possess.  }
-		{4} {An identification spell may reveal more information.}
-		{5} {It looks light.}
-	}
-	{id} {gloves}
+    {desc} 
+    {
+        {1} {Steel Gloves}
+        {2} {A pair of steel gloves.  You cannot surmise what powers it may}
+        {3} {possess.  }
+        {4} {An identification spell may reveal more information.}
+        {5} {It looks light.}
+    }
+    {id} {gloves}
     {nomap} {1}
-	{global} {1}
-	{name} {Steel Gloves}
+    {global} {1}
+    {name} {Steel Gloves}
 }
 #VAR {_item[^Steel Helmet$]} 
 {
-	{desc} 
-	{
-		{1} {Steel Helmet}
-		{2} {A steel helmet.  You cannot surmise what powers it may possess.  }
-		{3} {An identification spell may reveal more information.}
-		{4} {It looks light.}
-	}
-	{id} {helmet}
-	{global} {1}
-	{nomap} {1}
-	{name} {Steel Helmet}
+    {desc} 
+    {
+        {1} {Steel Helmet}
+        {2} {A steel helmet.  You cannot surmise what powers it may possess.  }
+        {3} {An identification spell may reveal more information.}
+        {4} {It looks light.}
+    }
+    {id} {helmet}
+    {global} {1}
+    {nomap} {1}
+    {name} {Steel Helmet}
 }
 #VAR {_item[^Steel Platemail Gauntlets$]} 
 {
-	{desc} 
-	{
-		{1} {Steel Platemail Gauntlets}
-		{2} {A pair of steel platemail gauntlets.  You cannot surmise what powers}
-		{3} {it may possess.  }
-		{4} {An identification spell may reveal more information.}
-		{5} {It doesn't look too heavy.}
-	}
-	{id} {gloves}
-	{global} {1}
-	{nomap} {1}
-	{name} {Steel Platemail Gauntlets}
+    {desc} 
+    {
+        {1} {Steel Platemail Gauntlets}
+        {2} {A pair of steel platemail gauntlets.  You cannot surmise what powers}
+        {3} {it may possess.  }
+        {4} {An identification spell may reveal more information.}
+        {5} {It doesn't look too heavy.}
+    }
+    {id} {gloves}
+    {global} {1}
+    {nomap} {1}
+    {name} {Steel Platemail Gauntlets}
 }
 #VAR {_item[^Steel Shield$]} 
 {
-	{desc} 
-	{
-		{1} {Steel Shield}
-		{2} {A steel shield.  You cannot surmise what powers it may possess.  }
-		{3} {An identification spell may reveal more information.}
-		{4} {It looks light.}
-	}
-	{id} {shield}
+    {desc} 
+    {
+        {1} {Steel Shield}
+        {2} {A steel shield.  You cannot surmise what powers it may possess.  }
+        {3} {An identification spell may reveal more information.}
+        {4} {It looks light.}
+    }
+    {id} {shield}
     {nomap} {1}
-	{global} {1}
-	{name} {Steel Shield}
+    {global} {1}
+    {name} {Steel Shield}
 }
 #VAR {_item[^Steel bracers$]} 
 {
-	{desc} 
-	{
-		{1} {Steel bracers}
-		{2} {A pair of plate bracers.  }
-		{3} {An identification spell may reveal more information.}
-		{4} {It doesn't look too heavy.}
-	}
-	{id} {other}
+    {desc} 
+    {
+        {1} {Steel bracers}
+        {2} {A pair of plate bracers.  }
+        {3} {An identification spell may reveal more information.}
+        {4} {It doesn't look too heavy.}
+    }
+    {id} {other}
     {nomap} {1}
-	{global} {1}
-	{name} {Steel bracers}
+    {global} {1}
+    {name} {Steel bracers}
 }
 #VAR {_item[^Stone Boots$]} 
 {
-	{desc} 
-	{
-		{1} {Stone Boots}
-		{2} {A pair of stone boots.  You cannot surmise what powers it may possess.}
-		{3} {An identification spell may reveal more information.}
-		{4} {It looks heavy.}
-	}
-	{id} {boots}
+    {desc} 
+    {
+        {1} {Stone Boots}
+        {2} {A pair of stone boots.  You cannot surmise what powers it may possess.}
+        {3} {An identification spell may reveal more information.}
+        {4} {It looks heavy.}
+    }
+    {id} {boots}
     {nomap} {1}
-	{global} {1}
-	{name} {Stone Boots}
+    {global} {1}
+    {name} {Stone Boots}
 }
 #VAR {_item[^(Aluminum|Amber|Amethyst|Aquamarine|Bloodstone|Bone|Brass|Bronze|Ceramic|Copper|Coral|Diamond|Ebony|Electrum|Emerald|Garnet|Glass|Gold|Granite|Jacinth|Lead|Iron|Ivory|Jade|Jasper|Mahogany|Malachite|Maple|Marble|Moonstone|Oak|Obsidian|Onyx|Pearl|Peridot|Platinum|Pyrite|Quartz|Ruby|Sapphire|Sardonyx|Silver|Sodalite|Steel|Stone|Tin|Titanium|Topaz|Turquoise|Zinc|Zirconian) ring$]} 
 {
-	{desc} 
-	{
-		{1} {Amber ring}
-		{2} {A small, decorated, <type> ring.  You cannot surmise what powers it may}
-		{3} {or may not possess.  Perhaps an identification spell will reveal what}
-		{4} {you wish to know.}
-		{5} {It looks light.}
-	}
-	{id} {ring}
+    {desc} 
+    {
+        {1} {Amber ring}
+        {2} {A small, decorated, <type> ring.  You cannot surmise what powers it may}
+        {3} {or may not possess.  Perhaps an identification spell will reveal what}
+        {4} {you wish to know.}
+        {5} {It looks light.}
+    }
+    {id} {ring}
     {nomap} {1}
-	{global} {1}
-	{name} {Amber ring}
+    {global} {1}
+    {name} {Amber ring}
 }
 #VAR {_item[^A(n|) (bloody|double-bladed|dark|dull|engraved|extremely sharp|finely cut|finely crafted|glowing|heavy|hooked|jagged|light|lightly glowing|long|long thin|nasty|nicked|old|ornate|polished|razor-sharp|runed|sharp|shining|short|single edged|small|spiked|very dull|very sharp|wicked|)(, |)(adamantium|ash|aspen|balsam|bronze|cedar|ebony|elm|gold|granite|iron|jade|mahogany|maple|mithril|obsidian|onyx|pine|platinum|sardonyx|silver|steel|stone|titanium|) (bastardsword|battleaxe|blackjack|blade|claymore|club|cudgel|cutlass|dagger|dirk|double-edged axe|falchion|flail|foil|handaxe|hatchet|jo|khopesh|knife|kynac|longsword|mace|machete|main gauche|mattock|morningstar|no-dachi|nunchaku|pickaxe|quarterstaff|sabre|sai|scimitar|shortsword|sledgehammer|staff|stiletto|sword|trident|two-handed sword|warhammer|war-axe|war-mattock|woodsman's axe)( \x28enchanted\x29|)$]} 
 {
-	{desc} 
-	{
-		{1} {A double-bladed, silver shortsword}
-		{2} {This shortsword is made of silver and it looks double-bladed. You can}
-		{3} {not judge what kind of powers this weapon has. You'll have to identify}
-		{4} {it to learn more.}
-		{5} {This weapon is in excellent condition.}
-		{6} {This weapon's classifications: 5 (edged)  }
-		{7} {This weapon gains benefits from your sword weapon skill.}
-		{8} {It looks light.}
-	}
-	{id} {shortsword}
+    {desc} 
+    {
+        {1} {A double-bladed, silver shortsword}
+        {2} {This shortsword is made of silver and it looks double-bladed. You can}
+        {3} {not judge what kind of powers this weapon has. You'll have to identify}
+        {4} {it to learn more.}
+        {5} {This weapon is in excellent condition.}
+        {6} {This weapon's classifications: 5 (edged)  }
+        {7} {This weapon gains benefits from your sword weapon skill.}
+        {8} {It looks light.}
+    }
+    {id} {shortsword}
     {nomap} {1}
-	{global} {1}
-	{name} {A double-bladed, silver shortsword}
+    {global} {1}
+    {name} {A double-bladed, silver shortsword}
 }
 #VAR {_item[^candle$]} 
 {
-	{desc} 
-	{
-		{1} {candle}
-		{2} {A candle.  It is currently unidentified.}
-		{3} {It looks light.}
-	}
-	{id} {candle}
+    {desc} 
+    {
+        {1} {candle}
+        {2} {A candle.  It is currently unidentified.}
+        {3} {It looks light.}
+    }
+    {id} {candle}
     {global} {1}
-	{nomap} {1}
-	{name} {candle}
+    {nomap} {1}
+    {name} {candle}
 }
 {_item[^(brown|green|red|violet|yellow|black) gemstone$]} 
 {
-	{desc} 
-	{
-		{1} {green gemstone}
-		{2} {A green gemstone.  It is currently unidentified.}
-		{3} {It looks light.}
-	}
-	{global} {1}
-	{id} {green gemstone}
-	{nomap} {1}
-	{name} {green gemstone}
+    {desc} 
+    {
+        {1} {green gemstone}
+        {2} {A green gemstone.  It is currently unidentified.}
+        {3} {It looks light.}
+    }
+    {global} {1}
+    {id} {green gemstone}
+    {nomap} {1}
+    {name} {green gemstone}
 }
 #VAR {_item[^miniature tools$]} 
 {
-	{desc} 
-	{
-		{1} {miniature tools}
-		{2} {An exquisite set of small tools.  The bulk of them are metallic in}
-		{3} {composition.  The pecular twists and bends in the artifacts leave}
-		{4} {you somewhat mystified as to their purpose.  Perhaps identifying}
-		{5} {them will gain you greater knowledge.}
-		{6} {It looks light.}
-	}
-	{id} {miniature tools}
+    {desc} 
+    {
+        {1} {miniature tools}
+        {2} {An exquisite set of small tools.  The bulk of them are metallic in}
+        {3} {composition.  The pecular twists and bends in the artifacts leave}
+        {4} {you somewhat mystified as to their purpose.  Perhaps identifying}
+        {5} {them will gain you greater knowledge.}
+        {6} {It looks light.}
+    }
+    {id} {miniature tools}
     {nomap} {1}
-	{global} {1}
-	{name} {miniature tools}
+    {global} {1}
+    {name} {miniature tools}
 }
 {_item[^set of three dice$]} 
 {
-	{desc} 
-	{
-		{1} {set of three dice}
-		{2} {A set of three dice.  It is currently unidentified.}
-		{3} {It looks light.}
-	}
-	{id} {set of three dice}
+    {desc} 
+    {
+        {1} {set of three dice}
+        {2} {A set of three dice.  It is currently unidentified.}
+        {3} {It looks light.}
+    }
+    {id} {set of three dice}
     {nomap} {1}
-	{global} {1}
-	{name} {set of three dice}
+    {global} {1}
+    {name} {set of three dice}
 }
 #VAR {_item[bag]} 
 {
-	{desc} 
-	{
-		{1} {bag}
-		{2} {A bag.  It is currently unidentified.}
-		{3} {You can put things in it.}
-		{4} {It doesn't look too heavy.}
-	}
-	{id} {bag}
+    {desc} 
+    {
+        {1} {bag}
+        {2} {A bag.  It is currently unidentified.}
+        {3} {You can put things in it.}
+        {4} {It doesn't look too heavy.}
+    }
+    {id} {bag}
     {nomap} {1}
-	{global} {1}
-	{name} {bag}
-	{pickup} {1}
+    {global} {1}
+    {name} {bag}
+    {pickup} {1}
 }
