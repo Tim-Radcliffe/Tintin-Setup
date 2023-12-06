@@ -11,9 +11,12 @@
             {weak goodness}{1}{goodness}{2}{extreme goodness}{3}{divine goodness}{4}};            
             #ACTION {{^\x7D\x7D\x7D (.*) reflects (.*)$}}
             {
+                #LOCAL {string} {};
+                #FORMAT {string} {%l} {%%2};
                 #LOCAL {match} {};
-                #FORMAT {match} {%l} {%%2};
-                #REGEXP {$match} {{%2}} 
+                #FORMAT {match} {%l} {%2};
+                .debug {GUILD} {GUILD: Detect Alignment: $string : $match};
+                #REGEXP {$string} {{$match}} 
                 {
                     #VAR {_npc[%2][alignment]} {$_alignments[%%3]};
                     .scanRoomNPCSave {%2};                      
