@@ -50,5 +50,10 @@ event_register e_combat h_combat handler_combat;
 {
     #NOP %1; 
     #IF {%2 > 0} {event_raise {e_combat_round} {%2};};
+    #CLASS {$path[profile]/combat.tin} ASSIGN 
+    {
+        #MATH {_combat[round]} {$_combat[round] + 1};
+    };
+    #CLASS {$path[profile]/combat.tin} WRITE {$path[profile]/combat.tin};
 };
 event_register {e_mip_FFF_N} {h_combat_round} {handler_combat_round};
