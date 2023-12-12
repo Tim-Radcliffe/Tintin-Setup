@@ -1,0 +1,16 @@
+#LOG TIMESTAMP {%Y%m%d-%H:%M:%S };
+
+#ALIAS {.log}
+{
+    #SWITCH {"%1"}
+    {
+        #CASE {"add"}
+        {
+            #LINE LOGMODE STAMP #LINE LOG {$path[log]/%2} {%3};
+        };
+        #DEFAULT
+        {
+            #ECHO {.log {add} {filename} {text};};
+        };
+    };
+};

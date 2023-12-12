@@ -28,9 +28,13 @@
 			#FOREACH {$_file[List][%*]} {_file[Name]} {#ECHO {$_file[Name]};};
 			#UNVAR {_file};	  
 		};
+        #CASE {"write"}
+        {
+			#RETURN {@fFileWrite{%2}};
+        };
 		#DEFAULT 
 		{
-			#ECHO {Recognised commands are load,loadall,read,list,tree};
+			#ECHO {Recognised commands are load,loadall,read,list,tree,write};
 		};
 	};
 };
@@ -53,6 +57,7 @@
 
 #FUNCTION {fFileLoadAll}
 {
+	.debug FILE {LOADALL: %1};    
 	#LOCAL {_fFLA[spec]} {@fParseFilePath{%1}};
 	#LOCAL {_fFLA[list]} {@fFileList{{$_fFLA[spec][path]}{$_fFLA[spec][name].$_fFLA[spec][ext]}}};
 	#IF {"$_fFLA[list]" != ""}
@@ -68,16 +73,17 @@
 
 #FUNCTION {fFileList}
 {
-  #LOCAL {_fFileList} {};
-	#IF {"%2" != ""}
-	{
-		#SCRIPT {_fFileList} {find "%1" -name "%2" -type f -maxdepth 1 2>/dev/null};
-	};
-	#ELSE
-	{
-		#SCRIPT {_fFileList} {find "%1" -type f -maxdepth 1 2>/dev/null};
-	};
-	#RETURN {$_fFileList};
+    #VAR {_fFileList} {};
+    #IF {"%2" != ""}
+    {
+        #SCRIPT {_fFileList} {find "%1" -name "%2" -type f -maxdepth 1 2>/dev/null};
+    };
+    #ELSE
+    {
+        #SCRIPT {_fFileList} {find "%1" -type f -maxdepth 1 2>/dev/null};
+    };
+    #LINE SUBSTITUTE {VARIABLES;ESCAPES} #VAR {_fFileList} {$_fFileList};
+    #RETURN {$_fFileList};
 };
 
 #FUNCTION {fFileRead}
