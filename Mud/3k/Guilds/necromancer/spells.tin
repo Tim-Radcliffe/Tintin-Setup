@@ -18,6 +18,7 @@
         #UNACTION {^Your spells minimum is set to};
         #UNACTION {^%s{Edged|Crushing|Cold|Flame|Psionic|Lightning|Corrosion|Virulence|Power|Light}-\(%s%d\)-(%s%d\%\)};
     };
+    #UNVAR {my[necromancer][spells]};
     #SEND {!spells};
 };
 event_register e_killed_opponent spells.tin handler_necspells_combat_end; 
