@@ -1,0 +1,61 @@
+#NOP Vis:[400/400] Proximus:[1%]
+
+#ALIAS {handler_auto_bonestaff}
+{
+    #NOP %1;
+    #SEND {!bid horror attack %2};
+};
+
+#ACTION {^Str: %d Con: %d Int: %d Wis: %d Dex: %d Cha: %d}
+{
+    .debug BONESTAFF {STATS:%1:%2:%3:%4:%5:%6};
+    #VAR {_Bonestaff[str]} {%1};
+    #VAR {_Bonestaff[con]} {%2};
+    #VAR {_Bonestaff[int]} {%3};
+    #VAR {_Bonestaff[wis]} {%4};
+    #VAR {_Bonestaff[dex]} {%5};
+    #VAR {_Bonestaff[cha]} {%6};
+};
+
+#ACTION {There are [%d] %w {p|P}oints to allocate}
+{
+    .debug BONESTAFF {POINTS:%1:%2};
+    #VAR {_Bonestaff[points]} {%1};
+    #WHILE {$_Bonestaff[points] > 0}
+    {
+        #MATH {_Bonestaff[points]} {$_Bonestaff[points] - 1};
+        #IF {"%2" == "Stat"}
+        { 
+            #VAR {_Bonestaff[statinc]} {str};
+            #FOREACH {str;int;wis;dex} {s}
+            {
+                #IF {$_Bonestaff[$s] < $_Bonestaff[$_Bonestaff[statinc]]}
+                {
+                    #VAR {_Bonestaff[statinc]} {$s};
+                };
+            };
+            #SEND {!bid horror allocate 1 stat points to $_Bonestaff[statinc]};
+            #MATH {_Bonestaff[$_Bonestaff[statinc]]} {$_Bonestaff[$_Bonestaff[statinc]] + 1};
+        };
+    };
+};
+
+#ACTION {^Horror says: My power has increased, Master.}
+{
+    #SEND {!bid horror status};
+};
+
+auto add {bonestaff} {.file load {$path[local]/Equipment/Polished Bone Staff.tin}} {e_combat} {#CLASS {$path[local]/Equipment/Polished Bone Staff.tin} {kill}};
+#SEND {!bid horror summon};
+#SEND {!bid horror follow};
+#VAR {RoomScan[mob][A Horror]} {-1};
+
+#NOP Horror says: My power has increased, Master.
+
+#NOP A Horror - Current Master: Blutash
+#NOP Level: 4  HP:  79/79    SP:  79/79
+#NOP Str: 5 Con: 4 Int: 4 Wis: 4 Dex: 4 Cha: 4
+#NOP 195 exp to go for next level
+#NOP Attacks: (Minimal)   Defense: (Minimal)
+#NOP There are [0] Stat points to allocate
+#NOP There are [0] Magic Points to allocate

@@ -1,0 +1,14 @@
+#VAR {_tanooki} {};
+
+#ALIAS {handler_amulet_of_tanooki}
+{
+    #NOP %1;
+    #FORMAT {_hAT} {%T};
+    #IF {$_hAT > @fEval{$_tanooki + 180}}
+    {
+        #VAR {_tanooki} {$_hAT};
+        #SEND {!tanooki};
+    };
+};
+
+event_register {e_combat_round} {$path[equipment]} {handler_amulet_of_tanooki};

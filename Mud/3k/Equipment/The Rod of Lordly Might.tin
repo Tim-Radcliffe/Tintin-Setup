@@ -1,0 +1,218 @@
+#ALIAS {.rolm_combat_round}
+{
+    #NOP %1;
+    #MATH {_rolm[combat][rounds]} {$_rolm[combat][rounds] + 1};
+    #IF {&{opponent[data][alignment]}}
+    {
+        #IF {$opponent[data][alignment] > 0}
+        {
+            #MATH {_rolm[combat][good]} {$_rolm[combat][good] + 1};
+        };
+        #ELSEIF {$opponent[data][alignment] < 0}
+        {
+            #MATH {_rolm[combat][evil]} {$_rolm[combat][evil] + 1};
+        };
+        #ELSE 
+        {
+            #MATH {_rolm[combat][neutral]} {$_rolm[combat][neutral] + 1};
+        };
+    };
+    #IF {&{opponent[data][undead]} && "$opponent[data][undead]" == "1"}
+    {
+        #MATH {_rolm[combat][undead]} {$_rolm[combat][undead] + 1};
+    };
+    #IF {&{opponent[data][size][$map[area][scaler]][avg]}}
+    {
+        #IF {$opponent[data][size][$map[area][scaler]][avg] <= 1000000}
+        {
+            #MATH {_rolm[combat][small]} {$_rolm[combat][small] + 1};
+        };
+        #ELSEIF {$opponent[data][size][$map[area][scaler]][avg] > 1000000 &&
+                 $opponent[data][size][$map[area][scaler]][avg] <= 100000000}
+        {
+            #MATH {_rolm[combat][medium]} {$_rolm[combat][medium] + 1};
+        };
+        #ELSE 
+        {
+            #MATH {_rolm[combat][small]} {$_rolm[combat][large] + 1};
+        };
+    };
+    #MATH {_rolm[combat][$_rolm[weapon]]} {$_rolm[combat][$_rolm[weapon]] + 1};
+    .file write {$path[profile]/The Rod of Lordly Might.tin};
+};
+event_register {e_combat_round} {$path[equipment]} {.rolm_combat_round};
+
+#ALIAS {touch %w rune}
+{
+    #ACTION {{^archonic vision of your bonding progression ([^\|]*)\|([^\|]*)$}}
+    {
+        #LOCAL {_rolm_trained} {};
+        #FORMAT {_rolm_trained} {%L} {%%2};
+        #MATH {_rolm_trained} {$_rolm_trained + 1};
+        #IF {"$_rolm_trained" != "$_rolm[rune][%1][trained]"}
+        {
+            #VAR {_rolm[rune][%1][trained]} {$_rolm_trained};
+            #IF {&{_rolm[rune][%1][refers]}}
+            {
+                .log add {The Rod of Lordly Might.log} {TRAINED %1 rune level $_rolm_trained ($_rolm[rune][%1][refers] combat rounds $_rolm[combat][$_rolm[rune][%1][refers]])};
+            };
+            #ELSE
+            {
+                .log add {The Rod of Lordly Might.log} {TRAINED %1 rune level $_rolm_trained (combat rounds $_rolm[combat][rounds])};
+            };
+        };
+        #UNACTION {{^archonic vision of your bonding progression ([^\|]*)\|([^\|]*)$}};
+    };
+    #SEND {%0};
+};
+
+#IF {&{_rolm} == 0}
+{
+    #CLASS {$path[profile]/The Rod of Lordly Might.tin} ASSIGN
+    {
+        #VARIABLE {_rolm}
+        {
+            {rune}
+            {
+                {aegis}
+                {
+                    {trained} {1}
+                }
+                {angel}
+                {
+                    {trained} {1}
+                }
+                {arachne}
+                {
+                    {trained} {1}
+                    {type} {weapon}
+                    {refers} {viper}
+                }
+                {armillary}
+                {
+                    {trained} {1}
+                }
+                {aurora}
+                {
+                    {trained} {1}
+                    {type} {weapon}
+                    {refers} {comet}
+                }
+                {cairn}
+                {
+                    {trained} {1}
+                    {refers} {undead}
+                }
+                {comet}
+                {
+                    {trained} {1}
+                    {type} {weapon}
+                    {refers} {lightning}
+                }
+                {crown}
+                {
+                    {trained} {1}
+                    {type} {weapon}
+                    {refers} {reaper}
+                }
+                {dove}
+                {
+                    {trained} {1}
+                    {refers} {evil}
+                }
+                {dragon}
+                {
+                    {trained} {3}
+                    {type} {weapon}
+                    {refers} {star}
+                }
+                {eagle}
+                {
+                    {trained} {1}
+                }
+                {eye}
+                {
+                    {trained} {1}
+                }
+                {frost}
+                {
+                    {trained} {1}
+                    {type} {weapon}
+                    {refers} {dragon}
+                }
+                {ghost}
+                {
+                    {trained} {1}
+                    {refers} {neutral}
+                }
+                {gremlin}
+                {
+                    {trained} {1}
+                }
+                {lasso}
+                {
+                    {trained} {1}
+                    {refers} {small}
+                }
+                {lightning}
+                {
+                    {trained} {1}
+                    {type} {weapon}
+                    {refers} {frost}
+                }
+                {orrery}
+                {
+                    {trained} {1}
+                }
+                {owl}
+                {
+                    {trained} {1}
+                }
+                {phoenix}
+                {
+                    {trained} {1}
+                }
+                {raven}
+                {
+                    {trained} {1}
+                    {refers} {crown}
+                }
+                {reaper}
+                {
+                    {trained} {1}
+                    {type} {weapon}
+                    {refers} {arachne}
+                }
+                {scales}
+                {
+                    {trained} {1}
+                }
+                {skull}
+                {
+                    {trained} {1}
+                    {refers} {good}
+                }
+                {star}
+                {
+                    {active} {1}
+                    {type} {weapon}
+                }
+                {sun}
+                {
+                    {trained} {1}
+                }
+                {viper}
+                {
+                    {trained} {1}
+                    {type} {weapon}
+                    {refers} {aurora}
+                }
+                {winch}
+                {
+                    {trained} {1}
+                }
+            }
+            {weapon} {star}
+        };        
+    };
+};

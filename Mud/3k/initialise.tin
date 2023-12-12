@@ -5,6 +5,7 @@
 
 #VAR {path[commands]} {$path[mud]/Commands};
 #VAR {path[guild]}    {$path[mud]/Guilds/$my[guild]};
+#VAR {path[equipment]} {$path[mud]/Equipment};
 
 .file loadall {$path[commands]/*.tin};
 .file loadall {$path[guild]/*.tin};

@@ -1,0 +1,12 @@
+#NOP The armour loosens its grip around you and you think you can once more fuse with it.
+#VAR {_cocoon} {0};
+#ALIAS {handler_cocoon}
+{
+    #NOP %1;
+    #VAR {_cocoon} {@fEval{($_cocoon + 1) %% 10}};
+    #IF {!$_cocoon}
+    {
+        #SEND {!fuse cocoon};
+    };
+};
+event_register {e_combat_round} {$path[equipment]} {handler_cocoon};

@@ -1,0 +1,11 @@
+#ALIAS {handler_talisman_of_honor}
+{
+    #NOP %1;
+    #FORMAT {_hAT} {%T};
+    #IF {$_hAT > @fEval{$auto[talisman][time] + 180} && $my[hp][current] < $my[hp][max]}
+    {
+        #VAR {auto[talisman][time]} {$_hAT};
+        #SEND {!hold talisman};
+    };
+};
+event_register {e_combat_round} {$path[equipment]} {handler_talisman_of_honor};

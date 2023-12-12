@@ -1,0 +1,47 @@
+#NOP Vis:[400/400] Proximus:[1%]
+
+#NOP -*-*-*-*-*-*-*-* Veneratus Nex *-*-*-*-*-*-*-*-*-
+#NOP Actus:   [6]         Actus Proximus: [88.3719%]
+#NOP Vis: [ 403/900 ]     Loricatus:      [3]
+#NOP -------------------------------------------------
+#NOP Tutaminis [Desino]   Vivifico   [Desino]
+#NOP Victus    [Desino]   Praesentia [Desino]
+#NOP Incursus  [Ineo]
+#NOP -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+
+#ALIAS {agnosco}
+{
+    #ACTION {^Actus:%s[%d]}
+    {
+        #VAR {_Veneratus[actus]} {%%2};
+    };
+    #SEND {!agnosco};
+};
+
+#ALIAS {handler_auto_veneratus}
+{
+    #NOP %1;
+    .debug VENERATUS {%0};
+    #VAR {_Veneratus[vis][current]} {%2};
+    #VAR {_Veneratus[vis][max]} {%3};
+    #VAR {_Veneratus[proximus]} {%4};
+
+    #IF {$_Veneratus[vis][current] < 100}
+    {
+        #SEND {!drop corpse};
+        #SEND {!orare};
+    };
+
+    #IF {$my[hp][current] < @fMath{$my[hp][max]/2} && $_Veneratus[actus] > 2}
+    {
+        #SEND {!medicor};
+    };
+};
+
+#ACTION {^{Vis:\[(\d+)\/(\d+)] Proximus:\[(.+)\%\]}$}
+{
+    event_raise {e_veneratus_notitia} {%2} {%3} {%4};
+};
+auto add {veneratus} {.file load {$path[local]/Equipment/Veneratus Nex.tin}} {e_veneratus_notitia} {#SEND {notitia};};
+agnosco;
+#SEND {!notitia};

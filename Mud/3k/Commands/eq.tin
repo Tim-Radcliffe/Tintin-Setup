@@ -1,16 +1,13 @@
 #ALIAS {eq}
 {
-	#ACTION {{^(.*)\:\s+(.*)$}}
+	#ACTION {{^([^:]{3,13}):\s+(.*)$}}
 	{
 		#IF {"%%2" != "Resistances"}
 		{
-			#IF {"%%3" == "none"} 
-			{
-				#VAR {my[eq][%%2]} {};
-			};
-			#ELSE 
+			#IF {"%%3" != "none"} 
 			{
 				#VAR {my[eq][%%2]} {%%3};
+                .eqLoadScript {%%3};
 			};
 		};
 	};
@@ -18,9 +15,19 @@
 	#ACTION {_command.eq}
 	{
 		#LINE GAG;
-		#UNACTION {{^(.*)\:\s+(.*)$}};
+		#UNACTION {{^([^:]{3,13}):\s+(.*)$}};
+        #UNACTION {_command.eq};
 	};
 
+    #UNVAR {my[eq]};
+    #KILL CLASS {$path[equipment]/%*};
+    event_remove_handler {$path[equipment]};
 	#SEND {eq %0};
 	#SEND {_command.eq};
+};
+
+#ALIAS {.eqLoadScript}
+{
+    #NOP %1;
+    .file load {$path[equipment]/%1.tin};
 };
