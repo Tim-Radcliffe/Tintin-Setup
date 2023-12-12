@@ -14,66 +14,66 @@
 
 #VAR {RoomType}
 {
-	{link}
-	{
-		{symbol} {<138>*}
-		{colour} {${map[col][black]}}
-	}
-	{shop}
-	{
-		{symbol} {<138>%}
-		{colour} {${map[col][money]}}
-	}
-	{atm}
-	{
-		{symbol} {<138>$}
-		{colour} {${map[col][money]}}
-	}
-	{pub}
-	{
-		{symbol} {<138>P}
-		{colour} {${map[col][money]}}
-	}
-	{food}
-	{
-		{symbol} {<138>F}
-		{colour} {${map[col][money]}}
-	}
-	{stall}
-	{
-		{symbol} {<138>S}
-		{colour} {${map[col][money]}}
-	}
-	{special}
-	{
-		{symbol} {<138>?}
-		{colour} {${map[col][interest]}}
-	}
-	{danger}
-	{
-		{symbol} {<138>!}
-		{colour} {${map[col][danger]}}
-	}
-	{portal}
-	{
-		{symbol} {<138>@}
-		{colour} {${map[col][interest]}}
-	}
-	{guild}
-	{
-		{symbol} {<138>G}
-		{colour} {${map[col][interest]}}
-	}
-	{road}
-	{
-		{symbol} {}
-		{colour} {$map[col][brown]}
-	}
-	{note}
-	{
-		{symbol} {<138>?}
-		{colour} {}  
-	}
+    {link}
+    {
+        {symbol} {<138>*}
+        {colour} {${map[col][black]}}
+    }
+    {shop}
+    {
+        {symbol} {<138>%}
+        {colour} {${map[col][money]}}
+    }
+    {atm}
+    {
+        {symbol} {<138>$}
+        {colour} {${map[col][money]}}
+    }
+    {pub}
+    {
+        {symbol} {<138>P}
+        {colour} {${map[col][money]}}
+    }
+    {food}
+    {
+        {symbol} {<138>F}
+        {colour} {${map[col][money]}}
+    }
+    {stall}
+    {
+        {symbol} {<138>S}
+        {colour} {${map[col][money]}}
+    }
+    {special}
+    {
+        {symbol} {<138>?}
+        {colour} {${map[col][interest]}}
+    }
+    {danger}
+    {
+        {symbol} {<138>!}
+        {colour} {${map[col][danger]}}
+    }
+    {portal}
+    {
+        {symbol} {<138>@}
+        {colour} {${map[col][interest]}}
+    }
+    {guild}
+    {
+        {symbol} {<138>G}
+        {colour} {${map[col][interest]}}
+    }
+    {road}
+    {
+        {symbol} {}
+        {colour} {$map[col][brown]}
+    }
+    {note}
+    {
+        {symbol} {<138>?}
+        {colour} {}
+    }
 };
 
 .file load {$path[areas]/area.item.index.tin};
@@ -81,562 +81,562 @@
 
 #EVENT {VARIABLE UPDATED _area_item_index}
 {
-	#CLASS {$path[areas]/area.item.index.tin} {WRITE} {$path[areas]/area.item.index.tin};
-}; 
+    #CLASS {$path[areas]/area.item.index.tin} {WRITE} {$path[areas]/area.item.index.tin};
+};
 
 #EVENT {VARIABLE UPDATED _area_npc_index}
 {
-	#CLASS {$path[areas]/area.npc.index.tin} {WRITE} {$path[areas]/area.npc.index.tin};
-}; 
+    #CLASS {$path[areas]/area.npc.index.tin} {WRITE} {$path[areas]/area.npc.index.tin};
+};
 
 #EVENT {MAP ENTER MAP}
 {
-	#MAP FLAG STATIC ON;
-	#VAR {map[edit]} {0};
-	event_raise {e_map_enter};
-	event_register {e_auto_move} {h_map_move} {handler_auto_move};
+    #MAP FLAG STATIC ON;
+    #VAR {map[edit]} {0};
+    event_raise {e_map_enter};
+    event_register {e_auto_move} {h_map_move} {handler_auto_move};
 };
 
 #EVENT {MAP EXIT MAP}
 {
-	event_raise {e_map_exit};
-	event_remove_specific e_auto_move h_map_move;
+    event_raise {e_map_exit};
+    event_remove_specific e_auto_move h_map_move;
 };
 
 #EVENT {MAP ENTER ROOM}
 {
-	#VAR {map[room]} {@fMapRoomInfo{%0}};
+    #VAR {map[room]} {@fMapRoomInfo{%0}};
 
-	#NOP Void rooms have roomflag binary 8 (1000). Skip them;
-	#IF { @fEval{ $map[room][roomflags] & 8 } == 0 }
-	{
-		#VAR {map[lastroom]} {%1};
-		#VAR {my[location][area]} {$map[area][path]};
-		#VAR {my[location][roomvnum]} {$map[room][roomvnum]};
-		event_raise {e_map_room_enter} {%0} {%1};
-	};
+    #NOP Void rooms have roomflag binary 8 (1000). Skip them;
+    #IF { @fEval{ $map[room][roomflags] & 8 } == 0 }
+    {
+        #VAR {map[lastroom]} {%1};
+        #VAR {my[location][area]} {$map[area][path]};
+        #VAR {my[location][roomvnum]} {$map[room][roomvnum]};
+        event_raise {e_map_room_enter} {%0} {%1};
+    };
 };
 
 #EVENT {MAP EXIT ROOM}
 {
-	#NOP Void rooms have roomflag binary 8 (1000). Skip them;
-	#IF { @fEval{ $map[room][roomflags] & 8 } == 0 }
-	{
-		#VAR {map[nextroom]} {%1};
-		event_raise {e_map_room_exit} {%0} {%1};
-	};
+    #NOP Void rooms have roomflag binary 8 (1000). Skip them;
+    #IF { @fEval{ $map[room][roomflags] & 8 } == 0 }
+    {
+        #VAR {map[nextroom]} {%1};
+        event_raise {e_map_room_exit} {%0} {%1};
+    };
 };
 
 #EVENT {END OF PATH}
 {
-	event_raise {e_map_path_end};
+    event_raise {e_map_path_end};
 };
 
 #ALIAS {.mapEdit}
 {
-	#IF {"$map[edit]" == "1"}
-	{
-		event_remove_specific {e_map_room_enter} {h_room_record} {.mapRoomRecord};
-		#VAR {map[edit]} {0};
-		#MAP FLAG STATIC ON;
-		#ECHO {MAP : Not Editable};
-		event_raise {e_map_edit} {0};
-	};
-	#ELSE
-	{
-		event_register {e_map_room_enter} {h_room_record} {.mapRoomRecord};
-		#VAR {map[edit]} {1};
-		#MAP FLAG STATIC OFF;
-		#ECHO {MAP : Editable};
-		event_raise {e_map_edit} {1};
-	};
+    #IF {"$map[edit]" == "1"}
+    {
+        event_remove_specific {e_map_room_enter} {h_room_record} {.mapRoomRecord};
+        #VAR {map[edit]} {0};
+        #MAP FLAG STATIC ON;
+        #ECHO {MAP : Not Editable};
+        event_raise {e_map_edit} {0};
+    };
+    #ELSE
+    {
+        event_register {e_map_room_enter} {h_room_record} {.mapRoomRecord};
+        #VAR {map[edit]} {1};
+        #MAP FLAG STATIC OFF;
+        #ECHO {MAP : Editable};
+        event_raise {e_map_edit} {1};
+    };
 };
 
 #ALIAS {.mapRefresh}
 {
-		#IF {"$map[file]" == ""} #RETURN;
-		#NOP  #MATH {map[cols]} {$session[MapCols]-1};
-		#NOP  #MATH {map[rows]} {$session[ScreenRows]};
-		#NOP  #MAP MAP {${map[cols]}x${map[rows]}} {/tmp/map.txt} {a};
-		event_raise {e_map_refresh};
+        #IF {"$map[file]" == ""} #RETURN;
+        #NOP  #MATH {map[cols]} {$session[MapCols]-1};
+        #NOP  #MATH {map[rows]} {$session[ScreenRows]};
+        #NOP  #MAP MAP {${map[cols]}x${map[rows]}} {/tmp/map.txt} {a};
+        event_raise {e_map_refresh};
 };
 
 #ALIAS {.mapLoad}
 {
-	#NOP %1;
-	#IF {"%1" == ""}
-	{
-			#ECHO {You must define a path};
-	};
-	#ELSE
-	{
-		#VAR {_mL} {};
-		#VAR {_mL[path]} {%1};
-		#REGEX {%1} {{^(.*)/([^\/]*)$}} 
-		{
-			#VAR {_mL[area]} {&3};
-		}
-		{
-			#VAR {_mL[area]} {%1};
-		};
+    #NOP %1;
+    #IF {"%1" == ""}
+    {
+            #ECHO {You must define a path};
+    };
+    #ELSE
+    {
+        #VAR {_mL} {};
+        #VAR {_mL[path]} {%1};
+        #REGEX {%1} {{^(.*)\/([^\/]*)$}}
+        {
+            #VAR {_mL[area]} {&3};
+        }
+        {
+            #VAR {_mL[area]} {%1};
+        };
 
-		#FOREACH {*_mapVariable[]} {v}
-		{
-			#IF {"${${v}[global]}" == "1"}
-			{
-				#UNVAR {${${v}[location]}};
-			};
-			#ELSE
-			{
-				#UNVAR {$v};
-			};
-		};
-		#UNVAR {_mapVariable};        
-		
-		#LOCAL {_mapOldDir} {@fFileGetPath{$map[file]}};
-		#IF {"$_mapOldDir" != ""}
-		{
-			#KILL {class} {$path[areas]/$_mapOldDir/%*};
-		};
+        #FOREACH {*_mapVariable[]} {v}
+        {
+            #IF {"${${v}[global]}" == "1"}
+            {
+                #UNVAR {${${v}[location]}};
+            };
+            #ELSE
+            {
+                #UNVAR {$v};
+            };
+        };
+        #UNVAR {_mapVariable};
 
-		#VAR {map[file]}        {$_mL[path]/$_mL[area].map};
-		#UNVAR {map[area]};
-		#VAR {map[area][path]}  {$_mL[path]};
-		#VAR {map[area][name]}  {$_mL[area]};
-		.debug MAP {READ MAP: $path[areas] : $map[file]};
-		#MAP {read} {$path[areas]/$map[file]};		
+        #LOCAL {_mapOldDir} {@fFileGetPath{$map[file]}};
+        #IF {"$_mapOldDir" != ""}
+        {
+            #KILL {class} {$path[areas]/$_mapOldDir/%*};
+        };
 
-		.debug MAP {READ FILES: $path[areas]/${_mL[path]}/*.tin}; 
-		.file loadall {$path[areas]/${_mL[path]}/*.tin};
+        #VAR {map[file]}        {$_mL[path]/$_mL[area].map};
+        #UNVAR {map[area]};
+        #VAR {map[area][path]}  {$_mL[path]};
+        #VAR {map[area][name]}  {$_mL[area]};
+        .debug MAP {READ MAP: $path[areas] : $map[file]};
+        #MAP {read} {$path[areas]/$map[file]};
 
-		#FOREACH {*_mapVariable[]} {v}
-		{
-			#VAR {$v} {$_mapVariable[$v]};
-		};
-		
-		#IF {"%2" == ""}
-		{
-			#MAP GOTO 1;
-		}
-		#ELSE
-		{
-			#MAP GOTO %2;
-		};
-		#UNVAR {_mL};   
-	};
+        .debug MAP {READ FILES: $path[areas]/${_mL[path]}/*.tin};
+        .file loadall {$path[areas]/${_mL[path]}/*.tin};
+
+        #FOREACH {*_mapVariable[]} {v}
+        {
+            #VAR {$v} {$_mapVariable[$v]};
+        };
+
+        #IF {"%2" == ""}
+        {
+            #MAP GOTO 1;
+        }
+        #ELSE
+        {
+            #MAP GOTO %2;
+        };
+        #UNVAR {_mL};
+    };
 };
 
 /* Set a variable in the map area specific data file */
 #ALIAS {.mapVariable}
 {
-		#NOP %1;
-		#IF {"%1" == ""}
-		{
-				#ECHO {You must define a variable name};
-				#RETURN;
-		};
-		#IF {"$map[file]" == ""}
-		{
-				#ECHO {Map not loaded};
-				#RETURN;
-		};
-		#CLASS {$path[areas]/$map[area][path]/$map[area][name].data.tin} {OPEN};
-		#VAR {_mapVariable[%1]} {%2};
-		#CLASS {$path[areas]/$map[area][path]/$map[area][name].data.tin} {WRITE} {$path[areas]/$map[area][path]/$map[area][name].data.tin};
-		#CLASS {$path[areas]/$map[area][path]/$map[area][name].data.tin} {CLOSE};
-		#VAR {%1} {%2};
+        #NOP %1;
+        #IF {"%1" == ""}
+        {
+                #ECHO {You must define a variable name};
+                #RETURN;
+        };
+        #IF {"$map[file]" == ""}
+        {
+                #ECHO {Map not loaded};
+                #RETURN;
+        };
+        #CLASS {$path[areas]/$map[area][path]/$map[area][name].data.tin} {OPEN};
+        #VAR {_mapVariable[%1]} {%2};
+        #CLASS {$path[areas]/$map[area][path]/$map[area][name].data.tin} {WRITE} {$path[areas]/$map[area][path]/$map[area][name].data.tin};
+        #CLASS {$path[areas]/$map[area][path]/$map[area][name].data.tin} {CLOSE};
+        #VAR {%1} {%2};
 };
 
 #ALIAS {.mapSave}
 {
-	#NOP %1;
-	#IF {"$map[file]" == ""}
-	{
-		#ECHO {Path needed to save map}
-	};
-	#ELSE
-	{
-		#LOCAL {_mS} {@fFileCreateDir{@fFileGetPath{$path[areas]/$map[file]}}};
-		#MAP {write} {$path[areas]/$map[file]};
-		#ECHO {MAP: Saved};
-	};
+    #NOP %1;
+    #IF {"$map[file]" == ""}
+    {
+        #ECHO {Path needed to save map}
+    };
+    #ELSE
+    {
+        #LOCAL {_mS} {@fFileCreateDir{@fFileGetPath{$path[areas]/$map[file]}}};
+        #MAP {write} {$path[areas]/$map[file]};
+        #ECHO {MAP: Saved};
+    };
 }
 
 #ALIAS {.mapCreate}
 {
-	#NOP %1;
-	#IF {"%1" == ""}
-	{
-		#ECHO {.mapCreate {/mud/wilderness/scary castle}};
-	};
-	#ELSE
-	{
-		#VAR {map[file]} {@fMapCreate{@fMapResolvePath{%1}}};
-	};
+    #NOP %1;
+    #IF {"%1" == ""}
+    {
+        #ECHO {.mapCreate {/mud/wilderness/scary castle}};
+    };
+    #ELSE
+    {
+        #VAR {map[file]} {@fMapCreate{@fMapResolvePath{%1}}};
+    };
 };
 
 #ALIAS {.mapCreateLink}
 {
-	#NOP %1;
-	#IF {"%1" == ""}
-	{
-		#ECHO {.mapCreateLink (exit command) (area name) (room vnum)};
-	};
-	#ELSE
-	{
-		#VAR {_mAL} {};
-		#VAR {_mAL[linkroom]} {@fMapGetVnum{%1}};
-		#IF {"$_mAL[linkroom]" == ""}
-		{
-			#MAP DIG {%1} {NEW};
-			#VAR {_mAL[linkroom]} {@fMapGetVnum{%1}};
-		};
-		#MAP AT $_mAL[linkroom] .mapRoom {link};
-		#MAP AT $_mAL[linkroom] #MAP SET roomarea {@fMapResolvePath{%2}};
-		#MAP AT $_mAL[linkroom] #MAP SET roomname {LINK: @fMapResolvePath{%2}};
-		#MAP EXIT {%1} COMMAND {.mapLink {@fMapResolvePath{%2}} {%3} {%1};};
-		#MAP EXITFLAG {%1} HIDE;
-		.mapRefresh
-		#ECHO {CREATING MAP LINK:};
-		#ECHO {FROM: @fFileGetPath{$map[file]} @fMapGetVnum{}};
-		#ECHO {TO  : @fMapResolvePath{%2} %3};
-	};
+    #NOP %1;
+    #IF {"%1" == ""}
+    {
+        #ECHO {.mapCreateLink (exit command) (area name) (room vnum)};
+    };
+    #ELSE
+    {
+        #VAR {_mAL} {};
+        #VAR {_mAL[linkroom]} {@fMapGetVnum{%1}};
+        #IF {"$_mAL[linkroom]" == ""}
+        {
+            #MAP DIG {%1} {NEW};
+            #VAR {_mAL[linkroom]} {@fMapGetVnum{%1}};
+        };
+        #MAP AT $_mAL[linkroom] .mapRoom {link};
+        #MAP AT $_mAL[linkroom] #MAP SET roomarea {@fMapResolvePath{%2}};
+        #MAP AT $_mAL[linkroom] #MAP SET roomname {LINK: @fMapResolvePath{%2}};
+        #MAP EXIT {%1} COMMAND {.mapLink {@fMapResolvePath{%2}} {%3} {%1};};
+        #MAP EXITFLAG {%1} HIDE;
+        .mapRefresh
+        #ECHO {CREATING MAP LINK:};
+        #ECHO {FROM: @fFileGetPath{$map[file]} @fMapGetVnum{}};
+        #ECHO {TO  : @fMapResolvePath{%2} %3};
+    };
 };
 
 #ALIAS {.mapLink}
 {
-	.debug MAP {.mapLink : %0}; 
-	
-	#NOP %1;
-	#IF {"%3" != ""}
-	{
-		#SEND {!%3};
-	};
-	event_raise {e_map_area_leave} {$map[area][path]};
-	#NOP Following command needs a delay or Tintin++ crashes;
-	#DELAY {0.01} 
-	{
-		#IF {@fMapExists{%1}}
-		{
-			.mapLoad {%1};
-			#MAP {goto} {%2};
-		};
-		#ELSE
-		{
-			#ECHO {CREATING MAP FOR LINK:};
-			#ECHO {FROM: @fFileGetPath{$map[file]} @fMapGetVnum{}};
-			#ECHO {TO  : @fMapResolvePath{%1} %2};    
-			.mapCreate {%1};
-			#MAP {goto} {%2};
-		};
-		event_raise {e_map_area_enter} {@fMapResolvePath{%1}};
-	};
+    .debug MAP {.mapLink : %0};
+
+    #NOP %1;
+    #IF {"%3" != ""}
+    {
+        #SEND {!%3};
+    };
+    event_raise {e_map_area_leave} {$map[area][path]};
+    #NOP Following command needs a delay or Tintin++ crashes;
+    #DELAY {0.01}
+    {
+        #IF {@fMapExists{%1}}
+        {
+            .mapLoad {%1};
+            #MAP {goto} {%2};
+        };
+        #ELSE
+        {
+            #ECHO {CREATING MAP FOR LINK:};
+            #ECHO {FROM: @fFileGetPath{$map[file]} @fMapGetVnum{}};
+            #ECHO {TO  : @fMapResolvePath{%1} %2};
+            .mapCreate {%1};
+            #MAP {goto} {%2};
+        };
+        event_raise {e_map_area_enter} {@fMapResolvePath{%1}};
+    };
 };
 
 /*
-	Exit which requires a trigger event
-	{initial action} {trigger match string} {triggered action}
+    Exit which requires a trigger event
+    {initial action} {trigger match string} {triggered action}
 */
 #ALIAS {.mapTrigger}
 {
-	#NOP %1;
-	#IF {"%0" == ""}
-	{
-		#ECHO {.mapTrigger {initial action} {trigger match string} {triggered action};};
-	};
-	.mapRun {pause};
-	#ACTION {%2}
-	{
-		#IF {"%3" != ""}
-		{
-			%3;
-		};
-		.mapRun {unpause};
-		#UNACTION {%2};
-	} {1};
-	#IF {"%1" != ""}
-	{
-		%1;
-	};
+    #NOP %1;
+    #IF {"%0" == ""}
+    {
+        #ECHO {.mapTrigger {initial action} {trigger match string} {triggered action};};
+    };
+    .mapRun {pause};
+    #ACTION {%2}
+    {
+        #IF {"%3" != ""}
+        {
+            %3;
+        };
+        .mapRun {unpause};
+        #UNACTION {%2};
+    } {1};
+    #IF {"%1" != ""}
+    {
+        %1;
+    };
 };
 
 #FUNCTION {fMapExists}
 {
-	.debug MAP {fMapExists : %0}; 
-	#RETURN {@fFileExists{$path[areas]/@fMapResolvePath{%1}}};
+    .debug MAP {fMapExists : %0};
+    #RETURN {@fFileExists{$path[areas]/@fMapResolvePath{%1}}};
 };
 
 #FUNCTION {fMapResolvePath}
 {
-	.debug MAP {fMapResolvePath : %0}; 
-	#LOCAL {_fMRP} {};
-	#IF {"%1" == ".."}
-	{
-		#LOCAL {_fMRP[path]} {@fFileGetPath{$map[file]}};
-		#LOCAL {_fMRP[result]} {@fFileGetPath{$_fMRP[path]}};
-	};
-	#ELSE
-	{
-		#LOCAL {_fMRP[path]} {@fFileGetPath{%1}};
-		#IF {"$_fMRP[path]" == "" && "@fStringContains{{%1}{$map[file]}}" != "1"}
-		{
-			#LOCAL {_fMRP[path]} {@fFileGetPath{$map[file]}};
-		};
-		#LOCAL {_fMRP[result]} {$_fMRP[path]/@fFileGetName{%1}};
-	};
-	.debug MAP {fMapResolvePath : RETURN : $_fMRP[result]}; 
-	#RETURN {$_fMRP[result]};  
+    .debug MAP {fMapResolvePath : %0};
+    #LOCAL {_fMRP} {};
+    #IF {"%1" == ".."}
+    {
+        #LOCAL {_fMRP[path]} {@fFileGetPath{$map[file]}};
+        #LOCAL {_fMRP[result]} {@fFileGetPath{$_fMRP[path]}};
+    };
+    #ELSE
+    {
+        #LOCAL {_fMRP[path]} {@fFileGetPath{%1}};
+        #IF {"$_fMRP[path]" == "" && "@fStringContains{{%1}{$map[file]}}" != "1"}
+        {
+            #LOCAL {_fMRP[path]} {@fFileGetPath{$map[file]}};
+        };
+        #LOCAL {_fMRP[result]} {$_fMRP[path]/@fFileGetName{%1}};
+    };
+    .debug MAP {fMapResolvePath : RETURN : $_fMRP[result]};
+    #RETURN {$_fMRP[result]};
 };
 
 #FUNCTION {fMapGetVnum}
 {
-	#NOP %1;
-	#LOCAL result {};
-	#IF {"%1" == ""}
-	{
-		#MAP {get} {roomvnum} {result};
-	};
-	#ELSE
-	{
-		#MAP {get} {roomexits} {_fMGV};
-		#LOCAL result {$_fMGV[%1]};
-		#UNVAR {_fMGV};
-	};
-	#RETURN {$result};
+    #NOP %1;
+    #LOCAL result {};
+    #IF {"%1" == ""}
+    {
+        #MAP {get} {roomvnum} {result};
+    };
+    #ELSE
+    {
+        #MAP {get} {roomexits} {_fMGV};
+        #LOCAL result {$_fMGV[%1]};
+        #UNVAR {_fMGV};
+    };
+    #RETURN {$result};
 };
 
 #FUNCTION {fMapCreate}
 {
-	#NOP %1;
-	#VAR {_fMC} {};
+    #NOP %1;
+    #VAR {_fMC} {};
 
-	#REGEX {%0} {{^(.*)/([^\/]*)$}} 
-	{
-		#VAR {_fMC[path]} {&2};
-		#VAR {_fMC[area]} {&3};
-	};
+    #REGEX {%0} {{^(.*)/([^\/]*)$}}
+    {
+        #VAR {_fMC[path]} {&2};
+        #VAR {_fMC[area]} {&3};
+    };
 
-	#VAR {_fMC[dir]} {$path[areas]/$_fMC[path]/$_fMC[area]};
+    #VAR {_fMC[dir]} {$path[areas]/$_fMC[path]/$_fMC[area]};
 
-	#IF {!@fFileExists{$_fMC[dir]}}
-	{
-		#LOCAL {null} {@fFileCreateDir{$_fMC[dir]}};
-	};
+    #IF {!@fFileExists{$_fMC[dir]}}
+    {
+        #LOCAL {null} {@fFileCreateDir{$_fMC[dir]}};
+    };
 
-	#VAR {_fMC[file]} {$_fMC[dir]/$_fMC[area].map};
+    #VAR {_fMC[file]} {$_fMC[dir]/$_fMC[area].map};
 
-	#IF {@fFileExists{$_fMC[file]}}
-	{
-		#MAP {read} {$_fMC[file]};
-		#MAP {goto} {1};
-	};
-	#ELSE
-	{
-		#MAP {create} {500};
-		#MAP {goto} {1};
-		#MAP {write} {$_fMC[file]};
-	};
+    #IF {@fFileExists{$_fMC[file]}}
+    {
+        #MAP {read} {$_fMC[file]};
+        #MAP {goto} {1};
+    };
+    #ELSE
+    {
+        #MAP {create} {500};
+        #MAP {goto} {1};
+        #MAP {write} {$_fMC[file]};
+    };
 
-	#VAR {map[file]} {$_fMC[path]/$_fMC[area]/$_fMC[area].map};
-	#VAR {map[area][path]} {$_fMC[path]/$_fMC[area]};
+    #VAR {map[file]} {$_fMC[path]/$_fMC[area]/$_fMC[area].map};
+    #VAR {map[area][path]} {$_fMC[path]/$_fMC[area]};
 
-	#LOCAL {result} {$_fMC[path]/$_fMC[area]/$_fMC[area].map};
-	#UNVAR {_fMC};
+    #LOCAL {result} {$_fMC[path]/$_fMC[area]/$_fMC[area].map};
+    #UNVAR {_fMC};
 }
 
 /* .mapNote {room note text} */
 #ALIAS {.mapNote}
 {
-	#NOP %1;
-	#IF {"%0" != ""}
-	{
-		#VAR {map[room][roomnote][%0]} {};
-		#MAP set {roomnote} {$map[room][roomnote]};
-		#IF {"$map[room][roomsymbol]" == " " || "$map[room][roomsymbol]" == ""}
-		{
-				#VAR {map[room][roomsymbol]} {$RoomType[note][symbol]};
-				#VAR {map[room][roomcolor]}  {$RoomType[note][colour]};
-				#MAP set roomsymbol {$map[room][roomsymbol]};
-				#MAP set roomcolor  {$map[room][roomcolor]};
-		};
-	};
+    #NOP %1;
+    #IF {"%0" != ""}
+    {
+        #VAR {map[room][roomnote][%0]} {};
+        #MAP set {roomnote} {$map[room][roomnote]};
+        #IF {"$map[room][roomsymbol]" == " " || "$map[room][roomsymbol]" == ""}
+        {
+                #VAR {map[room][roomsymbol]} {$RoomType[note][symbol]};
+                #VAR {map[room][roomcolor]}  {$RoomType[note][colour]};
+                #MAP set roomsymbol {$map[room][roomsymbol]};
+                #MAP set roomcolor  {$map[room][roomcolor]};
+        };
+    };
 };
 
 /* .mapExitNote {exit} {exit note text} */
 #ALIAS {.mapExitNote}
 {
-		#NOP %1;
-		#IF {"%0" != ""}
-		{
-				#MAP EXIT {%1} GET {map[room][exit][%1]};
-				#VAR {map[room][exit][%1][%2]} {};
-				#MAP EXIT {%1} SET {$map[room][exit][%1]};
-		};
+        #NOP %1;
+        #IF {"%0" != ""}
+        {
+                #MAP EXIT {%1} GET {map[room][exit][%1]};
+                #VAR {map[room][exit][%1][%2]} {};
+                #MAP EXIT {%1} SET {$map[room][exit][%1]};
+        };
 };
 
 #ALIAS {.mapFind}
 {
-	#MAP {list} {roomnote} {%*%1%*};
+    #MAP {list} {roomnote} {%*%1%*};
 };
 
 /* Repeatedly check the map looking for rooms that match the current room name/exits */
 #ALIAS {.mapFindMe}
 {
-	#NOP %1;
-	#IF {&{_mFM[mapfile]} < 1}
-	{
-			#IF {"$room[location][name]" == ""}
-			{
-					#VAR {room[location][name]} {none};
-					rating;
-					event_oneshot {e_command_rating} {map.tin} {.mapFindMe %1};
-					#RETURN;
-			};
-			#ELSEIF {"$map[area][name]" != "$room[location][name]"}
-			{
-					#VAR {_mFM[mapfile]} {@fSearchArea{$room[location][name]}};
-					#IF {&_mFM[mapfile] == 1}
-					{
-							.mapLoad {$_mFM[mapfile][1]};
-							event_oneshot {e_prompt} {map.tin} {.mapFindMe %1};
-					};
-			};
-			#ELSE 
-			{
-					#VAR {_mFM[mapfile][1]} {$map[file]};
-			};
-	};
+    #NOP %1;
+    #IF {&{_mFM[mapfile]} < 1}
+    {
+            #IF {"$room[location][name]" == ""}
+            {
+                    #VAR {room[location][name]} {none};
+                    rating;
+                    event_oneshot {e_command_rating} {map.tin} {.mapFindMe %1};
+                    #RETURN;
+            };
+            #ELSEIF {"$map[area][name]" != "$room[location][name]"}
+            {
+                    #VAR {_mFM[mapfile]} {@fSearchArea{$room[location][name]}};
+                    #IF {&_mFM[mapfile] == 1}
+                    {
+                            .mapLoad {$_mFM[mapfile][1]};
+                            event_oneshot {e_prompt} {map.tin} {.mapFindMe %1};
+                    };
+            };
+            #ELSE
+            {
+                    #VAR {_mFM[mapfile][1]} {$map[file]};
+            };
+    };
 
-	#IF {"%1" == "nonames"}
-	{
-			#MAP {list} {roomexits} {$room[exits]} {variable} {_mFM[currRooms]};
-	};
-	#ELSE
-	{
-			#MAP {list} {roomname} {$room[name]} {roomexits} {$room[exits]} {variable} {_mFM[currRooms]};
-	};    
+    #IF {"%1" == "nonames"}
+    {
+            #MAP {list} {roomexits} {$room[exits]} {variable} {_mFM[currRooms]};
+    };
+    #ELSE
+    {
+            #MAP {list} {roomname} {$room[name]} {roomexits} {$room[exits]} {variable} {_mFM[currRooms]};
+    };
 
-	#IF {&_mFM[linkRooms][] > 0 && &_mFM[currRooms][] > 1 && &_mFM[currRooms][] < 500}
-	{
-			#VAR {_mFM[checkRooms]} {$_mFM[currRooms]};
-			#UNVAR {_mFM[currRooms]};
-			#FOREACH {*_mFM[checkRooms][]} {r}
-			{
-					#IF {&_mFM[linkRooms][$r] > 0}
-					{
-							#VAR {_mFM[currRooms][$r]} {$_mFM[checkRooms][$r]};
-							#UNVAR {_mFM[checkRooms]};
-					};
-			};
-	};
+    #IF {&_mFM[linkRooms][] > 0 && &_mFM[currRooms][] > 1 && &_mFM[currRooms][] < 500}
+    {
+            #VAR {_mFM[checkRooms]} {$_mFM[currRooms]};
+            #UNVAR {_mFM[currRooms]};
+            #FOREACH {*_mFM[checkRooms][]} {r}
+            {
+                    #IF {&_mFM[linkRooms][$r] > 0}
+                    {
+                            #VAR {_mFM[currRooms][$r]} {$_mFM[checkRooms][$r]};
+                            #UNVAR {_mFM[checkRooms]};
+                    };
+            };
+    };
 
-	#IF {&_mFM[currRooms][] == 1}
-	{
-			#ECHO {INFO: 1 match found - Room *_mFM[currRooms][+1] - Located!};
-			#MAP GOTO {*_mFM[currRooms][+1]};
-			#UNVAR {_mFM};
-			event_remove_specific {e_roomscan_finished} {map.tin};
-	};
-	#ELSEIF {&_mFM[currRooms][] > 1}
-	{
-			#UNVAR {_mFM[linkRooms]};
-			#FOREACH {*_mFM[currRooms][]} {r}
-			{
-					#MAP AT {$r} {#MAP GET ROOMEXITS {_mFM[linkExits]}};
-					#FOREACH {$_mFM[linkExits][]} {e}
-					{
-							#VAR {_mFM[linkRooms][$e]} {1};
-					};
-			};
-			#ECHO {INFO: &_mFM[currRooms][] matches - keep moving};
-			#UNVAR {_mFM[currRooms]};
-			event_register {e_roomscan_finished} {map.tin} {.mapFindMe %1};
-	};
-	#ELSE
-	{
-			#ECHO {INFO: No Match Found};
-			#UNVAR {_mFM};
-			event_remove_specific {e_roomscan_finished} {map.tin};
-	};
+    #IF {&_mFM[currRooms][] == 1}
+    {
+            #ECHO {INFO: 1 match found - Room *_mFM[currRooms][+1] - Located!};
+            #MAP GOTO {*_mFM[currRooms][+1]};
+            #UNVAR {_mFM};
+            event_remove_specific {e_roomscan_finished} {map.tin};
+    };
+    #ELSEIF {&_mFM[currRooms][] > 1}
+    {
+            #UNVAR {_mFM[linkRooms]};
+            #FOREACH {*_mFM[currRooms][]} {r}
+            {
+                    #MAP AT {$r} {#MAP GET ROOMEXITS {_mFM[linkExits]}};
+                    #FOREACH {$_mFM[linkExits][]} {e}
+                    {
+                            #VAR {_mFM[linkRooms][$e]} {1};
+                    };
+            };
+            #ECHO {INFO: &_mFM[currRooms][] matches - keep moving};
+            #UNVAR {_mFM[currRooms]};
+            event_register {e_roomscan_finished} {map.tin} {.mapFindMe %1};
+    };
+    #ELSE
+    {
+            #ECHO {INFO: No Match Found};
+            #UNVAR {_mFM};
+            event_remove_specific {e_roomscan_finished} {map.tin};
+    };
 };
 
 #ALIAS {.mapRoom}
 {
-	#IF {"$RoomType[%1]" != "" && "%1" != ""}
-	{
-		.mapNote %1;
-		#MAP {set} {roomsymbol} {$RoomType[%1][symbol]};
-		#MAP {set} {roomcolor}  {$RoomType[%1][colour]};
-		.mapRefresh;
-	};
-	#ELSE
-	{
-		#SHOWME {Room Types:};
-		#SHOWME {==========};
-		#FOREACH {*RoomType[]} {t}
-		{
-			#SHOWME {$RoomType[$t][colour] [$RoomType[$t][symbol]$RoomType[$t][colour]]<099> : $t};
-		};
-	};
+    #IF {"$RoomType[%1]" != "" && "%1" != ""}
+    {
+        .mapNote %1;
+        #MAP {set} {roomsymbol} {$RoomType[%1][symbol]};
+        #MAP {set} {roomcolor}  {$RoomType[%1][colour]};
+        .mapRefresh;
+    };
+    #ELSE
+    {
+        #SHOWME {Room Types:};
+        #SHOWME {==========};
+        #FOREACH {*RoomType[]} {t}
+        {
+            #SHOWME {$RoomType[$t][colour] [$RoomType[$t][symbol]$RoomType[$t][colour]]<099> : $t};
+        };
+    };
 };
 
 #ALIAS {.mapRoomSpecialExit}
 {
-	#NOP %1;
-	#IF {"$map[specialexit][%2][%3]" != ""}
-	{
-		.mapRun {pause};
-		#ACTION {$map[specialexit][%2][%3][trigger]}
-		{
-			#IF {"$map[specialexit][%2][%3][command]" != ""}
-			{
-				#SEND {!$map[specialexit][%2][%3][command]};
-			};
-			.mapRun {unpause};
-			#UNACTION {$map[specialexit][%2][%3][trigger]};
-		} {2};
-	};
+    #NOP %1;
+    #IF {"$map[specialexit][%2][%3]" != ""}
+    {
+        .mapRun {pause};
+        #ACTION {$map[specialexit][%2][%3][trigger]}
+        {
+            #IF {"$map[specialexit][%2][%3][command]" != ""}
+            {
+                #SEND {!$map[specialexit][%2][%3][command]};
+            };
+            .mapRun {unpause};
+            #UNACTION {$map[specialexit][%2][%3][trigger]};
+        } {2};
+    };
 };
 event_register {e_map_room_exit} {h_map_room_specialexit} {.mapRoomSpecialExit};
 
 #ALIAS {.mapRoomRecord}
 {
-	#NOP %1;
+    #NOP %1;
 
-	#IF {"$map[edit]" == "1"}
-	{
-		#IF {"$map[room][roomcolor]" == "$map[col][unexplored]" || "$map[room][roomcolor]" == "$map[col][investigate]"}
-		{
-			#MAP set roomcolor $map[col][visited];
-		};
-	};
+    #IF {"$map[edit]" == "1"}
+    {
+        #IF {"$map[room][roomcolor]" == "$map[col][unexplored]" || "$map[room][roomcolor]" == "$map[col][investigate]"}
+        {
+            #MAP set roomcolor $map[col][visited];
+        };
+    };
 };
 
 #ALIAS {handler_auto_move}
 {
-	#IF {"$map[file]" == ""} #RETURN;
-	#MAP move %2;
+    #IF {"$map[file]" == ""} #RETURN;
+    #MAP move %2;
 };
 
 #FUNCTION {fMapRoomInfo}
 {
-	#IF {"%1" == ""}
-	{
-		#RETURN;
-	};
+    #IF {"%1" == ""}
+    {
+        #RETURN;
+    };
 
-	#LOCAL {_fMRI} {};
+    #LOCAL {_fMRI} {};
 
-	#FOREACH {roomarea;roomdata;roomnote;roomname;roomdesc;roomsymbol;roomcolor;roomflags;roomterrain;roomvnum;roomexits} {v}
-	{
-		#MAP AT %1 #MAP GET {$v} {_fMRI[$v]};
-	};
-	
-	#FOREACH {*result[roomexits][]} {_fMRI[dir]}
-	{
-		#MAP AT %1 #MAP EXIT {$_fMRI[dir]} GET {_fMRI[exit][$_fMRI[dir]]};
-	};
-	
-	#UNVAR {_fMRI[dir]};
-	#RETURN {$_fMRI};
+    #FOREACH {roomarea;roomdata;roomnote;roomname;roomdesc;roomsymbol;roomcolor;roomflags;roomterrain;roomvnum;roomexits} {v}
+    {
+        #MAP AT %1 #MAP GET {$v} {_fMRI[$v]};
+    };
+
+    #FOREACH {*result[roomexits][]} {_fMRI[dir]}
+    {
+        #MAP AT %1 #MAP EXIT {$_fMRI[dir]} GET {_fMRI[exit][$_fMRI[dir]]};
+    };
+
+    #UNVAR {_fMRI[dir]};
+    #RETURN {$_fMRI};
 };
