@@ -42,10 +42,16 @@
 #FUNCTION {fFileLoad}
 {
 	.debug FILE {LOAD: %1};
-	#CLASS {%1} {kill};
-	#CLASS {%1} {open};
-	#READ {%1};
-	#CLASS {%1} {close};
+	#CLASS {%1} KILL;
+    #LINE QUIET #CLASS {%1} ASSIGN
+    {
+        #READ {%1};
+    };
+    #LINE LOCAL #CLASS {%1} SIZE {_fFL[size]};
+    #IF {$_fFL[size] < 1} 
+    { 
+        #CLASS {%1} KILL;
+    };
 	#RETURN;
 };
 
