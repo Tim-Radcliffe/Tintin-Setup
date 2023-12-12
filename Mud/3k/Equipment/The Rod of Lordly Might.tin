@@ -40,7 +40,7 @@
     #MATH {_rolm[combat][$_rolm[weapon]]} {$_rolm[combat][$_rolm[weapon]] + 1};
     .file write {$path[profile]/The Rod of Lordly Might.tin};
 };
-event_register {e_combat_round} {$path[equipment]} {.rolm_combat_round};
+event_register {e_combat_round} {$path[equipment]/The Rod of Lordly Might.tin} {.rolm_combat_round};
 
 #ALIAS {touch %w rune}
 {

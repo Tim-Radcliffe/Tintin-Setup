@@ -21,7 +21,7 @@
 
     #UNVAR {my[eq]};
     #KILL CLASS {$path[equipment]/%*};
-    event_remove_handler {$path[equipment]};
+    event_remove_handler {$path[equipment]/%*};
 	#SEND {eq %0};
 	#SEND {_command.eq};
 };

@@ -8,4 +8,4 @@
         #SEND {!hold talisman};
     };
 };
-event_register {e_combat_round} {$path[equipment]} {handler_talisman_of_honor};
+event_register {e_combat_round} {$path[equipment]/Talisman of Honor.tin} {handler_talisman_of_honor};

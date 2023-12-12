@@ -9,4 +9,4 @@
         #SEND {!fuse cocoon};
     };
 };
-event_register {e_combat_round} {$path[equipment]} {handler_cocoon};
+event_register {e_combat_round} {$path[equipment]/A sticky cocoon.tin} {handler_cocoon};

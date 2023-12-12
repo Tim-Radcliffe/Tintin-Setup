@@ -11,4 +11,4 @@
     };
 };
 
-event_register {e_combat_round} {$path[equipment]} {handler_amulet_of_tanooki};
+event_register {e_combat_round} {$path[equipment]/Amulet of Tanooki.tin} {handler_amulet_of_tanooki};
