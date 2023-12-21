@@ -60,6 +60,7 @@ event_register {e_combat_round} {$path[equipment]/The Rod of Lordly Might.tin} {
             {
                 .log add {The Rod of Lordly Might.log} {TRAINED %1 rune level $_rolm_trained (combat rounds $_rolm[combat][rounds])};
             };
+            .file write {$path[profile]/The Rod of Lordly Might.tin};            
         };
         #UNACTION {{^archonic vision of your bonding progression ([^\|]*)\|([^\|]*)$}};
     };
