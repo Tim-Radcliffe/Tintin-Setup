@@ -7,7 +7,7 @@
         {
             #VAR {_npc[%2][undead]} {0};
             #CLASS {cNecromancerDetectUndead%5} {open};
-            #ACTION {%4 is undead...}
+            #ACTION {%3 is undead...}
             {
                 #VAR {_npc[%2][undead]} {1};
 				.scanRoomNPCSave {%2};               
