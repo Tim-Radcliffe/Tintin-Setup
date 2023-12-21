@@ -84,6 +84,13 @@ event_register {e_mip_FFF_J} {gline.tin} {handler_necro_gline};
     #VAR {my[necromancer][glamors][active]} {%1};        
 };
 
+#ALIAS {handler_necro_gline_blazing}
+{
+    #NOP %1;
+    #VAR {my[necromancer][glamors][active]} {%1};        
+};
+
+
 #ALIAS {handler_necro_gline_M}
 {
     #NOP %1;
