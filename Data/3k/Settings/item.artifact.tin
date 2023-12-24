@@ -93,3 +93,42 @@
 	{pickup} {1}
 };
 #VAR {_item[shattered jaw bone]}        {{nomap}{1}{pickup}{1}};
+#VAR {_item[^The tower shield of the Akh'Velahr$]} 
+{
+    {desc} 
+    {
+        {1} {The tower shield of the Akh'Velahr}
+        {2} {Forged from darkest adamantium, the strongest of the metals the}
+        {3} {ancient elven smiths with forge armour from, is this massive }
+        {4} {tower shield. Dented and scratched from numerous battles down the}
+        {5} {centuries, this ancient shield has lost none of its majestic glory.}
+        {6} {This appears to be an artifact for the bladesinger guild.}
+        {7} {The shield is in perfect condition.}
+        {8} {It has a magical glow about it.}
+        {9} {This armor has the following resistances:}
+        {10} {decent edged, decent blunt, 3 fire, 3 ice, 3 acid, 3 electric, 3 mind, 3}
+        {11} {energy, 3 poison, 3 radiation}
+        {12} {It doesn't look too heavy.}
+    }
+    {id} {tower shield of the akh�velahr}
+    {name} {The tower shield of the Akh'Velahr}
+	{nomap} {1}
+	{pickup} {1}    
+}
+{_item[^Vortex Stabilizer$]} 
+{
+    {desc} 
+    {
+        {1} {Vortex Stabilizer}
+        {2} {This is an odd looking cylindrical object that hums with power.  Its}
+        {3} {presence near a vortex would likely alter its harmonics in a way to}
+        {4} {grant it a larger capacity.  This silver, metallic item is cold to the}
+        {5} {touch and about half a meter long.}
+        {6} {This appears to be an artifact for the elemental guild.}
+        {7} {It looks light.}
+    }
+    {id} {vortex stabilizer}
+    {name} {Vortex Stabilizer}
+	{nomap} {1}
+	{pickup} {1}    
+}
