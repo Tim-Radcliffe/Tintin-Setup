@@ -1,0 +1,147 @@
+#NOP **** Auto Map Runner ****
+/***********************************************************************\
+ * Move room-by-room through an entire map, skipping exits that are    *
+ * flagged as "avoid" (#MAP EXITFLAG <exit> AVOID) and handling void   *
+ * rooms appropriately. Once all rooms have been visited, the script   *
+ * should return back to the room it started in.                       *
+ * Balthus - 12th March 2018                                           *
+\***********************************************************************/
+
+#VAR {_hRun} {};
+
+/* Get exits for the current room and work out the next exit to take */
+#ALIAS {.handler_maprun_room}
+{
+    #NOP %1;
+    #MAP {GET} {roomvnum}  {_hRun[room]};
+    #MAP {GET} {roomexits} {_hRun[exits]};
+    #UNVAR {_hRun[move]};
+
+    #NOP /* Set the path back for current room */;
+    #IF {"$_hRun[back][$_hRun[room]]" == ""}
+    {
+        #IF {"$_hRun[last]" == ""}
+        {
+            #VAR {_hRun[back][$_hRun[room]]} {0};
+        };
+        #ELSE
+        {
+            #VAR {_hRun[back][$_hRun[room]]} {$_hRun[last]};
+        };
+    };
+
+    #VAR {_hRun[last]} {$_hRun[room]};
+
+    #FOREACH {*_hRun[exits][]} {v}
+    {
+        #NOP /* Update exit list with checked real destination rooms */;
+        #VAR {_hRun[exits][$v]} {@fCheckExit{$v}};
+
+        #NOP /* Move to an unvisited room if possible, otherwise go back */;
+        #IF {$_hRun[exits][$v] > 0}
+        {
+            #IF {"$_hRun[back][$_hRun[exits][$v]]" != ""}
+            {
+                #IF {"$_hRun[exits][$v]" == "$_hRun[back][$_hRun[room]]"}
+                {
+                    #IF {"$_hRun[move]" == ""}
+                    {
+                        #VAR {_hRun[move]} {$v};
+                        #VAR {_hRun[next]} {$_hRun[exits][$v]};
+                    };
+                };
+            };
+            #ELSE
+            {
+                #VAR {_hRun[move]} {$v};
+                #VAR {_hRun[next]} {$_hRun[exits][$v]};
+            };
+        };
+    };
+};
+event_register {e_map_room_enter} {AutoMaprun.tin} {.handler_maprun_room};
+
+/* Take the next exit identified above, move to the next room */
+#ALIAS {.handler_maprun_move}
+{
+    #NOP %1;
+    #IF {!@fDeadmanActive{600}}
+    {
+	    .aYesNo {Continue AutoWalk?}
+        {
+            #VAR {auto[deadman][time]} {0};
+            .handler_maprun_move;
+        }
+        {
+            auto mapwalk off;
+        };
+    };
+    #ELSEIF {"$_hRun[move]" != ""}
+    {
+        #VAR {_hRun[retry]} {$_hRun[move]};
+        $_hRun[move];
+    };
+    #ELSE
+    {
+        #ECHO {INFO: Run Complete};
+        auto mapwalk off;
+    };
+};
+event_register {e_roomscan_finished} {AutoMaprun.tin} {.handler_maprun_move};
+
+/* Use if an exit needs multiple attempts to pass */
+#ALIAS {.handler_maprun_retry}
+{
+    #NOP %1;
+    #MAP GOTO {$_hRun[last]};
+    $_hRun[retry];
+};
+event_register {e_exit_retry} {AutoMaprun.tin} {.handler_maprun_retry};
+
+/* Return the next "real" room in a direction (handles void rooms), or 0 if blocked */
+#FUNCTION {fCheckExit}
+{
+    #VAR {result} {1};
+    #NOP /* Return if no parameter passed */;
+    #IF {"%1" == ""} {#VAR {result} {0};};
+
+    #UNVAR {_fEC};
+
+    #NOP /* Retrieve exit details */;
+    #MAP {EXIT} {%1} {SAVE} {_fEC[exit]};
+    #MAP {EXIT} {%1} {GET}  {_fEC[exit][notes]};
+
+    #NOP /* Check if the binary 2 flag (avoid) has been set on the exit */;
+    #IF {$_fEC[exit][flags] & 2}        {#VAR {result} {0};};
+    
+    #NOP /* Check if the exit has walkblock set */;
+    #IF {&_fEC[exit][notes][walkblock]} {#VAR {result} {0};};
+
+    #NOP /* Retrieve destination room flags & name */;
+    #MAP AT {$_fEC[exit][destination]} {#MAP {GET} {roomflags} {_fEC[room][flag]};};
+    #MAP AT {$_fEC[exit][destination]} {#MAP {GET} {roomname}  {_fEC[room][name]};};
+
+    #NOP /* Check if the binary 1 flag (avoid) has been set on the room */;
+    #IF {$_fEC[room][flag] & 1} {#VAR {result} {0};};
+
+    #NOP /* Check if the destination is an area link room */;
+    #REGEXP {$_fEC[room][name]} {{^LINK:}} {#VAR {result} {0};};
+
+    #NOP /* Return the destination room number if clear */;
+    #MATH {result} {$result * $_fEC[exit][destination]};
+
+    #UNVAR {_fEC]};
+
+    #RETURN {$result};
+};
+
+/* Cleanup script and unload */
+#ALIAS {.handler_maprun_stop}
+{
+    #NOP %1;
+    event_remove_handler {AutoMaprun.tin};
+    #CLASS {$path[mud]/Scripts/AutoMaprun.tin} {kill};
+};
+
+auto add {mapwalk} {.file load {$path[mud]/Scripts/AutoMaprun.tin};} {} {.handler_maprun_stop;};
+.handler_maprun_room;

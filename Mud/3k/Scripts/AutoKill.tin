@@ -1,0 +1,87 @@
+#ALIAS {handler_auto_kill}
+{
+    #NOP %1;
+    #IF {$mip[FFF][N][data] > 0}
+    {
+        handler_auto_kill_combat;
+        #BREAK;
+    };
+
+    #VAR {room[current]} {%5};
+
+    #IF {"$room[pause][autokill]" != "1" && !@fLocked{}}
+    {
+        #IF {"$room[current][nokill]" == "1"}
+        {
+            #BREAK;
+        };
+        #ELSEIF {"$room[current][autokill]" == "-1"}
+        {
+            #BREAK;
+        };
+        #ELSEIF {"$room[current][autokill]" == "1"}
+        {
+            #VAR {room[killbuffer]} {kill $room[current][id]};
+        };
+        #IF {"$room[killbuffer]" == "" }
+        {
+            #VAR {room[target]} {$room[current][id]};
+        };
+        event_register {e_roomscan_end} {AutoKill.tin} {handler_auto_kill_fire};         
+    };
+};
+
+#ALIAS {handler_auto_kill_fire}
+{
+    #NOP %1;
+    #IF {"$room[killbuffer]" != ""}
+    {
+        handler_auto_kill_combat;
+        #LIST {room[commandqueue]} {add} {$room[killbuffer]};
+    };
+    #ELSEIF {"$room[target]" != ""}
+    {
+        .aYesNo {Kill $room[target]}
+        {
+            handler_auto_kill_combat;
+            #SEND {!kill $room[target]};
+        }
+        {
+            handler_auto_kill_finish;
+        };
+        handler_auto_kill_pause;
+    };
+    #ELSE
+    {
+        handler_auto_kill_finish;
+    };
+    #UNVAR {room[target]};
+    #UNVAR {room[killbuffer]};
+};
+
+
+#ALIAS {handler_auto_kill_pause}
+{
+    #NOP %1;
+    #VAR {flags[autopause]} {1};
+    #VAR {room[pause][autokill]} {1};
+};
+
+
+#ALIAS {handler_auto_kill_combat}
+{
+    #NOP %1;
+    handler_auto_kill_pause;
+    event_oneshot {e_killed_opponent} {AutoKill.tin} {handler_auto_kill_finish};
+};
+
+#ALIAS {handler_auto_kill_finish}
+{
+    #NOP %1;
+    #VAR {flags[autopause]} {0};
+    #UNVAR {room[pause][autokill]};
+    .aYesNo {};    
+    event_remove_handler {AutoKill.tin};   
+};
+
+auto add {kill} {.file load {$path[mud]/Scripts/AutoKill.tin}} {e_room_npc} {#NOP %%1;handler_auto_kill_finish;#CLASS {$path[mud]/Scripts/AutoKill.tin} {kill};};

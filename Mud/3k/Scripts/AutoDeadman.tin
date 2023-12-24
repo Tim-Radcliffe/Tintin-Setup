@@ -1,0 +1,21 @@
+#ALIAS {handler_auto_deadman}
+{
+    #NOP %1;
+    #FORMAT {auto[deadman][time]} {%T}; 
+};
+auto add {deadman} {.file load {$path[mud]/Scripts/AutoDeadman.tin}} {e_command} {#VAR {auto[deadman][time]} {0}};
+
+#FUNCTION {fDeadmanActive}
+{
+    #FORMAT {_fDA} {%T};
+    #IF {@fEval{$_fDA - $auto[deadman][time]} < %1 || $auto[deadman][time] == 0}
+    {
+        #RETURN 1;
+    };
+    #ELSE
+    {
+        #RETURN 0;
+    };
+};
+
+handler_auto_deadman;
