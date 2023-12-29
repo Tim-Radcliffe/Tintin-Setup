@@ -27,7 +27,7 @@
         {
             #VAR {room[target]} {$room[current][id]};
         };
-        event_register {e_roomscan_end} {AutoKill.tin} {handler_auto_kill_fire};         
+        event_register {e_roomscan_end} {AutoKill.tin} {handler_auto_kill_fire};
     };
 };
 
@@ -41,15 +41,7 @@
     };
     #ELSEIF {"$room[target]" != ""}
     {
-        .aYesNo {Kill $room[target]}
-        {
-            handler_auto_kill_combat;
-            #SEND {!kill $room[target]};
-        }
-        {
-            handler_auto_kill_finish;
-        };
-        handler_auto_kill_pause;
+		handler_auto_kill_choice {$room[target]};
     };
     #ELSE
     {
@@ -59,6 +51,54 @@
     #UNVAR {room[killbuffer]};
 };
 
+#ALIAS {handler_auto_kill_choice}
+{
+    #IF {"%1" == ""}
+    {
+      #unmacro {o};
+      #unmacro {s};
+      #unmacro {a};
+      #unmacro {n};
+      #unmacro {\ea};
+      .aMessage {};
+    }
+    {
+      event_raise {e_notify} {Autokill} {%1 [O]nce [S]kip [A]lways [N]ever};
+      #MACRO {o}
+      {
+        handler_auto_kill_combat;
+        #SEND {!kill %1};
+        handler_auto_kill_choice {};
+      };
+      #MACRO {\ea}
+      {
+        handler_auto_kill_combat;
+        #SEND {!kill %1};
+        handler_auto_kill_choice {};
+      };
+      #MACRO {a}
+      {
+		#LOCAL {_autoKillNPC} {@fGetNPCRegex{%1}};
+		#VAR {_npc[$_autoKillNPC][autokill]} {1};
+		.scanRoomNPCSave {$_autoKillNPC};	
+        handler_auto_kill_combat;
+        #SEND {!kill %1};
+        handler_auto_kill_choice {};
+      };	  
+      #MACRO {s}
+      {
+        handler_auto_kill_finish;
+      };
+      #MACRO {n}
+      {
+		#LOCAL {_autoKillNPC} {@fGetNPCRegex{%1}};
+		#VAR {_npc[$_autoKillNPC][autokill]} {-1};
+		.scanRoomNPCSave {$_autoKillNPC};	
+        handler_auto_kill_finish;
+      };
+	  handler_auto_kill_pause;
+    };
+};
 
 #ALIAS {handler_auto_kill_pause}
 {
@@ -80,8 +120,8 @@
     #NOP %1;
     #VAR {flags[autopause]} {0};
     #UNVAR {room[pause][autokill]};
-    .aYesNo {};    
-    event_remove_handler {AutoKill.tin};   
+    handler_auto_kill_choice {};
+    event_remove_handler {AutoKill.tin};
 };
 
 auto add {kill} {.file load {$path[mud]/Scripts/AutoKill.tin}} {e_room_npc} {#NOP %%1;handler_auto_kill_finish;#CLASS {$path[mud]/Scripts/AutoKill.tin} {kill};};
