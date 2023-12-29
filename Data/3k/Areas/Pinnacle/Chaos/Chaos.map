@@ -1,6 +1,6 @@
 C 50000
 
-V 2020
+V 20231
 
 CAVOID <118>
 CBACKGROUND 
@@ -14,11 +14,11 @@ CROOMS <178>
 CSYMBOLS <128>
 CUSER <258>
 
-F 9
+F 1048587
 
 G 0
 
-I 91
+I 135
 
 L {ASCII NESW LINE} {NO EXITS} {x}
 L {ASCII NESW LINE} {N} {o}
@@ -294,11 +294,12 @@ E {14}{s}{.mapLink {Pinnacle/Chaos/Smurfland} {} {s};}{4}{1}{}{1.000}{}{0.00}
 R {7}{0}{<000>}{LINK: Pinnacle/Chaos/Mouse House}{<138>*}{}{Pinnacle/Chaos/Mouse House}{{link}{}}{}{}{1.000}{}
 E {3}{e}{e}{2}{0}{}{1.000}{}{0.00}
 
-R {8}{0}{<068>}{South Forest}{ }{Branching off from the main road, you enter a plain forest. The ground beneath you is simply dirt with random tufts of grass shooting up through the ground. There is a marking of some sort etched in the dirt.}{Mud}{{content}{{item}{{^A very greasy hamburger$}{{name}{A very greasy hamburger}}{^Overgrown swamp$}{{name}{Overgrown swamp}}}{noun}{{dirt}{{name}{dirt}}{grass}{{name}{grass}}{ground}{{name}{ground}}{tufts}{{name}{tufts}}}}}{}{}{1.000}{}
+R {8}{0}{<068>}{Eastwick}{ }{Branching off from the main road, you enter a plain forest. The ground beneath you is simply dirt with random tufts of grass shooting up through the ground. There is a marking of some sort etched in the dirt.}{Mud}{{content}{{item}{{^Overgrown swamp$}{{name}{Overgrown swamp}}}{noun}{{dirt}{{name}{dirt}}{grass}{{name}{grass}}{ground}{{name}{ground}}{tufts}{{name}{tufts}}}}}{}{}{1.000}{}
 E {5}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {59}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {145}{smile}{.mapLink {Pinnacle/Chaos/Smileyland} {} {smile};}{0}{1}{}{1.000}{}{0.00}
 E {198}{w}{.mapLink {Pinnacle/Chaos/Gremlins} {} {w};}{8}{1}{}{1.000}{}{0.00}
+E {200}{enter swamp}{.mapLink {Pinnacle/Chaos/Dundee Poachers} {} {enter swamp};}{0}{1}{}{1.000}{}{0.00}
 
 R {9}{0}{<068>}{Eastwick Road}{ }{This is the road of Eastwick.  It leads to you know not where. Follow your feet and see where you go. There is a manhole here in the ground.}{Mud}{{content}{{item}{{^A HUGE refrigerator$}{{name}{A HUGE refrigerator}}{^A small dispensing machine$}{{name}{A small dispensing machine}}{^An eighteenth hole flag$}{{name}{An eighteenth hole flag}}}{noun}{{feet}{{name}{feet}}{road}{{name}{road}}}{npc}{{^villager$}{{name}{villager}}}}}{}{}{1.000}{}
 E {5}{e}{e}{2}{0}{}{1.000}{}{0.00}
@@ -982,3 +983,5 @@ R {198}{0}{<000>}{LINK: Pinnacle/Chaos/Gremlins}{<138>*}{}{Pinnacle/Chaos/Gremli
 E {8}{e}{e}{2}{0}{}{1.000}{}{0.00}
 
 R {199}{0}{<000>}{LINK: Pinnacle/Chaos/Mcdonald's}{<138>*}{}{Pinnacle/Chaos/Mcdonald's}{{content}{{noun}{{doors}{{name}{doors}}{road}{{name}{road}}}}{link}{}}{}{}{1.000}{}
+
+R {200}{0}{<000>}{LINK: Pinnacle/Chaos/Dundee Poachers}{<138>*}{}{Pinnacle/Chaos/Dundee Poachers}{{content}{{item}{{^A large ladder$}{{name}{A large ladder}}{^A little brown monkey doll$}{{name}{A little brown monkey doll}}{^A very greasy hamburger$}{{name}{A very greasy hamburger}}{^Overgrown swamp$}{{name}{Overgrown swamp}}{containing \d+ messages}{{name}{Dundee Poachers Main Board containing 16 messages (10 unread messages)}}}{noun}{{billboard}{{name}{billboard}}{dirt}{{name}{dirt}}{grass}{{name}{grass}}{ground}{{name}{ground}}{marshland}{{name}{marshland}}{swamp}{{name}{swamp}}{track}{{name}{track}}{tufts}{{name}{tufts}}}{npc}{{^Permit Officer$}{{name}{Permit Officer}}}}{link}{}}{}{}{1.000}{}

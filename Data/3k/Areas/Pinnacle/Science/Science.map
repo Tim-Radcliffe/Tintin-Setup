@@ -1,6 +1,6 @@
 C 5000
 
-V 2020
+V 20231
 
 CAVOID <118>
 CBACKGROUND 
@@ -14,11 +14,11 @@ CROOMS <178>
 CSYMBOLS <128>
 CUSER <258>
 
-F 10
+F 1048586
 
 G 0
 
-I 617
+I 97
 
 L {ASCII NESW LINE} {NO EXITS} {x}
 L {ASCII NESW LINE} {N} {o}
@@ -36,7 +36,7 @@ L {ASCII NESW LINE} {    S W} {+}
 L {ASCII NESW LINE} {N   S W} {+}
 L {ASCII NESW LINE} {  E S W} {+}
 L {ASCII NESW LINE} {N E S W} {+}
-L {ASCII NESW MISC} {USER} {x}
+L {ASCII NESW MISC} {USER} {■}
 L {ASCII NESW MISC} {DIR UNKNOWN} {+}
 L {ASCII NESW MISC} {N S VOID} {|}
 L {ASCII NESW MISC} {E W VOID} {-}
@@ -287,7 +287,7 @@ R {8}{0}{<178>}{Eastern US Tunnel}{ }{This is a east-west tunnel. To the west, y
 E {3}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {18}{e}{e}{2}{0}{}{1.000}{}{0.00}
 
-R {9}{0}{<178>}{Central US Hub}{ }{This section of the Houston Transportation Center serves all destinations in the Central US. Wind whistles shrilly out of a large staircase leading down.}{Mud}{{content}{{noun}{{staircase}{{name}{staircase}}{stairs}{{name}{stairs}}}}}{}{}{1.000}{}
+R {9}{0}{<178>}{The Arcade}{ }{You are standing in the airport arcade.  This is a small room with many video games strewn around it.  Several businessmen  are glued to the screens while waiting for their respective  flights.  The room is fairly dark except for the lights from  the games themselves, which flash repeatedly in a variety of  colours.}{Mud}{{content}{{item}{{^A LARGE sign$}{{name}{A LARGE sign}}{^A Really Nice Looking Computer$}{{name}{A Really Nice Looking Computer}}{^Samurai Showdown Game$}{{name}{Samurai Showdown Game}}{^Virtual Adapter$}{{name}{Virtual Adapter}}}{noun}{{airport}{{name}{airport}}{businessmen}{{name}{businessmen}}{games}{{name}{games}}{lights}{{name}{lights}}{room}{{name}{room}}{screens}{{name}{screens}}{staircase}{{name}{staircase}}{stairs}{{name}{stairs}}}}}{}{}{1.000}{}
 E {5}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {10}{d}{d}{32}{0}{}{1.000}{}{0.00}
 E {11}{n}{n}{1}{0}{}{1.000}{}{0.00}
@@ -295,7 +295,7 @@ E {11}{n}{n}{1}{0}{}{1.000}{}{0.00}
 R {10}{0}{<178>}{HTC Pittsburgh Platform}{ }{You are standing on the Pittsburgh platform of the Houston Transportation Center. Bullet trains arrive and depart to Pittsburgh every few minutes. A shrill wind whistles eerily from the train tunnel.}{}{}{}{}{1.000}{}
 E {9}{u}{u}{16}{0}{}{1.000}{}{0.00}
 
-R {11}{0}{<068>}{Central U.S. Hub}{ }{The U.S. Central Hub of the Houston Transportation Center continues on here. You can hear the sounds of rail cars coming up from a stairway that leads down from here. There is a small arcade to the west.  Across from the arcade is a big sign that reads 'We Want You!' and an entrance to a small building.}{Mud}{}{}{}{1.000}{}
+R {11}{0}{<068>}{Central U.S. Hub}{ }{The U.S. Central Hub of the Houston Transportation Center continues on here. You can hear the sounds of rail cars coming up from a stairway that leads down from here. There is a small arcade to the west.  Across from the arcade is a big sign that reads 'We Want You!' and an entrance to a small building.}{Mud}{{content}{{noun}{{entrance}{{name}{entrance}}{sign}{{name}{sign}}}}}{}{}{1.000}{}
 E {9}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {12}{d}{d}{32}{0}{}{1.000}{}{0.00}
 E {13}{n}{n}{1}{0}{}{1.000}{}{0.00}
@@ -309,9 +309,10 @@ R {13}{0}{<178>}{Eastern US Hub}{ }{A large passage leads to the south from here
 E {11}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {15}{d}{d}{32}{0}{}{1.000}{}{0.00}
 
-R {14}{0}{<178>}{The Arcade}{ }{You are standing in the airport arcade.  This is a small room with many video games strewn around it.  Several businessmen  are glued to the screens while waiting for their respective  flights.  The room is fairly dark except for the lights from  the games themselves, which flash repeatedly in a variety of  colours.}{MK ][ Machine}{{content}{{item}{{Adapter}{{name}{Virtual Adapter}}{computer}{{name}{A Really Nice Looking Computer}}{samurai}{{name}{Samurai Showdown Game}}{sign}{{name}{A LARGE sign}}}{noun}{{airport}{{name}{airport}}{businessmen}{{name}{businessmen}}{games}{{name}{games}}{lights}{{name}{lights}}{room}{{name}{room}}{screens}{{name}{screens}}}{npc}{}}}{}{}{1.000}{}
+R {14}{0}{<068>}{The Arcade}{ }{You are standing in the airport arcade.  This is a small room with many video games strewn around it.  Several businessmen  are glued to the screens while waiting for their respective  flights.  The room is fairly dark except for the lights from  the games themselves, which flash repeatedly in a variety of  colours.}{MK ][ Machine}{{content}{{item}{{Adapter}{{name}{Virtual Adapter}}{^A LARGE sign$}{{name}{A LARGE sign}}{^A Really Nice Looking Computer$}{{name}{A Really Nice Looking Computer}}{^Samurai Showdown Game$}{{name}{Samurai Showdown Game}}{^Virtual Adapter$}{{name}{Virtual Adapter}}{computer}{{name}{A Really Nice Looking Computer}}{samurai}{{name}{Samurai Showdown Game}}{sign}{{name}{A LARGE sign}}}{noun}{{airport}{{name}{airport}}{arcade}{{name}{arcade}}{businessmen}{{name}{businessmen}}{faces}{{name}{faces}}{fan}{{name}{fan}}{flickering}{{name}{flickering}}{floor}{{name}{floor}}{games}{{name}{games}}{group}{{name}{group}}{lights}{{name}{lights}}{metal}{{name}{metal}}{rooftop}{{name}{rooftop}}{room}{{name}{room}}{screen}{{name}{screen}}{screens}{{name}{screens}}{skylight}{{name}{skylight}}}{npc}{}}}{}{}{1.000}{}
 E {11}{e}{e}{2}{0}{}{1.000}{}{0.00}
-E {1278}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {1284}{place adapter on head}{.mapLink {Pinnacle/Science/Duke Nukem} {} {place adapter on head};}{0}{1}{}{1.000}{}{0.00}
+E {1278}{n}{.mapLink {Pinnacle/Science/Section Z} {} {n};}{1}{1}{}{1.000}{}{0.00}
 
 R {15}{0}{<178>}{Desert (u,n)                                                }{ }{A huge building rises up to your south. It sparkles and shines on the hill that it is sitting on. There is a large stairway that leads up into the second floor of the building. To the north the desert stretches out before you.}{Mud}{}{}{}{1.000}{}
 E {13}{u}{u}{16}{0}{}{1.000}{}{0.00}
@@ -742,13 +743,14 @@ E {99}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {101}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {102}{d}{d}{32}{0}{}{1.000}{}{0.00}
 
-R {97}{0}{<158>}{Desert}{<138>?}{                        Desert The sun beats down on you here in the desert and fries your skin. The sand and stone are hot under your feet. You wonder how anything could ever survive way out here in the middle of nowhere. Looking up, you realize that there are two camouflaged 4x4 trucks here, one of them much larger than the other, with a man standing next to them.}{Alien/Alpha}{}{}{}{1.000}{}
+R {97}{0}{<068>}{Desert}{}{                        Desert The sun beats down on you here in the desert and fries your skin. The sand and stone are hot under your feet. You wonder how anything could ever survive way out here in the middle of nowhere. Looking up, you realize that there are two camouflaged 4x4 trucks here, one of them much larger than the other, with a man standing next to them.}{Alien/Alpha}{{content}{{item}{{^A posted bulletin \x28READ THIS NOW\x29$}{{name}{A posted bulletin (READ THIS NOW)}}}{noun}{{4x4}{{name}{4x4}}{desert}{{name}{desert}}{flash}{{name}{flash}}{truck}{{name}{truck}}{trucks}{{name}{trucks}}}{npc}{{^Moby the ALPHA Team Leader \x28fearless\x29$}{{name}{Moby the ALPHA Team Leader (fearless)}}}}}{}{}{1.000}{}
 E {91}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {98}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {166}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {95}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {1288}{enter truck}{.mapLink {Pinnacle/Science/Alien\Alpha} {} {enter truck};}{0}{1}{}{1.000}{}{0.00}
 
-R {98}{0}{<178>}{Post Apocalyptic Desert}{ }{Post Apocalyptic Desert A gigantic crater lies before you. It's hard to imagine what could have exploded and caused something as impressive as this.  You can hear the roar of some far-off motor. Who'd be way out here?  Before you stretches an endless expanse of sand, wind, and stone.  To the east and west you barely sense the continuation of the desert.   }{}{}{}{}{1.000}{}
+R {98}{0}{<178>}{Post Apocalyptic Desert}{ }{Post Apocalyptic Desert The sun beats down on you here in the desert and fries your skin.  Could it be your imagination, or is that the smell of burning flesh?  You see a bright flash of light far in the distance. It takes a very long time for the sound of the explosion to reach you.  To the east you barely detect the continuation of the desert.   }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{flash}{{name}{flash}}{smell}{{name}{smell}}{sun}{{name}{sun}}}}}{}{}{1.000}{}
 E {27}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {54}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {165}{n}{n}{1}{0}{}{1.000}{}{0.00}
@@ -1394,7 +1396,7 @@ E {213}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {214}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {215}{e}{e}{2}{0}{}{1.000}{}{0.00}
 
-R {213}{0}{<178>}{The Badlands}{ }{The Badlands A foul wind whips by you as you survey this desolate landscape bringing with it dust and grit with the force of a sandblaster.  You travel over hard packed earth, cracked and pitted from months without rain.  Nothing grows at all, not even a pesky weed stubbornly holding on to life.  Could it be your imagination, or is that the smell of burning flesh?  To the east and west you barely detect the continuation of the badlands.   }{}{}{}{}{1.000}{}
+R {213}{0}{<178>}{The Badlands}{ }{The Badlands You wonder if you'll ever find the end of this rolling expanse.  Dust whips through the air on harsh, burning winds.  The low rolling hills do nothing to stop the airborn grit from scouring the countryside clean of life.  Destruction and desolation stretch as far as the eye can see.  To the north and west you barely see the continuation of the badlands.   }{Mud}{}{}{}{1.000}{}
 E {212}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {217}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {293}{n}{n}{1}{0}{}{1.000}{}{0.00}
@@ -1419,11 +1421,12 @@ E {214}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {220}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {1251}{path}{.mapLink {Pinnacle/Science/A Quiet Swamp} {} {path};}{0}{1}{}{1.000}{}{0.00}
 
-R {217}{0}{<048>}{The Badlands}{ }{The Badlands You wonder if you'll ever find the end of this rolling expanse.  Dust whips through the air on harsh, burning winds.  The low rolling hills do nothing to stop the airborn grit from scouring the countryside clean of life.  A foul wind whips by you as you survey this desolate landscape bringing with it dust and grit with the force of a sandblaster.  A small trail leads off to the northeast from here. }{}{}{}{}{1.000}{}
+R {217}{0}{<068>}{The Badlands}{ }{The Badlands Destruction and desolation stretch as far as the eye can see.  You travel over hard packed earth, cracked and pitted from months without rain.  Nothing grows at all, not even a pesky weed stubbornly holding on to life.  You've got to wonder how anything could survive way out here.  To the east and north you make out the continuation of the badlands.  A small trail leads off to the northeast from here. }{Mud}{}{}{}{1.000}{}
 E {215}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {219}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {292}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {213}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {1286}{trail}{.mapLink {Pinnacle/Science/Bandit Camp} {} {trail};}{0}{1}{}{1.000}{}{0.00}
 
 R {218}{0}{<178>}{The Badlands}{ }{The Badlands You wonder if you'll ever find the end of this rolling expanse.  You travel over hard packed earth, cracked and pitted from months without rain.  Nothing grows at all, not even a pesky weed stubbornly holding on to life.  Huge clouds of dust and ash rise in the distance, whipped into a killing funnel by the torturous winds.  To the north you almost miss the continuation of the badlands.   }{}{}{}{}{1.000}{}
 E {215}{w}{w}{8}{0}{}{1.000}{}{0.00}
@@ -1837,13 +1840,14 @@ E {295}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {331}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {293}{e}{e}{2}{0}{}{1.000}{}{0.00}
 
-R {295}{0}{<048>}{The Badlands}{ }{The Badlands You wonder if you'll ever find the end of this rolling expanse.  A foul wind whips by you as you survey this desolate landscape bringing with it dust and grit with the force of a sandblaster.  You travel over hard packed earth, cracked and pitted from months without rain.  Nothing grows at all, not even a pesky weed stubbornly holding on to life.   }{}{}{}{}{1.000}{}
+R {295}{0}{<068>}{The Badlands}{ }{The Badlands Huge clouds of dust and ash rise in the distance, whipped into a killing funnel by the torturous winds.  The howl of the wind and the flying dust make it nearly impossible to hear or see anything out here.  You hope nothing comes looking for you.  Dust whips through the air on harsh, burning winds.  The low rolling hills do nothing to stop the airborn grit from scouring the countryside clean of life.   }{Mud}{{content}{{item}{{^A crashed plane$}{{name}{A crashed plane}}}{noun}{{ash}{{name}{ash}}{clouds}{{name}{clouds}}{dust}{{name}{dust}}{wind}{{name}{wind}}}}}{}{}{1.000}{}
 E {206}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {296}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {330}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {294}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {1285}{enter}{.mapLink {Pinnacle/Science/Crashed Plane} {} {enter};}{0}{1}{}{1.000}{}{0.00}
 
-R {296}{0}{<178>}{The Badlands}{ }{The Badlands Dust whips through the air on harsh, burning winds.  The low rolling hills do nothing to stop the airborn grit from scouring the countryside clean of life.  Huge clouds of dust and ash rise in the distance, whipped into a killing funnel by the torturous winds.  The howl of the wind and the flying dust make it nearly impossible to hear or see anything out here.  You hope nothing comes looking for you.   }{}{}{}{}{1.000}{}
+R {296}{0}{<178>}{The Badlands}{ }{The Badlands You travel over hard packed earth, cracked and pitted from months without rain.  Nothing grows at all, not even a pesky weed stubbornly holding on to life.  Could it be your imagination, or is that the smell of burning flesh?  Nothing grows here in the post apocalyptic wastelands.  To the west and east you barely detect the continuation of the badlands.   }{Mud}{{content}{{noun}{{smell}{{name}{smell}}}}}{}{}{1.000}{}
 E {204}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {297}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {329}{n}{n}{1}{0}{}{1.000}{}{0.00}
@@ -4969,11 +4973,12 @@ E {829}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {938}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {827}{w}{w}{8}{0}{}{1.000}{}{0.00}
 
-R {829}{0}{<048>}{The Rocky Mountains}{ }{The Rocky Mountains The trees here are tall and sparsely foliated, the effects of radiation and pollution taking their toll.  You wonder if they will ever grow into the lush, verdant forest that once stood here.  Naked soil shifts beneath your feet, a true sign of the desolation wrought here.  Snow capped mountain peaks rise in the distance, a reminder of a once pure world.  To the east and west you sort of detect the continuation of the Rockies.  A strange looking silver craft sits siliently nearby. }{}{}{}{}{1.000}{}
+R {829}{0}{<068>}{The Rocky Mountains}{ }{The Rocky Mountains The trees here are tall and sparsely foliated, the effects of radiation and pollution taking their toll.  You wonder if they will ever grow into the lush, verdant forest that once stood here.  Naked soil shifts beneath your feet, a true sign of the desolation wrought here.  Snow capped mountain peaks rise in the distance, a reminder of a once pure world.  To the east and west you sort of detect the continuation of the Rockies.  A strange looking silver craft sits siliently nearby. }{Mud}{{content}{{item}{{^A gleaming silver spacecraft$}{{name}{A gleaming silver spacecraft}}{containing \d+ messages}{{name}{Alien Ship Board containing 96 messages (96 unread messages)}}}}{wiz}{Distortion}}{}{}{1.000}{}
 E {822}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {830}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {937}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {828}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {1287}{enter}{.mapLink {Pinnacle/Science/Alien Ship} {} {enter};}{0}{1}{}{1.000}{}{0.00}
 
 R {830}{0}{<178>}{The Rocky Mountains}{ }{The Rocky Mountains Storm clouds hang high on the mountain peaks, dark with rain or snow.  Huge boulders have been pounded to rubble leaving only small pebbles strewn about you.  Some great force has ravaged the landscape.  The mountains around you rise and fall in a never ending pattern.  To the west you sense the continuation of the Rockies.   }{}{}{}{}{1.000}{}
 E {821}{s}{s}{4}{0}{}{1.000}{}{0.00}
@@ -5553,7 +5558,7 @@ E {937}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {945}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {935}{e}{e}{2}{0}{}{1.000}{}{0.00}
 
-R {937}{0}{<178>}{The Rocky Mountains}{ }{The Rocky Mountains Snow capped mountain peaks rise in the distance, a reminder of a once pure world.  Huge boulders have been pounded to rubble leaving only small pebbles strewn about you.  Some great force has ravaged the landscape.  Remarkably spared from the nuclear nightmare which washed over the United States, the lasting effects of the radiation can easily be seen here in the destruction of a once thriving ecosystem.  To the south you just make out the continuation of the Rockies.   }{}{}{}{}{1.000}{}
+R {937}{0}{<178>}{The Rocky Mountains}{ }{The Rocky Mountains Snow capped mountain peaks rise in the distance, a reminder of a once pure world.  Huge boulders have been pounded to rubble leaving only small pebbles strewn about you.  Some great force has ravaged the landscape.  Remarkably spared from the nuclear nightmare which washed over the United States, the lasting effects of the radiation can easily be seen here in the destruction of a once thriving ecosystem.  To the south you just make out the continuation of the Rockies.   }{Alien Ship}{{wiz}{Distortion}}{}{}{1.000}{}
 E {829}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {938}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {944}{n}{n}{1}{0}{}{1.000}{}{0.00}
@@ -6613,7 +6618,7 @@ E {1136}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {1138}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {1276}{pod}{.mapLink {Pinnacle/Science/Codename: Kodiak} {} {pod};}{0}{1}{}{1.000}{}{0.00}
 
-R {1133}{0}{<068>}{The VR arcade}{ }{The dull grey walls bulge intermittently with the virtual reality  pods.  The strange units are the rave of the station among the  tourists, giving them thousands of hours of entertainment for a few  credits at a time.  Of course, quite a few people have returned to  Earth addicted to the machines, but they are usually sedated and  kick their habit within a few months.}{}{}{}{}{1.000}{}
+R {1133}{0}{<068>}{The VR arcade}{ }{The dull grey walls bulge intermittently with the virtual reality  pods.  The strange units are the rave of the station among the  tourists, giving them thousands of hours of entertainment for a few  credits at a time.  Of course, quite a few people have returned to  Earth addicted to the machines, but they are usually sedated and  kick their habit within a few months.}{Mud}{{content}{{item}{{^A virtual reality pod$}{{name}{A virtual reality pod}}}}}{}{}{1.000}{}
 E {1129}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {1134}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {1135}{w}{w}{8}{0}{}{1.000}{}{0.00}
@@ -6624,9 +6629,10 @@ E {1133}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {1130}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {1242}{enter pod}{.mapLink {Pinnacle/Science/Borg Cubes} {} {enter pod};}{0}{1}{}{1.000}{}{0.00}
 
-R {1135}{0}{<178>}{The VR arcade}{ }{The dull grey walls bulge intermittently with the virtual reality  pods.  The strange units are the rave of the station among the  tourists, giving them thousands of hours of entertainment for a few  credits at a time.  Of course, quite a few people have returned to  Earth addicted to the machines, but they are usually sedated and  kick their habit within a few months.}{}{}{}{}{1.000}{}
+R {1135}{0}{<068>}{The VR arcade}{ }{The dull grey walls bulge intermittently with the virtual reality  pods.  The strange units are the rave of the station among the  tourists, giving them thousands of hours of entertainment for a few  credits at a time.  Of course, quite a few people have returned to  Earth addicted to the machines, but they are usually sedated and  kick their habit within a few months.}{Mud}{{content}{{item}{{^A virtual reality pod$}{{name}{A virtual reality pod}}}}}{}{}{1.000}{}
 E {1133}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {1131}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {1283}{enter pod}{.mapLink {Pinnacle/Science/Mos Eisley Cantina} {} {enter pod};}{0}{1}{}{1.000}{}{0.00}
 
 R {1136}{0}{<068>}{The VR arcade}{ }{The dull grey walls bulge intermittently with the virtual reality  pods.  The strange units are the rave of the station among the  tourists, giving them thousands of hours of entertainment for a few  credits at a time.  Of course, quite a few people have returned to  Earth addicted to the machines, but they are usually sedated and  kick their habit within a few months.}{Mud}{}{}{}{1.000}{}
 E {1131}{n}{n}{1}{0}{}{1.000}{}{0.00}
@@ -7205,10 +7211,10 @@ R {1275}{0}{<000>}{LINK: Pinnacle/Science/Warhammer 40,000}{<138>*}{}{Pinnacle/S
 
 R {1276}{0}{<000>}{LINK: Pinnacle/Science/Codename: Kodiak}{<138>*}{}{Pinnacle/Science/Codename: Kodiak}{{link}{}}{}{}{1.000}{}
 
-R {1277}{0}{<048>}{Mattias Hi-Tech Warez}{ }{You stand inside some sort of Hi-Tech Kiosk. The owner of the kiosk usually stands behind the counter, selling his wares. As you look at the store and the dark surroundings, you get the feeling that strange and perhaps illegal items are being sold here. Type 'list' to find out what is being sold at the moment. }{HTC Kiosk}{{content}{{npc}{{Mattias}{{name}{Mattias, the owner of the Kiosk}}}}}{}{}{1.000}{}
+R {1277}{0}{<068>}{Passage to Central US Hub}{ }{You stand inside some sort of Hi-Tech Kiosk. The owner of the kiosk usually stands behind the counter, selling his wares. As you look at the store and the dark surroundings, you get the feeling that strange and perhaps illegal items are being sold here. Type 'list' to find out what is being sold at the moment. }{HTC Kiosk}{{content}{{npc}{{Mattias}{{name}{Mattias, the owner of the Kiosk}}{^Mattias, the owner of the Kiosk$}{{name}{Mattias, the owner of the Kiosk}}}}}{}{}{1.000}{}
 E {5}{d}{exit}{32}{0}{}{1.000}{}{0.00}
 
-R {1278}{0}{<048>}{The Arcade}{ }{You are in a corner of the arcade.  This small nook stands off to the side of the main game room, and has only one game cabinet.  The room is quite dark, and lit only by the game's screen.}{Section Z}{{content}{{item}{{game}{{name}{Section Z game cabinet}}}}}{}{}{1.000}{}
+R {1278}{0}{<000>}{LINK: Pinnacle/Science/Section Z}{<138>*}{}{Pinnacle/Science/Section Z}{{content}{{item}{{Adapter}{{name}{Virtual Adapter}}{^A LARGE sign$}{{name}{A LARGE sign}}{^A Really Nice Looking Computer$}{{name}{A Really Nice Looking Computer}}{^Samurai Showdown Game$}{{name}{Samurai Showdown Game}}{^Virtual Adapter$}{{name}{Virtual Adapter}}{computer}{{name}{A Really Nice Looking Computer}}{samurai}{{name}{Samurai Showdown Game}}{sign}{{name}{A LARGE sign}}}{noun}{{airport}{{name}{airport}}{arcade}{{name}{arcade}}{businessmen}{{name}{businessmen}}{faces}{{name}{faces}}{fan}{{name}{fan}}{flickering}{{name}{flickering}}{floor}{{name}{floor}}{games}{{name}{games}}{group}{{name}{group}}{lights}{{name}{lights}}{metal}{{name}{metal}}{rooftop}{{name}{rooftop}}{room}{{name}{room}}{screen}{{name}{screen}}{screens}{{name}{screens}}{skylight}{{name}{skylight}}}{npc}{}}{link}{}}{}{}{1.000}{}
 E {14}{s}{s}{4}{0}{}{1.000}{}{0.00}
 
 R {1279}{0}{<000>}{LINK: Pinnacle/Science/Kilton Research, Inc. v2.0}{<138>*}{}{Pinnacle/Science/Kilton Research, Inc. v2.0}{{content}{{item}{{^A large three story building$}{{name}{A large three story building}}}{noun}{{building}{{name}{building}}{cliffs}{{name}{cliffs}}{concrete}{{name}{concrete}}{door}{{name}{door}}{elevators}{{name}{elevators}}{floor}{{name}{floor}}{foyer}{{name}{foyer}}{glass}{{name}{glass}}{hardwood}{{name}{hardwood}}{marks}{{name}{marks}}{mountains}{{name}{mountains}}{set}{{name}{set}}{wall}{{name}{wall}}{wreckage}{{name}{wreckage}}}}{link}{}}{}{}{1.000}{}
@@ -7218,3 +7224,15 @@ R {1280}{0}{<000>}{LINK: Pinnacle/Science/Antimammonist Vault}{<138>*}{}{Pinnacl
 R {1281}{0}{<000>}{LINK: Pinnacle/Science/Last Chance Truck Stop}{<138>*}{}{Pinnacle/Science/Last Chance Truck Stop}{{content}{{noun}{{clouds}{{name}{clouds}}{crater}{{name}{crater}}{desert}{{name}{desert}}{dust}{{name}{dust}}{gate}{{name}{gate}}{message}{{name}{message}}{sand}{{name}{sand}}{skyline}{{name}{skyline}}{smell}{{name}{smell}}{wind}{{name}{wind}}}{npc}{{^A well armed guard$}{{name}{A well armed guard}}}}{link}{}}{}{}{1.000}{}
 
 R {1282}{0}{<000>}{LINK: Pinnacle/Science/Air Force Base}{<138>*}{}{Pinnacle/Science/Air Force Base}{{content}{{noun}{{ash}{{name}{ash}}{barrier}{{name}{barrier}}{bay}{{name}{bay}}{bone}{{name}{bone}}{city}{{name}{city}}{clouds}{{name}{clouds}}{dust}{{name}{dust}}{fence}{{name}{fence}}{grass}{{name}{grass}}{ground}{{name}{ground}}{highway}{{name}{highway}}{house}{{name}{house}}{road}{{name}{road}}{smell}{{name}{smell}}{wind}{{name}{wind}}}{npc}{{^A lean member of the Talons$}{{name}{A lean member of the Talons}}}}{link}{}}{}{}{1.000}{}
+
+R {1283}{0}{<000>}{LINK: Pinnacle/Science/Mos Eisley Cantina}{<138>*}{}{Pinnacle/Science/Mos Eisley Cantina}{{content}{{item}{{^A faintly lit doorway$}{{name}{A faintly lit doorway}}{^A virtual reality pod$}{{name}{A virtual reality pod}}}{npc}{{^A vr junkie$}{{name}{A vr junkie}}}}{link}{}}{}{}{1.000}{}
+
+R {1284}{0}{<000>}{LINK: Pinnacle/Science/Duke Nukem}{<138>*}{}{Pinnacle/Science/Duke Nukem}{{content}{{item}{{Adapter}{{name}{Virtual Adapter}}{^A LARGE sign$}{{name}{A LARGE sign}}{^A Really Nice Looking Computer$}{{name}{A Really Nice Looking Computer}}{^Samurai Showdown Game$}{{name}{Samurai Showdown Game}}{^Virtual Adapter$}{{name}{Virtual Adapter}}{computer}{{name}{A Really Nice Looking Computer}}{samurai}{{name}{Samurai Showdown Game}}{sign}{{name}{A LARGE sign}}}{noun}{{airport}{{name}{airport}}{arcade}{{name}{arcade}}{businessmen}{{name}{businessmen}}{faces}{{name}{faces}}{fan}{{name}{fan}}{flickering}{{name}{flickering}}{floor}{{name}{floor}}{games}{{name}{games}}{group}{{name}{group}}{lights}{{name}{lights}}{metal}{{name}{metal}}{rooftop}{{name}{rooftop}}{room}{{name}{room}}{screen}{{name}{screen}}{screens}{{name}{screens}}{skylight}{{name}{skylight}}}{npc}{}}{link}{}}{}{}{1.000}{}
+
+R {1285}{0}{<000>}{LINK: Pinnacle/Science/Crashed Plane}{<138>*}{}{Pinnacle/Science/Crashed Plane}{{content}{{item}{{^A crashed plane$}{{name}{A crashed plane}}}{noun}{{ash}{{name}{ash}}{clouds}{{name}{clouds}}{corpses}{{name}{corpses}}{dust}{{name}{dust}}{smell}{{name}{smell}}{wind}{{name}{wind}}}{npc}{{^Scared Mother$}{{name}{Scared Mother}}{^Ugly Terrorist$}{{name}{Ugly Terrorist}}{^Young Boy$}{{name}{Young Boy}}}}{link}{}}{}{}{1.000}{}
+
+R {1286}{0}{<000>}{LINK: Pinnacle/Science/Bandit Camp}{<138>*}{}{Pinnacle/Science/Bandit Camp}{{content}{{noun}{{ash}{{name}{ash}}{clouds}{{name}{clouds}}{depression}{{name}{depression}}{dirt}{{name}{dirt}}{dust}{{name}{dust}}{forms}{{name}{forms}}{patches}{{name}{patches}}{path}{{name}{path}}{plant-life}{{name}{plant-life}}{smell}{{name}{smell}}}}{link}{}}{}{}{1.000}{}
+
+R {1287}{0}{<000>}{LINK: Pinnacle/Science/Alien Ship}{<138>*}{}{Pinnacle/Science/Alien Ship}{{content}{{item}{{^A gleaming silver spacecraft$}{{name}{A gleaming silver spacecraft}}{containing \d+ messages}{{name}{Alien Ship Board containing 96 messages (96 unread messages)}}}}{link}{}}{}{}{1.000}{}
+
+R {1288}{0}{<000>}{LINK: Pinnacle/Science/Alien\Alpha}{<138>*}{}{Pinnacle/Science/Alien\Alpha}{{content}{{item}{{^A posted bulletin \x28READ THIS NOW\x29$}{{name}{A posted bulletin (READ THIS NOW)}}}{noun}{{4x4}{{name}{4x4}}{clouds}{{name}{clouds}}{crater}{{name}{crater}}{dust}{{name}{dust}}{sand}{{name}{sand}}{smell}{{name}{smell}}{truck}{{name}{truck}}{trucks}{{name}{trucks}}}{npc}{{^Moby the ALPHA Team Leader \x28fearless\x29$}{{name}{Moby the ALPHA Team Leader (fearless)}}}}{link}{}}{}{}{1.000}{}

@@ -1,6 +1,6 @@
 C 2001
 
-V 2020
+V 20231
 
 CAVOID <118>
 CBACKGROUND 
@@ -14,11 +14,11 @@ CROOMS <178>
 CSYMBOLS <128>
 CUSER <258>
 
-F 11
+F 1048586
 
 G 0
 
-I 958
+I 712
 
 L {ASCII NESW LINE} {NO EXITS} {x}
 L {ASCII NESW LINE} {N} {o}
@@ -36,7 +36,7 @@ L {ASCII NESW LINE} {    S W} {+}
 L {ASCII NESW LINE} {N   S W} {+}
 L {ASCII NESW LINE} {  E S W} {+}
 L {ASCII NESW LINE} {N E S W} {+}
-L {ASCII NESW MISC} {USER} {x}
+L {ASCII NESW MISC} {USER} {■}
 L {ASCII NESW MISC} {DIR UNKNOWN} {+}
 L {ASCII NESW MISC} {N S VOID} {|}
 L {ASCII NESW MISC} {E W VOID} {-}
@@ -3590,12 +3590,13 @@ E {645}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {646}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {641}{w}{w}{8}{0}{}{1.000}{}{0.00}
 
-R {644}{0}{<238>}{Road in the Forest}{}{Road in the Forest You travel through a strange and enchanted forest.  Strange shadows flutter around you, contradicting the bright sunlight barely filtering to the ground around you.  Birds and other animals can be heard all around you.  There is a road running north and southwest through the forest. }{}{{road}{}}{}{}{1.000}{}
+R {644}{0}{<238>}{Road in the Forest}{}{Road in the Forest The ground is moist and very soft to the touch.  You are moving through a sweet-smelling forest.  The ancient trees stand like giant sentinels in the area.  They stand with a majestic, yet strange feel of honor.  Further to the south you can see a forest, while to the north you note that the forest continues.  There is a road running north and southwest through the forest. }{Mud}{{content}{{noun}{{forest}{{name}{forest}}{ground}{{name}{ground}}{road}{{name}{road}}{trees}{{name}{trees}}}{npc}{{^A large timber wolf$}{{name}{A large timber wolf}}{^A red-crested woodpecker$}{{name}{A red-crested woodpecker}}}}{road}{}}{}{}{1.000}{}
 E {642}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {646}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {640}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 E {696}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {710}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {709}{se}{se}{6}{0}{}{1.000}{}{0.00}
 
 R {645}{0}{<068>}{Forest}{ }{Forest Far in the distance, you can hear animals moving about.  You travel through a strange and enchanted forest.  Strange shadows flutter around you, contradicting the bright sunlight barely filtering to the ground around you.  Further to the northeast you can see a forest.  There is a huge lake just to the west, turbulent and dark. }{}{}{}{}{1.000}{}
 E {643}{s}{s}{4}{0}{}{1.000}{}{0.00}
@@ -3894,11 +3895,12 @@ E {694}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {697}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {1279}{path}{.mapLink {Pinnacle/Fantasy/Temple of Alythra} {} {path};}{0}{1}{}{1.000}{}{0.00}
 
-R {696}{0}{<178>}{Forest}{ }{Forest The ancient trees stand like giant sentinels in the area.  They stand with a majestic, yet strange feel of honor.  You travel through a strange and enchanted forest.  The ground is moist and very soft to the touch.  Further to the east and south you notice that the forest continues.   }{}{}{}{}{1.000}{}
+R {696}{0}{<178>}{Forest}{ }{Forest The ancient trees stand like giant sentinels in the area.  They stand with a majestic, yet strange feel of honor.  You travel through a strange and enchanted forest.  The ground is moist and very soft to the touch.  Further to the east and south you notice that the forest continues.   }{Mud}{{content}{{npc}{{^A Goblin Scout$}{{name}{A Goblin Scout}}{^A Marsh Goblin$}{{name}{A Marsh Goblin}}{^A small black wolf$}{{name}{A small black wolf}}}}}{}{}{1.000}{}
 E {695}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {640}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {644}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {709}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {710}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
 R {697}{0}{<178>}{Forest}{ }{Forest The ancient trees stand like giant sentinels in the area.  They stand with a majestic, yet strange feel of honor.  You travel through a strange and enchanted forest.  Far in the distance, you can hear animals moving about.  Further to the north and east you notice that the forest continues.   }{Mud}{}{}{}{1.000}{}
 E {695}{w}{w}{8}{0}{}{1.000}{}{0.00}
@@ -3906,85 +3908,114 @@ E {709}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {699}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {713}{e}{e}{2}{0}{}{1.000}{}{0.00}
 
-R {698}{0}{<178>}{Swamp}{ }{Swamp You really should watch your step here - the ground is very unstable.  Looking around, all you can see is marsh for miles in each direction.  Unlike Wayhaven, there is no litter here - it's all sunk without trace.  Further to the south and east you can see that the marsh continues.  To the north, you see a break in the reeds. }{}{}{}{}{1.000}{}
+R {698}{0}{<178>}{Swamp}{ }{Swamp You really should watch your step here - the ground is very unstable.  Looking around, all you can see is marsh for miles in each direction.  Unlike Wayhaven, there is no litter here - it's all sunk without trace.  Further to the south and east you can see that the marsh continues.  To the north, you see a break in the reeds. }{Mud}{}{}{}{1.000}{}
 E {694}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {700}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {701}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {702}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {734}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {703}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 
 R {699}{0}{<178>}{Forest}{ }{Forest The ground is moist and very soft to the touch.  The ancient trees stand like giant sentinels in the area.  They stand with a majestic, yet strange feel of honor.  You travel through a strange and enchanted forest.  Further to the east you notice that the forest continues.   }{}{}{}{}{1.000}{}
 E {694}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {697}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {714}{e}{e}{2}{0}{}{1.000}{}{0.00}
 
-R {700}{0}{<158>}{Swamp}{<138>?}{Swamp This is a wet swampy area.  Looking around, all you can see is swampy area for miles in each direction.  Unlike Wayhaven, there is no litter here - it's all sunk without trace.  Further to the north and east you notice that the marsh continues.   }{}{special;}{}{}{1.000}{}
+R {700}{0}{<158>}{Swamp}{<138>?}{Swamp You see no signs of life - the marsh consumes all living things.  Unlike Wayhaven, there is no litter here - it's all sunk without trace.  Areas of solid ground blend unnoticeably with patches of lethal quicksand here.  Further to the east, north and south you see that the marsh continues.   }{Mud}{{content}{{noun}{{ground}{{name}{ground}}{marsh}{{name}{marsh}}{quicksand}{{name}{quicksand}}}}}{}{}{1.000}{}
 E {698}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {733}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {703}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {734}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {701}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {702}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {735}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {743}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 
-R {701}{0}{<178>}{Swamp}{ }{Swamp Looking around, all you can see is bog for miles in each direction.  The repellent smell of methane gas fills your senses.  Areas of solid ground blend unnoticeably with patches of lethal quicksand here.  Further to the south and east you note that the marsh continues.  Thick reeds prevent further travel northwards. }{}{}{}{}{1.000}{}
+R {701}{0}{<178>}{Swamp}{ }{Swamp Looking around, all you can see is bog for miles in each direction.  The repellent smell of methane gas fills your senses.  Areas of solid ground blend unnoticeably with patches of lethal quicksand here.  Further to the south and east you note that the marsh continues.  Thick reeds prevent further travel northwards. }{Mud}{}{}{}{1.000}{}
 E {698}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {703}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {704}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {705}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {700}{se}{se}{6}{0}{}{1.000}{}{0.00}
 
-R {702}{0}{<178>}{Swamp}{ }{Swamp You are overcome by a sense of loneliness. There is no civilization here.  The repellent smell of methane gas fills your senses.  The swamp extends off into the distance.  Further to the west and east you can see that the marsh continues.  To the north you see a forest beyond a series of black water pools. }{}{}{}{}{1.000}{}
+R {702}{0}{<178>}{Swamp}{ }{Swamp You are overcome by a sense of loneliness. There is no civilization here.  The repellent smell of methane gas fills your senses.  The swamp extends off into the distance.  Further to the west and east you can see that the marsh continues.  To the north you see a forest beyond a series of black water pools. }{Mud}{{content}{{item}{{^A gnarled club$}{{name}{A gnarled club}}}{npc}{{^A Goblin Scout$}{{name}{A Goblin Scout}}}}}{}{}{1.000}{}
 E {698}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {734}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {738}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {700}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {736}{se}{se}{6}{0}{}{1.000}{}{0.00}
 
-R {703}{0}{<178>}{Swamp}{ }{Swamp The boggy area extends off into the distance.  Unlike Wayhaven, there is no litter here - it's all sunk without trace.  Looking around, all you can see is boggy area for miles in each direction.  Further to the east, south and north you notice that the marsh continues.   }{}{}{}{}{1.000}{}
+R {703}{0}{<178>}{Swamp}{ }{Swamp No buildings mar the surface of this marsh.  The marsh extends off into the distance.  You are almost overcome by a powerful stench of decay.   }{Mud}{{content}{{noun}{{marsh}{{name}{marsh}}}{npc}{{^a small, pointy-nosed troll$}{{name}{a small, pointy-nosed troll}}}}}{}{}{1.000}{}
 E {701}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {700}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {743}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {705}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {698}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {704}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {745}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {733}{se}{se}{6}{0}{}{1.000}{}{0.00}
 
-R {704}{0}{<178>}{Swamp}{ }{Swamp You see no signs of life - the boggy area consumes all living things.  The boggy area extends off into the distance.  The fetid aroma of decaying vegetation washes over you.  To the north, thick reeds prevent further passage. }{}{}{}{}{1.000}{}
+R {704}{0}{<178>}{Swamp}{ }{Swamp You see no signs of life - the boggy area consumes all living things.  The boggy area extends off into the distance.  The fetid aroma of decaying vegetation washes over you.  To the north, thick reeds prevent further passage. }{Mud}{}{}{}{1.000}{}
 E {701}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {705}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {706}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {703}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {707}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 
-R {705}{0}{<178>}{Swamp}{ }{Swamp Looking around, all you can see is swampy area for miles in each direction.  This is a wet swampy area.  Unlike Wayhaven, there is no litter here - it's all sunk without trace.  Further to the north you can see that the marsh continues.   }{}{}{}{}{1.000}{}
+R {705}{0}{<178>}{Swamp}{ }{Swamp Looking around, all you can see is swampy area for miles in each direction.  This is a wet swampy area.  Unlike Wayhaven, there is no litter here - it's all sunk without trace.  Further to the north you can see that the marsh continues.   }{Mud}{}{}{}{1.000}{}
 E {704}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {703}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {745}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {707}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {706}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {701}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {743}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {746}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 
-R {706}{0}{<068>}{Swamp}{ }{Swamp You are almost overcome by a powerful stench of decay.  You really should watch your step here - the ground is very unstable.  You see no signs of life - the marsh consumes all living things.  To the north you see a thick wall of forest beyond some black water you dare not cross. }{Mud}{}{}{}{1.000}{}
+R {706}{0}{<068>}{Swamp}{ }{Swamp You are almost overcome by a powerful stench of decay.  You really should watch your step here - the ground is very unstable.  You see no signs of life - the marsh consumes all living things.  To the north you see a thick wall of forest beyond some black water you dare not cross. }{Mud}{{content}{{item}{{^An old shack$}{{name}{An old shack}}}}}{}{}{1.000}{}
 E {704}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {707}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {708}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {1281}{in}{.mapLink {Pinnacle/Fantasy/Troll Alliance} {} {in};}{0}{1}{}{1.000}{}{0.00}
+E {705}{se}{se}{6}{0}{}{1.000}{}{0.00}
 
-R {707}{0}{<178>}{Swamp}{ }{Swamp The boggy area extends off into the distance.  You see no signs of life - the boggy area consumes all living things.  The repellent smell of methane gas fills your senses.  Further to the east, north and south you notice that the marsh continues.  Far across the bay to the northwest you see the city. }{}{}{}{}{1.000}{}
+R {707}{0}{<178>}{Swamp}{ }{Swamp The boggy area extends off into the distance.  You see no signs of life - the boggy area consumes all living things.  The repellent smell of methane gas fills your senses.  Further to the east, north and south you notice that the marsh continues.  Far across the bay to the northwest you see the city. }{Mud}{}{}{}{1.000}{}
 E {706}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {708}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 E {705}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {746}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {704}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {745}{se}{se}{6}{0}{}{1.000}{}{0.00}
 
 R {708}{0}{<178>}{Swamp}{ }{Swamp Areas of solid ground blend unnoticeably with patches of lethal quicksand here.  You are almost overcome by a powerful stench of decay.  You are overcome by a sense of loneliness. There is no civilization here.  Further to the southeast you see that the marsh continues.  To the north you see an impenetrable wall of forest, while to the west across a wide stretch of water you see the city.  A small ferryboat sits here, ready to take you to the mainland.  Simply board it. }{}{}{}{}{1.000}{}
 E {706}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {707}{se}{se}{6}{0}{}{1.000}{}{0.00}
 
-R {709}{0}{<178>}{Forest}{ }{Forest Birds and other animals can be heard all around you.  The ancient trees stand like giant sentinels in the area.  They stand with a majestic, yet strange feel of honor.  You are moving through a sweet-smelling forest.  Further to the north, east and south you can see that the forest continues.   }{}{}{}{}{1.000}{}
+R {709}{0}{<178>}{Forest}{ }{Forest Birds and other animals can be heard all around you.  The ancient trees stand like giant sentinels in the area.  They stand with a majestic, yet strange feel of honor.  You are moving through a sweet-smelling forest.  Further to the north, east and south you can see that the forest continues.   }{Mud}{{content}{{npc}{{^A cooper's hawk$}{{name}{A cooper's hawk}}}}}{}{}{1.000}{}
 E {696}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {710}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {697}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {712}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {711}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {644}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
-R {710}{0}{<068>}{Forest}{ }{Forest The ground is moist and very soft to the touch.  Strange shadows flutter around you, contradicting the bright sunlight barely filtering to the ground around you.  You travel through a strange and enchanted forest.  Further to the south you see that the forest continues.  A rough path leads to the north. }{}{}{}{}{1.000}{}
+R {710}{0}{<068>}{Forest}{ }{Forest The ancient trees stand like giant sentinels in the area.  They stand with a majestic, yet strange feel of honor.  You travel through a strange and enchanted forest.  Far in the distance, you can hear animals moving about.  A rough path leads to the north. }{Mud}{{content}{{item}{{^A gnarled club$}{{name}{A gnarled club}}}{noun}{{animals}{{name}{animals}}{path}{{name}{path}}{trees}{{name}{trees}}}{npc}{{^A small black wolf$}{{name}{A small black wolf}}{^Troll$}{{name}{Troll}}}}}{}{}{1.000}{}
 E {644}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {709}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {711}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {1212}{path}{.mapLink {Pinnacle/Fantasy/Owlbears} {} {path};}{0}{1}{}{1.000}{}{0.00}
+E {696}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {718}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {712}{se}{se}{6}{0}{}{1.000}{}{0.00}
 
 R {711}{0}{<178>}{Forest}{ }{Mountain Forest Leaves crunch beneath your feet on the uneven ground, creating a strange and eerie echoing through the mountainous woodland around you.  You travel through an open forested mountain region.  Far below you through the trees you see the forest extends without end.  Further to the southeast you can see a forest.   }{}{}{}{}{1.000}{}
 E {710}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {712}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {717}{se}{se}{6}{0}{}{1.000}{}{0.00}
 E {718}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {709}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 
-R {712}{0}{<068>}{Forest}{ }{Forest The ancient trees stand like giant sentinels in the area.  They stand with a majestic, yet strange feel of honor.  An eerie, yet sunny woods, deep in the forest.  Far in the distance, you can hear animals moving about.  Two large and ancient trees stand near to each other at this point.  The large trees seem to have grown together to create a portal of living wood.  The air within the portal seems to shimmer, and glows with a faint light. }{}{}{}{}{1.000}{}
+R {712}{0}{<068>}{Forest}{ }{Forest The ancient trees stand like giant sentinels in the area.  They stand with a majestic, yet strange feel of honor.  An eerie, yet sunny woods, deep in the forest.  Far in the distance, you can hear animals moving about.  Two large and ancient trees stand near to each other at this point.  The large trees seem to have grown together to create a portal of living wood.  The air within the portal seems to shimmer, and glows with a faint light. }{Mud}{{content}{{item}{{^A sprig of mistletoe$}{{name}{A sprig of mistletoe}}{^Portal of Life$}{{name}{Portal of Life}}}}}{}{}{1.000}{}
 E {709}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {713}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {711}{n}{n}{1}{0}{}{1.000}{}{0.00}
@@ -3992,6 +4023,7 @@ E {717}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {1161}{portal}{.mapLink {Pinnacle/Fantasy/Portal of Life} {} {portal};}{0}{1}{}{1.000}{}{0.00}
 E {1189}{climb left tree}{.mapLink {Pinnacle/Fantasy/Portal of Life v2} {} {climb left tree};}{0}{1}{}{1.000}{}{0.00}
 E {1190}{climb right tree}{.mapLink {Pinnacle/Fantasy/Portal of Life v3} {} {climb right tree};}{0}{1}{}{1.000}{}{0.00}
+E {710}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
 R {713}{0}{<178>}{Forest}{ }{Forest The ground is moist and very soft to the touch.  Strange shadows flutter around you, contradicting the bright sunlight barely filtering to the ground around you.  You are in a sunny, but shadowed forest.  Further to the north and west you note that the forest continues.   }{}{}{}{}{1.000}{}
 E {697}{w}{w}{8}{0}{}{1.000}{}{0.00}
@@ -4021,11 +4053,12 @@ E {711}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 E {716}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {723}{e}{e}{2}{0}{}{1.000}{}{0.00}
 
-R {718}{0}{<068>}{Mountain Forest}{ }{Mountain Forest An eerie, yet sunny woods, deep in the mountain forest.  Standing on a rock overlooking a bluff you survey the rolling forests that extend for miles.  Leaves crunch beneath your feet on the uneven ground, creating a strange and eerie echoing through the mountainous woodland around you.   }{}{}{}{}{1.000}{}
+R {718}{0}{<108>}{Mountain Forest}{ }{Mountain Forest An eerie, yet sunny woods, deep in the mountain forest.  Standing on a rock overlooking a bluff you survey the rolling forests that extend for miles.  Leaves crunch beneath your feet on the uneven ground, creating a strange and eerie echoing through the mountainous woodland around you.   }{}{}{}{}{1.000}{}
 E {711}{se}{se}{6}{0}{}{1.000}{}{0.00}
 E {719}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 E {646}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {726}{portal}{.mapLink {Pinnacle/Fantasy/Necromancer Guild} {} {portal};}{0}{1}{}{1.000}{}{0.00}
+E {710}{s}{s}{4}{0}{}{1.000}{}{0.00}
 
 R {719}{0}{<068>}{Mountain Forest}{ }{Mountain Forest You travel through an open mountain forest.  Standing on a rock overlooking a bluff you survey the rolling forests that extend for miles.  The ancient trees stand like giant gnarled sentinels in the area.  They are rooted tenaciously in shallow soil and rock.  Further to the southwest you notice that the forested mountain region continues.  The grass has been trampled slightly, off the side of the trail. }{}{}{}{}{1.000}{}
 E {718}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
@@ -4087,86 +4120,122 @@ E {1020}{e}{e}{2}{0}{}{1.000}{}{0.00}
 R {730}{0}{<178>}{Swamp}{ }{Swamp Areas of solid ground blend unnoticeably with patches of lethal quicksand here.  Looking around, all you can see is boggy area for miles in each direction.  The repellent smell of methane gas fills your senses.  Across a deep narrowing of the bay to the east you see forests and cliffs. }{}{}{}{}{1.000}{}
 E {739}{w}{w}{8}{0}{}{1.000}{}{0.00}
 
-R {731}{0}{<178>}{Swamp}{ }{Swamp Unlike Wayhaven, there is no litter here - it's all sunk without trace.  You really should watch your step here - the ground is very unstable.  Looking around, all you can see is marshy area for miles in each direction.  Further to the north and south you see that the marsh continues.  Forested cliffs stand across a deep narrow bay to the east. }{}{}{}{}{1.000}{}
+R {731}{0}{<178>}{Swamp}{ }{Swamp Unlike Wayhaven, there is no litter here - it's all sunk without trace.  You really should watch your step here - the ground is very unstable.  Looking around, all you can see is marshy area for miles in each direction.  Further to the north and south you see that the marsh continues.  Forested cliffs stand across a deep narrow bay to the east. }{Mud}{}{}{}{1.000}{}
 E {737}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {732}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {741}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {735}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {749}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 
-R {732}{0}{<178>}{Swamp}{ }{Swamp You are overcome by a sense of loneliness. There is no civilization here.  The bog extends off into the distance.  Unlike Wayhaven, there is no litter here - it's all sunk without trace.  Further to the west you can see that the marsh continues.  Forested cliffs rise up across a deep bay to the east. }{}{}{}{}{1.000}{}
+R {732}{0}{<178>}{Swamp}{ }{Swamp You are overcome by a sense of loneliness. There is no civilization here.  The bog extends off into the distance.  Unlike Wayhaven, there is no litter here - it's all sunk without trace.  Further to the west you can see that the marsh continues.  Forested cliffs rise up across a deep bay to the east. }{Mud}{}{}{}{1.000}{}
 E {731}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {749}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {751}{se}{se}{6}{0}{}{1.000}{}{0.00}
 E {752}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {741}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {750}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 
-R {733}{0}{<178>}{Swamp}{ }{Swamp The repellent smell of methane gas fills your senses.  This is a wet marsh.  No buildings mar the surface of this marsh.   }{}{}{}{}{1.000}{}
+R {733}{0}{<178>}{Swamp}{ }{Swamp The repellent smell of methane gas fills your senses.  This is a wet marsh.  No buildings mar the surface of this marsh.   }{Mud}{}{}{}{1.000}{}
 E {700}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {735}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {742}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {743}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {703}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {734}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {741}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {744}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 
-R {734}{0}{<178>}{Swamp}{ }{Swamp You are almost overcome by a powerful stench of decay.  No buildings mar the surface of this marshy area.  This is a wet marshy area.  Further to the east and west you see that the marsh continues.   }{}{}{}{}{1.000}{}
+R {734}{0}{<178>}{Swamp}{ }{Swamp You are almost overcome by a powerful stench of decay.  No buildings mar the surface of this marshy area.  This is a wet marshy area.  Further to the east and west you see that the marsh continues.   }{Mud}{}{}{}{1.000}{}
 E {700}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {735}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {702}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {736}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {738}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {698}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {733}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {737}{se}{se}{6}{0}{}{1.000}{}{0.00}
 
-R {735}{0}{<178>}{Swamp}{ }{Swamp Unlike Wayhaven, there is no litter here - it's all sunk without trace.  Areas of solid ground blend unnoticeably with patches of lethal quicksand here.  You see no signs of life - the swamp consumes all living things.  Further to the south and north you see that the marsh continues.   }{}{}{}{}{1.000}{}
+R {735}{0}{<178>}{Swamp}{ }{Swamp No buildings mar the surface of this bog.  The bog extends off into the distance.  Unlike Wayhaven, there is no litter here - it's all sunk without trace.  Further to the east and north you can see that the marsh continues.   }{Mud}{{content}{{item}{{^A gnarled club$}{{name}{A gnarled club}}}{noun}{{bog}{{name}{bog}}{marsh}{{name}{marsh}}}{npc}{{^A Goblin Scout$}{{name}{A Goblin Scout}}{^Gator$}{{name}{Gator}}}}}{}{}{1.000}{}
 E {734}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {737}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {741}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {733}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {736}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {700}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {742}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {731}{se}{se}{6}{0}{}{1.000}{}{0.00}
 
-R {736}{0}{<178>}{Swamp}{ }{Swamp You really should watch your step here - the ground is very unstable.  Looking around, all you can see is marshy area for miles in each direction.  The repellent smell of methane gas fills your senses.   }{}{}{}{}{1.000}{}
+R {736}{0}{<178>}{Swamp}{ }{Swamp You really should watch your step here - the ground is very unstable.  Looking around, all you can see is marshy area for miles in each direction.  The repellent smell of methane gas fills your senses.   }{Mud}{}{}{}{1.000}{}
 E {734}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {737}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {738}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {739}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {702}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {740}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {735}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 
-R {737}{0}{<178>}{Swamp}{ }{Swamp You see no signs of life - the marshy area consumes all living things.  The marshy area extends off into the distance.  The fetid aroma of decaying vegetation washes over you.  Further to the northeast and west you notice that the marsh continues.  Forested cliffs stand across a deep narrow bay to the east. }{}{}{}{}{1.000}{}
+R {737}{0}{<178>}{Swamp}{ }{Swamp You see no signs of life - the marshy area consumes all living things.  The marshy area extends off into the distance.  The fetid aroma of decaying vegetation washes over you.  Further to the northeast and west you notice that the marsh continues.  Forested cliffs stand across a deep narrow bay to the east. }{Mud}{}{}{}{1.000}{}
 E {736}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {739}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 E {731}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {735}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {734}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {741}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 
-R {738}{0}{<178>}{Swamp}{ }{Swamp You see no signs of life - the boggy area consumes all living things.  You really should watch your step here - the ground is very unstable.  The fetid aroma of decaying vegetation washes over you.  Further to the south you see that the marsh continues.  To the north you see a thick wall of forest beyond some black water you dare not cross. }{}{}{}{}{1.000}{}
+R {738}{0}{<178>}{Swamp}{ }{Swamp You see no signs of life - the boggy area consumes all living things.  You really should watch your step here - the ground is very unstable.  The fetid aroma of decaying vegetation washes over you.  Further to the south you see that the marsh continues.  To the north you see a thick wall of forest beyond some black water you dare not cross. }{Mud}{}{}{}{1.000}{}
 E {736}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {702}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {740}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {739}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {734}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 
 R {739}{0}{<178>}{Swamp}{ }{Swamp Looking around, all you can see is boggy area for miles in each direction.  You really should watch your step here - the ground is very unstable.  Unlike Wayhaven, there is no litter here - it's all sunk without trace.  Further to the southwest you notice that the marsh continues.   }{}{}{}{}{1.000}{}
 E {736}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {740}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {737}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 E {730}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {738}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
 R {740}{0}{<068>}{Swamp}{ }{Swamp This is a wet swamp.  No buildings mar the surface of this swamp.  The fetid aroma of decaying vegetation washes over you.  Further to the west and south you notice that the marsh continues.  To the north and east a forest rises up before you.  Access northwards is blocked by deep pools of murky dark water. }{Mud}{}{}{}{1.000}{}
 E {738}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {739}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {725}{e}{.mapLink {Pinnacle/Fantasy/Marsh Goblins} {} {e};}{2}{1}{}{1.000}{}{0.00}
+E {736}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 
-R {741}{0}{<178>}{Swamp}{ }{Swamp Unlike Wayhaven, there is no litter here - it's all sunk without trace.  You see no signs of life - the boggy area consumes all living things.  You really should watch your step here - the ground is very unstable.  Further to the east, north and west you see that the marsh continues.   }{}{}{}{}{1.000}{}
+R {741}{0}{<178>}{Swamp}{ }{Swamp Unlike Wayhaven, there is no litter here - it's all sunk without trace.  You see no signs of life - the boggy area consumes all living things.  You really should watch your step here - the ground is very unstable.  Further to the east, north and west you see that the marsh continues.   }{Mud}{}{}{}{1.000}{}
 E {731}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {735}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {742}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {749}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {737}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {733}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {748}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {732}{se}{se}{6}{0}{}{1.000}{}{0.00}
 
-R {742}{0}{<178>}{Swamp}{ }{Swamp You are overcome by a sense of loneliness. There is no civilization here.  This is a wet marshy area.  The repellent smell of methane gas fills your senses.   }{}{}{}{}{1.000}{}
+R {742}{0}{<178>}{Swamp}{ }{Swamp You are overcome by a sense of loneliness. There is no civilization here.  This is a wet marshy area.  The repellent smell of methane gas fills your senses.   }{Mud}{}{}{}{1.000}{}
 E {733}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {744}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {748}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {741}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {743}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {735}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {749}{se}{se}{6}{0}{}{1.000}{}{0.00}
 
 R {743}{0}{<178>}{Swamp}{ }{Swamp This is a wet swampy area.  You are overcome by a sense of loneliness. There is no civilization here.  Unlike Wayhaven, there is no litter here - it's all sunk without trace.  Further to the south and north you can see that the marsh continues.   }{Mud}{}{}{}{1.000}{}
 E {733}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {744}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {703}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {745}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {700}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {705}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {742}{se}{se}{6}{0}{}{1.000}{}{0.00}
 
-R {744}{0}{<178>}{Swamp}{ }{Swamp The bog extends off into the distance.  You see no signs of life - the bog consumes all living things.  You are almost overcome by a powerful stench of decay.  Further to the north and northwest you can see that the marsh continues.  Directly to the south lies swampland so murky and dangerous, travel in that direction is impossible. }{}{}{}{}{1.000}{}
+R {744}{0}{<178>}{Swamp}{ }{Swamp The bog extends off into the distance.  You see no signs of life - the bog consumes all living things.  You are almost overcome by a powerful stench of decay.  Further to the north and northwest you can see that the marsh continues.  Directly to the south lies swampland so murky and dangerous, travel in that direction is impossible. }{Mud}{}{}{}{1.000}{}
 E {743}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {745}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 E {748}{se}{se}{6}{0}{}{1.000}{}{0.00}
 E {742}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {733}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
 R {745}{0}{<068>}{Swamp}{ }{Swamp You really should watch your step here - the ground is very unstable.  You are almost overcome by a powerful stench of decay.  Looking around, all you can see is swampy area for miles in each direction.  Further to the east and southeast you can see that the marsh continues.   }{Mud}{}{}{}{1.000}{}
 E {743}{e}{e}{2}{0}{}{1.000}{}{0.00}
@@ -4174,59 +4243,72 @@ E {705}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {746}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {744}{se}{se}{6}{0}{}{1.000}{}{0.00}
 E {747}{s}{.mapLink {Pinnacle/Fantasy/Fachan} {Village} {s};}{4}{1}{}{1.000}{}{0.00}
+E {707}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {703}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {746}{0}{<178>}{Swamp}{ }{Swamp This is a wet bog.  No buildings mar the surface of this bog.  The repellent smell of methane gas fills your senses.  Far across the bay to the northwest you see the city. }{}{}{}{}{1.000}{}
+R {746}{0}{<178>}{Swamp}{ }{Swamp This is a wet bog.  No buildings mar the surface of this bog.  The repellent smell of methane gas fills your senses.  Far across the bay to the northwest you see the city. }{Mud}{}{}{}{1.000}{}
 E {707}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {745}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {705}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
 R {747}{0}{<000>}{LINK: Pinnacle/Fantasy/Fachan}{<138>*}{}{Pinnacle/Fantasy/Fachan}{{link}{}}{}{}{1.000}{}
 E {745}{n}{n}{1}{0}{}{1.000}{}{0.00}
 
-R {748}{0}{<068>}{Swamp}{ }{Swamp Areas of solid ground blend unnoticeably with patches of lethal quicksand here.  Unlike Wayhaven, there is no litter here - it's all sunk without trace.  No buildings mar the surface of this bog.  Further to the north and southeast you note that the marsh continues.  The ground to the immediate south is too soggy to allow further travel.  A gap in the bog has created an entranceway here. }{}{}{}{}{1.000}{}
+R {748}{0}{<068>}{Swamp}{ }{Swamp Areas of solid ground blend unnoticeably with patches of lethal quicksand here.  Unlike Wayhaven, there is no litter here - it's all sunk without trace.  No buildings mar the surface of this bog.  Further to the north and southeast you note that the marsh continues.  The ground to the immediate south is too soggy to allow further travel.  A gap in the bog has created an entranceway here. }{Mud}{}{}{}{1.000}{}
 E {744}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 E {742}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {749}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {750}{se}{se}{6}{0}{}{1.000}{}{0.00}
 E {1277}{enter}{.mapLink {Pinnacle/Fantasy/Lair of the Matriarch} {} {enter};}{0}{1}{}{1.000}{}{0.00}
+E {741}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {749}{0}{<178>}{Swamp}{ }{Swamp The fetid aroma of decaying vegetation washes over you.  Areas of solid ground blend unnoticeably with patches of lethal quicksand here.  You see no signs of life - the marshy area consumes all living things.   }{}{}{}{}{1.000}{}
+R {749}{0}{<178>}{Swamp}{ }{Swamp You really should watch your step here - the ground is very unstable.  Looking around, all you can see is swampy area for miles in each direction.  The repellent smell of methane gas fills your senses.  Further to the west you can see that the marsh continues.   }{Mud}{{content}{{noun}{{ground}{{name}{ground}}{marsh}{{name}{marsh}}}{npc}{{^Hick$}{{name}{Hick}}}}}{}{}{1.000}{}
 E {741}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {748}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {750}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {732}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {731}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {742}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {752}{se}{se}{6}{0}{}{1.000}{}{0.00}
 
-R {750}{0}{<178>}{Swamp}{ }{Swamp The fetid aroma of decaying vegetation washes over you.  You see no signs of life - the swampy area consumes all living things.  The swampy area extends off into the distance.  Further to the east and north you see that the marsh continues.  The swamp is so thick to the south that it prevents further exploration in that direction. }{}{}{}{}{1.000}{}
+R {750}{0}{<178>}{Swamp}{ }{Swamp The fetid aroma of decaying vegetation washes over you.  You see no signs of life - the swampy area consumes all living things.  The swampy area extends off into the distance.  Further to the east and north you see that the marsh continues.  The swamp is so thick to the south that it prevents further exploration in that direction. }{Mud}{}{}{}{1.000}{}
 E {748}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 E {749}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {752}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {753}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {732}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {751}{0}{<068>}{Swamp}{ }{Swamp The repellent smell of methane gas fills your senses.  You see no signs of life - the marsh consumes all living things.  This is a wet marsh.  Further to the west, south and northwest you see that the marsh continues.  Far to the northeast you see some cliffs. }{Mud}{}{}{}{1.000}{}
+R {751}{0}{<068>}{Swamp}{ }{Swamp The repellent smell of methane gas fills your senses.  You see no signs of life - the marsh consumes all living things.  This is a wet marsh.  Further to the west, south and northwest you see that the marsh continues.  Far to the northeast you see some cliffs. }{Mud}{{content}{{npc}{{^Hick$}{{name}{Hick}}}}}{}{}{1.000}{}
 E {732}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 E {752}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {755}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {756}{e}{.mapLink {Pinnacle/Fantasy/Dreamville} {} {e};}{2}{1}{}{1.000}{}{0.00}
+E {753}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 
 R {752}{0}{<178>}{Swamp}{ }{Swamp The repellent smell of methane gas fills your senses.  You see no signs of life - the swampy area consumes all living things.  You really should watch your step here - the ground is very unstable.   }{Mud}{}{}{}{1.000}{}
 E {732}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {753}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {751}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {750}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {749}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {755}{se}{se}{6}{0}{}{1.000}{}{0.00}
 
-R {753}{0}{<178>}{Swamp}{ }{Swamp You are overcome by a sense of loneliness. There is no civilization here.  This is a wet marsh.  Unlike Wayhaven, there is no litter here - it's all sunk without trace.  Further to the north you note that the marsh continues.  The swamp grows too thick to the immediate south for you to explore any further in that direction. }{}{}{}{}{1.000}{}
+R {753}{0}{<178>}{Swamp}{ }{Swamp You are overcome by a sense of loneliness. There is no civilization here.  This is a wet marsh.  Unlike Wayhaven, there is no litter here - it's all sunk without trace.  Further to the north you note that the marsh continues.  The swamp grows too thick to the immediate south for you to explore any further in that direction. }{Mud}{}{}{}{1.000}{}
 E {752}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {750}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 E {754}{se}{se}{6}{0}{}{1.000}{}{0.00}
 E {755}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {751}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
 R {754}{0}{<178>}{Swamp}{ }{Swamp The boggy area extends off into the distance.  You see no signs of life - the boggy area consumes all living things.  The fetid aroma of decaying vegetation washes over you.  The point of bog is surrounded by open water except back the way you came. }{}{}{}{}{1.000}{}
 E {753}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 E {755}{n}{n}{1}{0}{}{1.000}{}{0.00}
 
-R {755}{0}{<178>}{Swamp}{ }{Swamp You are overcome by a sense of loneliness. There is no civilization here.  You are almost overcome by a powerful stench of decay.  You really should watch your step here - the ground is very unstable.  Further to the north, west and south you can see that the marsh continues.  The swamp grows too thick toward the east for you to explore any further in that direction. }{}{}{}{}{1.000}{}
+R {755}{0}{<178>}{Swamp}{ }{Swamp You are overcome by a sense of loneliness. There is no civilization here.  You are almost overcome by a powerful stench of decay.  You really should watch your step here - the ground is very unstable.  Further to the north, west and south you can see that the marsh continues.  The swamp grows too thick toward the east for you to explore any further in that direction. }{Mud}{}{}{}{1.000}{}
 E {753}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {754}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {751}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {752}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
 R {756}{0}{<000>}{LINK: Pinnacle/Fantasy/Dreamville}{<138>*}{}{Pinnacle/Fantasy/Dreamville}{{link}{}}{}{}{1.000}{}
 E {751}{w}{w}{8}{0}{}{1.000}{}{0.00}
