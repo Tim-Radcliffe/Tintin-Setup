@@ -1,0 +1,16 @@
+#ALIAS {.WindowNotify}
+{
+    #NOP %1;
+    #IF {"%3" != ""}
+    {
+        .WindowSetLine {notify} {1} {<191>%2: %3};
+    };
+    #ELSE
+    {
+        .WindowSetLine {notify} {1} {};
+    }
+    .WindowRefresh;    
+};
+
+.WindowCreate {notify} {notify};
+event_register {e_notify} {h_window_notify} {.WindowNotify};
