@@ -10,6 +10,29 @@
         {nomap} {1}
         {nokill} {1}
     }
+    {_npc[^A cargo truck$]} 
+    {
+        {alignment} {0}
+        {desc} 
+        {
+            {1} {A cargo truck}
+            {2} {This cargo truck is part of the Juggernauts guild. It belongs to}
+            {3} {Damage. You better not bother it.}
+            {4} {It is in perfect health.}
+        }
+        {id} {Truck}
+        {nomap} {1}
+        {nokill} {1}
+        {name} {A cargo truck}
+        {size} 
+        {
+            {0} 
+            {
+                {consider} {900}
+            }
+        }
+        
+    }    
     {^.+ \(bound by \w+)$}
     {
         {nomap} {1}
@@ -116,4 +139,29 @@
             {nomap} {1}
             {nokill} {1}
     }
+    {_npc[^Vilgan$]} 
+    {
+        {alignment} {0}
+        {desc} 
+        {
+            {1} {Vilgan}
+            {2} {This is Vilgan, perhaps the most annoying person on the earth.  He'll}
+            {3} {talk and talk and talk, but never have much to say.  It's ill-advised}
+            {4} {you kill him, however, cuz that's murder, and you may wind up in jail.}
+            {5} {A little abuse, however, wouldn't be uncalled for.}
+            {6} {It is in perfect health.}
+        }
+        {id} {Vilgan}
+        {nomap} {1}
+        {nokill} {1}
+        {name} {Vilgan}
+        {size} 
+        {
+            {0} 
+            {
+                {consider} {100}
+            }
+        }
+        
+    }    
 }
