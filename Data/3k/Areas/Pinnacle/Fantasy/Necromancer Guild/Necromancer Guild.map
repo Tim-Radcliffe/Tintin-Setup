@@ -1,0 +1,2082 @@
+C 500
+
+V 20231
+
+CAVOID <118>
+CBACKGROUND 
+CBLOCK <218>
+CEXITS <278>
+CFOG <148>
+CHIDE <118>
+CINVISIBLE <208>
+CPATHS <138>
+CROOMS <178>
+CSYMBOLS <128>
+CUSER <258>
+
+F 1048586
+
+G 0
+
+I 24
+
+L {ASCII NESW LINE} {NO EXITS} {x}
+L {ASCII NESW LINE} {N} {o}
+L {ASCII NESW LINE} {  E} {o}
+L {ASCII NESW LINE} {N E} {+}
+L {ASCII NESW LINE} {    S} {o}
+L {ASCII NESW LINE} {N   S} {|}
+L {ASCII NESW LINE} {  E S} {+}
+L {ASCII NESW LINE} {N E S} {+}
+L {ASCII NESW LINE} {      W} {o}
+L {ASCII NESW LINE} {N     W} {+}
+L {ASCII NESW LINE} {  E   W} {-}
+L {ASCII NESW LINE} {N E   W} {+}
+L {ASCII NESW LINE} {    S W} {+}
+L {ASCII NESW LINE} {N   S W} {+}
+L {ASCII NESW LINE} {  E S W} {+}
+L {ASCII NESW LINE} {N E S W} {+}
+L {ASCII NESW MISC} {USER} {■}
+L {ASCII NESW MISC} {DIR UNKNOWN} {+}
+L {ASCII NESW MISC} {N S VOID} {|}
+L {ASCII NESW MISC} {E W VOID} {-}
+L {ASCII NESW CURVED} {N E CURVED} {+}
+L {ASCII NESW CURVED} {S E CURVED} {+}
+L {ASCII NESW CURVED} {S W CURVED} {+}
+L {ASCII NESW CURVED} {N W CURVED} {+}
+L {ASCII NESW DIRS} {DIR N} {|}
+L {ASCII NESW DIRS} {DIR NE} {/}
+L {ASCII NESW DIRS} {DIR E} {-}
+L {ASCII NESW DIRS} {DIR SE} {\\}
+L {ASCII NESW DIRS} {DIR S} {|}
+L {ASCII NESW DIRS} {DIR SW} {/}
+L {ASCII NESW DIRS} {DIR W} {-}
+L {ASCII NESW DIRS} {DIR NW} {\\}
+L {NESW LINE} {NO EXITS} {\u2B51}
+L {NESW LINE} {N} {\u2579}
+L {NESW LINE} {  E} {\u257A}
+L {NESW LINE} {N E} {\u2517}
+L {NESW LINE} {    S} {\u257B}
+L {NESW LINE} {N   S} {\u2503}
+L {NESW LINE} {  E S} {\u250F}
+L {NESW LINE} {N E S} {\u2523}
+L {NESW LINE} {      W} {\u2578}
+L {NESW LINE} {N     W} {\u251B}
+L {NESW LINE} {  E   W} {\u2501}
+L {NESW LINE} {N E   W} {\u253B}
+L {NESW LINE} {    S W} {\u2513}
+L {NESW LINE} {N   S W} {\u252B}
+L {NESW LINE} {  E S W} {\u2533}
+L {NESW LINE} {N E S W} {\u254B}
+L {NESW MISC} {USER} {\u2B51}
+L {NESW MISC} {DIR UNKNOWN} {\u2012}
+L {NESW MISC} {N S VOID} {\u2507}
+L {NESW MISC} {E W VOID} {\u254D}
+L {NESW CURVED} {N E CURVED} {\u2570}
+L {NESW CURVED} {S E CURVED} {\u256D}
+L {NESW CURVED} {S W CURVED} {\u256E}
+L {NESW CURVED} {N W CURVED} {\u256F}
+L {NESW DIRS} {DIR N} {\u2191}
+L {NESW DIRS} {DIR NE} {\u2B08}
+L {NESW DIRS} {DIR E} {\u2B95}
+L {NESW DIRS} {DIR SE} {\u2b0A}
+L {NESW DIRS} {DIR S} {\u2193}
+L {NESW DIRS} {DIR SW} {\u2B0B}
+L {NESW DIRS} {DIR W} {\u2B05}
+L {NESW DIRS} {DIR NW} {\u2B09}
+L {MUDFONT NWS} {NO EXITS} {\u28CF}
+L {MUDFONT NWS} {N} {\u28C7}
+L {MUDFONT NWS} {  NW} {\u28CE}
+L {MUDFONT NWS} {N NW} {\u28C6}
+L {MUDFONT NWS} {     W} {\u28C9}
+L {MUDFONT NWS} {N    W} {\u28C1}
+L {MUDFONT NWS} {  NW W} {\u28C8}
+L {MUDFONT NWS} {N NW W} {\u28C0}
+L {MUDFONT NWS} {       SW} {\u288F}
+L {MUDFONT NWS} {N      SW} {\u2887}
+L {MUDFONT NWS} {  NW   SW} {\u288E}
+L {MUDFONT NWS} {N NW   SW} {\u2886}
+L {MUDFONT NWS} {     W SW} {\u2889}
+L {MUDFONT NWS} {N    W SW} {\u2881}
+L {MUDFONT NWS} {  NW W SW} {\u2888}
+L {MUDFONT NWS} {N NW W SW} {\u2880}
+L {MUDFONT NWS} {          S} {\u284F}
+L {MUDFONT NWS} {N         S} {\u2847}
+L {MUDFONT NWS} {  NW      S} {\u284E}
+L {MUDFONT NWS} {N NW      S} {\u2846}
+L {MUDFONT NWS} {     W    S} {\u2849}
+L {MUDFONT NWS} {N    W    S} {\u2841}
+L {MUDFONT NWS} {  NW W    S} {\u2848}
+L {MUDFONT NWS} {N NW W    S} {\u2880}
+L {MUDFONT NWS} {       SW S} {\u280F}
+L {MUDFONT NWS} {N      SW S} {\u2807}
+L {MUDFONT NWS} {  NW   SW S} {\u280E}
+L {MUDFONT NWS} {N NW   SW S} {\u2806}
+L {MUDFONT NWS} {     W SW S} {\u2809}
+L {MUDFONT NWS} {N    W SW S} {\u2801}
+L {MUDFONT NWS} {  NW W SW S} {\u2808}
+L {MUDFONT NWS} {N NW W SW S} {\u2800}
+L {MUDFONT NES} {NO EXITS} {\u28F9}
+L {MUDFONT NES} {N} {\u28F8}
+L {MUDFONT NES} {  NE} {\u28F1}
+L {MUDFONT NES} {N NE} {\u28F0}
+L {MUDFONT NES} {     W} {\u28C9}
+L {MUDFONT NES} {N    W} {\u28C8}
+L {MUDFONT NES} {  NE W} {\u28C2}
+L {MUDFONT NES} {N NE W} {\u28C0}
+L {MUDFONT NES} {       SE} {\u2879}
+L {MUDFONT NES} {N      SE} {\u2878}
+L {MUDFONT NES} {  NE   SE} {\u2871}
+L {MUDFONT NES} {N NE   SE} {\u2870}
+L {MUDFONT NES} {     W SE} {\u2849}
+L {MUDFONT NES} {N    W SE} {\u2848}
+L {MUDFONT NES} {  NE W SE} {\u2842}
+L {MUDFONT NES} {N NE W SE} {\u2840}
+L {MUDFONT NES} {          S} {\u28B9}
+L {MUDFONT NES} {N         S} {\u28B8}
+L {MUDFONT NES} {  NE      S} {\u28B1}
+L {MUDFONT NES} {N NE      S} {\u28B0}
+L {MUDFONT NES} {     W    S} {\u2889}
+L {MUDFONT NES} {N    W    S} {\u2888}
+L {MUDFONT NES} {  NE W    S} {\u2882}
+L {MUDFONT NES} {N NE W    S} {\u2880}
+L {MUDFONT NES} {       SE S} {\u2839}
+L {MUDFONT NES} {N      SE S} {\u2838}
+L {MUDFONT NES} {  NE   SE S} {\u2831}
+L {MUDFONT NES} {N NE   SE S} {\u2830}
+L {MUDFONT NES} {     W SE S} {\u2809}
+L {MUDFONT NES} {N    W SE S} {\u2808}
+L {MUDFONT NES} {  NE W SE S} {\u2802}
+L {MUDFONT NES} {N NE W SE S} {\u2800}
+L {MUDFONT VOID NWS} {NO EXITS} {\u2830}
+L {MUDFONT VOID NWS} {N} {\u2838}
+L {MUDFONT VOID NWS} {  NW} {\u2831}
+L {MUDFONT VOID NWS} {N NW} {\u2839}
+L {MUDFONT VOID NWS} {     W} {\u2836}
+L {MUDFONT VOID NWS} {N    W} {\u283E}
+L {MUDFONT VOID NWS} {  NW W} {\u2837}
+L {MUDFONT VOID NWS} {N NW W} {\u283F}
+L {MUDFONT VOID NWS} {       SW} {\u2870}
+L {MUDFONT VOID NWS} {N      SW} {\u2878}
+L {MUDFONT VOID NWS} {  NW   SW} {\u2871}
+L {MUDFONT VOID NWS} {N NW   SW} {\u2879}
+L {MUDFONT VOID NWS} {     W SW} {\u2876}
+L {MUDFONT VOID NWS} {N    W SW} {\u287E}
+L {MUDFONT VOID NWS} {  NW W SW} {\u2877}
+L {MUDFONT VOID NWS} {N NW W SW} {\u287F}
+L {MUDFONT VOID NWS} {          S} {\u28B0}
+L {MUDFONT VOID NWS} {N         S} {\u28B8}
+L {MUDFONT VOID NWS} {  NW      S} {\u28B1}
+L {MUDFONT VOID NWS} {N NW      S} {\u28B9}
+L {MUDFONT VOID NWS} {     W    S} {\u28B6}
+L {MUDFONT VOID NWS} {N    W    S} {\u28BE}
+L {MUDFONT VOID NWS} {  NW W    S} {\u28B7}
+L {MUDFONT VOID NWS} {N NW W    S} {\u28BF}
+L {MUDFONT VOID NWS} {       SW S} {\u28F0}
+L {MUDFONT VOID NWS} {N      SW S} {\u28F8}
+L {MUDFONT VOID NWS} {  NW   SW S} {\u28F1}
+L {MUDFONT VOID NWS} {N NW   SW S} {\u28F9}
+L {MUDFONT VOID NWS} {     W SW S} {\u28F6}
+L {MUDFONT VOID NWS} {N    W SW S} {\u28FE}
+L {MUDFONT VOID NWS} {  NW W SW S} {\u28F7}
+L {MUDFONT VOID NWS} {N NW W SW S} {\u28FF}
+L {MUDFONT VOID NES} {NO EXITS} {\u2806}
+L {MUDFONT VOID NES} {N} {\u2807}
+L {MUDFONT VOID NES} {  NE} {\u280E}
+L {MUDFONT VOID NES} {N NE} {\u280F}
+L {MUDFONT VOID NES} {     W} {\u2836}
+L {MUDFONT VOID NES} {N    W} {\u2837}
+L {MUDFONT VOID NES} {  NE W} {\u283E}
+L {MUDFONT VOID NES} {N NE W} {\u283F}
+L {MUDFONT VOID NES} {       SE} {\u2886}
+L {MUDFONT VOID NES} {N      SE} {\u2887}
+L {MUDFONT VOID NES} {  NE   SE} {\u288E}
+L {MUDFONT VOID NES} {N NE   SE} {\u288F}
+L {MUDFONT VOID NES} {     W SE} {\u28B6}
+L {MUDFONT VOID NES} {N    W SE} {\u28B7}
+L {MUDFONT VOID NES} {  NE W SE} {\u28BE}
+L {MUDFONT VOID NES} {N NE W SE} {\u28BF}
+L {MUDFONT VOID NES} {          S} {\u2846}
+L {MUDFONT VOID NES} {N         S} {\u2847}
+L {MUDFONT VOID NES} {  NE      S} {\u284E}
+L {MUDFONT VOID NES} {N NE      S} {\u284F}
+L {MUDFONT VOID NES} {     W    S} {\u2876}
+L {MUDFONT VOID NES} {N    W    S} {\u2877}
+L {MUDFONT VOID NES} {  NE W    S} {\u287E}
+L {MUDFONT VOID NES} {N NE W    S} {\u287F}
+L {MUDFONT VOID NES} {       SE S} {\u28C6}
+L {MUDFONT VOID NES} {N      SE S} {\u28C7}
+L {MUDFONT VOID NES} {  NE   SE S} {\u28CE}
+L {MUDFONT VOID NES} {N NE   SE S} {\u28CF}
+L {MUDFONT VOID NES} {     W SE S} {\u28F6}
+L {MUDFONT VOID NES} {N    W SE S} {\u28F7}
+L {MUDFONT VOID NES} {  NE W SE S} {\u28FE}
+L {MUDFONT VOID NES} {N NE W SE S} {\u28FF}
+L {MUDFONT CURVED} {N E} {\u2818}
+L {MUDFONT CURVED} {S E} {\u28A0}
+L {MUDFONT CURVED} {S W} {\u2844}
+L {MUDFONT CURVED} {N W} {\u2803}
+L {UNICODE GRAPHICS} {NO DIAGONAL} { }
+L {UNICODE GRAPHICS} {SE} {\u2E0C}
+L {UNICODE GRAPHICS} {NE} {\u2E1D}
+L {UNICODE GRAPHICS} {SE NE} {>}
+L {UNICODE GRAPHICS} {SW} {\u2E0D}
+L {UNICODE GRAPHICS} {SE SW} {\u2E0C\u2E0D}
+L {UNICODE GRAPHICS} {NE SW} {\uFF0F}
+L {UNICODE GRAPHICS} {SE NE SW} {>\u2E0D}
+L {UNICODE GRAPHICS} {NW} {\u2E1C}
+L {UNICODE GRAPHICS} {SE NW} {\uFF3C}
+L {UNICODE GRAPHICS} {NE NW} {\u2E1D\u2E1C}
+L {UNICODE GRAPHICS} {SE NE NW} {>\u2E1C}
+L {UNICODE GRAPHICS} {SW NW} {<}
+L {UNICODE GRAPHICS} {SE SW NW} {\u2E0C<}
+L {UNICODE GRAPHICS} {NE SW NW} {\u2E1D<}
+L {UNICODE GRAPHICS} {SE NE SW NW} {><}
+L {UNICODE GRAPHICS} {D} {-}
+L {UNICODE GRAPHICS} {N} {\u2191}
+L {UNICODE GRAPHICS} {S} {\u2193}
+L {UNICODE GRAPHICS} {N S} {\u2502}
+L {UNICODE GRAPHICS} {U} {+}
+L {UNICODE GRAPHICS} {E} {\U01F806}
+L {UNICODE GRAPHICS} {W} {\U01F804}
+L {UNICODE GRAPHICS} {E W} {\u2500}
+L {UNICODE GRAPHICS} {ROOM L} {[}
+L {UNICODE GRAPHICS} {ROOM L CURVED} {(}
+L {UNICODE GRAPHICS} {ROOM R} {]}
+L {UNICODE GRAPHICS} {ROOM R CURVED} {)}
+
+
+
+
+T {} { } {}
+
+
+
+R {1}{0}{<068>}{@fStripBraces{A silent woodland}}{ }{Pale white streamers of fog snake through the forest, wrapping  their ethereal arms about the ancient trees.  The gentle moonlight  glimmers off the mist, causing it to glow eerily in the shadowy  wood.  Dark shapes play tricks on your eyes as you catch them from  the corner of your eye, only to find swirling mists where you  thought there was more.}{Necs}{{content}{{item}{{portal}{{name}{a wavering portal}}}{noun}{{boughs}{{name}{boughs}}{branches}{{name}{branches}}{evergreens}{{name}{evergreens}}{floor}{{name}{floor}}{fog}{{name}{fog}}{glow}{{name}{glow}}{ground}{{name}{ground}}{mist}{{name}{mist}}{mists}{{name}{mists}}{moon}{{name}{moon}}{moonlight}{{name}{moonlight}}{sky}{{name}{sky}}{streamers}{{name}{streamers}}{trees}{{name}{trees}}}}}{}{}{1.000}{}
+E {3}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {2}{portal}{.mapLink {Pinnacle/Fantasy} {718} {portal};}{0}{1}{}{1.000}{}{0.00}
+
+R {2}{0}{<000>}{LINK: Pinnacle/Fantasy}{<138>*}{}{Pinnacle/Fantasy}{{link}{}}{}{}{1.000}{}
+
+R {3}{0}{<178>}{A shadowed wood}{ }{A distant mournful howl sends a shiver down your spine as it  echoes through the dark maze of trees surrounding you.  The  rustling branches overhead block your view of the full moon  above, cloaking you in the darkness of the ancient forest.  Even  as you cast about for the source of the sound you realize that  your sense of direction has been lost among the maze of trees.}{Necs}{{content}{{noun}{{branches}{{name}{branches}}{moon}{{name}{moon}}{trees}{{name}{trees}}}}}{}{}{1.000}{}
+E {1}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {4}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {4}{0}{<178>}{@fStripBraces{A foreboding wilderness}}{ }{Tendrils of mist creep out from the darkness to curl about you.   The shadowy forest seems to close in about you, low branches  tugging at your clothes as you wander between the ancient trees.   Dark shapes flit by through the darkness, teasing your senses.   Warily you continue your way through the forest.}{Necs}{{content}{{noun}{{boughs}{{name}{boughs}}{branches}{{name}{branches}}{evergreens}{{name}{evergreens}}{floor}{{name}{floor}}{glow}{{name}{glow}}{ground}{{name}{ground}}{mist}{{name}{mist}}{moon}{{name}{moon}}{sky}{{name}{sky}}{trees}{{name}{trees}}}}}{}{}{1.000}{}
+E {3}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {5}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {6}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {7}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {5}{0}{<178>}{A Dark Keep}{ }{The path you are traveling comes to an abrupt end at the front gate to the Necromancer's Guild.  Directly to the north is a large keep with two towers, one to the east and the other to the west, that reach up to the heavens.  The dark stone walls of the keep emit an aura of power that you can feel course through your being.  A swirling mist intertwines itself around the trees of the forest and drifts up to the gated entrance, obscuring your vision through it.  You can 'restore' here if you have gobj issues.}{Necs}{{content}{{item}{{standard}{{name}{The Necromancers' Standard flying the Lich banner}}}{noun}{{bases}{{name}{bases}}{boughs}{{name}{boughs}}{branches}{{name}{branches}}{evergreens}{{name}{evergreens}}{floor}{{name}{floor}}{forest}{{name}{forest}}{gate}{{name}{gate}}{keep}{{name}{keep}}{mist}{{name}{mist}}{path}{{name}{path}}{sky}{{name}{sky}}{stone}{{name}{stone}}{tendrils}{{name}{tendrils}}{tower}{{name}{tower}}{towers}{{name}{towers}}{trees}{{name}{trees}}{walls}{{name}{walls}}}{npc}{{Raylorn}{{name}{Raylorn the Prime Necromancer (neutral)}}}}}{}{}{1.000}{}
+E {4}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {8}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {6}{0}{}{A silent woodland}{ }{A darting shadow flashes between the trees before disappearing  into the darkness once more.  Even as you turn to search the  darkness beneath the shadowy boughs you catch another movement  out of the corner of your eye.  The strange wood seems to be  alive about you, wrapping you in its aura of menace.}{}{}{}{}{1.000}{}
+E {4}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {149}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {150}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {151}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {7}{0}{}{An ominous wood}{ }{Tendrils of mist creep out from the darkness to curl about you.   The shadowy forest seems to close in about you, low branches  tugging at your clothes as you wander between the ancient trees.   Dark shapes flit by through the darkness, teasing your senses.   Warily you continue your way through the forest.}{}{}{}{}{1.000}{}
+E {4}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {181}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {182}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {183}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {8}{0}{<178>}{Guild Courtyard}{ }{The scent of jasmine flowers and others you are unaware of swirl around you, giving an aura of peace and tranquility to the garden.  The courtyard is overflowing with stately shrubs, trees, and exotic plants, all manicured to perfection.  There is a brick walkway leading through the garden, guiding you further into the depths of the keep.  An occasional young neophyte hustles past you, probably on their way to greater learning from the elders of the guild.}{Necs}{{content}{{item}{{bricks}{{name}{An exquisite brick walkway leading into the keep}}{points}{{name}{Many points of light sparkle beautifully above you}}}{noun}{{courtyard}{{name}{courtyard}}{flowers}{{name}{flowers}}{jasmine}{{name}{jasmine}}{necromancers}{{name}{necromancers}}{neophyte}{{name}{neophyte}}{neophytes}{{name}{neophytes}}{plants}{{name}{plants}}{shrubs}{{name}{shrubs}}}}}{}{}{1.000}{}
+E {5}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {10}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {11}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {9}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {9}{0}{}{Entrance Corridor}{ }{A long hallway leads north deeper into the guild.  Banners hang along the ceiling and tapestries line the dark gray granite walls.  The hallway is a flurry of activity.  Necromancers of every circle come and go paying little attention to you and continue on to complete their business.}{Necs}{{content}{{noun}{{banners}{{name}{banners}}{blocks}{{name}{blocks}}{energy}{{name}{energy}}{granite}{{name}{granite}}{hallway}{{name}{hallway}}{power}{{name}{power}}{streak}{{name}{streak}}{surface}{{name}{surface}}{tapestries}{{name}{tapestries}}{walls}{{name}{walls}}}}}{}{}{1.000}{}
+E {8}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {14}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {10}{0}{<178>}{A dark chamber}{ }{This rather large chamber abuts the courtyard to the east.  It is sparsely decorated, maintaining its focus to deliver candidates into the dark arts.  There are several young candidates milling about, deep in magical thought.  It is here that you begin your life as a Necromancer.}{}{}{}{}{1.000}{}
+E {8}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {12}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {11}{0}{<178>}{An ominous wood}{ }{A little more inconspicuous, this section of the garden shows less activity.  The path leading east is slightly overgrown with exotic plants and has very few foot prints on it.  The garden here is manicured, but not as exquisite as the main courtyard to the west.  There is a gate to the east leading back out into the forest.}{}{}{}{}{1.000}{}
+E {8}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {13}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {12}{0}{<178>}{A dark chamber}{ }{This room is dimly lit from several candelabras set in a circular pattern around the perimeter of the room.  In the center of the chamber is a small altar made of dark granite.  There are no other items in this chamber.}{}{}{}{}{1.000}{}
+E {10}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {13}{0}{}{An ominous wood}{ }{You pause to listen to the darkened wood.  Your own breathing  sounds in your ears with the light rustling of the leaves above.   Ahead of you a softly glowing moonbeam touches the forest floor,  shadows flickering through its eerie light.}{}{}{}{}{1.000}{}
+E {11}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {18}{se}{se}{6}{0}{}{1.000}{}{0.00}
+
+R {14}{0}{<178>}{Corridor}{ }{The long corridor branches off in three directions to the north.  The dark granite walls are cool to the touch and the s ounds of foot steps echo about you.  Periodically spaced down the hall are several claw-shaped sconces with glowing orbs of energy.  They cast a flickering light into the corridor, illuminating the area to make passage easier.}{Necs}{{content}{{noun}{{blocks}{{name}{blocks}}{condensation}{{name}{condensation}}{corridor}{{name}{corridor}}{drop}{{name}{drop}}{drops}{{name}{drops}}{energy}{{name}{energy}}{granite}{{name}{granite}}{hall}{{name}{hall}}{light}{{name}{light}}{orbs}{{name}{orbs}}{sconces}{{name}{sconces}}{surface}{{name}{surface}}{walls}{{name}{walls}}{water}{{name}{water}}}}}{}{}{1.000}{}
+E {9}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {15}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {16}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {17}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {15}{0}{<178>}{Corridor}{ }{You are on a side passageway off of the main corridor of the keep.  To the north the small passageway intersects with another main arterial inside the keep.  The walls are solid gray blocks of granite and they appear solid and sturdy.  A slight breeze brushes your face, sending a small shiver down your spine.}{}{}{}{}{1.000}{}
+E {14}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {21}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {16}{0}{<178>}{Idea room}{ }{This is the idea board room of the Necromancers' Guild. Please feel free to post any ideas you may have for the necromancer administration. Note: This is not a flame board! If this board is used as such it will be removed. This is your first and last warning.}{}{}{}{}{1.000}{}
+E {14}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {19}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {17}{0}{<178>}{Corridor}{ }{Footsteps echo down the corridor as you walk further along it.  The walls are constructed of gray granite blocks and an occasional sconce protrudes from them lighting your way.  Dark shadows flicker about the corridor and perform an ominous dance on the surface of the walls.  Periodically you see a streak of energy pulse along the surface of the wall, raising the hair on your body.}{Necs}{{content}{{noun}{{blocks}{{name}{blocks}}{claw}{{name}{claw}}{corridor}{{name}{corridor}}{energy}{{name}{energy}}{granite}{{name}{granite}}{pulse}{{name}{pulse}}{sconce}{{name}{sconce}}{sconces}{{name}{sconces}}{streak}{{name}{streak}}{surface}{{name}{surface}}{wall}{{name}{wall}}{walls}{{name}{walls}}}}}{}{}{1.000}{}
+E {14}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {20}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {18}{0}{<178>}{Forest Shelter}{ }{Strong smells waft from this section of the forest.  There are several different animals in small cages and bowls scattered around under a small shelter.  Amidst the wildlife, a kind old man shuffles about caring for them.  He seems to talk to some of the animals in a strange language you don't understand.}{}{}{}{}{1.000}{}
+E {13}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+
+R {19}{0}{<178>}{Corridor}{ }{The corridor runs east to the receiving room and west towards the western tower.  Down the southern corridor you see a chamber with a bulletin board.  The walls are barren and periodically a drop of condensation runs down them.}{Necs}{{content}{{noun}{{condensation}{{name}{condensation}}{corridor}{{name}{corridor}}{drop}{{name}{drop}}{surface}{{name}{surface}}{walls}{{name}{walls}}{water}{{name}{water}}}}}{}{}{1.000}{}
+E {16}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {20}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {23}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {20}{0}{<178>}{Receiving room}{<138>?}{This is the receiving room for the Necromancers' Guild.  It is a main gathering point for necromancers so it is lavishly furnished for comfort.  The main guild board is here for your perusal and you can type 'restore' if you have problems with your guild object.}{Necs}{{Receiving Room}{}{content}{{item}{{^The Necromancers' Tapestry honoring Dracula$}{{name}{The Necromancers' Tapestry honoring Dracula}}{board}{{name}{The Necromancers' Board containing 359 messages (no unread messages)}}{containing \d+ messages}{{name}{The Necromancers' Board containing 364 messages (no unread messages)}}{tapestry}{{name}{The Necromancers' Tapestry honoring Dracula}}}{noun}{{arch}{{name}{arch}}{block}{{name}{block}}{claws}{{name}{claws}}{corridor}{{name}{corridor}}{keystone}{{name}{keystone}}{light}{{name}{light}}{orbs}{{name}{orbs}}{rune}{{name}{rune}}}{npc}{{Pennywise the Valithyn}{{name}{Pennywise the Valithyn}}}}}{}{}{1.000}{}
+E {17}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {21}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {19}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {21}{0}{<178>}{Corridor}{ }{You are in a corridor that leads east to the eastern tower.  The solid block walls of the tower keep the dangers of the dark forest outside at bay, allowing the necromancers peace and quiet for studying their dark arts.  To the west you can make out the main boardroom of the guild.}{Necs}{{content}{{noun}{{block}{{name}{block}}{corridor}{{name}{corridor}}{keep}{{name}{keep}}{tower}{{name}{tower}}{walls}{{name}{walls}}}}}{}{}{1.000}{}
+E {15}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {20}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {22}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {22}{0}{<178>}{Antechamber to the Eastern Tower}{ }{There is a block arch set in the eastern wall that leads into the tower.  Etched into the keystone of the arch is a glowing rune that radiates a feeling of raw power which courses through your body.  A corridor continues off to the east lined with claw-shaped sconces.  The claws hold glowing orbs of light that illuminate the halls.}{Necs}{{content}{{noun}{{arch}{{name}{arch}}{block}{{name}{block}}{claws}{{name}{claws}}{corridor}{{name}{corridor}}{keystone}{{name}{keystone}}{light}{{name}{light}}{orbs}{{name}{orbs}}{rune}{{name}{rune}}}}}{}{}{1.000}{}
+E {21}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {37}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {23}{0}{<178>}{Antechamber to the Western Tower}{ }{There is a block arch set in the western wall that leads into the tower.  Etched into the keystone of the arch is a glowing rune that radiates a feeling of raw power which courses through your body.  A corridor continues off to the east lined with claw-shaped sconces.  The claws hold glowing orbs of light that illuminate the halls.}{Necs}{{content}{{noun}{{arch}{{name}{arch}}{block}{{name}{block}}{claws}{{name}{claws}}{corridor}{{name}{corridor}}{keystone}{{name}{keystone}}{light}{{name}{light}}{orbs}{{name}{orbs}}{rune}{{name}{rune}}}}}{}{}{1.000}{}
+E {19}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {24}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {24}{0}{<178>}{West Tower Annulus}{ }{This vast chamber has exits leading north and south that lead around the inside edge of the tower.  To your east is a large block arch that leads back into the entrance keep of the complex.  Necromancers of every circle push past you, busily tending to their business.}{Necs}{{content}{{noun}{{arch}{{name}{arch}}{block}{{name}{block}}{blocks}{{name}{blocks}}{chamber}{{name}{chamber}}{edge}{{name}{edge}}{keystone}{{name}{keystone}}{walls}{{name}{walls}}}}}{}{}{1.000}{}
+E {23}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {25}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {26}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {27}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {25}{0}{<178>}{West Tower Annulus}{ }{The hallway leads northwest around the outside edge of the west tower. The corridor is dimly lit and the air smells damp and stale.  You see an occasional piece of small ancient furniture along the outer edge of the corridor.}{}{}{}{}{1.000}{}
+E {24}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {30}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+
+R {26}{0}{<178>}{West Tower Annulus}{ }{The corridor is constructed from dark gray blocks of granite that have been fitted tightly together.  There are several tapestries hanging on the walls.  They help keep the hallway warm and reduce the noise created by people traveling down them.}{}{}{}{}{1.000}{}
+E {24}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {28}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+
+R {27}{0}{<178>}{Corridor}{ }{The dark blocks of cool granite push in on you from the north and south.  Voices and footsteps echo down the passage from your passing guild mates as you make your way through the west tower.  To the west you can make out a grand staircase leading up.}{Necs}{{content}{{noun}{{blocks}{{name}{blocks}}{granite}{{name}{granite}}{passage}{{name}{passage}}{staircase}{{name}{staircase}}{tower}{{name}{tower}}{walls}{{name}{walls}}}}}{}{}{1.000}{}
+E {24}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {41}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {28}{0}{<178>}{West Tower Annulus}{ }{The corridor wraps around the southeast part of the tower here.  There are several sconces spaced apart down the corridor providing dim light for you to navigate by.  The walls are cool, dropping the temperature here in the hall.  A small shiver runs down your spine.}{}{}{}{}{1.000}{}
+E {26}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {29}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+
+R {29}{0}{<108>}{}{ }{}{}{}{}{}{1.000}{}
+E {28}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+
+R {30}{0}{<178>}{West Tower Annulus}{ }{The granite block corridor curves around the eastern side of the west tower.  Several old unadorned tapestries hang here in an attempt to warm the hallway.  They also serve in dampening the echos from necromancers who travel the annulus.  Several sconces hang from the walls, illuminating the corridor in an eerie light.}{}{}{}{}{1.000}{}
+E {25}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {31}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+
+R {31}{0}{<178>}{West Tower Annulus}{ }{The corridor turns from the southeast to the northwest here.  Several magical lamps shaped into the likeness of griffin claws hang off of the walls, dimly lighting the chamber.  There is a slight breeze blowing past your face from some unknown source and the area is slightly cooler, probably from the lack of tapestries here.}{}{}{}{}{1.000}{}
+E {30}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {32}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {32}{0}{<178>}{West Tower Annulus}{ }{You are at the furthest northern point in the western tower.  The walls begin to curve to the south in both directions.  In the south wall sits a small wooden door.  It is closed and appears locked.  Your footsteps echo slightly off the floors as you make your way around the tower.}{}{}{}{}{1.000}{}
+E {31}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {33}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {34}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {33}{0}{<178>}{West Tower Annulus}{ }{The curving corridor seems a little more damp and cooler here.  On the exterior wall, small drops of condensation have formed.  They cling on to the cool wall, slowly drifting down to the ground.  Several sconces are attached to the walls.  They cast a dim light into the room and cause eerie shadows to dance around the corridor.}{}{}{}{}{1.000}{}
+E {32}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {35}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+
+R {34}{0}{<108>}{}{ }{}{}{}{}{}{1.000}{}
+E {32}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {35}{0}{<178>}{West Tower Annulus}{ }{This area in the corridor curves closer to the furthest west point.  The solid block walls of the chamber hold back any noise from inside the tower, but echos from footsteps and the sounds of scraping metal along the walls bounces off their hard surface.  A slight cool breeze brushes past your face, sending a small shiver down your spine.}{}{}{}{}{1.000}{}
+E {33}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {36}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+
+R {36}{0}{<108>}{}{ }{}{}{}{}{}{1.000}{}
+E {35}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+
+R {37}{0}{<178>}{East Tower Annulus}{ }{This vast chamber has exits leading north and south that lead around the inside edge of the tower.  To your west is a large block arch that leads back into the entrance keep of the complex.  Necromancers of every circle push past you, busily tending to their business.}{}{}{}{}{1.000}{}
+E {22}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {38}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {39}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {40}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {38}{0}{<178>}{East Tower Annulus}{ }{You are in a long curved corridor that appears to wrap around the outside edge of the eastern tower.  There is an occasional tapestry hung on the wall, probably to muffle the echoing sounds that bounce down the granite corridors.}{}{}{}{}{1.000}{}
+E {37}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {94}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+
+R {39}{0}{<178>}{East Tower Annulus}{ }{The annulus curves to the southeast, leading around the eastern tower. A slight breeze blows past your face, emanating from some unknown source.  The gray block walls of the corridor have several tapestries that hang on them, warming the room and reducing the echos.}{}{}{}{}{1.000}{}
+E {37}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {113}{se}{se}{6}{0}{}{1.000}{}{0.00}
+
+R {40}{0}{<158>}{The Ancient Archives}{<138>?}{}{}{{Scroll Archives}{}{special}{}}{}{}{1.000}{}
+E {37}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {41}{0}{<178>}{Stairwell}{ }{An exquisite oak staircase leads up and down to other floors of the tower.  There are claw-shaped sconces holding magical orbs of light illuminating the chamber.  A cool breeze flows in from the chamber below, slightly brushing past your face and cools the chamber.}{Necs}{{content}{{noun}{{center}{{name}{center}}{chamber}{{name}{chamber}}{claw}{{name}{claw}}{floors}{{name}{floors}}{light}{{name}{light}}{oak}{{name}{oak}}{orbs}{{name}{orbs}}{sconces}{{name}{sconces}}{staircase}{{name}{staircase}}{up}{{name}{up}}}}}{}{}{1.000}{}
+E {27}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {42}{u}{u}{16}{0}{}{1.000}{}{0.00}
+E {43}{d}{d}{32}{0}{}{1.000}{}{0.00}
+E {44}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {45}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {46}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {42}{0}{<178>}{Second Floor Landing}{ }{The stairwell opens up to a small landing here on the second floor.  Several young necromancers hustle past you, their footsteps echoing off the hard surface of the floor as they travel the stairwell.  The landing leads off to the west and the oak stairwell leads up and down from here.}{}{}{}{}{1.000}{}
+E {41}{d}{d}{32}{0}{}{1.000}{}{0.00}
+E {68}{u}{u}{16}{0}{}{1.000}{}{0.00}
+E {69}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {43}{0}{<178>}{Catacombs}{ }{The dark corridor runs east and west into the depths of the tower.  Alcoves line the walls and preserved corpses of the necromancer's mortal enemies fill them.  An oak stairwell leads back up to the first floor of the tower.}{}{}{}{}{1.000}{}
+E {41}{u}{u}{16}{0}{}{1.000}{}{0.00}
+E {48}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {49}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {44}{0}{<178>}{Spiritvault Room}{ }{This dimly lit simple room inside the keep's tower appears to serve one purpose.  It houses a dark obsidian vault.  The vault rests atop a smooth stone dais and is illuminated from two small sconces which hang on the walls.}{}{}{}{}{1.000}{}
+E {41}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {45}{0}{<178>}{Necromancers' Library}{<138>?}{The great room which lies before you is the Great Library of the Necromancers' guild.  Thousands of books line the shelves and fill the tables.  Each volume contains instructions in the weaving of the various powers of the Necromancer.  You see a few other necromancers here furiously committing their powers to memory.  You know that most of the powers that a necromancer can wield can be found in the many tomes.  To study a specific power and commit it to memory, simply type 'study <power>' where <power> is the name of the power you wish to memorize.  Remember the basic rule though: You only have a finite number of empty memory globes which hold your powers.  Once filled, you must wait for your necromantic artifact to run its guild cycle before you can memorize more.  You can also add a number onto the end of the command to make it easier to study many powers at once.  An example of this would be 'study sense 4' Your reagents are used to prepare the power, you must have them now.}{Necs}{{Study room}{}{content}{{noun}{{books}{{name}{books}}{shelves}{{name}{shelves}}}{npc}{{Lynda}{{name}{Lynda the librarian (neutral)}}}}}{}{}{1.000}{}
+E {41}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {46}{0}{<178>}{Equipment Room}{<138>?}{The Necromancer's Equipment Room  This is the equipment room for the Necromancers' guild. You may donate items for the guild's betterment by using the command 'donate <item>'  This will then allow other necromancers to get the item at no cost.  To get an item from Theela's stores, use the command 'borrow <item #>'  There is also a plaque here for you to read.}{Necs}{{Equipment room}{}{content}{{item}{{trashcan}{{name}{A Trashcan}}}{noun}{{plaque}{{name}{plaque}}}{npc}{{Theela}{{name}{Theela the Necromancer (moral)}}}}}{}{}{1.000}{}
+E {41}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {47}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {47}{0}{<178>}{Donation Storage Room}{ }{This wide open room is a place for wealthier necromancers to drop off donations meant for their younger members.  The room is void of any decorations and furniture.  Your footsteps reverberate off the stone walls.}{Necs}{{content}{{noun}{{room}{{name}{room}}}}}{}{}{1.000}{}
+E {46}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {48}{0}{<178>}{Catacombs}{<138>?}{A lethal stench of death fills your nose as it mingles in the chilled air.  As you glance around you notice that the walls are honeycombed\; each seems big enough to hold a decent sized corpse.  The corridor exits in four directions on this level, and a small stairwell leads further down into the tower.}{}{{Duncan}{}{crypt}{}}{}{}{1.000}{}
+E {43}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {50}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {51}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {52}{d}{d}{32}{0}{}{1.000}{}{0.00}
+E {53}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {49}{0}{<178>}{Stairwell}{ }{The dark catacomb continues on in the depths of the necromancer's guild.  Small openings line the walls and are stuffed full of preserved corpses, donated by fellow necromancers for all to use.  A cool breeze, its source you are unsure of, gently blows down the corridor.}{}{}{}{}{1.000}{}
+E {43}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {65}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {50}{0}{<178>}{Catacombs}{ }{The corridor runs southwest from here.  The smell of rotting flesh assaults your nose.  The odor appears to come from the southwest and smells like left over flesh decaying off half-eaten bones.  You notice clumps of hair stuck into the jagged edges of the wall.}{}{}{}{}{1.000}{}
+E {48}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {57}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+
+R {51}{0}{<178>}{Catacombs}{ }{The corridor runs to the northwest and the coppery smell of fresh, wet blood clings to the air.  A single lamp hangs from the arched ceiling by a wrought iron chain.  An aura of power emanates down the corridor from the northwest and sends a chill up your spine.}{}{}{}{}{1.000}{}
+E {48}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {54}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+
+R {52}{0}{<178>}{An ancient crypt}{ }{The stair landing opens up to a large underground cavern.  A path carved out of the bedrock narrowly leads west and northeast along side the seemingly endless cavern.  A cool bone-chilling breeze gently blows up from the depths of the cavern, cooling the atmosphere around you.}{}{}{}{}{1.000}{}
+E {48}{u}{u}{16}{0}{}{1.000}{}{0.00}
+E {55}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {56}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {53}{0}{<178>}{Catacombs}{ }{A cool breeze brushes past your face as you continue along the long dank hall.  The origin of the breeze is a mystery, as you have seen no openings to the outside.  The honeycombed openings along the walls are packed full of preserved corpses.}{}{}{}{}{1.000}{}
+E {48}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {61}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {54}{0}{<178>}{Catacombs}{ }{The coppery stench of fresh blood is much stronger in this area of the corridor.  A single gothic-styled lamp casts dim light into the hall providing just enough to travel by.  The source of the blood must be to the northeast.}{}{}{}{}{1.000}{}
+E {51}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {353}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+
+R {55}{0}{<178>}{Cavern}{ }{The stale musty air of the cavern hangs heavy around you.  A slight breeze blowing up the cavern pushes the heavy air slowly across your form.  The cavern wall leads north, wrapping itself around the vast canyon to your west.}{}{}{}{}{1.000}{}
+E {52}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {174}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {56}{0}{<178>}{Cavern}{ }{The dank stale air welling up from the depths of the cavern assaults your senses.  Breathing deeply, a sense of wellbeing and power courses through your bones.  The path continues to the west, into a small chamber carved into the bedrock.}{}{}{}{}{1.000}{}
+E {52}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {178}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {57}{0}{<178>}{Catacombs}{ }{Torches cast flickering shadows on the walls as you make your way through the stench-filled corridor.  The obvious smell of decaying flesh is coming from the adjacent room to the southeast.  You can see several splatters of dried blood on the floor and they appear to get worse to the southeast.}{}{}{}{}{1.000}{}
+E {50}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {58}{se}{se}{6}{0}{}{1.000}{}{0.00}
+
+R {58}{0}{<178>}{Catacombs}{ }{The smell of rotting corpses hits you in a wave.  The odor defiantly comes from the south and smells like left over flesh decaying off half-eaten bones.  You notice clumps of hair stuck into the jagged edges of the wall.}{}{}{}{}{1.000}{}
+E {57}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {59}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {59}{0}{<178>}{Stairwell}{ }{The smell of decay is defiantly overpowering here.  At your feet lies the badly mangled corpse of some unidentifiable creature.  Several torches line the walls, illuminating an old wooden staircase that appears to lead up to the forest outside the tower.}{}{}{}{}{1.000}{}
+E {58}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {60}{u}{u}{16}{0}{}{1.000}{}{0.00}
+
+R {60}{0}{<108>}{}{ }{}{}{}{}{}{1.000}{}
+E {59}{d}{d}{32}{0}{}{1.000}{}{0.00}
+
+R {61}{0}{<178>}{Catacombs}{ }{The chilled dimmly lit corridor of the catacombs continues on below the floors of the western tower.  Corpses line the walls, stored in their eternal coffins awaiting their use by necromancers of every level.  On the north and south walls you see two openings, each protected by a cloak of energy barring your passage.}{}{}{}{}{1.000}{}
+E {53}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {64}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {62}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {63}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {62}{0}{<108>}{}{ }{}{}{}{}{}{1.000}{}
+E {61}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {63}{0}{<108>}{}{ }{}{}{}{}{}{1.000}{}
+E {61}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {64}{0}{<178>}{Dark Crypt}{ }{You stand in a dark and silent stone room beneath the ancient halls of the Necromancer's Guild.  The air here is smoky and black, making the entire room seem to flicker with shadows. On the east and west walls, two lonely torches burn quietly in their sconces, their pale, golden light barely flickering through the unnatural darkness.  In the center of the room, on a cold iron stand, lies a dark book.  The shadowy tome lies open, letting all who look gaze upon whatever demonic script may be scrawled upon the ancient pages within. This is an unholy place, one filled with a venomous fear but also with a strange feeling of knowing.}{}{}{}{}{1.000}{}
+E {61}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {65}{0}{<178>}{Stairwell}{ }{The corridor ends here at the top of an old wooden staircase that leads down.  Two sickles hang on the wall over the stairwell with their blades crossed.  The air is musty and you feel the presence of death welling up from below.}{}{}{}{}{1.000}{}
+E {49}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {66}{d}{d}{32}{0}{}{1.000}{}{0.00}
+
+R {66}{0}{<178>}{Shrine to Silthos, the Master Reaper}{ }{You have entered a dark granite room dominated by a statue of Silthos, the Master Reaper, set into the northern wall.  The great Reaper wears a night-black cloak which flows down from his shoulders where he hovers above a niche in the northern wall.  The wing-like extensions of his cloak pour down like liquid darkness around the entrance to the shrine itself.  Pale, flickering columns of hellfire occupy the corners of the room.  By their light, you discern that the high vaulted ceiling and each wall is covered with bas relief carvings of hourglasses and scythes.  White gravemist surrounds the stairwell leading down.  To begin the journey in becoming a minion of death, type 'begin <name>' where <name> is the name of your sponsoring reaper.  To seal the pact with Death upon returning from the underworld, a sponsoring reaper must 'deliver <name>' to the arms of death. }{}{}{}{}{1.000}{}
+E {65}{u}{u}{16}{0}{}{1.000}{}{0.00}
+E {67}{d}{d}{32}{0}{}{1.000}{}{0.00}
+
+R {67}{0}{<178>}{Mist Filled Stairwell}{ }{}{}{}{}{}{1.000}{}
+E {66}{u}{u}{16}{0}{}{1.000}{}{0.00}
+E {346}{d}{d}{32}{0}{}{1.000}{}{0.00}
+
+R {68}{0}{<178>}{Third Floor Landing}{ }{The oak stairwell comes to an end here on the third floor of the tower.  Two dim corridors lead deeper into the guild keep, one to the north and the other to the west.  There is a small sconce attached to the granite block wall.  It provides dim light to navigate by and casts unique shadows into the landing.}{}{}{}{}{1.000}{}
+E {42}{d}{d}{32}{0}{}{1.000}{}{0.00}
+E {77}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {78}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {69}{0}{<178>}{Corridor Intersection}{ }{You have come to a four way intersection in the corridor.  The granite block passageways are narrow and you bump shoulders with other necromancers as you go about your business.  A wall sconce provides a little light and shadows uncannily dance along the walls of the corridors.}{}{}{}{}{1.000}{}
+E {42}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {70}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {71}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {72}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {70}{0}{<178>}{Corridor Intersection}{ }{The northern corridor of this floor is constructed from dark gray blocks of granite.  The granite is covered with several unattractive cloth tapestries.  They seem to hold some heat into the corridor and muffle the echos created by you and other necromancers.  A single sconce hangs on the wall, providing dim light for you to travel by.}{}{}{}{}{1.000}{}
+E {69}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {73}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {71}{0}{<178>}{Tower Corridor}{ }{The southern corridor of this floor ends at the chamber to your south. You see a single sconce on the wall and it provides little light.  The corridor is dim and ghastly shadows play on the walls before you.  The walls are constructed from dark gray granite and there are a few cloth tapestries hanging from them.  They seem to warm the room slightly and they reduce the echoing from your footfalls.}{}{}{}{}{1.000}{}
+E {69}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {75}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {72}{0}{<178>}{Tower Corridor}{ }{The short corridor leading from the stairwell seems to end in the next chamber to the west.  The block walls of the corridor are made from a dark gray granite.  There are two small tapestries hanging on the walls, one on the northern wall and the other on the southern.  They are just patterned wall coverings, probably to keep the corridor warm and to muffle the footfalls of the many necromancers who pass through.}{}{}{}{}{1.000}{}
+E {69}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {76}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {73}{0}{<128>}{Transaction room}{<138>$}{Here is where necromancers come to manage their monetary transactions and donate funds to the guild.  By donating coinage, the necromancer increases his or her worth while advancing their class. You can also do all of your other financial and banking transactions here.}{}{{atm}{}}{}{}{1.000}{}
+E {70}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {74}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {74}{0}{<178>}{Tithe Chamber}{ }{You stand in a small circular chamber deep inside the tower.  In the center of the room is a small marble dais with a solid gold bowl resting on top of it.  The rest of the chamber is empty and you notice a message etched into the front of the dais.}{}{}{}{}{1.000}{}
+E {73}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {75}{0}{<178>}{The chronicles room}{ }{This is the great store of guild chronicles.  Shelves around you are lined with the scrolls recording personal commentaries by high necromancers. Here you may list all the chronicles that have been written, read a particular one, or make changes to your personal one.    The following commands are available:    list        - Lists all the currently existing chronicles   list <name> - Displays <name>'s chronicle   record      - edits your own personal chronicle (necrolords only) }{}{}{}{}{1.000}{}
+E {71}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {76}{0}{<178>}{Tower Corridor}{<138>?}{This room smells of incense and exotic spices.  There are beautiful sounds as well as smells wafting about the room.  Over behind the counter is an old man that gives you a cheery smile as you walk in.  There is a sign on the counter which you may read.}{}{{Bray the alchemist}{}{reagent room}{}}{}{}{1.000}{}
+E {72}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {77}{0}{<178>}{Tower Corridor}{ }{The dimly lit long corridor leads north into the depths of the tower.  The walls are made from gray granite blocks with very thin lines of mortar holding them strongly together.  There are several sconces attached to the walls providing a little light to travel by.}{}{}{}{}{1.000}{}
+E {68}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {91}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {78}{0}{<178>}{Tower Corridor}{ }{The long corridor runs deeper into the tower to the west.  The hall is dimly lit by a single sconce which is attached to the corridor's wall. The walls of the passageway are built close together, giving you a small sense of claustrophobia.  You hear the distant sound of footsteps echoing off the block granite walls.}{}{}{}{}{1.000}{}
+E {68}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {79}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {79}{0}{<178>}{Tower Corridor}{ }{The long corridor continues in an east to west direction.  The walls stand tight together making traveling down them somewhat difficult.  There are several tapestries hung here on both the northern and southern walls.  They seem to depict scenes of other necromancer towers and keeps throughout the realms.}{}{}{}{}{1.000}{}
+E {78}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {80}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {80}{0}{<178>}{Tower Corridor}{ }{The sound of footsteps reverberates down the long stone corridor from some unknown source.  You can see that the corridor ends at a stairwell leading up to the west of here.  The walls of the passageway have been built close together, making travel somewhat difficult.}{}{}{}{}{1.000}{}
+E {79}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {81}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {81}{0}{<178>}{Stairwell}{ }{Here at the west end of the corridor two small chambers open up, one to the north and the other to the south.  A small staircase leads up to the next level of the tower.  The walls in this part of the corridor are made from polished black marble.  The marble has wispy threads of gray floating in it and has no scratches or chips in it.  On one part of the wall you notice a small glowing rune has been etched in.  There are several sconces here casting glittering light into the room.}{}{}{}{}{1.000}{}
+E {80}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {82}{u}{u}{16}{0}{}{1.000}{}{0.00}
+E {83}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {84}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {85}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {82}{0}{<178>}{Necromancer Atheneum}{ }{The entry way to the atheneum is constructed out of black marble that has wispy threads of gray in it.  The vaulted ceiling soars high above your head and gothic-styled arches span the length of it.  Gold-leaved patterns decorate the edges of the ceiling.  The gold seems to sparkle and reflect light from some unknown source.   There are two doors here, one leading north and the other south.  Three corridors open up to the east and lead deeper into the library.}{}{}{}{}{1.000}{}
+E {81}{d}{d}{32}{0}{}{1.000}{}{0.00}
+E {86}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {87}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {88}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {90}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {89}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {83}{0}{<128>}{Guild shop}{<138>S}{This is the magic shop for the Necromancer's Guild. The shopkeeper, Mrystyl, has many trinkets and items of value for sale here.  To see what's available, read the sign on the counter here.}{}{{stall}{}}{}{}{1.000}{}
+E {81}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {84}{0}{<178>}{Necromancer level advancement room}{ }{This is the level advancement room of the Necromancers' guild.  Here is where you come to advance your normal levels and stats and find out about quests.  To advance your circle, you must go to Pyool in the meditation room off of the Necromancer Athenum.  There's a small placard here. Commands: advance [level,str,con,int,wis,dex,cha]           cost, tally, required, questansi,           list [name -or- # -or- short] }{}{}{}{}{1.000}{}
+E {81}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {85}{0}{<178>}{Necromancer VAF Singularity}{ }{Bright sconces light up the cozy room that lies before you.  Tapestries line the walls and plush rugs adorn the floor at your feet.  In the center of the room, floating gently about waist-high, a softly glowing sphere of blue light about the size of an apple has taken up residence.  It is here that you can tap into the energies of the VAF and engage Necromantic uniqueness as a result.  Said another way, this is the place where you can choose to spend your VAF credits on Necromancer-specific perks.  To view the available Necromancer VAF perks, as well as your currently selected perks, type 'info vafs'  To select a particular perk, or perk package, type 'select <name>'  Note: Selecting a perk that expires while you still have some left in the current perk will clear out the existing perk.  For example, if you select a year-expiring perk, and still have a month left in that same perk, the resulting perk will expire in one year.  Note: If you select perks (either individually or in a package) that result in unlimited uses, it will replace any corresponding perks that you have remaining individual uses for.  For example, if you have one remaining Spell Star Reset perk to use, selecting the Unlimited Spell Star Reset perk will clear it out.  Note: If you select a package and already have Necromancer perks active within that package, they will either be refreshed (in the case of expiring perks), replaced (in the case of unlimited perks overriding individual perks) or simply ignored (in the case of permanent perks).  If you have any questions, it's best to ask first, as VAF selections are not refundable once chosen.}{}{}{}{}{1.000}{}
+E {81}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {86}{0}{<178>}{Edged Atheneum}{ }{This room is part of a succession of small libraries that lead to the main spell school study chambers.  There are several elaborate oak bookshelves built along the southern wall.  They contain many ancient tomes and books, mostly relating to the necromancer spell school of Edged.  The walls here are not marble, like the beginning of the Atheneum.  They are made from blocks of hard gray granite.  Several sconces line the wall providing dim light to walk by.}{}{}{}{}{1.000}{}
+E {82}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {129}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {130}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {87}{0}{<178>}{A Silent Chamber}{ }{Tall ornately carved wooden bookshelves stand along the northern wall of this chamber.  The shelves are extremely dusty and you see several tomes related to the spell school Lightning and its uses in necromancer spell casting.  Several sconces line the walls, illuminating the room and you see a smaller chamber off to the south.}{}{}{}{}{1.000}{}
+E {82}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {144}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {147}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {88}{0}{<178>}{Meditation room}{<138>?}{You are in the meditation room of the Necromancers' Guild.  The small room is in a hushed silence.  You come here to meditate and advance to the next circle of study.  Pyool, the guild master will advance you if you have enough guild experience.  To do so, type 'meditate.'  There is a door here that leads east.}{}{{Meditiation Room}{}{Pyool the ancient}{}}{}{}{1.000}{}
+E {82}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {148}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {89}{0}{<108>}{}{ }{}{}{}{}{}{1.000}{}
+E {82}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {90}{0}{<108>}{}{ }{}{}{}{}{}{1.000}{}
+E {82}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {91}{0}{<178>}{Tower Corridor}{ }{The long granite corridor comes to an end here.  To the north, an arched double door opens up to a vaulted chamber.  Light pours out from the doors illuminating the corridor in front of you.  Shadows play on the walls and floor from the light ahead of you, mesmerizing your mind.}{}{}{}{}{1.000}{}
+E {77}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {92}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {92}{0}{<068>}{Shrine to Rachlan the Pure Necromancer}{<138>?}{The arched double doors open up into a vaulted shrine of immense proportions. Muraled windows depicting various scenes of necromantic history are spaced along either side of the walls, casting multicolored shadows and lights through out the room.  On either side of the door are rows of pews with comfortable, though faded, padding, with deep carpeting lining the center path.  On the far end, lies a small altar that shimmers and shifts as it phases through the material planes of energy.  Sparks of white and black energy leap from the altar. Sometimes those sparks randomly touch, setting off a brief red flare. Standing over the altar, on a throne-like chair, sits the lord of all pure necromancers, Rachlan.  To begin the ceremony, type 'begin <name>' where <name> is the name of your sponsoring Pure Necromancer.}{Necs}{{Rachlan the Pure Necromancer}{}{content}{{item}{{^A misty curtain$}{{name}{A misty curtain}}{^A swirling portal$}{{name}{A swirling portal}}{containing \d+ messages}{{name}{The Pure Necromancer's board containing 80 messages (no unread messages)}}}{noun}{{altar}{{name}{altar}}{carpeting}{{name}{carpeting}}{chair}{{name}{chair}}{energy}{{name}{energy}}{lights}{{name}{lights}}{lord}{{name}{lord}}{pews}{{name}{pews}}{planes}{{name}{planes}}{rows}{{name}{rows}}{shadows}{{name}{shadows}}{shrine}{{name}{shrine}}{sparks}{{name}{sparks}}{windows}{{name}{windows}}}{npc}{{^Rachlan the Pure Necromancer \x28pure\x29$}{{name}{Rachlan the Pure Necromancer (pure)}}}}}{}{}{1.000}{}
+E {91}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {93}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {362}{n}{portal}{1}{0}{}{1.000}{}{0.00}
+
+R {93}{0}{<178>}{A pulsing trophy room}{ }{You have arrived in a simple stone room.  The walls are made from a light yellow stone, which dimly pulses with all the colours of the spectrum.  Fuller illumination is provided by small orbs of light hanging from the walls.  Here, you can admire the accomplishments of other pure necromancers.}{}{}{}{}{1.000}{}
+E {92}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {94}{0}{<178>}{East Tower Annulus}{ }{The corridor opens up to a small intersection.  A hallway branches off to the southeast leading further towards the center of the eastern tower.  Several sconces line the hallways, illuminating the corridor as you travel along it.  A small breeze blows past your face from some unknown source inside the guild.}{}{}{}{}{1.000}{}
+E {38}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {95}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {96}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+
+R {95}{0}{<178>}{Winding Staircase}{ }{The corridor you're in appears to end to your southeast at a large winding staircase.  The walls here are covered with heavy tapestries that suppress noise and seem to keep the area warmer.  There is a sconce on the wall that is a bit different from the rest.  The exit to the northwest leads back to the east tower annulus.}{}{}{}{}{1.000}{}
+E {94}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {97}{se}{se}{6}{0}{}{1.000}{}{0.00}
+
+R {96}{0}{<178>}{East Tower Annulus}{ }{You are rounding the northern end of the east tower.  The dark blocks of granite making up the walls are beginning to mezmerize you as you walk in a circle around the tower.  The area to the east appears to be less frequented as you see fewer and fewer necromancers passing you.}{}{}{}{}{1.000}{}
+E {94}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {100}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {97}{0}{<178>}{Winding Staircase}{ }{The corridor ends here at a staircase that winds up into the tower.  There are several sconces here illuminating the room in a soft, flickering light.  The walls are made from blocks of dark gray granite and they have heavy tapestries hanging from them.  An occasional necromancer hustles past, paying you no attention.}{}{}{}{}{1.000}{}
+E {95}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {98}{u}{u}{16}{0}{}{1.000}{}{0.00}
+E {99}{d}{d}{32}{0}{}{1.000}{}{0.00}
+
+R {98}{0}{<178>}{Winding Staircase}{ }{The stone staircase winds up and down the center of the tower.  There is a small landing here with exits leading southwest and southeast.  Sconces line the stairwell and heavy tapestries hang along the walls muffling your footsteps as you walk along the stone stairwell.}{Necs}{}{}{}{1.000}{}
+E {97}{d}{d}{32}{0}{}{1.000}{}{0.00}
+E {114}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {115}{u}{u}{16}{0}{}{1.000}{}{0.00}
+E {116}{se}{se}{6}{0}{}{1.000}{}{0.00}
+
+R {99}{0}{<178>}{Stairwell}{ }{You are in a small landing in the lower level of the eastern tower.  There are several sconces attached to the walls providing some light to travel by.  The walls rise up, following the stairwell back up to the next level.  They are constructed from blocks of gray granite.  To the north you see that a chamber opens up with a board in it.}{}{}{}{}{1.000}{}
+E {97}{u}{u}{16}{0}{}{1.000}{}{0.00}
+E {348}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {100}{0}{<178>}{East Tower Annulus}{ }{You stand at what you believe is the furthest north area of the east tower annulus.  There are a few sconces placed along the walls to illuminate your travels and several old tapestries hang from the walls.  To your south is a large wooden door.  It appears to be quite sturdy and has a keyhole near the handle.}{}{}{}{}{1.000}{}
+E {96}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {101}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {102}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {101}{0}{<108>}{}{ }{}{}{}{}{}{1.000}{}
+E {100}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {102}{0}{<178>}{East Tower Annulus}{ }{The corridor turns from the west to the southeast here.  The dimly lit hall is slightly illuminated by several sconces which are attached to the granite block walls.  Your footsteps echo softly off the hard floor as you make your way through the annulus.}{}{}{}{}{1.000}{}
+E {100}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {103}{se}{se}{6}{0}{}{1.000}{}{0.00}
+
+R {103}{0}{<178>}{East Tower Annulus}{ }{The hallway continues on around the northeast side of the tower.  There are tapestries hanging here depicting necromancers meeting at a large table.  The cloth tapestries glow eerily in the pulsating light of the clawed sconces.  A slight breeze brushes past your face from some unknown source inside the guild.}{}{}{}{}{1.000}{}
+E {102}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {104}{se}{se}{6}{0}{}{1.000}{}{0.00}
+
+R {104}{0}{<178>}{East Tower Annulus}{ }{You are nearing the eastern section of the tower annulus.  The dark granite walls are barren here and you see some condensation built up on the exterior wall.  The corridor is lighted by several sconces which are attached to the walls.  You feel a draft and are unsure of its source.}{}{}{}{}{1.000}{}
+E {103}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {105}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {105}{0}{<178>}{East Tower Annulus}{ }{You stand at the furthest east point in the tower annulus.  Along the exterior wall of the tower, tiny droplets of water form.  There is a small wooden door to the west that is closed.  Below its handle you see a small keyhole.}{}{}{}{}{1.000}{}
+E {104}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {106}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {107}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {106}{0}{<178>}{East Tower Annulus}{ }{The corridor bends from the southwest to the north here.  Small beads of condensation have formed on the exterior wall.  As you walk down the corridor your footsteps echo off the block walls and floor.  Very few necromancers pass you in this secluded area of the tower.}{}{}{}{}{1.000}{}
+E {105}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {108}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+
+R {107}{0}{<108>}{}{ }{}{}{}{}{}{1.000}{}
+E {105}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {108}{0}{<178>}{East Tower Annulus}{ }{The corridor wraps around the southeast part of the tower here.  There are several sconces spaced apart down the corridor providing dim light for you to navigate by.  The walls are cool, dropping the temperature here in the hall.  A small shiver runs down your spine.}{}{}{}{}{1.000}{}
+E {106}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {109}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+
+R {109}{0}{<178>}{East Tower Annulus}{ }{The annulus curves from the southwest to the northeast, making you dizzy as you navigate around the tower.  The walls are covered with old tapestries.  They seem to warm the corridor up slightly and reduce the echos from peoples footsteps as they travel the corridor.}{}{}{}{}{1.000}{}
+E {108}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {110}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {110}{0}{<178>}{East Tower Annulus}{ }{You are at the furthest south point in the eastern tower.  The walls begin to curve to the north in both directions.  In the north wall sits a small wooden door.  It is closed and appears locked.  Your footsteps echo slightly off the floors as you make your way around the tower.}{}{}{}{}{1.000}{}
+E {109}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {111}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {112}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {111}{0}{<108>}{}{ }{}{}{}{}{}{1.000}{}
+E {110}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {112}{0}{<178>}{East Tower Annulus}{ }{The walls of the corridor curve northwest around the western edge of the tower.  The walls and floor are constructed from blocks of dark gray granite.  They appear extremely solid and indestructible.  A slight breeze blows against your face as you make your way through the annulus of the eastern tower.}{}{}{}{}{1.000}{}
+E {110}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {113}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+
+R {113}{0}{<178>}{East Tower Annulus}{ }{The solid block walls of the tower are covered with several tapestries.  The tapestries have images of several old necromancer towers on them.  Small echoing sounds emanate from your footsteps as you travel along the corridor.  Sounds of bustling guild life come from the northwest}{}{}{}{}{1.000}{}
+E {112}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {39}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+
+R {114}{0}{<178>}{Members room}{ }{This is a resting room for members of the Necromancers' guild.  The room has a few comfortable sofas and chairs to relax upon.  The high-guild chambers are to the southwest and only members of darklord status and above may enter.  A wet bar is here also and you may order anything you like.}{Necs}{}{}{}{1.000}{}
+E {98}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {117}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+
+R {115}{0}{<068>}{Stairwell}{ }{You are at the top of a large granite stairwell.  The large dark granite steps lead down into the depths of the tower.  There is a large shimmering door to your north and some type of magical field to your south.  The corridor continues off to the southwest and southwest.}{Necs}{}{}{}{1.000}{}
+E {98}{d}{d}{32}{0}{}{1.000}{}{0.00}
+E {119}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {120}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {121}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {122}{n}{unlock door}{1}{0}{}{1.000}{}{0.00}
+
+R {116}{0}{<178>}{A dim corridor}{ }{The dark stone corridor continues on into the depths of the tower.  To the southeast lies a flickering curtain of pure energy, blocking any details behind it.  There are two sconces here, one on each wall.  They cast an eerie artificial light into the hall.}{Necs}{}{}{}{1.000}{}
+E {98}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {118}{se}{se}{6}{0}{}{1.000}{}{0.00}
+
+R {117}{0}{<178>}{Lord Room}{ }{This room is only available to the lords and ladies of the  Necromancers' guild.  The room is lavishly furnished and there are couches to lie upon and overstuffed chairs to sit upon.  A fireplace lies against the west wall and there is a bar set up at the northern end of the room.}{Necs}{}{}{}{1.000}{}
+E {114}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+
+R {118}{0}{<108>}{}{ }{}{}{}{}{}{1.000}{}
+E {116}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+
+R {119}{0}{<178>}{Advocate Antechamber}{ }{This small comfortable chamber is the foyer to the Guild Advocate's chambers.  The walls are covered with tapestries and paintings depicting various necromancers throughout the ages.  There is a heavy wooden door blocking your way to the southwest.  The door is solid and you can here no sounds coming from the other side.}{Necs}{}{}{}{1.000}{}
+E {115}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {123}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+
+R {120}{0}{<178>}{Apprentice Antechamber}{ }{This small serene chamber before the Apprentice Guild Masters chamber is lavishly decorated with heavy tapestries on the walls and lush rugs on the floor.  There is a large wooden door set into the wall to the southeast that appears locked.  An electrical charge or mysterious form of magic radiates from the other side of the door raising the hair on your body.}{Necs}{}{}{}{1.000}{}
+E {115}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {126}{se}{se}{6}{0}{}{1.000}{}{0.00}
+
+R {121}{0}{<178>}{Corridor}{ }{You are on a side passageway off of the main corridor of the keep.  To the north the small passageway intersects with the corridor leading to the Guild Advocate and Guild Apprentice's suites.  The walls are solid gray blocks of granite and they appear solid and sturdy.  A slight breeze brushes your face, sending a small shiver down your spine.}{Necs}{}{}{}{1.000}{}
+E {115}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {124}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {122}{0}{<068>}{Dark Passageway}{ }{A long unlit passage runs north deeper into the darkness.  The cold granite block walls are undecorated and a thick layer of dust covers the forgotten passageway's floor.  The air is cool, stale, and musty smelling.}{}{}{}{}{1.000}{}
+E {115}{s}{unlock door}{4}{0}{}{1.000}{}{0.00}
+E {355}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {123}{0}{<108>}{}{ }{}{}{}{}{}{1.000}{}
+E {119}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+
+R {124}{0}{<178>}{A Lavish Wooden Stairwell}{ }{You have stepped into an extremely ornate wooden stairwell leading upwards.  The walls and floor are covered in obscenely decorated wood with lavish details that were carved by the finest craftsmen of the realms.  A beautiful wooden staircase winds up to the next level of the tower.  A richly decorated newel post stands at the base of the stairs greeting guests as they begin their ascent upwards.}{Necs}{}{}{}{1.000}{}
+E {121}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {125}{u}{u}{16}{0}{}{1.000}{}{0.00}
+
+R {125}{0}{<178>}{An Elaborate Landing}{ }{You stand at the top of a wooden staircase that leads down to the third floor of the tower.  The floor of the landing is constructed from a richly colored black walnut with dizzying grains that mesmerize your eyes as you gaze upon it.  The walls are a mixture of the same black walnut and glossy black marble with veins of white flowing through it.  The wood on the walls has intricate patterns carved deeply into the grains, the exquisite work that went into these fine details is hypnotizing.  To the north and south are exits, each arched majestically with walnut and marble.}{Necs}{}{}{}{1.000}{}
+E {124}{d}{d}{32}{0}{}{1.000}{}{0.00}
+E {127}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {128}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {126}{0}{<108>}{}{ }{}{}{}{}{}{1.000}{}
+E {120}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+
+R {127}{0}{<108>}{}{ }{}{}{}{}{}{1.000}{}
+E {125}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {128}{0}{<108>}{}{ }{}{}{}{}{}{1.000}{}
+E {125}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {129}{0}{<178>}{A Silent Chamber}{ }{This small alcove or study-space off of the main spell school library has several shelves that line the walls.  The shelves are loaded down with old leather tomes and books.  The books cover the use of Edged Damage as it relates to Necromancer spells and schools.  In the center of the room there are several ornate study desks.  They are beautifully crafted out of dark wood and placed far enough apart to provide a quiet and private place for Necromancers to study their dark arts.  There are several silver candelabras spaced around the room to provide ample light for research.}{}{}{}{}{1.000}{}
+E {86}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {130}{0}{<178>}{Crushing Atheneum}{ }{This quiet chamber is constructed from solid gray granite blocks.  It is connected to the other libraries to the west and east.  Several oak bookshelves line the southern wall and sconces shaped into griffin talons light the chamber.  The smell of the ancient tomes makes you dizzy and you have a vision of the walls, floor, and ceiling closing in on you.}{}{}{}{}{1.000}{}
+E {86}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {131}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {132}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {131}{0}{<178>}{Cold Atheneum}{ }{There is a slight chill in the air of this chamber causing you to tremble slightly.  An exquisitely crafted oak bookshelf lines the southern wall and is extensively stocked with tomes related to the necromancer spell school Cold.  Several sconces with glowing orbs of light are attached to the walls, lighting the chamber.}{}{}{}{}{1.000}{}
+E {130}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {133}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {134}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {132}{0}{<178>}{A Silent Chamber}{ }{The chamber is dimly lit with several silver candelabras located throughout it.  You see several ornately carved and decorated study desks dispersed about, each far enough from the other to provide privacy to those who sit in them.  Several large wooden bookcases line the walls heavily burdened with old tomes.  The tomes all relate to Crushing and its uses in necromancer spells.}{}{}{}{}{1.000}{}
+E {130}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {133}{0}{<178>}{Flame Atheneum}{ }{The air in this room is extremely dry and hot.  Sweat drips down your forehead as you strain to make out your surroundings.  Along the south wall you see a long wooden bookshelf which contains books related to the spell school Flame.  Several sconces line the walls providing light to the chamber and an occasional gust of super heated air brushes past your face.}{}{}{}{}{1.000}{}
+E {131}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {135}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {136}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {134}{0}{<178>}{A Silent Chamber}{ }{This small quiet chamber set off the main library is furnished with several study desks that are spaced far enough apart to provide privacy for students of the dark arts.  Several shelves line the walls and they are stocked full of tomes relating to Cold and its uses in necromancer spells.  Several candles set on the desks provide light to study the tomes by.}{}{}{}{}{1.000}{}
+E {131}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {135}{0}{<178>}{Psionic Atheneum}{ }{Long dusty bookshelves line the southern wall.  There are several books related to the spell school Psionic on them.  To the north you see a small study space with more bookshelves and books in it.  The room to the southwest is strange indeed.  You see the normal walls of the tower but strange colors shift and morph in waves through the air.}{}{}{}{}{1.000}{}
+E {133}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {137}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {138}{se}{se}{6}{0}{}{1.000}{}{0.00}
+
+R {136}{0}{<178>}{A Silent Chamber}{ }{This small drab chamber is constructed out of gray blocks of granite and sits off off the main spell library of the guild.  Several wooden bookshelves line the walls.  They contain many tomes and books that relate to the spell school Flame.  Several small writing desks are placed around the room to allow a comfortable space to study the necromancers spells.}{}{}{}{}{1.000}{}
+E {133}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {137}{0}{<178>}{A Silent Chamber}{ }{The small chamber is dimly lit with several candelabras that are placed throughout the room.  Bookshelves ornately carved out of oak line the walls.  Study desks are placed around the room to provide a quiet place to study the necromantic spell Psionic.  It is deathly quiet here and ominous shadows dance on the walls, playing tricks with your mind.}{}{}{}{}{1.000}{}
+E {135}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {138}{0}{<178>}{The Confluence}{ }{You stand within The Confluence of the Necromancer's guild.  Colors and images float all around you, constantly changing and morphing into different shapes and hues.  Through the study of death, one must also study life, and all the permutations thereof.  It is here that each necromancer must venture at a point in their existence.  It is here that you will choose that which will be the basis for all your spellcasting.  Once chosen, this will be your Alpha, the source from which your magical energies will manifest themselves from this point forward.  All necromancers begin with the Alpha of Metallural and can choose their final Alpha at any time.  To choose your Alpha, type in the alpha you wish to Bind.  Be warned however, for once beyond Metallural, your chosen Alpha will be bound to your soul for the the greater part of your necromantic life.}{}{}{}{}{1.000}{}
+E {135}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {139}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+
+R {139}{0}{<178>}{Light Atheneum}{ }{Along the north wall stands a large oak bookshelf with several tomes related to the necromancer spell school Light.  Sconces line the walls providing light to the room and a small chamber opens up to the south. The room to the northeast is alive with colorful lights.  You see the normal walls of the tower but strange colors shift and morph in waves through the air.}{}{}{}{}{1.000}{}
+E {138}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {140}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {141}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {140}{0}{<178>}{Power Atheneum}{ }{This granite blocked chamber has a large wooden bookshelf built along the northern wall.  A small layer of dust covers the shelves and you see a few ancient tomes stacked on it.  The tomes appear to discuss the necromancer spell school Power and its uses in necromancer spell work.  Several sconces line the walls lighting the chamber and a small chamber opens up to the south.}{}{}{}{}{1.000}{}
+E {139}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {142}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {143}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {141}{0}{<178>}{A Silent Chamber}{ }{This room is much brighter than the rest.  There are several sconces along the walls with magical orbs casting brilliant light into the chamber.  Large oak bookshelves have been erected along the walls and they are loaded down with many ancient books detailing the spell school Light and its use in necromancer spells.  There are several study desks located throughout the room to provide a place to relax while increasing your studies.}{}{}{}{}{1.000}{}
+E {139}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {142}{0}{<178>}{Virulence Atheneum}{ }{Along the northern wall of this chamber you see a long wooden bookshelf.  There are several books and tomes on it that relate to the spell school Virulence.  To the south you see a smaller chamber branches off of this one and a small cloud of fog seems to be forming close to the floor.  There are several clawed sconces here on the wall illuminating the chamber.}{}{}{}{}{1.000}{}
+E {140}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {144}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {145}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {143}{0}{<178>}{A Silent Chamber}{ }{Standing in this chamber, a sense of magical Power courses through your being.  Along the walls stand tall bookshelves.  On the shelves you see many ancient tomes relating to the necromancer spell school Power.  Several sconces line the room and project a magical light into the area, providing ample light to study by.  Several wooden study desks are placed throughout the room.  They are ornately carved from oak and provide a private space to study your schools in.}{}{}{}{}{1.000}{}
+E {140}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {144}{0}{<178>}{Corrosion Atheneum}{ }{This dimly lit chamber looks similar to the rest of the rooms in this atheneum.  Several sconces line the walls providing light to see by and there is a large wooden bookshelf along the northern wall.  The air in here has a peculiar sour taste to it.  It almost seems to slightly burn the inside of your mouth.}{}{}{}{}{1.000}{}
+E {142}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {87}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {146}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {145}{0}{<178>}{A Silent Chamber}{ }{This dim chamber is surrounded with wooden bookshelves.  The shelves are stocked with books relating to the necromancer spell school Virulence.  Several silver candelabras are standing amongst wooden desks throughout the room.  The desks are placed far enough apart to provide a quiet and private area to study your schools.  The thick granite walls of the tower muffle most of the everyday sounds in the tower.}{}{}{}{}{1.000}{}
+E {142}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {146}{0}{<178>}{A Silent Chamber}{ }{A quiet study chamber opens up before you.  The silent room is ringed by several ornate wooden bookshelves.  On the shelves you see books related to the necromancer spell school Corrosion.  Several desks are placed about the room and each has a tall candelabra set next to it to provide light to study by.}{}{}{}{}{1.000}{}
+E {144}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {147}{0}{<178>}{A Silent Chamber}{ }{The quiet chamber before you has several bookcases erected along the walls.  Each shelf carries many ancient tomes relating to the necromancer spell school Lightning.  The chamber also houses several ornately carved wooden desks used by necromancers to study and learn.  Next to each desk is a tall silver candleabra which provides ample light to read by.}{}{}{}{}{1.000}{}
+E {87}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {148}{0}{<108>}{}{ }{}{}{}{}{}{1.000}{}
+E {88}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {149}{0}{<178>}{A darkened wood}{ }{The shadows wrap you in their cold embrace.  The ancient forest  rises up about you, swallowing you in its dark depths.  The chill  shadows of the night raise goosebumps along your body even as you  suppress a shiver.  The darkness about you is absolute, shadowing  the very sky from your view as you look upwards towards the moon.}{}{}{}{}{1.000}{}
+E {6}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {153}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {157}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {152}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {150}{0}{<178>}{A dark and quiet wilderness}{ }{Tendrils of mist creep out from the darkness to curl about you.   The shadowy forest seems to close in about you, low branches  tugging at your clothes as you wander between the ancient trees.   Dark shapes flit by through the darkness, teasing your senses.   Warily you continue your way through the forest.}{}{}{}{}{1.000}{}
+E {6}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {153}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {154}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {151}{0}{<178>}{An ominous forest}{ }{You pause to listen to the darkened wood.  Your own breathing  sounds in your ears with the light rustling of the leaves above.   Ahead of you a softly glowing moonbeam touches the forest floor,  shadows flickering through its eerie light.}{}{}{}{}{1.000}{}
+E {6}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {152}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {152}{0}{<178>}{A foreboding wilderness}{ }{A darting shadow flashes between the trees before disappearing  into the darkness once more.  Even as you turn to search the  darkness beneath the shadowy boughs you catch another movement  out of the corner of your eye.  The strange wood seems to be  alive about you, wrapping you in its aura of menace.}{}{}{}{}{1.000}{}
+E {151}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {149}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {158}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {159}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {153}{0}{<178>}{An ominous forest}{ }{A darting shadow flashes between the trees before disappearing  into the darkness once more.  Even as you turn to search the  darkness beneath the shadowy boughs you catch another movement  out of the corner of your eye.  The strange wood seems to be  alive about you, wrapping you in its aura of menace.}{}{}{}{}{1.000}{}
+E {150}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {155}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {156}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {149}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {154}{0}{<178>}{A dark and quiet wilderness}{ }{A darting shadow flashes between the trees before disappearing  into the darkness once more.  Even as you turn to search the  darkness beneath the shadowy boughs you catch another movement  out of the corner of your eye.  The strange wood seems to be  alive about you, wrapping you in its aura of menace.}{}{}{}{}{1.000}{}
+E {150}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {155}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {155}{0}{<178>}{An ominous wood}{ }{Tendrils of mist creep out from the darkness to curl about you.   The shadowy forest seems to close in about you, low branches  tugging at your clothes as you wander between the ancient trees.   Dark shapes flit by through the darkness, teasing your senses.   Warily you continue your way through the forest.}{}{}{}{}{1.000}{}
+E {154}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {153}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {156}{0}{<178>}{An eerie forest}{ }{The shadowy boughs of ancient evergreens reach down to you in the  darkness, tugging gently at your clothes.   The soft light of the  moon filters through the canopy of needles above, casting a soft  glow about the trees.}{}{}{}{}{1.000}{}
+E {153}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {157}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {169}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {157}{0}{<178>}{A dark and quiet wilderness}{ }{You pause to listen to the darkened wood.  Your own breathing  sounds in your ears with the light rustling of the leaves above.   Ahead of you a softly glowing moonbeam touches the forest floor,  shadows flickering through its eerie l ight.}{}{}{}{}{1.000}{}
+E {149}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {158}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {168}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {156}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {158}{0}{<178>}{An eerie forest}{ }{Tendrils of mist creep out from the darkness to curl about you.   The shadowy forest seems to close in about you, low branches  tugging at your clothes as you wander between the ancient trees.   Dark shapes flit by through the darkness, teasing your senses.   Warily you continue your way through the forest.}{}{}{}{}{1.000}{}
+E {152}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {160}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {167}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {157}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {159}{0}{<178>}{An ancient forest}{ }{Pale white streamers of fog snake through the forest, wrapping  their ethereal arms about the ancient trees.  The gentle moonlight  glimmers off the mist, causing it to glow eerily in the shadowy  wood.  Dark shapes play tricks on your eyes as you catch them from  the corner of your eye, only to find swirling mists where you  thought there was more.}{}{}{}{}{1.000}{}
+E {152}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {160}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {161}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {160}{0}{<178>}{A shadowed wood}{ }{The shadowy boughs of ancient evergreens reach down to you in the  darkness, tugging gently at your clothes.   The soft light of the  moon filters through the canopy of needles above, casting a soft  glow about the trees.}{}{}{}{}{1.000}{}
+E {159}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {162}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {166}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {158}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {161}{0}{<178>}{An ancient forest}{ }{The shadows wrap you in their cold embrace.  The ancient forest  rises up about you, swallowing you in its dark depths.  The chill  shadows of the night raise goosebumps along your body even as you  suppress a shiver.  The darkness about you is absolute, shadowing  the very sky from your view as you look upwards towards the moon.}{}{}{}{}{1.000}{}
+E {159}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {162}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {163}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {162}{0}{<178>}{A dark and quiet wilderness}{ }{A distant mournful howl sends a shiver down your spine as it  echoes through the dark maze of trees surrounding you.  The  rustling branches overhead block your view of the full moon  above, cloaking you in the darkness of the ancient forest.  Even  as you cast about for the source of the sound you realize that  your sense of direction has been lost among the maze of trees.}{}{}{}{}{1.000}{}
+E {161}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {164}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {165}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {160}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {163}{0}{<178>}{An ominous forest}{ }{A darting shadow flashes between the trees before disappearing  into the darkness once more.  Even as you turn to search the  darkness beneath the shadowy boughs you catch another movement  out of the corner of your eye.  The strange wood seems to be  alive about you, wrapping you in its aura of menace.}{}{}{}{}{1.000}{}
+E {161}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {164}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {164}{0}{<178>}{An ominous forest}{ }{Tendrils of mist creep out from the darkness to curl about you.   The shadowy forest seems to close in about you, low branches  tugging at your clothes as you wander between the ancient trees.   Dark shapes flit by through the darkness, teasing your senses.   Warily you continue your way through the forest.}{}{}{}{}{1.000}{}
+E {163}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {165}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {162}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {165}{0}{<178>}{An ominous forest}{ }{The shadows wrap you in their cold embrace.  The ancient forest  rises up about you, swallowing you in its dark depths.  The chill  shadows of the night raise goosebumps along your body even as you  suppress a shiver.  The darkness about you is absolute, shadowing  the very sky from your view as you look upwards towards the moon.}{}{}{}{}{1.000}{}
+E {164}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {162}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {166}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {173}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+
+R {166}{0}{<178>}{An ominous wood}{ }{A distant mournful howl sends a shiver down your spine as it  echoes through the dark maze of trees surrounding you.  The  rustling branches overhead block your view of the full moon  above, cloaking you in the darkness of the ancient forest.  Even  as you cast about for the source of the sound you realize that  your sense of direction has been lost among the maze of trees.}{}{}{}{}{1.000}{}
+E {160}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {167}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {173}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {165}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {167}{0}{<178>}{A silent woodland}{ }{A distant mournful howl sends a shiver down your spine as it  echoes through the dark maze of trees surrounding you.  The  rustling branches overhead block your view of the full moon  above, cloaking you in the darkness of the ancient forest.  Even  as you cast about for the source of the sound you realize that  your sense of direction has been lost among the maze of trees.}{}{}{}{}{1.000}{}
+E {158}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {168}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {172}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {166}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {168}{0}{<178>}{An ominous wood}{ }{A distant mournful howl sends a shiver down your spine as it  echoes through the dark maze of trees surrounding you.  The  rustling branches overhead block your view of the full moon  above, cloaking you in the darkness of the ancient forest.  Even  as you cast about for the source of the sound you realize that  your sense of direction has been lost among the maze of trees.}{}{}{}{}{1.000}{}
+E {157}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {169}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {171}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {167}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {169}{0}{<178>}{A shadowed wood}{ }{A distant mournful howl sends a shiver down your spine as it  echoes through the dark maze of trees surrounding you.  The  rustling branches overhead block your view of the full moon  above, cloaking you in the darkness of the ancient forest.  Even  as you cast about for the source of the sound you realize that  your sense of direction has been lost among the maze of trees.}{}{}{}{}{1.000}{}
+E {156}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {170}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {168}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {170}{0}{<178>}{A darkened wood}{ }{A distant mournful howl sends a shiver down your spine as it  echoes through the dark maze of trees surrounding you.  The  rustling branches overhead block your view of the full moon  above, cloaking you in the darkness of the ancient forest.  Even  as you cast about for the source of the sound you realize that  your sense of direction has been lost among the maze of trees.}{}{}{}{}{1.000}{}
+E {169}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {171}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {279}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {171}{0}{<178>}{A macabre wood}{ }{Pale white streamers of fog snake through the forest, wrapping  their ethereal arms about the ancient trees.  The gentle moonlight  glimmers off the mist, causing it to glow eerily in the shadowy  wood.  Dark shapes play tricks on your eyes as you catch them from  the corner of your eye, only to find swirling mists where you  thought there was more.}{}{}{}{}{1.000}{}
+E {168}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {170}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {172}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {280}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {172}{0}{<178>}{A shadowed wood}{ }{The shadowy boughs of ancient evergreens reach down to you in the  darkness, tugging gently at your clothes.   The soft light of the  moon filters through the canopy of needles above, casting a soft  glow about the trees.}{}{}{}{}{1.000}{}
+E {167}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {171}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {173}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {281}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {173}{0}{<178>}{A shadowed wood}{ }{A distant mournful howl sends a shiver down your spine as it  echoes through the dark maze of trees surrounding you.  The  rustling branches overhead block your view of the full moon  above, cloaking you in the darkness of the ancient forest.  Even  as you cast about for the source of the sound you realize that  your sense of direction has been lost among the maze of trees.}{}{}{}{}{1.000}{}
+E {166}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {165}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {172}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {282}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {174}{0}{<178>}{Narrow Passageway}{ }{The cavern has fallen behind you to the west and a wall rises up turning the small path into a tight narrow passageway.  There is a small but sturdy wooden door facing into the new wall to the northwest.  To the north you see a faint light flickering and a thick wispy mist hovers over the ground.}{}{}{}{}{1.000}{}
+E {55}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {176}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {175}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+
+R {175}{0}{<108>}{}{ }{}{}{}{}{}{1.000}{}
+E {174}{se}{se}{6}{0}{}{1.000}{}{0.00}
+
+R {176}{0}{<178>}{The shrine of Joica, the Master Lich}{ }{You have found your way into the ancient Shrine of Joica, the master Lich. A swirling pool of mist curdles ominously along the entirety of the floor numbing your feet with the chill of eternal death.  Arcs of crimson lightning cascade along the tattered edges of several silken tapestries that hang precariously from the cold stone walls.  A narrow rune-encrusted arch opens a portion of the southern wall, while a dark void cuts through the mist of the floor and leads deeper into the mysteries of Lichdom.  Suddenly without warning an omnipotent will invades your thoughts and you sense the manifestation of a supreme presence behind you.  Turning in a trance-like state, you come face to face with an intricate statue of a frail figure hidden deep within a tattered shroud that towers silently behind a low marble altar.  If your soul is deserving, type 'begin <sponsor>', where <sponsor> is the name of the Lich who will unite your soul with magic, and honour you with the gift of eternal existence.}{}{}{}{}{1.000}{}
+E {174}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {177}{d}{d}{32}{0}{}{1.000}{}{0.00}
+
+R {177}{0}{<108>}{}{ }{}{}{}{}{}{1.000}{}
+E {176}{u}{u}{16}{0}{}{1.000}{}{0.00}
+
+R {178}{0}{<178>}{Blood Room}{ }{Necromancer's Bonding Room Necromancers who desire to form a deeper connection with one other member of the guild come here to perform an ancient bonding ritual. You may only be bonded to one other person, and although the price of bonding is high, the rewards are great. If you are prepared to bond to another necromancer, summon them here and type 'bond <name>'}{}{}{}{}{1.000}{}
+E {56}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {179}{d}{d}{32}{0}{}{1.000}{}{0.00}
+E {180}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {179}{0}{<178>}{Deblooding Room}{ }{Necromancer's Deblooding Room Necromancers who desire to dissolve the blood bond they have made with another guild member must jointly come here to revoke it. Deblooding should not be taken lightly, for there are irrevokable consequences. Those whose bloodkin have left the guild or have not played in a long period of time should see a Legend Guild Master or higher for assistance. To commence the deblooding process, type 'forsake kin.'}{}{}{}{}{1.000}{}
+E {178}{u}{u}{16}{0}{}{1.000}{}{0.00}
+
+R {180}{0}{<108>}{}{ }{}{}{}{}{}{1.000}{}
+E {178}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {181}{0}{<178>}{An ominous forest}{ }{Tendrils of mist creep out from the darkness to curl about you.   The shadowy forest seems to close in about you, low branches  tugging at your clothes as you wander between the ancient trees.   Dark shapes flit by through the darkness, teasing your senses.   Warily you continue your way through the forest.}{}{}{}{}{1.000}{}
+E {7}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {184}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {182}{0}{<178>}{An ominous forest}{ }{You pause to listen to the darkened wood.  Your own breathing  sounds in your ears with the light rustling of the leaves above.   Ahead of you a softly glowing moonbeam touches the forest floor,  shadows flickering through its eerie light.}{}{}{}{}{1.000}{}
+E {7}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {185}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {189}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {183}{0}{<178>}{An ominous wood}{ }{You pause to listen to the darkened wood.  Your own breathing  sounds in your ears with the light rustling of the leaves above.   Ahead of you a softly glowing moonbeam touches the forest floor,  shadows flickering through its eerie light.}{}{}{}{}{1.000}{}
+E {7}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {184}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {185}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {186}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {184}{0}{<178>}{A darkened wood}{ }{A darting shadow flashes between the trees before disappearing  into the darkness once more.  Even as you turn to search the  darkness beneath the shadowy boughs you catch another movement  out of the corner of your eye.  The strange wood seems to be  alive about you, wrapping you in its aura of menace.}{}{}{}{}{1.000}{}
+E {181}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {183}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {185}{0}{<178>}{A dark and quiet wilderness}{ }{The shadows wrap you in their cold embrace.  The ancient forest  rises up about you, swallowing you in its dark depths.  The chill  shadows of the night raise goosebumps along your body even as you  suppress a shiver.  The darkness about you is absolute, shadowing  the very sky from your view as you look upwards towards the moon.}{}{}{}{}{1.000}{}
+E {183}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {187}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {182}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {188}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {186}{0}{<178>}{An ancient forest}{ }{A distant mournful howl sends a shiver down your spine as it  echoes through the dark maze of trees surrounding you.  The  rustling branches overhead block your view of the full moon  above, cloaking you in the darkness of the ancient forest.  Even  as you cast about for the source of the sound you realize that  your sense of direction has been lost among the maze of trees.}{}{}{}{}{1.000}{}
+E {183}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {187}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {191}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {187}{0}{<178>}{An ancient forest}{ }{The shadowy boughs of ancient evergreens reach down to you in the  darkness, tugging gently at your clothes.   The soft light of the  moon filters through the canopy of needles above, casting a soft  glow about the trees.}{}{}{}{}{1.000}{}
+E {185}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {190}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {186}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {188}{0}{<178>}{An eerie forest}{ }{A distant mournful howl sends a shiver down your spine as it  echoes through the dark maze of trees surrounding you.  The  rustling branches overhead block your view of the full moon  above, cloaking you in the darkness of the ancient forest.  Even  as you cast about for the source of the sound you realize that  your sense of direction has been lost among the maze of trees.}{}{}{}{}{1.000}{}
+E {185}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {189}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {189}{0}{<178>}{An ancient forest}{ }{A distant mournful howl sends a shiver down your spine as it  echoes through the dark maze of trees surrounding you.  The  rustling branches overhead block your view of the full moon  above, cloaking you in the darkness of the ancient forest.  Even  as you cast about for the source of the sound you realize that  your sense of direction has been lost among the maze of trees.}{}{}{}{}{1.000}{}
+E {182}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {188}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {190}{0}{<178>}{A darkened wood}{ }{The shadows wrap you in their cold embrace.  The ancient forest  rises up about you, swallowing you in its dark depths.  The chill  shadows of the night raise goosebumps along your body even as you  suppress a shiver.  The darkness about you is absolute, shadowing  the very sky from your view as you look upwards towards the moon.}{}{}{}{}{1.000}{}
+E {187}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {191}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {194}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {191}{0}{<178>}{An ancient forest}{ }{The shadows wrap you in their cold embrace.  The ancient forest  rises up about you, swallowing you in its dark depths.  The chill  shadows of the night raise goosebumps along your body even as you  suppress a shiver.  The darkness about you is absolute, shadowing  the very sky from your view as you look upwards towards the moon.}{}{}{}{}{1.000}{}
+E {186}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {192}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {190}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {193}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {192}{0}{<178>}{A shadowed wood}{ }{You pause to listen to the darkened wood.  Your own breathing  sounds in your ears with the light rustling of the leaves above.   Ahead of you a softly glowing moonbeam touches the forest floor,  shadows flickering through its eerie light.}{}{}{}{}{1.000}{}
+E {191}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {195}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {196}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {193}{0}{<178>}{An ancient forest}{ }{A distant mournful howl sends a shiver down your spine as it  echoes through the dark maze of trees surrounding you.  The  rustling branches overhead block your view of the full moon  above, cloaking you in the darkness of the ancient forest.  Even  as you cast about for the source of the sound you realize that  your sense of direction has been lost among the maze of trees.}{}{}{}{}{1.000}{}
+E {191}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {195}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {194}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {206}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {194}{0}{<178>}{An ominous wood}{ }{A darting shadow flashes between the trees before disappearing  into the darkness once more.  Even as you turn to search the  darkness beneath the shadowy boughs you catch another movement  out of the corner of your eye.  The strange wood seems to be  alive about you, wrapping you in its aura of menace.}{}{}{}{}{1.000}{}
+E {190}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {193}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {207}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {195}{0}{<178>}{An ominous wood}{ }{The shadows wrap you in their cold embrace.  The ancient forest  rises up about you, swallowing you in its dark depths.  The chill  shadows of the night raise goosebumps along your body even as you  suppress a shiver.  The darkness about you is absolute, shadowing  the very sky from your view as you look upwards towards the moon.}{}{}{}{}{1.000}{}
+E {192}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {197}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {205}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {193}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {196}{0}{<178>}{A shadowed wood}{ }{The shadowy boughs of ancient evergreens reach down to you in the  darkness, tugging gently at your clothes.   The soft light of the  moon filters through the canopy of needles above, casting a soft  glow about the trees.}{}{}{}{}{1.000}{}
+E {192}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {197}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {198}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {199}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {197}{0}{<178>}{A darkened wood}{ }{The shadows wrap you in their cold embrace.  The ancient forest  rises up about you, swallowing you in its dark depths.  The chill  shadows of the night raise goosebumps along your body even as you  suppress a shiver.  The darkness about you is absolute, shadowing  the very sky from your view as you look upwards towards the moon.}{}{}{}{}{1.000}{}
+E {196}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {204}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {195}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {198}{0}{<178>}{A foreboding wilderness}{ }{The shadowy boughs of ancient evergreens reach down to you in the  darkness, tugging gently at your clothes.   The soft light of the  moon filters through the canopy of needles above, casting a soft  glow about the trees.}{}{}{}{}{1.000}{}
+E {196}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {200}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {199}{0}{<178>}{A shadowed wood}{ }{The shadows wrap you in their cold embrace.  The ancient forest  rises up about you, swallowing you in its dark depths.  The chill  shadows of the night raise goosebumps along your body even as you  suppress a shiver.  The darkness about you is absolute, shadowing  the very sky from your view as you look upwards towards the moon.}{}{}{}{}{1.000}{}
+E {196}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {200}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {202}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+
+R {200}{0}{<178>}{An ancient forest}{ }{Pale white streamers of fog snake through the forest, wrapping  their ethereal arms about the ancient trees.  The gentle moonlight  glimmers off the mist, causing it to glow eerily in the shadowy  wood.  Dark shapes play tricks on your eyes as you catch them from  the corner of your eye, only to find swirling mists where you  thought there was more.}{}{}{}{}{1.000}{}
+E {198}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {199}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {201}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {202}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {201}{0}{<178>}{An ominous wood}{ }{A distant mournful howl sends a shiver down your spine as it  echoes through the dark maze of trees surrounding you.  The  rustling branches overhead block your view of the full moon  above, cloaking you in the darkness of the ancient forest.  Even  as you cast about for the source of the sound you realize that  your sense of direction has been lost among the maze of trees.}{}{}{}{}{1.000}{}
+E {200}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {203}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {202}{0}{<178>}{An ominous forest}{ }{Tendrils of mist creep out from the darkness to curl about you.   The shadowy forest seems to close in about you, low branches  tugging at your clothes as you wander between the ancient trees.   Dark shapes flit by through the darkness, teasing your senses.   Warily you continue your way through the forest.}{}{}{}{}{1.000}{}
+E {200}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {203}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {199}{se}{se}{6}{0}{}{1.000}{}{0.00}
+
+R {203}{0}{<178>}{An ominous wood}{ }{Pale white streamers of fog snake through the forest, wrapping  their ethereal arms about the ancient trees.  The gentle moonlight  glimmers off the mist, causing it to glow eerily in the shadowy  wood.  Dark shapes play tricks on your eyes as you catch them from  the corner of your eye, only to find swirling mists where you  thought there was more.}{}{}{}{}{1.000}{}
+E {201}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {202}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {204}{0}{<178>}{An ancient forest}{ }{Tendrils of mist creep out from the darkness to curl about you.   The shadowy forest seems to close in about you, low branches  tugging at your clothes as you wander between the ancient trees.   Dark shapes flit by through the darkness, teasing your senses.   Warily you continue your way through the forest.}{}{}{}{}{1.000}{}
+E {197}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {205}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {211}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {205}{0}{<178>}{A silent woodland}{ }{A darting shadow flashes between the trees before disappearing  into the darkness once more.  Even as you turn to search the  darkness beneath the shadowy boughs you catch another movement  out of the corner of your eye.  The strange wood seems to be  alive about you, wrapping you in its aura of menace.}{}{}{}{}{1.000}{}
+E {195}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {206}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {210}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {204}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {206}{0}{<178>}{A darkened wood}{ }{A darting shadow flashes between the trees before disappearing  into the darkness once more.  Even as you turn to search the  darkness beneath the shadowy boughs you catch another movement  out of the corner of your eye.  The strange wood seems to be  alive about you, wrapping you in its aura of menace.}{}{}{}{}{1.000}{}
+E {193}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {207}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {209}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {205}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {207}{0}{<178>}{An eerie forest}{ }{A distant mournful howl sends a shiver down your spine as it  echoes through the dark maze of trees surrounding you.  The  rustling branches overhead block your view of the full moon  above, cloaking you in the darkness of the ancient forest.  Even  as you cast about for the source of the sound you realize that  your sense of direction has been lost among the maze of trees.}{}{}{}{}{1.000}{}
+E {194}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {208}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {206}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {208}{0}{<178>}{A foreboding wilderness}{ }{Tendrils of mist creep out from the darkness to curl about you.   The shadowy forest seems to close in about you, low branches  tugging at your clothes as you wander between the ancient trees.   Dark shapes flit by through the darkness, teasing your senses.   Warily you continue your way through the forest.}{}{}{}{}{1.000}{}
+E {207}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {209}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {209}{0}{<178>}{A darkened wood}{ }{A distant mournful howl sends a shiver down your spine as it  echoes through the dark maze of trees surrounding you.  The  rustling branches overhead block your view of the full moon  above, cloaking you in the darkness of the ancient forest.  Even  as you cast about for the source of the sound you realize that  your sense of direction has been lost among the maze of trees.}{}{}{}{}{1.000}{}
+E {206}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {210}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {214}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {208}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {210}{0}{<178>}{An ominous forest}{ }{The shadows wrap you in their cold embrace.  The ancient forest  rises up about you, swallowing you in its dark depths.  The chill  shadows of the night raise goosebumps along your body even as you  suppress a shiver.  The darkness about you is absolute, shadowing  the very sky from your view as you look upwards towards the moon.}{}{}{}{}{1.000}{}
+E {205}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {211}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {214}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {209}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {211}{0}{<178>}{A dark and quiet wilderness}{ }{A darting shadow flashes between the trees before disappearing  into the darkness once more.  Even as you turn to search the  darkness beneath the shadowy boughs you catch another movement  out of the corner of your eye.  The strange wood seems to be  alive about you, wrapping you in its aura of menace.}{}{}{}{}{1.000}{}
+E {204}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {212}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {213}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {210}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {212}{0}{<178>}{An ominous forest}{ }{The shadows wrap you in their cold embrace.  The ancient forest  rises up about you, swallowing you in its dark depths.  The chill  shadows of the night raise goosebumps along your body even as you  suppress a shiver.  The darkness about you is absolute, shadowing  the very sky from your view as you look upwards towards the moon.}{}{}{}{}{1.000}{}
+E {211}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {213}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {216}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {217}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+
+R {213}{0}{<178>}{An ancient forest}{ }{The shadows wrap you in their cold embrace.  The ancient forest  rises up about you, swallowing you in its dark depths.  The chill  shadows of the night raise goosebumps along your body even as you  suppress a shiver.  The darkness about you is absolute, shadowing  the very sky from your view as you look upwards towards the moon.}{}{}{}{}{1.000}{}
+E {211}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {214}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {216}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {215}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {212}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {214}{0}{<178>}{An ominous forest}{ }{A distant mournful howl sends a shiver down your spine as it  echoes through the dark maze of trees surrounding you.  The  rustling branches overhead block your view of the full moon  above, cloaking you in the darkness of the ancient forest.  Even  as you cast about for the source of the sound you realize that  your sense of direction has been lost among the maze of trees.}{}{}{}{}{1.000}{}
+E {210}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {209}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {215}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {213}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {215}{0}{<178>}{An ominous wood}{ }{Tendrils of mist creep out from the darkness to curl about you.   The shadowy forest seems to close in about you, low branches  tugging at your clothes as you wander between the ancient trees.   Dark shapes flit by through the darkness, teasing your senses.   Warily you continue your way through the forest.}{}{}{}{}{1.000}{}
+E {214}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {213}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {216}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {220}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+
+R {216}{0}{<178>}{An ominous forest}{ }{A darting shadow flashes between the trees before disappearing  into the darkness once more.  Even as you turn to search the  darkness beneath the shadowy boughs you catch another movement  out of the corner of your eye.  The strange wood seems to be  alive about you, wrapping you in its aura of menace.}{}{}{}{}{1.000}{}
+E {213}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {212}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {217}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {219}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {220}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {215}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {217}{0}{<178>}{A darkened wood}{ }{You pause to listen to the darkened wood.  Your own breathing  sounds in your ears with the light rustling of the leaves above.   Ahead of you a softly glowing moonbeam touches the forest floor,  shadows flickering through its eerie light.}{}{}{}{}{1.000}{}
+E {212}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {218}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {219}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {216}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {218}{0}{<178>}{An eerie forest}{ }{A darting shadow flashes between the trees before disappearing  into the darkness once more.  Even as you turn to search the  darkness beneath the shadowy boughs you catch another movement  out of the corner of your eye.  The strange wood seems to be  alive about you, wrapping you in its aura of menace.}{}{}{}{}{1.000}{}
+E {217}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {219}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {223}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {222}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {224}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {219}{0}{<178>}{A darkened wood}{ }{The shadowy boughs of ancient evergreens reach down to you in the  darkness, tugging gently at your clothes.   The soft light of the  moon filters through the canopy of needles above, casting a soft  glow about the trees.}{}{}{}{}{1.000}{}
+E {217}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {216}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {220}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {222}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {221}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {218}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {220}{0}{<178>}{A foreboding wilderness}{ }{You pause to listen to the darkened wood.  Your own breathing  sounds in your ears with the light rustling of the leaves above.   Ahead of you a softly glowing moonbeam touches the forest floor,  shadows flickering through its eerie light.}{}{}{}{}{1.000}{}
+E {216}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {215}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {221}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {219}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {221}{0}{<178>}{An ominous forest}{ }{Pale white streamers of fog snake through the forest, wrapping  their ethereal arms about the ancient trees.  The gentle moonlight  glimmers off the mist, causing it to glow eerily in the shadowy  wood.  Dark shapes play tricks on your eyes as you catch them from  the corner of your eye, only to find swirling mists where you  thought there was more.}{}{}{}{}{1.000}{}
+E {220}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {219}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {225}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {222}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {222}{0}{<178>}{An ancient forest}{ }{A distant mournful howl sends a shiver down your spine as it  echoes through the dark maze of trees surrounding you.  The  rustling branches overhead block your view of the full moon  above, cloaking you in the darkness of the ancient forest.  Even  as you cast about for the source of the sound you realize that  your sense of direction has been lost among the maze of trees.}{}{}{}{}{1.000}{}
+E {219}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {218}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {221}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {226}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {225}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {223}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {223}{0}{<178>}{A shadowed wood}{ }{Pale white streamers of fog snake through the forest, wrapping  their ethereal arms about the ancient trees.  The gentle moonlight  glimmers off the mist, causing it to glow eerily in the shadowy  wood.  Dark shapes play tricks on your eyes as you catch them from  the corner of your eye, only to find swirling mists where you  thought there was more.}{}{}{}{}{1.000}{}
+E {218}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {222}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {226}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {229}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {224}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {227}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {224}{0}{<178>}{An eerie forest}{ }{You pause to listen to the darkened wood.  Your own breathing  sounds in your ears with the light rustling of the leaves above.   Ahead of you a softly glowing moonbeam touches the forest floor,  shadows flickering through its eerie light.}{}{}{}{}{1.000}{}
+E {218}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {223}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {229}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {225}{0}{<178>}{An ancient forest}{ }{You pause to listen to the darkened wood.  Your own breathing  sounds in your ears with the light rustling of the leaves above.   Ahead of you a softly glowing moonbeam touches the forest floor,  shadows flickering through its eerie light.}{}{}{}{}{1.000}{}
+E {221}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {222}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {226}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {226}{0}{<178>}{An ancient forest}{ }{A darting shadow flashes between the trees before disappearing  into the darkness once more.  Even as you turn to search the  darkness beneath the shadowy boughs you catch another movement  out of the corner of your eye.  The strange wood seems to be  alive about you, wrapping you in its aura of menace.}{}{}{}{}{1.000}{}
+E {222}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {225}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {227}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {223}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {228}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {227}{0}{<178>}{A silent woodland}{ }{The shadowy boughs of ancient evergreens reach down to you in the  darkness, tugging gently at your clothes.   The soft light of the  moon filters through the canopy of needles above, casting a soft  glow about the trees.}{}{}{}{}{1.000}{}
+E {226}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {223}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {229}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {231}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {228}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {232}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {228}{0}{<178>}{A macabre wood}{ }{The shadowy boughs of ancient evergreens reach down to you in the  darkness, tugging gently at your clothes.   The soft light of the  moon filters through the canopy of needles above, casting a soft  glow about the trees.}{}{}{}{}{1.000}{}
+E {226}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {227}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {232}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {233}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {234}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {229}{0}{<178>}{An ancient forest}{ }{You pause to listen to the darkened wood.  Your own breathing  sounds in your ears with the light rustling of the leaves above.   Ahead of you a softly glowing moonbeam touches the forest floor,  shadows flickering through its eerie light.}{}{}{}{}{1.000}{}
+E {223}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {224}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {230}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {227}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {231}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {230}{0}{<178>}{A silent woodland}{ }{Tendrils of mist creep out from the darkness to curl about you.   The shadowy forest seems to close in about you, low branches  tugging at your clothes as you wander between the ancient trees.   Dark shapes flit by through the darkness, teasing your senses.   Warily you continue your way through the forest.}{}{}{}{}{1.000}{}
+E {229}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {231}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {244}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {243}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {231}{0}{<178>}{A foreboding wilderness}{ }{A darting shadow flashes between the trees before disappearing  into the darkness once more.  Even as you turn to search the  darkness beneath the shadowy boughs you catch another movement  out of the corner of your eye.  The strange wood seems to be  alive about you, wrapping you in its aura of menace.}{}{}{}{}{1.000}{}
+E {229}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {227}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {232}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {243}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {230}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {241}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {232}{0}{<178>}{A macabre wood}{ }{The shadowy boughs of ancient evergreens reach down to you in the  darkness, tugging gently at your clothes.   The soft light of the  moon filters through the canopy of needles above, casting a soft  glow about the trees.}{}{}{}{}{1.000}{}
+E {227}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {228}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {241}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {231}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {242}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {233}{0}{<178>}{An ancient forest}{ }{Pale white streamers of fog snake through the forest, wrapping  their ethereal arms about the ancient trees.  The gentle moonlight  glimmers off the mist, causing it to glow eerily in the shadowy  wood.  Dark shapes play tricks on your eyes as you catch them from  the corner of your eye, only to find swirling mists where you  thought there was more.}{}{}{}{}{1.000}{}
+E {228}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {235}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {236}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {234}{0}{<178>}{An ancient forest}{ }{A distant mournful howl sends a shiver down your spine as it  echoes through the dark maze of trees surrounding you.  The  rustling branches overhead block your view of the full moon  above, cloaking you in the darkness of the ancient forest.  Even  as you cast about for the source of the sound you realize that  your sense of direction has been lost among the maze of trees.}{}{}{}{}{1.000}{}
+E {228}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {236}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {240}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {235}{0}{<178>}{A macabre wood}{ }{Tendrils of mist creep out from the darkness to curl about you.   The shadowy forest seems to close in about you, low branches  tugging at your clothes as you wander between the ancient trees.   Dark shapes flit by through the darkness, teasing your senses.   Warily you continue your way through the forest.}{}{}{}{}{1.000}{}
+E {233}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {237}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {236}{0}{<178>}{An ominous forest}{ }{Pale white streamers of fog snake through the forest, wrapping  their ethereal arms about the ancient trees.  The gentle moonlight  glimmers off the mist, causing it to glow eerily in the shadowy  wood.  Dark shapes play tricks on your eyes as you catch them from  the corner of your eye, only to find swirling mists where you  thought there was more.}{}{}{}{}{1.000}{}
+E {233}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {237}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {234}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {239}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {237}{0}{<178>}{An ominous forest}{ }{Tendrils of mist creep out from the darkness to curl about you.   The shadowy forest seems to close in about you, low branches  tugging at your clothes as you wander between the ancient trees.   Dark shapes flit by through the darkness, teasing your senses.   Warily you continue your way through the forest.}{}{}{}{}{1.000}{}
+E {235}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {236}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {238}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {238}{0}{<178>}{An ominous wood}{ }{Pale white streamers of fog snake through the forest, wrapping  their ethereal arms about the ancient trees.  The gentle moonlight  glimmers off the mist, causing it to glow eerily in the shadowy  wood.  Dark shapes play tricks on your eyes as you catch them from  the corner of your eye, only to find swirling mists where you  thought there was more.}{}{}{}{}{1.000}{}
+E {237}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {239}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {239}{0}{<178>}{A foreboding wilderness}{ }{A distant mournful howl sends a shiver down your spine as it  echoes through the dark maze of trees surrounding you.  The  rustling branches overhead block your view of the full moon  above, cloaking you in the darkness of the ancient forest.  Even  as you cast about for the source of the sound you realize that  your sense of direction has been lost among the maze of trees.}{}{}{}{}{1.000}{}
+E {236}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {240}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {238}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {240}{0}{<178>}{An ominous wood}{ }{The shadowy boughs of ancient evergreens reach down to you in the  darkness, tugging gently at your clothes.   The soft light of the  moon filters through the canopy of needles above, casting a soft  glow about the trees.}{}{}{}{}{1.000}{}
+E {234}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {242}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {249}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {239}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {241}{0}{<178>}{An ancient forest}{ }{Pale white streamers of fog snake through the forest, wrapping  their ethereal arms about the ancient trees.  The gentle moonlight  glimmers off the mist, causing it to glow eerily in the shadowy  wood.  Dark shapes play tricks on your eyes as you catch them from  the corner of your eye, only to find swirling mists where you  thought there was more.}{}{}{}{}{1.000}{}
+E {232}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {231}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {243}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {247}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {242}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {248}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {242}{0}{<178>}{An ominous forest}{ }{Tendrils of mist creep out from the darkness to curl about you.   The shadowy forest seems to close in about you, low branches  tugging at your clothes as you wander between the ancient trees.   Dark shapes flit by through the darkness, teasing your senses.   Warily you continue your way through the forest.}{}{}{}{}{1.000}{}
+E {232}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {241}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {240}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {249}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {243}{0}{<178>}{A silent woodland}{ }{You pause to listen to the darkened wood.  Your own breathing  sounds in your ears with the light rustling of the leaves above.   Ahead of you a softly glowing moonbeam touches the forest floor,  shadows flickering through its eerie light.}{}{}{}{}{1.000}{}
+E {231}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {230}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {244}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {246}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {241}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {247}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {244}{0}{<178>}{A silent woodland}{ }{A distant mournful howl sends a shiver down your spine as it  echoes through the dark maze of trees surrounding you.  The  rustling branches overhead block your view of the full moon  above, cloaking you in the darkness of the ancient forest.  Even  as you cast about for the source of the sound you realize that  your sense of direction has been lost among the maze of trees.}{}{}{}{}{1.000}{}
+E {230}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {245}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {243}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {246}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {245}{0}{<178>}{An eerie forest}{ }{The shadowy boughs of ancient evergreens reach down to you in the  darkness, tugging gently at your clothes.   The soft light of the  moon filters through the canopy of needles above, casting a soft  glow about the trees.}{}{}{}{}{1.000}{}
+E {244}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {246}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {252}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {253}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {251}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {246}{0}{<178>}{An ominous forest}{ }{A distant mournful howl sends a shiver down your spine as it  echoes through the dark maze of trees surrounding you.  The  rustling branches overhead block your view of the full moon  above, cloaking you in the darkness of the ancient forest.  Even  as you cast about for the source of the sound you realize that  your sense of direction has been lost among the maze of trees.}{}{}{}{}{1.000}{}
+E {244}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {243}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {247}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {251}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {245}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {250}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {247}{0}{<178>}{A foreboding wilderness}{ }{A distant mournful howl sends a shiver down your spine as it  echoes through the dark maze of trees surrounding you.  The  rustling branches overhead block your view of the full moon  above, cloaking you in the darkness of the ancient forest.  Even  as you cast about for the source of the sound you realize that  your sense of direction has been lost among the maze of trees.}{}{}{}{}{1.000}{}
+E {243}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {241}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {248}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {250}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {246}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {248}{0}{<178>}{An eerie forest}{ }{A darting shadow flashes between the trees before disappearing  into the darkness once more.  Even as you turn to search the  darkness beneath the shadowy boughs you catch another movement  out of the corner of your eye.  The strange wood seems to be  alive about you, wrapping you in its aura of menace.}{}{}{}{}{1.000}{}
+E {241}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {249}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {247}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {249}{0}{<178>}{A dark and quiet wilderness}{ }{A darting shadow flashes between the trees before disappearing  into the darkness once more.  Even as you turn to search the  darkness beneath the shadowy boughs you catch another movement  out of the corner of your eye.  The strange wood seems to be  alive about you, wrapping you in its aura of menace.}{}{}{}{}{1.000}{}
+E {242}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {240}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {248}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {250}{0}{<178>}{A darkened wood}{ }{The shadows wrap you in their cold embrace.  The ancient forest  rises up about you, swallowing you in its dark depths.  The chill  shadows of the night raise goosebumps along your body even as you  suppress a shiver.  The darkness about you is absolute, shadowing  the very sky from your view as you look upwards towards the moon.}{}{}{}{}{1.000}{}
+E {247}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {246}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {251}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {263}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+
+R {251}{0}{<178>}{A foreboding wilderness}{ }{You pause to listen to the darkened wood.  Your own breathing  sounds in your ears with the light rustling of the leaves above.   Ahead of you a softly glowing moonbeam touches the forest floor,  shadows flickering through its eerie light.}{}{}{}{}{1.000}{}
+E {246}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {245}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {252}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {262}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {250}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {263}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {252}{0}{<178>}{A darkened wood}{ }{The shadows wrap you in their cold embrace.  The ancient forest  rises up about you, swallowing you in its dark depths.  The chill  shadows of the night raise goosebumps along your body even as you  suppress a shiver.  The darkness about you is absolute, shadowing  the very sky from your view as you look upwards towards the moon.}{}{}{}{}{1.000}{}
+E {245}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {253}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {257}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {261}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {251}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {262}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {253}{0}{<178>}{An ancient forest}{ }{The shadows wrap you in their cold embrace.  The ancient forest  rises up about you, swallowing you in its dark depths.  The chill  shadows of the night raise goosebumps along your body even as you  suppress a shiver.  The darkness about you is absolute, shadowing  the very sky from your view as you look upwards towards the moon.}{}{}{}{}{1.000}{}
+E {245}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {254}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {252}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {254}{0}{<178>}{A shadowed wood}{ }{Tendrils of mist creep out from the darkness to curl about you.   The shadowy forest seems to close in about you, low branches  tugging at your clothes as you wander between the ancient trees.   Dark shapes flit by through the darkness, teasing your senses.   Warily you continue your way through the forest.}{}{}{}{}{1.000}{}
+E {253}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {255}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {256}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {257}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {255}{0}{<178>}{A shadowed wood}{ }{A distant mournful howl sends a shiver down your spine as it  echoes through the dark maze of trees surrounding you.  The  rustling branches overhead block your view of the full moon  above, cloaking you in the darkness of the ancient forest.  Even  as you cast about for the source of the sound you realize that  your sense of direction has been lost among the maze of trees.}{}{}{}{}{1.000}{}
+E {254}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {256}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {256}{0}{<178>}{A shadowed wood}{ }{A distant mournful howl sends a shiver down your spine as it  echoes through the dark maze of trees surrounding you.  The  rustling branches overhead block your view of the full moon  above, cloaking you in the darkness of the ancient forest.  Even  as you cast about for the source of the sound you realize that  your sense of direction has been lost among the maze of trees.}{}{}{}{}{1.000}{}
+E {254}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {255}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {258}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {257}{0}{<178>}{An ominous wood}{ }{A darting shadow flashes between the trees before disappearing  into the darkness once more.  Even as you turn to search the  darkness beneath the shadowy boughs you catch another movement  out of the corner of your eye.  The strange wood seems to be  alive about you, wrapping you in its aura of menace.}{}{}{}{}{1.000}{}
+E {254}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {258}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {252}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {261}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {258}{0}{<178>}{A dark and quiet wilderness}{ }{You pause to listen to the darkened wood.  Your own breathing  sounds in your ears with the light rustling of the leaves above.   Ahead of you a softly glowing moonbeam touches the forest floor,  shadows flickering through its eerie light.}{}{}{}{}{1.000}{}
+E {256}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {257}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {259}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {260}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {259}{0}{<178>}{A silent woodland}{ }{The shadows wrap you in their cold embrace.  The ancient forest  rises up about you, swallowing you in its dark depths.  The chill  shadows of the night raise goosebumps along your body even as you  suppress a shiver.  The darkness about you is absolute, shadowing  the very sky from your view as you look upwards towards the moon.}{}{}{}{}{1.000}{}
+E {258}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {260}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {266}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+
+R {260}{0}{<178>}{An ominous wood}{ }{The shadows wrap you in their cold embrace.  The ancient forest  rises up about you, swallowing you in its dark depths.  The chill  shadows of the night raise goosebumps along your body even as you  suppress a shiver.  The darkness about you is absolute, shadowing  the very sky from your view as you look upwards towards the moon.}{}{}{}{}{1.000}{}
+E {258}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {261}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {259}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {266}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {261}{0}{<178>}{A silent woodland}{ }{You pause to listen to the darkened wood.  Your own breathing  sounds in your ears with the light rustling of the leaves above.   Ahead of you a softly glowing moonbeam touches the forest floor,  shadows flickering through its eerie light.}{}{}{}{}{1.000}{}
+E {257}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {252}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {262}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {266}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {260}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {265}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {262}{0}{<178>}{A shadowed wood}{ }{A distant mournful howl sends a shiver down your spine as it  echoes through the dark maze of trees surrounding you.  The  rustling branches overhead block your view of the full moon  above, cloaking you in the darkness of the ancient forest.  Even  as you cast about for the source of the sound you realize that  your sense of direction has been lost among the maze of trees.}{}{}{}{}{1.000}{}
+E {252}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {251}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {263}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {265}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {261}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {264}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {263}{0}{<178>}{A macabre wood}{ }{Pale white streamers of fog snake through the forest, wrapping  their ethereal arms about the ancient trees.  The gentle moonlight  glimmers off the mist, causing it to glow eerily in the shadowy  wood.  Dark shapes play tricks on your eyes as you catch them from  the corner of your eye, only to find swirling mists where you  thought there was more.}{}{}{}{}{1.000}{}
+E {251}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {250}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {264}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {262}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {264}{0}{<178>}{A macabre wood}{ }{You pause to listen to the darkened wood.  Your own breathing  sounds in your ears with the light rustling of the leaves above.   Ahead of you a softly glowing moonbeam touches the forest floor,  shadows flickering through its eerie light.}{}{}{}{}{1.000}{}
+E {263}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {262}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {265}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {268}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+
+R {265}{0}{<178>}{A dark and quiet wilderness}{ }{Tendrils of mist creep out from the darkness to curl about you.   The shadowy forest seems to close in about you, low branches  tugging at your clothes as you wander between the ancient trees.   Dark shapes flit by through the darkness, teasing your senses.   Warily you continue your way through the forest.}{}{}{}{}{1.000}{}
+E {262}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {261}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {266}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {267}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {264}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {268}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {266}{0}{<178>}{A darkened wood}{ }{Tendrils of mist creep out from the darkness to curl about you.   The shadowy forest seems to close in about you, low branches  tugging at your clothes as you wander between the ancient trees.   Dark shapes flit by through the darkness, teasing your senses.   Warily you continue your way through the forest.}{}{}{}{}{1.000}{}
+E {261}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {260}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {259}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {265}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {267}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {267}{0}{<178>}{A macabre wood}{ }{You pause to listen to the darkened wood.  Your own breathing  sounds in your ears with the light rustling of the leaves above.   Ahead of you a softly glowing moonbeam touches the forest floor,  shadows flickering through its eerie light.}{}{}{}{}{1.000}{}
+E {266}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {265}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {268}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {269}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {278}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+
+R {268}{0}{<178>}{A foreboding wilderness}{ }{A darting shadow flashes between the trees before disappearing  into the darkness once more.  Even as you turn to search the  darkness beneath the shadowy boughs you catch another movement  out of the corner of your eye.  The strange wood seems to be  alive about you, wrapping you in its aura of menace.}{}{}{}{}{1.000}{}
+E {265}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {264}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {269}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {270}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {267}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {271}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {269}{0}{<178>}{A dark and quiet wilderness}{ }{Pale white streamers of fog snake through the forest, wrapping  their ethereal arms about the ancient trees.  The gentle moonlight  glimmers off the mist, causing it to glow eerily in the shadowy  wood.  Dark shapes play tricks on your eyes as you catch them from  the corner of your eye, only to find swirling mists where you  thought there was more.}{}{}{}{}{1.000}{}
+E {268}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {271}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {278}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {267}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {270}{0}{<178>}{A shadowed wood}{ }{A darting shadow flashes between the trees before disappearing  into the darkness once more.  Even as you turn to search the  darkness beneath the shadowy boughs you catch another movement  out of the corner of your eye.  The strange wood seems to be  alive about you, wrapping you in its aura of menace.}{}{}{}{}{1.000}{}
+E {268}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {272}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {273}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {271}{0}{<178>}{A macabre wood}{ }{Tendrils of mist creep out from the darkness to curl about you.   The shadowy forest seems to close in about you, low branches  tugging at your clothes as you wander between the ancient trees.   Dark shapes flit by through the darkness, teasing your senses.   Warily you continue your way through the forest.}{}{}{}{}{1.000}{}
+E {268}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {273}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {269}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {272}{0}{<178>}{An ancient forest}{ }{Tendrils of mist creep out from the darkness to curl about you.   The shadowy forest seems to close in about you, low branches  tugging at your clothes as you wander between the ancient trees.   Dark shapes flit by through the darkness, teasing your senses.   Warily you continue your way through the forest.}{}{}{}{}{1.000}{}
+E {270}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {274}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {275}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {276}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {273}{0}{<178>}{A silent woodland}{ }{A distant mournful howl sends a shiver down your spine as it  echoes through the dark maze of trees surrounding you.  The  rustling branches overhead block your view of the full moon  above, cloaking you in the darkness of the ancient forest.  Even  as you cast about for the source of the sound you realize that  your sense of direction has been lost among the maze of trees.}{}{}{}{}{1.000}{}
+E {270}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {276}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {271}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {274}{0}{<178>}{A foreboding wilderness}{ }{Pale white streamers of fog snake through the forest, wrapping  their ethereal arms about the ancient trees.  The gentle moonlight  glimmers off the mist, causing it to glow eerily in the shadowy  wood.  Dark shapes play tricks on your eyes as you catch them from  the corner of your eye, only to find swirling mists where you  thought there was more.}{}{}{}{}{1.000}{}
+E {272}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {275}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {277}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {275}{0}{<178>}{An ancient forest}{ }{The shadows wrap you in their cold embrace.  The ancient forest  rises up about you, swallowing you in its dark depths.  The chill  shadows of the night raise goosebumps along your body even as you  suppress a shiver.  The darkness about you is absolute, shadowing  the very sky from your view as you look upwards towards the moon.}{}{}{}{}{1.000}{}
+E {272}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {274}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {276}{0}{<178>}{A foreboding wilderness}{ }{Pale white streamers of fog snake through the forest, wrapping  their ethereal arms about the ancient trees.  The gentle moonlight  glimmers off the mist, causing it to glow eerily in the shadowy  wood.  Dark shapes play tricks on your eyes as you catch them from  the corner of your eye, only to find swirling mists where you  thought there was more.}{}{}{}{}{1.000}{}
+E {272}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {277}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {273}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {277}{0}{<178>}{A foreboding wilderness}{ }{Pale white streamers of fog snake through the forest, wrapping  their ethereal arms about the ancient trees.  The gentle moonlight  glimmers off the mist, causing it to glow eerily in the shadowy  wood.  Dark shapes play tricks on your eyes as you catch them from  the corner of your eye, only to find swirling mists where you  thought there was more.}{}{}{}{}{1.000}{}
+E {274}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {276}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {278}{0}{<178>}{A dark and quiet wilderness}{ }{A darting shadow flashes between the trees before disappearing  into the darkness once more.  Even as you turn to search the  darkness beneath the shadowy boughs you catch another movement  out of the corner of your eye.  The strange wood seems to be  alive about you, wrapping you in its aura of menace.}{}{}{}{}{1.000}{}
+E {269}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {267}{se}{se}{6}{0}{}{1.000}{}{0.00}
+
+R {279}{0}{<178>}{A silent woodland}{ }{The shadowy boughs of ancient evergreens reach down to you in the  darkness, tugging gently at your clothes.   The soft light of the  moon filters through the canopy of needles above, casting a soft  glow about the trees.}{}{}{}{}{1.000}{}
+E {170}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {289}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {280}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {280}{0}{<178>}{A shadowed wood}{ }{Tendrils of mist creep out from the darkness to curl about you.   The shadowy forest seems to close in about you, low branches  tugging at your clothes as you wander between the ancient trees.   Dark shapes flit by through the darkness, teasing your senses.   Warily you continue your way through the forest.}{}{}{}{}{1.000}{}
+E {171}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {281}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {285}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {279}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {281}{0}{<178>}{An eerie forest}{ }{Pale white streamers of fog snake through the forest, wrapping  their ethereal arms about the ancient trees.  The gentle moonlight  glimmers off the mist, causing it to glow eerily in the shadowy  wood.  Dark shapes play tricks on your eyes as you catch them from  the corner of your eye, only to find swirling mists where you  thought there was more.}{}{}{}{}{1.000}{}
+E {172}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {282}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {280}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {283}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {282}{0}{<178>}{A macabre wood}{ }{A distant mournful howl sends a shiver down your spine as it  echoes through the dark maze of trees surrounding you.  The  rustling branches overhead block your view of the full moon  above, cloaking you in the darkness of the ancient forest.  Even  as you cast about for the source of the sound you realize that  your sense of direction has been lost among the maze of trees.}{}{}{}{}{1.000}{}
+E {173}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {281}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {283}{0}{<178>}{An eerie forest}{ }{Pale white streamers of fog snake through the forest, wrapping  their ethereal arms about the ancient trees.  The gentle moonlight  glimmers off the mist, causing it to glow eerily in the shadowy  wood.  Dark shapes play tricks on your eyes as you catch them from  the corner of your eye, only to find swirling mists where you  thought there was more.}{}{}{}{}{1.000}{}
+E {281}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {284}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {285}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {286}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {284}{0}{<178>}{A foreboding wilderness}{ }{Pale white streamers of fog snake through the forest, wrapping  their ethereal arms about the ancient trees.  The gentle moonlight  glimmers off the mist, causing it to glow eerily in the shadowy  wood.  Dark shapes play tricks on your eyes as you catch them from  the corner of your eye, only to find swirling mists where you  thought there was more.}{}{}{}{}{1.000}{}
+E {283}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {286}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {287}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {285}{0}{<178>}{A macabre wood}{ }{Tendrils of mist creep out from the darkness to curl about you.   The shadowy forest seems to close in about you, low branches  tugging at your clothes as you wander between the ancient trees.   Dark shapes flit by through the darkness, teasing your senses.   Warily you continue your way through the forest.}{}{}{}{}{1.000}{}
+E {283}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {286}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {289}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {280}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {286}{0}{<178>}{A macabre wood}{ }{Pale white streamers of fog snake through the forest, wrapping  their ethereal arms about the ancient trees.  The gentle moonlight  glimmers off the mist, causing it to glow eerily in the shadowy  wood.  Dark shapes play tricks on your eyes as you catch them from  the corner of your eye, only to find swirling mists where you  thought there was more.}{}{}{}{}{1.000}{}
+E {283}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {284}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {285}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {287}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {288}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {287}{0}{<178>}{An ancient forest}{ }{The shadows wrap you in their cold embrace.  The ancient forest  rises up about you, swallowing you in its dark depths.  The chill  shadows of the night raise goosebumps along your body even as you  suppress a shiver.  The darkness about you is absolute, shadowing  the very sky from your view as you look upwards towards the moon.}{}{}{}{}{1.000}{}
+E {284}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {286}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {288}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {291}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {290}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {288}{0}{<178>}{A shadowed wood}{ }{You pause to listen to the darkened wood.  Your own breathing  sounds in your ears with the light rustling of the leaves above.   Ahead of you a softly glowing moonbeam touches the forest floor,  shadows flickering through its eerie light.}{}{}{}{}{1.000}{}
+E {286}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {290}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {287}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {289}{0}{<178>}{An eerie forest}{ }{A distant mournful howl sends a shiver down your spine as it  echoes through the dark maze of trees surrounding you.  The  rustling branches overhead block your view of the full moon  above, cloaking you in the darkness of the ancient forest.  Even  as you cast about for the source of the sound you realize that  your sense of direction has been lost among the maze of trees.}{}{}{}{}{1.000}{}
+E {285}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {279}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {290}{0}{<178>}{A macabre wood}{ }{The shadowy boughs of ancient evergreens reach down to you in the  darkness, tugging gently at your clothes.   The soft light of the  moon filters through the canopy of needles above, casting a soft  glow about the trees.}{}{}{}{}{1.000}{}
+E {288}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {287}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {292}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {291}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {291}{0}{<178>}{A silent woodland}{ }{You pause to listen to the darkened wood.  Your own breathing  sounds in your ears with the light rustling of the leaves above.   Ahead of you a softly glowing moonbeam touches the forest floor,  shadows flickering through its eerie light.}{}{}{}{}{1.000}{}
+E {287}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {290}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {293}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {294}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {292}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {292}{0}{<178>}{An ancient forest}{ }{Tendrils of mist creep out from the darkness to curl about you.   The shadowy forest seems to close in about you, low branches  tugging at your clothes as you wander between the ancient trees.   Dark shapes flit by through the darkness, teasing your senses.   Warily you continue your way through the forest.}{}{}{}{}{1.000}{}
+E {290}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {291}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {295}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {293}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {293}{0}{<178>}{A foreboding wilderness}{ }{You pause to listen to the darkened wood.  Your own breathing  sounds in your ears with the light rustling of the leaves above.   Ahead of you a softly glowing moonbeam touches the forest floor,  shadows flickering through its eerie light.}{}{}{}{}{1.000}{}
+E {291}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {292}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {294}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {298}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {296}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {295}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {294}{0}{<178>}{A shadowed wood}{ }{A darting shadow flashes between the trees before disappearing  into the darkness once more.  Even as you turn to search the  darkness beneath the shadowy boughs you catch another movement  out of the corner of your eye.  The strange wood seems to be  alive about you, wrapping you in its aura of menace.}{}{}{}{}{1.000}{}
+E {291}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {296}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {297}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {293}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {295}{0}{<178>}{An ominous wood}{ }{The shadowy boughs of ancient evergreens reach down to you in the  darkness, tugging gently at your clothes.   The soft light of the  moon filters through the canopy of needles above, casting a soft  glow about the trees.}{}{}{}{}{1.000}{}
+E {292}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {293}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {298}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {296}{0}{<178>}{An ominous forest}{ }{A distant mournful howl sends a shiver down your spine as it  echoes through the dark maze of trees surrounding you.  The  rustling branches overhead block your view of the full moon  above, cloaking you in the darkness of the ancient forest.  Even  as you cast about for the source of the sound you realize that  your sense of direction has been lost among the maze of trees.}{}{}{}{}{1.000}{}
+E {294}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {293}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {298}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {299}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {300}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {297}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {297}{0}{<178>}{An ominous forest}{ }{The shadowy boughs of ancient evergreens reach down to you in the  darkness, tugging gently at your clothes.   The soft light of the  moon filters through the canopy of needles above, casting a soft  glow about the trees.}{}{}{}{}{1.000}{}
+E {294}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {296}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {300}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {301}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {298}{0}{<178>}{An ominous wood}{ }{Pale white streamers of fog snake through the forest, wrapping  their ethereal arms about the ancient trees.  The gentle moonlight  glimmers off the mist, causing it to glow eerily in the shadowy  wood.  Dark shapes play tricks on your eyes as you catch them from  the corner of your eye, only to find swirling mists where you  thought there was more.}{}{}{}{}{1.000}{}
+E {293}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {295}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {299}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {296}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {299}{0}{<178>}{An ancient forest}{ }{Tendrils of mist creep out from the darkness to curl about you.   The shadowy forest seems to close in about you, low branches  tugging at your clothes as you wander between the ancient trees.   Dark shapes flit by through the darkness, teasing your senses.   Warily you continue your way through the forest.}{}{}{}{}{1.000}{}
+E {298}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {296}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {300}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {303}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {304}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {300}{0}{<178>}{An ominous wood}{ }{A darting shadow flashes between the trees before disappearing  into the darkness once more.  Even as you turn to search the  darkness beneath the shadowy boughs you catch another movement  out of the corner of your eye.  The strange wood seems to be  alive about you, wrapping you in its aura of menace.}{}{}{}{}{1.000}{}
+E {296}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {297}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {301}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {302}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {303}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {299}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {301}{0}{<178>}{A macabre wood}{ }{The shadows wrap you in their cold embrace.  The ancient forest  rises up about you, swallowing you in its dark depths.  The chill  shadows of the night raise goosebumps along your body even as you  suppress a shiver.  The darkness about you is absolute, shadowing  the very sky from your view as you look upwards towards the moon.}{}{}{}{}{1.000}{}
+E {297}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {302}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {300}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {302}{0}{<178>}{An ominous wood}{ }{A darting shadow flashes between the trees before disappearing  into the darkness once more.  Even as you turn to search the  darkness beneath the shadowy boughs you catch another movement  out of the corner of your eye.  The strange wood seems to be  alive about you, wrapping you in its aura of menace.}{}{}{}{}{1.000}{}
+E {301}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {300}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {303}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {308}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {307}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {303}{0}{<178>}{An eerie forest}{ }{The shadowy boughs of ancient evergreens reach down to you in the  darkness, tugging gently at your clothes.   The soft light of the  moon filters through the canopy of needles above, casting a soft  glow about the trees.}{}{}{}{}{1.000}{}
+E {300}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {299}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {304}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {307}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {305}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {302}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {304}{0}{<178>}{An ominous wood}{ }{The shadowy boughs of ancient evergreens reach down to you in the  darkness, tugging gently at your clothes.   The soft light of the  moon filters through the canopy of needles above, casting a soft  glow about the trees.}{}{}{}{}{1.000}{}
+E {299}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {305}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {306}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {303}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {305}{0}{<178>}{A darkened wood}{ }{You pause to listen to the darkened wood.  Your own breathing  sounds in your ears with the light rustling of the leaves above.   Ahead of you a softly glowing moonbeam touches the forest floor,  shadows flickering through its eerie light.}{}{}{}{}{1.000}{}
+E {304}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {303}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {307}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {313}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {314}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {306}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {306}{0}{<178>}{A foreboding wilderness}{ }{You pause to listen to the darkened wood.  Your own breathing  sounds in your ears with the light rustling of the leaves above.   Ahead of you a softly glowing moonbeam touches the forest floor,  shadows flickering through its eerie light.}{}{}{}{}{1.000}{}
+E {304}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {305}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {315}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {307}{0}{<178>}{An ancient forest}{ }{The shadows wrap you in their cold embrace.  The ancient forest  rises up about you, swallowing you in its dark depths.  The chill  shadows of the night raise goosebumps along your body even as you  suppress a shiver.  The darkness about you is absolute, shadowing  the very sky from your view as you look upwards towards the moon.}{}{}{}{}{1.000}{}
+E {303}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {302}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {308}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {310}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {313}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {305}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {308}{0}{<178>}{An ominous forest}{ }{Tendrils of mist creep out from the darkness to curl about you.   The shadowy forest seems to close in about you, low branches  tugging at your clothes as you wander between the ancient trees.   Dark shapes flit by through the darkness, teasing your senses.   Warily you continue your way through the forest.}{}{}{}{}{1.000}{}
+E {302}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {309}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {310}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {307}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {309}{0}{<178>}{A dark and quiet wilderness}{ }{The shadowy boughs of ancient evergreens reach down to you in the  darkness, tugging gently at your clothes.   The soft light of the  moon filters through the canopy of needles above, casting a soft  glow about the trees.}{}{}{}{}{1.000}{}
+E {308}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {311}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {312}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {310}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {310}{0}{<178>}{An ominous wood}{ }{The shadowy boughs of ancient evergreens reach down to you in the  darkness, tugging gently at your clothes.   The soft light of the  moon filters through the canopy of needles above, casting a soft  glow about the trees.}{}{}{}{}{1.000}{}
+E {308}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {309}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {307}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {313}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {312}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {318}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {311}{0}{<178>}{An ancient forest}{ }{You pause to listen to the darkened wood.  Your own breathing  sounds in your ears with the light rustling of the leaves above.   Ahead of you a softly glowing moonbeam touches the forest floor,  shadows flickering through its eerie light.}{}{}{}{}{1.000}{}
+E {309}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {312}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {323}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {322}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {324}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {312}{0}{<178>}{An ancient forest}{ }{A darting shadow flashes between the trees before disappearing  into the darkness once more.  Even as you turn to search the  darkness beneath the shadowy boughs you catch another movement  out of the corner of your eye.  The strange wood seems to be  alive about you, wrapping you in its aura of menace.}{}{}{}{}{1.000}{}
+E {309}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {310}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {318}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {322}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {321}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {311}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {313}{0}{<178>}{An ominous wood}{ }{Pale white streamers of fog snake through the forest, wrapping  their ethereal arms about the ancient trees.  The gentle moonlight  glimmers off the mist, causing it to glow eerily in the shadowy  wood.  Dark shapes play tricks on your eyes as you catch them from  the corner of your eye, only to find swirling mists where you  thought there was more.}{}{}{}{}{1.000}{}
+E {307}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {305}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {314}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {318}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {319}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {310}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {314}{0}{<178>}{An ominous wood}{ }{A darting shadow flashes between the trees before disappearing  into the darkness once more.  Even as you turn to search the  darkness beneath the shadowy boughs you catch another movement  out of the corner of your eye.  The strange wood seems to be  alive about you, wrapping you in its aura of menace.}{}{}{}{}{1.000}{}
+E {305}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {315}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {317}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {313}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {315}{0}{<178>}{An ominous wood}{ }{A distant mournful howl sends a shiver down your spine as it  echoes through the dark maze of trees surrounding you.  The  rustling branches overhead block your view of the full moon  above, cloaking you in the darkness of the ancient forest.  Even  as you cast about for the source of the sound you realize that  your sense of direction has been lost among the maze of trees.}{}{}{}{}{1.000}{}
+E {306}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {316}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {314}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {316}{0}{<178>}{A silent woodland}{ }{Tendrils of mist creep out from the darkness to curl about you.   The shadowy forest seems to close in about you, low branches  tugging at your clothes as you wander between the ancient trees.   Dark shapes flit by through the darkness, teasing your senses.   Warily you continue your way through the forest.}{}{}{}{}{1.000}{}
+E {315}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {317}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {317}{0}{<178>}{An ominous forest}{ }{A distant mournful howl sends a shiver down your spine as it  echoes through the dark maze of trees surrounding you.  The  rustling branches overhead block your view of the full moon  above, cloaking you in the darkness of the ancient forest.  Even  as you cast about for the source of the sound you realize that  your sense of direction has been lost among the maze of trees.}{}{}{}{}{1.000}{}
+E {314}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {316}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {319}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {318}{0}{<178>}{A dark and quiet wilderness}{ }{The shadowy boughs of ancient evergreens reach down to you in the  darkness, tugging gently at your clothes.   The soft light of the  moon filters through the canopy of needles above, casting a soft  glow about the trees.}{}{}{}{}{1.000}{}
+E {313}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {310}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {319}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {321}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {320}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {312}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {319}{0}{<178>}{An ominous forest}{ }{Pale white streamers of fog snake through the forest, wrapping  their ethereal arms about the ancient trees.  The gentle moonlight  glimmers off the mist, causing it to glow eerily in the shadowy  wood.  Dark shapes play tricks on your eyes as you catch them from  the corner of your eye, only to find swirling mists where you  thought there was more.}{}{}{}{}{1.000}{}
+E {313}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {317}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {320}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {318}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {320}{0}{<178>}{An ominous forest}{ }{Tendrils of mist creep out from the darkness to curl about you.   The shadowy forest seems to close in about you, low branches  tugging at your clothes as you wander between the ancient trees.   Dark shapes flit by through the darkness, teasing your senses.   Warily you continue your way through the forest.}{}{}{}{}{1.000}{}
+E {319}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {318}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {321}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {321}{0}{<178>}{An ominous forest}{ }{Pale white streamers of fog snake through the forest, wrapping  their ethereal arms about the ancient trees.  The gentle moonlight  glimmers off the mist, causing it to glow eerily in the shadowy  wood.  Dark shapes play tricks on your eyes as you catch them from  the corner of your eye, only to find swirling mists where you  thought there was more.}{}{}{}{}{1.000}{}
+E {318}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {312}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {322}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {334}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {320}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {322}{0}{<178>}{A dark and quiet wilderness}{ }{The shadows wrap you in their cold embrace.  The ancient forest  rises up about you, swallowing you in its dark depths.  The chill  shadows of the night raise goosebumps along your body even as you  suppress a shiver.  The darkness about you is absolute, shadowing  the very sky from your view as you look upwards towards the moon.}{}{}{}{}{1.000}{}
+E {312}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {311}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {323}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {333}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {334}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {321}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {323}{0}{<178>}{An ancient forest}{ }{A darting shadow flashes between the trees before disappearing  into the darkness once more.  Even as you turn to search the  darkness beneath the shadowy boughs you catch another movement  out of the corner of your eye.  The strange wood seems to be  alive about you, wrapping you in its aura of menace.}{}{}{}{}{1.000}{}
+E {311}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {324}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {328}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {332}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {333}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {322}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {324}{0}{<178>}{An ancient forest}{ }{Tendrils of mist creep out from the darkness to curl about you.   The shadowy forest seems to close in about you, low branches  tugging at your clothes as you wander between the ancient trees.   Dark shapes flit by through the darkness, teasing your senses.   Warily you continue your way through the forest.}{}{}{}{}{1.000}{}
+E {311}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {325}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {323}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {325}{0}{<178>}{A shadowed wood}{ }{Pale white streamers of fog snake through the forest, wrapping  their ethereal arms about the ancient trees.  The gentle moonlight  glimmers off the mist, causing it to glow eerily in the shadowy  wood.  Dark shapes play tricks on your eyes as you catch them from  the corner of your eye, only to find swirling mists where you  thought there was more.}{}{}{}{}{1.000}{}
+E {324}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {326}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {327}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {328}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {326}{0}{<178>}{A shadowed wood}{ }{A darting shadow flashes between the trees before disappearing  into the darkness once more.  Even as you turn to search the  darkness beneath the shadowy boughs you catch another movement  out of the corner of your eye.  The strange wood seems to be  alive about you, wrapping you in its aura of menace.}{}{}{}{}{1.000}{}
+E {325}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {327}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {329}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {327}{0}{<178>}{An ominous wood}{ }{Tendrils of mist creep out from the darkness to curl about you.   The shadowy forest seems to close in about you, low branches  tugging at your clothes as you wander between the ancient trees.   Dark shapes flit by through the darkness, teasing your senses.   Warily you continue your way through the forest.}{}{}{}{}{1.000}{}
+E {325}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {326}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {328}{0}{<178>}{A foreboding wilderness}{ }{Tendrils of mist creep out from the darkness to curl about you.   The shadowy forest seems to close in about you, low branches  tugging at your clothes as you wander between the ancient trees.   Dark shapes flit by through the darkness, teasing your senses.   Warily you continue your way through the forest.}{}{}{}{}{1.000}{}
+E {325}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {329}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {323}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {332}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {329}{0}{<178>}{A macabre wood}{ }{The shadows wrap you in their cold embrace.  The ancient forest  rises up about you, swallowing you in its dark depths.  The chill  shadows of the night raise goosebumps along your body even as you  suppress a shiver.  The darkness about you is absolute, shadowing  the very sky from your view as you look upwards towards the moon.}{}{}{}{}{1.000}{}
+E {326}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {328}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {330}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {331}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {330}{0}{<178>}{A dark and quiet wilderness}{ }{The shadows wrap you in their cold embrace.  The ancient forest  rises up about you, swallowing you in its dark depths.  The chill  shadows of the night raise goosebumps along your body even as you  suppress a shiver.  The darkness about you is absolute, shadowing  the very sky from your view as you look upwards towards the moon.}{}{}{}{}{1.000}{}
+E {329}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {331}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {338}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+
+R {331}{0}{<178>}{A dark and quiet wilderness}{ }{You pause to listen to the darkened wood.  Your own breathing  sounds in your ears with the light rustling of the leaves above.   Ahead of you a softly glowing moonbeam touches the forest floor,  shadows flickering through its eerie light.}{}{}{}{}{1.000}{}
+E {329}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {332}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {338}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {330}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {332}{0}{<178>}{An eerie forest}{ }{Pale white streamers of fog snake through the forest, wrapping  their ethereal arms about the ancient trees.  The gentle moonlight  glimmers off the mist, causing it to glow eerily in the shadowy  wood.  Dark shapes play tricks on your eyes as you catch them from  the corner of your eye, only to find swirling mists where you  thought there was more.}{}{}{}{}{1.000}{}
+E {328}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {323}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {333}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {338}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {337}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {331}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {333}{0}{<178>}{A darkened wood}{ }{A darting shadow flashes between the trees before disappearing  into the darkness once more.  Even as you turn to search the  darkness beneath the shadowy boughs you catch another movement  out of the corner of your eye.  The strange wood seems to be  alive about you, wrapping you in its aura of menace.}{}{}{}{}{1.000}{}
+E {323}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {322}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {334}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {337}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {335}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {332}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {334}{0}{<178>}{An eerie forest}{ }{Pale white streamers of fog snake through the forest, wrapping  their ethereal arms about the ancient trees.  The gentle moonlight  glimmers off the mist, causing it to glow eerily in the shadowy  wood.  Dark shapes play tricks on your eyes as you catch them from  the corner of your eye, only to find swirling mists where you  thought there was more.}{}{}{}{}{1.000}{}
+E {322}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {321}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {335}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {336}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {333}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {335}{0}{<178>}{An ominous forest}{ }{Tendrils of mist creep out from the darkness to curl about you.   The shadowy forest seems to close in about you, low branches  tugging at your clothes as you wander between the ancient trees.   Dark shapes flit by through the darkness, teasing your senses.   Warily you continue your way through the forest.}{}{}{}{}{1.000}{}
+E {334}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {333}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {337}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {340}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {341}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {336}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {336}{0}{<178>}{An ominous wood}{ }{The shadowy boughs of ancient evergreens reach down to you in the  darkness, tugging gently at your clothes.   The soft light of the  moon filters through the canopy of needles above, casting a soft  glow about the trees.}{}{}{}{}{1.000}{}
+E {334}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {335}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {337}{0}{<178>}{A shadowed wood}{ }{A darting shadow flashes between the trees before disappearing  into the darkness once more.  Even as you turn to search the  darkness beneath the shadowy boughs you catch another movement  out of the corner of your eye.  The strange wood seems to be  alive about you, wrapping you in its aura of menace.}{}{}{}{}{1.000}{}
+E {333}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {332}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {338}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {339}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {340}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {335}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {338}{0}{<178>}{An ancient forest}{ }{A distant mournful howl sends a shiver down your spine as it  echoes through the dark maze of trees surrounding you.  The  rustling branches overhead block your view of the full moon  above, cloaking you in the darkness of the ancient forest.  Even  as you cast about for the source of the sound you realize that  your sense of direction has been lost among the maze of trees.}{}{}{}{}{1.000}{}
+E {332}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {331}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {330}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {339}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {337}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {339}{0}{<178>}{An ancient forest}{ }{Pale white streamers of fog snake through the forest, wrapping  their ethereal arms about the ancient trees.  The gentle moonlight  glimmers off the mist, causing it to glow eerily in the shadowy  wood.  Dark shapes play tricks on your eyes as you catch them from  the corner of your eye, only to find swirling mists where you  thought there was more.}{}{}{}{}{1.000}{}
+E {338}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {337}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {340}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {345}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {343}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {340}{0}{<178>}{A darkened wood}{ }{A distant mournful howl sends a shiver down your spine as it  echoes through the dark maze of trees surrounding you.  The  rustling branches overhead block your view of the full moon  above, cloaking you in the darkness of the ancient forest.  Even  as you cast about for the source of the sound you realize that  your sense of direction has been lost among the maze of trees.}{}{}{}{}{1.000}{}
+E {337}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {335}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {341}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {343}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {344}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {339}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {341}{0}{<178>}{A foreboding wilderness}{ }{You pause to listen to the darkened wood.  Your own breathing  sounds in your ears with the light rustling of the leaves above.   Ahead of you a softly glowing moonbeam touches the forest floor,  shadows flickering through its eerie light.}{}{}{}{}{1.000}{}
+E {335}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {342}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {340}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {342}{0}{<178>}{An ominous forest}{ }{Pale white streamers of fog snake through the forest, wrapping  their ethereal arms about the ancient trees.  The gentle moonlight  glimmers off the mist, causing it to glow eerily in the shadowy  wood.  Dark shapes play tricks on your eyes as you catch them from  the corner of your eye, only to find swirling mists where you  thought there was more.}{}{}{}{}{1.000}{}
+E {341}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {344}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {343}{0}{<178>}{An ancient forest}{ }{The shadows wrap you in their cold embrace.  The ancient forest  rises up about you, swallowing you in its dark depths.  The chill  shadows of the night raise goosebumps along your body even as you  suppress a shiver.  The darkness about you is absolute, shadowing  the very sky from your view as you look upwards towards the moon.}{}{}{}{}{1.000}{}
+E {340}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {339}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {345}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {344}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {344}{0}{<178>}{A silent woodland}{ }{You pause to listen to the darkened wood.  Your own breathing  sounds in your ears with the light rustling of the leaves above.   Ahead of you a softly glowing moonbeam touches the forest floor,  shadows flickering through its eerie light.}{}{}{}{}{1.000}{}
+E {340}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {343}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {342}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {345}{0}{<178>}{A foreboding wilderness}{ }{You pause to listen to the darkened wood.  Your own breathing  sounds in your ears with the light rustling of the leaves above.   Ahead of you a softly glowing moonbeam touches the forest floor,  shadows flickering through its eerie light.}{}{}{}{}{1.000}{}
+E {339}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {343}{w}{w}{8}{0}{}{1.000}{}{0.00}
+
+R {346}{0}{<178>}{A Vast Cavern}{ }{An enormous cavern opens up before you, an oppressive expanse of darkness massive enough to swallow any light. The floor of the cavern gradually slopes down from here to the waters of a black primal river, churning its way silently through the darkness between desolate lifeless banks. An unearthly glow rises from the black river and an ethereal mist pours out of the surrounding darkness to be swallowed by the restless waters.  Hewn into the rock of the cavern wall is the base of an ancient stone staircase, its steps worn smooth by the passage of countless feet. You fight the urge to flee this forsaken place and return to the world up above.}{}{}{}{}{1.000}{}
+E {67}{u}{u}{16}{0}{}{1.000}{}{0.00}
+E {347}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+
+R {347}{0}{<048>}{Riverbank}{ }{You eventually arrive at the bank of the river, your feet crunching through white dust and black lifeless rock as you walk along the bank. In both directions an endless track is crushed into the rock following the river to disappear into the shadows.  Amidst the expanse of churning black water you can just make out the wall of an ancient stone temple, its colossal foundations standing firm against the silent swirling torrent of the river around it.  Riding low in the crashing waters of the river is a tiny boat with a gaunt cloaked figure standing in the stern.}{}{}{}{}{1.000}{}
+E {346}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+
+R {348}{0}{<178>}{Gameroom}{ }{This is the gameroom for the necromancer's guild. It is a place for guildmembers to have a bunch of fun in.}{}{}{}{}{1.000}{}
+E {99}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {349}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {350}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {352}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {351}{d}{d}{32}{0}{}{1.000}{}{0.00}
+
+R {349}{0}{<178>}{The WAR! Room}{ }{This is the game of WAR! It's an intense game of adrenaline, testosterone, and estrogen. You see very little here except a small machine sitting in the center of the room. If you stand in this room during a game, you can hear the activities of the battlefield.}{}{}{}{}{1.000}{}
+E {348}{se}{se}{6}{0}{}{1.000}{}{0.00}
+
+R {350}{0}{<178>}{NECROTAG!}{ }{NECROTAG! This is the Necrotag Room, you come here if you want to get in on a game of NECROTAG! or check up on the one presently running.  There is a button here that you can press to get the information you desire.  Messages from the current game get piped into this room so you can hear what's going on.}{}{}{}{}{1.000}{}
+E {348}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+
+R {351}{0}{}{The Scavenger Hunt room}{ }{This room exists for all aspects of scavenger hunts. Discussions may be had, and trophies may be placed in here.}{Necs}{}{}{}{1.000}{}
+E {348}{u}{u}{16}{0}{}{1.000}{}{0.00}
+E {356}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {357}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {358}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {352}{0}{<178>}{RallyRoom}{ }{You have entered the RallyRoom! This is where necromancers from everywhere come and compete in a road rally all over the Three Kingdoms.  /-------------------------------------------------------\\ | Commands:                                             | |                                                       | |       rally : begin a new NecroRally!                 | | rallystatus : shows the leader's score and your score | |       abort : aborts the current NecroRally!          | |       rules : lists the rules of the NecroRally!      | \\-------------------------------------------------------/ }{}{}{}{}{1.000}{}
+E {348}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {353}{0}{<178>}{Shrine to Lyrra, the Duchess Vampire}{ }{Through ivy covered gates, you enter the secluded domain of Lyrra, the Duchess of Vampires and Domina of Night. The thick, heavy scent of burning incense assails your senses. The rough stone walls of the shrine are pitted black from smoke and sand rasps against the stone floor under your feet as you cautiously tread upon vampire territory. The shrine is dominated by an altar in the center of the room, over which stands a large stone icon of the Duchess Lyrra with her arms held outward in an eternal embrace of the night. Just beyond the altar is a stairwell that leads down into darkness. Great power emanates from within the depths of this darkness.  Those aspiring to join the ranks of Lyrra's progeny should begin by convincing a vampire of their worthiness, and then undergo the joining ceremony. To begin their initiation, candidates should type 'begin <name>', where <name> is the name of their sponsoring vampire. }{}{}{}{}{1.000}{}
+E {54}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {354}{d}{d}{32}{0}{}{1.000}{}{0.00}
+
+R {354}{0}{<108>}{}{ }{}{}{}{}{}{1.000}{}
+E {353}{u}{u}{16}{0}{}{1.000}{}{0.00}
+
+R {355}{0}{<178>}{A dark laboratory}{ }{You've entered a small dark laboratory or alchemy chamber.  The center of the chamber is dominated by a large oak work table.  It is very thick and has extremely large sturdy legs.  It is covered with different utensils and glass wear typically used in alchemy and potion making shops.  The walls are lined with several bookshelves that are barren except for a few lone cobwebs and a thin layer of dust.}{}{}{}{}{1.000}{}
+E {122}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {356}{0}{<048>}{An ancient crypt}{ }{Deep within the ancient tower you've found an amazing sight.  A  glimmering portal hangs against one wall, flickering slightly to  send shadows dancing about the hall.  Stone coffins of smokey  marble line the walls flanking the gateway, soldiers of another age  here to guard the crypt.  A lone figure stands beside the portal,  his faintly glowing eyes watching you.}{Necs}{}{}{}{1.000}{}
+E {351}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {359}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {357}{0}{<178>}{Conservatory}{ }{This shadowed crypt is the home of art and beauty in the Necromancers guild.  The walls are set with an extremely ornate mosaic depicting scenes from many aspects of history throughout the guild.  Here also is the Composition Board, where you are able to post your most treasured literary or artistic creations.}{Necs}{}{}{}{1.000}{}
+E {351}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {358}{0}{<178>}{The Game of Minions}{ }{You stand in a quiet room, dark with age and pulsing with energy. Listening closely, you can almost feel a heartbeat within the walls. This room is the game of Minions, a battle of strategy and a game of wits. To learn the rules play, use the 'list' command.}{Necs}{}{}{}{1.000}{}
+E {351}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {360}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {361}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {359}{0}{<178>}{An ancient crypt}{ }{You stand before a dark pool of still inky water.  The rest of the  room is cloaked in shadows, focusing your attention on the pool.   You seem to forget about the cool stone and damp walls as you watch  the dark waters and the realms they reveal.}{Necs}{}{}{}{1.000}{}
+E {356}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {360}{0}{<108>}{}{ }{}{}{}{}{}{1.000}{}
+E {358}{s}{s}{4}{0}{}{1.000}{}{0.00}
+
+R {361}{0}{<108>}{}{ }{}{}{}{}{}{1.000}{}
+E {358}{n}{n}{1}{0}{}{1.000}{}{0.00}
+
+R {362}{0}{<068>}{The Pure Necromancers' Room}{ }{This room is the private area for all pure necromancers in the Necromancers' Guild.  The room smells of incense and strange, exotic spices.  The room radiates power and prestige and gives you a feeling of peace and serenity.  There is a portal here, swirling with the planar colors.}{Necs}{{content}{{item}{{^A misty curtain$}{{name}{A misty curtain}}{containing \d+ messages}{{name}{The Pure Necromancer's board containing 80 messages (no unread messages)}}}}}{}{}{1.000}{}
+E {92}{s}{portal}{4}{0}{}{1.000}{}{0.00}
+E {363}{u}{u}{16}{0}{}{1.000}{}{0.00}
+
+R {363}{0}{<178>}{The Planescape}{ }{You stand on the brink of existence.  Having stepped from the mortal confines of the guild halls, you now look out over what appears to be rolling waves of black and white.  As large as can be imagined, and as small as can be conceived, the waves are formed from the thoughts of the gods.  Where the waves crash into one another, bright crimson can be seen.  These energies are the positive and negative material planes of existence, and as a pure necromancer, you must choose one or both.  The choice of a plane to embrace can only occur by the free will of a red necromancer.  Red, the color of neutrality, can be embraced forever, or it can be shed, in favor of black or white.  The choice is yours.  'choose' the positive or negative plane, or choose to leave this room, remaining red for yet another day.}{Necs}{}{}{}{1.000}{}
+E {362}{d}{d}{32}{0}{}{1.000}{}{0.00}
