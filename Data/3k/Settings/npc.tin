@@ -48,86 +48,35 @@
             {nomap} {1}
             {nokill} {1}
     }
-    {the Bayen} 
+    {the {Bayen|Bolwyn|Ghast|Greesh|Grimare|Heucuva|Manshi|Mohrg|Quarin|Skeleton|Tholen|Valithyn|Valpur|Wight|Zombie}} 
     {
-            {nomap} {1}
-            {nokill} {1}
-    }
-    {the Bolwyn} 
-    {
-            {nomap} {1}
-            {nokill} {1}
-    }
-    {the Ghast} 
-    {
-            {nomap} {1}
-            {nokill} {1}
-    }
-    {the Greesh} 
-    {
-            {nomap} {1}
-            {nokill} {1}
-    }
-    {the Grimare} 
-    {
-            {nomap} {1}
-            {nokill} {1}
-    }
-    {the Heucuva} 
-    {
-            {nomap} {1}
-            {nokill} {1}
-    }
-    {the Manshi} 
-    {
-            {nomap} {1}
-            {nokill} {1}
-    }
-    {the Mohrg} 
-    {
-            {nomap} {1}
-            {nokill} {1}
-    }
-    {the Quarin} 
-    {
-            {nomap} {1}
-            {nokill} {1}
-    }
-    {the Skeleton} 
-    {
-            {id} {skeleton}         
-            {nomap} {1}
-            {nokill} {1}
-    }
-    {the Tholen} 
-    {
-            {id} {tholen}         
-            {nomap} {1}
-            {nokill} {1}
-    }
-    {the Valithyn} 
-    {
-            {id} {valithyn}
-            {nomap} {1}
-            {nokill} {1}
-    }
-    {the Valpur} 
-    {
-            {id} {valpur}        
-            {nomap} {1}
-            {nokill} {1}
-    }
-    {the Wight} 
-    {
-            {id} {wight}         
-            {nomap} {1}
-            {nokill} {1}
-    }
-    {the Zombie} 
-    {
-            {id} {zombie}         
-            {nomap} {1}
-            {nokill} {1}
+        {alignment} {0}        
+        {desc} 
+        {
+            {1} {A valithyn under the control of Blutash}
+            {2} {This mighty undead creature straddles the line of existence between}
+            {3} {skeletal corporealness and that of the ghostly ethereal.  Its upper}
+            {4} {torso appears to be that of a lithe female warrior, clad in spectral}
+            {5} {armour with eyes glowing of azure banefire beneath the midnight cowl}
+            {6} {of her dark helm.  The lower body of the deathly creature trails off}
+            {7} {into a vaporous essence that effects her to near-hover before you. }
+            {8} {Bound by a powerful soul, retrieved from the mist-veiled borders of}
+            {9} {Death itself, the titanic power of this entity wells throughout the}
+            {10} {room, chilling you to the very bone, making you think very carefully}
+            {11} {about who is really in control here.}
+            {12} {She is better than perfect.}
+        }        
+        {id} {undead}
+        {nomap} {1}
+        {nokill} {1}
+        {size} 
+        {
+            {0} 
+            {
+                {consider} {100}
+            }
+        }
+        {undead} {1}
     }
     {the packmule} 
     {
@@ -136,8 +85,34 @@
     }
     {under the control of} 
     {
-            {nomap} {1}
-            {nokill} {1}
+        {alignment} {0}
+        {id} {Undead}
+        {desc} 
+        {
+            {1} {A valithyn under the control of Blutash}
+            {2} {This mighty undead creature straddles the line of existence between}
+            {3} {skeletal corporealness and that of the ghostly ethereal.  Its upper}
+            {4} {torso appears to be that of a lithe female warrior, clad in spectral}
+            {5} {armour with eyes glowing of azure banefire beneath the midnight cowl}
+            {6} {of her dark helm.  The lower body of the deathly creature trails off}
+            {7} {into a vaporous essence that effects her to near-hover before you. }
+            {8} {Bound by a powerful soul, retrieved from the mist-veiled borders of}
+            {9} {Death itself, the titanic power of this entity wells throughout the}
+            {10} {room, chilling you to the very bone, making you think very carefully}
+            {11} {about who is really in control here.}
+            {12} {She is better than perfect.}
+        }        
+        {name} {A valithyn under the control of Blutash}
+        {nokill} {1}
+        {nomap} {1}
+        {size} 
+        {
+            {0} 
+            {
+                {consider} {100}
+            }
+        }
+        {undead} {1}
     }
     {_npc[^Vilgan$]} 
     {
