@@ -25,7 +25,8 @@
         };
         #IF {"$room[killbuffer]" == "" }
         {
-            #VAR {room[target]} {$room[current][id]};
+            #VAR {room[target][id]} {$room[current][id]};
+            #VAR {room[target][name]} {$room[current][name]};
         };
         event_register {e_roomscan_end} {AutoKill.tin} {handler_auto_kill_fire};
     };
@@ -39,9 +40,9 @@
         handler_auto_kill_combat;
         #LIST {room[commandqueue]} {add} {$room[killbuffer]};
     };
-    #ELSEIF {"$room[target]" != ""}
+    #ELSEIF {"$room[target][name]" != ""}
     {
-		handler_auto_kill_choice {$room[target]};
+		handler_auto_kill_choice {$room[target][name]};
     };
     #ELSE
     {
