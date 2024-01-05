@@ -1,3 +1,4 @@
-#CONFIG {packet patch} {0.7};
+#CONFIG {PACKET PATCH} {0.7};
 #NOP #CONFIG {packet patch} {auto};
-#CONFIG {color patch} {on};
+#CONFIG {COLOR PATCH} {on};
+#CONFIG {REPEAT CHAR} {`};
