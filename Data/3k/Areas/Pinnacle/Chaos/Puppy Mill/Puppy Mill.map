@@ -1,0 +1,77 @@
+C 500
+
+CE <278>
+CH <118>
+CP <138>
+CR <178>
+CB 
+
+F 9
+
+I 9
+
+L ▪ ╹ ╺ ┗ ╻ ┃ ┏ ┣ ╸ ┛ ━ ┻ ┓ ┫ ┳ ╋ X
+
+
+R {    1} {0} {<068>} {Start of a driveway} { } {You are at the beginning of an unremarkable driveway.  To your north is a heavy gate.} {} {} {} {} {1.000}
+E {    3} {n} {n} {1} {0} {}
+E {    2} {return} {.mapLink {Pinnacle/Chaos} {10} {return};} {0} {1} {}
+
+R {    2} {0} {<000>} {LINK: Pinnacle/Chaos} {<138>*} {} {Pinnacle/Chaos} {{link}{}} {} {} {1.000}
+
+R {    3} {0} {<068>} {Before an iron gate} { } {You are standing in front of a large iron gate, the road leads back the way you came.  A large brick fence extends away from the gate in both directions and looks near impossible to climb.} {} {} {} {} {1.000}
+E {    1} {s} {s} {4} {0} {}
+E {    4} {n} {climb gate} {1} {0} {}
+
+R {    4} {0} {<068>} {In the driveway} { } {You are standing in the driveway of a large mansion.  You are in front of a large iron gate, on the other side of it is a road leading away.  A large brick fence extends away from the gate in both directions and looks near impossible to climb.} {} {} {} {} {1.000}
+E {    3} {s} {climb gate} {4} {0} {}
+E {    5} {n} {n} {1} {0} {}
+
+R {    5} {0} {<178>} {In the driveway} { } {You are standing in the driveway of a large mansion.  At this spot you are right up next to the mansion itself and the driveway heads off to the left (west) or back to the south.  Stairs lead up to the east onto the porch and there's a large window into the mansion here.} {} {} {} {} {1.000}
+E {    4} {s} {s} {4} {0} {}
+E {    6} {w} {w} {8} {0} {}
+E {    7} {e} {e} {2} {0} {}
+
+R {    6} {0} {<178>} {In the driveway} { } {You are standing in the driveway of a large mansion.  You are at a corner where the driveway heads north and east from here.  A large brick fence follows the driveway on the west.  The corner of the mansion is here too.} {} {} {} {} {1.000}
+E {    5} {e} {e} {2} {0} {}
+E {    8} {n} {n} {1} {0} {}
+
+R {    7} {0} {<178>} {On the porch} { } {You are standing on the front porch of a large victorian mansion.  The stairs lead down to the west and there's a large, sturdy-looking front door here.} {} {} {} {} {1.000}
+E {    5} {w} {w} {8} {0} {}
+
+R {    8} {0} {<178>} {In the driveway} { } {You are standing in the driveway of a large mansion.  To your east is the mansion itself and off to the north you see the driveway continue until it reaches the garage.  To your west is the large and smooth brick fence.} {} {} {} {} {1.000}
+E {    6} {s} {s} {4} {0} {}
+E {    9} {n} {n} {1} {0} {}
+
+R {    9} {0} {<178>} {End of the driveway} { } {You are standing at the end of the driveway.  There's a garage to the north that the driveway leads into and to your east is the back yard.} {} {} {} {} {1.000}
+E {    8} {s} {s} {4} {0} {}
+E {   10} {n} {n} {1} {0} {}
+E {   11} {e} {e} {2} {0} {}
+
+R {   10} {0} {<178>} {In the garage} {<138>?} {You are standing in the garage of a large mansion.  It is strangely devoid of anything.  There are visible dirty tire tracks on the concrete but that's it.} {} {{Garage}{}{unlimited items room for Bag of Major Sending}{}} {} {} {1.000}
+E {    9} {s} {s} {4} {0} {}
+
+R {   11} {0} {<178>} {Back Yard} { } {You are standing in the back yard of the mansion.  It is lush and green and well kept.  Off to the north you see a gated pen of some kind.  The walls of it are too high to see over from this distance.  You hear quiet barks and occasional whimpers coming from that direction.} {} {} {} {} {1.000}
+E {    9} {w} {w} {8} {0} {}
+E {   12} {n} {n} {1} {0} {}
+E {   13} {e} {e} {2} {0} {}
+
+R {   12} {0} {<178>} {Back Yard} { } {You are in the back yard of a large mansion.  You are standing in front of a gated pen and the gate appears to be unlocked.  You can hear barks and whimpers on the other side of the gate.} {} {} {} {} {1.000}
+E {   11} {s} {s} {4} {0} {}
+E {   14} {e} {e} {2} {0} {}
+E {   15} {n} {n} {1} {0} {}
+
+R {   13} {0} {<178>} {Back Yard} { } {You are standing in the back yard of the mansion.  It is lush and green and well kept.  Off to the north you see a gated pen of some kind.  The walls of it are too high to see over from this distance.  You hear quiet barks and occasional whimpers coming from that direction.} {} {} {} {} {1.000}
+E {   11} {w} {w} {8} {0} {}
+E {   14} {n} {n} {1} {0} {}
+
+R {   14} {0} {<178>} {Back Yard} { } {You are standing in the back yard of a large mansion.  Next to you is the wall of a gated pen, it is just a smidge too tall for you to see over but you can see an unlocked gate to the west.} {} {} {} {} {1.000}
+E {   13} {s} {s} {4} {0} {}
+E {   12} {w} {w} {8} {0} {}
+
+R {   15} {0} {<178>} {Puppy Pen} { } {You are standing on the west side of an enormous pen that is used to house puppies.  If there are no puppies here then it's just luck that someone already rescued them, or perhaps they've met with a worse fate.  The pen continues to the east and you can hear some whimpers coming from that direction.} {} {} {} {} {1.000}
+E {   12} {s} {s} {4} {0} {}
+E {   16} {e} {e} {2} {0} {}
+
+R {   16} {0} {<178>} {Puppy Pen} { } {You are on the eastern edge of the giant puppy pen.  There are large crates here, securely rooted to the ground that appear to contain grown dogs feeding some puppies.  If there are no puppies running around outside then it's just luck that someone already rescued them.  Unfortunately you cannot reach the dogs in the crates.} {} {} {} {} {1.000}
+E {   15} {w} {w} {8} {0} {}
