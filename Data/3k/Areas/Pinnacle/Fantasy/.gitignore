@@ -2,3 +2,7 @@
 */
 # Except this file
 !.gitignore
+
+# Except these folders
+!Necromancer Guild/
+
