@@ -1,0 +1,37 @@
+#FUNCTION {fDecToNumerals}
+{
+    #IF {%1 >= 1000} {#RETURN @fConcat{{M} {@fDecToNumerals{@fEval{%1 - 1000}}}}};
+    #IF {%1 >=  900} {#RETURN @fConcat{{CM}{@fDecToNumerals{@fEval{%1 -  900}}}}};
+    #IF {%1 >=  500} {#RETURN @fConcat{{D} {@fDecToNumerals{@fEval{%1 -  500}}}}};
+    #IF {%1 >=  400} {#RETURN @fConcat{{CD}{@fDecToNumerals{@fEval{%1 -  400}}}}};
+    #IF {%1 >=  100} {#RETURN @fConcat{{C} {@fDecToNumerals{@fEval{%1 -  100}}}}};
+    #IF {%1 >=   90} {#RETURN @fConcat{{XC}{@fDecToNumerals{@fEval{%1 -   90}}}}};
+    #IF {%1 >=   50} {#RETURN @fConcat{{L} {@fDecToNumerals{@fEval{%1 -   50}}}}};
+    #IF {%1 >=   40} {#RETURN @fConcat{{XL}{@fDecToNumerals{@fEval{%1 -   40}}}}};
+    #IF {%1 >=   10} {#RETURN @fConcat{{X} {@fDecToNumerals{@fEval{%1 -   10}}}}};
+    #IF {%1 >=    9} {#RETURN @fConcat{{IX}{@fDecToNumerals{@fEval{%1 -    9}}}}};
+    #IF {%1 >=    5} {#RETURN @fConcat{{V} {@fDecToNumerals{@fEval{%1 -    5}}}}};
+    #IF {%1 >=    4} {#RETURN @fConcat{{IV}{@fDecToNumerals{@fEval{%1 -    4}}}}};
+    #IF {%1 >=    1} {#RETURN @fConcat{{I} {@fDecToNumerals{@fEval{%1 -    1}}}}};
+    #RETURN;
+}
+
+#FUNCTION {fNumeralsToDec}
+{
+    #IF {"%1" == ""} {#LOCAL {_fNTD} {0}};
+    #ELSE {#LOCAL {_fNTD} {}};
+    #IF {"$_fNTD" == ""} {#REGEX {%1} {{^M(.*)}}  {#MATH {_fNTD} {@fNumeralsToDec{&2} + 1000}}};
+    #IF {"$_fNTD" == ""} {#REGEX {%1} {{^CM(.*)}} {#MATH {_fNTD} {@fNumeralsToDec{&2} + 900}}};
+    #IF {"$_fNTD" == ""} {#REGEX {%1} {{^D(.*)}}  {#MATH {_fNTD} {@fNumeralsToDec{&2} + 500}}};
+    #IF {"$_fNTD" == ""} {#REGEX {%1} {{^CD(.*)}} {#MATH {_fNTD} {@fNumeralsToDec{&2} + 400}}};
+    #IF {"$_fNTD" == ""} {#REGEX {%1} {{^C(.*)}}  {#MATH {_fNTD} {@fNumeralsToDec{&2} + 100}}};
+    #IF {"$_fNTD" == ""} {#REGEX {%1} {{^XC(.*)}} {#MATH {_fNTD} {@fNumeralsToDec{&2} + 90}}};
+    #IF {"$_fNTD" == ""} {#REGEX {%1} {{^L(.*)}}  {#MATH {_fNTD} {@fNumeralsToDec{&2} + 50}}};
+    #IF {"$_fNTD" == ""} {#REGEX {%1} {{^XL(.*)}} {#MATH {_fNTD} {@fNumeralsToDec{&2} + 40}}};
+    #IF {"$_fNTD" == ""} {#REGEX {%1} {{^X(.*)}}  {#MATH {_fNTD} {@fNumeralsToDec{&2} + 10}}};
+    #IF {"$_fNTD" == ""} {#REGEX {%1} {{^IX(.*)}} {#MATH {_fNTD} {@fNumeralsToDec{&2} + 9}}};
+    #IF {"$_fNTD" == ""} {#REGEX {%1} {{^V(.*)}}  {#MATH {_fNTD} {@fNumeralsToDec{&2} + 5}}};
+    #IF {"$_fNTD" == ""} {#REGEX {%1} {{^IV(.*)}} {#MATH {_fNTD} {@fNumeralsToDec{&2} + 4}}};
+    #IF {"$_fNTD" == ""} {#REGEX {%1} {{^I(.*)}}  {#MATH {_fNTD} {@fNumeralsToDec{&2} + 1}}};
+    #RETURN $_fNTD;
+};

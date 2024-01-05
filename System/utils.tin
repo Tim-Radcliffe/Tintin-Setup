@@ -401,3 +401,16 @@ event_register {e_5_mins} {System/utils.tin} {.aProfileSave};
   };
   #RETURN {$_fTable[output]};
 };
+
+#FUNCTION {fConcat}
+{
+    #LOCAL {_fConcat} {};
+    #UNVAR info;
+    #INFO ARGUMENTS SAVE;
+    #LIST {_fConcat[args]} CREATE {$info[ARGUMENTS][2..]};
+    #FOREACH {$_fConcat[args][]} {_fConcat[section]}
+    {
+        #CAT {_fConcat[result]} {$_fConcat[section]};
+    };
+    #RETURN $_fConcat[result];
+};
