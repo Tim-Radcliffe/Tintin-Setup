@@ -2,10 +2,13 @@
 {
     #NOP %1;
     #FORMAT {_hAT} {%T};
-    #IF {$_hAT > @fEval{$auto[talisman][time] + 180} && $my[hp][current] < $my[hp][max]}
+    #IF {$_hAT > @fEval{$talisman_of_honor[time] + 180} && $my[hp][current] < $my[hp][max]}
     {
-        #VAR {auto[talisman][time]} {$_hAT};
+        #VAR {talisman_of_honor[time]} {$_hAT};
         #SEND {!hold talisman};
     };
 };
+
+#VAR {talisman_of_honor} {};
+
 event_register {e_combat_round} {$path[equipment]/Talisman of Honor.tin} {handler_talisman_of_honor};
