@@ -11,6 +11,27 @@
     .log add {necromancer.donates.log} {Boot: $_boot[number] Corpses: %1};
 };
 
+#ALIAS {donate}
+{
+    #IF {"%0" == "finished"}
+    {
+        #NOP %%1;
+        #IF {$_eqDonates > 0}
+        {
+            .log {add} {necromancer.donates.log} {Boot: $_boot[number] Equipment: $_eqDonates};
+        };
+        #UNACTION {{^.{50}: for (\d+) coins.}};
+        #RETURN;
+    }
+    #VAR {_eqDonates} {0};
+    #ACTION {{^.{50}: for (\d+) coins.}}
+    {
+        #MATH {_eqDonates} {$_eqDonates + %%2};
+    };
+    event_oneshot {e_prompt} {Necromancer Guild.tin} {#NOP %%1;donate finished};
+    #SEND {donate %0};
+};
+
 #ALIAS {.study}
 {
     #NOP %1;
