@@ -1,6 +1,10 @@
 #ALIAS {.scanRoomNPC}
 {
 	#LOCAL {_sRN[match]} {@fGetNPCRegex{%3}};
+    #IF {"$_npc[$_sRN[match]][nomap]" == "1"}
+    {
+        #RETURN;
+    }
 	#FORMAT {_sRN[hash]} {%H} {$_sRN[match]};
 	event_raise {e_scan_room_npc} {$_sRN[match]} {%3} {%2} {$_sRN[hash]};
 	.scanRoomNPCID       {$_sRN[match]} {%3} {%2};
