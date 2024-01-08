@@ -1,47 +1,79 @@
 #ALIAS {.rolm_combat_round}
 {
     #NOP %1;
-    #MATH {_rolm[combat][rounds]} {$_rolm[combat][rounds] + 1};
+    .rolm_inc_round {rounds};
+    .rolm_inc_round {$_rolm[weapon]};
+    
     #IF {&{opponent[data][alignment]}}
     {
         #IF {$opponent[data][alignment] > 0}
         {
-            #MATH {_rolm[combat][good]} {$_rolm[combat][good] + 1};
+            .rolm_inc_round {good};
         };
         #ELSEIF {$opponent[data][alignment] < 0}
         {
-            #MATH {_rolm[combat][evil]} {$_rolm[combat][evil] + 1};
+            .rolm_inc_round {evil};            
         };
         #ELSE 
         {
-            #MATH {_rolm[combat][neutral]} {$_rolm[combat][neutral] + 1};
+            .rolm_inc_round {neutral};
         };
     };
     #IF {&{opponent[data][undead]} && "$opponent[data][undead]" == "1"}
     {
-        #MATH {_rolm[combat][undead]} {$_rolm[combat][undead] + 1};
+        .rolm_inc_round {undead};
     };
     #IF {&{opponent[data][size][$map[area][scaler]][avg]}}
     {
         #IF {$opponent[data][size][$map[area][scaler]][avg] <= 1000000}
         {
-            #MATH {_rolm[combat][small]} {$_rolm[combat][small] + 1};
+            .rolm_inc_round {small};
         };
         #ELSEIF {$opponent[data][size][$map[area][scaler]][avg] > 1000000 &&
                  $opponent[data][size][$map[area][scaler]][avg] <= 100000000}
         {
-            #MATH {_rolm[combat][medium]} {$_rolm[combat][medium] + 1};
+            .rolm_inc_round {medium};
         };
         #ELSE 
         {
-            #MATH {_rolm[combat][small]} {$_rolm[combat][large] + 1};
+            .rolm_inc_round {large};
         };
     };
-    #MATH {_rolm[combat][$_rolm[weapon]]} {$_rolm[combat][$_rolm[weapon]] + 1};
+
     .file write {$path[profile]/The Rod of Lordly Might.tin};
 };
 event_register {e_combat_round} {$path[equipment]/The Rod of Lordly Might.tin} {.rolm_combat_round};
 
+#ALIAS {.rolm_inc_round}
+{
+    #MATH {_rolm[combat][%1]} {$_rolm[combat][%1] + 1};
+    #IF {@fEval{$_rolm[combat][%1] % 500} == 0} 
+    {
+        .rolm_check_rune {%1} {$_rolm[combat][%1]};
+    };
+};
+
+#ALIAS {.rolm_check_rune}
+{
+    #NOP %1;
+    #LOCAL {_rolm_delay} {0};
+    #FOREACH {*_rolm[rune][]} {_rolm_rune}
+    {
+        #IF {$_rolm[rune][$_rolm_rune][trained] > 20}
+        {
+            #CONTINUE;
+        };
+        #IF {"$_rolm[rune][$_rolm_rune][refers]" != "%1"}
+        {
+            #CONTINUE;
+        };
+        #MATH {_rolm_delay} {$_rolm_delay + 2};
+        #LINE SUBSTITUTE VARIABLE #DELAY {$_rolm_delay} {#SEND {!touch $_rolm_rune rune};};
+    };
+    #UNVAR {_rolm_rune};
+};
+
+#NOP archonic vision of your bonding progression ~#=#=#=#=#=#=#=#|#=#=#=>
 #ALIAS {touch %w rune}
 {
     #ACTION {{^archonic vision of your bonding progression ([^\|]*)\|([^\|]*)$}}
@@ -78,6 +110,10 @@ event_register {e_combat_round} {$path[equipment]/The Rod of Lordly Might.tin} {
                 {aegis}
                 {
                     {trained} {1}
+                }
+                {anchor}
+                {
+                    {trained} {21}
                 }
                 {angel}
                 {
@@ -116,6 +152,10 @@ event_register {e_combat_round} {$path[equipment]/The Rod of Lordly Might.tin} {
                     {type} {weapon}
                     {refers} {reaper}
                 }
+                {diamond} 
+                {
+                    {trained} {21}
+                }                
                 {dove}
                 {
                     {trained} {1}
@@ -150,6 +190,10 @@ event_register {e_combat_round} {$path[equipment]/The Rod of Lordly Might.tin} {
                 {
                     {trained} {1}
                 }
+                {heart}
+                {
+                    {trained} {21}
+                }                
                 {lasso}
                 {
                     {trained} {1}
@@ -187,15 +231,24 @@ event_register {e_combat_round} {$path[equipment]/The Rod of Lordly Might.tin} {
                 {scales}
                 {
                     {trained} {1}
+                    {refers} {medium}
                 }
+                {scroll}
+                {
+                    {trained} {21}
+                }                
                 {skull}
                 {
                     {trained} {1}
                     {refers} {good}
                 }
+                {spark}
+                {
+                    {trained} {21}
+                }                
                 {star}
                 {
-                    {active} {1}
+                    {active} {21}
                     {type} {weapon}
                 }
                 {sun}
