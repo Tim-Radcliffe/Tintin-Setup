@@ -31,10 +31,14 @@ event_register e_killed_opponent spells.tin handler_necspells_combat_end;
     #LOCAL {_necSpells[max]} {0};
     #FOREACH {*my[necromancer][spells][@fMax{*my[necromancer][spells][]}][]} {s}
     {
-        #IF {&opponent[data][vulnerabilities][$s] == 0}
+        #IF {"$_necSpells[invoke]" = ""}
         {
             #LOCAL {_necSpells[invoke]} {$s};
-            #BREAK;
+        };
+        #IF {&opponent[data][vulnerabilities][$s] == 0}
+        {
+            #LOCAL {_necSpells[max]} {101};            
+            #LOCAL {_necSpells[invoke]} {$s};
         };
         #ELSEIF {$opponent[data][vulnerabilities][$s] >= $_necSpells[max]}
         {
