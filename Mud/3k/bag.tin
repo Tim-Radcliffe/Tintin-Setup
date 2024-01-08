@@ -3,28 +3,34 @@ auto {add} {bag} {#ACTION {There is not room for more.} {.bagswap}} {} {#UNACTIO
 
 #ALIAS {.bagswap}
 {
-    #NOP %1;
-    #VAR {_gvBS} {9};
-    #IF {"%0" != ""}
+    #ACTION {^You keep all your bags.$}
     {
-        #VAR {_gvBS} {%0};
+        #VAR {_bagswap} {0};
+        event_register {e_keep} {bag.tin} {.bagswap_inc};
+        #UNACTION {^You keep all your bags.$};
+    } {2};
+    #ALIAS {.bagswap_inc}
+    {
+        #NOP %%1;
+        #MATH {_bagswap} {$_bagswap + 1};
     };
-    #ELSEIF {"%0" == "1"}
+    #ALIAS {.bagswap_end}
     {
-        auto bag off;
+        #NOP %%1;
+        #IF {$_bagswap > 0}
+        {
+            #SEND {!unkeep bag $_bagswap};
+            #SEND {!give bag $_bagswap to $my[name]};
+            #SEND {!keep bag};
+        };
+        #UNVAR {_bagswap};
+        event_remove_handler {bag.tin};
+        #UNALIAS {.bagswap_inc};
+        #UNALIAS {.bagswap_end};
+    };                                                                                                                                                                                 
+    event_oneshot {e_prompt} {bag.tin} {
+        #NOP %%1;
+        .bagswap_end;
     };
-    #ACTION {^You have no bag %d.}
-    {
-        .bagswap @fEval{%%1 - 1};
-    };
-    #ACTION {^You unkeep}
-    {
-        #UNACTION {^You have no bag %d.};
-        #SEND {!give bag $_gvBS to $my[name]};
-        #SEND {!keep bag};
-        #SEND {!keep bag $_gvBS};
-        #UNVAR {_gvBS};
-        #UNACTION {^You unkeep};
-    }; 
-    #SEND {!unkeep bag $_gvBS};
+    #SEND {!keep all bag};
 };
