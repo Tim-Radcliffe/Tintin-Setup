@@ -92,16 +92,16 @@ event_register {e_combat_round} {$path[equipment]/The Rod of Lordly Might.tin} {
         #LOCAL {_rolm_trained} {};
         #FORMAT {_rolm_trained} {%L} {%%2};
         #MATH {_rolm_trained} {$_rolm_trained + 1};
-        #IF {"$_rolm_trained" != "$_rolm[rune][%1][trained]"}
+        #IF {"$_rolm_trained" != "$_rolm[rune][%2][trained]"}
         {
-            #VAR {_rolm[rune][%1][trained]} {$_rolm_trained};
-            #IF {&{_rolm[rune][%1][refers]}}
+            #VAR {_rolm[rune][%2][trained]} {$_rolm_trained};
+            #IF {&{_rolm[rune][%2][refers]}}
             {
-                .log add {The Rod of Lordly Might.log} {TRAINED %1 rune level $_rolm_trained ($_rolm[rune][%1][refers] combat rounds $_rolm[combat][$_rolm[rune][%1][refers]])};
+                .log add {The Rod of Lordly Might.log} {TRAINED %2 rune level $_rolm_trained ($_rolm[rune][%2][refers] combat rounds $_rolm[combat][$_rolm[rune][%2][refers]])};
             };
             #ELSE
             {
-                .log add {The Rod of Lordly Might.log} {TRAINED %1 rune level $_rolm_trained (combat rounds $_rolm[combat][rounds])};
+                .log add {The Rod of Lordly Might.log} {TRAINED %2 rune level $_rolm_trained (combat rounds $_rolm[combat][rounds])};
             };
             .file write {$path[profile]/The Rod of Lordly Might.tin};            
         };
