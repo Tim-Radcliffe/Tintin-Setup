@@ -1,8 +1,8 @@
 #ALIAS {.rolm_combat_round}
 {
     #NOP %1;
-    .rolm_inc_round {rounds};
     .rolm_inc_round {$_rolm[weapon]};
+    .rolm_inc_round {rounds};
     
     #IF {&{opponent[data][alignment]}}
     {
@@ -47,16 +47,26 @@ event_register {e_combat_round} {$path[equipment]/The Rod of Lordly Might.tin} {
 #ALIAS {.rolm_inc_round}
 {
     #MATH {_rolm[combat][%1]} {$_rolm[combat][%1] + 1};
-    #IF {@fEval{$_rolm[combat][%1] % 500} == 0} 
+    #IF {@fEval{$_rolm[combat][%1] % 200} == 0} 
     {
-        .rolm_check_rune {%1} {$_rolm[combat][%1]};
+        #IF {"%1" == "rounds"}
+        {
+            .rolm_check_rune {};
+        };
+        #ELSE 
+        {
+            .rolm_check_rune {%1};
+        };
     };
 };
 
 #ALIAS {.rolm_check_rune}
 {
     #NOP %1;
-    #LOCAL {_rolm_delay} {0};
+    #IF {&{_rolm_delay} == 0}
+    {
+        #VAR {_rolm_delay} {0};
+    };
     #FOREACH {*_rolm[rune][]} {_rolm_rune}
     {
         #IF {$_rolm[rune][$_rolm_rune][trained] > 20}
@@ -70,11 +80,12 @@ event_register {e_combat_round} {$path[equipment]/The Rod of Lordly Might.tin} {
         #MATH {_rolm_delay} {$_rolm_delay + 2};
         #LINE SUBSTITUTE VARIABLE #DELAY {$_rolm_delay} {#SEND {!touch $_rolm_rune rune};};
     };
+    #DELAY {$_rolm_delay} {#UNVAR {_rolm_delay};};
     #UNVAR {_rolm_rune};
 };
 
 #NOP archonic vision of your bonding progression ~#=#=#=#=#=#=#=#|#=#=#=>
-#ALIAS {touch %w rune}
+#ALIAS {{!|}touch %w rune}
 {
     #ACTION {{^archonic vision of your bonding progression ([^\|]*)\|([^\|]*)$}}
     {
@@ -248,7 +259,8 @@ event_register {e_combat_round} {$path[equipment]/The Rod of Lordly Might.tin} {
                 }                
                 {star}
                 {
-                    {active} {21}
+                    {active} {1}
+                    {trained} {21}
                     {type} {weapon}
                 }
                 {sun}
