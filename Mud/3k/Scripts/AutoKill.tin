@@ -40,9 +40,9 @@
         handler_auto_kill_combat;
         #LIST {room[commandqueue]} {add} {$room[killbuffer]};
     };
-    #ELSEIF {"$room[target][name]" != ""}
+    #ELSEIF {"$room[target][id]" != ""}
     {
-		handler_auto_kill_choice {$room[target][name]};
+		handler_auto_kill_choice {$room[target][id]} {$room[target][name]};
     };
     #ELSE
     {
@@ -79,7 +79,7 @@
       };
       #MACRO {a}
       {
-		#LOCAL {_autoKillNPC} {@fGetNPCRegex{%1}};
+		#LOCAL {_autoKillNPC} {@fGetNPCRegex{%2}};
 		#VAR {_npc[$_autoKillNPC][autokill]} {1};
 		.scanRoomNPCSave {$_autoKillNPC};	
         handler_auto_kill_combat;
@@ -92,7 +92,7 @@
       };
       #MACRO {n}
       {
-		#LOCAL {_autoKillNPC} {@fGetNPCRegex{%1}};
+		#LOCAL {_autoKillNPC} {@fGetNPCRegex{%2}};
 		#VAR {_npc[$_autoKillNPC][autokill]} {-1};
 		.scanRoomNPCSave {$_autoKillNPC};	
         handler_auto_kill_finish;
