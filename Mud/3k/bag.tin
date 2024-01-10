@@ -14,9 +14,12 @@ auto {add} {bag} {#ACTION {There is not room for more.} {.bagswap}} {} {#UNACTIO
         #NOP %%1;
         #MATH {_bagswap} {$_bagswap + 1};
     };
-    #ALIAS {.bagswap_end}
+    #ACTION {_bag.swap.end}
     {
         #NOP %%1;
+        #LINE GAG;
+        event_remove_handler {bag.tin};
+        #UNALIAS {.bagswap_inc};
         #IF {$_bagswap > 0}
         {
             #SEND {!unkeep bag $_bagswap};
@@ -24,13 +27,8 @@ auto {add} {bag} {#ACTION {There is not room for more.} {.bagswap}} {} {#UNACTIO
             #SEND {!keep bag};
         };
         #UNVAR {_bagswap};
-        event_remove_handler {bag.tin};
-        #UNALIAS {.bagswap_inc};
-        #UNALIAS {.bagswap_end};
-    };                                                                                                                                                                                 
-    event_oneshot {e_prompt} {bag.tin} {
-        #NOP %%1;
-        .bagswap_end;
+        #UNACTION {_bag.swap.end};
     };
     #SEND {!keep all bag};
+    #SEND {!_bag.swap.end};
 };
