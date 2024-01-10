@@ -1,149 +1,182 @@
 #VARIABLE {_item}
 {
 
-    {containing \d+ messages}
-    {
-        {desc} 
-        {        
-            {1} {Type 'help board' for a list of commands.}        
-        }
-        {global} {1}
-        {id} {board}
-        {name} {board}
-        {pickup} {-1}
-    }
-    {^A single gold coin$}
-    {
-        {global} {1}
-        {nomap} {1}
-    }
-    {^A set of glowing red shackles, bound to}
-    {
-        {desc} 
-        {
-            {1} {A set of glowing red shackles, bound to A Security Guard}
-            {2} {A ghostly set of magical shackles.}
-        }
-        {id} {shackles}        
-        {global} {1}
-        {nomap} {1}
-    }
-    {^Bag$}
-    {
-        {global} {1}
-        {nomap} {1}
-    }    
-    {black stone} 
-    {
-        {global} {1}
-        {nomap} {1}
-        {pickup} {-1}
-    }
-    {coins} 
-    {
-        {global} {1}
-        {nomap} {1}
-        {pickup} {1}
-        {pickup_command} {get coins}
-    }
-    {departing} 
-    {
-        {global} {1}
-        {nomap} {1}
-        {pickup} {-1}
-    }
-    {devouring} 
-    {
-        {global} {1}
-        {nomap} {1}
-        {pickup} {-1}
-    }
-    {empty} 
-    {
-        {global} {1}
-        {nomap} {1}
-        {pickup} {-1}
-    }
-    {fear} 
-    {
-        {global} {1}
-        {nomap} {1}
-        {pickup} {-1}
-    }
-    {fractures} 
-    {
-        {global} {1}
-        {nomap} {1}
-        {pickup} {-1}
-    }
-    {fumbling} 
-    {
-        {global} {1}
-        {nomap} {1}
-        {pickup} {-1}
-    }
-    {grafting} 
-    {
-        {global} {1}
-        {nomap} {1}
-        {pickup} {-1}
-    }
-    {hunger} 
-    {
-        {global} {1}
-        {nomap} {1}
-        {pickup} {-1}
-    } 
-    {nullification} 
-    {
-        {global} {1}
-        {nomap} {1}
-        {pickup} {-1}
-    }
-    {obliquity} 
-    {
-        {global} {1}
-        {nomap} {1}
-        {pickup} {-1}
-    }
-    {phial} 
-    {
-        {global} {1}
-        {nomap} {1}
-        {pickup} {1}
-    }
-    {quick digestion} 
-    {
-        {global} {1}
-        {nomap} {1}
-        {pickup} {-1}
-    }
-    {slow digestion} 
-    {
-        {global} {1}
-        {nomap} {1}
-        {pickup} {-1}
-    }
-    {-\d.}
-    {
-        {global} {1}
-        {nomap} {1}
-        {pickup} {-1}
-    }
-    {_item[^A burning funeral pyre$]} 
-    {
-        {desc} 
-        {
-            {1} {A burning funeral pyre}
-            {2} {You see a blazing bonfire burning in effigy of a fallen soul.  The}
-            {3} {flames glow with a unique color, as though azure and white energies}
-            {4} {were dancing in unison.  Standing in the light and warmth of the}
-            {5} {comforting flames, you feel of revitalized and at peace, as if the}
-            {6} {corpse's energy is somehow being transferred to you through death.}
-        }
-        {id} {funeral pyre}
-        {nomap} {1}
-        {name} {A burning funeral pyre}
-        {pickup} {-1}        
-    }    
+	{containing \d+ messages}
+	{
+		{desc}
+		{
+			{1} {Type 'help board' for a list of commands.}
+		}
+		{global} {1}
+		{id} {board}
+		{name} {board}
+		{pickup} {-1}
+	}
+	{^A single gold coin$}
+	{
+		{global} {1}
+		{nomap} {1}
+	}
+	{^A set of glowing red shackles, bound to}
+	{
+		{desc}
+		{
+			{1} {A set of glowing red shackles, bound to A Security Guard}
+			{2} {A ghostly set of magical shackles.}
+		}
+		{id} {shackles}
+		{global} {1}
+		{nomap} {1}
+	}
+	{^A Trashcan$}
+	{
+		{desc}
+		{
+			{1} {A Trashcan}
+			{2} {Use this trashcan to dispose of any garbage. By doing your part to}
+			{3} {help make 3k a cleaner, thus better place, brings rewards to all}
+			{4} {loyal citizens. To do this type: dispose <item> for single items}
+			{5} {and dispose <all> for all unkept items.}
+			{6} {Note: Typing dispose all will dispose all unkept items so make sure}
+			{7} {you type keep <item> for the things you want to keep. Also}
+			{8} {typing dispose all will not get rid of guild objects or other}
+			{9} {items that cannot be dropped. Any problems mail Rastafan.}
+		}
+		{id} {trashcan}
+		{global} {1}
+		{name} {A Trashcan}
+	}
+	{^Bag$}
+	{
+		{global} {1}
+		{nomap} {1}
+	}
+	{black stone}
+	{
+		{global} {1}
+		{nomap} {1}
+		{pickup} {-1}
+	}
+	{coins}
+	{
+		{global} {1}
+		{nomap} {1}
+		{pickup} {1}
+		{pickup_command} {get coins}
+	}
+	{departing}
+	{
+		{global} {1}
+		{nomap} {1}
+		{pickup} {-1}
+	}
+	{devouring}
+	{
+		{global} {1}
+		{nomap} {1}
+		{pickup} {-1}
+	}
+	{empty}
+	{
+		{global} {1}
+		{nomap} {1}
+		{pickup} {-1}
+	}
+	{fear}
+	{
+		{global} {1}
+		{nomap} {1}
+		{pickup} {-1}
+	}
+	{fractures}
+	{
+		{global} {1}
+		{nomap} {1}
+		{pickup} {-1}
+	}
+	{fumbling}
+	{
+		{global} {1}
+		{nomap} {1}
+		{pickup} {-1}
+	}
+	{grafting}
+	{
+		{global} {1}
+		{nomap} {1}
+		{pickup} {-1}
+	}
+	{hunger}
+	{
+		{global} {1}
+		{nomap} {1}
+		{pickup} {-1}
+	}
+	{nullification}
+	{
+		{global} {1}
+		{nomap} {1}
+		{pickup} {-1}
+	}
+	{obliquity}
+	{
+		{global} {1}
+		{nomap} {1}
+		{pickup} {-1}
+	}
+	{phial}
+	{
+		{global} {1}
+		{nomap} {1}
+		{pickup} {1}
+	}
+	{quick digestion}
+	{
+		{global} {1}
+		{nomap} {1}
+		{pickup} {-1}
+	}
+	{slow digestion}
+	{
+		{global} {1}
+		{nomap} {1}
+		{pickup} {-1}
+	}
+	{-\d.}
+	{
+		{global} {1}
+		{nomap} {1}
+		{pickup} {-1}
+	}
+	{_item[^A burning funeral pyre$]}
+	{
+		{desc}
+		{
+			{1} {A burning funeral pyre}
+			{2} {You see a blazing bonfire burning in effigy of a fallen soul.  The}
+			{3} {flames glow with a unique color, as though azure and white energies}
+			{4} {were dancing in unison.  Standing in the light and warmth of the}
+			{5} {comforting flames, you feel of revitalized and at peace, as if the}
+			{6} {corpse's energy is somehow being transferred to you through death.}
+		}
+		{id} {funeral pyre}
+		{nomap} {1}
+		{name} {A burning funeral pyre}
+		{pickup} {-1}
+	}
+	{_item[^Ventra's secret chest \x28open\x29$]}
+	{
+		{desc}
+		{
+			{1} {Ventra's secret chest (open)}
+			{2} {You see a large chest made of lacquered oak wood with gold accents.}
+			{3} {The item looks very large and can hold many things.}
+			{4} {This chest belongs to Blutash.}
+			{5} {The chest is open.}
+		}
+		{id} {chest}
+		{name} {Ventra's secret chest (open)}
+		{nomap} {1}
+		{pickup} {-1}
+	}
 }
