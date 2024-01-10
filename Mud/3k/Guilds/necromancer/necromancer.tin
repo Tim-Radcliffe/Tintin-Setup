@@ -12,7 +12,7 @@
 {
     #NOP %1;
     .mapLoad {Pinnacle/Fantasy/Necromancer Guild};
-    #map goto {Receiving room};
+    #map goto {20};
 };
 
 /* Call your familiar into combat automatically when you "kill" */
