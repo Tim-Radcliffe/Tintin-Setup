@@ -263,6 +263,21 @@
     {nomap} {1}
     {name} {A ruby necklace}
 }
+#VAR {_item[^A shiny, platinum amulet$]} 
+{
+    {desc} 
+    {
+        {1} {A shiny, platinum amulet}
+        {2} {This amulet shines brightly in the sun. It hangs down on a long chain}
+        {3} {of gold and is shaped like the sun with a surrounding corona. }
+        {4} {An identification spell may reveal more information.}
+        {5} {It looks light.}
+    }
+    {id} {amulet}
+    {global} {1}
+    {nomap} {1}
+    {name} {A shiny, platinum amulet}
+}
 #VAR {_item[^A short green wand$]} 
 {
     {desc} 
@@ -295,7 +310,7 @@
     {global} {1}
     {name} {A slender crystal wand}
 }
-{_item[^A spear \x28enchanted\x29$]} 
+#VAR {_item[^A spear \x28enchanted\x29$]} 
 {
     {desc} 
     {
@@ -393,7 +408,29 @@
     {global} {1}
     {name} {A suit of armor}
 }
-{_item[^Amulet$]} 
+#VAR {_item[^A white khopesh$]} 
+{
+    {desc} 
+    {
+        {1} {A white khopesh}
+        {2} {A magnificently crafted white sword.}
+        {3} {It will need to be identified to learn more.}
+        {4} {This weapon is in excellent condition.}
+        {5} {This weapon's classifications: 14 (edged)  1 (radiation)  }
+        {6} {This weapon gains benefits from your sword weapon skill.}
+        {7} {It doesn't look too heavy.}
+    }
+    {id} {khopesh}
+    {location} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} 
+        {
+            {438} {}
+        }
+    }
+    {name} {A white khopesh}
+}
+#VAR {_item[^Amulet$]} 
 {
     {desc} 
     {
@@ -421,7 +458,7 @@
     {global} {1}
     {name} {Armour}
 }
-{_item[^bag$]} 
+#VAR {_item[^bag$]} 
 {
     {desc} 
     {
@@ -525,7 +562,21 @@
     {global} {1}
     {name} {Brass Gloves}
 }
-{_item[^Bronze Codpiece$]} 
+#VAR {_item[^Brass Helmet$]} 
+{
+    {desc} 
+    {
+        {1} {Brass Helmet}
+        {2} {A brass helmet.  You cannot surmise what powers it may possess.  }
+        {3} {An identification spell may reveal more information.}
+        {4} {It looks light.}
+    }
+    {id} {helmet}
+    {nomap} {1}
+    {global} {1}
+    {name} {Brass Helmet}
+}
+#VAR {_item[^Bronze Codpiece$]} 
 {
     {desc} 
     {
@@ -600,7 +651,7 @@
     {global} {1}
     {name} {Cloak}
 }
-{_item[^Cloth Armour$]} 
+#VAR {_item[^Cloth Armour$]} 
 {
     {desc} 
     {
@@ -716,7 +767,21 @@
     {global} {1}
     {name} {Dragonscale Shield}
 }
-{_item[^Electrum Gloves$]} 
+#VAR {_item[^Electrum Codpiece$]} 
+{
+    {desc} 
+    {
+        {1} {Electrum Codpiece}
+        {2} {An electrum codpiece.  You cannot surmise what powers it may possess. }
+        {3} {An identification spell may reveal more information.}
+        {4} {It looks light.}
+    }
+    {id} {other}
+    {nomap} {1}
+    {global} {1}
+    {name} {Electrum Codpiece}
+}
+#VAR {_item[^Electrum Gloves$]} 
 {
     {desc} 
     {
@@ -730,6 +795,20 @@
     {nomap} {1}
     {global} {1}
     {name} {Electrum Gloves}
+}
+#VAR {_item[^Electrum Helmet$]} 
+{
+    {desc} 
+    {
+        {1} {Electrum Helmet}
+        {2} {An electrum helmet.  You cannot surmise what powers it may possess.  }
+        {3} {An identification spell may reveal more information.}
+        {4} {It looks light.}
+    }
+    {id} {helmet}
+    {nomap} {1}
+    {global} {1}
+    {name} {Electrum Helmet}
 }
 #VAR {_item[^Fur Boots$]} 
 {
@@ -831,7 +910,7 @@
     {nomap} {1}
     {name} {Iron Chainmail}
 }
-{_item[^Iron Codpiece$]} 
+#VAR {_item[^Iron Codpiece$]} 
 {
     {desc} 
     {
@@ -1055,7 +1134,36 @@
     {nomap} {1}
     {name} {Platinum Codpiece}
 }
-{_item[^Random Codpiece$]} 
+#VAR {_item[^Platinum Gloves$]} 
+{
+    {desc} 
+    {
+        {1} {Platinum Gloves}
+        {2} {A pair of platinum gloves.  You cannot surmise what powers it may}
+        {3} {possess.  }
+        {4} {An identification spell may reveal more information.}
+        {5} {It looks light.}
+    }
+    {id} {gloves}
+    {global} {1}
+    {nomap} {1}
+    {name} {Platinum Gloves}
+}
+#VAR {_item[^Platinum Helmet$]} 
+{
+    {desc} 
+    {
+        {1} {Platinum Helmet}
+        {2} {A platinum helmet.  You cannot surmise what powers it may possess.  }
+        {3} {An identification spell may reveal more information.}
+        {4} {It looks light.}
+    }
+    {id} {helmet}
+    {global} {1}
+    {nomap} {1}
+    {name} {Platinum Helmet}
+}
+#VAR {_item[^Random Codpiece$]} 
 {
     {desc} 
     {
@@ -1083,7 +1191,7 @@
     {global} {1}
     {name} {Sapphire Amulet}
 }
-{_item[^Scaley Armour$]} 
+#VAR {_item[^Scaley Armour$]} 
 {
     {desc} 
     {
@@ -1198,7 +1306,7 @@
     {global} {1}
     {name} {Steel Codpiece}
 }
-{_item[^Steel Gloves$]} 
+#VAR {_item[^Steel Gloves$]} 
 {
     {desc} 
     {
@@ -1284,7 +1392,7 @@
     {global} {1}
     {name} {Stone Boots}
 }
-#VAR {_item[^(Aluminum|Amber|Amethyst|Aquamarine|Bloodstone|Bone|Brass|Bronze|Ceramic|Copper|Coral|Diamond|Ebony|Electrum|Emerald|Garnet|Glass|Gold|Granite|Jacinth|Lead|Iron|Ivory|Jade|Jasper|Mahogany|Malachite|Maple|Marble|Moonstone|Oak|Obsidian|Onyx|Pearl|Peridot|Platinum|Pyrite|Quartz|Ruby|Sapphire|Sardonyx|Silver|Sodalite|Steel|Stone|Tin|Titanium|Topaz|Turquoise|Zinc|Zirconian) ring$]} 
+#VAR {_item[^(Aluminum|Amber|Amethyst|Aquamarine|Bloodstone|Bone|Brass|Bronze|Ceramic|Copper|Coral|Diamond|Ebony|Electrum|Emerald|Garnet|Glass|Gold|Granite|Jacinth|Lead|Iron|Ivory|Jade|Jasper|Mahogany|Malachite|Maple|Marble|Moonstone|Oak|Obsidian|Onyx|Opal|Pearl|Peridot|Platinum|Pyrite|Quartz|Ruby|Sapphire|Sardonyx|Silver|Sodalite|Steel|Stone|Tin|Titanium|Topaz|Turquoise|Zinc|Zirconian) ring$]} 
 {
     {desc} 
     {
@@ -1299,7 +1407,7 @@
     {global} {1}
     {name} {Amber ring}
 }
-#VAR {_item[^A(n|) (bloody|double-bladed|dark|dull|engraved|extremely sharp|finely cut|finely crafted|glowing|heavy|hooked|jagged|light|lightly glowing|long|long thin|nasty|nicked|old|ornate|polished|razor-sharp|runed|sharp|shining|short|single edged|small|spiked|very dull|very sharp|wicked|)(, |)(adamantium|ash|aspen|balsam|bronze|cedar|ebony|elm|gold|granite|iron|jade|mahogany|maple|mithril|obsidian|onyx|pine|platinum|sardonyx|silver|steel|stone|titanium|) (bastardsword|battleaxe|blackjack|blade|claymore|club|cudgel|cutlass|dagger|dirk|double-edged axe|falchion|flail|foil|handaxe|hatchet|jo|khopesh|knife|kynac|longsword|mace|machete|main gauche|mattock|morningstar|no-dachi|nunchaku|pickaxe|quarterstaff|sabre|sai|scimitar|shortsword|sledgehammer|staff|stiletto|sword|trident|two-handed sword|warhammer|war-axe|war-mattock|woodsman's axe)( \x28enchanted\x29|)$]} 
+#VAR {_item[^A(n|) (bloody|double-bladed|dark|dull|engraved|extremely sharp|finely cut|finely crafted|glowing|heavy|hooked|jagged|light|lightly glowing|long|long thin|nasty|nicked|old|ornate|polished|razor-sharp|runed|sharp|shining|short|single edged|small|spiked|triple-edged|very dull|very sharp|wicked|)(, |)(adamantium|ash|aspen|balsam|birch|bronze|cedar|ebony|elm|gold|granite|iron|jade|mahogany|maple|mithril|oak|obsidian|onyx|pine|platinum|sardonyx|silver|steel|stone|titanium|) (bastardsword|battleaxe|blackjack|blade|claymore|club|cudgel|cutlass|dagger|dirk|double-edged axe|falchion|flail|foil|handaxe|hatchet|jo|katana|khopesh|knife|kynac|longsword|mace|machete|main gauche|mattock|morningstar|no-dachi|nunchaku|pick|pickaxe|quarterstaff|sabre|sai|scimitar|shortsword|sledgehammer|staff|stiletto|sword|trident|two-handed sword|warhammer|war-axe|war-mattock|woodsman's axe)( \x28enchanted\x29|)$]} 
 {
     {desc} 
     {
@@ -1330,7 +1438,7 @@
     {nomap} {1}
     {name} {candle}
 }
-{_item[^(brown|green|red|violet|yellow|black) gemstone$]} 
+#VAR {_item[^(brown|green|red|violet|yellow|black) gemstone$]} 
 {
     {desc} 
     {
@@ -1359,7 +1467,7 @@
     {global} {1}
     {name} {miniature tools}
 }
-{_item[^set of three dice$]} 
+#VAR {_item[^set of three dice$]} 
 {
     {desc} 
     {
