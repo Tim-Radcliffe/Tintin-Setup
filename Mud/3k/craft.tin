@@ -84,7 +84,7 @@
                 #LOCAL {_non_trivial} {1};
             };
         };
-        #IF {!$_non_trivial} {.ingredientRecycle {%0}};
+        #IF {!$_non_trivial} {.ingredientRecycle %0};
     };
 };
 
