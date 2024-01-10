@@ -78,7 +78,7 @@ event_register {e_combat_round} {$path[equipment]/The Rod of Lordly Might.tin} {
             #CONTINUE;
         };
         #MATH {_rolm_delay} {$_rolm_delay + 2};
-        #LINE SUBSTITUTE VARIABLE #DELAY {$_rolm_delay} {#SEND {!touch $_rolm_rune rune};};
+        #LINE SUBSTITUTE VARIABLE #DELAY {$_rolm_delay} {!touch $_rolm_rune rune};
     };
     #DELAY {$_rolm_delay} {#UNVAR {_rolm_delay};};
     #UNVAR {_rolm_rune};
@@ -105,6 +105,12 @@ event_register {e_combat_round} {$path[equipment]/The Rod of Lordly Might.tin} {
             };
             .file write {$path[profile]/The Rod of Lordly Might.tin};            
         };
+        #UNACTION {{^You are not yet attuned to that .* rune\.$}}        
+        #UNACTION {{^archonic vision of your bonding progression ([^\|]*)\|([^\|]*)$}};
+    };
+    #ACTION {{^You are not yet attuned to that .* rune\.$}}
+    {
+        #UNACTION {{^You are not yet attuned to that .* rune\.$}}
         #UNACTION {{^archonic vision of your bonding progression ([^\|]*)\|([^\|]*)$}};
     };
     #SEND {%0};
