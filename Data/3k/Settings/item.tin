@@ -1,6 +1,5 @@
 #VARIABLE {_item}
 {
-
 	{containing \d+ messages}
 	{
 		{desc}
@@ -16,6 +15,7 @@
 	{
 		{global} {1}
 		{nomap} {1}
+		{pickup} {-1}
 	}
 	{^A set of glowing red shackles, bound to}
 	{
@@ -53,6 +53,12 @@
 	}
 	{black stone}
 	{
+        {desc}
+        {
+            {1} {black stone}
+            {1} {A black stone.  It is currently unidentified.}
+            {2} {It looks light.}
+        }
 		{global} {1}
 		{nomap} {1}
 		{pickup} {-1}
@@ -61,7 +67,7 @@
 	{
 		{global} {1}
 		{nomap} {1}
-		{pickup} {1}
+		{pickup} {2}
 		{pickup_command} {get coins}
 	}
 	{departing}
@@ -128,7 +134,7 @@
 	{
 		{global} {1}
 		{nomap} {1}
-		{pickup} {1}
+		{pickup} {2}
 	}
 	{quick digestion}
 	{
