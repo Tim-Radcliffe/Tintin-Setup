@@ -1,6 +1,6 @@
-#VAR {_item[^a weathered catchpocket$]} 
+#VAR {_item[^a weathered catchpocket$]}
 {
-	{desc} 
+	{desc}
 	{
 		{1} {a weathered catchpocket}
 		{2} {A weathered catchpocket with a watertube attachment on one end. }
@@ -16,9 +16,9 @@
 	{nomap} {1}
 	{pickup} {1}
 }
-#VAR {_item[^Mystic Rift$]} 
+#VAR {_item[^Mystic Rift$]}
 {
-	{desc} 
+	{desc}
 	{
 		{1} {Mystic Rift}
 		{2} {This unusual item appears to be a small, crystalline structure that}
@@ -33,9 +33,9 @@
 	{nomap} {1}
 	{pickup} {1}
 }
-#VAR {_item[^Nectar Of The Gods$]} 
+#VAR {_item[^Nectar Of The Gods$]}
 {
-	{desc} 
+	{desc}
 	{
 		{1} {Nectar Of The Gods}
 		{2} {A small golden drop of fluid, this nectar is considered the finest}
@@ -51,9 +51,9 @@
 	{nomap} {1}
 	{pickup} {1}
 }
-#VAR {_item[^a vial of holy water$]} 
+#VAR {_item[^a vial of holy water$]}
 {
-    {desc} 
+    {desc}
     {
         {1} {a vial of holy water}
         {2} {This vial is blessed by the gods turning any water put into it into}
@@ -76,9 +76,9 @@
 #VAR {_item[small grey stone]}          {{nomap}{1}{pickup}{1}};
 #VAR {_item[dark leather strap]}        {{nomap}{1}{pickup}{1}};
 #VAR {_item[cloudy glass sphere]}       {{nomap}{1}{pickup}{1}};
-#VAR {_item[dark skull key]} 
+#VAR {_item[dark skull key]}
 {
-	{desc} 
+	{desc}
 	{
 		{1} {dark skull key}
 		{2} {A tiny, and strangely ornate key made of a dark metal.  The ring}
@@ -93,9 +93,9 @@
 	{pickup} {1}
 };
 #VAR {_item[shattered jaw bone]}        {{nomap}{1}{pickup}{1}};
-#VAR {_item[^The tower shield of the Akh'Velahr$]} 
+#VAR {_item[^The tower shield of the Akh'Velahr$]}
 {
-    {desc} 
+    {desc}
     {
         {1} {The tower shield of the Akh'Velahr}
         {2} {Forged from darkest adamantium, the strongest of the metals the}
@@ -113,11 +113,11 @@
     {id} {tower shield of the akh�velahr}
     {name} {The tower shield of the Akh'Velahr}
 	{nomap} {1}
-	{pickup} {1}    
+	{pickup} {1}
 }
-{_item[^Vortex Stabilizer$]} 
+{_item[^Vortex Stabilizer$]}
 {
-    {desc} 
+    {desc}
     {
         {1} {Vortex Stabilizer}
         {2} {This is an odd looking cylindrical object that hums with power.  Its}
@@ -130,5 +130,24 @@
     {id} {vortex stabilizer}
     {name} {Vortex Stabilizer}
 	{nomap} {1}
-	{pickup} {1}    
+	{pickup} {1}
+}
+{_item[^Mental Harmonizing Stimulator$]}
+{
+    {desc}
+    {
+        {1} {Mental Harmonizing Stimulator}
+        {2} {Fashioned from a dull grey metal, this innocuous-looking oval of metal}
+        {3} {is curiously labelled as a 'Mental Harmonizing Stimulator 408:BCX'. }
+        {4} {About seven inches at the longest point, and almost four at the}
+        {5} {narrowest, it is quite weighty.  By lifting it to your ear, you can}
+        {6} {detect a not-quite-audible vibration, somewhere just below your level}
+        {7} {of hearing - almost as if it is massaging your mind with sonic}
+        {8} {vibrations.}
+        {9} {This appears to be an artifact for the sii guild.}
+    }
+    {id} {stimulator}
+    {name} {Mental Harmonizing Stimulator}
+	{nomap} {1}
+	{pickup} {1}
 }
