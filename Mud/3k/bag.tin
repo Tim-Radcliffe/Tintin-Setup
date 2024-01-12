@@ -20,7 +20,7 @@ auto {add} {bag} {#ACTION {There is not room for more.} {.bagswap}} {} {#UNACTIO
         #LINE GAG;
         event_remove_handler {bag.tin};
         #UNALIAS {.bagswap_inc};
-        #IF {$_bagswap > 0}
+        #IF {$_bagswap > 1}
         {
             #SEND {!unkeep bag $_bagswap};
             #SEND {!give bag $_bagswap to $my[name]};
