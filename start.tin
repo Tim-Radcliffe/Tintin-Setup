@@ -52,12 +52,15 @@
         #SEND {%3};
     };
 
-    #VAR {path[profile]}  {$path[data]/%4/Profiles/%2};
-    #VAR {path[settings]} {$path[data]/%4/Settings};
-    #VAR {path[mud]}      {$path[mud]/%4};
-    #VAR {path[areas]}    {$path[data]/%4/Areas};
-    #VAR {path[local]}    {$path[local]/%4};
-    #VAR {path[log]}      {$path[log]/%4/%2};
+    .SetPath {data}     {$path[data]/%4};
+    .SetPath {settings} {$path[data]/Settings};
+    .SetPath {areas}    {$path[data]/Areas};
+    .SetPath {mud}      {$path[mud]/%4};
+    .SetPath {local}    {$path[local]/%4};
+    .SetPath {profile}  {$path[data]/Profiles};
+    .SetPath {profile}  {$path[profile]/%2};
+    .SetPath {log}      {$path[log]/%4};
+    .SetPath {log}      {$path[log]/%2};
 
     .file loadall {$path[system]/events.tin};
     .file loadall {$path[system]/*.tin};
@@ -68,6 +71,13 @@
 
     #CLASS {cStart} {kill};
   };
+};
+
+#NOP Make the directory if it doesn't exist
+#ALIAS {.SetPath}
+{
+    #LOG MAKE {%2};
+    #VAR {path[%1]} {%2};
 };
 
 #ALIAS {.StartMenu}

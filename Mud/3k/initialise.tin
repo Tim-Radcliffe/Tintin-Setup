@@ -3,9 +3,11 @@
   #VAR {my[guild]} {adventurer};
 };
 
-#VAR {path[commands]} {$path[mud]/Commands};
-#VAR {path[guild]}    {$path[mud]/Guilds/$my[guild]};
-#VAR {path[equipment]} {$path[mud]/Equipment};
+.SetPath {commands}    {$path[mud]/Commands};
+.SetPath {guild}       {$path[mud]/Guilds/$my[guild]};
+.SetPath {equipment}   {$path[mud]/Equipment};
+.SetPath {professions} {$path[mud]/Professions};
 
 .file loadall {$path[commands]/*.tin};
 .file loadall {$path[guild]/*.tin};
+.file loadall {$path[professions]/*.tin};
