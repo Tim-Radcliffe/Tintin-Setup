@@ -115,7 +115,7 @@
 	{nomap} {1}
 	{pickup} {1}
 }
-{_item[^Vortex Stabilizer$]}
+#VAR {_item[^Vortex Stabilizer$]}
 {
     {desc}
     {
@@ -132,7 +132,7 @@
 	{nomap} {1}
 	{pickup} {1}
 }
-{_item[^Mental Harmonizing Stimulator$]}
+#VAR {_item[^Mental Harmonizing Stimulator$]}
 {
     {desc}
     {
@@ -150,4 +150,44 @@
     {name} {Mental Harmonizing Stimulator}
 	{nomap} {1}
 	{pickup} {1}
+}
+#VAR {_item[^Platinum Lace Circlet$]} 
+{
+    {desc} 
+    {
+        {1} {Platinum Lace Circlet}
+        {2} {This intricate, and delicate circlet is made out of platinum in a lace}
+        {3} {pattern that must have taken weeks of dedication and steady hand to}
+        {4} {craft without error.  The pattern of lattice weaves in and around}
+        {5} {itself and is in fact crafted from a single thread of platinum into}
+        {6} {this amazing artifact.  This crown provides an amazing peace of mind}
+        {7} {when worn.}
+        {8} {This appears to be an artifact for the monk guild.}
+        {9} {The circlet is in perfect condition.}
+        {10} {It looks light.}
+    }
+    {id} {peace circlet}
+    {name} {Platinum Lace Circlet}
+	{nomap} {1}
+	{pickup} {1}    
+}
+#VAR {_item[^Heart of Malykkar$]} 
+{
+    {desc} 
+    {
+        {1} {Heart of Malykkar}
+        {2} {The shriveled black heart of Malykkar, a loyal servant of Kyron, in a}
+        {3} {dark crystal box.  The crystal is clouded black and deep violet as if}
+        {4} {it were saturated with clotted blood.  Engraved in its lid is the text}
+        {5} {"MALYKKAR THE MIGHTY SCOURGE OF KYRON 91".  There were once more}
+        {6} {numbers engraved at the end, but they have since worn away.  A faint}
+        {7} {glow of evil energy emanates from the box.}
+        {8} {This appears to be an artifact for the priest guild.}
+        {9} {It looks light.}
+    }
+    {id} {Heart of Malykkar}
+    {location} 
+    {name} {Heart of Malykkar}
+	{nomap} {1}
+	{pickup} {1}    
 }
