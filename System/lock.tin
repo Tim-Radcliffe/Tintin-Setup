@@ -24,9 +24,9 @@
 
 #FUNCTION {fLocked}
 {
-	#IF {&_lock[] > 0}
-	{
-		#RETURN 1;
-	}
+    #IF {&_lock[%0] > 0}
+    {
+        #RETURN 1;       
+    }
 	#RETURN 0;
 };
