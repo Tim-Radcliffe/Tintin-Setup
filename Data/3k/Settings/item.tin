@@ -46,28 +46,11 @@
 		{global} {1}
 		{name} {A Trashcan}
 	}
-	{^Bag$}
-	{
-		{global} {1}
-		{nomap} {1}
-	}
-	{black stone}
-	{
-        {desc}
-        {
-            {1} {black stone}
-            {1} {A black stone.  It is currently unidentified.}
-            {2} {It looks light.}
-        }
-		{global} {1}
-		{nomap} {1}
-		{pickup} {-1}
-	}
 	{coins}
 	{
 		{global} {1}
 		{nomap} {1}
-		{pickup} {2}
+		{pickup} {1}
 		{pickup_command} {get coins}
 	}
 	{departing}
@@ -134,7 +117,7 @@
 	{
 		{global} {1}
 		{nomap} {1}
-		{pickup} {2}
+		{pickup} {1}
 	}
 	{quick digestion}
 	{

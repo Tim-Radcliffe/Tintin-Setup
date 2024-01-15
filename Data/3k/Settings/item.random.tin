@@ -473,6 +473,12 @@
     {nomap} {1}
     {pickup} {1}
 }
+{^Bag$}
+{
+    {global} {1}
+    {nomap} {1}
+    {pickup} {-1}
+}
 #VAR {_item[^Belt$]} 
 {
     {desc} 
@@ -486,6 +492,18 @@
     {id} {belt}
     {nomap} {1}
     {name} {Belt}
+}
+{black stone}
+{
+    {desc}
+    {
+        {1} {black stone}
+        {1} {A black stone.  It is currently unidentified.}
+        {2} {It looks light.}
+    }
+    {global} {1}
+    {nomap} {1}
+    {pickup} {-1}
 }
 #VAR {_item[^Bone White Armour$]} 
 {
