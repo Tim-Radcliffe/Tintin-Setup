@@ -7,22 +7,22 @@
 
 #NOP ** brief/verbose with map
 #NOP #ACTION {{^(\S.{68})[?:\@|\+|\^|v|E].*}}
-{
-    #REGEXP {%1} {{(.*) \(([a-z,]*)\).*$}}
-    {
-        #VAR {room} {};
-        #VAR {room[name]} {&2};
-        #NOP handler_parse_room_exits {&3};
-        event_raise {e_room_header};
-    };
-} {2};
+#NOP {
+#NOP     #REGEXP {%1} {{(.*) \(([a-z,]*)\).*$}}
+#NOP     {
+#NOP         #VAR {room} {};
+#NOP         #VAR {room[name]} {&2};
+#NOP         #NOP handler_parse_room_exits {&3};
+#NOP         event_raise {e_room_header};
+#NOP     };
+#NOP } {2};
 
 #NOP *********** Aliases **************;
 
 #ALIAS {handler_room_contents}
 {
   #NOP %1;
-  #IF {@fLocked{}} {#RETURN};
+  #IF {@fLocked{scan.%*}} {#RETURN};
   #LIST {temp[tokenized]} {create} {%2};
   #VAR {temp[item][id]} {$temp[tokenized][2]};
   #VAR {temp[item][name]} {$temp[tokenized][3]};
@@ -51,17 +51,18 @@ event_register e_mip_HAB h_room_contents handler_room_contents;
   #NOP %1;
   #IF {&room[contents][player][] <= 0}
   {
-    event_raise e_roomscan_end;
     #IF {"&room[commandqueue][1]" != "0"}
     {
-      #FOREACH {$room[commandqueue][%*]} {v} 
+      #FOREACH {$room[commandqueue][%*]} {v}
       {
         #LINE SUBSTITUTE VARIABLES {$v};
       };
       #UNVAR {room[commandqueue]};
     };
-    #IF {&room[pause][] <= 0}
+    event_raise e_roomscan_end;
+    #IF {!@fLocked{room.%*}}
     {
+      .debug SCAN {Finished};
       event_raise e_roomscan_finished;
     };
   };
@@ -85,15 +86,16 @@ event_register {e_mip_DDD} {h_room_exits} {.HandlerRoomExits};
 #ALIAS {.HandlerRoomName}
 {
   #NOP %1;
-  #VAR {room} {};      
+  #VAR {room} {};
   #REGEXP {%2} {{^(.*?)\s*\(([a-z\s,]*)\)\s*$}}
   {
     #VAR {room[name]} {&2};
   }
   {
     #VAR {room[name]} {%2};
-  };  
-  event_oneshot e_prompt h_room_enter {#NOP %%1;event_raise e_room_enter;};    
+  };
+  .debug SCAN {Room Name: $room[name]};
+  event_oneshot e_prompt h_room_enter {#NOP %%1;event_raise e_room_enter;};
   event_oneshot e_prompt h_room_end handler_room_end;
 };
 #NOP event_register {e_mip_BAD} {h_room_name} {.HandlerRoomName};

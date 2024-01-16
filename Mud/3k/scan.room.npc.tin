@@ -6,11 +6,11 @@
         #RETURN;
     }
 	#FORMAT {_sRN[hash]} {%H} {$_sRN[match]};
-	event_raise {e_scan_room_npc} {$_sRN[match]} {%3} {%2} {$_sRN[hash]};
 	.scanRoomNPCID       {$_sRN[match]} {%3} {%2};
 	.scanRoomNPCDesc     {$_sRN[match]} {%3} {%2} {$_sRN[hash]};
 	.scanRoomNPCLocation {$_sRN[match]};
 	.scanRoomNPCConsider {$_sRN[match]} {%3} {%2} {$_sRN[hash]};
+	event_raise {e_scan_room_npc} {$_sRN[match]} {%3} {%2} {$_sRN[hash]};    
 };
 event_register {e_room_npc} {h_scan_npc} {.scanRoomNPC};
 
@@ -55,16 +55,16 @@ event_register {e_room_npc} {h_scan_npc} {.scanRoomNPC};
 				} {1};
 			};
 
-			#SEND {!_scan.room.npc.desc.%4};
+			#LIST {room[commandqueue]} ADD {!_scan.room.npc.desc.%4};
 			#IF {&_npc[%1][id] > 0}
 			{
-				#LINE SUBSTITUTE VARIABLES {#SEND {!exa $_npc[%1][id]}};
+				#LINE SUBSTITUTE VARIABLES {#LIST {room[commandqueue]} ADD {!exa $_npc[%1][id]}};
 			};
 			#ELSE 
 			{
-				#SEND {!exa %3};				
+				#LIST {room[commandqueue]} ADD {!exa %3};				
 			};
-			#SEND {!_scan.room.npc.desc.end.%4};
+			#LIST {room[commandqueue]} ADD {!_scan.room.npc.desc.end.%4};
 		};
 	};
 };
@@ -106,14 +106,14 @@ event_register {e_room_npc} {h_scan_npc} {.scanRoomNPC};
 			};				
 			#UNACTION {_scan.room.npc.consider.%4};			
 		} {1};
-		#SEND {!_scan.room.npc.consider.%4};
+		#LIST {room[commandqueue]} ADD {!_scan.room.npc.consider.%4};
 		#IF {&_npc[%1][id] > 0}
 		{
-			#SEND {!consider $_npc[%1][id]};
+			#LIST {room[commandqueue]} ADD {!consider $_npc[%1][id]};
 		};
 		#ELSE 
 		{
-			#SEND {!consider %3};				
+			#LIST {room[commandqueue]} ADD {!consider %3};				
 		};		
 	};
 };
