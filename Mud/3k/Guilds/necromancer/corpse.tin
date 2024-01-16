@@ -1,11 +1,11 @@
 #VAR {_item[([\(\[])([\-\|\*]{5})[\)\]]\s.*$]} {{global}{1}{pickup}{1}{nomap}{1}{pickup_command}{.corpse get}};
 
-#ALIAS {.cs_held_get}     {#SEND {!get preservation %1};};
+#ALIAS {.cs_held_get}     {#SEND {!get preservation %1};#SEND {!keep preservation};};
 #ALIAS {.cs_held_drop}    {#SEND {!drop preservation %1};};
 #ALIAS {.cs_minion_get}   {#SEND {!=get preservation %1};};
 #ALIAS {.cs_minion_drop}  {#SEND {!=drop preservation %1};};
-#ALIAS {.cs_coffin_get}   {#SEND {get preservation};#SEND {!wrap};};
-#ALIAS {.cs_coffin_drop}  {#SEND {!unwrap %1};};
+#ALIAS {.cs_coffin_get}   {#SEND {!wrap preservation %1};};
+#ALIAS {.cs_coffin_drop}  {#SEND {!unwrap %1};#SEND {!preserve remains};};
 
 #ALIAS {.corpse}
 {
@@ -23,36 +23,37 @@
 			{
 				handler_corpse_move {held} {1} {minion};
 			};
-			#ELSEIF {$my[corpse][coffin][current] < $my[corpse][coffin][max]}
-			{
-				handler_corpse_move {held} {1} {coffin};
-			};
+#NOP			#ELSEIF {$my[corpse][coffin][current] < $my[corpse][coffin][max]}
+#NOP			{
+#NOP				handler_corpse_move {held} {1} {coffin};
+#NOP			};
 		};
 		#CASE {"preserve"}
 		{
-		    #IF {$my[corpse][held][current] <= $my[corpse][held][max]}
+		    #IF {$my[corpse][held][current] <= $my[corpse][held][min]}
     		{
         		#SEND {!preserve remains};
-				.corpse get
+				.corpse get;
 			};
 			#ELSEIF {$auto[consecrate][status]}
 			{
 				#SEND {!consecrate};
 			};
-			#ELSE 
-			{
-				.AbsorbCorpse {ground};
-			};
+            #ELSE
+            {
+                #SEND {!wrap remains};
+            };
+            #SEND {!glance};
 		};
 		#CASE {"retrieve"}
 		{
-			#IF {$my[corpse][coffin][current] > 0}
-			{
-				handler_corpse_move {coffin} {1} {held};
-			};
-			#ELSEIF {$my[corpse][minion][current] > 0 && @fMinionPresent{}}
+			#IF {$my[corpse][minion][current] > 0 && @fMinionPresent{}}
 			{
 				handler_corpse_move {minion} {1} {held};
+			};
+            #ELSEIF {$my[corpse][coffin][current] > 0}
+			{
+				handler_corpse_move {coffin} {1} {held};
 			};
 		};
 		#CASE {"sort"}
@@ -79,23 +80,27 @@ auto {add} {consecrate} {#ACTION {^  You are already at 100% consecration master
 /* Clean up corpses if you can't carry them */
 #ACTION {^  You can't carry any more master, leaving it on the ground.}
 {
-    #SEND {!absorb ground};
-    #IF {$my[hp][current] < $my[hp][max]}
+    .AbsorbCorpse ground;
+} {3};
+
+#ACTION {{^All your corpses are already bigger than what is here.|^The coffin expels a corpse!}}
+{
+    #IF {$my[corpse][held][current] <= $my[corpse][held][max]}
     {
-        #SEND {!absorb prime};
+        #SEND {!preserve remains};
+        .corpse get;
+        .corpse store;
     };
     #ELSE
     {
-        #SEND {!absorb};
+        .AbsorbCorpse ground;
     };
-    #SEND {!absorb inventory};
 } {3};
 
 #ALIAS {handler_auto_preserve}
 {
 	#NOP %1;
 	.corpse preserve;
-	#send {!glance};
 };
 auto {add} {preserve} {} {e_killed_opponent} {};
 
@@ -187,8 +192,8 @@ auto {add} {preserve} {} {e_killed_opponent} {};
 {
 	#NOP %%1;
 	#WHILE {@fSwapCorpse{{held}{minion}} > 0}   {#NOP;};
-	#WHILE {@fSwapCorpse{{held}{coffin}} > 0}   {#NOP;};
-	#WHILE {@fSwapCorpse{{coffin}{minion}} > 0} {#NOP;};
+#NOP	#WHILE {@fSwapCorpse{{held}{coffin}} > 0}   {#NOP;};
+#NOP	#WHILE {@fSwapCorpse{{coffin}{minion}} > 0} {#NOP;};
 	.SortCorpse {held};
 	.SortCorpse {minion};
 };
