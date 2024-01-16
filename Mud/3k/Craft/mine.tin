@@ -2,7 +2,6 @@
 
 #ACTION {^{>\s|}You have found a deposit of}
 {
-    #VAR {room[pause][automine]} {1};
     handler_auto_mine_ore;
 };
 
@@ -11,7 +10,7 @@
     handler_auto_mine_end;
 };
 
-#ACTION {^{>\s|}You have exhausted the supply} 
+#ACTION {^{>\s|}You have exhausted the supply}
 {
     handler_auto_mine_end;
     #SEND {glance};
@@ -40,34 +39,34 @@
 #ALIAS {handler_auto_mine_ore}
 {
     #NOP %1;
-    #VAR {room[pause][automine]} {1};    
+    .Lock {room.automine};
     #SEND {!mine};
 };
 
 #ALIAS {handler_auto_mine_end}
 {
     #NOP %1;
-    #UNVAR {room[pause][automine]};    
+    .Unlock {room.automine};
 };
 
 #ALIAS {handler_auto_mine}
 {
     #NOP %1;
-    #VAR {room[pause][automine]} {1};      
+    .Lock {room.automine};
     #LIST {room[commandqueue]} {add} {spelunk};
 };
 
-auto add {mine} 
+auto add {mine}
 {
     .file load {$path[craft]/mine.tin};
-    #VAR {_item[A {copper|bronze|iron|steel|silver|gold|mithril|titanium|ebon|adamantium|obsidian|nethernium|voidstone|phasemetal|chaostone} ore deposit]} 
+    #VAR {_item[A {copper|bronze|iron|steel|silver|gold|mithril|titanium|ebon|adamantium|obsidian|nethernium|voidstone|phasemetal|chaostone} ore deposit]}
     {
         {nomap} {1}
         {pickup} {1}
         {pickup_command} {handler_auto_mine_ore}
     };
-} 
-{e_roomscan_end} 
+}
+{e_roomscan_end}
 {
     #UNVAR {_item[A {copper|bronze|iron|steel|silver|gold|mithril|titanium|ebon|adamantium|obsidian|nethernium|voidstone|phasemetal|chaostone} ore deposit]};
     handler_auto_mine_end;

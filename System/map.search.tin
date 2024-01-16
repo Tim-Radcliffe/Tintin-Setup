@@ -113,7 +113,8 @@
     #NOP %1;
     #IF {"%1" != "$map[area][path]"}
     {
-        .Lock {arearun};
+        .Lock {window.arearun};
+        .Lock {scan.arearun};
         .mapRun {@fSearchLink{%1}};
         event_oneshot {e_map_area_enter} {map.search.tin} {#NOP %%1;.areaRun {%1};};
     };
@@ -123,7 +124,7 @@
         {
           #NOP %%1;
           #LINE GAG;
-          .Unlock {arearun};
+          .Unlock {%*.arearun};
           #UNACTION {map.goto.tin.areaRun.complete};
         };
         #SEND {!map.goto.tin.areaRun.complete};        
