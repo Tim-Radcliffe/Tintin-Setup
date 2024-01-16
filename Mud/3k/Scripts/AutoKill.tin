@@ -4,13 +4,16 @@
     #IF {$mip[FFF][N][data] > 0}
     {
         handler_auto_kill_combat;
-        #BREAK;
     };
 
-    #VAR {room[current]} {%5};
-
-    #IF {"$room[pause][autokill]" != "1" && !@fLocked{}}
+    #IF {@fLocked{room.autokill}} 
     {
+        #BREAK
+    };    
+    #ELSE 
+    {
+        #VAR {room[current]} {$_npc[%2]};
+
         #IF {"$room[current][nokill]" == "1"}
         {
             #BREAK;
@@ -21,26 +24,22 @@
         };
         #ELSEIF {"$room[current][autokill]" == "1"}
         {
-            #VAR {room[killbuffer]} {kill $room[current][id]};
+            #LINE SUBSTITUTE VARIABLES {#LIST {room[commandqueue]} ADD {!kill $room[current][id]}};
+            handler_auto_kill_combat;            
         };
-        #IF {"$room[killbuffer]" == "" }
+        #ELSE
         {
             #VAR {room[target][id]} {$room[current][id]};
             #VAR {room[target][name]} {$room[current][name]};
+            event_register {e_roomscan_end} {AutoKill.tin} {handler_auto_kill_fire};
         };
-        event_register {e_roomscan_end} {AutoKill.tin} {handler_auto_kill_fire};
     };
 };
 
 #ALIAS {handler_auto_kill_fire}
 {
     #NOP %1;
-    #IF {"$room[killbuffer]" != ""}
-    {
-        handler_auto_kill_combat;
-        #LIST {room[commandqueue]} {add} {$room[killbuffer]};
-    };
-    #ELSEIF {"$room[target][id]" != ""}
+    #IF {"$room[target][id]" != ""}
     {
 		handler_auto_kill_choice {$room[target][id]} {$room[target][name]};
     };
@@ -49,7 +48,6 @@
         handler_auto_kill_finish;
     };
     #UNVAR {room[target]};
-    #UNVAR {room[killbuffer]};
 };
 
 #ALIAS {handler_auto_kill_choice}
@@ -81,11 +79,11 @@
       {
 		#LOCAL {_autoKillNPC} {@fGetNPCRegex{%2}};
 		#VAR {_npc[$_autoKillNPC][autokill]} {1};
-		.scanRoomNPCSave {$_autoKillNPC};	
+		.scanRoomNPCSave {$_autoKillNPC};
         handler_auto_kill_combat;
         #SEND {!kill %1};
         handler_auto_kill_choice {};
-      };	  
+      };
       #MACRO {s}
       {
         handler_auto_kill_finish;
@@ -94,35 +92,28 @@
       {
 		#LOCAL {_autoKillNPC} {@fGetNPCRegex{%2}};
 		#VAR {_npc[$_autoKillNPC][autokill]} {-1};
-		.scanRoomNPCSave {$_autoKillNPC};	
+		.scanRoomNPCSave {$_autoKillNPC};
         handler_auto_kill_finish;
       };
-	  handler_auto_kill_pause;
+      .Lock {room.autokill};
     };
 };
-
-#ALIAS {handler_auto_kill_pause}
-{
-    #NOP %1;
-    #VAR {flags[autopause]} {1};
-    #VAR {room[pause][autokill]} {1};
-};
-
 
 #ALIAS {handler_auto_kill_combat}
 {
     #NOP %1;
-    handler_auto_kill_pause;
+    .Lock {room.autokill};
+    handler_auto_kill_choice {};    
+    #UNVAR {room[target]};
     event_oneshot {e_killed_opponent} {AutoKill.tin} {handler_auto_kill_finish};
 };
 
 #ALIAS {handler_auto_kill_finish}
 {
     #NOP %1;
-    #VAR {flags[autopause]} {0};
-    #UNVAR {room[pause][autokill]};
+    .Unlock {room.autokill};
     handler_auto_kill_choice {};
     event_remove_handler {AutoKill.tin};
 };
 
-auto add {kill} {.file load {$path[mud]/Scripts/AutoKill.tin}} {e_room_npc} {#NOP %%1;handler_auto_kill_finish;#CLASS {$path[mud]/Scripts/AutoKill.tin} {kill};};
+auto add {kill} {.file load {$path[mud]/Scripts/AutoKill.tin}} {e_scan_room_npc} {#NOP %%1;handler_auto_kill_finish;#CLASS {$path[mud]/Scripts/AutoKill.tin} {kill};};
