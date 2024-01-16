@@ -10,6 +10,11 @@
   event_raise e_prompt {%0};
 };
 
+#EVENT {SENT OUTPUT}
+{
+    .debug SENT {%0};
+}
+
 #EVENT {MINUTE}
 {
   #IF {@fEval{%5 % 5} == 0}

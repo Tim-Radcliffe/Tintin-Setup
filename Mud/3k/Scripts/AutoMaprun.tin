@@ -79,11 +79,12 @@ event_register {e_map_room_enter} {AutoMaprun.tin} {.handler_maprun_room};
     #ELSEIF {"$_hRun[move]" != ""}
     {
         #VAR {_hRun[retry]} {$_hRun[move]};
+        .debug MAPRUN {MOVE: $_hRun[move]};
         $_hRun[move];
     };
     #ELSE
     {
-        #ECHO {INFO: Run Complete};
+        .debug MAPRUN {INFO: Run Complete};
         auto mapwalk off;
     };
 };

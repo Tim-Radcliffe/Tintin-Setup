@@ -67,6 +67,7 @@
   {
     #IF {&{_events[%1][$handler]} != 0}
     {
+      .debug EVENT_HANDLER {$handler : %0};    
       event_eval {${_events[%1][$handler]}} {%0};
     };
   };
