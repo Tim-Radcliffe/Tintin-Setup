@@ -7,6 +7,7 @@
 	#ELSE
 	{
 		#VAR {_lock[%1]} {@fGetTimestamp{}};
+        event_raise {e_lock_added} {%0};
 	};
 };
 
@@ -18,8 +19,13 @@
 	};
 	#ELSE
 	{
+        #FOREACH {*_lock[%1]} {_lock_record}
+        {
+            event_raise {e_lock_removed} {$_lock_record};
+        };
+        #UNVAR {_lock_record};
 		#UNVAR {_lock[%1]};
-	};
+    };
 };
 
 #FUNCTION {fLocked}
