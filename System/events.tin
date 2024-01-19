@@ -6,14 +6,14 @@
  
 #ALIAS event_register
 {
-  #VAR _events[%1][%2] {%3};
+  #VAR _events[%1][%2] {#NOP %%1;%3};
 }
 
 #NOP event_oneshot eventName handlerName action
 #NOP adds action to the eventName event, removes after being called
 #alias {event_oneshot} 
 { 
-   #var _events[%1][%2] {event_remove_specific {%1} {%2};%3}; 
+   #var _events[%1][%2] {#NOP %%1;event_remove_specific {%1} {%2};%3}; 
 };
  
 #NOP event_remove_event eventName
