@@ -86,11 +86,7 @@ event_register {e_combat_round} {$path[equipment]/The Rod of Lordly Might.tin} {
 
 #ALIAS {{!|}touch %w rune}
 {
-    #IF {$_rolm[rune][%2][trained] < 24}
-    {
-        #NOP;
-    };
-    #ELSEIF {"$_rolm[rune][%2][type]" == "weapon"}
+    #IF {"$_rolm[rune][%2][type]" == "weapon"}
     {
         .rolm_weapon_rune {%2};
     };
@@ -106,6 +102,18 @@ event_register {e_combat_round} {$path[equipment]/The Rod of Lordly Might.tin} {
     #SEND {%0};
 };
 
+#ALIAS {.rolm_weapon_rune}
+{
+    #IF {$_rolm[rune][%1][trained] > 24}
+    {
+        #VAR {_rolm[weapon]} {%1};
+    };
+    #ELSE
+    {
+        touch $_rolm[rune][%1][refers] rune;
+    };
+};
+
 #ALIAS {.rolm_diamond_rune}
 {
     #ACTION {^Warming in your grasp, %* twinkling}
@@ -113,11 +121,6 @@ event_register {e_combat_round} {$path[equipment]/The Rod of Lordly Might.tin} {
         #VAR {_rolm[charges]} {@fTextToInt{%%1}};
         #UNACTION {^Warming in your grasp, %* twinkling};
     };
-};
-
-#ALIAS {.rolm_weapon_rune}
-{
-    #VAR {_rolm[weapon]} {%1};
 };
 
 #NOP You touch the Winch rune on the artifact and hear a soft *click*
@@ -166,6 +169,7 @@ event_register {e_combat_round} {$path[equipment]/The Rod of Lordly Might.tin} {
                 }
                 {arachne}
                 {
+                    {damage} {acid}                    
                     {trained} {1}
                     {type} {weapon}
                     {refers} {viper}
@@ -176,6 +180,7 @@ event_register {e_combat_round} {$path[equipment]/The Rod of Lordly Might.tin} {
                 }
                 {aurora}
                 {
+                    {damage} {radiation}                    
                     {trained} {1}
                     {type} {weapon}
                     {refers} {comet}
@@ -187,12 +192,14 @@ event_register {e_combat_round} {$path[equipment]/The Rod of Lordly Might.tin} {
                 }
                 {comet}
                 {
+                    {damage} {energy}                    
                     {trained} {1}
                     {type} {weapon}
                     {refers} {lightning}
                 }
                 {crown}
                 {
+                    {damage} {mental}                    
                     {trained} {1}
                     {type} {weapon}
                     {refers} {reaper}
@@ -223,6 +230,7 @@ event_register {e_combat_round} {$path[equipment]/The Rod of Lordly Might.tin} {
                 }
                 {frost}
                 {
+                    {damage} {ice}
                     {trained} {1}
                     {type} {weapon}
                     {refers} {dragon}
@@ -247,6 +255,7 @@ event_register {e_combat_round} {$path[equipment]/The Rod of Lordly Might.tin} {
                 }
                 {lightning}
                 {
+                    {damage} {electric}                    
                     {trained} {1}
                     {type} {weapon}
                     {refers} {frost}
@@ -270,6 +279,7 @@ event_register {e_combat_round} {$path[equipment]/The Rod of Lordly Might.tin} {
                 }
                 {reaper}
                 {
+                    {damage} {edged}                    
                     {trained} {1}
                     {type} {weapon}
                     {refers} {arachne}
@@ -305,6 +315,7 @@ event_register {e_combat_round} {$path[equipment]/The Rod of Lordly Might.tin} {
                 }
                 {viper}
                 {
+                    {damage} {poison}                    
                     {trained} {1}
                     {type} {weapon}
                     {refers} {aurora}
@@ -318,3 +329,5 @@ event_register {e_combat_round} {$path[equipment]/The Rod of Lordly Might.tin} {
         };
     };
 };
+
+touch crown rune
