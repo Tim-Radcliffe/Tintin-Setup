@@ -26,5 +26,5 @@
 
 #ACTION {^%sYou have arrived at a dungeon entrance.}
 {
-	event_oneshot {e_map_room_enter} {scaler.tin} {scaler {};};
+	event_oneshot {e_map_room_enter} {scaler.tin} {#NOP %%1;scaler {};};
 } {1};
