@@ -3,7 +3,7 @@
     #NOP %1;
     .rolm_inc_round {$_rolm[weapon]};
     .rolm_inc_round {rounds};
-    
+
     #IF {&{opponent[data][alignment]}}
     {
         #IF {$opponent[data][alignment] > 0}
@@ -12,9 +12,9 @@
         };
         #ELSEIF {$opponent[data][alignment] < 0}
         {
-            .rolm_inc_round {evil};            
+            .rolm_inc_round {evil};
         };
-        #ELSE 
+        #ELSE
         {
             .rolm_inc_round {neutral};
         };
@@ -34,7 +34,7 @@
         {
             .rolm_inc_round {medium};
         };
-        #ELSE 
+        #ELSE
         {
             .rolm_inc_round {large};
         };
@@ -47,13 +47,13 @@ event_register {e_combat_round} {$path[equipment]/The Rod of Lordly Might.tin} {
 #ALIAS {.rolm_inc_round}
 {
     #MATH {_rolm[combat][%1]} {$_rolm[combat][%1] + 1};
-    #IF {@fEval{$_rolm[combat][%1] % 200} == 0} 
+    #IF {@fEval{$_rolm[combat][%1] % 200} == 0}
     {
         #IF {"%1" == "rounds"}
         {
             .rolm_check_rune {};
         };
-        #ELSE 
+        #ELSE
         {
             .rolm_check_rune {%1};
         };
@@ -69,7 +69,7 @@ event_register {e_combat_round} {$path[equipment]/The Rod of Lordly Might.tin} {
     };
     #FOREACH {*_rolm[rune][]} {_rolm_rune}
     {
-        #IF {$_rolm[rune][$_rolm_rune][trained] > 20}
+        #IF {$_rolm[rune][$_rolm_rune][trained] > 22}
         {
             #CONTINUE;
         };
@@ -84,36 +84,64 @@ event_register {e_combat_round} {$path[equipment]/The Rod of Lordly Might.tin} {
     #UNVAR {_rolm_rune};
 };
 
-#NOP archonic vision of your bonding progression ~#=#=#=#=#=#=#=#|#=#=#=>
 #ALIAS {{!|}touch %w rune}
 {
-    #ACTION {{^archonic vision of your bonding progression ([^\|]*)\|([^\|]*)$}}
+    #IF {$_rolm[rune][%2][trained] < 24}
     {
-        #LOCAL {_rolm_trained} {};
-        #FORMAT {_rolm_trained} {%L} {%%2};
-        #MATH {_rolm_trained} {$_rolm_trained + 1};
-        #IF {"$_rolm_trained" != "$_rolm[rune][%2][trained]"}
+        #NOP;
+    };
+    #ELSEIF {"$_rolm[rune][%2][type]" == "weapon"}
+    {
+        .rolm_weapon_rune {%2};
+    };
+    #ELSE
+    {
+        #SWITCH {"%2"}
         {
-            #VAR {_rolm[rune][%2][trained]} {$_rolm_trained};
-            #IF {&{_rolm[rune][%2][refers]}}
-            {
-                .log add {The Rod of Lordly Might.log} {TRAINED %2 rune level $_rolm_trained ($_rolm[rune][%2][refers] combat rounds $_rolm[combat][$_rolm[rune][%2][refers]])};
-            };
-            #ELSE
-            {
-                .log add {The Rod of Lordly Might.log} {TRAINED %2 rune level $_rolm_trained (combat rounds $_rolm[combat][rounds])};
-            };
-            .file write {$path[profile]/The Rod of Lordly Might.tin};            
+            #CASE {"diamond"} {.rolm_diamond_rune};
+            #DEFAULT {#NOP};
         };
-        #UNACTION {{^You are not yet attuned to that .* rune\.$}}        
-        #UNACTION {{^archonic vision of your bonding progression ([^\|]*)\|([^\|]*)$}};
     };
-    #ACTION {{^You are not yet attuned to that .* rune\.$}}
-    {
-        #UNACTION {{^You are not yet attuned to that .* rune\.$}}
-        #UNACTION {{^archonic vision of your bonding progression ([^\|]*)\|([^\|]*)$}};
-    };
+
     #SEND {%0};
+};
+
+#ALIAS {.rolm_diamond_rune}
+{
+    #ACTION {^Warming in your grasp, %* twinkling}
+    {
+        #VAR {_rolm[charges]} {@fTextToInt{%%1}};
+        #UNACTION {^Warming in your grasp, %* twinkling};
+    };
+};
+
+#ALIAS {.rolm_weapon_rune}
+{
+    #VAR {_rolm[weapon]} {%1};
+};
+
+#NOP You touch the Winch rune on the artifact and hear a soft *click*
+#NOP Although you are not yet attuned to that magenta rune, you are granted an
+#NOP archonic vision of your bonding progression ~#=#=#=#=#=#=#=#|#=#=#=>
+#ACTION {You touch the %+ rune on the artifact and hear a soft *click*\nAlthough you are not yet attuned to that %+ rune, you are granted an\narchonic vision of your bonding progression {([^\|]*)\|([^\|]*)}}
+{
+    #LOCAL {_rolm_progress} {};
+    #FORMAT {_rolm_progress[rune]} {%l} {%1};
+    #FORMAT {_rolm_progress[trained]} {%L} {%4};
+    #MATH {_rolm_progress[trained]} {$_rolm_progress[trained] + 1};
+    #IF {"$_rolm_progress[trained]" != "$_rolm[rune][$_rolm_progress[rune]][trained]"}
+    {
+        #VAR {_rolm[rune][$_rolm_progress[rune]][trained]} {$_rolm_progress[trained]};
+        #IF {&{_rolm[rune][$_rolm_progress[rune]][refers]}}
+        {
+            .log add {The Rod of Lordly Might.log} {TRAINED $_rolm_progress[rune] rune level $_rolm_progress[trained] ($_rolm[rune][$_rolm_progress[rune]][refers] combat rounds $_rolm[combat][$_rolm[rune][$_rolm_progress[rune]][refers]])};
+        };
+        #ELSE
+        {
+            .log add {The Rod of Lordly Might.log} {TRAINED $_rolm_progress[rune] rune level $_rolm_progress[trained] (combat rounds $_rolm[combat][rounds])};
+        };
+        .file write {$path[profile]/The Rod of Lordly Might.tin};
+    };
 };
 
 #IF {&{_rolm} == 0}
@@ -130,7 +158,7 @@ event_register {e_combat_round} {$path[equipment]/The Rod of Lordly Might.tin} {
                 }
                 {anchor}
                 {
-                    {trained} {21}
+                    {trained} {25}
                 }
                 {angel}
                 {
@@ -169,10 +197,10 @@ event_register {e_combat_round} {$path[equipment]/The Rod of Lordly Might.tin} {
                     {type} {weapon}
                     {refers} {reaper}
                 }
-                {diamond} 
+                {diamond}
                 {
-                    {trained} {21}
-                }                
+                    {trained} {25}
+                }
                 {dove}
                 {
                     {trained} {1}
@@ -180,8 +208,9 @@ event_register {e_combat_round} {$path[equipment]/The Rod of Lordly Might.tin} {
                 }
                 {dragon}
                 {
-                    {trained} {3}
+                    {trained} {1}
                     {type} {weapon}
+                    {damage} {fire}
                     {refers} {star}
                 }
                 {eagle}
@@ -209,8 +238,8 @@ event_register {e_combat_round} {$path[equipment]/The Rod of Lordly Might.tin} {
                 }
                 {heart}
                 {
-                    {trained} {21}
-                }                
+                    {trained} {25}
+                }
                 {lasso}
                 {
                     {trained} {1}
@@ -252,8 +281,8 @@ event_register {e_combat_round} {$path[equipment]/The Rod of Lordly Might.tin} {
                 }
                 {scroll}
                 {
-                    {trained} {21}
-                }                
+                    {trained} {25}
+                }
                 {skull}
                 {
                     {trained} {1}
@@ -261,12 +290,13 @@ event_register {e_combat_round} {$path[equipment]/The Rod of Lordly Might.tin} {
                 }
                 {spark}
                 {
-                    {trained} {21}
-                }                
+                    {trained} {25}
+                }
                 {star}
                 {
                     {active} {1}
-                    {trained} {21}
+                    {damage} {blunt}
+                    {trained} {25}
                     {type} {weapon}
                 }
                 {sun}
@@ -285,6 +315,6 @@ event_register {e_combat_round} {$path[equipment]/The Rod of Lordly Might.tin} {
                 }
             }
             {weapon} {star}
-        };        
+        };
     };
 };
