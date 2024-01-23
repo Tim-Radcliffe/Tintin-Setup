@@ -18,7 +18,7 @@ F 1048586
 
 G 0
 
-I 712
+I 425
 
 L {ASCII NESW LINE} {NO EXITS} {x}
 L {ASCII NESW LINE} {N} {o}
@@ -1647,32 +1647,32 @@ R {323}{0}{}{-= A Fountain Square =-}{ }{You find yourself in a beautiful, sun-s
 E {18}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {243}{e}{e}{2}{0}{}{1.000}{}{0.00}
 
-R {324}{0}{<068>}{East of Wayhaven}{ }{On a Road. Before you to the west lie the gates of the colossal city of Wayhaven.  The wide gates stand open, beckoning you forward to experience some adventure.  To the north, the path is blocked by a rapidly flowing river, which thunders right by the northern city wall.  The road extends far off to the east and into a dark forest.  Just to the south, the churning waters of Dragonspire Bay sparkle in the sun. }{}{}{}{}{1.000}{}
-E {325}{e}{e}{2}{0}{}{1.000}{}{0.00}
+R {324}{0}{<068>}{East of Wayhaven}{ }{On a Road. Before you to the west lie the gates of the colossal city of Wayhaven.  The wide gates stand open, beckoning you forward to experience some adventure.  To the north, the path is blocked by a rapidly flowing river, which thunders right by the northern city wall.  The road extends far off to the east and into a dark forest.  Just to the south, the churning waters of Dragonspire Bay sparkle in the sun. }{Mud}{{content}{{item}{{^A small dandelion$}{{name}{A small dandelion}}}{noun}{{city}{{name}{city}}{gates}{{name}{gates}}{road}{{name}{road}}{waters}{{name}{waters}}}}}{}{}{1.000}{}
+E {325}{e}{e}{2}{0}{}{1.000}{<238>}{0.00}
 E {64}{enter}{enter}{0}{0}{}{1.000}{}{0.00}
 
-R {325}{0}{<238>}{Forest}{}{Road in the Forest The ancient trees stand like giant sentinels in the area.  They stand with a majestic, yet strange feel of honor.  An eerie, yet sunny woods, deep in the forest.  The ground is moist and very soft to the touch.  Further to the southeast you notice a forest, while to the east you notice that the forest continues.  There is a road running east and west here through the forest.  To the west, the forest seems to thin out rapidly. }{}{{road}{}}{}{}{1.000}{}
-E {324}{w}{w}{8}{0}{}{1.000}{}{0.00}
-E {326}{e}{e}{2}{0}{}{1.000}{}{0.00}
+R {325}{0}{<238>}{Road in the Forest}{}{Road in the Forest You travel through a strange and enchanted forest.  The ground is moist and very soft to the touch.  The ancient trees stand like giant sentinels in the area.  They stand with a majestic, yet strange feel of honor.  Further to the east you note that the forest continues, while to the southeast you can see a forest.  There is a road running east and west here through the forest.  To the west, the forest seems to thin out rapidly. }{Mud}{{content}{{noun}{{forest}{{name}{forest}}{ground}{{name}{ground}}{road}{{name}{road}}{trees}{{name}{trees}}}}{road}{}}{}{}{1.000}{}
+E {324}{w}{w}{8}{0}{}{1.000}{<238>}{0.00}
+E {326}{e}{e}{2}{0}{}{1.000}{<238>}{0.00}
 E {329}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 E {689}{se}{se}{6}{0}{}{1.000}{}{0.00}
 
-R {326}{0}{<238>}{Road in the Forest}{}{Road in the Forest Far in the distance, you can hear animals moving about.  Strange shadows flutter around you, contradicting the bright sunlight barely filtering to the ground around you.  An eerie, yet sunny woods, deep in the forest.  Further to the east and west you notice that the forest continues.  There is a road running east and west here through the forest. }{}{{road}{}}{}{}{1.000}{}
-E {325}{w}{w}{8}{0}{}{1.000}{}{0.00}
-E {327}{e}{e}{2}{0}{}{1.000}{}{0.00}
+R {326}{0}{<238>}{Road in the Forest}{}{Road in the Forest You travel through a strange and enchanted forest.  Far in the distance, you can hear animals moving about.  Strange shadows flutter around you, contradicting the bright sunlight barely filtering to the ground around you.  Further to the north you notice a forest.  There is a road running east and west here through the forest. }{Mud}{{content}{{noun}{{animals}{{name}{animals}}{ground}{{name}{ground}}{road}{{name}{road}}{shadows}{{name}{shadows}}{sunlight}{{name}{sunlight}}}}{road}{}}{}{}{1.000}{}
+E {325}{w}{w}{8}{0}{}{1.000}{<238>}{0.00}
+E {327}{e}{e}{2}{0}{}{1.000}{<238>}{0.00}
 E {329}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {689}{s}{s}{4}{0}{}{1.000}{}{0.00}
 
-R {327}{0}{<238>}{Forest}{}{Road in the Forest Strange shadows flutter around you, contradicting the bright sunlight barely filtering to the ground around you.  The ground is moist and very soft to the touch.  You are in a sunny, but shadowed forest.  There is a road running east and west here through the forest. }{}{{road}{}}{}{}{1.000}{}
-E {326}{w}{w}{8}{0}{}{1.000}{}{0.00}
-E {328}{e}{e}{2}{0}{}{1.000}{}{0.00}
+R {327}{0}{<238>}{Road in the Forest}{}{Road in the Forest An eerie, yet sunny woods, deep in the forest.  Strange shadows flutter around you, contradicting the bright sunlight barely filtering to the ground around you.  The ground is moist and very soft to the touch.  Further to the north you notice a forest.  There is a road running east and west here through the forest. }{Mud}{{content}{{item}{{^A stalk of shimmerweed$}{{name}{A stalk of shimmerweed}}}{noun}{{ground}{{name}{ground}}{road}{{name}{road}}{shadows}{{name}{shadows}}{sunlight}{{name}{sunlight}}}}{road}{}}{}{}{1.000}{}
+E {326}{w}{w}{8}{0}{}{1.000}{<238>}{0.00}
+E {328}{e}{e}{2}{0}{}{1.000}{<238>}{0.00}
 E {330}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {690}{s}{s}{4}{0}{}{1.000}{}{0.00}
 
-R {328}{0}{<238>}{Road in the Forest}{}{Road in the Forest Birds and other animals can be heard all around you.  The ancient trees stand like giant sentinels in the area.  They stand with a majestic, yet strange feel of honor.  You travel through a strange and enchanted forest.  Further to the south you can see a forest.  There is a road running northeast and west through the forest. }{}{{road}{}}{}{}{1.000}{}
-E {327}{w}{w}{8}{0}{}{1.000}{}{0.00}
+R {328}{0}{<238>}{Road in the Forest}{}{Road in the Forest Many leaves crunch beneath your feet, creating a strange and eerie echoing through the forest around you.  Far in the distance, you can hear animals moving about.  You travel through a strange and enchanted forest.  There is a road running northeast and west through the forest. }{Mud}{{content}{{item}{{^A sprig of mistletoe$}{{name}{A sprig of mistletoe}}}{noun}{{animals}{{name}{animals}}{forest}{{name}{forest}}{leaves}{{name}{leaves}}{road}{{name}{road}}}}{road}{}}{}{}{1.000}{}
+E {327}{w}{w}{8}{0}{}{1.000}{<238>}{0.00}
 E {639}{n}{n}{1}{0}{}{1.000}{}{0.00}
-E {640}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {640}{ne}{ne}{3}{0}{}{1.000}{<238>}{0.00}
 E {691}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {693}{e}{e}{2}{0}{}{1.000}{}{0.00}
 
@@ -1689,33 +1689,38 @@ E {331}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {327}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {639}{e}{e}{2}{0}{}{1.000}{}{0.00}
 
-R {331}{0}{<178>}{An Ancient Stone Bridge}{ }{Forest A river thunders its way southwest, towards Wayhaven.  Beyond it lie grassy plains.  Strange shadows flutter around you, contradicting the bright sunlight barely filtering to the ground around you.  You are in a sunny, but shadowed forest.  Further to the south and north you can see that the forest continues, while to the east you note a forest.  The river is crossed by a bridge here. }{Mud}{}{}{}{1.000}{}
+R {331}{0}{<178>}{Forest}{ }{Forest There is a river to the northwest, winding its way towards Wayhaven.  Beyond the river lie the plains.  The ancient trees stand like giant sentinels in the area.  They stand with a majestic, yet strange feel of honour.  You are in a sunny, but shadowed forest.  Further to the north you can see that the forest continues, while to the east you note a forest.  The river is crossed by a bridge here. }{Mud}{{content}{{noun}{{bridge}{{name}{bridge}}{forest}{{name}{forest}}{river}{{name}{river}}{trees}{{name}{trees}}}{npc}{{^A red-tailed hawk$}{{name}{A red-tailed hawk}}}}}{}{}{1.000}{}
 E {329}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 E {332}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {330}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {333}{w}{w}{8}{2}{}{1.000}{}{0.00}
 E {334}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {1163}{d}{d}{32}{0}{}{1.000}{}{0.00}
+E {641}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {332}{0}{<178>}{Forest}{ }{Forest An eerie, yet sunny woods, deep in the forest.  Strange shadows flutter around you, contradicting the bright sunlight barely filtering to the ground around you.  A river thunders its way southwest, towards Wayhaven.  Beyond it lie grassy plains.  Further to the east you notice a forest.  The river emerges from an enormous lake to the northeast.  Its waters dark and uninviting. }{}{}{}{}{1.000}{}
+R {332}{0}{<178>}{Forest}{ }{Forest The ancient trees stand like giant sentinels in the area.  They stand with a majestic, yet strange feel of honour.  You travel through a strange and enchanted forest.  A river cuts its way through the forest here, separating you from the plains.  Further to the south you note that the forest continues.  The river emerges from an enormous lake to the northeast.  Its waters dark and uninviting. }{Mud}{{content}{{noun}{{forest}{{name}{forest}}{lake}{{name}{lake}}{river}{{name}{river}}{trees}{{name}{trees}}{waters}{{name}{waters}}}{npc}{{^A black and white skunk$}{{name}{A black and white skunk}}}}}{}{}{1.000}{}
 E {331}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {641}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {334}{se}{se}{6}{0}{}{1.000}{}{0.00}
 
 R {333}{0}{<118>}{An Ancient Stone Bridge}{<138>!}{You are crossing an ancient stone bridge. The river rushes by underneath you. The plains spread out to the west, while the Eastern Forest looms to the east.}{Troll Bridge}{{danger}{}}{}{}{1.000}{}
 E {331}{e}{e}{2}{1}{}{1.000}{}{0.00}
 E {335}{w}{w}{8}{1}{}{1.000}{}{0.00}
 
-R {334}{0}{<178>}{Forest}{ }{Forest Strange shadows flutter around you, contradicting the bright sunlight barely filtering to the ground around you.  Birds and other animals can be heard all around you.  You are moving through a sweet-smelling forest.  Further to the south and east you can see that the forest continues.   }{}{}{}{}{1.000}{}
+R {334}{0}{<178>}{Forest}{ }{Forest Far in the distance, you can hear animals moving about.  Many leaves crunch beneath your feet, creating a strange and eerie echoing through the forest around you.  You travel through a strange and enchanted forest.  Further to the south and north you note that the forest continues.   }{Mud}{{content}{{noun}{{animals}{{name}{animals}}{forest}{{name}{forest}}{leaves}{{name}{leaves}}}}}{}{}{1.000}{}
 E {331}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {639}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {641}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {642}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {643}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {332}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
-R {335}{0}{<178>}{Plains}{ }{Plains A river cuts its way through the plains here.  A dark forest lies beyond it.  The land seems quite empty but you spot some movement not too far away.  It looks as if you might find some wild rabbits around.  A slight wind blows across the plains and the grass shimmers slightly.  Further to the west and southwest you see that the plains continue.  An ancient bridge crosses the river to the east, and leads into a dark forest. }{Mud}{}{}{}{1.000}{}
+R {335}{0}{<178>}{Plains}{ }{Plains A slight wind blows across the plains and the grass shimmers slightly.  The plains seem to stretch on as far as your eyes can see.  The grass sways in the breeze and wavy patterns appear all over the place.  There is a river to the southeast, winding its way towards Wayhaven.  Beyond the river lies an enormous forest.  Further to the southwest and north you see that the plains continue.  An ancient bridge crosses the river to the east, and leads into a dark forest. }{Mud}{{content}{{item}{{^A small dandelion$}{{name}{A small dandelion}}}{noun}{{bridge}{{name}{bridge}}{dam}{{name}{dam}}{grass}{{name}{grass}}{plains}{{name}{plains}}{river}{{name}{river}}}}}{}{}{1.000}{}
 E {333}{e}{e}{2}{2}{}{1.000}{}{0.00}
 E {336}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 E {337}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {338}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {426}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
 R {336}{0}{<178>}{Plains}{ }{Plains The plains seem to stretch on as far as your eyes can see.  The grass sways in the breeze and wavy patterns appear all over the place.  The cloudless skies stretch in all directions without fault.  A river thunders its way southwest, towards Wayhaven.  There is a dark forest on the other shore.  Further to the north and northeast you can see that the plains continue.  The river turns due west at this point. }{Mud}{{content}{{noun}{{forest}{{name}{forest}}{grass}{{name}{grass}}{plains}{{name}{plains}}{river}{{name}{river}}}}}{}{}{1.000}{}
 E {335}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
@@ -1723,11 +1728,13 @@ E {338}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {339}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {340}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
-R {337}{0}{<178>}{Plains}{ }{Plains A slight wind blows across the plains and the grass shimmers slightly.  The plains stretch out to the horizon.  The ground is soft beneath your feet but the grassy cover allows you to step comfortably.  To the southeast, a dark forest lies across the shore of a fast-running river.  Further to the west you can see plains.  A small dam has been built along the bank of the river at this point. }{}{}{}{}{1.000}{}
+R {337}{0}{<178>}{Plains}{ }{Plains A slight wind blows across the plains and the grass shimmers slightly.  The plains look pretty much the same all around you.  The place appears to get enough rain but there still isn't much life around.  There is a river to the southeast, winding its way towards Wayhaven.  Beyond the river lies an enormous forest.  Further to the west you see plains, while to the south you can see that the plains continue.  A small dam has been built along the bank of the river at this point. }{Mud}{{content}{{noun}{{dam}{{name}{dam}}{grass}{{name}{grass}}{plains}{{name}{plains}}{river}{{name}{river}}}{npc}{{^Plainsman$}{{name}{Plainsman}}}}}{}{}{1.000}{}
 E {335}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {427}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 E {428}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {426}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {338}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {431}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
 R {338}{0}{<178>}{Plains}{ }{Plains There is a river to the southeast, winding its way towards Wayhaven.  Beyond the river lies an enormous forest.  The plains seem to stretch on as far as your eyes can see.  The grass sways in the breeze and wavy patterns appear all over the place.  The bright sun is warm on your back as you look out on the plains.  Further to the west you can see plains, while to the south you note that the plains continue.   }{Mud}{{content}{{noun}{{grass}{{name}{grass}}{plains}{{name}{plains}}{river}{{name}{river}}{sun}{{name}{sun}}}}}{}{}{1.000}{}
 E {335}{e}{e}{2}{0}{}{1.000}{}{0.00}
@@ -1735,6 +1742,8 @@ E {336}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {340}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {426}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {339}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {337}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {425}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
 R {339}{0}{<178>}{On a Road}{ }{Plains The long grass sways in the breeze and parts easily beneath your step.  The plains stretch out to the horizon.  The ground is soft beneath your feet but the grassy cover allows you to step comfortably.  You notice some light tracks but you have no idea where they lead.  Further to the west you note a road.  To the southwest lies the great city of Wayhaven. The main entry gate seems to be a distance off to the west.  At this point, the Wayhaven River flows in from the east and plunges through an enormous grate in the wall of the city.  On the other side of the river, running up to the eastern wall of the city, lie more plains. }{Mud}{{content}{{noun}{{city}{{name}{city}}{gate}{{name}{gate}}{grass}{{name}{grass}}{grate}{{name}{grate}}{ground}{{name}{ground}}{plains}{{name}{plains}}{tracks}{{name}{tracks}}{wall}{{name}{wall}}}}}{}{}{1.000}{}
 E {336}{e}{e}{2}{0}{}{1.000}{}{0.00}
@@ -1743,13 +1752,15 @@ E {341}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {342}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 E {338}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {340}{0}{<178>}{Plains}{ }{Plains The bright sun is warm on your back as you look out on the plains.  A lone bird glides effortlessly over your head and into the distance.  The land seems quite empty but you spot some movement not too far away.  It looks as if you might find some wild rabbits around.  Further to the north you see that the plains continue, while to the east you note plains.   }{Mud}{{content}{{noun}{{bird}{{name}{bird}}{plains}{{name}{plains}}{sun}{{name}{sun}}}}}{}{}{1.000}{}
+R {340}{0}{<178>}{On a Road}{ }{Plains A slight wind blows across the plains and the grass shimmers slightly.  The land seems quite empty but you spot some movement not too far away.  It looks as if you might find some wild rabbits around.  You look back the way you came and see the crushed grass of your path.  Further to the west you see a road, while to the north you can see that the plains continue.   }{Mud}{{content}{{noun}{{bird}{{name}{bird}}{grass}{{name}{grass}}{plains}{{name}{plains}}{sun}{{name}{sun}}}}}{}{}{1.000}{}
 E {339}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {342}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {425}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {338}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {336}{se}{se}{6}{0}{}{1.000}{}{0.00}
 E {341}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {426}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {424}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
 R {341}{0}{<068>}{Plains}{ }{On a Road This road bears the evidence of many years of frequent travel.  The sun is shining and it's a nice day to be out.  The road winds its way through the plains and you could easily leave the road.  Further to the north you can see that the road continues, while to the west you can see plains.  To the south stand the walls of the colossal city of Wayhaven. Great gates lie open before you. }{Mud}{{content}{{item}{{^A piece of oakwood$}{{name}{A piece of oakwood}}{^A small dandelion$}{{name}{A small dandelion}}{^Small flute$}{{name}{Small flute}}{^Spices$}{{name}{Spices}}}{noun}{{city}{{name}{city}}{evidence}{{name}{evidence}}{gates}{{name}{gates}}{plains}{{name}{plains}}{road}{{name}{road}}{sun}{{name}{sun}}{walls}{{name}{walls}}}}}{}{}{1.000}{}
 E {339}{e}{e}{2}{0}{}{1.000}{}{0.00}
@@ -1759,13 +1770,15 @@ E {343}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {340}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 E {345}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
-R {342}{0}{<238>}{On a Road}{}{On a Road You are standing on a well traveled road leading through the plains.  The sun is shining and it's a nice day to be out.  The road winds its way through the plains and you could easily leave the road.  Further to the west you note plains.  The road here runs north and south with open plains on either side.  To the south you see a city. }{Mud}{{content}{{noun}{{plains}{{name}{plains}}{road}{{name}{road}}{sun}{{name}{sun}}}{npc}{{^Human Traveller$}{{name}{Human Traveller}}}}{road}{}}{}{}{1.000}{}
+R {342}{0}{<238>}{On a Road}{}{On a Road This road bears the evidence of many years of frequent travel.  The sun is shining and it's a nice day to be out.  The road winds its way through the plains and you could easily leave the road.  Further to the south you notice that the road continues, while to the east you see plains.  The road here runs north and south with open plains on either side.  To the south you see a city. }{Mud}{{content}{{noun}{{evidence}{{name}{evidence}}{plains}{{name}{plains}}{road}{{name}{road}}{sun}{{name}{sun}}}{npc}{{^Elf Traveller$}{{name}{Elf Traveller}}{^Human Traveller$}{{name}{Human Traveller}}}}{road}{}}{}{}{1.000}{}
 E {341}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {345}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {424}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {340}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {343}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 E {339}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {425}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {423}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
 R {343}{0}{}{Plains}{}{Plains A lone bird glides effortlessly over your head and into the distance.  The plains stretch out to the horizon.  The ground is soft beneath your feet but the grassy cover allows you to step comfortably.  The cloudless skies stretch in all directions without fault.  Further to the east you see a road, while to the west you note that the plains continue.  To the southeast stand the walls of the colossal city of Wayhaven.  There is no way to enter at this point, however you think you can see gates both further south and further east. }{Mud}{{content}{{item}{{^A small dandelion$}{{name}{A small dandelion}}}{noun}{{bird}{{name}{bird}}{city}{{name}{city}}{gates}{{name}{gates}}{ground}{{name}{ground}}{plains}{{name}{plains}}{walls}{{name}{walls}}}}}{}{}{1.000}{}
 E {341}{e}{e}{2}{0}{}{1.000}{}{0.00}
@@ -1783,13 +1796,15 @@ E {92}{enter}{enter}{0}{0}{}{1.000}{}{0.00}
 E {351}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 E {346}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
-R {345}{0}{<178>}{On a Road}{ }{Plains A lone bird glides effortlessly over your head and into the distance.  The long grass sways in the breeze and parts easily beneath your step.  The land seems quite empty but you spot some movement not too far away.  It looks as if you might find some wild rabbits around.  Further to the north, west and south you see that the plains continue.   }{Mud}{{content}{{noun}{{bird}{{name}{bird}}{grass}{{name}{grass}}{plains}{{name}{plains}}}}}{}{}{1.000}{}
+R {345}{0}{<178>}{Plains}{ }{Plains The plains seem to stretch on as far as your eyes can see.  The grass sways in the breeze and wavy patterns appear all over the place.  The long grass sways in the breeze and parts easily beneath your step.  You look back the way you came and see the crushed grass of your path.  Further to the east you can see a road, while to the north and west you note that the plains continue.   }{Mud}{{content}{{noun}{{bird}{{name}{bird}}{grass}{{name}{grass}}{plains}{{name}{plains}}}}}{}{}{1.000}{}
 E {343}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {423}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {342}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {422}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {341}{se}{se}{6}{0}{}{1.000}{}{0.00}
 E {346}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {424}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {421}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
 R {346}{0}{<178>}{Plains}{ }{Plains The bright sun is warm on your back as you look out on the plains.  A lone bird glides effortlessly over your head and into the distance.  The land seems quite empty but you spot some movement not too far away.  It looks as if you might find some wild rabbits around.  Further to the west you see that the plains continue.   }{Mud}{{content}{{noun}{{bird}{{name}{bird}}{plains}{{name}{plains}}{sun}{{name}{sun}}}}}{}{}{1.000}{}
 E {343}{e}{e}{2}{0}{}{1.000}{}{0.00}
@@ -2164,29 +2179,35 @@ E {378}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 E {394}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 E {416}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {393}{0}{<238>}{On a Road}{}{On a Road The sky is clear and a light breeze tickles your cheek.  The plains on either side look quite barren but they may hold something.  This road bears the evidence of many years of frequent travel.  Further to the west you notice plains, while to the south you can see that the road continues.  The road here runs north and south.  Across the plains to the southeast you see the walls of a city. }{Mud}{{content}{{item}{{^A small dandelion$}{{name}{A small dandelion}}{^Armour$}{{name}{Armour}}{^Small flute$}{{name}{Small flute}}}{noun}{{evidence}{{name}{evidence}}{plains}{{name}{plains}}{road}{{name}{road}}{walls}{{name}{walls}}}}{road}{}}{}{}{1.000}{}
+R {393}{0}{<238>}{On a Road}{}{On a Road You are standing on a well traveled road leading through the plains.  The sky is clear and a light breeze tickles your cheek.  The plains on either side look quite barren but they may hold something.  The road here runs north and south.  Across the plains to the southeast you see the walls of a city. }{Mud}{{content}{{item}{{^A small dandelion$}{{name}{A small dandelion}}{^Armour$}{{name}{Armour}}{^Small flute$}{{name}{Small flute}}}{noun}{{evidence}{{name}{evidence}}{plains}{{name}{plains}}{road}{{name}{road}}{walls}{{name}{walls}}}{npc}{{^Elf Traveller$}{{name}{Elf Traveller}}}}{road}{}}{}{}{1.000}{}
 E {392}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {394}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {404}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {416}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {418}{se}{se}{6}{0}{}{1.000}{}{0.00}
 E {391}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {414}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {403}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
-R {394}{0}{<178>}{Plains}{ }{Plains The plains seem to stretch on as far as your eyes can see.  The grass sways in the breeze and wavy patterns appear all over the place.  The cloudless skies stretch in all directions without fault.  A lone bird glides effortlessly over your head and into the distance.  Further to the west and south you notice that the plains continue.  The plains are overtaken by forest to the north. }{Mud}{{content}{{item}{{^A small dandelion$}{{name}{A small dandelion}}}{noun}{{bird}{{name}{bird}}{grass}{{name}{grass}}{plains}{{name}{plains}}}}}{}{}{1.000}{}
+R {394}{0}{<178>}{Plains}{ }{Plains The land seems quite empty but you spot some movement not too far away.  It looks as if you might find some wild rabbits around.  The long grass sways in the breeze and parts easily beneath your step.  A lone bird glides effortlessly over your head and into the distance.  Further to the south and west you can see that the plains continue.  The plains are overtaken by forest to the north. }{Mud}{{content}{{item}{{^A small dandelion$}{{name}{A small dandelion}}}{noun}{{bird}{{name}{bird}}{grass}{{name}{grass}}{plains}{{name}{plains}}}}}{}{}{1.000}{}
 E {391}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {395}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {403}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {393}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {390}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 E {392}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {404}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {402}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
-R {395}{0}{<178>}{Plains}{ }{Plains The plains stretch out to the horizon.  The ground is soft beneath your feet but the grassy cover allows you to step comfortably.  You notice some light tracks but you have no idea where they lead.  The long grass sways in the breeze and parts easily beneath your step.  Further to the east you can see that the plains continue.  The plains are overtaken by forest to the north. }{}{{content}{{noun}{{grass}{{name}{grass}}{ground}{{name}{ground}}{plains}{{name}{plains}}{tracks}{{name}{tracks}}}}}{}{}{1.000}{}
+R {395}{0}{<178>}{Plains}{ }{Plains The bright sun is warm on your back as you look out on the plains.  You look back the way you came and see the crushed grass of your path.  The plains stretch out to the horizon.  The ground is soft beneath your feet but the grassy cover allows you to step comfortably.  Further to the east and south you see that the plains continue.  The plains are overtaken by forest to the north. }{Mud}{{content}{{item}{{^A piece of oakwood$}{{name}{A piece of oakwood}}}{noun}{{grass}{{name}{grass}}{ground}{{name}{ground}}{plains}{{name}{plains}}{sun}{{name}{sun}}{tracks}{{name}{tracks}}}{npc}{{^A vulture$}{{name}{A vulture}}{^Plainsman$}{{name}{Plainsman}}}}}{}{}{1.000}{}
 E {390}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {397}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {402}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {394}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {391}{se}{se}{6}{0}{}{1.000}{}{0.00}
 E {396}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {403}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {400}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
 R {396}{0}{<178>}{Plains}{ }{Desert The desert stretches out to the horizon. Your feet sink into the sand beneath you and every step you take drains your mind and body.  The boiling sun burns your back as you look out across the bleak hot landscape.  You see some footsteps in the sand and you wonder where they lead.  The desert blends into the plains to the north and east. }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{footsteps}{{name}{footsteps}}{sand}{{name}{sand}}{sands}{{name}{sands}}{sun}{{name}{sun}}{wind}{{name}{wind}}}}}{}{}{1.000}{}
 E {390}{e}{e}{2}{0}{}{1.000}{}{0.00}
@@ -2197,11 +2218,12 @@ E {399}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 E {389}{se}{se}{6}{0}{}{1.000}{}{0.00}
 E {395}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {397}{0}{<178>}{Plains}{ }{Plains The plains seem to stretch on as far as your eyes can see.  The grass sways in the breeze and wavy patterns appear all over the place.  You notice some light tracks but you have no idea where they lead.  The cloudless skies stretch in all directions without fault.  Further to the east you note that the plains continue.  The grassy plain is bordered by thick forest to the north and a sandy, desolate wasteland to the south.  Something is surely amiss with the land.  Enormous mountains tower to the west, preventing any travel in that direction. }{}{}{}{}{1.000}{}
+R {397}{0}{<178>}{Plains}{ }{Plains You notice some light tracks but you have no idea where they lead.  The plains look pretty much the same all around you.  The place appears to get enough rain but there still isn't much life around.  The long grass sways in the breeze and parts easily beneath your step.  The grassy plain is bordered by thick forest to the north and a sandy, desolate wasteland to the south.  Something is surely amiss with the land.  Enormous mountains tower to the west, preventing any travel in that direction. }{Mud}{{content}{{item}{{^A small dandelion$}{{name}{A small dandelion}}}{noun}{{forest}{{name}{forest}}{grass}{{name}{grass}}{mountains}{{name}{mountains}}{plains}{{name}{plains}}{tracks}{{name}{tracks}}{wasteland}{{name}{wasteland}}}{npc}{{^A buzzard$}{{name}{A buzzard}}}}}{}{}{1.000}{}
 E {396}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {400}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {395}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {390}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {402}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
 R {398}{0}{<178>}{Desert}{ }{Desert The desert sands shift about as a gust of wind whips around you.  The dry desert heat continually sucks moisture from your body.  The desert seems the same every way you look. You see an oasis in the distance, however on second inspection it turns out to be just a mirage.   }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{moisture}{{name}{moisture}}{oasis}{{name}{oasis}}{sands}{{name}{sands}}{wind}{{name}{wind}}}}}{}{}{1.000}{}
 E {396}{e}{e}{2}{0}{}{1.000}{}{0.00}
@@ -2221,53 +2243,74 @@ E {383}{se}{se}{6}{0}{}{1.000}{}{0.00}
 E {963}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 E {396}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {400}{0}{<178>}{Forest}{ }{Forest A small gust of wind causes the branches above you to sway slightly.  Birds are singing in the trees and you see a squirrel run along a branch overhead. The forest seems to be buzzing with animal-life.  Looking up through the canopy of branches you see the sky is clear.  Further to the north and east you note that the forest continues.  The forest is impenetrable to the west and plains begin to the south. }{}{}{}{}{1.000}{}
+R {400}{0}{<178>}{Plains}{ }{Forest You look back the way you came and see a path amongst crushed leaves.  Birds are singing in the trees and you see a squirrel run along a branch overhead. The forest seems to be buzzing with animal-life.  Looking up through the canopy of branches you see the sky is clear.  Further to the east and north you notice that the forest continues.  The forest is impenetrable to the west and plains begin to the south. }{Mud}{{content}{{item}{{^A nwerm leaf$}{{name}{A nwerm leaf}}}{noun}{{branch}{{name}{branch}}{branches}{{name}{branches}}{canopy}{{name}{canopy}}{forest}{{name}{forest}}{path}{{name}{path}}{sky}{{name}{sky}}{squirrel}{{name}{squirrel}}{trees}{{name}{trees}}}}}{}{}{1.000}{}
 E {397}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {401}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {402}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {395}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {407}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {401}{0}{<068>}{Forest}{ }{Forest The trees cast long shadows on the ground before you as you wander through this lovely forest. Birds sing in the branches above you.  It appears to be quite peaceful here as you look upon your surroundings.  You are completely surrounded by trees of varying shapes and sizes.  Further to the east, north and south you notice that the forest continues.  The forest comes to an abrupt end to the west.  The mouth of a dark and foreboding cave gapes emptily at you! }{}{}{}{}{1.000}{}
+R {401}{0}{<068>}{Forest}{ }{Forest Birds are singing in the trees and you see a squirrel run along a branch overhead. The forest seems to be buzzing with animal-life.  You look back the way you came and see a path amongst crushed leaves.  You are completely surrounded by trees of varying shapes and sizes.  Further to the north you note that the forest continues.  The forest comes to an abrupt end to the west.  The mouth of a dark and foreboding cave gapes emptily at you! }{Mud}{{content}{{noun}{{branch}{{name}{branch}}{cave}{{name}{cave}}{forest}{{name}{forest}}{mouth}{{name}{mouth}}{path}{{name}{path}}{squirrel}{{name}{squirrel}}{trees}{{name}{trees}}}}}{}{}{1.000}{}
 E {400}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {408}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {407}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {1235}{enter}{.mapLink {Pinnacle/Fantasy/Carnelian's Lair} {} {enter};}{0}{1}{}{1.000}{}{0.00}
+E {402}{se}{se}{6}{0}{}{1.000}{}{0.00}
 
-R {402}{0}{<068>}{Forest}{ }{Forest A small gust of wind causes the branches above you to sway slightly.  The trees are spread around you in all directions. The soft ground is comfortable to walk on, but you pause to admire the forest.  Looking up through the canopy of branches you see the sky is clear.  Further to the east and north you notice that the forest continues.  A garden lies before you, adding yet another touch of beauty to the forest. }{}{}{}{}{1.000}{}
+R {402}{0}{<068>}{Forest}{ }{Forest A small gust of wind causes the branches above you to sway slightly.  Dead leaves rustle beneath your feet as you walk. The forest has a sweet smell about it, and the fine day puts a spring in your step.  The sunlight filters down through the canopy and touches your cheek.  Further to the north and east you note that the forest continues.  A garden lies before you, adding yet another touch of beauty to the forest. }{Mud}{{content}{{item}{{^A sprig of rosemary$}{{name}{A sprig of rosemary}}}{noun}{{branches}{{name}{branches}}{canopy}{{name}{canopy}}{forest}{{name}{forest}}{garden}{{name}{garden}}{leaves}{{name}{leaves}}}{npc}{{^Mass of Troll Flesh$}{{name}{Mass of Troll Flesh}}{^Troll$}{{name}{Troll}}}}}{}{}{1.000}{}
 E {400}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {395}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {403}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {407}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {1236}{enter}{.mapLink {Pinnacle/Fantasy/Kalaena's Fountain} {} {enter};}{0}{1}{}{1.000}{}{0.00}
+E {394}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {397}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {401}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {406}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {403}{0}{<178>}{Forest}{ }{Forest You are standing amongst the tall trees of a magnificent forest.  A small gust of wind causes the branches above you to sway slightly.  The trees are spread around you in all directions. The soft ground is comfortable to walk on, but you pause to admire the forest.  Further to the north you can see that the forest continues, while to the east you see a road.  The plains open out to the south, while a road lies to the east. }{}{}{}{}{1.000}{}
+R {403}{0}{<178>}{Forest}{ }{Forest You are standing amongst the tall trees of a magnificent forest.  Birds are singing in the trees and you see a squirrel run along a branch overhead. The forest seems to be buzzing with animal-life.  It appears to be quite peaceful here as you look upon your surroundings.  Further to the east you notice a road.  The plains open out to the south, while a road lies to the east. }{Mud}{{content}{{item}{{^A nwerm leaf$}{{name}{A nwerm leaf}}}{noun}{{branch}{{name}{branch}}{forest}{{name}{forest}}{squirrel}{{name}{squirrel}}{trees}{{name}{trees}}}{npc}{{^A red-breasted robin$}{{name}{A red-breasted robin}}}}}{}{}{1.000}{}
 E {394}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {404}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {406}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {402}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {393}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {395}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {407}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {405}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {404}{0}{<238>}{On a Road}{}{Forest Road Your back is warmed slightly by the shining sun.  The forest the road passes through looks to hold some interesting exploring.  You are standing on a well travelled road leading through a forest.  Further to the east you can see a forest.  The road travels north and south. }{}{{road}{}}{}{}{1.000}{}
+R {404}{0}{<238>}{Forest}{}{Forest Road A strong breeze causes the trees by the road to sway slightly.  The forests on either side look interesting and may hold something.  You are standing on a road that is frequently used by travellers.  Further to the west you see a forest.  The road travels north and south. }{Mud}{{content}{{noun}{{road}{{name}{road}}{trees}{{name}{trees}}}{npc}{{^A red-breasted robin$}{{name}{A red-breasted robin}}{^Elf Traveller$}{{name}{Elf Traveller}}}}{road}{}}{}{}{1.000}{}
 E {393}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {405}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {403}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {414}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {416}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {394}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {406}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {412}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {405}{0}{<238>}{Forest Road}{}{Forest Road A strong breeze causes the trees by the road to sway slightly.  The forests on either side look interesting and may hold something.  You are standing on a road that is frequently used by travellers.  Further to the south you note that the road continues, while to the east you can see a forest.   }{}{{road}{}}{}{}{1.000}{}
+R {405}{0}{<238>}{Forest}{}{Forest Road The sun is shining and it's a nice day to be out.  The road winds its way through the forest and you could easily leave the road.  This road bears the evidence of many years of frequent travel.   }{Mud}{{content}{{item}{{^A nwerm leaf$}{{name}{A nwerm leaf}}}{noun}{{forest}{{name}{forest}}{road}{{name}{road}}{sun}{{name}{sun}}}{npc}{{^A small black wolf$}{{name}{A small black wolf}}}}{road}{}}{}{}{1.000}{}
 E {404}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {406}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {411}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {412}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {403}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {414}{se}{se}{6}{0}{}{1.000}{}{0.00}
 
-R {406}{0}{<178>}{Forest}{ }{Forest You look back the way you came and see a path amongst crushed leaves.  Looking up through the canopy of branches you see the sky is clear.  Dead leaves rustle beneath your feet as you walk. The forest has a sweet smell about it, and the fine day puts a spring in your step.  Further to the south you note that the forest continues, while to the east you note a road.  A road lies to the east. }{}{}{}{}{1.000}{}
+R {406}{0}{<178>}{Forest Road}{ }{Forest You are standing amongst the tall trees of a magnificent forest.  It appears to be quite peaceful here as you look upon your surroundings.  The trees are spread around you in all directions. The soft ground is comfortable to walk on, but you pause to admire the forest.  Further to the east you note a road, while to the south you note that the forest continues.  A road lies to the east. }{Mud}{{content}{{item}{{^A nwerm leaf$}{{name}{A nwerm leaf}}{^A sprig of rosemary$}{{name}{A sprig of rosemary}}}{noun}{{forest}{{name}{forest}}{ground}{{name}{ground}}{trees}{{name}{trees}}}}}{}{}{1.000}{}
 E {403}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {407}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {410}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {405}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {402}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {404}{se}{se}{6}{0}{}{1.000}{}{0.00}
 
-R {407}{0}{<178>}{Forest}{ }{Forest The sunlight filters down through the canopy and touches your cheek.  The trees are spread around you in all directions. The soft ground is comfortable to walk on, but you pause to admire the forest.  It appears to be quite peaceful here as you look upon your surroundings.  Further to the west, north and south you notice that the forest continues.   }{}{}{}{}{1.000}{}
+R {407}{0}{<178>}{Forest}{ }{Forest The sunlight filters down through the canopy and touches your cheek.  Dead leaves rustle beneath your feet as you walk. The forest has a sweet smell about it, and the fine day puts a spring in your step.  You notice what you assume are animal tracks crossing the forest bed.   }{Mud}{{content}{{item}{{^A piece of oakwood$}{{name}{A piece of oakwood}}}{noun}{{canopy}{{name}{canopy}}{forest}{{name}{forest}}{leaves}{{name}{leaves}}{tracks}{{name}{tracks}}}}}{}{}{1.000}{}
 E {402}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {401}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {409}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {406}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {400}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {403}{se}{se}{6}{0}{}{1.000}{}{0.00}
 
 R {408}{0}{<068>}{Forest}{ }{Forest You are standing amongst the tall trees of a magnificent forest.  The trees are spread around you in all directions. The soft ground is comfortable to walk on, but you pause to admire the forest.  You notice what you assume are animal tracks crossing the forest bed.  Further to the west, north and south you notice that the forest continues.  A small trodden path leads to a village nearby. }{Mud}{}{}{}{1.000}{}
 E {401}{s}{s}{4}{0}{}{1.000}{}{0.00}
@@ -2295,12 +2338,14 @@ E {413}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {454}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {410}{w}{w}{8}{0}{}{1.000}{}{0.00}
 
-R {412}{0}{<068>}{Forest}{ }{Forest The trees cast long shadows on the ground before you as you wander through this lovely forest. Birds sing in the branches above you.  You notice what you assume are animal tracks crossing the forest bed.  You are standing amongst the tall trees of a magnificent forest.  Further to the east and south you see that the forest continues, while to the west you can see a road.  Before you stands an ancient castle that appears abandoned. }{}{}{}{}{1.000}{}
+R {412}{0}{<068>}{Forest}{ }{Forest A small gust of wind causes the branches above you to sway slightly.  You are completely surrounded by trees of varying shapes and sizes.  The trees are spread around you in all directions. The soft ground is comfortable to walk on, but you pause to admire the forest.  Before you stands an ancient castle that appears abandoned. }{Mud}{{content}{{noun}{{branches}{{name}{branches}}{castle}{{name}{castle}}{ground}{{name}{ground}}{trees}{{name}{trees}}}{npc}{{^Squirrel$}{{name}{Squirrel}}}}}{}{}{1.000}{}
 E {405}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {413}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {414}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {415}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {1164}{enter}{.mapLink {Pinnacle/Fantasy/Zelligar's Castle} {} {enter};}{0}{1}{}{1.000}{}{0.00}
+E {404}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {417}{se}{se}{6}{0}{}{1.000}{}{0.00}
 
 R {413}{0}{<178>}{Forest}{ }{Forest It appears to be quite peaceful here as you look upon your surroundings. The trees cast long shadows on the ground before you as you wander through this lovely forest. Birds sing in the branches above you.  The sunlight filters down through the canopy and touches your cheek.  Further to the west you see a road, while to the south and east you note that the forest continues.  A road lies to the west. }{}{}{}{}{1.000}{}
 E {412}{s}{s}{4}{0}{}{1.000}{}{0.00}
@@ -2308,31 +2353,43 @@ E {438}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {453}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {411}{w}{w}{8}{0}{}{1.000}{}{0.00}
 
-R {414}{0}{<178>}{Forest}{ }{Forest Birds are singing in the trees and you see a squirrel run along a branch overhead. The forest seems to be buzzing with animal-life.  You are completely surrounded by trees of varying shapes and sizes.  You look back the way you came and see a path amongst crushed leaves.  Further to the west you notice a road.  A road lies to the west, while to the south and east the plains open out. }{}{}{}{}{1.000}{}
+R {414}{0}{<178>}{Forest Road}{ }{Forest The sunlight filters down through the canopy and touches your cheek.  You look back the way you came and see a path amongst crushed leaves.  Dead leaves rustle beneath your feet as you walk. The forest has a sweet smell about it, and the fine day puts a spring in your step.  Further to the north you see that the forest continues, while to the west you notice a road.  A road lies to the west, while to the south and east the plains open out. }{Mud}{{content}{{item}{{^A bit of thyme$}{{name}{A bit of thyme}}}{noun}{{canopy}{{name}{canopy}}{forest}{{name}{forest}}{leaves}{{name}{leaves}}{path}{{name}{path}}}}}{}{}{1.000}{}
 E {412}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {416}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {404}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {417}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {419}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {393}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {405}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {415}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {415}{0}{<178>}{Forest}{ }{Forest You notice what you assume are animal tracks crossing the forest bed.  The trees cast long shadows on the ground before you as you wander through this lovely forest. Birds sing in the branches above you.  Looking up through the canopy of branches you see the sky is clear.  Further to the north and west you notice that the forest continues.  Plains begin to the south and east. }{}{}{}{}{1.000}{}
+R {415}{0}{<178>}{Plains}{ }{Forest The trees cast long shadows on the ground before you as you wander through this lovely forest. Birds sing in the branches above you.  A small gust of wind causes the branches above you to sway slightly.  The sunlight filters down through the canopy and touches your cheek.  Further to the west you can see that the forest continues.  Plains begin to the south and east. }{}{{content}{{item}{{^A piece of oakwood$}{{name}{A piece of oakwood}}}{noun}{{branches}{{name}{branches}}{canopy}{{name}{canopy}}{forest}{{name}{forest}}{ground}{{name}{ground}}{shadows}{{name}{shadows}}{trees}{{name}{trees}}}{npc}{{^Snake$}{{name}{Snake}}}}}{}{}{1.000}{}
 E {412}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {417}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {436}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {438}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {414}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {421}{se}{se}{6}{0}{}{1.000}{}{0.00}
 
-R {416}{0}{<178>}{On a Road}{ }{Plains A lone bird glides effortlessly over your head and into the distance.  A slight wind blows across the plains and the grass shimmers slightly.  The land seems quite empty but you spot some movement not too far away.  It looks as if you might find some wild rabbits around.  Further to the south you notice that the plains continue.  The plains are overtaken by forest to the north. }{Mud}{{content}{{item}{{^A pulsing portal \x28glowing\x29$}{{name}{A pulsing portal (glowing)}}{^A small dandelion$}{{name}{A small dandelion}}}{noun}{{bird}{{name}{bird}}{grass}{{name}{grass}}{plains}{{name}{plains}}{road}{{name}{road}}{walls}{{name}{walls}}}}}{}{}{1.000}{}
+R {416}{0}{<178>}{Plains}{ }{Plains The land seems quite empty but you spot some movement not too far away.  It looks as if you might find some wild rabbits around.  The cloudless skies stretch in all directions without fault.  It seems quite peaceful here as you look upon your surroundings.  Further to the east you can see that the plains continue.  The plains are overtaken by forest to the north. }{Mud}{{content}{{item}{{^A piece of oakwood$}{{name}{A piece of oakwood}}{^A pulsing portal \x28glowing\x29$}{{name}{A pulsing portal (glowing)}}{^A small dandelion$}{{name}{A small dandelion}}}{noun}{{bird}{{name}{bird}}{grass}{{name}{grass}}{plains}{{name}{plains}}{road}{{name}{road}}{walls}{{name}{walls}}}}}{}{}{1.000}{}
 E {414}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {418}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {393}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {419}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {392}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 E {420}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {417}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {404}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
-R {417}{0}{<048>}{Plains}{ }{Plains You notice some light tracks but you have no idea where they lead.  The plains look pretty much the same all around you.  The place appears to get enough rain but there still isn't much life around.  The bright sun is warm on your back as you look out on the plains.  Further to the east you notice that the plains continue.  The plains are overtaken by forest to the west.  Almost hidden by the encroaching forest here, you see a hut. }{Mud}{}{}{}{1.000}{}
+R {417}{0}{<048>}{Forest}{ }{Plains The plains stretch out to the horizon.  The ground is soft beneath your feet but the grassy cover allows you to step comfortably.  You notice some light tracks but you have no idea where they lead.  The long grass sways in the breeze and parts easily beneath your step.  The plains are overtaken by forest to the west.  Almost hidden by the encroaching forest here, you see a hut. }{Mud}{{content}{{noun}{{grass}{{name}{grass}}{ground}{{name}{ground}}{plains}{{name}{plains}}{tracks}{{name}{tracks}}}}}{}{}{1.000}{}
 E {414}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {419}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {415}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {421}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {422}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {416}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {412}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {436}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
 R {418}{0}{<178>}{Plains}{ }{Plains You look back the way you came and see the crushed grass of your path.  The plains seem to stretch on as far as your eyes can see.  The grass sways in the breeze and wavy patterns appear all over the place.  The long grass sways in the breeze and parts easily beneath your step.   }{Mud}{{content}{{item}{{^A piece of oakwood$}{{name}{A piece of oakwood}}}{noun}{{grass}{{name}{grass}}{plains}{{name}{plains}}}{npc}{{^Plainsman$}{{name}{Plainsman}}}}}{}{}{1.000}{}
 E {416}{n}{n}{1}{0}{}{1.000}{}{0.00}
@@ -2344,13 +2401,15 @@ E {348}{se}{se}{6}{0}{}{1.000}{}{0.00}
 E {419}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 E {393}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
-R {419}{0}{<178>}{Plains}{ }{Plains The cloudless skies stretch in all directions without fault.  You notice some light tracks but you have no idea where they lead.  The plains stretch out to the horizon.  The ground is soft beneath your feet but the grassy cover allows you to step comfortably.  Further to the north, west and east you notice that the plains continue.   }{Mud}{{content}{{noun}{{ground}{{name}{ground}}{plains}{{name}{plains}}{tracks}{{name}{tracks}}}}}{}{}{1.000}{}
+R {419}{0}{<178>}{Plains}{ }{Plains A slight wind blows across the plains and the grass shimmers slightly.  You look back the way you came and see the crushed grass of your path.  The plains stretch out to the horizon.  The ground is soft beneath your feet but the grassy cover allows you to step comfortably.  Further to the west and north you note that the plains continue.   }{Mud}{{content}{{noun}{{grass}{{name}{grass}}{ground}{{name}{ground}}{plains}{{name}{plains}}{tracks}{{name}{tracks}}}}}{}{}{1.000}{}
 E {416}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {417}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {420}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {422}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {346}{se}{se}{6}{0}{}{1.000}{}{0.00}
 E {418}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {421}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {414}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
 R {420}{0}{<068>}{Plains}{}{Plains The plains seem to stretch on as far as your eyes can see.  The grass sways in the breeze and wavy patterns appear all over the place.  A lone bird glides effortlessly over your head and into the distance.  The long grass sways in the breeze and parts easily beneath your step.  Further to the west you note that the plains continue, while to the south you see a road.   }{Pinnacle/Fantasy/Maze}{{content}{{item}{{^A pile of rubble$}{{name}{A pile of rubble}}}{noun}{{bird}{{name}{bird}}{grass}{{name}{grass}}{plains}{{name}{plains}}}}{link}{}}{}{}{1.000}{}
 E {418}{w}{w}{8}{0}{}{1.000}{}{0.00}
@@ -2363,73 +2422,103 @@ E {349}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 E {416}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 E {422}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {421}{0}{<178>}{Plains}{ }{Plains You notice some light tracks but you have no idea where they lead.  The long grass sways in the breeze and parts easily beneath your step.  The plains look pretty much the same all around you.  The place appears to get enough rain but there still isn't much life around.  Further to the west, north and east you see that the plains continue.   }{}{}{}{}{1.000}{}
+R {421}{0}{<178>}{Plains}{ }{Plains The plains seem to stretch on as far as your eyes can see.  The grass sways in the breeze and wavy patterns appear all over the place.  A lone bird glides effortlessly over your head and into the distance.  The cloudless skies stretch in all directions without fault.  Further to the east you notice that the plains continue.   }{Mud}{{content}{{item}{{^A piece of oakwood$}{{name}{A piece of oakwood}}}{noun}{{bird}{{name}{bird}}{grass}{{name}{grass}}{plains}{{name}{plains}}}}}{}{}{1.000}{}
 E {417}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {422}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {423}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {436}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {345}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {419}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {415}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {435}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {422}{0}{<178>}{Plains}{ }{Plains A lone bird glides effortlessly over your head and into the distance.  The long grass sways in the breeze and parts easily beneath your step.  The plains stretch out to the horizon.  The ground is soft beneath your feet but the grassy cover allows you to step comfortably.  Further to the west and south you notice that the plains continue.   }{Mud}{{content}{{item}{{^A small dandelion$}{{name}{A small dandelion}}}{noun}{{bird}{{name}{bird}}{grass}{{name}{grass}}{ground}{{name}{ground}}{plains}{{name}{plains}}}}}{}{}{1.000}{}
+R {422}{0}{<178>}{Plains}{ }{Plains The land seems quite empty but you spot some movement not too far away.  It looks as if you might find some wild rabbits around.  The cloudless skies stretch in all directions without fault.  You notice some light tracks but you have no idea where they lead.   }{Mud}{{content}{{item}{{^A piece of oakwood$}{{name}{A piece of oakwood}}{^A small dandelion$}{{name}{A small dandelion}}}{noun}{{bird}{{name}{bird}}{grass}{{name}{grass}}{ground}{{name}{ground}}{plains}{{name}{plains}}{tracks}{{name}{tracks}}}}}{}{}{1.000}{}
 E {419}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {346}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {345}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {421}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {420}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 E {343}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {423}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {417}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
-R {423}{0}{<178>}{Plains}{ }{Plains A lone bird glides effortlessly over your head and into the distance.  The plains seem to stretch on as far as your eyes can see.  The grass sways in the breeze and wavy patterns appear all over the place.  The bright sun is warm on your back as you look out on the plains.  Further to the west and north you see that the plains continue, while to the east you see a road.   }{}{}{}{}{1.000}{}
+R {423}{0}{<178>}{Plains}{ }{Plains The plains seem to stretch on as far as your eyes can see.  The grass sways in the breeze and wavy patterns appear all over the place.  You notice some light tracks but you have no idea where they lead.  The bright sun is warm on your back as you look out on the plains.  Further to the south and west you see that the plains continue, while to the east you note a road.   }{Mud}{{content}{{item}{{^A piece of oakwood$}{{name}{A piece of oakwood}}}{noun}{{grass}{{name}{grass}}{plains}{{name}{plains}}{sun}{{name}{sun}}{tracks}{{name}{tracks}}}}}{}{}{1.000}{}
 E {345}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {424}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {435}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {421}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {342}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {422}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {436}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {434}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {424}{0}{<238>}{On a Road}{}{On a Road You are standing on a road that is frequently used by travelers.  Your back is warmed slightly by the shining sun.  The plains to either side of the road look to hold some interesting exploring.  Further to the west you see plains, while to the south you can see that the road continues.  The road here runs north and south with open plains on either side.  Far to the south you see a city. }{}{{road}{}}{}{}{1.000}{}
+R {424}{0}{<238>}{On a Road}{}{On a Road Your back is warmed slightly by the shining sun.  The plains to either side of the road look to hold some interesting exploring.  You are standing on a road that is frequently used by travelers.  Further to the north you note that the road continues, while to the east you can see plains.  The road here runs north and south with open plains on either side.  Far to the south you see a city. }{Mud}{{content}{{item}{{^A piece of oakwood$}{{name}{A piece of oakwood}}}{noun}{{plains}{{name}{plains}}{road}{{name}{road}}}{npc}{{^Human Traveller$}{{name}{Human Traveller}}}}{road}{}}{}{}{1.000}{}
 E {342}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {425}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {434}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {423}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {433}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {345}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {340}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {435}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
-R {425}{0}{<178>}{Plains}{ }{Plains The plains seem to stretch on as far as your eyes can see.  The grass sways in the breeze and wavy patterns appear all over the place.  The cloudless skies stretch in all directions without fault.  You look back the way you came and see the crushed grass of your path.  Further to the south you note that the plains continue, while to the west you notice a road.   }{}{}{}{}{1.000}{}
+R {425}{0}{<178>}{Plains}{ }{Plains The long grass sways in the breeze and parts easily beneath your step.  A lone bird glides effortlessly over your head and into the distance.  The plains stretch out to the horizon.  The ground is soft beneath your feet but the grassy cover allows you to step comfortably.   }{Mud}{{content}{{noun}{{bird}{{name}{bird}}{grass}{{name}{grass}}{ground}{{name}{ground}}{plains}{{name}{plains}}}}}{}{}{1.000}{}
 E {340}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {426}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {433}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {424}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {338}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {342}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {431}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {434}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
-R {426}{0}{<068>}{Plains}{ }{Plains The plains stretch out to the horizon.  The ground is soft beneath your feet but the grassy cover allows you to step comfortably.  You notice some light tracks but you have no idea where they lead.  The cloudless skies stretch in all directions without fault.  Further to the east you can see plains.  There is a low dome shaped hill here, with a path leading up. }{}{}{}{}{1.000}{}
+R {426}{0}{<068>}{Plains}{ }{Plains A lone bird glides effortlessly over your head and into the distance.  The plains look pretty much the same all around you.  The place appears to get enough rain but there still isn't much life around.  A slight wind blows across the plains and the grass shimmers slightly.  Further to the south you can see plains, while to the north you notice that the plains continue.  There is a low dome shaped hill here, with a path leading up. }{Mud}{{content}{{noun}{{bird}{{name}{bird}}{grass}{{name}{grass}}{hill}{{name}{hill}}{path}{{name}{path}}{plains}{{name}{plains}}}}}{}{}{1.000}{}
 E {338}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {337}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {431}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {425}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {1210}{path}{.mapLink {Pinnacle/Fantasy/Tor} {} {path};}{0}{1}{}{1.000}{}{0.00}
+E {335}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {428}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {340}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {433}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
-R {427}{0}{<178>}{Plains}{ }{Plains The long grass sways in the breeze and parts easily beneath your step.  A lone bird glides effortlessly over your head and into the distance.  The plains seem to stretch on as far as your eyes can see.  The grass sways in the breeze and wavy patterns appear all over the place.  There is a huge lake just to the east, turbulent and dark. }{}{}{}{}{1.000}{}
+R {427}{0}{<178>}{Plains}{ }{Plains You look back the way you came and see the crushed grass of your path.  The bright sun is warm on your back as you look out on the plains.  The land seems quite empty but you spot some movement not too far away.  It looks as if you might find some wild rabbits around.  Further to the west you see that the plains continue.  There is a huge lake just to the east, turbulent and dark. }{Mud}{{content}{{noun}{{grass}{{name}{grass}}{lake}{{name}{lake}}{plains}{{name}{plains}}{sun}{{name}{sun}}}}}{}{}{1.000}{}
 E {337}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 E {429}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {428}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {430}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
-R {428}{0}{<178>}{Plains}{ }{Plains You look back the way you came and see the crushed grass of your path.  The land seems quite empty but you spot some movement not too far away.  It looks as if you might find some wild rabbits around.  The bright sun is warm on your back as you look out on the plains.  Further to the north, west and east you see that the plains continue.   }{}{}{}{}{1.000}{}
+R {428}{0}{<178>}{Plains}{ }{Plains You notice some light tracks but you have no idea where they lead.  The land seems quite empty but you spot some movement not too far away.  It looks as if you might find some wild rabbits around.  A slight wind blows across the plains and the grass shimmers slightly.  Further to the west and north you see that the plains continue.   }{Mud}{{content}{{noun}{{grass}{{name}{grass}}{plains}{{name}{plains}}{tracks}{{name}{tracks}}}{npc}{{^A small brown hare$}{{name}{A small brown hare}}}}}{}{}{1.000}{}
 E {337}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {427}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {430}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {431}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {426}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {429}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {429}{0}{<178>}{Plains}{ }{Plains You look back the way you came and see the crushed grass of your path.  The plains stretch out to the horizon.  The ground is soft beneath your feet but the grassy cover allows you to step comfortably.  The bright sun is warm on your back as you look out on the plains.  Further to the north, west and east you notice that the plains continue.  A huge lake lies to the southeast, its waters turbulent and dark. }{}{}{}{}{1.000}{}
+R {429}{0}{<178>}{Plains}{ }{Plains A lone bird glides effortlessly over your head and into the distance.  The cloudless skies stretch in all directions without fault.  The plains seem to stretch on as far as your eyes can see.  The grass sways in the breeze and wavy patterns appear all over the place.  Further to the north you note that the plains continue.  A huge lake lies to the southeast, its waters turbulent and dark. }{Mud}{{content}{{noun}{{bird}{{name}{bird}}{grass}{{name}{grass}}{lake}{{name}{lake}}{plains}{{name}{plains}}{waters}{{name}{waters}}}}}{}{}{1.000}{}
 E {427}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {442}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {443}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {430}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {428}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {444}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {430}{0}{}{Plains}{}{Plains You look back the way you came and see the crushed grass of your path.  The bright sun is warm on your back as you look out on the plains.  The land seems quite empty but you spot some movement not too far away.  It looks as if you might find some wild rabbits around.  Further to the north and south you see that the plains continue.   }{}{special;}{}{}{1.000}{}
+R {430}{0}{}{Plains}{}{Plains The bright sun is warm on your back as you look out on the plains.  The plains look pretty much the same all around you.  The place appears to get enough rain but there still isn't much life around.  It seems quite peaceful here as you look upon your surroundings.   }{Mud}{{content}{{noun}{{plains}{{name}{plains}}{sun}{{name}{sun}}}}}{}{}{1.000}{}
 E {428}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {429}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {446}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {432}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {427}{se}{se}{6}{0}{}{1.000}{}{0.00}
 
-R {431}{0}{<178>}{Plains}{ }{Plains The plains look pretty much the same all around you.  The place appears to get enough rain but there still isn't much life around.  The bright sun is warm on your back as you look out on the plains.  You notice some light tracks but you have no idea where they lead.  Further to the north, east and south you note that the plains continue.   }{}{}{}{}{1.000}{}
+R {431}{0}{<178>}{Plains}{ }{Plains A lone bird glides effortlessly over your head and into the distance.  The plains look pretty much the same all around you.  The place appears to get enough rain but there still isn't much life around.  The bright sun is warm on your back as you look out on the plains.  Further to the south and west you see that the plains continue.   }{Mud}{{content}{{noun}{{bird}{{name}{bird}}{plains}{{name}{plains}}{sun}{{name}{sun}}}}}{}{}{1.000}{}
 E {428}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {426}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {432}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {433}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {337}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {425}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 
 R {432}{0}{<178>}{Plains}{ }{Plains The long grass sways in the breeze and parts easily beneath your step.  The plains look pretty much the same all around you.  The place appears to get enough rain but there still isn't much life around.  It seems quite peaceful here as you look upon your surroundings.  Further to the west and north you notice that the plains continue.   }{}{}{}{}{1.000}{}
 E {431}{s}{s}{4}{0}{}{1.000}{}{0.00}
@@ -2437,29 +2526,37 @@ E {430}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {447}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {441}{w}{w}{8}{0}{}{1.000}{}{0.00}
 
-R {433}{0}{<178>}{Plains}{ }{Plains A slight wind blows across the plains and the grass shimmers slightly.  You look back the way you came and see the crushed grass of your path.  The plains stretch out to the horizon.  The ground is soft beneath your feet but the grassy cover allows you to step comfortably.  Further to the south you see that the plains continue, while to the west you can see a road.   }{}{}{}{}{1.000}{}
+R {433}{0}{<178>}{Plains}{ }{Plains The land seems quite empty but you spot some movement not too far away.  It looks as if you might find some wild rabbits around.  You look back the way you came and see the crushed grass of your path.  The long grass sways in the breeze and parts easily beneath your step.  Further to the south and east you can see that the plains continue.   }{Mud}{{content}{{noun}{{grass}{{name}{grass}}{plains}{{name}{plains}}}}}{}{}{1.000}{}
 E {431}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {425}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {434}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {441}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {426}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {424}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 
-R {434}{0}{<238>}{On a Road}{}{On a Road Your back is warmed slightly by the shining sun.  The plains to either side of the road look to hold some interesting exploring.  You are standing on a road that is frequently used by travelers.  Further to the south you can see that the road continues, while to the east you note plains.  The road here runs north and south with open plains on either side. }{}{{road}{}}{}{}{1.000}{}
+R {434}{0}{<238>}{On a Road}{}{On a Road The sky is clear and a light breeze tickles your cheek.  The plains on either side look quite barren but they may hold something.  You are standing on a road that is frequently used by travelers.  Further to the east you can see plains.  The road here runs north and south with open plains on either side. }{Mud}{{content}{{noun}{{plains}{{name}{plains}}{road}{{name}{road}}}{npc}{{^Human Traveller$}{{name}{Human Traveller}}}}{road}{}}{}{}{1.000}{}
 E {424}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {435}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {440}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {433}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {423}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {425}{se}{se}{6}{0}{}{1.000}{}{0.00}
 
-R {435}{0}{<178>}{Plains}{ }{Plains The cloudless skies stretch in all directions without fault.  The plains seem to stretch on as far as your eyes can see.  The grass sways in the breeze and wavy patterns appear all over the place.  You look back the way you came and see the crushed grass of your path.   }{}{}{}{}{1.000}{}
+R {435}{0}{<178>}{On a Road}{ }{Plains The plains look pretty much the same all around you.  The place appears to get enough rain but there still isn't much life around.  The cloudless skies stretch in all directions without fault.  It seems quite peaceful here as you look upon your surroundings.  Further to the south you see that the plains continue, while to the east you see a road.   }{Mud}{{content}{{item}{{^A small dandelion$}{{name}{A small dandelion}}}{noun}{{plains}{{name}{plains}}}}}{}{}{1.000}{}
 E {423}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {436}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {439}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {434}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {421}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {424}{se}{se}{6}{0}{}{1.000}{}{0.00}
 
-R {436}{0}{<178>}{Plains}{ }{Plains The bright sun is warm on your back as you look out on the plains.  The land seems quite empty but you spot some movement not too far away.  It looks as if you might find some wild rabbits around.  You look back the way you came and see the crushed grass of your path.  Further to the south and east you note that the plains continue.  The plains are overtaken by forest to the west. }{}{}{}{}{1.000}{}
+R {436}{0}{<178>}{Plains}{ }{Plains You look back the way you came and see the crushed grass of your path.  The plains seem to stretch on as far as your eyes can see.  The grass sways in the breeze and wavy patterns appear all over the place.  A slight wind blows across the plains and the grass shimmers slightly.  Further to the south and east you see that the plains continue.  The plains are overtaken by forest to the west. }{Mud}{{content}{{item}{{^A small dandelion$}{{name}{A small dandelion}}}{noun}{{grass}{{name}{grass}}{plains}{{name}{plains}}}{npc}{{^A buzzard$}{{name}{A buzzard}}}}}{}{}{1.000}{}
 E {421}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {437}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {415}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {435}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {417}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {423}{se}{se}{6}{0}{}{1.000}{}{0.00}
 
 R {437}{0}{<048>}{Forest}{ }{Forest You notice what you assume are animal tracks crossing the forest bed.  Looking up through the canopy of branches you see the sky is clear.  The trees cast long shadows on the ground before you as you wander through this lovely forest. Birds sing in the branches above you.  Further to the west you see that the forest continues.  There is a small copse of trees here. The open expanse of the plains lies to the south and east. }{}{}{}{}{1.000}{}
 E {436}{s}{s}{4}{0}{}{1.000}{}{0.00}
@@ -2491,23 +2588,26 @@ E {432}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {440}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {450}{n}{n}{1}{0}{}{1.000}{}{0.00}
 
-R {442}{0}{<068>}{Plains}{ }{Plains The long grass sways in the breeze and parts easily beneath your step.  A lone bird glides effortlessly over your head and into the distance.  The plains stretch out to the horizon.  The ground is soft beneath your feet but the grassy cover allows you to step comfortably.  Further to the east and west you notice that the plains continue.   }{Mud}{{content}{{item}{{^An Orc Encampment$}{{name}{An Orc Encampment}}}{noun}{{bird}{{name}{bird}}{grass}{{name}{grass}}{ground}{{name}{ground}}{plains}{{name}{plains}}}}}{}{}{1.000}{}
+R {442}{0}{<068>}{Plains}{ }{Plains It seems quite peaceful here as you look upon your surroundings.  The cloudless skies stretch in all directions without fault.  The plains seem to stretch on as far as your eyes can see.  The grass sways in the breeze and wavy patterns appear all over the place.  Further to the west and south you see that the plains continue.   }{Mud}{{content}{{item}{{^An Orc Encampment$}{{name}{An Orc Encampment}}}{noun}{{bird}{{name}{bird}}{grass}{{name}{grass}}{ground}{{name}{ground}}{plains}{{name}{plains}}}}}{}{}{1.000}{}
 E {429}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {446}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {493}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {444}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {1300}{enter}{.mapLink {Pinnacle/Fantasy/Longshadow Camp} {} {enter};}{0}{1}{}{1.000}{}{0.00}
+E {443}{se}{se}{6}{0}{}{1.000}{}{0.00}
 
-R {443}{0}{<178>}{Plains}{ }{Plains A lone bird glides effortlessly over your head and into the distance.  The long grass sways in the breeze and parts easily beneath your step.  The plains look pretty much the same all around you.  The place appears to get enough rain but there still isn't much life around.  Further to the east you see plains, while to the north you can see that the plains continue.  There is a huge lake just to the south, turbulent and dark. }{}{}{}{}{1.000}{}
+R {443}{0}{<178>}{Plains}{ }{Plains The long grass sways in the breeze and parts easily beneath your step.  You look back the way you came and see the crushed grass of your path.  The plains seem to stretch on as far as your eyes can see.  The grass sways in the breeze and wavy patterns appear all over the place.  Further to the west and north you note that the plains continue.  There is a huge lake just to the south, turbulent and dark. }{Mud}{{content}{{noun}{{grass}{{name}{grass}}{lake}{{name}{lake}}{plains}{{name}{plains}}}{npc}{{^A small red fox$}{{name}{A small red fox}}}}}{}{}{1.000}{}
 E {429}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {444}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {445}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {442}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
-R {444}{0}{<178>}{Plains}{ }{Plains The long grass sways in the breeze and parts easily beneath your step.  The plains stretch out to the horizon.  The ground is soft beneath your feet but the grassy cover allows you to step comfortably.  It seems quite peaceful here as you look upon your surroundings.  Further to the west you see that the plains continue.   }{}{}{}{}{1.000}{}
+R {444}{0}{<178>}{Plains}{ }{Plains The cloudless skies stretch in all directions without fault.  The land seems quite empty but you spot some movement not too far away.  It looks as if you might find some wild rabbits around.  A lone bird glides effortlessly over your head and into the distance.   }{Mud}{{content}{{noun}{{bird}{{name}{bird}}}}}{}{}{1.000}{}
 E {443}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {442}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {494}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {495}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {429}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 
 R {445}{0}{<178>}{Plains}{ }{Plains There is a river to the southeast, winding its way towards Wayhaven.  Beyond the river lies a great forest.  The long grass sways in the breeze and parts easily beneath your step.  The plains look pretty much the same all around you.  The place appears to get enough rain but there still isn't much life around.  Further to the west you can see plains, while to the northeast you can see that the plains continue.  The river emerges from an enormous lake, which lies to the southwest.  Its dark waters rippling with turbulence. }{}{}{}{}{1.000}{}
 E {443}{w}{w}{8}{0}{}{1.000}{}{0.00}
@@ -3564,150 +3664,199 @@ E {328}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {334}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {640}{e}{e}{2}{0}{}{1.000}{}{0.00}
 
-R {640}{0}{<238>}{Road in the Forest}{}{Road in the Forest You travel through a strange and enchanted forest.  Birds and other animals can be heard all around you.  Strange shadows flutter around you, contradicting the bright sunlight barely filtering to the ground around you.  Further to the east you see a forest.  There is a road running northeast and southwest through the forest. }{}{{road}{}}{}{}{1.000}{}
+R {640}{0}{<238>}{Road in the Forest}{}{Road in the Forest The ancient trees stand like giant sentinels in the area.  They stand with a majestic, yet strange feel of honor.  The ground is moist and very soft to the touch.  You are in a sunny, but shadowed forest.  Further to the east you can see a forest, while to the northeast you see that the forest continues.  There is a road running northeast and southwest through the forest. }{Mud}{{content}{{item}{{^A stalk of shimmerweed$}{{name}{A stalk of shimmerweed}}}{noun}{{forest}{{name}{forest}}{ground}{{name}{ground}}{road}{{name}{road}}{trees}{{name}{trees}}}{npc}{{^A red-tailed hawk$}{{name}{A red-tailed hawk}}}}{road}{}}{}{}{1.000}{}
 E {639}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {642}{n}{n}{1}{0}{}{1.000}{}{0.00}
-E {644}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
-E {328}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {644}{ne}{ne}{3}{0}{}{1.000}{<238>}{0.00}
+E {328}{sw}{sw}{12}{0}{}{1.000}{<238>}{0.00}
 E {693}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {696}{e}{e}{2}{0}{}{1.000}{}{0.00}
 
-R {641}{0}{<068>}{Forest}{ }{Forest Far in the distance, you can hear animals moving about.  You are in a sunny, but shadowed forest.  Strange shadows flutter around you, contradicting the bright sunlight barely filtering to the ground around you.  Further to the west you note a forest, while to the east you notice that the forest continues.  There is a huge lake further to the north, turbulent and dark.  In the forest here stands an enormous grove of trees.  The grove is much too thick to penetrate, but for a path at its southern edge. }{}{}{}{}{1.000}{}
+R {641}{0}{<068>}{Forest}{ }{Forest You are in a sunny, but shadowed forest.  Far in the distance, you can hear animals moving about.  Many leaves crunch beneath your feet, creating a strange and eerie echoing through the forest around you.  Further to the east and south you note that the forest continues.  There is a huge lake further to the north, turbulent and dark.  In the forest here stands an enormous grove of trees.  The grove is much too thick to penetrate, but for a path at its southern edge. }{Mud}{{content}{{noun}{{animals}{{name}{animals}}{forest}{{name}{forest}}{grove}{{name}{grove}}{lake}{{name}{lake}}{leaves}{{name}{leaves}}{path}{{name}{path}}}{npc}{{^A tufted titmouse$}{{name}{A tufted titmouse}}}}}{}{}{1.000}{}
 E {334}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {643}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {332}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {1192}{path}{.mapLink {Pinnacle/Fantasy/New Arovian Graveyard} {} {path};}{0}{1}{}{1.000}{}{0.00}
+E {642}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {331}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 
-R {642}{0}{<178>}{Forest}{ }{Forest Strange shadows flutter around you, contradicting the bright sunlight barely filtering to the ground around you.  Birds and other animals can be heard all around you.  An eerie, yet sunny woods, deep in the forest. Further to the west you can see that the forest continues, while to the east you note a forest.   }{}{}{}{}{1.000}{}
+R {642}{0}{<178>}{Forest}{ }{Forest You are moving through a sweet-smelling forest.  The ground is moist and very soft to the touch.  Many leaves crunch beneath your feet, creating a strange and eerie echoing through the forest around you.  Further to the north you notice that the forest continues, while to the east you can see a forest.   }{Mud}{{content}{{item}{{^A piece of bark$}{{name}{A piece of bark}}}{noun}{{forest}{{name}{forest}}{ground}{{name}{ground}}{leaves}{{name}{leaves}}}{npc}{{^A Goblin Scout$}{{name}{A Goblin Scout}}{^A large timber wolf$}{{name}{A large timber wolf}}{^A small black wolf$}{{name}{A small black wolf}}}}}{}{}{1.000}{}
 E {334}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {643}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {640}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {644}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {646}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {696}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {641}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
-R {643}{0}{<178>}{Forest}{ }{Forest Far in the distance, you can hear animals moving about.  You are moving through a sweet-smelling forest.  Many leaves crunch beneath your feet, creating a strange and eerie echoing through the forest around you.  Further to the west, north and south you see that the forest continues.  An enormous lake lies to the northwest.  Its dark waters rippling with turbulence. }{}{}{}{}{1.000}{}
+R {643}{0}{<178>}{Forest}{ }{Forest The ground is moist and very soft to the touch.  Strange shadows flutter around you, contradicting the bright sunlight barely filtering to the ground around you.  You are in a sunny, but shadowed forest.  Further to the north you see that the forest continues, while to the east you notice a forest.  An enormous lake lies to the northwest.  Its dark waters rippling with turbulence. }{Mud}{{content}{{noun}{{forest}{{name}{forest}}{ground}{{name}{ground}}{lake}{{name}{lake}}{shadows}{{name}{shadows}}{sunlight}{{name}{sunlight}}{waters}{{name}{waters}}}{npc}{{^A tufted titmouse$}{{name}{A tufted titmouse}}}}}{}{}{1.000}{}
 E {642}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {645}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {646}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {641}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {648}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {644}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {334}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 
-R {644}{0}{<238>}{Road in the Forest}{}{Road in the Forest The ground is moist and very soft to the touch.  You are moving through a sweet-smelling forest.  The ancient trees stand like giant sentinels in the area.  They stand with a majestic, yet strange feel of honor.  Further to the south you can see a forest, while to the north you note that the forest continues.  There is a road running north and southwest through the forest. }{Mud}{{content}{{noun}{{forest}{{name}{forest}}{ground}{{name}{ground}}{road}{{name}{road}}{trees}{{name}{trees}}}{npc}{{^A large timber wolf$}{{name}{A large timber wolf}}{^A red-crested woodpecker$}{{name}{A red-crested woodpecker}}}}{road}{}}{}{}{1.000}{}
+R {644}{0}{<238>}{Road in the Forest}{}{Road in the Forest An eerie, yet sunny woods, deep in the forest.  Strange shadows flutter around you, contradicting the bright sunlight barely filtering to the ground around you.  The ground is moist and very soft to the touch.  Further to the east you can see a forest.  There is a road running north and southwest through the forest. }{Mud}{{content}{{item}{{^A piece of oakwood$}{{name}{A piece of oakwood}}}{noun}{{forest}{{name}{forest}}{ground}{{name}{ground}}{road}{{name}{road}}{shadows}{{name}{shadows}}{sunlight}{{name}{sunlight}}{trees}{{name}{trees}}}{npc}{{^A large timber wolf$}{{name}{A large timber wolf}}{^A red-crested woodpecker$}{{name}{A red-crested woodpecker}}}}{road}{}}{}{}{1.000}{}
 E {642}{w}{w}{8}{0}{}{1.000}{}{0.00}
-E {646}{n}{n}{1}{0}{}{1.000}{}{0.00}
-E {640}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {646}{n}{n}{1}{0}{}{1.000}{<238>}{0.00}
+E {640}{sw}{sw}{12}{0}{}{1.000}{<238>}{0.00}
 E {696}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {710}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {709}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {643}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
-R {645}{0}{<068>}{Forest}{ }{Forest Far in the distance, you can hear animals moving about.  You travel through a strange and enchanted forest.  Strange shadows flutter around you, contradicting the bright sunlight barely filtering to the ground around you.  Further to the northeast you can see a forest.  There is a huge lake just to the west, turbulent and dark. }{}{}{}{}{1.000}{}
+R {645}{0}{<068>}{Forest}{ }{Forest You are in a sunny, but shadowed forest.  The ancient trees stand like giant sentinels in the area.  They stand with a majestic, yet strange feel of honor.  Far in the distance, you can hear animals moving about.  Further to the northeast you notice a forest.  There is a huge lake just to the west, turbulent and dark. }{Mud}{{content}{{item}{{^A piece of oakwood$}{{name}{A piece of oakwood}}}{noun}{{animals}{{name}{animals}}{lake}{{name}{lake}}{trees}{{name}{trees}}}}}{}{}{1.000}{}
 E {643}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {647}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 E {648}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {1232}{swim}{.mapLink {Pinnacle/Fantasy/Unicorns} {} {swim};}{0}{1}{}{1.000}{}{0.00}
+E {646}{se}{se}{6}{0}{}{1.000}{}{0.00}
 
-R {646}{0}{<238>}{Road in the Forest}{}{Road in the Forest You are moving through a sweet-smelling forest.  Strange shadows flutter around you, contradicting the bright sunlight barely filtering to the ground around you.  Birds and other animals can be heard all around you. Further to the south you can see that the forest continues, while to the east you notice a forested mountain region.  There is a road running northeast and south through the forest. }{}{{road}{}}{}{}{1.000}{}
+R {646}{0}{<238>}{Road in the Forest}{}{Road in the Forest Many leaves crunch beneath your feet, creating a strange and eerie echoing through the forest around you.  The ground is moist and very soft to the touch.  You are moving through a sweet-smelling forest.  Further to the east you see a forested mountain region, while to the south you note that the forest continues.  There is a road running northeast and south through the forest. }{Mud}{{content}{{item}{{^A piece of oakwood$}{{name}{A piece of oakwood}}}{noun}{{forest}{{name}{forest}}{ground}{{name}{ground}}{leaves}{{name}{leaves}}{road}{{name}{road}}}{npc}{{^A black and white skunk$}{{name}{A black and white skunk}}}}{road}{}}{}{}{1.000}{}
 E {643}{w}{w}{8}{0}{}{1.000}{}{0.00}
-E {688}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {688}{ne}{ne}{3}{0}{}{1.000}{<238>}{0.00}
 E {648}{n}{n}{1}{0}{}{1.000}{}{0.00}
-E {644}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {644}{s}{s}{4}{0}{}{1.000}{<238>}{0.00}
 E {718}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {645}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {642}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 
-R {647}{0}{<068>}{Forest}{ }{Forest An eerie, yet sunny woods, deep in the forest.  Strange shadows flutter around you, contradicting the bright sunlight barely filtering to the ground around you.  A river cuts its way through the forest here, separating you from the plains.  Further to the southwest you note a forest.  A small but pleasant looking cottage lies to the north here. }{}{}{}{}{1.000}{}
+R {647}{0}{<068>}{Forest}{ }{Forest You travel through a strange and enchanted forest.  Strange shadows flutter around you, contradicting the bright sunlight barely filtering to the ground around you.  A river thunders its way northeast, towards the ocean.  Beyond it lie grassy plains.  Further to the east you note a forest.  A small but pleasant looking cottage lies to the north here. }{Mud}{{content}{{noun}{{cottage}{{name}{cottage}}{ground}{{name}{ground}}{river}{{name}{river}}{shadows}{{name}{shadows}}{sunlight}{{name}{sunlight}}}}}{}{}{1.000}{}
 E {645}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 E {649}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 E {648}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {650}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {1188}{enter}{.mapLink {Pinnacle/Fantasy/Cottage} {} {enter};}{0}{1}{}{1.000}{}{0.00}
+E {688}{se}{se}{6}{0}{}{1.000}{}{0.00}
 
-R {648}{0}{<178>}{Forest}{ }{Forest You are in a sunny, but shadowed forest.  Many leaves crunch beneath your feet, creating a strange and eerie echoing through the forest around you.  Far in the distance, you can hear animals moving about.  Further to the north you notice a forest, while to the west you can see that the forest continues.   }{}{}{}{}{1.000}{}
+R {648}{0}{<178>}{Forest}{ }{Forest You are in a sunny, but shadowed forest.  Birds and other animals can be heard all around you.  Many leaves crunch beneath your feet, creating a strange and eerie echoing through the forest around you.  Further to the west you see that the forest continues, while to the south you see a forest.   }{Mud}{{content}{{item}{{^A piece of oakwood$}{{name}{A piece of oakwood}}}{noun}{{animals}{{name}{animals}}{forest}{{name}{forest}}{leaves}{{name}{leaves}}}}}{}{}{1.000}{}
 E {645}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {647}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {688}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {646}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {650}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {643}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 
-R {649}{0}{<178>}{Forest}{ }{Forest A river cuts its way through the forest here, separating you from the plains.  An eerie, yet sunny woods, deep in the forest.  Many leaves crunch beneath your feet, creating a strange and eerie echoing through the forest around you.   }{}{}{}{}{1.000}{}
+R {649}{0}{<178>}{Road in the Forest}{ }{Forest Strange shadows flutter around you, contradicting the bright sunlight barely filtering to the ground around you.  A river cuts its way through the forest here, separating you from the plains.  You are moving through a sweet-smelling forest.  Further to the southwest you see that the forest continues, while to the south you note a forest.   }{Mud}{{content}{{item}{{^A piece of oakwood$}{{name}{A piece of oakwood}}}{noun}{{forest}{{name}{forest}}{ground}{{name}{ground}}{river}{{name}{river}}{shadows}{{name}{shadows}}{sunlight}{{name}{sunlight}}}{npc}{{^A large timber wolf$}{{name}{A large timber wolf}}}}}{}{}{1.000}{}
 E {647}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 E {651}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 E {650}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {652}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {669}{se}{se}{6}{0}{}{1.000}{}{0.00}
 
-R {650}{0}{<178>}{Forest}{ }{Forest The ancient trees stand like giant sentinels in the area.  They stand with a majestic, yet strange feel of honor.  You travel through a strange and enchanted forest.  The ground is moist and very soft to the touch.  Further to the west you can see a forest.   }{}{}{}{}{1.000}{}
+R {650}{0}{<178>}{Forest}{ }{Forest Birds and other animals can be heard all around you.  The ancient trees stand like giant sentinels in the area.  They stand with a majestic, yet strange feel of honor.  You are in a sunny, but shadowed forest.  Further to the east you can see a forest.   }{Mud}{{content}{{item}{{^A stalk of shimmerweed$}{{name}{A stalk of shimmerweed}}}{noun}{{animals}{{name}{animals}}{trees}{{name}{trees}}}{npc}{{^Snake$}{{name}{Snake}}}}}{}{}{1.000}{}
 E {647}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {649}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {669}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {688}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {652}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {648}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 
-R {651}{0}{<068>}{Forest}{ }{Forest There is a river to the northwest, winding its way towards the sea.  Beyond the river lie broad plains.  An eerie, yet sunny woods, deep in the forest.  Many leaves crunch beneath your feet, creating a strange and eerie echoing through the forest around you.  Further to the east you can see a forest.  The riverbank is steep at this point.  Along its slope, a small cave entrance is barely detectable. }{}{}{}{}{1.000}{}
+R {651}{0}{<068>}{Forest}{ }{Forest A river thunders its way northeast, towards the ocean.  Beyond it lie grassy plains.  You travel through a strange and enchanted forest.  Strange shadows flutter around you, contradicting the bright sunlight barely filtering to the ground around you.  Further to the south you note a forest, while to the southwest you see that the forest continues. The riverbank is steep at this point.  Along its slope, a small cave entrance is barely detectable. }{Mud}{{content}{{noun}{{cave}{{name}{cave}}{entrance}{{name}{entrance}}{forest}{{name}{forest}}{ground}{{name}{ground}}{river}{{name}{river}}{riverbank}{{name}{riverbank}}{shadows}{{name}{shadows}}{sunlight}{{name}{sunlight}}}}}{}{}{1.000}{}
 E {649}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 E {652}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {653}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {1264}{enter}{.mapLink {Pinnacle/Fantasy/Garou Cave} {} {enter};}{0}{1}{}{1.000}{}{0.00}
+E {655}{se}{se}{6}{0}{}{1.000}{}{0.00}
 
-R {652}{0}{<178>}{Forest}{ }{Forest You travel through a strange and enchanted forest.  The ancient trees stand like giant sentinels in the area.  They stand with a majestic, yet strange feel of honor.  Far in the distance, you can hear animals moving about.  Further to the north you see a forest, while to the east you note that the forest continues.   }{}{}{}{}{1.000}{}
+R {652}{0}{<178>}{Forest}{ }{Forest You are moving through a sweet-smelling forest.  Birds and other animals can be heard all around you.  Many leaves crunch beneath your feet, creating a strange and eerie echoing through the forest around you.  Further to the east you notice that the forest continues, while to the west you see a forest.   }{Mud}{{content}{{noun}{{animals}{{name}{animals}}{forest}{{name}{forest}}{leaves}{{name}{leaves}}}}}{}{}{1.000}{}
 E {649}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {651}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {655}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {669}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {650}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {668}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {653}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {653}{0}{<068>}{Forest}{ }{Forest You are in a sunny, but shadowed forest.  Strange shadows flutter around you, contradicting the bright sunlight barely filtering to the ground around you.  The ground is moist and very soft to the touch.  Further to the east and south you can see that the forest continues, while to the west you notice a forest.   }{Mud}{}{}{}{1.000}{}
+R {653}{0}{<068>}{Forest}{ }{Forest You are in a sunny, but shadowed forest.  Far in the distance, you can hear animals moving about.  Strange shadows flutter around you, contradicting the bright sunlight barely filtering to the ground around you.  Further to the west you see a forest, while to the south and east you notice that the forest continues.   }{Mud}{{content}{{item}{{^A pulsing portal \x28glowing\x29$}{{name}{A pulsing portal (glowing)}}}{noun}{{animals}{{name}{animals}}{forest}{{name}{forest}}{ground}{{name}{ground}}{shadows}{{name}{shadows}}{sunlight}{{name}{sunlight}}}}}{}{}{1.000}{}
 E {651}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {655}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {656}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {654}{n}{.mapLink {Pinnacle/Fantasy/Shaolin Temple} {} {n};}{1}{1}{}{1.000}{}{0.00}
+E {652}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {657}{se}{se}{6}{0}{}{1.000}{}{0.00}
 
 R {654}{0}{<000>}{LINK: Pinnacle/Fantasy/Shaolin Temple}{<138>*}{}{Pinnacle/Fantasy/Shaolin Temple}{{link}{}}{}{}{1.000}{}
 E {653}{s}{s}{4}{0}{}{1.000}{}{0.00}
 
-R {655}{0}{<178>}{Forest}{ }{Forest Far in the distance, you can hear animals moving about.  You are in a sunny, but shadowed forest.  Strange shadows flutter around you, contradicting the bright sunlight barely filtering to the ground around you.  Further to the north and east you see that the forest continues.   }{}{}{}{}{1.000}{}
+R {655}{0}{<178>}{Forest}{ }{Forest You are moving through a sweet-smelling forest.  Many leaves crunch beneath your feet, creating a strange and eerie echoing through the forest around you.  The ground is moist and very soft to the touch.  Further to the west you can see that the forest continues.   }{Mud}{{content}{{noun}{{forest}{{name}{forest}}{ground}{{name}{ground}}{leaves}{{name}{leaves}}}}}{}{}{1.000}{}
 E {653}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {668}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {652}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {657}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {670}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {669}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {651}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {656}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {656}{0}{<178>}{Forest}{ }{Forest You are moving through a sweet-smelling forest.  Many leaves crunch beneath your feet, creating a strange and eerie echoing through the forest around you.  Far in the distance, you can hear animals moving about.  Further to the east you notice that the forest continues.   }{}{}{}{}{1.000}{}
+R {656}{0}{<178>}{Forest}{ }{Forest Many leaves crunch beneath your feet, creating a strange and eerie echoing through the forest around you.  Far in the distance, you can hear animals moving about.  An eerie, yet sunny woods, deep in the forest.  Further to the west you see that the forest continues.   }{Mud}{{content}{{noun}{{animals}{{name}{animals}}{forest}{{name}{forest}}{leaves}{{name}{leaves}}}}}{}{}{1.000}{}
 E {653}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {657}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {658}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {660}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {655}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 
-R {657}{0}{<178>}{Forest}{ }{Forest The ground is moist and very soft to the touch.  The ancient trees stand like giant sentinels in the area.  They stand with a majestic, yet strange feel of honor.  You are in a sunny, but shadowed forest.  Further to the north and west you see that the forest continues.  There is a tree here that seems larger than the rest.  It looks perfect for climbing. }{}{}{}{}{1.000}{}
+R {657}{0}{<068>}{Forest}{ }{Forest Many leaves crunch beneath your feet, creating a strange and eerie echoing through the forest around you.  An eerie, yet sunny woods, deep in the forest.  Birds and other animals can be heard all around you.  Further to the north you see that the forest continues.  There is a tree here that seems larger than the rest.  It looks perfect for climbing. }{Mud}{{content}{{item}{{^A stalk of shimmerweed$}{{name}{A stalk of shimmerweed}}}{noun}{{animals}{{name}{animals}}{forest}{{name}{forest}}{leaves}{{name}{leaves}}{tree}{{name}{tree}}}{npc}{{^Mass of Troll Flesh$}{{name}{Mass of Troll Flesh}}{^Troll$}{{name}{Troll}}}}}{}{}{1.000}{}
 E {656}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {655}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {670}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {660}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {1301}{climb tree}{.mapLink {Pinnacle/Fantasy/Lleera's Tree} {} {climb tree};}{0}{1}{}{1.000}{}{0.00}
+E {668}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {671}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {653}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {658}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {658}{0}{<068>}{Forest}{ }{Forest An eerie, yet sunny woods, deep in the forest.  Many leaves crunch beneath your feet, creating a strange and eerie echoing through the forest around you.  Birds and other animals can be heard all around you. Further to the east you can see that the forest continues.   }{}{}{}{}{1.000}{}
+R {658}{0}{<068>}{Forest}{ }{Forest You travel through a strange and enchanted forest.  The ground is moist and very soft to the touch.  Many leaves crunch beneath your feet, creating a strange and eerie echoing through the forest around you.  Further to the south you notice that the forest continues.   }{Mud}{{content}{{noun}{{forest}{{name}{forest}}{ground}{{name}{ground}}{leaves}{{name}{leaves}}}{npc}{{^A tufted titmouse$}{{name}{A tufted titmouse}}{^Squirrel$}{{name}{Squirrel}}}}}{}{}{1.000}{}
 E {656}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {660}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {661}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {659}{n}{.mapLink {Pinnacle/Fantasy/The Overlands} {} {n};}{1}{1}{}{1.000}{}{0.00}
+E {657}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {663}{se}{se}{6}{0}{}{1.000}{}{0.00}
 
 R {659}{0}{<000>}{LINK: Pinnacle/Fantasy/The Overlands}{<138>*}{}{Pinnacle/Fantasy/The Overlands}{{link}{}}{}{}{1.000}{}
 E {658}{s}{s}{4}{0}{}{1.000}{}{0.00}
 
-R {660}{0}{<178>}{Forest}{ }{Forest Many leaves crunch beneath your feet, creating a strange and eerie echoing through the forest around you.  You travel through a strange and enchanted forest.  Far in the distance, you can hear animals moving about.   }{}{}{}{}{1.000}{}
+R {660}{0}{<178>}{Forest}{ }{Forest Birds and other animals can be heard all around you.  Strange shadows flutter around you, contradicting the bright sunlight barely filtering to the ground around you.  You travel through a strange and enchanted forest.  Further to the east you notice that the forest continues.   }{Mud}{{content}{{noun}{{animals}{{name}{animals}}{forest}{{name}{forest}}{ground}{{name}{ground}}{shadows}{{name}{shadows}}{sunlight}{{name}{sunlight}}}}}{}{}{1.000}{}
 E {658}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {657}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {671}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {663}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {672}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {670}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {661}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {656}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
-R {661}{0}{<068>}{Forest}{ }{Forest Many leaves crunch beneath your feet, creating a strange and eerie echoing through the forest around you.  The ground is moist and very soft to the touch.  You travel through a strange and enchanted forest.  Further to the east you see that the forest continues.   }{}{}{}{}{1.000}{}
+R {661}{0}{<068>}{Forest}{ }{Forest Strange shadows flutter around you, contradicting the bright sunlight barely filtering to the ground around you.  Far in the distance, you can hear animals moving about.  An eerie, yet sunny woods, deep in the forest.  Further to the south and east you note that the forest continues.   }{Mud}{{content}{{item}{{^A piece of oakwood$}{{name}{A piece of oakwood}}}{noun}{{animals}{{name}{animals}}{forest}{{name}{forest}}{ground}{{name}{ground}}{shadows}{{name}{shadows}}{sunlight}{{name}{sunlight}}}}}{}{}{1.000}{}
 E {658}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {663}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {664}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {662}{n}{.mapLink {Pinnacle/Fantasy/Enchanted Spring} {} {n};}{1}{1}{}{1.000}{}{0.00}
+E {666}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {660}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 
 R {662}{0}{<000>}{LINK: Pinnacle/Fantasy/Enchanted Spring}{<138>*}{}{Pinnacle/Fantasy/Enchanted Spring}{{link}{}}{}{}{1.000}{}
 E {661}{s}{s}{4}{0}{}{1.000}{}{0.00}
 
-R {663}{0}{<178>}{Forest}{ }{Forest Birds and other animals can be heard all around you.  An eerie, yet sunny woods, deep in the forest.  The ancient trees stand like giant sentinels in the area.  They stand with a majestic, yet strange feel of honor.  Further to the east and north you note that the forest continues.   }{}{}{}{}{1.000}{}
+R {663}{0}{<178>}{Forest}{ }{Forest The ancient trees stand like giant sentinels in the area.  They stand with a majestic, yet strange feel of honor.  An eerie, yet sunny woods, deep in the forest.  The ground is moist and very soft to the touch.  Further to the south you see a forest, while to the north you see that the forest continues.   }{Mud}{{content}{{noun}{{forest}{{name}{forest}}{ground}{{name}{ground}}{trees}{{name}{trees}}}}}{}{}{1.000}{}
 E {661}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {660}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {672}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {666}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {671}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {673}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {658}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {664}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {664}{0}{<178>}{Forest}{ }{Forest You are moving through a sweet-smelling forest.  Strange shadows flutter around you, contradicting the bright sunlight barely filtering to the ground around you.  Far in the distance, you can hear animals moving about.  Further to the west, east and south you see that the forest continues.   }{}{}{}{}{1.000}{}
+R {664}{0}{<178>}{Forest}{ }{Forest You travel through a strange and enchanted forest.  Strange shadows flutter around you, contradicting the bright sunlight barely filtering to the ground around you.  Birds and other animals can be heard all around you.  Further to the south and west you note that the forest continues.   }{Mud}{{content}{{item}{{^A sprig of mistletoe$}{{name}{A sprig of mistletoe}}}{noun}{{animals}{{name}{animals}}{forest}{{name}{forest}}{ground}{{name}{ground}}{shadows}{{name}{shadows}}{sunlight}{{name}{sunlight}}}}}{}{}{1.000}{}
 E {661}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {666}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {667}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {663}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {674}{se}{se}{6}{0}{}{1.000}{}{0.00}
 
 R {665}{0}{<158>}{Forest}{<138>?}{Forest Strange shadows flutter around you, contradicting the bright sunlight barely filtering to the ground around you.  The ground is moist and very soft to the touch.  You travel through a strange and enchanted forest.   }{}{{special}{}}{}{}{1.000}{}
 E {1062}{w}{w}{8}{0}{}{1.000}{}{0.00}
@@ -3715,94 +3864,125 @@ E {1065}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {685}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {1077}{e}{e}{2}{0}{}{1.000}{}{0.00}
 
-R {666}{0}{<178>}{Forest}{ }{Forest Birds and other animals can be heard all around you.  You are moving through a sweet-smelling forest.  Strange shadows flutter around you, contradicting the bright sunlight barely filtering to the ground around you.  Further to the north and east you notice that the forest continues.   }{}{}{}{}{1.000}{}
+R {666}{0}{<178>}{Forest}{ }{Forest Far in the distance, you can hear animals moving about.  You travel through a strange and enchanted forest.  The ancient trees stand like giant sentinels in the area.  They stand with a majestic, yet strange feel of honor.  Further to the west and north you see that the forest continues, while to the south you can see a forest.   }{Mud}{{content}{{noun}{{animals}{{name}{animals}}{forest}{{name}{forest}}{trees}{{name}{trees}}}}}{}{}{1.000}{}
 E {664}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {663}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {673}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {674}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {675}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {672}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {667}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {661}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
-R {667}{0}{<068>}{Forest}{ }{Forest Birds and other animals can be heard all around you.  You travel through a strange and enchanted forest.  Many leaves crunch beneath your feet, creating a strange and eerie echoing through the forest around you.   }{Mud}{}{}{}{1.000}{}
+R {667}{0}{<068>}{Forest}{ }{Forest Far in the distance, you can hear animals moving about.  The ancient trees stand like giant sentinels in the area.  They stand with a majestic, yet strange feel of honor.  An eerie, yet sunny woods, deep in the forest.  Further to the south you can see that the forest continues.  }{Mud}{{content}{{noun}{{animals}{{name}{animals}}{forest}{{name}{forest}}{trees}{{name}{trees}}}}}{}{}{1.000}{}
 E {664}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {674}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {677}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {1063}{n}{.mapLink {Pinnacle/Fantasy/Katin} {} {n};}{1}{1}{}{1.000}{}{0.00}
+E {676}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {666}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 
-R {668}{0}{<238>}{Road in the Forest}{}{Road in the Forest Far in the distance, you can hear animals moving about.  You travel through a strange and enchanted forest.  Many leaves crunch beneath your feet, creating a strange and eerie echoing through the forest around you.  Further to the east you can see that the forest continues, while to the southwest you see a forested mountain region.  There is a road running east and west here through the forest. }{}{{road}{}}{}{}{1.000}{}
+R {668}{0}{<238>}{Road in the Forest}{}{Road in the Forest The ground is moist and very soft to the touch.  You are moving through a sweet-smelling forest.  Many leaves crunch beneath your feet, creating a strange and eerie echoing through the forest around you.  Further to the east you notice that the forest continues.  There is a road running east and west here through the forest. }{Mud}{{content}{{item}{{^A sprig of mistletoe$}{{name}{A sprig of mistletoe}}}{noun}{{forest}{{name}{forest}}{ground}{{name}{ground}}{leaves}{{name}{leaves}}{road}{{name}{road}}}}{road}{}}{}{}{1.000}{}
 E {655}{n}{n}{1}{0}{}{1.000}{}{0.00}
-E {670}{e}{e}{2}{0}{}{1.000}{}{0.00}
-E {669}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {670}{e}{e}{2}{0}{}{1.000}{<238>}{0.00}
+E {669}{w}{w}{8}{0}{}{1.000}{<238>}{0.00}
 E {719}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {657}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {652}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
-R {669}{0}{<238>}{Road in the Forest}{}{Road in the Forest The ancient trees stand like giant sentinels in the area.  They stand with a majestic, yet strange feel of honor.  An eerie, yet sunny woods, deep in the forest.  Far in the distance, you can hear animals moving about.  Further to the east you note that the forest continues, while to the north you see a forest.  There is a road running east and southwest here through the forest. }{}{{road}{}}{}{}{1.000}{}
+R {669}{0}{<238>}{Forest}{}{Road in the Forest You travel through a strange and enchanted forest.  The ancient trees stand like giant sentinels in the area.  They stand with a majestic, yet strange feel of honor.  Birds and other animals can be heard all around you.  Further to the north you notice a forest.  There is a road running east and southwest here through the forest. }{Mud}{{content}{{item}{{^A stalk of shimmerweed$}{{name}{A stalk of shimmerweed}}}{noun}{{animals}{{name}{animals}}{road}{{name}{road}}{trees}{{name}{trees}}}}{road}{}}{}{}{1.000}{}
 E {652}{n}{n}{1}{0}{}{1.000}{}{0.00}
-E {668}{e}{e}{2}{0}{}{1.000}{}{0.00}
-E {688}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {668}{e}{e}{2}{0}{}{1.000}{<238>}{0.00}
+E {688}{sw}{sw}{12}{0}{}{1.000}{<238>}{0.00}
 E {650}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {655}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {649}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
-R {670}{0}{<238>}{Road in the Forest}{}{Road in the Forest An eerie, yet sunny woods, deep in the forest.  Birds and other animals can be heard all around you.  The ancient trees stand like giant sentinels in the area.  They stand with a majestic, yet strange feel of honor.  Further to the north you notice a forest.  There is a road running east and west here through the forest. }{}{{road}{}}{}{}{1.000}{}
+R {670}{0}{<238>}{Forest}{}{Road in the Forest You are in a sunny, but shadowed forest.  The ancient trees stand like giant sentinels in the area.  They stand with a majestic, yet strange feel of honor.  The ground is moist and very soft to the touch.  There is a road running east and west here through the forest. }{Mud}{{content}{{noun}{{ground}{{name}{ground}}{road}{{name}{road}}{trees}{{name}{trees}}}{npc}{{^A black and white skunk$}{{name}{A black and white skunk}}}}{road}{}}{}{}{1.000}{}
 E {657}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {671}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {668}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {721}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {655}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {660}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {671}{0}{<158>}{Road in the Forest}{<138>@}{Road in the Forest The ground is moist and very soft to the touch.  Many leaves crunch beneath your feet, creating a strange and eerie echoing through the forest around you.  You are moving through a sweet-smelling forest.  Further to the north you note a forest, while to the east and west you note that the forest continues.  A road leads through the forest east and west and a small path leads to the south. }{Mud}{{Eastern Forest eforest Portal}{}{portal}{}}{}{}{1.000}{}
+R {671}{0}{<068>}{Forest}{<138>@}{Road in the Forest Many leaves crunch beneath your feet, creating a strange and eerie echoing through the forest around you.  Far in the distance, you can hear animals moving about.  You are moving through a sweet-smelling forest.  A road leads through the forest east and west and a small path leads to the south. }{Mud}{{Eastern Forest eforest Portal}{}{content}{{item}{{^A glowing portal$}{{name}{A glowing portal}}{^A nwerm leaf$}{{name}{A nwerm leaf}}{^A piece of marjoram$}{{name}{A piece of marjoram}}{^A sprig of rosemary$}{{name}{A sprig of rosemary}}}{noun}{{animals}{{name}{animals}}{forest}{{name}{forest}}{leaves}{{name}{leaves}}{path}{{name}{path}}{road}{{name}{road}}}}{portal}{}}{}{}{1.000}{}
 E {660}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {672}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {670}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {687}{s}{.mapLink {Pinnacle/Fantasy/Ravenloft} {} {s};}{4}{1}{}{1.000}{}{0.00}
 E {757}{portal}{.mapLink {Pinnacle} {175} {portal};}{0}{1}{}{1.000}{}{0.00}
 E {2000}{enter portal}{portal;#NOP %1}{0}{0}{}{1.000}{}{0.00}
+E {657}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {663}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {672}{0}{<238>}{Road in the Forest}{}{Road in the Forest You are in a sunny, but shadowed forest.  The ancient trees stand like giant sentinels in the area.  They stand with a majestic, yet strange feel of honor.  The ground is moist and very soft to the touch.  Further to the east and west you note that the forest continues.  There is a road running east and west here through the forest. }{}{{road}{}}{}{}{1.000}{}
+R {672}{0}{<238>}{Forest}{}{Road in the Forest The ground is moist and very soft to the touch.  You are in a sunny, but shadowed forest.  Many leaves crunch beneath your feet, creating a strange and eerie echoing through the forest around you.  Further to the north you note a forest.  There is a road running east and west here through the forest. }{Mud}{{content}{{item}{{^A piece of bark$}{{name}{A piece of bark}}}{noun}{{forest}{{name}{forest}}{ground}{{name}{ground}}{leaves}{{name}{leaves}}{road}{{name}{road}}}}{road}{}}{}{}{1.000}{}
 E {663}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {673}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {671}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {1038}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {666}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {660}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
-R {673}{0}{<238>}{Road in the Forest}{}{Road in the Forest The ancient trees stand like giant sentinels in the area.  They stand with a majestic, yet strange feel of honor.  The ground is moist and very soft to the touch.  You travel through a strange and enchanted forest.  Further to the south you can see a forest, while to the east you notice that the forest continues.  There is a road running east and west here through the forest. }{}{{road}{}}{}{}{1.000}{}
+R {673}{0}{<238>}{Road in the Forest}{}{Road in the Forest Far in the distance, you can hear animals moving about.  Many leaves crunch beneath your feet, creating a strange and eerie echoing through the forest around you.  You are in a sunny, but shadowed forest.  Further to the south you notice a forest, while to the west you note that the forest continues.  There is a road running east and west here through the forest. }{Mud}{{content}{{item}{{^A stalk of shimmerweed$}{{name}{A stalk of shimmerweed}}}{noun}{{animals}{{name}{animals}}{forest}{{name}{forest}}{leaves}{{name}{leaves}}{road}{{name}{road}}}}{road}{}}{}{}{1.000}{}
 E {666}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {675}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {672}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {1040}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {663}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {674}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {674}{0}{<178>}{Forest}{ }{Forest The ground is moist and very soft to the touch.  An eerie, yet sunny woods, deep in the forest.  Strange shadows flutter around you, contradicting the bright sunlight barely filtering to the ground around you.  Further to the north you see that the forest continues.   }{}{}{}{}{1.000}{}
+R {674}{0}{<178>}{Forest}{ }{Forest Birds and other animals can be heard all around you.  You travel through a strange and enchanted forest.  The ancient trees stand like giant sentinels in the area.  They stand with a majestic, yet strange feel of honor.  Further to the north and west you notice that the forest continues.   }{Mud}{{content}{{noun}{{animals}{{name}{animals}}{forest}{{name}{forest}}{trees}{{name}{trees}}}{npc}{{^A large brown elk$}{{name}{A large brown elk}}}}}{}{}{1.000}{}
 E {666}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {667}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {675}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {676}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {673}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {678}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {664}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {677}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {675}{0}{<238>}{Road in the Forest}{}{Road in the Forest You travel through a strange and enchanted forest.  Many leaves crunch beneath your feet, creating a strange and eerie echoing through the forest around you.  Far in the distance, you can hear animals moving about.  Further to the east you note a forest, while to the west and southeast you can see that the forest continues.  There is a road running west and southeast here through the forest. }{}{{road}{}}{}{}{1.000}{}
+R {675}{0}{<238>}{Forest}{}{Road in the Forest Birds and other animals can be heard all around you.  The ancient trees stand like giant sentinels in the area.  They stand with a majestic, yet strange feel of honor.  You travel through a strange and enchanted forest.  Further to the north you notice a forest, while to the west you note that the forest continues.  There is a road running west and southeast here through the forest. }{Mud}{{content}{{item}{{^A piece of bark$}{{name}{A piece of bark}}}{noun}{{animals}{{name}{animals}}{forest}{{name}{forest}}{road}{{name}{road}}{trees}{{name}{trees}}}}{road}{}}{}{}{1.000}{}
 E {674}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {678}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {686}{se}{se}{6}{0}{}{1.000}{}{0.00}
 E {673}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {1041}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {676}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {666}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
-R {676}{0}{<068>}{Forest}{ }{Forest The ancient trees stand like giant sentinels in the area.  They stand with a majestic, yet strange feel of honor.  The ground is moist and very soft to the touch.  You travel through a strange and enchanted forest.  Further to the north you can see that the forest continues.  A small wooden cottage is here. }{}{}{}{}{1.000}{}
+R {676}{0}{<068>}{Forest}{ }{Forest Strange shadows flutter around you, contradicting the bright sunlight barely filtering to the ground around you.  You are moving through a sweet-smelling forest.  The ground is moist and very soft to the touch.  Further to the south, east and west you can see that the forest continues.  A small wooden cottage is here. }{Mud}{{content}{{noun}{{cottage}{{name}{cottage}}{forest}{{name}{forest}}{ground}{{name}{ground}}{shadows}{{name}{shadows}}{sunlight}{{name}{sunlight}}}{npc}{{^A red-breasted robin$}{{name}{A red-breasted robin}}}}}{}{}{1.000}{}
 E {674}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {677}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {678}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {679}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {1231}{enter}{.mapLink {Pinnacle/Fantasy/Forest Cottage} {} {enter};}{0}{1}{}{1.000}{}{0.00}
+E {681}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {675}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {667}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
-R {677}{0}{<178>}{Forest}{ }{Forest Birds and other animals can be heard all around you.  Strange shadows flutter around you, contradicting the bright sunlight barely filtering to the ground around you.  You are moving through a sweet-smelling forest.  Further to the west and south you can see that the forest continues.   }{}{}{}{}{1.000}{}
+R {677}{0}{<068>}{Forest}{ }{Forest Birds and other animals can be heard all around you.  You are in a sunny, but shadowed forest.  Many leaves crunch beneath your feet, creating a strange and eerie echoing through the forest around you.  Further to the south and southeast you see that the forest continues.   }{Mud}{{content}{{noun}{{animals}{{name}{animals}}{forest}{{name}{forest}}{leaves}{{name}{leaves}}}{npc}{{^A black and white skunk$}{{name}{A black and white skunk}}{^Giant Wasp$}{{name}{Giant Wasp}}}}}{}{}{1.000}{}
 E {676}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {679}{se}{se}{6}{0}{}{1.000}{}{0.00}
 E {667}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {1064}{ne}{.mapLink {Pinnacle/Fantasy/Harpy Forest} {} {ne};}{3}{1}{}{1.000}{}{0.00}
+E {674}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 
-R {678}{0}{<178>}{Forest}{ }{Forest Many leaves crunch beneath your feet, creating a strange and eerie echoing through the forest around you.  You are in a sunny, but shadowed forest.  Far in the distance, you can hear animals moving about.   }{}{}{}{}{1.000}{}
+R {678}{0}{<178>}{Forest}{ }{Forest An eerie, yet sunny woods, deep in the forest.  The ground is moist and very soft to the touch.  Many leaves crunch beneath your feet, creating a strange and eerie echoing through the forest around you.   }{Mud}{{content}{{item}{{^A stalk of shimmerweed$}{{name}{A stalk of shimmerweed}}}{noun}{{forest}{{name}{forest}}{ground}{{name}{ground}}{leaves}{{name}{leaves}}}}}{}{}{1.000}{}
 E {676}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {681}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {686}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {675}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {674}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {679}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {679}{0}{<068>}{Forest}{ }{Forest Far in the distance, you can hear animals moving about.  Strange shadows flutter around you, contradicting the bright sunlight barely filtering to the ground around you.  You travel through a strange and enchanted forest.  Further to the west and southeast you see that the forest continues.  A path leads deeper into the forest to the east. }{}{}{}{}{1.000}{}
+R {679}{0}{<068>}{Forest}{ }{Forest You are in a sunny, but shadowed forest.  Many leaves crunch beneath your feet, creating a strange and eerie echoing through the forest around you.  The ground is moist and very soft to the touch.  Further to the southeast and northwest you note that the forest continues.  A path leads deeper into the forest to the east. }{Mud}{{content}{{noun}{{forest}{{name}{forest}}{ground}{{name}{ground}}{leaves}{{name}{leaves}}{path}{{name}{path}}}}}{}{}{1.000}{}
 E {676}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {680}{se}{se}{6}{0}{}{1.000}{}{0.00}
 E {677}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 E {681}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {1251}{path}{.mapLink {Pinnacle/Fantasy/Hacketoff's Bridge} {} {path};}{0}{1}{}{1.000}{}{0.00}
+E {678}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 
 R {680}{0}{<068>}{Forest}{}{Forest The ancient trees stand like giant sentinels in the area.  They stand with a majestic, yet strange feel of honor.  The ground is moist and very soft to the touch.  An eerie, yet sunny woods, deep in the forest.  Further to the northwest you note that the forest continues.  A small gate leans drunkenly open to the north. }{Mud}{}{}{}{1.000}{}
 E {679}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
@@ -3811,11 +3991,12 @@ E {681}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {684}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {682}{n}{.mapLink {Pinnacle/Fantasy/Abandoned Garden} {} {n};}{1}{1}{}{1.000}{}{0.00}
 
-R {681}{0}{<178>}{Forest}{ }{Forest You travel through a strange and enchanted forest.  Birds and other animals can be heard all around you.  The ancient trees stand like giant sentinels in the area.  They stand with a majestic, yet strange feel of honor.  Further to the north you can see that the forest continues, while to the south you notice a forest.   }{Mud}{}{}{}{1.000}{}
+R {681}{0}{<178>}{Forest}{ }{Forest You travel through a strange and enchanted forest.  The ground is moist and very soft to the touch.  Strange shadows flutter around you, contradicting the bright sunlight barely filtering to the ground around you.  Further to the east and west you see that the forest continues, while to the south you can see a forest.   }{Mud}{{content}{{item}{{^A sprig of mistletoe$}{{name}{A sprig of mistletoe}}}{noun}{{forest}{{name}{forest}}{ground}{{name}{ground}}{shadows}{{name}{shadows}}{sunlight}{{name}{sunlight}}}}}{}{}{1.000}{}
 E {679}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {680}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {685}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {678}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {676}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
 R {682}{0}{<000>}{LINK: Pinnacle/Fantasy/Abandoned Garden}{<138>*}{}{Pinnacle/Fantasy/Abandoned Garden}{{link}{}}{}{}{1.000}{}
 E {680}{s}{s}{4}{0}{}{1.000}{}{0.00}
@@ -3847,11 +4028,12 @@ R {687}{0}{<000>}{LINK: Pinnacle/Fantasy/Ravenloft}{<138>*}{}{Pinnacle/Fantasy/R
 E {671}{n}{n}{1}{0}{}{1.000}{}{0.00}
 
 R {688}{0}{<238>}{Road in the Forest}{}{Road in the Forest The ground is moist and very soft to the touch.  You travel through a strange and enchanted forest.  Strange shadows flutter around you, contradicting the bright sunlight barely filtering to the ground around you.  Further to the west you note a forest, while to the southwest you can see that the forest continues.  There is a road running northeast and southwest through the forest. }{}{{road}{}}{}{}{1.000}{}
-E {669}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {669}{ne}{ne}{3}{0}{}{1.000}{<238>}{0.00}
 E {650}{n}{n}{1}{0}{}{1.000}{}{0.00}
-E {646}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {646}{sw}{sw}{12}{0}{}{1.000}{<238>}{0.00}
 E {648}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {719}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {647}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
 R {689}{0}{}{Forest}{ }{Forest Many leaves crunch beneath your feet, creating a strange and eerie echoing through the forest around you.  The ground is moist and very soft to the touch.  You are in a sunny, but shadowed forest.   }{}{}{}{}{1.000}{}
 E {326}{n}{n}{1}{0}{}{1.000}{}{0.00}
@@ -3895,12 +4077,13 @@ E {694}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {697}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {1279}{path}{.mapLink {Pinnacle/Fantasy/Temple of Alythra} {} {path};}{0}{1}{}{1.000}{}{0.00}
 
-R {696}{0}{<178>}{Forest}{ }{Forest The ancient trees stand like giant sentinels in the area.  They stand with a majestic, yet strange feel of honor.  You travel through a strange and enchanted forest.  The ground is moist and very soft to the touch.  Further to the east and south you notice that the forest continues.   }{Mud}{{content}{{npc}{{^A Goblin Scout$}{{name}{A Goblin Scout}}{^A Marsh Goblin$}{{name}{A Marsh Goblin}}{^A small black wolf$}{{name}{A small black wolf}}}}}{}{}{1.000}{}
+R {696}{0}{<178>}{Forest}{ }{Forest You are moving through a sweet-smelling forest.  The ancient trees stand like giant sentinels in the area.  They stand with a majestic, yet strange feel of honor.  Birds and other animals can be heard all around you.  Further to the south you can see that the forest continues.   }{Mud}{{content}{{noun}{{animals}{{name}{animals}}{forest}{{name}{forest}}{trees}{{name}{trees}}}{npc}{{^A Goblin Scout$}{{name}{A Goblin Scout}}{^A Marsh Goblin$}{{name}{A Marsh Goblin [scratched]}}{^A large timber wolf$}{{name}{A large timber wolf}}{^A small black wolf$}{{name}{A small black wolf}}}}}{}{}{1.000}{}
 E {695}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {640}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {644}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {709}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {710}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {642}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
 R {697}{0}{<178>}{Forest}{ }{Forest The ancient trees stand like giant sentinels in the area.  They stand with a majestic, yet strange feel of honor.  You travel through a strange and enchanted forest.  Far in the distance, you can hear animals moving about.  Further to the north and east you notice that the forest continues.   }{Mud}{}{}{}{1.000}{}
 E {695}{w}{w}{8}{0}{}{1.000}{}{0.00}
@@ -4005,7 +4188,6 @@ E {709}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {711}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {1212}{path}{.mapLink {Pinnacle/Fantasy/Owlbears} {} {path};}{0}{1}{}{1.000}{}{0.00}
 E {696}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
-E {718}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {712}{se}{se}{6}{0}{}{1.000}{}{0.00}
 
 R {711}{0}{<178>}{Forest}{ }{Mountain Forest Leaves crunch beneath your feet on the uneven ground, creating a strange and eerie echoing through the mountainous woodland around you.  You travel through an open forested mountain region.  Far below you through the trees you see the forest extends without end.  Further to the southeast you can see a forest.   }{}{}{}{}{1.000}{}
@@ -4053,12 +4235,11 @@ E {711}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 E {716}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {723}{e}{e}{2}{0}{}{1.000}{}{0.00}
 
-R {718}{0}{<108>}{Mountain Forest}{ }{Mountain Forest An eerie, yet sunny woods, deep in the mountain forest.  Standing on a rock overlooking a bluff you survey the rolling forests that extend for miles.  Leaves crunch beneath your feet on the uneven ground, creating a strange and eerie echoing through the mountainous woodland around you.   }{}{}{}{}{1.000}{}
+R {718}{0}{<068>}{Mountain Forest}{ }{Mountain Forest An eerie, yet sunny woods, deep in the mountain forest.  Standing on a rock overlooking a bluff you survey the rolling forests that extend for miles.  Leaves crunch beneath your feet on the uneven ground, creating a strange and eerie echoing through the mountainous woodland around you.   }{Mud}{{content}{{item}{{^A piece of bark$}{{name}{A piece of bark}}{^A piece of oakwood$}{{name}{A piece of oakwood}}{^A sprig of mistletoe$}{{name}{A sprig of mistletoe}}{^A stalk of shimmerweed$}{{name}{A stalk of shimmerweed}}}{npc}{{^A medium brown hare$}{{name}{A medium brown hare}}}}}{}{}{1.000}{}
 E {711}{se}{se}{6}{0}{}{1.000}{}{0.00}
 E {719}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 E {646}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {726}{portal}{.mapLink {Pinnacle/Fantasy/Necromancer Guild} {} {portal};}{0}{1}{}{1.000}{}{0.00}
-E {710}{s}{s}{4}{0}{}{1.000}{}{0.00}
 
 R {719}{0}{<068>}{Mountain Forest}{ }{Mountain Forest You travel through an open mountain forest.  Standing on a rock overlooking a bluff you survey the rolling forests that extend for miles.  The ancient trees stand like giant gnarled sentinels in the area.  They are rooted tenaciously in shallow soil and rock.  Further to the southwest you notice that the forested mountain region continues.  The grass has been trampled slightly, off the side of the trail. }{}{}{}{}{1.000}{}
 E {718}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
@@ -6885,6 +7066,8 @@ R {1298}{0}{<000>}{LINK: Pinnacle/Fantasy/Pirate Ship}{<138>*}{}{Pinnacle/Fantas
 R {1299}{0}{<000>}{LINK: Pinnacle/Fantasy/Tower of Fire}{<138>*}{}{Pinnacle/Fantasy/Tower of Fire}{{content}{{item}{{crates}{{name}{crates and barrels clutter the room}}{torch}{{name}{a flickering torch lights your way}}{tower}{{name}{A grey stone tower}}}{noun}{{arch}{{name}{arch}}{archway}{{name}{archway}}{bay}{{name}{bay}}{cape}{{name}{cape}}{door}{{name}{door}}{entrance}{{name}{entrance}}{headland}{{name}{headland}}{landscape}{{name}{landscape}}{lighthouse}{{name}{lighthouse}}{north}{{name}{north}}{ocean}{{name}{ocean}}{rip}{{name}{rip}}{road}{{name}{road}}{south}{{name}{south}}{stairway}{{name}{stairway}}{stone}{{name}{stone}}{walls}{{name}{walls}}{waters}{{name}{waters}}{waves}{{name}{waves}}}}{link}{}}{}{}{1.000}{}
 
 R {1300}{0}{<000>}{LINK: Pinnacle/Fantasy/Longshadow Camp}{<138>*}{}{Pinnacle/Fantasy/Longshadow Camp}{{content}{{item}{{^An Orc Encampment$}{{name}{An Orc Encampment}}}{noun}{{bird}{{name}{bird}}{bodies}{{name}{bodies}}{chest}{{name}{chest}}{grass}{{name}{grass}}{ground}{{name}{ground}}{mark}{{name}{mark}}{path}{{name}{path}}{plains}{{name}{plains}}}}{link}{}}{}{}{1.000}{}
+
+R {1301}{0}{<000>}{LINK: Pinnacle/Fantasy/Lleera's Tree}{<138>*}{}{Pinnacle/Fantasy/Lleera's Tree}{{content}{{item}{{^A stalk of shimmerweed$}{{name}{A stalk of shimmerweed}}}{noun}{{animals}{{name}{animals}}{branches}{{name}{branches}}{forest}{{name}{forest}}{leaves}{{name}{leaves}}{sacks}{{name}{sacks}}{tree}{{name}{tree}}}{npc}{{^Lleera the forest elf$}{{name}{Lleera the forest elf}}{^Mass of Troll Flesh$}{{name}{Mass of Troll Flesh}}{^Troll$}{{name}{Troll}}}}{link}{}}{}{}{1.000}{}
 
 R {2000}{0}{<158>}{The entrance to Fantasy}{<138>?}{The road ends at a large portal here in the forest.  The portal itself is large and circular, with sprays of color shooting across it, and strange, mystical energy flickering within.  A road into Pinnacle lies to the east, while you can vaguely make out the outlines of a mysterious tower to the west. }{Mud}{{special}{}}{}{}{1.000}{}
 E {1}{portal wayhaven}{portal wayhaven}{0}{0}{}{1.000}{}{0.00}

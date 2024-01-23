@@ -18,7 +18,7 @@ F 1048586
 
 G 0
 
-I 97
+I 243
 
 L {ASCII NESW LINE} {NO EXITS} {x}
 L {ASCII NESW LINE} {N} {o}
@@ -1576,9 +1576,10 @@ E {245}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {248}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {265}{w}{w}{8}{0}{}{1.000}{}{0.00}
 
-R {243}{0}{<048>}{Coastal Wastelands}{ }{Coastal Wastelands You see a bright flash of light far in the distance. It takes a very long time for the sound of the explosion to reach you.  Could it be your imagination, or is that the smell of burning flesh?  Huge clouds of dust and ash rise in the distance as you look around.  The green-blue waters of the Atlantic stretch out from the shoreline. Some very large ruins rise up here over the landscape. }{}{}{}{}{1.000}{}
+R {243}{0}{<068>}{Coastal Wastelands}{ }{Coastal Wastelands A foul wind whips by you as you survey this desolate landscape.  You can hear the roar of some far-off motor. Who'd be way out here?  A gigantic crater lies before you. It's hard to imagine what could have exploded and caused something as impressive as this.  The green-blue waters of the Atlantic stretch out from the shoreline. Some very large ruins rise up here over the landscape. }{Mud}{{content}{{noun}{{crater}{{name}{crater}}{wind}{{name}{wind}}}}}{}{}{1.000}{}
 E {241}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {245}{s}{s}{4}{0}{}{1.000}{}{0.00}
+E {1289}{ruins}{.mapLink {Pinnacle/Science/Ruined Reactor} {} {ruins};}{0}{1}{}{1.000}{}{0.00}
 
 R {244}{0}{<068>}{Southeastern Swamps}{ }{Southeastern Swamps Huge trees and ferns grow in abundance here. There must be something wrong with these plants since they seem to grow so well.  The green of the swamp amazes you since nothing else grows around here.  You can hear the roar of some far off motor. Who'd be way out here?  To the south and west you sense the continuation of the swampland.  An even thicker and ominous portion of the swamp can be glimpsed through the trees to the southeast. }{}{}{}{}{1.000}{}
 E {241}{e}{e}{2}{0}{}{1.000}{}{0.00}
@@ -1587,7 +1588,7 @@ E {268}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {234}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {1229}{enter}{.mapLink {Pinnacle/Science/Mantis Swamp} {} {enter};}{0}{1}{}{1.000}{}{0.00}
 
-R {245}{0}{<178>}{Southeastern Swamps}{ }{Southeastern Swamps Huge trees and ferns grow in abundance here. There must be something wrong with these plants since they seem to grow so well.  The hot slimy swamp stretches out from here in every direction.  You can hear the roar of some far off motor. Who'd be way out here?  To the west and south you almost miss the continuation of the swampland.  The waters of the Atlantic Ocean stretch out to the east. }{}{}{}{}{1.000}{}
+R {245}{0}{<178>}{Southeastern Swamps}{ }{Southeastern Swamps You hear a loud sucking sound as you walk through the dew.  The stench of this swamp is almost unbearable. You don't think that you're going to be able to make it through this thing.  The green of the swamp amazes you since nothing else grows around here.  To the south and west you just make out the continuation of the swampland.  The waters of the Atlantic Ocean stretch out to the east. }{Mud}{{content}{{noun}{{swamp}{{name}{swamp}}}}}{}{}{1.000}{}
 E {243}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {246}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {242}{w}{w}{8}{0}{}{1.000}{}{0.00}
@@ -7236,3 +7237,5 @@ R {1286}{0}{<000>}{LINK: Pinnacle/Science/Bandit Camp}{<138>*}{}{Pinnacle/Scienc
 R {1287}{0}{<000>}{LINK: Pinnacle/Science/Alien Ship}{<138>*}{}{Pinnacle/Science/Alien Ship}{{content}{{item}{{^A gleaming silver spacecraft$}{{name}{A gleaming silver spacecraft}}{containing \d+ messages}{{name}{Alien Ship Board containing 96 messages (96 unread messages)}}}}{link}{}}{}{}{1.000}{}
 
 R {1288}{0}{<000>}{LINK: Pinnacle/Science/Alien\Alpha}{<138>*}{}{Pinnacle/Science/Alien\Alpha}{{content}{{item}{{^A posted bulletin \x28READ THIS NOW\x29$}{{name}{A posted bulletin (READ THIS NOW)}}}{noun}{{4x4}{{name}{4x4}}{clouds}{{name}{clouds}}{crater}{{name}{crater}}{dust}{{name}{dust}}{sand}{{name}{sand}}{smell}{{name}{smell}}{truck}{{name}{truck}}{trucks}{{name}{trucks}}}{npc}{{^Moby the ALPHA Team Leader \x28fearless\x29$}{{name}{Moby the ALPHA Team Leader (fearless)}}}}{link}{}}{}{}{1.000}{}
+
+R {1289}{0}{<000>}{LINK: Pinnacle/Science/Ruined Reactor}{<138>*}{}{Pinnacle/Science/Ruined Reactor}{{content}{{noun}{{crater}{{name}{crater}}{desk}{{name}{desk}}{doors}{{name}{doors}}{monitors}{{name}{monitors}}{rubble}{{name}{rubble}}{wind}{{name}{wind}}}}{link}{}}{}{}{1.000}{}
