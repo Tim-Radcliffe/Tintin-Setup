@@ -1,0 +1,20 @@
+#FUNCTION {fStandardDamage} 
+{
+    #LOCAL {_input} {};
+    #FORMAT {_input} {%l} {%1};
+    #LOCAL {_dmg} 
+    { 
+        {edged}     {edged} 
+        {crushing}  {blunt}
+        {cold}      {ice}
+        {flame}     {fire}
+        {psionic}   {mind}
+        {lightning} {electric}
+        {corrosion} {acid}
+        {virulence} {poison}
+        {power}     {energy}
+        {light}     {radiation}
+    };
+
+    #RETURN {$_dmg[$_input]};
+};
