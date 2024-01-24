@@ -14,11 +14,11 @@ CROOMS <178>
 CSYMBOLS <128>
 CUSER <258>
 
-F 1048586
+F 1048584
 
 G 0
 
-I 243
+I 190
 
 L {ASCII NESW LINE} {NO EXITS} {x}
 L {ASCII NESW LINE} {N} {o}
@@ -1257,11 +1257,12 @@ E {190}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {307}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {188}{w}{w}{8}{0}{}{1.000}{}{0.00}
 
-R {190}{0}{<048>}{The Badlands}{ }{The Badlands You travel over hard packed earth, cracked and pitted from months without rain.  Nothing grows at all, not even a pesky weed stubbornly holding on to life.  Destruction and desolation stretch as far as the eye can see.  You've got to wonder how anything could survive way out here.  To the south you just barely see the continuation of the badlands.  A large, inviting military complex stands erect before you. }{}{}{}{}{1.000}{}
+R {190}{0}{<068>}{The Badlands}{ }{The Badlands You travel over hard packed earth, cracked and pitted from months without rain.  Nothing grows at all, not even a pesky weed stubbornly holding on to life.  Destruction and desolation stretch as far as the eye can see.  You've got to wonder how anything could survive way out here.  To the south you just barely see the continuation of the badlands.  A large, inviting military complex stands erect before you. }{Mud}{}{}{}{1.000}{}
 E {176}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {191}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {306}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {189}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {1290}{enter}{.mapLink {Pinnacle/Science/UED Installation} {} {enter};}{0}{1}{}{1.000}{}{0.00}
 
 R {191}{0}{<068>}{The Badlands}{ }{Dust whips through the air on harsh, burning winds.  The low rolling hills do nothing to stop the airborn grit from scouring the countryside clean of life.  There is a path here that leads towards a low cliff in the side of one of the hills.}{Mud}{}{}{}{1.000}{}
 E {175}{s}{s}{4}{0}{}{1.000}{}{0.00}
@@ -1908,7 +1909,7 @@ E {306}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {320}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {304}{e}{e}{2}{0}{}{1.000}{}{0.00}
 
-R {306}{0}{<178>}{The Badlands}{ }{The Badlands Could it be your imagination, or is that the smell of burning flesh?  Destruction and desolation stretch as far as the eye can see.  You travel over hard packed earth, cracked and pitted from months without rain.  Nothing grows at all, not even a pesky weed stubbornly holding on to life.  To the west and east you almost miss the continuation of the badlands.   }{}{}{}{}{1.000}{}
+R {306}{0}{<178>}{The Badlands}{ }{The Badlands Could it be your imagination, or is that the smell of burning flesh?  Destruction and desolation stretch as far as the eye can see.  You travel over hard packed earth, cracked and pitted from months without rain.  Nothing grows at all, not even a pesky weed stubbornly holding on to life.  To the west and east you almost miss the continuation of the badlands.   }{Mud}{}{}{}{1.000}{}
 E {190}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {307}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {319}{n}{n}{1}{0}{}{1.000}{}{0.00}
@@ -7239,3 +7240,5 @@ R {1287}{0}{<000>}{LINK: Pinnacle/Science/Alien Ship}{<138>*}{}{Pinnacle/Science
 R {1288}{0}{<000>}{LINK: Pinnacle/Science/Alien\Alpha}{<138>*}{}{Pinnacle/Science/Alien\Alpha}{{content}{{item}{{^A posted bulletin \x28READ THIS NOW\x29$}{{name}{A posted bulletin (READ THIS NOW)}}}{noun}{{4x4}{{name}{4x4}}{clouds}{{name}{clouds}}{crater}{{name}{crater}}{dust}{{name}{dust}}{sand}{{name}{sand}}{smell}{{name}{smell}}{truck}{{name}{truck}}{trucks}{{name}{trucks}}}{npc}{{^Moby the ALPHA Team Leader \x28fearless\x29$}{{name}{Moby the ALPHA Team Leader (fearless)}}}}{link}{}}{}{}{1.000}{}
 
 R {1289}{0}{<000>}{LINK: Pinnacle/Science/Ruined Reactor}{<138>*}{}{Pinnacle/Science/Ruined Reactor}{{content}{{noun}{{crater}{{name}{crater}}{desk}{{name}{desk}}{doors}{{name}{doors}}{monitors}{{name}{monitors}}{rubble}{{name}{rubble}}{wind}{{name}{wind}}}}{link}{}}{}{}{1.000}{}
+
+R {1290}{0}{<000>}{LINK: Pinnacle/Science/UED Installation}{<138>*}{}{Pinnacle/Science/UED Installation}{{link}{}}{}{}{1.000}{}
