@@ -47,11 +47,12 @@
     {
         #READ {%1};
     };
-    #LINE LOCAL #CLASS {%1} SIZE {_fFL[size]};
+    #CLASS {%1} SIZE {_fFL[size]};
     #IF {$_fFL[size] < 1} 
     { 
         #CLASS {%1} KILL;
     };
+    #UNVAR {_fFL};
 	#RETURN;
 };
 
