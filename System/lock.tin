@@ -1,14 +1,21 @@
+#NOP Time Lock handler
+#NOP By Balthus.
+
 #ALIAS {.Lock} 
 {
 	#IF {"%0" == ""}
 	{
         #LOCAL {_l} {};
+        #LOCAL {_lockTable} {};
         #ECHO {Locks Active:};
         #ECHO {=============};
         #FOREACH {*_lock[]} {_l}
         {
-            #ECHO {$_l : @fFormatTimestamp{$_lock[$_l]}};
+            #LOCAL {_lockTable[$_l][Time]} {@fFormatTimestamp{$_lock[$_l]}};
         };
+        #LOCAL {_lockTable} {@fTable{$_lockTable}};
+        #LIST {_lockTable} COLLAPSE {\n};
+        #ECHO {$_lockTable};
 	};
 	#ELSE
 	{
@@ -31,7 +38,7 @@
 {
 	#IF {"%0" == ""}
 	{
-		#VAR {_lock};
+		.Lock;
 	};
 	#ELSE
 	{
