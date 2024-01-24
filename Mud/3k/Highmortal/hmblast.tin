@@ -1,0 +1,13 @@
+#NOP Automatically hmblast if fighting 
+#ALIAS {handler_auto_hmblast}
+{
+    #NOP %1;
+    #NOP edged, blunt, fire, ice, mind, electric, energy, acid, poison, radiation.;
+    #IF {!@fLocked{hm.hmblast}}
+    {
+        #SEND {!hmblast mind};
+        .Lock {hm.hmblast} {3600};
+    };
+};
+
+auto {add} {hmblast} {} {e_combat_round} {};
