@@ -193,11 +193,17 @@
         };
         #UNVAR {_mapVariable};
 
-        #LOCAL {_mapOldDir} {@fFileGetPath{$map[file]}};
-        #IF {"$_mapOldDir" != ""}
+        #LOCAL {_mapOldMetadata} {@fParseFilePath{$map[file]}};
+
+        #IF {"$_mapOldMetadata[path]" != ""}
         {
-            #KILL {class} {$path[areas]/$_mapOldDir/%*};
+            .debug MAP {KILL CLASS: $path[areas]/$_mapOldMetadata[path]%*};
+            #KILL {class} {$path[areas]/$_mapOldMetadata[path]%*};
+            .debug MAP {EVENT REMOVE HANDLER: $_mapOldMetadata[name].%*};            
+            event_remove_handler {$_mapOldMetadata[name].%*};
         };
+
+        #LOCAL {_mapOldName} {@fFileGetName{$map[file]}};
 
         #VAR {map[file]}        {$_mL[path]/$_mL[area].map};
         #UNVAR {map[area]};
