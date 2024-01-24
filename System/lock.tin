@@ -7,7 +7,7 @@
         #ECHO {=============};
         #FOREACH {*_lock[]} {_l}
         {
-            #ECHO {$_l : @fFormaTimestamp{$_lock[$_l]}};
+            #ECHO {$_l : @fFormatTimestamp{$_lock[$_l]}};
         };
 	};
 	#ELSE
