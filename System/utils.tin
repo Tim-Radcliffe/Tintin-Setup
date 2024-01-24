@@ -261,6 +261,16 @@ event_register {e_5_mins} {System/utils.tin} {.aProfileSave};
   #RETURN {$result};
 };
 
+#NOP Return 1 if passed value is a number
+#FUNCTION {fIsNumber}
+{
+    #VAR result {0};
+    #IF {"%1" == "%d" && "%1" != ""}
+    {
+        #VAR result {1};
+    };
+};
+
 #NOP Return a comma separated string from a list of values;
 #FUNCTION {fCommaList}
 {
@@ -340,11 +350,9 @@ event_register {e_5_mins} {System/utils.tin} {.aProfileSave};
     #RETURN {$result};
 };
 
-#FUNCTION {fGetTimestamp}
+#FUNCTION {fFormatTimestamp}
 {
-  #LOCAL {_fGT} {};
-  #FORMAT {_fGT} {%t} {%Y-%m-%d %H:%M:%S};
-  #RETURN {$_fGT};
+  #FORMAT {result} {%t} {{%Y-%m-%d %H:%M:%S}{%1}};
 };
 
 #FUNCTION {fGetHash}
