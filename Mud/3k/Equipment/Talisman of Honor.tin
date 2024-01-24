@@ -1,14 +1,11 @@
 #ALIAS {handler_talisman_of_honor}
 {
     #NOP %1;
-    #FORMAT {_hAT} {%T};
-    #IF {$_hAT > @fEval{$talisman_of_honor[time] + 180} && $my[hp][current] < $my[hp][max]}
+    #IF {!@fLocked{equipment.talisman_of_honor} && $my[hp][current] < $my[hp][max]}
     {
-        #VAR {talisman_of_honor[time]} {$_hAT};
+        .Lock {equipment.talisman_of_honor} {180};
         #SEND {!hold talisman};
     };
 };
-
-#VAR {talisman_of_honor} {};
 
 event_register {e_combat_round} {$path[equipment]/Talisman of Honor.tin} {handler_talisman_of_honor};
