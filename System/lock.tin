@@ -2,11 +2,27 @@
 {
 	#IF {"%0" == ""}
 	{
-		#VAR {_lock};
+        #LOCAL {_l} {};
+        #ECHO {Locks Active:};
+        #ECHO {=============};
+        #FOREACH {*_lock[]} {_l}
+        {
+            #ECHO {$_l : @fFormaTimestamp{$_lock[$_l]}};
+        };
 	};
 	#ELSE
 	{
-		#VAR {_lock[%1]} {@fGetTimestamp{}};
+		#FORMAT {_lock[%1]} {%T};
+        #IF {@fIsNumber{%2}}
+        {
+            #MATH {_lock[%1]} {$_lock[%1] + %2};
+        };
+        #ELSE 
+        {
+            #NOP Default lock for 1 hour if not specified;
+            #MATH {_lock[%1]} {$_lock[%1] + 3600};
+        };
+        .file write {$path[profile]/lock.tin};        
         event_raise {e_lock_added} {%0};
 	};
 };
@@ -19,20 +35,39 @@
 	};
 	#ELSE
 	{
+        #LOCAL {_lock_record} {};
         #FOREACH {*_lock[%1]} {_lock_record}
         {
             event_raise {e_lock_removed} {$_lock_record};
         };
-        #UNVAR {_lock_record};
 		#UNVAR {_lock[%1]};
+        .file write {$path[profile]/lock.tin};
     };
 };
 
 #FUNCTION {fLocked}
 {
+    #LOCAL {_now} {};
+    #FORMAT {_now} {%T};
+    #LOCAL {_l} {};
+    #FOREACH {*_lock[]} {_l}
+    {
+        #IF {$_lock[$_l] < $_now}
+        {
+            .Unlock {$_l};       
+        };
+    };
     #IF {&_lock[%0] > 0}
     {
-        #RETURN 1;       
-    }
+        #RETURN 1;
+    };
 	#RETURN 0;
+};
+
+#IF {&{_lock} == 0}
+{
+    #CLASS {$path[profile]/lock.tin} ASSIGN 
+    {
+        #VAR {_lock} {};
+    };
 };
