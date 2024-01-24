@@ -14,11 +14,11 @@ CROOMS <178>
 CSYMBOLS <128>
 CUSER <258>
 
-F 1048587
+F 1048584
 
 G 0
 
-I 135
+I 79
 
 L {ASCII NESW LINE} {NO EXITS} {x}
 L {ASCII NESW LINE} {N} {o}
@@ -592,7 +592,7 @@ R {78}{0}{<178>}{Eastwick}{ }{You are back on the Eastwick road.  There is a roa
 E {77}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {79}{e}{e}{2}{0}{}{1.000}{}{0.00}
 
-R {79}{0}{<048>}{Eastwick}{ }{This is the Eastwick road.  There is a road to the north and one to the west.  Which way do you go, you do not know.  There is a deep dark hole here.  Oddly enough, it goes up, not down.}{Mud}{{content}{{item}{{^A joystick$}{{name}{A joystick}}{^A mud puddle$}{{name}{A mud puddle}}}{noun}{{hole}{{name}{hole}}{road}{{name}{road}}}}}{}{}{1.000}{}
+R {79}{0}{<068>}{Eastwick}{ }{This is the Eastwick road.  There is a road to the north and one to the west.  Which way do you go, you do not know.  There is a deep dark hole here.  Oddly enough, it goes up, not down.}{Mud}{{content}{{item}{{^A joystick$}{{name}{A joystick}}{^A mud puddle$}{{name}{A mud puddle}}}{noun}{{hole}{{name}{hole}}{road}{{name}{road}}}}}{}{}{1.000}{}
 E {78}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {81}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {82}{e}{.mapLink {Pinnacle/Chaos/The Book Nook} {} {e};}{2}{1}{}{1.000}{}{0.00}
