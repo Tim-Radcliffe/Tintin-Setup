@@ -17,14 +17,16 @@
 	#IF {"%1" != ""}
 	{
 		#SEND {!scaler %1};
+        #IF {%1 != $my[dungeon][$map[area][name]]}
+        {
+            .aYesNo {Set $map[area][name] default scaler to %1?}
+            {
+                #VAR {my[dungeon][$map[area][name]]} {%1};
+            };
+        };
 	};
 	#ELSE 
 	{
 		#SEND {!scaler};
 	};
 };
-
-#ACTION {^%sYou have arrived at a dungeon entrance.}
-{
-	event_oneshot {e_map_room_enter} {scaler.tin} {#NOP %%1;scaler {};};
-} {1};

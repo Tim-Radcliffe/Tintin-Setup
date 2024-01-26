@@ -1,0 +1,30 @@
+#ALIAS {.dungeon}
+{
+	#IF {"%0" == ""}
+	{
+        #LOCAL {_d} {};
+        #LOCAL {_dungeonTable} {};
+        #ECHO {Dungeons:};
+        #ECHO {========};
+        #FOREACH {*my[dungeon][]} {_d}
+        {
+            #LOCAL {_dungeonTable[$_d][Scaler]} {$my[dungeon][$_d]};
+        };
+        #LOCAL {_dungeonTable} {@fTable{$_dungeonTable}};
+        #LIST {_dungeonTable} COLLAPSE {\n};
+        #ECHO {$_dungeonTable};
+	};
+};
+
+#ACTION {^%sYou have arrived at a dungeon entrance.}
+{
+    #IF {&{map[area][name]}}
+    {
+        #IF {!&{my[dungeon][$map[area][name]]}}
+        {
+            #VAR {my[dungeon][$map[area][name]]} {1};
+        };
+
+        scaler {$my[dungeon][$map[area][name]]};
+    };
+} {1};
