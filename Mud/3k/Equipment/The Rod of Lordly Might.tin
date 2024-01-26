@@ -77,10 +77,20 @@ event_register {e_combat_round} {$path[equipment]/The Rod of Lordly Might.tin} {
         {
             #CONTINUE;
         };
-        #MATH {_rolm_delay} {$_rolm_delay + 2};
-        #LINE SUBSTITUTE VARIABLE #DELAY {$_rolm_delay} {!touch $_rolm_rune rune};
+        #LIST {_rolm[checkrune]} ADD {$_rolm_rune};
+        #TICKER {_rolm} 
+        {
+            #IF {&{_rolm[checkrune][+1]} == 0}
+            {
+                #UNTICKER {_rolm};
+            };
+            #ELSE 
+            {
+                !touch $_rolm[checkrune][+1] rune;
+                #LIST {_rolm[checkrune]} DELETE 1;
+            };
+        } {2};
     };
-    #DELAY {$_rolm_delay} {#UNVAR {_rolm_delay};};
     #UNVAR {_rolm_rune};
 };
 
@@ -146,6 +156,14 @@ event_register {e_combat_round} {$path[equipment]/The Rod of Lordly Might.tin} {
         .file write {$path[profile]/The Rod of Lordly Might.tin};
     };
 };
+
+
+#NOP Rod Recharge Message:
+#NOP Thunderclouds gather...                                                                                                                                                                                                           
+#NOP                                                                                                                                                                                                                                   
+#NOP A bolt of lightning strikes down from the heavens upon the holy relic!!                                                                                                                                                           
+#NOP Divine energy dances up and down the artifact, welling with power renewed.
+
 
 #IF {&{_rolm} == 0}
 {
