@@ -1,4 +1,4 @@
-#NOP **** Auto Map Runner ****
+#NOP **** Auto Map Walker ****
 /***********************************************************************\
  * Move room-by-room through an entire map, skipping exits that are    *
  * flagged as "avoid" (#MAP EXITFLAG <exit> AVOID) and handling void   *
@@ -7,97 +7,97 @@
  * Balthus - 12th March 2018                                           *
 \***********************************************************************/
 
-#VAR {_hRun} {};
+#VAR {_hWalk} {};
 
 /* Get exits for the current room and work out the next exit to take */
-#ALIAS {.handler_maprun_room}
+#ALIAS {.handler_mapwalk_room}
 {
     #NOP %1;
-    #MAP {GET} {roomvnum}  {_hRun[room]};
-    #MAP {GET} {roomexits} {_hRun[exits]};
-    #UNVAR {_hRun[move]};
+    #MAP {GET} {roomvnum}  {_hWalk[room]};
+    #MAP {GET} {roomexits} {_hWalk[exits]};
+    #UNVAR {_hWalk[move]};
 
     #NOP /* Set the path back for current room */;
-    #IF {"$_hRun[back][$_hRun[room]]" == ""}
+    #IF {"$_hWalk[back][$_hWalk[room]]" == ""}
     {
-        #IF {"$_hRun[last]" == ""}
+        #IF {"$_hWalk[last]" == ""}
         {
-            #VAR {_hRun[back][$_hRun[room]]} {0};
+            #VAR {_hWalk[back][$_hWalk[room]]} {0};
         };
         #ELSE
         {
-            #VAR {_hRun[back][$_hRun[room]]} {$_hRun[last]};
+            #VAR {_hWalk[back][$_hWalk[room]]} {$_hWalk[last]};
         };
     };
 
-    #VAR {_hRun[last]} {$_hRun[room]};
+    #VAR {_hWalk[last]} {$_hWalk[room]};
 
-    #FOREACH {*_hRun[exits][]} {v}
+    #FOREACH {*_hWalk[exits][]} {v}
     {
         #NOP /* Update exit list with checked real destination rooms */;
-        #VAR {_hRun[exits][$v]} {@fCheckExit{$v}};
+        #VAR {_hWalk[exits][$v]} {@fCheckExit{$v}};
 
         #NOP /* Move to an unvisited room if possible, otherwise go back */;
-        #IF {$_hRun[exits][$v] > 0}
+        #IF {$_hWalk[exits][$v] > 0}
         {
-            #IF {"$_hRun[back][$_hRun[exits][$v]]" != ""}
+            #IF {"$_hWalk[back][$_hWalk[exits][$v]]" != ""}
             {
-                #IF {"$_hRun[exits][$v]" == "$_hRun[back][$_hRun[room]]"}
+                #IF {"$_hWalk[exits][$v]" == "$_hWalk[back][$_hWalk[room]]"}
                 {
-                    #IF {"$_hRun[move]" == ""}
+                    #IF {"$_hWalk[move]" == ""}
                     {
-                        #VAR {_hRun[move]} {$v};
-                        #VAR {_hRun[next]} {$_hRun[exits][$v]};
+                        #VAR {_hWalk[move]} {$v};
+                        #VAR {_hWalk[next]} {$_hWalk[exits][$v]};
                     };
                 };
             };
             #ELSE
             {
-                #VAR {_hRun[move]} {$v};
-                #VAR {_hRun[next]} {$_hRun[exits][$v]};
+                #VAR {_hWalk[move]} {$v};
+                #VAR {_hWalk[next]} {$_hWalk[exits][$v]};
             };
         };
     };
 };
-event_register {e_map_room_enter} {AutoMaprun.tin} {.handler_maprun_room};
+event_register {e_map_room_enter} {auto.map.walk.tin} {.handler_mapwalk_room};
 
 /* Take the next exit identified above, move to the next room */
-#ALIAS {.handler_maprun_move}
+#ALIAS {.handler_mapwalk_move}
 {
     #NOP %1;
     #IF {!@fDeadmanActive{600}}
     {
-	    .aYesNo {Continue AutoWalk?}
+        .aYesNo {Continue AutoWalk?}
         {
             #VAR {auto[deadman][time]} {0};
-            .handler_maprun_move;
+            .handler_mapwalk_move;
         }
         {
             auto mapwalk off;
         };
     };
-    #ELSEIF {"$_hRun[move]" != ""}
+    #ELSEIF {"$_hWalk[move]" != ""}
     {
-        #VAR {_hRun[retry]} {$_hRun[move]};
-        .debug MAPRUN {MOVE: $_hRun[move]};
-        $_hRun[move];
+        #VAR {_hWalk[retry]} {$_hWalk[move]};
+        .debug mapwalk {MOVE: $_hWalk[move]};
+        $_hWalk[move];
     };
     #ELSE
     {
-        .debug MAPRUN {INFO: Run Complete};
+        .debug mapwalk {INFO: Walk Complete};
         auto mapwalk off;
     };
 };
-event_register {e_roomscan_finished} {AutoMaprun.tin} {.handler_maprun_move};
+event_register {e_roomscan_finished} {auto.map.walk.tin} {.handler_mapwalk_move};
 
 /* Use if an exit needs multiple attempts to pass */
-#ALIAS {.handler_maprun_retry}
+#ALIAS {.handler_mapwalk_retry}
 {
     #NOP %1;
-    #MAP GOTO {$_hRun[last]};
-    $_hRun[retry];
+    #MAP GOTO {$_hWalk[last]};
+    $_hWalk[retry];
 };
-event_register {e_exit_retry} {AutoMaprun.tin} {.handler_maprun_retry};
+event_register {e_exit_retry} {auto.map.walk.tin} {.handler_mapwalk_retry};
 
 /* Return the next "real" room in a direction (handles void rooms), or 0 if blocked */
 #FUNCTION {fCheckExit}
@@ -114,7 +114,7 @@ event_register {e_exit_retry} {AutoMaprun.tin} {.handler_maprun_retry};
 
     #NOP /* Check if the binary 2 flag (avoid) has been set on the exit */;
     #IF {$_fEC[exit][flags] & 2}        {#VAR {result} {0};};
-    
+
     #NOP /* Check if the exit has walkblock set */;
     #IF {&_fEC[exit][notes][walkblock]} {#VAR {result} {0};};
 
@@ -137,12 +137,12 @@ event_register {e_exit_retry} {AutoMaprun.tin} {.handler_maprun_retry};
 };
 
 /* Cleanup script and unload */
-#ALIAS {.handler_maprun_stop}
+#ALIAS {.handler_mapwalk_stop}
 {
     #NOP %1;
-    event_remove_handler {AutoMaprun.tin};
-    #CLASS {$path[mud]/Scripts/AutoMaprun.tin} {kill};
+    event_remove_handler {auto.map.walk.tin};
+    #CLASS {$path[mud]/Scripts/auto.map.walk.tin} {kill};
 };
 
-auto add {mapwalk} {.file load {$path[mud]/Scripts/AutoMaprun.tin};} {} {.handler_maprun_stop;};
-.handler_maprun_room;
+auto add {mapwalk} {.file load {$path[mud]/Scripts/auto.map.walk.tin};} {} {.handler_mapwalk_stop;};
+.handler_mapwalk_room;

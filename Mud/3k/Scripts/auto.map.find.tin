@@ -1,0 +1,38 @@
+#ALIAS {handler_auto_mapfind}
+{
+    #NOP %1;
+    #REGEXP {%2} {%i$auto[mapfind][variable]} 
+    {
+	    #ECHO {MAPFIND: Found %2};
+        event_raise {e_mapfind} {%2};
+        auto mapfind off;
+    };
+};
+
+#ALIAS {handler_auto_mapfind_end}
+{
+    #NOP %1;
+    auto mapwalk off;
+    #CLASS {$path[mud]/Scripts/auto.map.find.tin} {kill};
+};
+
+#ALIAS {handler_auto_mapfind_start}
+{
+    #NOP %1;
+    #IF {!&auto[mapfind][variable] || "$auto[mapfind][variable]" == ""}
+    {
+        #ECHO {MAPFIND: Syntax is "auto mapfind <something>"};
+        auto mapfind off;
+        #RETURN;
+    };
+
+    #ECHO {MAPFIND: Looking for $auto[mapfind][variable]};
+    auto mapwalk on;
+};
+
+#IF {!&auto[mapfind]}
+{
+    auto add {mapfind} {.file load {$path[mud]/Scripts/auto.map.find.tin}} {e_scan_room_item;e_scan_room_npc} {#NOP %%1;handler_auto_mapfind_end};
+};
+
+handler_auto_mapfind_start;
