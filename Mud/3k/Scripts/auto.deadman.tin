@@ -3,7 +3,7 @@
     #NOP %1;
     #FORMAT {auto[deadman][time]} {%T}; 
 };
-auto add {deadman} {.file load {$path[mud]/Scripts/AutoDeadman.tin}} {e_command} {#VAR {auto[deadman][time]} {0}};
+auto add {deadman} {.file load {$path[mud]/Scripts/auto.deadman.tin}} {e_command} {#VAR {auto[deadman][time]} {0}};
 
 #FUNCTION {fDeadmanActive}
 {
