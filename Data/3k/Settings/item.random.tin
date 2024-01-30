@@ -1425,7 +1425,7 @@
     {global} {1}
     {name} {Amber ring}
 }
-#VAR {_item[^A(n|) (bloody|double-bladed|dark|dull|engraved|extremely sharp|finely cut|finely crafted|glowing|heavy|hooked|jagged|light|lightly glowing|long|long thin|nasty|nicked|old|ornate|polished|razor-sharp|runed|sharp|shining|short|single edged|small|spiked|triple-edged|very dull|very sharp|wicked|)(, |)(adamantium|ash|aspen|balsam|birch|bronze|cedar|ebony|elm|gold|granite|iron|jade|mahogany|maple|mithril|oak|obsidian|onyx|pine|platinum|sardonyx|silver|steel|stone|titanium|) (bastardsword|battleaxe|blackjack|blade|broadsword|claymore|club|cudgel|cutlass|dagger|dirk|double-edged axe|falchion|flail|foil|handaxe|hatchet|jo|katana|khopesh|knife|kynac|longsword|mace|machete|main gauche|mattock|morningstar|no-dachi|nunchaku|pick|pickaxe|quarterstaff|rapier|sabre|sai|scimitar|shortsword|sledgehammer|staff|stiletto|sword|trident|two-handed sword|warhammer|war-axe|war-mattock|woodsman's axe)( \x28enchanted\x29|)$]} 
+#VAR {_item[^A(n|) (bloody|double-bladed|dark|dull|engraved|extremely sharp|finely cut|finely crafted|glowing|heavy|hooked|jagged|light|lightly glowing|long|long thin|nasty|nicked|old|ornate|polished|razor-sharp|runed|sharp|shining|short|single edged|small|spiked|triple-edged|very dull|very sharp|wicked|)(, |)(adamantium|ash|aspen|balsam|birch|bronze|cedar|ebony|elm|gold|granite|iron|jade|mahogany|maple|mithril|oak|obsidian|onyx|pine|platinum|sardonyx|silver|steel|stone|titanium|white|) (bastardsword|battleaxe|blackjack|blade|broadsword|claymore|club|cudgel|cutlass|dagger|dirk|double-edged axe|falchion|flail|foil|handaxe|hatchet|jo|katana|khopesh|knife|kynac|longsword|mace|machete|main gauche|mattock|morningstar|no-dachi|nunchaku|pick|pickaxe|quarterstaff|rapier|sabre|sai|scimitar|shortsword|sledgehammer|staff|stiletto|sword|trident|two-handed sword|warhammer|war-axe|war-mattock|woodsman's axe)( \x28enchanted\x29|)$]} 
 {
     {desc} 
     {
@@ -1456,7 +1456,7 @@
     {nomap} {1}
     {name} {candle}
 }
-#VAR {_item[^(brown|green|red|violet|yellow|black) gemstone$]} 
+#VAR {_item[^(brown|green|orange|red|violet|yellow|black) gemstone$]} 
 {
     {desc} 
     {
