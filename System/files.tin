@@ -80,17 +80,18 @@
 
 #FUNCTION {fFileList}
 {
-    #VAR {_fFileList} {};
-    #IF {"%2" != ""}
+    #UNVAR {result};
+    #LOCAL {_fFileList} {};
+    #SCAN DIR {%1} {_fFileList} {};
+    #FOREACH {*_fFileList[]} {_f}
     {
-        #SCRIPT {_fFileList} {find "%1" -name "%2" -type f -maxdepth 1 2>/dev/null};
+        #IF {"$_fFileList[$_f][FILE]" == "1"}
+        {
+            #LIST result ADD {%1/*_fFileList[$_f]};
+        };
     };
-    #ELSE
-    {
-        #SCRIPT {_fFileList} {find "%1" -type f -maxdepth 1 2>/dev/null};
-    };
-    #LINE SUBSTITUTE {VARIABLES;ESCAPES} #VAR {_fFileList} {$_fFileList};
-    #RETURN {$_fFileList};
+
+    #UNVAR {_f};
 };
 
 #FUNCTION {fFileRead}
