@@ -1,6 +1,7 @@
 #ALIAS {.scanRoomNPC}
 {
-	#LOCAL {_sRN[match]} {@fGetNPCRegex{%3}};
+    #IF {@fLocked{scan.%*}} {#RETURN}; 	
+    #LOCAL {_sRN[match]} {@fGetNPCRegex{%3}};
     #IF {"$_npc[$_sRN[match]][nomap]" == "1"}
     {
         #RETURN;
@@ -91,7 +92,7 @@ event_register {e_room_npc} {h_scan_npc} {.scanRoomNPC};
 {
 	#IF {&map[area][scaler] == 0}
 	{
-		scaler
+		#VAR {map[area][scaler]} {0};
 	};
 	#IF {"&_npc[%1][size][$map[area][scaler]][consider]" == "0"}
 	{
@@ -130,7 +131,7 @@ event_register {e_room_npc} {h_scan_npc} {.scanRoomNPC};
 {
 	#UNVAR {_fGNR};
 	#VAR {_fGNR[input]} {%1};
-	#REGEXP {$_fGNR[input]} {{^(.+?)(\s\[(scratched|wounded|dying)\])?(\s\<[.?*!^]+\>)?(\sattacking you!)?$}}
+	#REGEXP {$_fGNR[input]} {{^(.+?)(\s\<[.?*!^]+\>)?(\s\[(scratched|wounded|dying)\])?(\sattacking you!)?$}}
 	{
 		#VAR {_fGNR[input]} {&2};
 	};

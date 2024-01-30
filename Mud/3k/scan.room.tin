@@ -22,7 +22,6 @@
 #ALIAS {handler_room_contents}
 {
 	#NOP %1;
-    #IF {@fLocked{scan.%*}} {#RETURN};
     #LOCAL {_HRC} {};
 	#LIST {_HRC[tokenized]} CREATE {%2};
 	#LOCAL {_HRC[item][id]} {$_HRC[tokenized][2]};

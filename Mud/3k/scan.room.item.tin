@@ -1,5 +1,6 @@
 #ALIAS {.scanRoomItem}
 {
+    #IF {@fLocked{scan.%*}} {#RETURN};    
 	#LOCAL {_sRN[match]} {@fGetItemRegex{%3}};
 	#FORMAT {_sRN[hash]} {%H} {$_sRN[match]};
 	.scanRoomItemID       {$_sRN[match]} {%3} {%2};
