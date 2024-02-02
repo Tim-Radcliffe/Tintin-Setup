@@ -186,8 +186,41 @@
         {9} {It looks light.}
     }
     {id} {Heart of Malykkar}
-    {location} 
     {name} {Heart of Malykkar}
 	{nomap} {1}
 	{pickup} {1}    
 }
+#VAR {_item[^adhesive computer chip$]} 
+{
+    {desc} 
+    {
+        {1} {adhesive computer chip}
+        {2} {This looks like a small adhesive bandage, but in the center instead}
+        {3} {of a non-stick pad it has a small computer chip.  A minute label on}
+        {4} {the chip reads "Chummer, S.I.N.C. Override Prototype A173".  It}
+        {5} {looks useless to you, but maybe someone else could use it.}
+        {6} {This appears to be an artifact for the cyborg guild.}
+    }
+    {id} {overclock chip}
+    {name} {adhesive computer chip}
+	{nomap} {1}
+	{pickup} {1}
+}
+#VAR {item[^A Work Order$]} 
+{
+    {desc} 
+    {
+        {1} {A Work Order}
+        {2} {Slightly yellowed around the edges, this sheaf of papers appears to}
+        {3} {have been misplaced or thrown away some time ago.  The front cover is}
+        {4} {stamped [CONFIDENTIAL - TRAINED STAFF ONLY] in red ink, making you}
+        {5} {curious.  You could probably try and read the order if you are a}
+        {6} {member of the trained staff.}
+        {7} {This appears to be an artifact for the sii guild.}
+    }
+    {id} {work order}
+    {name} {A Work Order}
+	{nomap} {1}
+	{pickup} {1}    
+}
+
