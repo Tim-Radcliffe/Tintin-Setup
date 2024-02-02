@@ -1,12 +1,27 @@
 #ALIAS {eq}
 {
-	#ACTION {{^([^:]{3,13}):\s+(.*)$}}
+    #NOP %1;
+    #VAR {_eq[filelist]} {@fFileList{$path[equipment]}};
+
+    #FOREACH {$_eq[filelist][]} {_eq[item]}
+    {
+        #VAR {_eq[path]} {$_eq[item]};
+        #REPLACE {_eq[item]} {$path[equipment]/} {};
+        #REPLACE {_eq[item]} {.tin} {};
+        #FOREACH {{(}{)}{<}{>}{?}{!}{*}{%}{"}} {_eq[char]}
+        {
+          #REPLACE {_eq[item]} {@fAsciiHex{{$_eq[char]}{x}}} {$_eq[char]};
+        }        
+        #VAR {_eq[filetable][$_eq[item]]} {$_eq[path]};
+    };
+
+    #ACTION {{^([^:]{3,13}):\s+(.*)$}}
 	{
 		#IF {"%%2" != "Resistances"}
 		{
 			#IF {"%%3" != "none"} 
 			{
-				#VAR {my[eq][%%2]} {%%3};
+                #VAR {my[eq][%%2]} {%%3};
                 .eqLoadScript {%%3};
 			};
 		};
@@ -15,6 +30,7 @@
 	#ACTION {_command.eq}
 	{
 		#LINE GAG;
+        #UNVAR {_eq};
 		#UNACTION {{^([^:]{3,13}):\s+(.*)$}};
         #UNACTION {_command.eq};
 	};
@@ -29,7 +45,13 @@
 #ALIAS {.eqLoadScript}
 {
     #NOP %1;
-    .file load {$path[equipment]/%1.tin};
+    #FOREACH {*_eq[filetable][]} {_eq[match]}
+    {
+        #REGEXP {%1} {$_eq[match]}
+        {
+            .file load {$_eq[filetable][$_eq[match]]};
+        };
+    };
 };
 
 eq;

@@ -10,3 +10,5 @@
     };
 };
 event_register {e_combat_round} {$path[equipment]/A sticky cocoon.tin} {handler_cocoon};
+
+#GAG {The sticky cocoon absorbs part of the attack!};
