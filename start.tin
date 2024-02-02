@@ -62,7 +62,7 @@
     .SetPath {log}      {$path[log]/%4};
     .SetPath {log}      {$path[log]/%2};
 
-    .file loadall {$path[system]/events.tin};
+    .file load    {$path[system]/events.tin};
     .file loadall {$path[system]/*.tin};
     .file loadall {$path[settings]/*.tin};
     .file loadall {$path[profile]/*.tin};
