@@ -87,7 +87,7 @@ event_register {e_room_item} {scan.room.item.tin} {.scanRoomItem};
 {
 	#IF {&_item[%1][nomap] == 0 && &map[area][path] > 0}
 	{
-		.mapVariable {_item[%1]} {$_item[%1]};
+		.mapVariable add {_item} {%1} {$_item[%1]};
 	};
 };
 
