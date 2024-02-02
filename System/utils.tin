@@ -211,12 +211,19 @@ event_register {e_5_mins} {System/utils.tin} {.aProfileSave};
 
 #FUNCTION {fAsciiHex}
 {
-  #LOCAL {_fAH} {};
-  #FORMAT {_fAH[dec]} {%A} {%1};
-  #FORMAT {_fAH[hex]} {%X} {$_fAH[dec]};
-  #VAR {_fAH[prefix]} {\x};
-  #RETURN {$_fAH[prefix]$_fAH[hex]};
-}
+    #LOCAL {_fAH} {};
+    #FORMAT {_fAH[dec]} {%A} {%1};
+    #FORMAT {_fAH[hex]} {%X} {$_fAH[dec]};
+    #IF {"%2" != ""}
+    {
+        #LOCAL {_fAH[prefix]} {%2};
+    };
+    #ELSE 
+    {
+        #LOCAL {_fAH[prefix]} {\x};
+    };
+    #RETURN {$_fAH[prefix]$_fAH[hex]};
+};
 
 #FUNCTION {fEscapeString}
 {
