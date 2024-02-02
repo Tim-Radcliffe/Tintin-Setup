@@ -10,7 +10,7 @@
         {nomap} {1}
         {nokill} {1}
     }
-    {_npc[^A cargo truck$]} 
+    {^A cargo truck$} 
     {
         {alignment} {0}
         {desc} 
@@ -114,7 +114,7 @@
         }
         {undead} {1}
     }
-    {_npc[^Vilgan$]} 
+    {^Vilgan$} 
     {
         {alignment} {0}
         {desc} 
