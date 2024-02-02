@@ -3,8 +3,8 @@
 
 #ALIAS {.Lock} 
 {
-	#IF {"%0" == ""}
-	{
+    #IF {"%0" == ""}
+    {
         #LOCAL {_l} {};
         #LOCAL {_lockTable} {};
         #ECHO {Locks Active:};
@@ -16,10 +16,10 @@
         #LOCAL {_lockTable} {@fTable{$_lockTable}};
         #LIST {_lockTable} COLLAPSE {\n};
         #ECHO {$_lockTable};
-	};
-	#ELSE
-	{
-		#FORMAT {_lock[%1]} {%T};
+    };
+    #ELSE
+    {
+        #FORMAT {_lock[%1]} {%T};
         #IF {@fIsNumber{%2}}
         {
             #MATH {_lock[%1]} {$_lock[%1] + %2};
@@ -31,23 +31,23 @@
         };
         .file write {$path[profile]/lock.tin};        
         event_raise {e_lock_added} {%0};
-	};
+    };
 };
 
 #ALIAS {.Unlock}
 {
-	#IF {"%0" == ""}
-	{
-		.Lock;
-	};
-	#ELSE
-	{
+    #IF {"%0" == ""}
+    {
+        .Lock;
+    };
+    #ELSE
+    {
         #LOCAL {_lock_record} {};
         #FOREACH {*_lock[%1]} {_lock_record}
         {
             event_raise {e_lock_removed} {$_lock_record};
         };
-		#UNVAR {_lock[%1]};
+        #UNVAR {_lock[%1]};
         .file write {$path[profile]/lock.tin};
     };
 };
@@ -68,7 +68,7 @@
     {
         #RETURN 1;
     };
-	#RETURN 0;
+    #RETURN 0;
 };
 
 #IF {&{_lock} == 0}
