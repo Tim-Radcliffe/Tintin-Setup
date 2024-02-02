@@ -58,7 +58,7 @@ autopickup min;
                 .debug PICKUP {Item flagged always pick up};            
                 #IF {"$_item[%2][pickup_command]" != ""}
                 {
-                    #FORMAT {room[commandbuffer]} {$_item[%2][pickup_command]} {%4};
+                    #FORMAT {room[commandbuffer]} {$_item[%2][pickup_command]} {%3};
                 }
                 #ELSE
                 {
