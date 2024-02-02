@@ -4,15 +4,15 @@
     #ACTION {^%s{Edged|Crushing|Cold|Flame|Psionic|Lightning|Corrosion|Virulence|Power|Light}-\(%s%d\)-(%s%d\%\)}
     {
         #FORMAT {_necSpell} {%l} {%%2};
-        #LOCAL {_stdSpell} {@fStandardDamage{%%2}};
+        #LOCAL {_stdDamage} {@fStandardDamage{{%%2}{necromancer}}};
         #VAR {my[necromancer][spells][%%4][$_necSpell]} {%%6};
         #IF {"%%6" != "0"}
         {
-            #IF {&_npc[$opponent[regexp]][vulnerabilities][$_stdSpell] == 0} 
+            #IF {&_npc[$opponent[regexp]][vulnerabilities][$_stdDamage] == 0} 
             {
-                #VAR {_npc[$opponent[regexp]][vulnerabilities][$_stdSpell]} {0};
+                #VAR {_npc[$opponent[regexp]][vulnerabilities][$_stdDamage]} {0};
             };
-            #VAR {_npc[$opponent[regexp]][vulnerabilities][$_stdSpell]} {@fMax{{%%6}{$_npc[$opponent[regexp]][vulnerabilities][$_stdSpell]}}};
+            #VAR {_npc[$opponent[regexp]][vulnerabilities][$_stdDamage]} {@fMax{{%%6}{$_npc[$opponent[regexp]][vulnerabilities][$_stdDamage]}}};
 			.scanRoomNPCSave {$opponent[regexp]};	            
         };
         #UNVAR {_necSpell};
@@ -35,13 +35,13 @@ event_register e_killed_opponent spells.tin handler_necspells_combat_end;
     #LOCAL {_necSpells[max]} {0};
     #FOREACH {*my[necromancer][spells][@fMax{*my[necromancer][spells][]}][]} {s}
     {
-        #LOCAL {_stdSpell} {@fStandardDamage{$s}};        
-        #IF {&opponent[data][vulnerabilities][$_stdSpell] == 0}
+        #LOCAL {_stdDamage} {@fStandardDamage{{$s}{necromancer}}};        
+        #IF {&opponent[data][vulnerabilities][$_stdDamage] == 0}
         {
             #LOCAL {_necSpells[max]} {101};            
             #LOCAL {_necSpells[invoke]} {$s};
         };
-        #ELSEIF {$opponent[data][vulnerabilities][$_stdSpell] >= $_necSpells[max]}
+        #ELSEIF {$opponent[data][vulnerabilities][$_stdDamage] >= $_necSpells[max]}
         {
             #LOCAL {_necSpells[max]} {$opponent[data][vulnerabilities][$s]};
             #LOCAL {_necSpells[invoke]} {$s};
@@ -54,3 +54,5 @@ event_register e_killed_opponent spells.tin handler_necspells_combat_end;
     #SEND {!comtrance invoke $_necSpells[invoke]};
 };
 event_register e_combat spells.tin handler_necspells_combat_start; 
+
+#GAG {^  Clearing your spell efficiency listing master.$};

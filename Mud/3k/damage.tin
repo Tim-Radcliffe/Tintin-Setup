@@ -1,20 +1,40 @@
+#NOP @fStandardDamage{{<damagetext>}{<source>}}
 #FUNCTION {fStandardDamage} 
 {
-    #LOCAL {_input} {};
-    #FORMAT {_input} {%l} {%1};
-    #LOCAL {_dmg} 
+    #VAR {_dmg} {};
+    #FORMAT {_dmg[input]}  {%l} {%1};
+    #FORMAT {_dmg[source]} {%l} {%2};
+    #VAR {_dmg[table]} 
     { 
-        {edged}     {edged} 
-        {crushing}  {blunt}
-        {cold}      {ice}
-        {flame}     {fire}
-        {psionic}   {mind}
-        {lightning} {electric}
-        {corrosion} {acid}
-        {virulence} {poison}
-        {power}     {energy}
-        {light}     {radiation}
+        {edged}         {{tauron}{swashbuckling}{necromancer}{edged}    {corpse}{sliced up}     {precious stone}{razine}} 
+        {blunt}         {{tauron}{bludgeoning}  {necromancer}{crushing} {corpse}{bashed up}     {precious stone}{brutal}}
+        {ice}           {{tauron}{frost}        {necromancer}{cold}     {corpse}{frozen}        {precious stone}{icey}}
+        {fire}          {{tauron}{dragonslaying}{necromancer}{flame}    {corpse}{charred}       {precious stone}{flaming}}
+        {mind}          {{tauron}{spirit}       {necromancer}{psionic}  {corpse}{brainless}     {precious stone}{humming}}
+        {electric}      {{tauron}{stormfire}    {necromancer}{lightning}{corpse}{electrocuted}  {precious stone}{crackling}}
+        {acid}          {{tauron}{corrosion}    {necromancer}{corrosion}{corpse}{skinless}      {precious stone}{acidic}}
+        {poison}        {{tauron}{toxins}       {necromancer}{virulence}{corpse}{putrid}        {precious stone}{poisonous}}
+        {energy}        {{tauron}{absorption}   {necromancer}{power}    {corpse}{glowing}       {precious stone}{glowing}}
+        {radiation}     {{tauron}{atomics}      {necromancer}{light}    {corpse}{melted}        {precious stone}{radiant}}
     };
 
-    #RETURN {$_dmg[$_input]};
+    #IF {"%1" == "table"}
+    {
+        #RETURN {@fTable{$_dmg[table]}};        
+    };
+
+    #IF {"$_dmg[source]" != ""}
+    {
+        #LIST {_dmg[table]} INDEXATE {$_dmg[source]};
+        #LIST {_dmg[table]} {FIND} {$_dmg[input]} {_dmg[found]};
+    };
+    #ELSE 
+    {
+        #LOOP {1} {&_dmg[table][]} {_dmg[index]}
+        {
+            #LIST {_dmg[table][+$_dmg[index]]} SIMPLIFY;
+            #REGEXP {$_dmg[table][+$_dmg[index]]} {$_dmg[input]} {#VAR {_dmg[found]} {$_dmg[index]}}
+        };
+    };
+    #RETURN {*_dmg[table][+$_dmg[found]]};
 };
