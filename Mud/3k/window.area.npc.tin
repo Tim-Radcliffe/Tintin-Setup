@@ -29,6 +29,7 @@
   };
   .WindowSet {AreaNPC} {@fTable{$_wANPC[data]}};
   .WindowRefresh {AreaNPC};
+  #UNVAR {_wANPC};
 };
 event_register {e_map_enter} {window.area.npc.tin} {.WindowAreaNPC};
 
@@ -36,7 +37,3 @@ event_register {e_map_enter} {window.area.npc.tin} {.WindowAreaNPC};
 {
   .WindowAreaNPC;
 };
-
-
-
- 
