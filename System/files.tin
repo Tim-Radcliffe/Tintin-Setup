@@ -64,10 +64,10 @@
 
 #FUNCTION {fFileLoadAll}
 {
-	.debug FILE {LOADALL: %1};    
+	.debug FILE {LOADALL: %1}; 
 	#LOCAL {_fFLA[spec]} {@fParseFilePath{%1}};
 	#LOCAL {_fFLA[list]} {@fFileList{{$_fFLA[spec][path]}{$_fFLA[spec][name].$_fFLA[spec][ext]}}};
-	#IF {"$_fFLA[list]" != ""}
+    #IF {"$_fFLA[list]" != ""}
 	{
 		#FOREACH {$_fFLA[list][%*]} {file} 
 		{
@@ -82,13 +82,23 @@
 {
     #UNVAR {result};
     #LOCAL {_fFileList} {};
-    #SCAN DIR {%1} {_fFileList} {};
-    #FOREACH {*_fFileList[]} {_f}
+    #SCAN DIR {%1} {_fFileList[table]};
+    #LIST {_fFileList[table]} INDEXATE {FILE};
+    #LIST {_fFileList[table]} FILTER {1};
+
+    #IF {"%2" != ""}
     {
-        #IF {"$_fFileList[$_f][FILE]" == "1"}
-        {
-            #LIST result ADD {%1/*_fFileList[$_f]};
-        };
+        #LOCAL {_fFileList[match]} {%2};
+        #REPLACE {_fFileList[match]} {\x2A} {\x25\x2A};
+        #LIST {_fFileList[table]} INDEXATE;
+        #LINE SUBSTITUTE {VARIABLES;ESCAPES} #LIST {_fFileList[table]} FILTER {$_fFileList[match]};
+        #LOCAL {_fFileList[table]};
+    };
+    #VAR result {};
+    #FOREACH {*_fFileList[table][]} {_f}
+    {
+        #LIST result ADD {%1/$_f};
+        #REPLACE {result[-1]} {//} {/};
     };
 
     #UNVAR {_f};
@@ -117,7 +127,7 @@
 
 #FUNCTION {fFileDirTree}
 {
-	#LOCAL {_fFileDirTree} {}
+	#LOCAL {_fFileDirTree} {};
 	#SCRIPT {_fFileDirTree} {find "%1" -type d};
 	#RETURN {$_fFileDirTree};
 };
