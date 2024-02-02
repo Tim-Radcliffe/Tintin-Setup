@@ -1,0 +1,72 @@
+#ALIAS {mission}
+{
+    #SWITCH {"%0"}
+    {
+        #CASE {"ask"}
+        {
+            #ACTION {^You have been offered the mission '%%*'.$}
+            {
+                .log add {missions.log} {MISSION ACCEPTED: %%1};
+                #SEND {!mission accept 1};
+            };
+        };
+        #CASE {"return"}
+        {
+            #ACTION {^Congratulations!  You have completed the mission '%%*'.$}
+            {
+                .log add {missions.log} {MISSION COMPLETE: %%1};
+            };
+
+            #ACTION {^You have been awarded %%* for your efforts.}
+            {
+                .log add {missions.log} {MISSION REWARD: %%1};
+            };
+        };
+        #CASE {"cleanup"}
+        {
+            #UNACTION {^You have been offered the mission '%%*'.$};
+            #UNACTION {^Congratulations!  You have completed the mission '%%*'.$};
+            #UNACTION {^You have been awarded %%* for your efforts.};
+            #RETURN;
+        };
+    };
+    #SEND {!mission %0};
+};
+
+#ALIAS {handler_mission_npc}
+{
+    #NOP %1;
+    #REGEXP {%3} {{\<([.?*!^]+)\>}}
+    {
+        #LOCAL {_hMN[flags]} {};
+        #LIST {_hMN[flags]} TOKENIZE {&2};
+        #FOREACH {$_hMN[flags]} {_hMN[flag]}
+        {
+            #SWITCH {"$_hMN[flag]"}
+            {
+                #CASE {"!"} {mission return};
+                #CASE {"?"} {mission ask};
+            };
+        };
+    };
+};
+event_register {e_room_npc} {mission.tin} {handler_mission_npc};
+
+
+#NOP \s\<[.?*!^]+\>
+
+#NOP MISSION SETTER
+#NOP ? : Missions Available
+#NOP . : Missions in progress
+#NOP ! : Missions completed and not returned yet
+#NOP The Alphabet Serial Killer <.?>.
+#NOP You have been offered the mission 'Dwayne Hates "Girls"'.
+
+#NOP MISSION OBJECTIVE
+#NOP Letter A <^>.
+
+#NOP MISSION RETURN
+#NOP You tell The Alphabet Serial Killer that you've finished the mission.
+#NOP Congratulations!  You have completed the mission 'Dwayne Hates "Jocks"'.
+#NOP You have been awarded 500 coins for your efforts.
+#NOP You have been awarded 1 int for your efforts.
