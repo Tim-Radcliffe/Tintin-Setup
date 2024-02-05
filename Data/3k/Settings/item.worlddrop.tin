@@ -1,6 +1,7 @@
-#VAR {_item[^Frosted helmet of Aylin$]} 
+#VAR {_item[^Frosted helmet of Aylin$]}
 {
-	{desc} 
+	{_area} {global}
+	{desc}
 	{
 		{1} {Frosted helmet of Aylin}
 		{2} {Magnificently crafted, this steel helmet has an icy shimmer to it. }
@@ -21,4 +22,4 @@
 	{name} {Frosted helmet of Aylin}
 	{nomap} {1}
 	{pickup} {1}
-}   
+}

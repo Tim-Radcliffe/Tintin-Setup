@@ -1,4 +1,11 @@
-#VAR {_item[([\(\[])([\-\|\*]{5})[\)\]]\s.*$]} {{global}{1}{pickup}{1}{nomap}{1}{pickup_command}{.corpse get}};
+#VAR {_item[([\(\[])([\-\|\*]{5})[\)\]]\s.*$]} 
+{
+    {_area} {global}
+    {global} {1}
+    {pickup} {1}
+    {nomap} {1}
+    {pickup_command} {.corpse get}
+};
 
 #ALIAS {.cs_held_get}     {#SEND {!get preservation %1};#SEND {!keep preservation};};
 #ALIAS {.cs_held_drop}    {#SEND {!drop preservation %1};};
@@ -42,6 +49,16 @@
             #ELSE
             {
                 #SEND {!wrap remains};
+                #IF {$my[corpse][held][current] <= $my[corpse][held][max]}
+                {
+                    #SEND {!preserve remains};
+                    .corpse get;
+                    .corpse store;
+                };
+                #ELSE
+                {
+                    .AbsorbCorpse ground;
+                };                
             };
             #SEND {!glance};
 		};
@@ -75,7 +92,7 @@
 		};
 	};
 };
-auto {add} {consecrate} {#ACTION {^  You are already at 100% consecration master.} {auto consecrate off};} {} {};
+auto {add} {consecrate} {#ACTION {^  You are already at 100% consecration master.} {auto consecrate off};} {} {#UNACTION {^  You are already at 100% consecration master.}};
 
 /* Clean up corpses if you can't carry them */
 #ACTION {^  You can't carry any more master, leaving it on the ground.}
@@ -83,19 +100,9 @@ auto {add} {consecrate} {#ACTION {^  You are already at 100% consecration master
     .AbsorbCorpse ground;
 } {3};
 
-#ACTION {{^All your corpses are already bigger than what is here.|^The coffin expels a corpse!}}
-{
-    #IF {$my[corpse][held][current] <= $my[corpse][held][max]}
-    {
-        #SEND {!preserve remains};
-        .corpse get;
-        .corpse store;
-    };
-    #ELSE
-    {
-        .AbsorbCorpse ground;
-    };
-} {3};
+#NOP #ACTION {{^All your corpses are already bigger than what is here.|^The coffin expels a corpse!}}
+#NOP {
+#NOP } {3};
 
 #ALIAS {handler_auto_preserve}
 {
@@ -184,8 +191,7 @@ auto {add} {preserve} {} {e_killed_opponent} {};
 	#CLASS {cCorpseRescan} {CLOSE};
 	#SEND {!ic};
 	#SEND {!iu c};
-	#SEND {!icof};
-	#SEND {corpse.rescan.finished};
+    #SEND {corpse.rescan.finished};
 };
 
 #ALIAS {handler_corpse_sort}

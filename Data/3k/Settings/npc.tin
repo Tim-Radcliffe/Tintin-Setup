@@ -1,142 +1,148 @@
-#VARIABLE {_npc}
+#VAR {_npc[^\w+, \w+'s .+$]}
 {
-    {^\w+, \w+'s .+$}
-    {
-        {nomap} {1}
-        {nokill} {1}
-    }
-    {^A tank named}
-    {
-        {nomap} {1}
-        {nokill} {1}
-    }
-    {^A cargo truck$} 
-    {
-        {alignment} {0}
-        {desc} 
-        {
-            {1} {A cargo truck}
-            {2} {This cargo truck is part of the Juggernauts guild. It belongs to}
-            {3} {Damage. You better not bother it.}
-            {4} {It is in perfect health.}
-        }
-        {id} {Truck}
-        {nomap} {1}
-        {nokill} {1}
-        {name} {A cargo truck}
-        {size} 
-        {
-            {0} 
-            {
-                {consider} {900}
-            }
-        }
-        
-    }    
-    {^.+ \(bound by \w+)$}
-    {
-        {nomap} {1}
-        {nokill} {1}
-    }
-    {Jugger Support Mech} 
-    {
-            {nomap} {1}
-            {nokill} {1}
-    }
-    {esquire} 
-    {
-            {nomap} {1}
-            {nokill} {1}
-    }
-    {the {Bayen|Bolwyn|Ghast|Greesh|Grimare|Heucuva|Manshi|Mohrg|Quarin|Skeleton|Tholen|Valithyn|Valpur|Wight|Zombie}} 
-    {
-        {alignment} {0}        
-        {desc} 
-        {
-            {1} {A valithyn under the control of Blutash}
-            {2} {This mighty undead creature straddles the line of existence between}
-            {3} {skeletal corporealness and that of the ghostly ethereal.  Its upper}
-            {4} {torso appears to be that of a lithe female warrior, clad in spectral}
-            {5} {armour with eyes glowing of azure banefire beneath the midnight cowl}
-            {6} {of her dark helm.  The lower body of the deathly creature trails off}
-            {7} {into a vaporous essence that effects her to near-hover before you. }
-            {8} {Bound by a powerful soul, retrieved from the mist-veiled borders of}
-            {9} {Death itself, the titanic power of this entity wells throughout the}
-            {10} {room, chilling you to the very bone, making you think very carefully}
-            {11} {about who is really in control here.}
-            {12} {She is better than perfect.}
-        }        
-        {id} {undead}
-        {nomap} {1}
-        {nokill} {1}
-        {size} 
-        {
-            {0} 
-            {
-                {consider} {100}
-            }
-        }
-        {undead} {1}
-    }
-    {the packmule} 
-    {
-            {nomap} {1}
-            {nokill} {1}
-    }
-    {under the control of} 
-    {
-        {alignment} {0}
-        {id} {Undead}
-        {desc} 
-        {
-            {1} {A valithyn under the control of Blutash}
-            {2} {This mighty undead creature straddles the line of existence between}
-            {3} {skeletal corporealness and that of the ghostly ethereal.  Its upper}
-            {4} {torso appears to be that of a lithe female warrior, clad in spectral}
-            {5} {armour with eyes glowing of azure banefire beneath the midnight cowl}
-            {6} {of her dark helm.  The lower body of the deathly creature trails off}
-            {7} {into a vaporous essence that effects her to near-hover before you. }
-            {8} {Bound by a powerful soul, retrieved from the mist-veiled borders of}
-            {9} {Death itself, the titanic power of this entity wells throughout the}
-            {10} {room, chilling you to the very bone, making you think very carefully}
-            {11} {about who is really in control here.}
-            {12} {She is better than perfect.}
-        }        
-        {name} {A valithyn under the control of Blutash}
-        {nokill} {1}
-        {nomap} {1}
-        {size} 
-        {
-            {0} 
-            {
-                {consider} {100}
-            }
-        }
-        {undead} {1}
-    }
-    {^Vilgan$} 
-    {
-        {alignment} {0}
-        {desc} 
-        {
-            {1} {Vilgan}
-            {2} {This is Vilgan, perhaps the most annoying person on the earth.  He'll}
-            {3} {talk and talk and talk, but never have much to say.  It's ill-advised}
-            {4} {you kill him, however, cuz that's murder, and you may wind up in jail.}
-            {5} {A little abuse, however, wouldn't be uncalled for.}
-            {6} {It is in perfect health.}
-        }
-        {id} {Vilgan}
-        {nomap} {1}
-        {nokill} {1}
-        {name} {Vilgan}
-        {size} 
-        {
-            {0} 
-            {
-                {consider} {100}
-            }
-        }
-        
-    }    
-}
+	{_area} {global}
+	{nomap} {1}
+	{nokill} {1}
+};
+#VAR {_npc[^A tank named]}
+{
+	{_area} {global}
+	{nomap} {1}
+	{nokill} {1}
+};
+#VAR {_npc[^A cargo truck$]}
+{
+	{_area} {global}
+	{alignment} {0}
+	{desc}
+	{
+		{1} {A cargo truck}
+		{2} {This cargo truck is part of the Juggernauts guild. It belongs to}
+		{3} {Damage. You better not bother it.}
+		{4} {It is in perfect health.}
+	}
+	{id} {Truck}
+	{nomap} {1}
+	{nokill} {1}
+	{name} {A cargo truck}
+	{size}
+	{
+		{0}
+		{
+			{consider} {900}
+		}
+	}
+};
+#VAR {_npc[^.+ \(bound by \w+)$]}
+{
+	{_area} {global}
+	{nomap} {1}
+	{nokill} {1}
+};
+#VAR {_npc[Jugger Support Mech]}
+{
+	{_area} {global}
+		{nomap} {1}
+		{nokill} {1}
+};
+#VAR {_npc[esquire]}
+{
+	{_area} {global}
+		{nomap} {1}
+		{nokill} {1}
+};
+#VAR {_npc[the {Bayen|Bolwyn|Ghast|Greesh|Grimare|Heucuva|Manshi|Mohrg|Quarin|Skeleton|Tholen|Valithyn|Valpur|Wight|Zombie}]}
+{
+	{_area} {global}
+	{alignment} {0}
+	{desc}
+	{
+		{1} {A valithyn under the control of Blutash}
+		{2} {This mighty undead creature straddles the line of existence between}
+		{3} {skeletal corporealness and that of the ghostly ethereal.  Its upper}
+		{4} {torso appears to be that of a lithe female warrior, clad in spectral}
+		{5} {armour with eyes glowing of azure banefire beneath the midnight cowl}
+		{6} {of her dark helm.  The lower body of the deathly creature trails off}
+		{7} {into a vaporous essence that effects her to near-hover before you. }
+		{8} {Bound by a powerful soul, retrieved from the mist-veiled borders of}
+		{9} {Death itself, the titanic power of this entity wells throughout the}
+		{10} {room, chilling you to the very bone, making you think very carefully}
+		{11} {about who is really in control here.}
+		{12} {She is better than perfect.}
+	}
+	{id} {undead}
+	{nomap} {1}
+	{nokill} {1}
+	{size}
+	{
+		{0}
+		{
+			{consider} {100}
+		}
+	}
+	{undead} {1}
+};
+#VAR {_npc[the packmule]}
+{
+	{_area} {global}
+		{nomap} {1}
+		{nokill} {1}
+};
+#VAR {_npc[under the control of]}
+{
+	{_area} {global}
+	{alignment} {0}
+	{id} {Undead}
+	{desc}
+	{
+		{1} {A valithyn under the control of Blutash}
+		{2} {This mighty undead creature straddles the line of existence between}
+		{3} {skeletal corporealness and that of the ghostly ethereal.  Its upper}
+		{4} {torso appears to be that of a lithe female warrior, clad in spectral}
+		{5} {armour with eyes glowing of azure banefire beneath the midnight cowl}
+		{6} {of her dark helm.  The lower body of the deathly creature trails off}
+		{7} {into a vaporous essence that effects her to near-hover before you. }
+		{8} {Bound by a powerful soul, retrieved from the mist-veiled borders of}
+		{9} {Death itself, the titanic power of this entity wells throughout the}
+		{10} {room, chilling you to the very bone, making you think very carefully}
+		{11} {about who is really in control here.}
+		{12} {She is better than perfect.}
+	}
+	{name} {A valithyn under the control of Blutash}
+	{nokill} {1}
+	{nomap} {1}
+	{size}
+	{
+		{0}
+		{
+			{consider} {100}
+		}
+	}
+	{undead} {1}
+};
+#VAR {_npc[^Vilgan$]}
+{
+	{_area} {global}
+	{alignment} {0}
+	{desc}
+	{
+		{1} {Vilgan}
+		{2} {This is Vilgan, perhaps the most annoying person on the earth.  He'll}
+		{3} {talk and talk and talk, but never have much to say.  It's ill-advised}
+		{4} {you kill him, however, cuz that's murder, and you may wind up in jail.}
+		{5} {A little abuse, however, wouldn't be uncalled for.}
+		{6} {It is in perfect health.}
+	}
+	{id} {Vilgan}
+	{nomap} {1}
+	{nokill} {1}
+	{name} {Vilgan}
+	{size}
+	{
+		{0}
+		{
+			{consider} {100}
+		}
+	}
+
+};

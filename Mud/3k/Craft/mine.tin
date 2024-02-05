@@ -61,6 +61,7 @@ auto add {mine}
     .file load {$path[craft]/mine.tin};
     #VAR {_item[A {copper|bronze|iron|steel|silver|gold|mithril|titanium|ebon|adamantium|obsidian|nethernium|voidstone|phasemetal|chaostone} ore deposit]}
     {
+        {_area} {global}        
         {nomap} {1}
         {pickup} {1}
         {pickup_command} {handler_auto_mine_ore}

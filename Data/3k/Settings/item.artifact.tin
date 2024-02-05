@@ -1,5 +1,6 @@
 #VAR {_item[^a weathered catchpocket$]}
 {
+	{_area} {global}
 	{desc}
 	{
 		{1} {a weathered catchpocket}
@@ -15,9 +16,10 @@
 	{name} {a weathered catchpocket}
 	{nomap} {1}
 	{pickup} {1}
-}
+};
 #VAR {_item[^Mystic Rift$]}
 {
+	{_area} {global}
 	{desc}
 	{
 		{1} {Mystic Rift}
@@ -32,9 +34,10 @@
 	{name} {Mystic Rift}
 	{nomap} {1}
 	{pickup} {1}
-}
+};
 #VAR {_item[^Nectar Of The Gods$]}
 {
+	{_area} {global}
 	{desc}
 	{
 		{1} {Nectar Of The Gods}
@@ -50,34 +53,61 @@
 	{name} {Nectar Of The Gods}
 	{nomap} {1}
 	{pickup} {1}
-}
+};
 #VAR {_item[^a vial of holy water$]}
 {
-    {desc}
-    {
-        {1} {a vial of holy water}
-        {2} {This vial is blessed by the gods turning any water put into it into}
-        {3} {highly potent holy water. The liquid contained within is highly useful}
-        {4} {at eradicating the undead. You could 'douse' a vile foe with it to let}
-        {5} {its holy power burn their undead flesh. If overwhelmed by the undead}
-        {6} {fiends, you could shatter the vial to rain holy water on your}
-        {7} {surroundings. If the vial's contents run low, you can replenish them}
-        {8} {in any water source. The flask is completely full.}
-        {9} {This appears to be an artifact for the priest guild.}
-    }
-    {global} {1}
-    {id} {vial}
-    {name} {a vial of holy water}
-    {nomap} {1}
-    {pickup} {1}
-}
-#VAR {_item[crystal charm]}             {{nomap}{1}{pickup}{1}};
-#VAR {_item[platinum coin]}             {{nomap}{1}{pickup}{1}};
-#VAR {_item[small grey stone]}          {{nomap}{1}{pickup}{1}};
-#VAR {_item[dark leather strap]}        {{nomap}{1}{pickup}{1}};
-#VAR {_item[cloudy glass sphere]}       {{nomap}{1}{pickup}{1}};
+	{_area} {global}
+	{desc}
+	{
+		{1} {a vial of holy water}
+		{2} {This vial is blessed by the gods turning any water put into it into}
+		{3} {highly potent holy water. The liquid contained within is highly useful}
+		{4} {at eradicating the undead. You could 'douse' a vile foe with it to let}
+		{5} {its holy power burn their undead flesh. If overwhelmed by the undead}
+		{6} {fiends, you could shatter the vial to rain holy water on your}
+		{7} {surroundings. If the vial's contents run low, you can replenish them}
+		{8} {in any water source. The flask is completely full.}
+		{9} {This appears to be an artifact for the priest guild.}
+	}
+	{global} {1}
+	{id} {vial}
+	{name} {a vial of holy water}
+	{nomap} {1}
+	{pickup} {1}
+};
+#VAR {_item[crystal charm]}
+{
+	{_area} {global}
+	{nomap} {1}
+	{pickup} {1}
+};
+#VAR {_item[platinum coin]}
+{
+	{_area} {global}
+	{nomap} {1}
+	{pickup} {1}
+};
+#VAR {_item[small grey stone]}
+{
+	{_area} {global}
+	{nomap} {1}
+	{pickup} {1}
+};
+#VAR {_item[dark leather strap]}
+{
+	{_area} {global}
+	{nomap} {1}
+	{pickup} {1}
+};
+#VAR {_item[cloudy glass sphere]}
+{
+	{_area} {global}
+	{nomap} {1}
+	{pickup} {1}
+};
 #VAR {_item[dark skull key]}
 {
+	{_area} {global}
 	{desc}
 	{
 		{1} {dark skull key}
@@ -92,135 +122,147 @@
 	{nomap} {1}
 	{pickup} {1}
 };
-#VAR {_item[shattered jaw bone]}        {{nomap}{1}{pickup}{1}};
+#VAR {_item[shattered jaw bone]}
+{
+	{_area} {global}
+	{nomap} {1}
+	{pickup} {1}
+};
 #VAR {_item[^The tower shield of the Akh'Velahr$]}
 {
-    {desc}
-    {
-        {1} {The tower shield of the Akh'Velahr}
-        {2} {Forged from darkest adamantium, the strongest of the metals the}
-        {3} {ancient elven smiths with forge armour from, is this massive }
-        {4} {tower shield. Dented and scratched from numerous battles down the}
-        {5} {centuries, this ancient shield has lost none of its majestic glory.}
-        {6} {This appears to be an artifact for the bladesinger guild.}
-        {7} {The shield is in perfect condition.}
-        {8} {It has a magical glow about it.}
-        {9} {This armor has the following resistances:}
-        {10} {decent edged, decent blunt, 3 fire, 3 ice, 3 acid, 3 electric, 3 mind, 3}
-        {11} {energy, 3 poison, 3 radiation}
-        {12} {It doesn't look too heavy.}
-    }
-    {id} {tower shield of the akh�velahr}
-    {name} {The tower shield of the Akh'Velahr}
+	{_area} {global}
+	{desc}
+	{
+		{1} {The tower shield of the Akh'Velahr}
+		{2} {Forged from darkest adamantium, the strongest of the metals the}
+		{3} {ancient elven smiths with forge armour from, is this massive }
+		{4} {tower shield. Dented and scratched from numerous battles down the}
+		{5} {centuries, this ancient shield has lost none of its majestic glory.}
+		{6} {This appears to be an artifact for the bladesinger guild.}
+		{7} {The shield is in perfect condition.}
+		{8} {It has a magical glow about it.}
+		{9} {This armor has the following resistances:}
+		{10} {decent edged, decent blunt, 3 fire, 3 ice, 3 acid, 3 electric, 3 mind, 3}
+		{11} {energy, 3 poison, 3 radiation}
+		{12} {It doesn't look too heavy.}
+	}
+	{id} {tower shield of the akh�velahr}
+	{name} {The tower shield of the Akh'Velahr}
 	{nomap} {1}
 	{pickup} {1}
-}
+};
 #VAR {_item[^Vortex Stabilizer$]}
 {
-    {desc}
-    {
-        {1} {Vortex Stabilizer}
-        {2} {This is an odd looking cylindrical object that hums with power.  Its}
-        {3} {presence near a vortex would likely alter its harmonics in a way to}
-        {4} {grant it a larger capacity.  This silver, metallic item is cold to the}
-        {5} {touch and about half a meter long.}
-        {6} {This appears to be an artifact for the elemental guild.}
-        {7} {It looks light.}
-    }
-    {id} {vortex stabilizer}
-    {name} {Vortex Stabilizer}
+	{_area} {global}
+	{desc}
+	{
+		{1} {Vortex Stabilizer}
+		{2} {This is an odd looking cylindrical object that hums with power.  Its}
+		{3} {presence near a vortex would likely alter its harmonics in a way to}
+		{4} {grant it a larger capacity.  This silver, metallic item is cold to the}
+		{5} {touch and about half a meter long.}
+		{6} {This appears to be an artifact for the elemental guild.}
+		{7} {It looks light.}
+	}
+	{id} {vortex stabilizer}
+	{name} {Vortex Stabilizer}
 	{nomap} {1}
 	{pickup} {1}
-}
+};
 #VAR {_item[^Mental Harmonizing Stimulator$]}
 {
-    {desc}
-    {
-        {1} {Mental Harmonizing Stimulator}
-        {2} {Fashioned from a dull grey metal, this innocuous-looking oval of metal}
-        {3} {is curiously labelled as a 'Mental Harmonizing Stimulator 408:BCX'. }
-        {4} {About seven inches at the longest point, and almost four at the}
-        {5} {narrowest, it is quite weighty.  By lifting it to your ear, you can}
-        {6} {detect a not-quite-audible vibration, somewhere just below your level}
-        {7} {of hearing - almost as if it is massaging your mind with sonic}
-        {8} {vibrations.}
-        {9} {This appears to be an artifact for the sii guild.}
-    }
-    {id} {stimulator}
-    {name} {Mental Harmonizing Stimulator}
+	{_area} {global}
+	{desc}
+	{
+		{1} {Mental Harmonizing Stimulator}
+		{2} {Fashioned from a dull grey metal, this innocuous-looking oval of metal}
+		{3} {is curiously labelled as a 'Mental Harmonizing Stimulator 408:BCX'. }
+		{4} {About seven inches at the longest point, and almost four at the}
+		{5} {narrowest, it is quite weighty.  By lifting it to your ear, you can}
+		{6} {detect a not-quite-audible vibration, somewhere just below your level}
+		{7} {of hearing - almost as if it is massaging your mind with sonic}
+		{8} {vibrations.}
+		{9} {This appears to be an artifact for the sii guild.}
+	}
+	{id} {stimulator}
+	{name} {Mental Harmonizing Stimulator}
 	{nomap} {1}
 	{pickup} {1}
-}
-#VAR {_item[^Platinum Lace Circlet$]} 
+};
+#VAR {_item[^Platinum Lace Circlet$]}
 {
-    {desc} 
-    {
-        {1} {Platinum Lace Circlet}
-        {2} {This intricate, and delicate circlet is made out of platinum in a lace}
-        {3} {pattern that must have taken weeks of dedication and steady hand to}
-        {4} {craft without error.  The pattern of lattice weaves in and around}
-        {5} {itself and is in fact crafted from a single thread of platinum into}
-        {6} {this amazing artifact.  This crown provides an amazing peace of mind}
-        {7} {when worn.}
-        {8} {This appears to be an artifact for the monk guild.}
-        {9} {The circlet is in perfect condition.}
-        {10} {It looks light.}
-    }
-    {id} {peace circlet}
-    {name} {Platinum Lace Circlet}
-	{nomap} {1}
-	{pickup} {1}    
-}
-#VAR {_item[^Heart of Malykkar$]} 
-{
-    {desc} 
-    {
-        {1} {Heart of Malykkar}
-        {2} {The shriveled black heart of Malykkar, a loyal servant of Kyron, in a}
-        {3} {dark crystal box.  The crystal is clouded black and deep violet as if}
-        {4} {it were saturated with clotted blood.  Engraved in its lid is the text}
-        {5} {"MALYKKAR THE MIGHTY SCOURGE OF KYRON 91".  There were once more}
-        {6} {numbers engraved at the end, but they have since worn away.  A faint}
-        {7} {glow of evil energy emanates from the box.}
-        {8} {This appears to be an artifact for the priest guild.}
-        {9} {It looks light.}
-    }
-    {id} {Heart of Malykkar}
-    {name} {Heart of Malykkar}
-	{nomap} {1}
-	{pickup} {1}    
-}
-#VAR {_item[^adhesive computer chip$]} 
-{
-    {desc} 
-    {
-        {1} {adhesive computer chip}
-        {2} {This looks like a small adhesive bandage, but in the center instead}
-        {3} {of a non-stick pad it has a small computer chip.  A minute label on}
-        {4} {the chip reads "Chummer, S.I.N.C. Override Prototype A173".  It}
-        {5} {looks useless to you, but maybe someone else could use it.}
-        {6} {This appears to be an artifact for the cyborg guild.}
-    }
-    {id} {overclock chip}
-    {name} {adhesive computer chip}
+	{_area} {global}
+	{desc}
+	{
+		{1} {Platinum Lace Circlet}
+		{2} {This intricate, and delicate circlet is made out of platinum in a lace}
+		{3} {pattern that must have taken weeks of dedication and steady hand to}
+		{4} {craft without error.  The pattern of lattice weaves in and around}
+		{5} {itself and is in fact crafted from a single thread of platinum into}
+		{6} {this amazing artifact.  This crown provides an amazing peace of mind}
+		{7} {when worn.}
+		{8} {This appears to be an artifact for the monk guild.}
+		{9} {The circlet is in perfect condition.}
+		{10} {It looks light.}
+	}
+	{id} {peace circlet}
+	{name} {Platinum Lace Circlet}
 	{nomap} {1}
 	{pickup} {1}
-}
-#VAR {item[^A Work Order$]} 
+};
+#VAR {_item[^Heart of Malykkar$]}
 {
-    {desc} 
-    {
-        {1} {A Work Order}
-        {2} {Slightly yellowed around the edges, this sheaf of papers appears to}
-        {3} {have been misplaced or thrown away some time ago.  The front cover is}
-        {4} {stamped [CONFIDENTIAL - TRAINED STAFF ONLY] in red ink, making you}
-        {5} {curious.  You could probably try and read the order if you are a}
-        {6} {member of the trained staff.}
-        {7} {This appears to be an artifact for the sii guild.}
-    }
-    {id} {work order}
-    {name} {A Work Order}
+	{_area} {global}
+	{desc}
+	{
+		{1} {Heart of Malykkar}
+		{2} {The shriveled black heart of Malykkar, a loyal servant of Kyron, in a}
+		{3} {dark crystal box.  The crystal is clouded black and deep violet as if}
+		{4} {it were saturated with clotted blood.  Engraved in its lid is the text}
+		{5} {"MALYKKAR THE MIGHTY SCOURGE OF KYRON 91".  There were once more}
+		{6} {numbers engraved at the end, but they have since worn away.  A faint}
+		{7} {glow of evil energy emanates from the box.}
+		{8} {This appears to be an artifact for the priest guild.}
+		{9} {It looks light.}
+	}
+	{id} {Heart of Malykkar}
+	{name} {Heart of Malykkar}
 	{nomap} {1}
-	{pickup} {1}    
-}
+	{pickup} {1}
+};
+#VAR {_item[^adhesive computer chip$]}
+{
+	{_area} {global}
+	{desc}
+	{
+		{1} {adhesive computer chip}
+		{2} {This looks like a small adhesive bandage, but in the center instead}
+		{3} {of a non-stick pad it has a small computer chip.  A minute label on}
+		{4} {the chip reads "Chummer, S.I.N.C. Override Prototype A173".  It}
+		{5} {looks useless to you, but maybe someone else could use it.}
+		{6} {This appears to be an artifact for the cyborg guild.}
+	}
+	{id} {overclock chip}
+	{name} {adhesive computer chip}
+	{nomap} {1}
+	{pickup} {1}
+};
+#VAR {item[^A Work Order$]}
+{
+	{_area} {global}
+	{desc}
+	{
+		{1} {A Work Order}
+		{2} {Slightly yellowed around the edges, this sheaf of papers appears to}
+		{3} {have been misplaced or thrown away some time ago.  The front cover is}
+		{4} {stamped [CONFIDENTIAL - TRAINED STAFF ONLY] in red ink, making you}
+		{5} {curious.  You could probably try and read the order if you are a}
+		{6} {member of the trained staff.}
+		{7} {This appears to be an artifact for the sii guild.}
+	}
+	{id} {work order}
+	{name} {A Work Order}
+	{nomap} {1}
+	{pickup} {1}
+};
 
