@@ -2,1206 +2,947 @@
 
 #VARIABLE {_mapVariable}
 {
-    {_item[ATM]} 
+    {_item} 
     {
-        {desc} 
+        {ATM} 
         {
-            {1} {An ATM (c) Pinnacle Bank}
-            {2} {A small apparatus with a window and many buttons.}
-            {3} {You can see that the buttons have words printed on}
-            {4} {them with instructions:}
-            {5} {balance                    - 0 coins}
-            {6} {check                      - 10 coins}
-            {7} {deposit <amount> or all    - 15 coins}
-            {8} {withdraw <amount>          - 0 coins}
-            {9} {transfer <amt> to <player> - 25 coins}
-            {10} {transfer block             - free, (un)blocks transfers}
-            {11} {<player> must be in game}
-            {12} {(c) Pinnacle Bank of 3-Kingdoms}
-        }
-        {global} {1}
-        {id} {atm}
-        {location} 
-        {
-            {Pinnacle/Fantasy/Necromancer Guild} 
+            {_area} {Pinnacle/Fantasy/Necromancer Guild}
+            {desc} 
             {
-                {73} {}
+                {1} {An ATM (c) Pinnacle Bank}
+                {2} {A small apparatus with a window and many buttons.}
+                {3} {You can see that the buttons have words printed on}
+                {4} {them with instructions:}
+                {5} {balance                    - 0 coins}
+                {6} {check                      - 10 coins}
+                {7} {deposit <amount> or all    - 15 coins}
+                {8} {withdraw <amount>          - 0 coins}
+                {9} {transfer <amt> to <player> - 25 coins}
+                {10} {transfer block             - free, (un)blocks transfers}
+                {11} {<player> must be in game}
+                {12} {(c) Pinnacle Bank of 3-Kingdoms}
             }
-        }
-        {name} {An ATM (c) Pinnacle Bank}
-        {pickup} {1}
-        {pickup_command} {.file load {Local/3k/ATM.tin}}
-    }
-    {_item[^A Ragged Cloak \x28glowing\x29$]} 
-    {
-        {desc} 
-        {
-            {1} {A Ragged Cloak (glowing)}
-            {2} {A ragged looking cloak made from some animal's pelt.  }
-            {3} {It's lice ridden and tattered with age.}
-            {4} {The cloak is in perfect condition.}
-            {5} {This armor has the following resistances:}
-            {6} {good edged, good blunt, good ice, good acid, good electric}
-            {7} {It looks light.}
-        }
-        {id} {A ragged Cloak}
-        {location} 
-        {
-            {Pinnacle/Fantasy/Necromancer Guild} 
+            {global} {1}
+            {id} {atm}
+            {location} 
             {
-                {47} {}
+                {Pinnacle/Fantasy/Necromancer Guild} 
+                {
+                    {73} {}
+                }
             }
+            {name} {An ATM (c) Pinnacle Bank}
+            {pickup} {1}
+            {pickup_command} {.file load {Local/3k/ATM.tin}}
         }
-        {name} {A Ragged Cloak (glowing)}
-    }
-    {_item[^A Trashcan$]} 
-    {
-        {desc} 
+        {^A Trashcan$} 
         {
-            {1} {A Trashcan}
-            {2} {Use this trashcan to dispose of any garbage. By doing your part to}
-            {3} {help make 3k a cleaner, thus better place, brings rewards to all}
-            {4} {loyal citizens. To do this type: dispose <item> for single items}
-            {5} {and dispose <all> for all unkept items.}
-            {6} {Note: Typing dispose all will dispose all unkept items so make sure}
-            {7} {you type keep <item> for the things you want to keep. Also}
-            {8} {typing dispose all will not get rid of guild objects or other}
-            {9} {items that cannot be dropped. Any problems mail Rastafan.}
-        }
-        {id} {trashcan}
-        {location} 
-        {
-            {Pinnacle/Fantasy/Necromancer Guild} 
+            {_area} {Pinnacle/Fantasy/Necromancer Guild}
+            {desc} 
             {
-                {41} {}
-                {46} {}
+                {1} {A Trashcan}
+                {2} {Use this trashcan to dispose of any garbage. By doing your part to}
+                {3} {help make 3k a cleaner, thus better place, brings rewards to all}
+                {4} {loyal citizens. To do this type: dispose <item> for single items}
+                {5} {and dispose <all> for all unkept items.}
+                {6} {Note: Typing dispose all will dispose all unkept items so make sure}
+                {7} {you type keep <item> for the things you want to keep. Also}
+                {8} {typing dispose all will not get rid of guild objects or other}
+                {9} {items that cannot be dropped. Any problems mail Rastafan.}
             }
-        }
-        {name} {A Trashcan}
-    }
-    {_item[^A burning funeral pyre$]} 
-    {
-        {desc} 
-        {
-            {1} {A burning funeral pyre}
-            {2} {You see a blazing bonfire burning in effigy of a fallen soul.  The}
-            {3} {flames glow with a unique color, as though azure and white energies}
-            {4} {were dancing in unison.  Standing in the light and warmth of the}
-            {5} {comforting flames, you feel of revitalized and at peace, as if the}
-            {6} {corpse's energy is somehow being transferred to you through death.}
-        }
-        {id} {funeral pyre}
-        {location} 
-        {
-            {Pinnacle/Fantasy/Necromancer Guild} 
+            {id} {trashcan}
+            {location} 
             {
-                {20} {}
+                {Pinnacle/Fantasy/Necromancer Guild} 
+                {
+                    {41} {}
+                    {46} {}
+                    {47} {}
+                }
             }
+            {name} {A Trashcan}
         }
-        {name} {A burning funeral pyre}
-    }
-    {_item[^A misty curtain$]} 
-    {
-        {desc} 
+        {^A glowing portal$} 
         {
-            {1} {A curtain of power concealing what lies behind it.  No matter how hard you}
-            {2} {stare, your gaze cannot penetrate the mist.}
-        }
-        {id} {misty curtain}
-        {location} 
-        {
-            {Pinnacle/Fantasy/Necromancer Guild} 
+            {_area} {Pinnacle/Fantasy/Necromancer Guild}
+            {desc} 
             {
-                {76} {}
-                {92} {}
+                {1} {The portal wavers slightly as you inspect it.}
             }
-        }
-        {name} {A misty curtain}
-    }
-    {_item[^A suit of battered chainmail \x28glowing\x29$]} 
-    {
-        {desc} 
-        {
-            {1} {A suit of battered chainmail (glowing)}
-            {2} {A suit of chainmail that's seen better days.  Tarnished and}
-            {3} {battered, links missing or bent in places, this armour certainly}
-            {4} {has seen battle, and survived many.  It's fairly light, and if}
-            {5} {you took care of it, it might last you a few more fights.}
-            {6} {The armour is in perfect condition.}
-            {7} {It appears to be light armour for a player of your level.}
-            {8} {This armor has the following resistances:}
-            {9} {impressive edged, impressive blunt, impressive fire, impressive ice,}
-            {10} {impressive acid, terrible electric, impressive poison}
-            {11} {You must be level 10 to wear this.}
-            {12} {It looks light.}
-        }
-        {id} {chainmail armour}
-        {location} 
-        {
-            {Pinnacle/Fantasy/Necromancer Guild} 
+            {id} {portal}
+            {location} 
             {
-                {47} {}
+                {Pinnacle/Fantasy/Necromancer Guild} 
+                {
+                    {1} {}
+                }
             }
+            {name} {A glowing portal}
         }
-        {name} {A suit of battered chainmail (glowing)}
-    }
-    {_item[^A swirling portal$]} 
-    {
-        {desc} 
+        {^A misty curtain$} 
         {
-            {1} {The portal phases through the material planes of energy.}
-        }
-        {id} {portal}
-        {location} 
-        {
-            {Pinnacle/Fantasy/Necromancer Guild} 
+            {_area} {Pinnacle/Fantasy/Necromancer Guild}
+            {desc} 
             {
-                {72} {}
-                {76} {}
-                {92} {}
+                {1} {A curtain of power concealing what lies behind it.  No matter how hard you}
+                {2} {stare, your gaze cannot penetrate the mist.}
             }
-        }
-        {name} {A swirling portal}
-    }
-    {_item[^An Ancient Scroll Case$]} 
-    {
-        {desc} 
-        {
-            {1} {An Ancient Scroll Case}
-            {2} {This is an ancient scroll case. Thanamere designed this case to}
-            {3} {keep a constant environment to protect the scrolls. You may leave}
-            {4} {scrolls in here for your brothers and sisters to use for battle.}
-            {5} {Commands are: borrow <scroll || scroll type>, donate <scroll ||}
-            {6} {scroll type>. Scrolls should never be taken and sold. That}
-            {7} {would  be  sacrilegious!  Type 'list' to see what type of scrolls are}
-            {8} {in the case}
-            {9} {------------------------------------------------------------------------------}
-            {10} {Contents of the case are:}
-            {11} {Number         Description of scroll}
-            {12} {------------- --------------------------------------------------------------}
-            {13} {39            A necromantic scroll with the power 'shadow'                   }
-            {14} {34            A necromantic scroll with the power 'illusion'                 }
-            {15} {245           A necromantic scroll with the power 'chest'                    }
-            {16} {87            A necromantic scroll with the power 'mouth'                    }
-            {17} {214           A necromantic scroll with the power 'conjure undead'           }
-            {18} {142           A necromantic scroll with the power 'rope trick'               }
-            {19} {81            A necromantic scroll with the power 'skull scry'               }
-            {20} {156           A necromantic scroll with the power 'snare'                    }
-            {21} {100           A necromantic scroll with the power 'fright'                   }
-            {22} {195           A necromantic scroll with the power 'alarm'                    }
-            {23} {36            A necromantic scroll with the power 'dissolve'                 }
-            {24} {220           A necromantic scroll with the power 'projection'               }
-            {25} {------------------------------------------------------------------------------}
-        }
-        {id} {scroll case}
-        {location} 
-        {
-            {Pinnacle/Fantasy/Necromancer Guild} 
+            {id} {misty curtain}
+            {location} 
             {
-                {40} {}
+                {Pinnacle/Fantasy/Necromancer Guild} 
+                {
+                    {45} {}
+                    {76} {}
+                    {92} {}
+                }
             }
+            {name} {A misty curtain}
         }
-        {name} {An Ancient Scroll Case}
-    }
-    {_item[^An exquisite brick walkway leading into the keep$]} 
-    {
-        {desc} 
+        {^A swirling portal$} 
         {
-            {1} {You see a beautifully laid walkway formed from perfectly-fired bricks}
-            {2} {of crimson clay.  The path is almost divine in both its beauty and in}
-            {3} {its aesthetic symmetry.  In a glint of sunlight, shimmering names}
-            {4} {appear in golden letters on some of the bricks...}
-            {5} {--------------- --------------- --------------- ---------------}
-            {6} {|               |               |               |               |}
-            {7} {--------------- --------------- --------------- --------------- -------}
-            {8} {| Parisienne '13|  Vagrant '13  |  Kyoujin '13  |Arahnapogue '13|}
-            {9} {------- --------------- --------------- --------------- ---------------}
-            {10} {|    Cixx '13   |   Tairyn '13  |    Gorm '13   |  Izhizul '13  |}
-            {11} {--------------- --------------- --------------- --------------- -------}
-            {12} {|   Space '13   |   Ansuz '13   |   Anzyn '13   | Parisienne '12|}
-            {13} {------- --------------- --------------- --------------- ---------------}
-            {14} {|  Vagrant '12  |   Bjorn '12   |    Rek '12    |    Guru '12   |}
-            {15} {--------------- --------------- --------------- --------------- -------}
-            {16} {|   Space '12   |  Procyon '12  |  Elektra '12  |Arahnapogue '12|}
-            {17} {------- --------------- --------------- --------------- ---------------}
-            {18} {|   Kyrie '12   |   Barian '12  |  Saurmac '12  |    Punk '12   |}
-            {19} {--------------- --------------- --------------- --------------- -------}
-            {20} {|   Orthas '12  |   Sirius '11  |  Vagrant '11  | Eagleeyes '11 |}
-            {21} {------- --------------- --------------- --------------- ---------------}
-            {22} {|   Barian '11  |    Guru '11   |  Zoidberg '11 |    Gorm '11   |}
-            {23} {--------------- --------------- --------------- --------------- -------}
-            {24} {|   Kyrie '11   |   Syrach '11  |  Elektra '11  |   Tairyn '11  |}
-            {25} {------- --------------- --------------- --------------- ---------------}
-            {26} {|    Groo '11   |   Nexus '11   |   Orthas '11  |    Gore '11   |}
-            {27} {--------------- --------------- --------------- --------------- -------}
-            {28} {|   Kyrie '11   |   Watson '11  |   Clorox '11  |    Day '11    |}
-            {29} {------- --------------- --------------- --------------- ---------------}
-            {30} {|   Lexus '11   |     To '11    |    Rake '11   |  Procyon '11  |}
-            {31} {--------------- --------------- --------------- --------------- -------}
-            {32} {|   Willow '10  |  Strahdd '10  |   Watson '10  |  Recluse '10  |}
-            {33} {------- --------------- --------------- --------------- ---------------}
-            {34} {|   Plasma '10  |    Rake '10   |    Jon '10    |  Elektra '10  |}
-            {35} {--------------- --------------- --------------- --------------- -------}
-            {36} {|    Dust '10   |  Zoidberg '10 |  Vagrant '10  |   Orthas '10  |}
-            {37} {------- --------------- --------------- --------------- ---------------}
-            {38} {|  Valence '10  |  Procyon '10  | Killergate '10|   Space '10   |}
-            {39} {--------------- --------------- --------------- --------------- -------}
-            {40} {|    Geb '10    |   Kyrie '10   |  Procyon '09  |Untouchable '09|}
-            {41} {------- --------------- --------------- --------------- ---------------}
-            {42} {|  Timster '09  |    Time '09   |  Zoidberg '09 |  Elektra '09  |}
-            {43} {--------------- --------------- --------------- --------------- -------}
-            {44} {|   Kyrie '09   |   Aravan '09  |Bonecrusher '08|   Tearos '08  |}
-            {45} {------- --------------- --------------- --------------- ---------------}
-            {46} {|    Alf '08    |   Kenelm '08  |    Kale '08   |  Distayne '08 |}
-            {47} {--------------- --------------- --------------- --------------- -------}
-            {48} {|  Valerien '08 | Parisienne '08|  Elektra '08  |    Time '08   |}
-            {49} {------- --------------- --------------- --------------- ---------------}
-            {50} {|   Bliss '08   |    Eek '08    |   Sirius '08  |   Pollux '08  |}
-            {51} {--------------- --------------- --------------- --------------- -------}
-            {52} {|   Xarin '08   |   Space '08   |  Hannibal '08 |    Eman '08   |}
-            {53} {------- --------------- --------------- --------------- ---------------}
-            {54} {|   Nicksj '08  |   Nacage '08  |  Procyon '08  |  Zoidberg '08 |}
-            {55} {--------------- --------------- --------------- --------------- -------}
-            {56} {|   Bliss '07   |   Space '07   |  Darrkin '07  |   Dahlia '07  |}
-            {57} {------- --------------- --------------- --------------- ---------------}
-            {58} {|  Elektra '07  |  Hannibal '07 |Bonecrusher '07|    Eman '07   |}
-            {59} {--------------- --------------- --------------- --------------- -------}
-            {60} {|   Ginny '07   |   Plasma '07  |  Lancelot '07 |   Vanku '07   |}
-            {61} {------- --------------- --------------- --------------- ---------------}
-            {62} {|   Danya '06   |  Alassra '06  |  Tellubs '06  |  Coleman '06  |}
-            {63} {--------------- --------------- --------------- --------------- -------}
-            {64} {|   Gatsby '06  |   Bliss '06   |   Rajah '06   |    Yeah '06   |}
-            {65} {------- --------------- --------------- --------------- ---------------}
-            {66} {|  Alixana '06  |   Nimbus '06  |   Mandos '06  |  Theguide '06 |}
-            {67} {--------------- --------------- --------------- --------------- -------}
-            {68} {| Krystella '06 |  Darrkin '06  |  Valerien '06 |  Elektra '06  |}
-            {69} {------- --------------- --------------- --------------- ---------------}
-            {70} {|  Theguide '05 | Krystella '05 |Untouchable '05|   Pastor '05  |}
-            {71} {--------------- --------------- --------------- --------------- -------}
-            {72} {|  Devilsun '05 |  Alixana '05  |   Bliss '05   |  Alixana '05  |}
-            {73} {------- --------------- --------------- --------------- ---------------}
-            {74} {|  Sculder '05  |   Mystyc '05  |    Moab '05   |   Orthas '05  |}
-            {75} {--------------- --------------- --------------- --------------- -------}
-            {76} {|   Joker '05   |  Lametoby '05 |               |               |}
-            {77} {------- --------------- --------------- --------------- ---------------}
-            {78} {|               |               |               |               |}
-            {79} {--------------- --------------- --------------- ---------------}
-        }
-        {id} {bricks}
-        {location} 
-        {
-            {Pinnacle/Fantasy/Necromancer Guild} 
+            {_area} {Pinnacle/Fantasy/Necromancer Guild}
+            {desc} 
             {
-                {1} {}
-                {4} {}
-                {8} {}
-                {9} {}
-                {14} {}
-                {17} {}
-                {20} {}
-                {45} {}
-                {310} {}
+                {1} {The portal phases through the material planes of energy.}
             }
-        }
-        {name} {An exquisite brick walkway leading into the keep}
-    }
-    {_item[^Dark Black Potion with Yellow Floaties$]} 
-    {
-        {desc} 
-        {
-            {1} {Dark Black Potion with Yellow Floaties}
-            {2} {This is a dark black potion that undulates with an unholy flavor.}
-            {3} {Yellow globs of something float throughout it.}
-            {4} {It looks very heavy.}
-        }
-        {id} {potion}
-        {location} 
-        {
-            {Pinnacle/Fantasy/Necromancer Guild} 
+            {id} {portal}
+            {location} 
             {
-                {20} {}
+                {Pinnacle/Fantasy/Necromancer Guild} 
+                {
+                    {45} {}
+                    {72} {}
+                    {76} {}
+                    {92} {}
+                }
             }
+            {name} {A swirling portal}
         }
-        {name} {Dark Black Potion with Yellow Floaties}
-    }
-    {_item[^Death's Valued Customers List$]} 
-    {
-        {desc} 
+        {^An Ancient Scroll Case$} 
         {
-            {1} {Death's Valued Customers List}
-            {2} {This list shows the poor souls who frequent Death's workroom.}
-            {3} {'read list' to see who they are.}
-            {4} {It looks light.}
-        }
-        {id} {death list}
-        {location} 
-        {
-            {Pinnacle/Fantasy/Necromancer Guild} 
+            {_area} {Pinnacle/Fantasy/Necromancer Guild}
+            {desc} 
             {
-                {45} {}
+                {1} {An Ancient Scroll Case}
+                {2} {This is an ancient scroll case. Thanamere designed this case to}
+                {3} {keep a constant environment to protect the scrolls. You may leave}
+                {4} {scrolls in here for your brothers and sisters to use for battle.}
+                {5} {Commands are: borrow <scroll || scroll type>, donate <scroll ||}
+                {6} {scroll type>. Scrolls should never be taken and sold. That}
+                {7} {would  be  sacrilegious!  Type 'list' to see what type of scrolls are}
+                {8} {in the case}
+                {9} {------------------------------------------------------------------------------}
+                {10} {Contents of the case are:}
+                {11} {Number         Description of scroll}
+                {12} {------------- --------------------------------------------------------------}
+                {13} {39            A necromantic scroll with the power 'shadow'                   }
+                {14} {34            A necromantic scroll with the power 'illusion'                 }
+                {15} {245           A necromantic scroll with the power 'chest'                    }
+                {16} {87            A necromantic scroll with the power 'mouth'                    }
+                {17} {214           A necromantic scroll with the power 'conjure undead'           }
+                {18} {142           A necromantic scroll with the power 'rope trick'               }
+                {19} {81            A necromantic scroll with the power 'skull scry'               }
+                {20} {156           A necromantic scroll with the power 'snare'                    }
+                {21} {100           A necromantic scroll with the power 'fright'                   }
+                {22} {195           A necromantic scroll with the power 'alarm'                    }
+                {23} {36            A necromantic scroll with the power 'dissolve'                 }
+                {24} {220           A necromantic scroll with the power 'projection'               }
+                {25} {------------------------------------------------------------------------------}
             }
-        }
-        {name} {Death's Valued Customers List}
-    }
-    {_item[^Granite Altar$]} 
-    {
-        {desc} 
-        {
-            {1} {The small granite altar stands about four feet tall.  You notice}
-            {2} {a glowing message etched into it.}
-        }
-        {id} {alter}
-        {location} 
-        {
-            {Pinnacle/Fantasy/Necromancer Guild} 
+            {id} {scroll case}
+            {location} 
             {
-                {12} {}
+                {Pinnacle/Fantasy/Necromancer Guild} 
+                {
+                    {40} {}
+                }
             }
+            {name} {An Ancient Scroll Case}
         }
-        {name} {Granite Altar}
-    }
-    {_item[^Many points of light sparkle beautifully above you$]} 
-    {
-        {desc} 
+        {^An exquisite brick walkway leading into the keep$} 
         {
-            {1} {Looking skyward, you see beautiful points of light shimmering in the night}
-            {2} {heavens above you...}
-            {3} {}
-            {4} {.     ..                          . }
-            {5} {.        }
-            {6} {.  o                '       .  ..         }
-            {7} {barzai .                 @                                     }
-            {8} {.                        cixx                                         }
-            {9} {..                          to        .              }
-            {10} {.                  kyoudan}
-            {11} {.              ..     @                                   .  allanon}
-            {12} {.                                     }
-            {13} {arahnapogue .                                        . }
-            {14} {.          zanadu                                          ' }
-            {15} {.                                  kyoujin o                      }
-            {16} {.                 ash  +   }
-            {17} {*                                                       .       }
-            {18} {izhizul       o                                                   }
-            {19} {o              .  .                  tuba                                 . }
-            {20} {.                        .  .    vagrant              }
-            {21} {.   .                                     .                         space}
-            {22} {..                              .  +                         }
-            {23} {.                            tairyn                                       }
-            {24} {-*-                             aceswild          .  o                       }
-            {25} {o   '              +  .        halutz .             o          . }
-            {26} {@              .          .        ansuz                         }
-            {27} {.                                      parisienne          }
-            {28} {-+-             .                               @                    . }
-            {29} {anzyn .                                                                  }
-            {30} {@                 gorm .                                             }
-            {31} {.                               +    }
-        }
-        {id} {points}
-        {location} 
-        {
-            {Pinnacle/Fantasy/Necromancer Guild} 
+            {_area} {Pinnacle/Fantasy/Necromancer Guild}
+            {desc} 
             {
-                {1} {}
-                {4} {}
-                {8} {}
-                {9} {}
-                {14} {}
-                {17} {}
-                {20} {}
-                {45} {}
-                {310} {}
+                {1} {You see a beautifully laid walkway formed from perfectly-fired bricks}
+                {2} {of crimson clay.  The path is almost divine in both its beauty and in}
+                {3} {its aesthetic symmetry.  In a glint of sunlight, shimmering names}
+                {4} {appear in golden letters on some of the bricks...}
+                {5} {--------------- --------------- --------------- ---------------}
+                {6} {|               |               |               |               |}
+                {7} {--------------- --------------- --------------- --------------- -------}
+                {8} {| Parisienne '13|  Vagrant '13  |  Kyoujin '13  |Arahnapogue '13|}
+                {9} {------- --------------- --------------- --------------- ---------------}
+                {10} {|    Cixx '13   |   Tairyn '13  |    Gorm '13   |  Izhizul '13  |}
+                {11} {--------------- --------------- --------------- --------------- -------}
+                {12} {|   Space '13   |   Ansuz '13   |   Anzyn '13   | Parisienne '12|}
+                {13} {------- --------------- --------------- --------------- ---------------}
+                {14} {|  Vagrant '12  |   Bjorn '12   |    Rek '12    |    Guru '12   |}
+                {15} {--------------- --------------- --------------- --------------- -------}
+                {16} {|   Space '12   |  Procyon '12  |  Elektra '12  |Arahnapogue '12|}
+                {17} {------- --------------- --------------- --------------- ---------------}
+                {18} {|   Kyrie '12   |   Barian '12  |  Saurmac '12  |    Punk '12   |}
+                {19} {--------------- --------------- --------------- --------------- -------}
+                {20} {|   Orthas '12  |   Sirius '11  |  Vagrant '11  | Eagleeyes '11 |}
+                {21} {------- --------------- --------------- --------------- ---------------}
+                {22} {|   Barian '11  |    Guru '11   |  Zoidberg '11 |    Gorm '11   |}
+                {23} {--------------- --------------- --------------- --------------- -------}
+                {24} {|   Kyrie '11   |   Syrach '11  |  Elektra '11  |   Tairyn '11  |}
+                {25} {------- --------------- --------------- --------------- ---------------}
+                {26} {|    Groo '11   |   Nexus '11   |   Orthas '11  |    Gore '11   |}
+                {27} {--------------- --------------- --------------- --------------- -------}
+                {28} {|   Kyrie '11   |   Watson '11  |   Clorox '11  |    Day '11    |}
+                {29} {------- --------------- --------------- --------------- ---------------}
+                {30} {|   Lexus '11   |     To '11    |    Rake '11   |  Procyon '11  |}
+                {31} {--------------- --------------- --------------- --------------- -------}
+                {32} {|   Willow '10  |  Strahdd '10  |   Watson '10  |  Recluse '10  |}
+                {33} {------- --------------- --------------- --------------- ---------------}
+                {34} {|   Plasma '10  |    Rake '10   |    Jon '10    |  Elektra '10  |}
+                {35} {--------------- --------------- --------------- --------------- -------}
+                {36} {|    Dust '10   |  Zoidberg '10 |  Vagrant '10  |   Orthas '10  |}
+                {37} {------- --------------- --------------- --------------- ---------------}
+                {38} {|  Valence '10  |  Procyon '10  | Killergate '10|   Space '10   |}
+                {39} {--------------- --------------- --------------- --------------- -------}
+                {40} {|    Geb '10    |   Kyrie '10   |  Procyon '09  |Untouchable '09|}
+                {41} {------- --------------- --------------- --------------- ---------------}
+                {42} {|  Timster '09  |    Time '09   |  Zoidberg '09 |  Elektra '09  |}
+                {43} {--------------- --------------- --------------- --------------- -------}
+                {44} {|   Kyrie '09   |   Aravan '09  |Bonecrusher '08|   Tearos '08  |}
+                {45} {------- --------------- --------------- --------------- ---------------}
+                {46} {|    Alf '08    |   Kenelm '08  |    Kale '08   |  Distayne '08 |}
+                {47} {--------------- --------------- --------------- --------------- -------}
+                {48} {|  Valerien '08 | Parisienne '08|  Elektra '08  |    Time '08   |}
+                {49} {------- --------------- --------------- --------------- ---------------}
+                {50} {|   Bliss '08   |    Eek '08    |   Sirius '08  |   Pollux '08  |}
+                {51} {--------------- --------------- --------------- --------------- -------}
+                {52} {|   Xarin '08   |   Space '08   |  Hannibal '08 |    Eman '08   |}
+                {53} {------- --------------- --------------- --------------- ---------------}
+                {54} {|   Nicksj '08  |   Nacage '08  |  Procyon '08  |  Zoidberg '08 |}
+                {55} {--------------- --------------- --------------- --------------- -------}
+                {56} {|   Bliss '07   |   Space '07   |  Darrkin '07  |   Dahlia '07  |}
+                {57} {------- --------------- --------------- --------------- ---------------}
+                {58} {|  Elektra '07  |  Hannibal '07 |Bonecrusher '07|    Eman '07   |}
+                {59} {--------------- --------------- --------------- --------------- -------}
+                {60} {|   Ginny '07   |   Plasma '07  |  Lancelot '07 |   Vanku '07   |}
+                {61} {------- --------------- --------------- --------------- ---------------}
+                {62} {|   Danya '06   |  Alassra '06  |  Tellubs '06  |  Coleman '06  |}
+                {63} {--------------- --------------- --------------- --------------- -------}
+                {64} {|   Gatsby '06  |   Bliss '06   |   Rajah '06   |    Yeah '06   |}
+                {65} {------- --------------- --------------- --------------- ---------------}
+                {66} {|  Alixana '06  |   Nimbus '06  |   Mandos '06  |  Theguide '06 |}
+                {67} {--------------- --------------- --------------- --------------- -------}
+                {68} {| Krystella '06 |  Darrkin '06  |  Valerien '06 |  Elektra '06  |}
+                {69} {------- --------------- --------------- --------------- ---------------}
+                {70} {|  Theguide '05 | Krystella '05 |Untouchable '05|   Pastor '05  |}
+                {71} {--------------- --------------- --------------- --------------- -------}
+                {72} {|  Devilsun '05 |  Alixana '05  |   Bliss '05   |  Alixana '05  |}
+                {73} {------- --------------- --------------- --------------- ---------------}
+                {74} {|  Sculder '05  |   Mystyc '05  |    Moab '05   |   Orthas '05  |}
+                {75} {--------------- --------------- --------------- --------------- -------}
+                {76} {|   Joker '05   |  Lametoby '05 |               |               |}
+                {77} {------- --------------- --------------- --------------- ---------------}
+                {78} {|               |               |               |               |}
+                {79} {--------------- --------------- --------------- ---------------}
             }
-        }
-        {name} {Many points of light sparkle beautifully above you}
-    }
-    {_item[^Rod of Lordly Might$]} 
-    {
-        {desc} 
-        {
-            {1} {Rod of Lordly Might}
-            {2} {You hold within your prayerful hands the fabled artifact known as the Rod}
-            {3} {of Lordly Might.  Hallowed antiquity conveys with sacred reverence the}
-            {4} {fragmented and mostly lost history of this impossible apparatus, used}
-            {5} {throughout millennia to bring peace...and war by whomever had fortitude}
-            {6} {enough to claim its stewardship.  Forged into being by the timeless}
-            {7} {provenance of that which created the Three Kingdoms themselves, its form}
-            {8} {is composed of two gleaming metallic spheres at each end of a central}
-            {9} {median shaft, gripped in a blue-steel alloy.  From merely touching it, you}
-            {10} {know the item wells primal energy and extraordinary power.  It was}
-            {11} {whispered by the eldest ancestors of long-dead sages that the creator}
-            {12} {himself bound a portion of his divine grace within this holy relic.  You}
-            {13} {cast no doubt upon these myths, nor brush them aside as mere parable, for}
-            {14} {when the light gleams off the legendary steel of this wondrous item, you}
-            {15} {feel the eyes of a god watching over you.  Masterfully crafted upon the}
-            {16} {central shaft you see many polished gold runes, each with a different,}
-            {17} {exquisite symbol inlaid with platinum that glitters in the light.}
-            {18} {The Rod of Lordly Might will be fated to you upon wielding.}
-            {19} {You sense this item is not original but rather a clever duplicate.}
-            {20} {This weapon is in excellent condition.}
-            {21} {This weapon's classifications: 100 (blunt)  }
-            {22} {This weapon gains benefits from your mace weapon skill.}
-            {23} {This weapon is exceptionally balanced.}
-            {24} {This weapon penetrates <=2%.}
-            {25} {You must be level 62 to wield this weapon.}
-            {26} {This weapon has: The mark of Scaf < blunt reforged to penetrate (loads) >}
-            {27} {It looks heavy.}
-        }
-        {id} {Rod of Lordly Might}
-        {location} 
-        {
-            {Pinnacle/Fantasy/Necromancer Guild} 
+            {id} {bricks}
+            {location} 
             {
-                {20} {}
+                {Pinnacle/Fantasy/Necromancer Guild} 
+                {
+                    {8} {}
+                    {20} {}
+                    {45} {}
+                    {46} {}
+                    {73} {}
+                }
             }
+            {name} {An exquisite brick walkway leading into the keep}
         }
-        {name} {Rod of Lordly Might}
-    }
-    {_item[^Silver Platemail \x28glowing\x29$]} 
-    {
-        {desc} 
+        {^Death's Valued Customers List$} 
         {
-            {1} {Silver Platemail (glowing)}
-            {2} {A sturdy suit of platemail made of tarnished silver.  The }
-            {3} {breastplate shows signs of many battles, dented and nicked }
-            {4} {from numerous beatings.}
-            {5} {The armour is in perfect condition.}
-            {6} {It appears to be medium armour for a player of your level.}
-            {7} {This armor has the following resistances:}
-            {8} {impressive edged, impressive blunt, very good fire, very good ice, very}
-            {9} {good acid, terrible electric, very good energy, very good poison}
-            {10} {You must be level 17 to wear this.}
-            {11} {It looks heavy.}
-        }
-        {id} {silver platemail}
-        {location} 
-        {
-            {Pinnacle/Fantasy/Necromancer Guild} 
+            {_area} {Pinnacle/Fantasy/Necromancer Guild}
+            {desc} 
             {
-                {47} {}
+                {1} {Death's Valued Customers List}
+                {2} {This list shows the poor souls who frequent Death's workroom.}
+                {3} {'read list' to see who they are.}
+                {4} {It looks light.}
             }
-        }
-        {name} {Silver Platemail (glowing)}
-    }
-    {_item[^Silver Slicer \x28glowing\x29 \x28enchanted\x29$]} 
-    {
-        {desc} 
-        {
-            {1} {Silver Slicer (glowing) (enchanted)}
-            {2} {A mystical blade of silver.  The silver slicer is forged under the}
-            {3} {light of a crescent moon and imbued with the powers of the creator.}
-            {4} {In this case, the vampiric lust for battle and hate of other undead.}
-            {5} {This weapon is in excellent condition.}
-            {6} {This weapon's classifications: 36 (edged)  }
-            {7} {This weapon gains benefits from your sword weapon skill.}
-            {8} {You must be level 17 to wield this weapon.}
-            {9} {It doesn't look too heavy.}
-        }
-        {id} {silver slicer}
-        {location} 
-        {
-            {Pinnacle/Fantasy/Necromancer Guild} 
+            {id} {death list}
+            {location} 
             {
-                {47} {}
+                {Pinnacle/Fantasy/Necromancer Guild} 
+                {
+                    {45} {}
+                }
             }
+            {name} {Death's Valued Customers List}
         }
-        {name} {Silver Slicer (glowing) (enchanted)}
-    }
-    {_item[^The Necromancers' Standard flying the Lich banner$]} 
-    {
-        {desc} 
+        {^Granite Altar$} 
         {
-            {1} {The Necromancers' Standard flying the Lich banner}
-            {2} {XXX     LICHS     XXX                  }
-            {3} {XXX XX             XXXXX}
-            {4} {XXX   XX           XXX  XXX}
-            {5} {XXX XX   XX         XXX     XXX}
-            {6} {XXX   XXX   X)       XX X       XX}
-            {7} {XX      XX  XX       (X   X      XXX}
-            {8} {.---.    XX    XX   XX        XX   X     / XX    .---.}
-            {9} {/     \\   XX    XX     XX       XX    X  /  XXX  /     \\ }
-            {10} {|\x7B\\ /\x7D|    X)    XX     XX     XX/   X   \\  XX   |\x7B\\ /\x7D|}
-            {11} {(_ V _)   (X      XX    X X    XX   X \\   \\  X)  (_ V _)}
-            {12} {|"""|     XX    XX    X  |   / \\   X /    \\XX    |"""|}
-            {13} {'---'      XX   XX   / \\ |  /   \\ XX/     XX     '---'}
-            {14} {X    XX  \\ .-""-.   / X      XX}
-            {15} {XX   XX  / _  _ \\ /  /    XX/ }
-            {16} {X  X \\ |(_)(_)|/  /    XX}
-            {17} {\\  \\  (_ /\\ _)  /   /X}
-            {18} {\\  \\  |====|  /  /}
-            {19} {\\  \\ '-..-' /  /}
-            {20} {If you're able to move this thing, tell a wizard, or else.}
-        }
-        {id} {standard}
-        {location} 
-        {
-            {Pinnacle/Fantasy/Necromancer Guild} 
+            {_area} {Pinnacle/Fantasy/Necromancer Guild}
+            {desc} 
             {
-                {1} {}
-                {4} {}
-                {5} {}
-                {8} {}
-                {9} {}
-                {14} {}
-                {17} {}
-                {20} {}
-                {310} {}
+                {1} {The small granite altar stands about four feet tall.  You notice}
+                {2} {a glowing message etched into it.}
             }
-        }
-        {name} {The Necromancers' Standard flying the Lich banner}
-    }
-    {_item[^The Necromancers' Standard flying the Vampire banner$]} 
-    {
-        {desc} 
-        {
-            {1} {The Necromancers' Standard flying the Vampire banner}
-            {2} {000  000  000000  0000000000  0000000  000 0000000  00000000}
-            {3} {00!  000 00!  000 00! 00! 00! 00!  000 00! 00!  000 00!}
-            {4} {0!0  !0! 0!0!0!0! 0!! !!0 0!0 0!00!0!  !!0 0!0!!0!  0!!0:!}
-            {5} {!: .:!  !!:  !!! !!:     !!: !!:      !!: !!: :!!  !!.::!}
-            {6} {::::   ::   ::  :::     ::: ::       ::  ::   ::  :::}
-            {7} {::     :   : :  :      :    :       :    :   : : : :: ::}
-            {8} {=/\\                 /\\=}
-            {9} {/ \\'._   (\\_/)   _.'/ \\    BITE!}
-            {10} {/ .''._'--(`.`)--'_.''. \\    BITE!}
-            {11} {/.' _/ |`'=/ " \\='`| \\_ `.\\    BITE!}
-            {12} {/` .' `\\\;-,'\\___/',-\;/` '. '\\ }
-            {13} {/.-'       `\\(-V-)/`       `-.\\ }
-            {14} {"   " }
-            {15} {If you're able to move this thing, tell a wizard, or else.}
-        }
-        {id} {standard}
-        {location} 
-        {
-            {Pinnacle/Fantasy/Necromancer Guild} 
+            {id} {alter}
+            {location} 
             {
-                {5} {}
-                {8} {}
-                {9} {}
-                {20} {}
-                {45} {}
+                {Pinnacle/Fantasy/Necromancer Guild} 
+                {
+                    {12} {}
+                }
             }
+            {name} {Granite Altar}
         }
-        {name} {The Necromancers' Standard flying the Vampire banner}
-    }
-    {_item[^The Necromancers' Tapestry honoring Dracula$]} 
-    {
-        {desc} 
+        {^Many points of light sparkle beautifully above you$} 
         {
-            {1} {The Necromancers' Tapestry honoring Dracula}
-            {2} {Written upon the shimmering threads of the tapestry...}
-            {3} {RIP}
-            {4} {}
-            {5} {Dracula}
-            {6} {}
-            {7} {October 30, 1971 - April 28, 2022}
-        }
-        {id} {tapestry}
-        {location} 
-        {
-            {Pinnacle/Fantasy/Necromancer Guild} 
+            {_area} {Pinnacle/Fantasy/Necromancer Guild}
+            {desc} 
             {
-                {1} {}
-                {14} {}
-                {19} {}
-                {20} {}
-            }
-        }
-        {name} {The Necromancers' Tapestry honoring Dracula}
-    }
-    {_item[^Trophy Case$]} 
-    {
-        {desc} 
-        {
-            {1} {Trophy Case}
-            {2} {A trophy case with a bugged long description. gnote it.}
-        }
-        {id} {case}
-        {location} 
-        {
-            {Pinnacle/Fantasy/Necromancer Guild} 
-            {
-                {76} {}
-            }
-        }
-        {name} {Trophy Case}
-    }
-    {_item[^Ventra's secret chest \x28open\x29$]} 
-    {
-        {desc} 
-        {
-            {1} {That is not here or it is uninteresting. (chest?)}
-        }
-        {id} {chest}
-        {location} 
-        {
-            {Pinnacle/Fantasy/Necromancer Guild} 
-            {
-                {41} {}
-            }
-        }
-        {name} {Ventra's secret chest (open)}
-    }
-    {_item[^Wooden sign$]} 
-    {
-        {desc} 
-        {
-            {1} {________________________________}
-            {2} {(________________________________)}
-            {3} {|                              |}
-            {4} {| Necromancer Familiars        |}
-            {5} {|                              |}
-            {6} {| Garden slug       1000 coins |}
-            {7} {| Field mouse       3000 coins |}
-            {8} {| Rattler Snake     4000 coins |}
-            {9} {| Black raven       5000 coins |}
-            {10} {| Swamp crocodile   6000 coins |}
-            {11} {| Grey hawk        50000 coins |}
-            {12} {| Black wolf       50000 coins |}
-            {13} {| Gold wolf       250000 coins |}
-            {14} {| Bald eagle      250000 coins |}
-            {15} {|______________________________|}
-            {16} {(________________________________)}
-            {17} {To buy a new familiar, type -receive <animal>-}
-            {18} {You may also name your familiar here with -name <name>-}
-        }
-        {id} {sign}
-        {location} 
-        {
-            {Pinnacle/Fantasy/Necromancer Guild} 
-            {
-                {18} {}
-            }
-        }
-        {name} {Wooden sign}
-    }
-    {_item[^a bone sword \x28glowing\x29 \x28enchanted\x29$]} 
-    {
-        {desc} 
-        {
-            {1} {a bone sword (glowing) (enchanted)}
-            {2} {A long bone fragment, shattered from the femur of some creature and}
-            {3} {sharpened to a reasonable edge.  The ragged cutting blade is more}
-            {4} {suited to tearing your opponents apart than slicing neatly through}
-            {5} {them, but sometimes neatness doesn't count either.}
-            {6} {This weapon is in excellent condition.}
-            {7} {This weapon's classifications: 50 (edged)  14 (ice)  }
-            {8} {This weapon gains benefits from your sword weapon skill.}
-            {9} {You must be level 25 to wield this weapon.}
-            {10} {It looks heavy.}
-        }
-        {id} {a bone sword}
-        {location} 
-        {
-            {Pinnacle/Fantasy/Necromancer Guild} 
-            {
-                {47} {}
-            }
-        }
-        {name} {a bone sword (glowing) (enchanted)}
-    }
-    {_item[^a suit of studded leather armor \x28glowing\x29$]} 
-    {
-        {desc} 
-        {
-            {1} {a suit of studded leather armor (glowing)}
-            {2} {A suit of studded leather armour.  The tanned and hardened leather is}
-            {3} {darkened with goose oil to try to regain some of the old flexibility}
-            {4} {to the hide  The small silvery stud of metal laced through the hide to}
-            {5} {add strength and resilience gleam in the light.}
-            {6} {The armour is in perfect condition.}
-            {7} {It appears to be light armour for a player of your level.}
-            {8} {This armor has the following resistances:}
-            {9} {impressive edged, good blunt, impressive fire, impressive ice,}
-            {10} {impressive acid, impressive electric}
-            {11} {You must be level 10 to wear this.}
-            {12} {It looks light.}
-        }
-        {id} {studded leather armour}
-        {location} 
-        {
-            {Pinnacle/Fantasy/Necromancer Guild} 
-            {
-                {47} {}
-            }
-        }
-        {name} {a suit of studded leather armor (glowing)}
-    }
-    {_item[^a wavering portal$]} 
-    {
-        {desc} 
-        {
-            {1} {The portal wavers slightly as you inspect it.}
-        }
-        {id} {portal}
-        {location} 
-        {
-            {Pinnacle/Fantasy/Necromancer Guild} 
-            {
-                {1} {}
-            }
-        }
-        {name} {a wavering portal}
-    }
-    {_item[^kindling branches$]} 
-    {
-        {desc} 
-        {
-            {1} {kindling branches}
-            {2} {Some dried wooden branches that could be used in starting a fire.}
-        }
-        {id} {kindling}
-        {location} 
-        {
-            {Pinnacle/Fantasy/Necromancer Guild} 
-            {
-                {20} {}
-            }
-        }
-        {name} {kindling branches}
-    }
-    {_item[containing \d+ messages]} 
-    {
-        {desc} 
-        {
-            {1} {Type 'help board' for a list of commands.}
-        }
-        {global} {1}
-        {id} {board}
-        {location} 
-        {
-            {Pinnacle/Fantasy/Necromancer Guild} 
-            {
-                {1} {}
-                {16} {}
-                {19} {}
-                {20} {}
-                {45} {}
-                {76} {}
-                {92} {}
-                {310} {}
-            }
-        }
-        {name} {board}
-        {pickup} {-1}
-    }
-    {_npc[^A dire wolf$]} 
-    {
-        {alignment} {-2}
-        {desc} 
-        {
-            {1} {A dire wolf}
-            {2} {A lean canine form stalks from the shadows of the forest.  Sickly }
-            {3} {yellow eyes glow faintly as it studies you from the darkness.}
-            {4} {It is in perfect health.}
-        }
-        {id} {Wolf}
-        {kills} {5}
-        {location} 
-        {
-            {Pinnacle/Fantasy/Necromancer Guild} 
-            {
+                {1} {Looking skyward, you see beautiful points of light shimmering in the night}
+                {2} {heavens above you...}
                 {3} {}
+                {4} {.     ..                          . }
+                {5} {.        }
+                {6} {.  o                '       .  ..         }
+                {7} {barzai .                 @                                     }
+                {8} {.                        cixx                                         }
+                {9} {..                          to        .              }
+                {10} {.                  kyoudan}
+                {11} {.              ..     @                                   .  allanon}
+                {12} {.                                     }
+                {13} {arahnapogue .                                        . }
+                {14} {.          zanadu                                          ' }
+                {15} {.                                  kyoujin o                      }
+                {16} {.                 ash  +   }
+                {17} {*                                                       .       }
+                {18} {izhizul       o                                                   }
+                {19} {o              .  .                  tuba                                 . }
+                {20} {.                        .  .    vagrant              }
+                {21} {.   .                                     .                         space}
+                {22} {..                              .  +                         }
+                {23} {.                            tairyn                                       }
+                {24} {-*-                             aceswild          .  o                       }
+                {25} {o   '              +  .        halutz .             o          . }
+                {26} {@              .          .        ansuz                         }
+                {27} {.                                      parisienne          }
+                {28} {-+-             .                               @                    . }
+                {29} {anzyn .                                                                  }
+                {30} {@                 gorm .                                             }
+                {31} {.                               +    }
+            }
+            {id} {points}
+            {location} 
+            {
+                {Pinnacle/Fantasy/Necromancer Guild} 
+                {
+                    {8} {}
+                    {20} {}
+                    {45} {}
+                    {46} {}
+                    {73} {}
+                }
+            }
+            {name} {Many points of light sparkle beautifully above you}
+        }
+        {^The Necromancers' Standard flying the Lich banner$} 
+        {
+            {_area} {Pinnacle/Fantasy/Necromancer Guild}
+            {desc} 
+            {
+                {1} {The Necromancers' Standard flying the Lich banner}
+                {2} {XXX     LICHS     XXX                  }
+                {3} {XXX XX             XXXXX}
+                {4} {XXX   XX           XXX  XXX}
+                {5} {XXX XX   XX         XXX     XXX}
+                {6} {XXX   XXX   X)       XX X       XX}
+                {7} {XX      XX  XX       (X   X      XXX}
+                {8} {.---.    XX    XX   XX        XX   X     / XX    .---.}
+                {9} {/     \\   XX    XX     XX       XX    X  /  XXX  /     \\ }
+                {10} {|\x7B\\ /\x7D|    X)    XX     XX     XX/   X   \\  XX   |\x7B\\ /\x7D|}
+                {11} {(_ V _)   (X      XX    X X    XX   X \\   \\  X)  (_ V _)}
+                {12} {|"""|     XX    XX    X  |   / \\   X /    \\XX    |"""|}
+                {13} {'---'      XX   XX   / \\ |  /   \\ XX/     XX     '---'}
+                {14} {X    XX  \\ .-""-.   / X      XX}
+                {15} {XX   XX  / _  _ \\ /  /    XX/ }
+                {16} {X  X \\ |(_)(_)|/  /    XX}
+                {17} {\\  \\  (_ /\\ _)  /   /X}
+                {18} {\\  \\  |====|  /  /}
+                {19} {\\  \\ '-..-' /  /}
+                {20} {If you're able to move this thing, tell a wizard, or else.}
+            }
+            {id} {standard}
+            {location} 
+            {
+                {Pinnacle/Fantasy/Necromancer Guild} 
+                {
+                    {5} {}
+                    {20} {}
+                    {45} {}
+                    {46} {}
+                    {73} {}
+                }
+            }
+            {name} {The Necromancers' Standard flying the Lich banner}
+        }
+        {^The Necromancers' Standard flying the Vampire banner$} 
+        {
+            {_area} {Pinnacle/Fantasy/Necromancer Guild}
+            {desc} 
+            {
+                {1} {The Necromancers' Standard flying the Vampire banner}
+                {2} {000  000  000000  0000000000  0000000  000 0000000  00000000}
+                {3} {00!  000 00!  000 00! 00! 00! 00!  000 00! 00!  000 00!}
+                {4} {0!0  !0! 0!0!0!0! 0!! !!0 0!0 0!00!0!  !!0 0!0!!0!  0!!0:!}
+                {5} {!: .:!  !!:  !!! !!:     !!: !!:      !!: !!: :!!  !!.::!}
+                {6} {::::   ::   ::  :::     ::: ::       ::  ::   ::  :::}
+                {7} {::     :   : :  :      :    :       :    :   : : : :: ::}
+                {8} {=/\\                 /\\=}
+                {9} {/ \\'._   (\\_/)   _.'/ \\    BITE!}
+                {10} {/ .''._'--(`.`)--'_.''. \\    BITE!}
+                {11} {/.' _/ |`'=/ " \\='`| \\_ `.\\    BITE!}
+                {12} {/` .' `\\\;-,'\\___/',-\;/` '. '\\ }
+                {13} {/.-'       `\\(-V-)/`       `-.\\ }
+                {14} {"   " }
+                {15} {If you're able to move this thing, tell a wizard, or else.}
+            }
+            {id} {standard}
+            {location} 
+            {
+                {Pinnacle/Fantasy/Necromancer Guild} 
+                {
+                    {20} {}
+                    {45} {}
+                    {46} {}
+                    {73} {}
+                }
+            }
+            {name} {The Necromancers' Standard flying the Vampire banner}
+        }
+        {^The Necromancers' Tapestry honoring Dracula$} 
+        {
+            {_area} {Pinnacle/Fantasy/Necromancer Guild}
+            {desc} 
+            {
+                {1} {The Necromancers' Tapestry honoring Dracula}
+                {2} {Written upon the shimmering threads of the tapestry...}
+                {3} {RIP}
                 {4} {}
-                {5} {}
-                {45} {}
-                {150} {}
-                {155} {}
-                {169} {}
-                {181} {}
-                {188} {}
-                {189} {}
-                {279} {}
-                {310} {}
+                {5} {Dracula}
+                {6} {}
+                {7} {October 30, 1971 - April 28, 2022}
+            }
+            {id} {tapestry}
+            {location} 
+            {
+                {Pinnacle/Fantasy/Necromancer Guild} 
+                {
+                    {20} {}
+                }
+            }
+            {name} {The Necromancers' Tapestry honoring Dracula}
+        }
+        {^Trophy Case$} 
+        {
+            {_area} {Pinnacle/Fantasy/Necromancer Guild}
+            {desc} 
+            {
+                {1} {Trophy Case}
+                {2} {A trophy case with a bugged long description. gnote it.}
+            }
+            {id} {case}
+            {location} 
+            {
+                {Pinnacle/Fantasy/Necromancer Guild} 
+                {
+                    {76} {}
+                }
+            }
+            {name} {Trophy Case}
+        }
+        {^Wooden sign$} 
+        {
+            {_area} {Pinnacle/Fantasy/Necromancer Guild}
+            {desc} 
+            {
+                {1} {________________________________}
+                {2} {(________________________________)}
+                {3} {|                              |}
+                {4} {| Necromancer Familiars        |}
+                {5} {|                              |}
+                {6} {| Garden slug       1000 coins |}
+                {7} {| Field mouse       3000 coins |}
+                {8} {| Rattler Snake     4000 coins |}
+                {9} {| Black raven       5000 coins |}
+                {10} {| Swamp crocodile   6000 coins |}
+                {11} {| Grey hawk        50000 coins |}
+                {12} {| Black wolf       50000 coins |}
+                {13} {| Gold wolf       250000 coins |}
+                {14} {| Bald eagle      250000 coins |}
+                {15} {|______________________________|}
+                {16} {(________________________________)}
+                {17} {To buy a new familiar, type -receive <animal>-}
+                {18} {You may also name your familiar here with -name <name>-}
+            }
+            {id} {sign}
+            {location} 
+            {
+                {Pinnacle/Fantasy/Necromancer Guild} 
+                {
+                    {18} {}
+                }
+            }
+            {name} {Wooden sign}
+        }
+        {containing \d+ messages} 
+        {
+            {_area} {Pinnacle/Fantasy/Necromancer Guild}
+            {desc} 
+            {
+                {1} {Type 'help board' for a list of commands.}
+            }
+            {global} {1}
+            {id} {board}
+            {location} 
+            {
+                {Pinnacle} 
+                {
+                    {1} {}
+                    {20} {}
+                    {22} {}
+                    {24} {}
+                    {28} {}
+                    {37} {}
+                    {63} {}
+                    {71} {}
+                    {74} {}
+                    {78} {}
+                    {82} {}
+                    {95} {}
+                    {120} {}
+                    {125} {}
+                    {126} {}
+                    {141} {}
+                    {199} {}
+                    {203} {}
+                }
+                {Pinnacle/Fantasy/Necromancer Guild} 
+                {
+                    {1} {}
+                    {16} {}
+                    {19} {}
+                    {20} {}
+                    {45} {}
+                    {46} {}
+                    {48} {}
+                    {73} {}
+                    {76} {}
+                    {92} {}
+                    {310} {}
+                }
+            }
+            {name} {board}
+            {pickup} {-1}
+        }
+    }
+    {_npc} 
+    {
+        {^A dire wolf$} 
+        {
+            {_area} {Pinnacle/Fantasy/Necromancer Guild}
+            {alignment} {-2}
+            {desc} 
+            {
+                {1} {A dire wolf}
+                {2} {A lean canine form stalks from the shadows of the forest.  Sickly }
+                {3} {yellow eyes glow faintly as it studies you from the darkness.}
+                {4} {It is in perfect health.}
+            }
+            {id} {Wolf}
+            {kills} {5}
+            {location} 
+            {
+                {Pinnacle/Fantasy/Necromancer Guild} 
+                {
+                    {1} {}
+                    {3} {}
+                    {4} {}
+                    {5} {}
+                    {20} {}
+                    {45} {}
+                    {46} {}
+                    {48} {}
+                    {73} {}
+                    {150} {}
+                    {155} {}
+                    {169} {}
+                    {181} {}
+                    {188} {}
+                    {189} {}
+                    {279} {}
+                    {310} {}
+                }
+            }
+            {name} {A dire wolf}
+            {size} 
+            {
+                {avg} {34712}
+                {consider} {36000}
+                {max} {44729}
+                {min} {27564}
+                {0} 
+                {
+                    {consider} {32000}
+                }
+            }
+            {undead} {0}
+            {vulnerabilities} 
+            {
+                {edged} {0}
+                {energy} {100}
+                {mind} {0}
+                {radiation} {0}
             }
         }
-        {name} {A dire wolf}
-        {size} 
+        {^Allayna the Learned Necromancer$} 
         {
-            {avg} {34712}
-            {consider} {36000}
-            {max} {44729}
-            {min} {27564}
-            {0} 
+            {_area} {Pinnacle/Fantasy/Necromancer Guild}
+            {alignment} {0}
+            {desc} 
+            {
+                {1} {Allayna the Learned Necromancer}
+                {2} {A tall woman with gentle features stands before you.  Allayna's }
+                {3} {sapphire eyes glint beneath the white-gold of her tousled hair.  }
+                {4} {She folds her arms and waits patiently for your questions.}
+                {5} {She is in perfect health.}
+                {6} {Allayna the Learned Necromancer is carrying:}
+                {7} {<O`A necromantic rod with a bright lightningstone orb on the}
+                {8} {end`>.}
+            }
+            {id} {Allayna the Learned Necromancer}
+            {location} 
+            {
+                {Pinnacle/Fantasy/Necromancer Guild} 
+                {
+                    {82} {}
+                }
+            }
+            {name} {Allayna the Learned Necromancer}
+            {nokill} {1}
+            {size} 
+            {
+                {0} 
+                {
+                    {consider} {Really Big (17).}
+                }
+            }
+        }
+        {^Bray the alchemist \x28neutral\x29$} 
+        {
+            {_area} {Pinnacle/Fantasy/Necromancer Guild}
+            {alignment} {0}
+            {desc} 
+            {
+                {1} {Bray the alchemist (neutral)}
+                {2} {Bray is the alchemist of the Necromancers' guild.  He is the one to}
+                {3} {come to when you need reagents for your powers.  Look upon him kindly}
+                {4} {for he is very frail, and has decided to live the rest of his life out}
+                {5} {in service of the guild.}
+                {6} {He is in perfect health.}
+                {7} {Bray is carrying:}
+                {8} {<W`Necromancer Rod`>.}
+            }
+            {id} {Bray}
+            {location} 
+            {
+                {Pinnacle/Fantasy/Necromancer Guild} 
+                {
+                    {76} {}
+                }
+            }
+            {name} {Bray the alchemist (neutral)}
+            {nokill} {1}
+            {size} 
+            {
+                {consider} {26000}
+                {0} 
+                {
+                    {consider} {100}
+                }
+            }
+            {undead} {0}
+        }
+        {^Duncan, Keeper of the Dead$} 
+        {
+            {_area} {Pinnacle/Fantasy/Necromancer Guild}
+            {alignment} {0}
+            {desc} 
+            {
+                {1} {Duncan, Keeper of the Dead}
+                {2} {Duncan is the keeper over the ancient necromantic crypts. His valor}
+                {3} {for the guild is legendary. He was the first necromancer to control}
+                {4} {his necromantic powers to properly preserve a corpse. Now with great}
+                {5} {honor, he has been given control over the crypts. So if you have a}
+                {6} {question about them, he probably can answer it for you.}
+                {7} {He is in perfect health.}
+                {8} {Duncan is carrying:}
+                {9} {<O`A necromantic rod with a bright lightningstone orb on the}
+                {10} {end`>.}
+                {11} {<O`An ancient ledger`>.}
+            }
+            {id} {Duncan}
+            {location} 
+            {
+                {Pinnacle/Fantasy/Necromancer Guild} 
+                {
+                    {48} {}
+                }
+            }
+            {name} {Duncan, Keeper of the Dead}
+            {nokill} {1}
+            {size} 
+            {
+                {consider} {Really Big (17).}
+                {0} 
+                {
+                    {consider} {Really Big (17).}
+                }
+            }
+            {undead} {0}
+        }
+        {^Goram the ranger \x28good\x29$} 
+        {
+            {_area} {Pinnacle/Fantasy/Necromancer Guild}
+            {alignment} {0}
+            {desc} 
+            {
+                {1} {Goram the ranger (good)}
+                {2} {Goram used to be an armourer for another}
+                {3} {nation.  Now, he is a ranger and runs the familiar}
+                {4} {shop for the Necromancers, when he's not out and about.}
+                {5} {He is in perfect health.}
+                {6} {Goram is carrying:}
+                {7} {<W`Necromancer Rod`>.}
+            }
+            {id} {Goram}
+            {location} 
+            {
+                {Pinnacle/Fantasy/Necromancer Guild} 
+                {
+                    {18} {}
+                }
+            }
+            {name} {Goram the ranger (good)}
+            {nokill} {1}
+            {size} 
             {
                 {consider} {34000}
             }
         }
-        {undead} {0}
-        {vulnerabilities} 
+        {^Lynda the librarian \x28neutral\x29$} 
         {
-            {edged} {0}
-            {light} {0}
-            {power} {100}
-            {psionic} {0}
-        }
-    }
-    {_npc[^Allayna the Learned Necromancer$]} 
-    {
-        {alignment} {0}
-        {desc} 
-        {
-            {1} {Allayna the Learned Necromancer}
-            {2} {A tall woman with gentle features stands before you.  Allayna's }
-            {3} {sapphire eyes glint beneath the white-gold of her tousled hair.  }
-            {4} {She folds her arms and waits patiently for your questions.}
-            {5} {She is in perfect health.}
-            {6} {Allayna the Learned Necromancer is carrying:}
-            {7} {<O`A necromantic rod with a bright lightningstone orb on the}
-            {8} {end`>.}
-        }
-        {id} {Allayna the Learned Necromancer}
-        {location} 
-        {
-            {Pinnacle/Fantasy/Necromancer Guild} 
+            {_area} {Pinnacle/Fantasy/Necromancer Guild}
+            {alignment} {0}
+            {desc} 
             {
-                {82} {}
+                {1} {Lynda the librarian (neutral)}
+                {2} {Lynda is a beautiful woman in her late thirties it appears.  Her}
+                {3} {golden hair and slender figure demonstrate an elvish heritage.  Though}
+                {4} {her past is clouded in mystery, she is one of the most intelligent}
+                {5} {necromancers alive.  This explains her appointment as librarian for}
+                {6} {the guild.  Her appearance belies her strength, for Lynda has survived}
+                {7} {more battles than it is known.}
+                {8} {She is in perfect health.}
+                {9} {Lynda is carrying:}
+                {10} {<W`Necromancer Rod`>.}
             }
-        }
-        {name} {Allayna the Learned Necromancer}
-        {size} 
-        {
-            {0} 
-            {
-                {consider} {Really Big (17).}
-            }
-        }
-    }
-    {_npc[^Bray the alchemist \x28neutral\x29$]} 
-    {
-        {alignment} {0}
-        {desc} 
-        {
-            {1} {Bray the alchemist (neutral)}
-            {2} {Bray is the alchemist of the Necromancers' guild.  He is the one to}
-            {3} {come to when you need reagents for your powers.  Look upon him kindly}
-            {4} {for he is very frail, and has decided to live the rest of his life out}
-            {5} {in service of the guild.}
-            {6} {He is in perfect health.}
-            {7} {Bray is carrying:}
-            {8} {<W`Necromancer Rod`>.}
-        }
-        {id} {Bray}
-        {location} 
-        {
-            {Pinnacle/Fantasy/Necromancer Guild} 
-            {
-                {76} {}
-            }
-        }
-        {name} {Bray the alchemist (neutral)}
-        {nokill} {1}
-        {size} 
-        {
-            {consider} {26000}
-            {0} 
-            {
-                {consider} {100}
-            }
-        }
-    }
-    {_npc[^Duncan, Keeper of the Dead$]} 
-    {
-        {alignment} {0}
-        {desc} 
-        {
-            {1} {Duncan, Keeper of the Dead}
-            {2} {Duncan is the keeper over the ancient necromantic crypts. His valor}
-            {3} {for the guild is legendary. He was the first necromancer to control}
-            {4} {his necromantic powers to properly preserve a corpse. Now with great}
-            {5} {honor, he has been given control over the crypts. So if you have a}
-            {6} {question about them, he probably can answer it for you.}
-            {7} {He is in perfect health.}
-            {8} {Duncan is carrying:}
-            {9} {<O`A necromantic rod with a bright lightningstone orb on the}
-            {10} {end`>.}
-            {11} {<O`An ancient ledger`>.}
-        }
-        {id} {Duncan}
-        {location} 
-        {
-            {Pinnacle/Fantasy/Necromancer Guild} 
-            {
-                {48} {}
-            }
-        }
-        {name} {Duncan, Keeper of the Dead}
-        {nokill} {1}
-        {size} 
-        {
-            {consider} {Really Big (17).}
-            {0} 
-            {
-                {consider} {Really Big (17).}
-            }
-        }
-    }
-    {_npc[^Goram the ranger \x28good\x29$]} 
-    {
-        {alignment} {0}
-        {desc} 
-        {
-            {1} {Goram the ranger (good)}
-            {2} {Goram used to be an armourer for another}
-            {3} {nation.  Now, he is a ranger and runs the familiar}
-            {4} {shop for the Necromancers, when he's not out and about.}
-            {5} {He is in perfect health.}
-            {6} {Goram is carrying:}
-            {7} {<W`Necromancer Rod`>.}
-        }
-        {id} {Goram}
-        {location} 
-        {
-            {Pinnacle/Fantasy/Necromancer Guild} 
-            {
-                {18} {}
-            }
-        }
-        {name} {Goram the ranger (good)}
-        {nokill} {1}
-        {size} 
-        {
-            {consider} {34000}
-        }
-    }
-    {_npc[^Lynda the librarian \x28neutral\x29$]} 
-    {
-        {alignment} {0}
-        {desc} 
-        {
-            {1} {Lynda the librarian (neutral)}
-            {2} {Lynda is a beautiful woman in her late thirties it appears.  Her}
-            {3} {golden hair and slender figure demonstrate an elvish heritage.  Though}
-            {4} {her past is clouded in mystery, she is one of the most intelligent}
-            {5} {necromancers alive.  This explains her appointment as librarian for}
-            {6} {the guild.  Her appearance belies her strength, for Lynda has survived}
-            {7} {more battles than it is known.}
-            {8} {She is in perfect health.}
-            {9} {Lynda is carrying:}
-            {10} {<W`Necromancer Rod`>.}
-        }
-        {id} {Lynda}
-        {location} 
-        {
-            {Pinnacle/Fantasy/Necromancer Guild} 
-            {
-                {41} {}
-                {45} {}
-            }
-        }
-        {name} {Lynda the librarian (neutral)}
-        {nokill} {1}
-        {size} 
-        {
-            {consider} {Really Big (16).}
-            {0} 
+            {id} {Lynda}
+            {name} {Lynda the librarian (neutral)}
+            {nokill} {1}
+            {size} 
             {
                 {consider} {Really Big (16).}
+                {0} 
+                {
+                    {consider} {Really Big (16).}
+                }
             }
+            {undead} {0}
         }
-        {undead} {0}
-    }
-    {_npc[^Rachlan the Pure Necromancer \x28pure\x29$]} 
-    {
-        {alignment} {0}
-        {desc} 
+        {^Rachlan the Pure Necromancer \x28pure\x29$} 
         {
-            {1} {As you gaze up at the statue a feeling of awe and wonderment fills your}
-            {2} {being.  Of a small human form comes such energy that fills your heart}
-            {3} {with}
-            {4} {excitement.  The Saint of the Dead, Rachlan, sits in his chair watching}
-            {5} {over each pure necromancer, following them through their struggles with}
-            {6} {life and death.  Your eyes fall upon the face of the statue, noticing}
-            {7} {the}
-            {8} {deep lines around the mouth, eyes and forehead.  It's the eyes that}
-            {9} {catch}
-            {10} {your attention most, for they seem to look into your soul and give you}
-            {11} {strength.}
-        }
-        {id} {Rachlan}
-        {location} 
-        {
-            {Pinnacle/Fantasy/Necromancer Guild} 
+            {_area} {Pinnacle/Fantasy/Necromancer Guild}
+            {alignment} {0}
+            {desc} 
             {
-                {72} {}
-                {76} {}
-                {92} {}
+                {1} {As you gaze up at the statue a feeling of awe and wonderment fills your}
+                {2} {being.  Of a small human form comes such energy that fills your heart}
+                {3} {with}
+                {4} {excitement.  The Saint of the Dead, Rachlan, sits in his chair watching}
+                {5} {over each pure necromancer, following them through their struggles with}
+                {6} {life and death.  Your eyes fall upon the face of the statue, noticing}
+                {7} {the}
+                {8} {deep lines around the mouth, eyes and forehead.  It's the eyes that}
+                {9} {catch}
+                {10} {your attention most, for they seem to look into your soul and give you}
+                {11} {strength.}
             }
-        }
-        {name} {Rachlan the Pure Necromancer (pure)}
-        {size} 
-        {
-            {0} 
+            {id} {Rachlan}
+            {name} {Rachlan the Pure Necromancer (pure)}
+            {nokill} {1}
+            {size} 
             {
-                {consider} {72000}
+                {0} 
+                {
+                    {consider} {72000}
+                }
             }
+            {undead} {0}
         }
-        {undead} {0}
-    }
-    {_npc[^Raylorn the Prime Necromancer \x28neutral\x29$]} 
-    {
-        {alignment} {0}
-        {desc} 
+        {^Raylorn the Prime Necromancer \x28neutral\x29$} 
         {
-            {1} {Raylorn the Prime Necromancer (neutral)}
-            {2} {This powerful man is known as Raylorn.}
-            {3} {He is one of the most powerful Necromancers that have ever existed.}
-            {4} {Looking closely, you can see blue sparks dance within his eyes.}
-            {5} {Beyond his immense power, he has an inquisitive soul}
-            {6} {and is always willing to meet a new person.}
-            {7} {He knows much about the Necromancers' Guild and would be happy}
-            {8} {to discuss it with you if you would only say hello to him.}
-            {9} {He is in perfect health.}
-            {10} {Raylorn is carrying:}
-            {11} {<O`A necromantic rod with a bright lightningstone orb on the}
-            {12} {end`>.}
-        }
-        {id} {Raylorn}
-        {location} 
-        {
-            {Pinnacle/Fantasy/Necromancer Guild} 
+            {_area} {Pinnacle/Fantasy/Necromancer Guild}
+            {alignment} {0}
+            {desc} 
             {
-                {5} {}
-                {8} {}
-                {20} {}
-                {45} {}
+                {1} {Raylorn the Prime Necromancer (neutral)}
+                {2} {This powerful man is known as Raylorn.}
+                {3} {He is one of the most powerful Necromancers that have ever existed.}
+                {4} {Looking closely, you can see blue sparks dance within his eyes.}
+                {5} {Beyond his immense power, he has an inquisitive soul}
+                {6} {and is always willing to meet a new person.}
+                {7} {He knows much about the Necromancers' Guild and would be happy}
+                {8} {to discuss it with you if you would only say hello to him.}
+                {9} {He is in perfect health.}
+                {10} {Raylorn is carrying:}
+                {11} {<O`A necromantic rod with a bright lightningstone orb on the}
+                {12} {end`>.}
             }
-        }
-        {name} {Raylorn the Prime Necromancer (neutral)}
-        {nokill} {1}
-        {size} 
-        {
-            {consider} {Really Big (15).}
-            {0} 
+            {id} {Raylorn}
+            {name} {Raylorn the Prime Necromancer (neutral)}
+            {nokill} {1}
+            {size} 
             {
-                {consider} {Really Big (16).}
+                {consider} {Really Big (15).}
+                {0} 
+                {
+                    {consider} {100}
+                }
             }
+            {undead} {0}
         }
-        {undead} {0}
-    }
-    {_npc[^Sebastian - The Legendary Enchanter$]} 
-    {
-        {id} {Sebastian}
-        {name} {Sebastian - The Legendary Enchanter}
-    }
-    {_npc[^Thanamere, Keeper of the scrolls$]} 
-    {
-        {alignment} {0}
-        {desc} 
+        {^Sebastian - The Legendary Enchanter$} 
         {
-            {1} {Thanamere, Keeper of the scrolls}
-            {2} {This is Thanamere, keeper of Scrolls. He stands behind the counter,}
-            {3} {waiting to serve his brothers and sisters. He tells you: 'Do not misuse}
-            {4} {me and I will help you in your quest for glory, use me for other than}
-            {5} {my intent and you still pay the price!' Can this be the same Thanamere}
-            {6} {that the Necromancer books speak of, the one who died and was brought}
-            {7} {back to life?}
-            {8} {He is in perfect health.}
+            {_area} {Pinnacle/Fantasy/Necromancer Guild}
+            {id} {Sebastian}
+            {name} {Sebastian - The Legendary Enchanter}
+            {nokill} {1}
         }
-        {id} {Thanamere}
-        {location} 
+        {^Thanamere, Keeper of the scrolls$} 
         {
-            {Pinnacle/Fantasy/Necromancer Guild} 
+            {_area} {Pinnacle/Fantasy/Necromancer Guild}
+            {alignment} {0}
+            {desc} 
             {
-                {40} {}
+                {1} {Thanamere, Keeper of the scrolls}
+                {2} {This is Thanamere, keeper of Scrolls. He stands behind the counter,}
+                {3} {waiting to serve his brothers and sisters. He tells you: 'Do not misuse}
+                {4} {me and I will help you in your quest for glory, use me for other than}
+                {5} {my intent and you still pay the price!' Can this be the same Thanamere}
+                {6} {that the Necromancer books speak of, the one who died and was brought}
+                {7} {back to life?}
+                {8} {He is in perfect health.}
             }
-        }
-        {name} {Thanamere, Keeper of the scrolls}
-        {nokill} {1}
-        {size} 
-        {
-            {consider} {Really Big (12).}
-            {0} 
+            {id} {Thanamere}
+            {location} 
+            {
+                {Pinnacle/Fantasy/Necromancer Guild} 
+                {
+                    {40} {}
+                }
+            }
+            {name} {Thanamere, Keeper of the scrolls}
+            {nokill} {1}
+            {size} 
             {
                 {consider} {Really Big (12).}
+                {0} 
+                {
+                    {consider} {Really Big (12).}
+                }
             }
+            {undead} {0}
         }
-        {undead} {0}
-    }
-    {_npc[^Theela the Necromancer \x28moral\x29$]} 
-    {
-        {alignment} {3}
-        {desc} 
+        {^Theela the Necromancer \x28moral\x29$} 
         {
-            {1} {Theela the Necromancer (moral)}
-            {2} {Theela smiles at you, though you can see the sadness and anger }
-            {3} {she's holding inside.  Even her pretty features are dulled slightly }
-            {4} {by the welling of emotion she tries to hold inside.  Even as you }
-            {5} {wonder why she holds such grief, you remember that Theela is the }
-            {6} {sister of the missing necromancer Kitana.  Her grief can only be }
-            {7} {for her missing sister.}
-            {8} {She is in perfect health.}
-            {9} {Theela is carrying:}
-            {10} {<O`An ancient parchment`>.}
-            {11} {<W`Necromancer Rod`>.}
-        }
-        {id} {Theela}
-        {location} 
-        {
-            {Pinnacle/Fantasy/Necromancer Guild} 
+            {_area} {Pinnacle/Fantasy/Necromancer Guild}
+            {alignment} {3}
+            {desc} 
             {
-                {41} {}
-                {46} {}
+                {1} {Theela the Necromancer (moral)}
+                {2} {Theela smiles at you, though you can see the sadness and anger }
+                {3} {she's holding inside.  Even her pretty features are dulled slightly }
+                {4} {by the welling of emotion she tries to hold inside.  Even as you }
+                {5} {wonder why she holds such grief, you remember that Theela is the }
+                {6} {sister of the missing necromancer Kitana.  Her grief can only be }
+                {7} {for her missing sister.}
+                {8} {She is in perfect health.}
+                {9} {Theela is carrying:}
+                {10} {<O`An ancient parchment`>.}
+                {11} {<W`Necromancer Rod`>.}
             }
-        }
-        {name} {Theela the Necromancer (moral)}
-        {nokill} {1}
-        {size} 
-        {
-            {consider} {Really Big (12).}
-            {0} 
+            {id} {Theela}
+            {name} {Theela the Necromancer (moral)}
+            {nokill} {1}
+            {size} 
             {
                 {consider} {Really Big (12).}
+                {0} 
+                {
+                    {consider} {Really Big (12).}
+                }
             }
+            {undead} {0}
         }
-        {undead} {0}
-    }
-    {_npc[^Troll$]} 
-    {
-        {size} 
+        {^Wythe the Moneylender \x28serene\x29$} 
         {
-            {0} 
+            {_area} {Pinnacle/Fantasy/Necromancer Guild}
+            {alignment} {4}
+            {desc} 
             {
-                {avg} {1074}
-                {kills} {3}
-                {max} {2368}
-                {min} {331}
+                {1} {Wythe the Moneylender (serene)}
+                {2} {Wythe is the moneylender of the Necromancer's guild. She}
+                {3} {spends her time in this office, and is very willing to}
+                {4} {assist you with whatever transactions you wish to make.}
+                {5} {It would not be wise to attack her, for she is very}
+                {6} {adept at defending herself.}
+                {7} {She is in perfect health.}
+                {8} {Wythe is carrying:}
+                {9} {<W`Necromancer Rod`>.}
             }
-        }
-    }
-    {_npc[^Wythe the Moneylender \x28serene\x29$]} 
-    {
-        {alignment} {4}
-        {desc} 
-        {
-            {1} {Wythe the Moneylender (serene)}
-            {2} {Wythe is the moneylender of the Necromancer's guild. She}
-            {3} {spends her time in this office, and is very willing to}
-            {4} {assist you with whatever transactions you wish to make.}
-            {5} {It would not be wise to attack her, for she is very}
-            {6} {adept at defending herself.}
-            {7} {She is in perfect health.}
-            {8} {Wythe is carrying:}
-            {9} {<W`Necromancer Rod`>.}
-        }
-        {id} {Wythe}
-        {location} 
-        {
-            {Pinnacle/Fantasy/Necromancer Guild} 
+            {id} {Wythe}
+            {location} 
             {
-                {73} {}
+                {Pinnacle/Fantasy/Necromancer Guild} 
+                {
+                    {73} {}
+                }
             }
-        }
-        {name} {Wythe the Moneylender (serene)}
-        {nokill} {1}
-        {size} 
-        {
-            {consider} {78000}
-            {0} 
+            {name} {Wythe the Moneylender (serene)}
+            {nokill} {1}
+            {size} 
             {
-                {consider} {74000}
+                {consider} {78000}
+                {0} 
+                {
+                    {consider} {74000}
+                }
             }
+            {undead} {0}
         }
-        {undead} {0}
     }
 }
 
