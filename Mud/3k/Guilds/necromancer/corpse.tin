@@ -2,9 +2,8 @@
 {
     {_area} {global}
     {global} {1}
-    {pickup} {1}
+    {pickup} {.corpse get}
     {nomap} {1}
-    {pickup_command} {.corpse get}
 };
 
 #ALIAS {.cs_held_get}     {#SEND {!get preservation %1};#SEND {!keep preservation};};

@@ -1,5 +1,6 @@
 #VAR {_item[containing \d+ messages]}
 {
+    @fFormatItemData{
     {_area} {global}
 	{desc}
 	{
@@ -9,16 +10,20 @@
 	{id} {board}
 	{name} {board}
 	{pickup} {-1}
+    }
 };
 #VAR {_item[^A single gold coin$]}
 {
+    @fFormatItemData{
     {_area} {global}
 	{global} {1}
 	{nomap} {1}
 	{pickup} {-1}
+    }
 };
 #VAR {_item[^A set of glowing red shackles, bound to]}
 {
+    @fFormatItemData{
     {_area} {global}
 	{desc}
 	{
@@ -28,9 +33,11 @@
 	{id} {shackles}
 	{global} {1}
 	{nomap} {1}
+    }
 };
 #VAR {_item[^A Trashcan$]}
 {
+    @fFormatItemData{
     {_area} {global}
 	{desc}
 	{
@@ -47,115 +54,146 @@
 	{id} {trashcan}
 	{global} {1}
 	{name} {A Trashcan}
+    }
 };
 #VAR {_item[coins]}
 {
+    @fFormatItemData{
     {_area} {global}
 	{global} {1}
 	{nomap} {1}
-	{pickup} {1}
-	{pickup_command} {get coins}
+	{pickup} {get coins}
+    }
 };
 #VAR {_item[departing]}
 {
+    @fFormatItemData{
     {_area} {global}
 	{global} {1}
 	{nomap} {1}
 	{pickup} {-1}
+    }
 };
 #VAR {_item[devouring]}
 {
+    @fFormatItemData{
     {_area} {global}
 	{global} {1}
 	{nomap} {1}
 	{pickup} {-1}
+    }
 };
 #VAR {_item[empty]}
 {
+    @fFormatItemData{
     {_area} {global}
 	{global} {1}
 	{nomap} {1}
 	{pickup} {-1}
+    }
 };
 #VAR {_item[fear]}
 {
+    @fFormatItemData{
     {_area} {global}
 	{global} {1}
 	{nomap} {1}
 	{pickup} {-1}
+    }
 };
 #VAR {_item[fractures]}
 {
+    @fFormatItemData{
     {_area} {global}
 	{global} {1}
 	{nomap} {1}
 	{pickup} {-1}
+    }
 };
 #VAR {_item[fumbling]}
 {
+    @fFormatItemData{
     {_area} {global}
 	{global} {1}
 	{nomap} {1}
 	{pickup} {-1}
+    }
 };
 #VAR {_item[grafting]}
 {
+    @fFormatItemData{
     {_area} {global}
 	{global} {1}
 	{nomap} {1}
 	{pickup} {-1}
+    }
 };
 #VAR {_item[hunger]}
 {
+    @fFormatItemData{
     {_area} {global}
 	{global} {1}
 	{nomap} {1}
 	{pickup} {-1}
+    }
 };
 #VAR {_item[nullification]}
 {
+    @fFormatItemData{
     {_area} {global}
 	{global} {1}
 	{nomap} {1}
 	{pickup} {-1}
+    }
 };
 #VAR {_item[obliquity]}
 {
+    @fFormatItemData{
     {_area} {global}
 	{global} {1}
 	{nomap} {1}
 	{pickup} {-1}
+    }
 };
 #VAR {_item[phial]}
 {
+    @fFormatItemData{
     {_area} {global}
 	{global} {1}
 	{nomap} {1}
 	{pickup} {1}
+    }
 };
 #VAR {_item[quick digestion]}
 {
+    @fFormatItemData{
     {_area} {global}
 	{global} {1}
 	{nomap} {1}
 	{pickup} {-1}
+    }
 };
 #VAR {_item[slow digestion]}
 {
+    @fFormatItemData{
     {_area} {global}
 	{global} {1}
 	{nomap} {1}
 	{pickup} {-1}
+    }
 };
 #VAR {_item[-\d.]}
 {
+    @fFormatItemData{
     {_area} {global}
 	{global} {1}
 	{nomap} {1}
 	{pickup} {-1}
+    }
 };
 #VAR {_item[^A burning funeral pyre$]}
 {
+    @fFormatItemData{
     {_area} {global}
 	{desc}
 	{
@@ -170,9 +208,11 @@
 	{nomap} {1}
 	{name} {A burning funeral pyre}
 	{pickup} {-1}
+    }
 };
 #VAR {_item[^Ventra's secret chest \x28open\x29$]}
 {
+    @fFormatItemData{
     {_area} {global}
 	{desc}
 	{
@@ -186,4 +226,5 @@
 	{name} {Ventra's secret chest (open)}
 	{nomap} {1}
 	{pickup} {-1}
+    }
 };

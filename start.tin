@@ -64,10 +64,10 @@
 
     .file load    {$path[system]/events.tin};
     .file loadall {$path[system]/*.tin};
-    .file loadall {$path[settings]/*.tin};
     .file loadall {$path[profile]/*.tin};
     .file loadall {$path[mud]/*.tin};
     .file loadall {$path[local]/*.tin};
+    .file loadall {$path[settings]/*.tin};
 
     #CLASS {cStart} {kill};
   };

@@ -3,7 +3,7 @@
     #NOP %1;
     #IF {"%2" != ""}
     {
-        #IF {&_npc[%2][alignment] == 0}
+        #IF {"$_npc[%2][alignment]" == ""}
         {
             #CLASS {cNecromancerAlignment%5} {open};
             #VAR {_alignments} {{hellish evilness}{-4}{extreme evil}{-3}{evil}{-2}{weak evil}{-1}

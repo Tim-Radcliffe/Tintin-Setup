@@ -248,11 +248,14 @@
                 #RETURN;
             };
 
-            #CLASS {$path[areas]/$map[area][path]/$map[area][name].data.tin} {OPEN};
-            #VAR {_mapVariable[%2][%3]} {%4};
-            #CLASS {$path[areas]/$map[area][path]/$map[area][name].data.tin} {CLOSE};
+            #CLASS {$path[areas]/$map[area][path]/$map[area][name].data.tin} {ASSIGN}
+            {
+                #VAR {_mapVariable[%2][%3]} {%4};
+                #VAR {_mapVariable[%2][%3][area]} {$map[area][path]};
+            };
             #CLASS {$path[areas]/$map[area][path]/$map[area][name].data.tin} {WRITE} {$path[areas]/$map[area][path]/$map[area][name].data.tin};
             #VAR {%2[%3]} {%4};
+            #VAR {%2[%3][area]} {$map[area][path]};
         };
         #CASE {"load"}
         {
@@ -270,17 +273,21 @@
         {
             #FOREACH {*_mapVariable[]} {t}
             {
-                #FOREACH {*_mapVariable[$t][]} {v}
-                {
-                    #IF {"${t}[${v}][global]" == "1"}
-                    {
-                        #UNVAR {${t}[${v}][location]};
-                    };
-                    #ELSE
-                    {
-                        #UNVAR {${t}[${v}]};
-                    };
-                };
+#NOP                 #FOREACH {*_mapVariable[$t][]} {v}
+#NOP                 {
+#NOP                     #IF {"${t}[${v}][_area]" == "global"}
+#NOP                     {
+#NOP                         #UNVAR {${t}[${v}][location]};
+#NOP                     };
+#NOP                     #ELSE
+#NOP                     {
+#NOP                         #UNVAR {${t}[${v}]};
+#NOP                     };
+#NOP                 };
+                .debug MAP {Unloading map variables: $t : $map[area][path]};
+
+                #LIST {$t} INDEXATE {_area};
+                #LIST {$t} FILTER {} {$map[area][path]};
             };
             #UNVAR {_mapVariable};
         };

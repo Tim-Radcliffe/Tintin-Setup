@@ -63,8 +63,7 @@ auto add {mine}
     {
         {_area} {global}        
         {nomap} {1}
-        {pickup} {1}
-        {pickup_command} {handler_auto_mine_ore}
+        {pickup} {handler_auto_mine_ore}
     };
 }
 {e_roomscan_end}

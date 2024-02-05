@@ -1,12 +1,13 @@
 #ALIAS {.scanRoomItem}
 {
-    #IF {@fLocked{scan.%*}} {#RETURN};    
+	#IF {@fLocked{scan.%*}} {#RETURN};
 	#LOCAL {_sRN[match]} {@fGetItemRegex{%3}};
 	#FORMAT {_sRN[hash]} {%H} {$_sRN[match]};
+	#VAR {_item[$_sRN[match]]} {@fFormatItemData{$_item[$_sRN[match]]}};
 	.scanRoomItemID       {$_sRN[match]} {%3} {%2};
 	.scanRoomItemDesc     {$_sRN[match]} {%3} {%2} {$_sRN[hash]};
 	.scanRoomItemLocation {$_sRN[match]};
-	event_raise {e_scan_room_item} {$_sRN[match]} {%3} {%2} {$_sRN[hash]};	
+	event_raise {e_scan_room_item} {$_sRN[match]} {%3} {%2} {$_sRN[hash]};
 };
 event_register {e_room_item} {scan.room.item.tin} {.scanRoomItem};
 
@@ -16,25 +17,25 @@ event_register {e_room_item} {scan.room.item.tin} {.scanRoomItem};
 	{
 		#VAR {_item[%1][id]} {%3};
 		#VAR {_item[%1][name]} {%2};
-		.scanRoomItemSave {%1};		
+		.scanRoomItemSave {%1};
 	};
 };
 
 #ALIAS {.scanRoomItemDesc}
 {
 	#LOCAL {_sRID} {0};
-	#CLASS {cScanItem%4} SIZE {_sRID}; 
+	#CLASS {cScanItem%4} SIZE {_sRID};
 	#IF {$_sRID == 0}
 	{
 		#CLASS {cScanItem%4} {kill};
-		#IF {&_item[%1][desc] == 0}
+		#IF {&_item[%1][desc][] == 0}
 		{
 			#CLASS {cScanItem%4} {assign}
 			{
 				#ACTION {_scan.room.item.desc.%4}
 				{
 					#LINE GAG;
-					#CLASS {cScanItem%4} {assign} 
+					#CLASS {cScanItem%4} {assign}
 					{
 						#ACTION {{^(.*$)}}
 						{
@@ -52,13 +53,13 @@ event_register {e_room_item} {scan.room.item.tin} {.scanRoomItem};
 			};
 
 			#LIST {room[commandqueue]} ADD {!_scan.room.item.desc.%4};
-			#IF {&_item[%1][id] > 0}
+			#IF {"$_item[%1][id]" != ""}
 			{
 				#LINE SUBSTITUTE VARIABLES {#LIST {room[commandqueue]} ADD {!exa $_item[%1][id] on ground}};
 			};
-			#ELSE 
+			#ELSE
 			{
-				#LIST {room[commandqueue]} ADD {!exa %3 on ground};				
+				#LIST {room[commandqueue]} ADD {!exa %3 on ground};
 			};
 			#LIST {room[commandqueue]} ADD {!_scan.room.item.desc.end.%4};
 		};
@@ -67,25 +68,29 @@ event_register {e_room_item} {scan.room.item.tin} {.scanRoomItem};
 
 #ALIAS {.scanRoomItemLocation}
 {
-	#IF {"&_item[%1][location][area]" == "0" && "$_item[%1][nomap]" != "1"}
+	#IF {&map[area][path] > 0}
 	{
-		#IF {&map[area][path] > 0}
+		#IF {$_item[%1][_area] == ""}
 		{
-			#LOCAL {_scanRoomVnum} {};
-			#MAP GET ROOMVNUM {_scanRoomVnum};
+			#VAR {_item[%1][_area]} {$map[area][path]};
+		};		
+		#LOCAL {_scanRoomVnum} {};
+		#MAP GET ROOMVNUM {_scanRoomVnum};
+		#IF {&_item[%1][location][$map[area][path]][$_scanRoomVnum] == 0}
+		{
 			#VAR {_item[%1][location][$map[area][path]][$_scanRoomVnum]} {};
-            #IF {&_area_item_index[%1][$map[area][path]] == 0}
-            {
-			    #VAR {_area_item_index[%1][$map[area][path]]} {$_scanRoomVnum};
-            };
+			#IF {&_area_item_index[%1][$map[area][path]] == 0}
+			{
+				#VAR {_area_item_index[%1][$map[area][path]]} {$_scanRoomVnum};
+			};
+			.scanRoomItemSave {%1};
 		};
-		.scanRoomItemSave {%1};
 	};
 };
 
 #ALIAS {.scanRoomItemSave}
 {
-	#IF {&_item[%1][nomap] == 0 && &map[area][path] > 0}
+	#IF {$_item[%1][nomap] != 1 && &map[area][path] > 0}
 	{
 		.mapVariable add {_item} {%1} {$_item[%1]};
 	};
@@ -97,7 +102,7 @@ event_register {e_room_item} {scan.room.item.tin} {.scanRoomItem};
 	#VAR {_fGNR[input]} {%1};
 	#FOREACH {*_item[%*]} {_fGNR[regexp]}
 	{
-		#LINE SUBSTITUTE {variables} 
+		#LINE SUBSTITUTE {variables}
 		{
 			#REGEXP {$_fGNR[input]} {{$_fGNR[regexp]}}
 			{
@@ -110,4 +115,19 @@ event_register {e_room_item} {scan.room.item.tin} {.scanRoomItem};
 		};
 	};
 	#RETURN {^@fEscapeString{$_fGNR[input]}$};
+};
+
+#FUNCTION {fFormatItemData}
+{
+	#NOP %1;
+	#LOCAL {_itemData} {%0};
+	#FOREACH {_area;desc;id;location;name;nomap;pickup} {_fieldName}
+	{
+		#IF {&_itemData[$_fieldName] == 0}
+		{
+			#VAR {_itemData[$_fieldName]} {};
+		};
+	};
+	#UNVAR {_fieldName};
+	#RETURN {$_itemData};
 };

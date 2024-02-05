@@ -1,45 +1,46 @@
 #ALIAS {.scanRoomNPC}
 {
-    #IF {@fLocked{scan.%*}} {#RETURN}; 	
-    #LOCAL {_sRN[match]} {@fGetNPCRegex{%3}};
-    #IF {"$_npc[$_sRN[match]][nomap]" == "1"}
-    {
-        #RETURN;
-    }
+	#IF {@fLocked{scan.%*}} {#RETURN};
+	#LOCAL {_sRN[match]} {@fGetNPCRegex{%3}};
+	#IF {"$_npc[$_sRN[match]][nomap]" == "1"}
+	{
+		#RETURN;
+	}
 	#FORMAT {_sRN[hash]} {%H} {$_sRN[match]};
+	#VAR {_npc[$_sRN[match]]} {@fFormatNPCData{$_npc[$_sRN[match]]}};
 	.scanRoomNPCID       {$_sRN[match]} {%3} {%2};
 	.scanRoomNPCDesc     {$_sRN[match]} {%3} {%2} {$_sRN[hash]};
 	.scanRoomNPCLocation {$_sRN[match]};
 	.scanRoomNPCConsider {$_sRN[match]} {%3} {%2} {$_sRN[hash]};
-	event_raise {e_scan_room_npc} {$_sRN[match]} {%3} {%2} {$_sRN[hash]};    
+	event_raise {e_scan_room_npc} {$_sRN[match]} {%3} {%2} {$_sRN[hash]};
 };
 event_register {e_room_npc} {h_scan_npc} {.scanRoomNPC};
 
 #ALIAS {.scanRoomNPCID}
 {
-	#IF {&_npc[%1][id] == 0}
+	#IF {"$_npc[%1][id]" == ""}
 	{
 		#VAR {_npc[%1][id]} {%3};
 		#VAR {_npc[%1][name]} {%2};
-		.scanRoomNPCSave {%1};		
+		.scanRoomNPCSave {%1};
 	};
 };
 
 #ALIAS {.scanRoomNPCDesc}
 {
 	#LOCAL {_sRND} {};
-	#CLASS {cScanNPC%4} SIZE {_sRND}; 
+	#CLASS {cScanNPC%4} SIZE {_sRND};
 	#IF {$_sRND == 0}
 	{
 		#CLASS {cScanNPC%4} {kill};
-		#IF {&_npc[%1][desc] == 0}
+		#IF {&_npc[%1][desc][] == 0}
 		{
 			#CLASS {cScanNPC%4} {assign}
 			{
 				#ACTION {_scan.room.npc.desc.%4}
 				{
 					#LINE GAG;
-					#CLASS {cScanNPC%4} {assign} 
+					#CLASS {cScanNPC%4} {assign}
 					{
 						#ACTION {{^(.*$)}}
 						{
@@ -61,9 +62,9 @@ event_register {e_room_npc} {h_scan_npc} {.scanRoomNPC};
 			{
 				#LINE SUBSTITUTE VARIABLES {#LIST {room[commandqueue]} ADD {!exa $_npc[%1][id]}};
 			};
-			#ELSE 
+			#ELSE
 			{
-				#LIST {room[commandqueue]} ADD {!exa %3};				
+				#LIST {room[commandqueue]} ADD {!exa %3};
 			};
 			#LIST {room[commandqueue]} ADD {!_scan.room.npc.desc.end.%4};
 		};
@@ -72,19 +73,23 @@ event_register {e_room_npc} {h_scan_npc} {.scanRoomNPC};
 
 #ALIAS {.scanRoomNPCLocation}
 {
-	#IF {"&_npc[%1][location][area]" == "0" && "$_npc[%1][nomap]" != "1"}
+	#IF {&map[area][path] > 0}
 	{
-		#IF {&map[area][path] > 0}
+		#IF {$_npc[%1][_area] == ""}
 		{
-			#LOCAL {_scanRoomVnum} {};
-			#MAP GET ROOMVNUM {_scanRoomVnum};
-			#VAR {_npc[%1][location][$map[area][path]][$_scanRoomVnum]} {};
-            #IF {&_area_npc_index[%1][$map[area][path]] == 0}
-            {
-			    #VAR {_area_npc_index[%1][$map[area][path]]} {$_scanRoomVnum};
-            };
+			#VAR {_npc[%1][_area]} {$map[area][path]};
 		};
-		.scanRoomNPCSave {%1};
+		#LOCAL {_scanRoomVnum} {};
+		#MAP GET ROOMVNUM {_scanRoomVnum};
+		#IF {&_npc[%1][location][$map[area][path]][$_scanRoomVnum] == 0}
+		{
+			#VAR {_npc[%1][location][$map[area][path]][$_scanRoomVnum]} {};
+			#IF {&_area_npc_index[%1][$map[area][path]] == 0}
+			{
+				#VAR {_area_npc_index[%1][$map[area][path]]} {$_scanRoomVnum};
+			};
+			.scanRoomNPCSave {%1};
+		};
 	};
 };
 
@@ -104,24 +109,24 @@ event_register {e_room_npc} {h_scan_npc} {.scanRoomNPC};
 				#VAR {_npc[%1][size][$map[area][scaler]][consider]} {%%%1};
 				.scanRoomNPCSave {%1};
 				#UNACTION {^Monster class: %%%*$};
-			};				
-			#UNACTION {_scan.room.npc.consider.%4};			
+			};
+			#UNACTION {_scan.room.npc.consider.%4};
 		} {1};
 		#LIST {room[commandqueue]} ADD {!_scan.room.npc.consider.%4};
 		#IF {&_npc[%1][id] > 0}
 		{
 			#LIST {room[commandqueue]} ADD {!consider $_npc[%1][id]};
 		};
-		#ELSE 
+		#ELSE
 		{
-			#LIST {room[commandqueue]} ADD {!consider %3};				
-		};		
+			#LIST {room[commandqueue]} ADD {!consider %3};
+		};
 	};
 };
 
 #ALIAS {.scanRoomNPCSave}
 {
-	#IF {&_npc[%1][nomap] == 0 && &map[area][path] > 0}
+	#IF {"$_npc[%1][nomap]"" != "1" && &map[area][path] > 0}
 	{
 		.mapVariable add {_npc} {%1} {$_npc[%1]};
 	};
@@ -137,7 +142,7 @@ event_register {e_room_npc} {h_scan_npc} {.scanRoomNPC};
 	};
 	#FOREACH {*_npc[%*]} {_fGNR[regexp]}
 	{
-		#LINE SUBSTITUTE {variables} 
+		#LINE SUBSTITUTE {variables}
 		{
 			#REGEXP {$_fGNR[input]} {{$_fGNR[regexp]}}
 			{
@@ -150,4 +155,20 @@ event_register {e_room_npc} {h_scan_npc} {.scanRoomNPC};
 		};
 	};
 	#RETURN {^@fEscapeString{$_fGNR[input]}$};
+};
+
+#FUNCTION {fFormatNPCData}
+{
+	#NOP %1;
+	#LOCAL {_npcData} {%0};
+	#FOREACH {_area;alignment;desc;hunts;id;location;name;nokill;size;undead;vulnerabilities} {_f}
+	{
+
+		#IF {&_npcData[$_f] == 0}
+		{
+			#VAR {_npcData[$_f]} {};
+		};
+	};
+	#UNVAR {_f};
+	#RETURN {$_npcData};
 };

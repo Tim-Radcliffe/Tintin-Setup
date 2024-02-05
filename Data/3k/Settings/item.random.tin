@@ -1,5 +1,6 @@
 #VAR {_item[^A Parcel$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -12,11 +13,12 @@
 	}
 	{id} {parcel}
 	{nomap} {1}
-	{global} {1}
 	{name} {A Parcel}
-}
+    }
+};
 #VAR {_item[^A blue stone necklace$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -27,11 +29,12 @@
 	}
 	{id} {amulet}
 	{nomap} {1}
-	{global} {1}
 	{name} {A blue stone necklace}
-}
+    }
+};
 #VAR {_item[^A bone wand$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -45,11 +48,12 @@
 	}
 	{id} {wand}
 	{nomap} {1}
-	{global} {1}
 	{name} {A bone wand}
-}
+    }
+};
 #VAR {_item[^A cannister-topped cannon$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -58,13 +62,14 @@
 		{3} {To use this cannon you must hold it.}
 		{4} {It looks light.}
 	}
-	{global} {1}
 	{id} {cannon}
 	{nomap} {1}
 	{name} {A cannister-topped cannon}
-}
+    }
+};
 #VAR {_item[^A crooked brown wand$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -77,11 +82,12 @@
 	}
 	{id} {wand}
 	{nomap} {1}
-	{global} {1}
 	{name} {A crooked brown wand}
-}
+    }
+};
 #VAR {_item[^A curved gray wand$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -94,11 +100,12 @@
 	}
 	{id} {wand}
 	{nomap} {1}
-	{global} {1}
 	{name} {A curved gray wand}
-}
+    }
+};
 #VAR {_item[^A dull white wand$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -111,11 +118,12 @@
 	}
 	{id} {wand}
 	{nomap} {1}
-	{global} {1}
 	{name} {A dull white wand}
-}
+    }
+};
 #VAR {_item[^A glowing white wand$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -129,11 +137,12 @@
 	}
 	{id} {wand}
 	{nomap} {1}
-	{global} {1}
 	{name} {A glowing white wand}
-}
+    }
+};
 #VAR {_item[^A golden staff$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -144,12 +153,13 @@
 		{5} {It doesn't look too heavy.}
 	}
 	{id} {golden staff}
-	{global} {1}
 	{nomap} {1}
 	{name} {A golden staff}
-}
+    }
+};
 #VAR {_item[^A gray staff$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -160,13 +170,14 @@
 		{5} {This weapon gains benefits from your polearm weapon skill.}
 		{6} {It looks light.}
 	}
-	{global} {1}
 	{id} {gray staff}
 	{nomap} {1}
 	{name} {A gray staff}
-}
+    }
+};
 #VAR {_item[^A hammer$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -178,11 +189,12 @@
 	}
 	{id} {hammer}
 	{nomap} {1}
-	{global} {1}
 	{name} {A hammer}
-}
+    }
+};
 #VAR {_item[^A light blue wand$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -195,11 +207,12 @@
 	}
 	{id} {wand}
 	{nomap} {1}
-	{global} {1}
 	{name} {A light blue wand}
-}
+    }
+};
 #VAR {_item[^A magic scroll$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -212,11 +225,12 @@
 	}
 	{id} {scroll}
 	{nomap} {1}
-	{global} {1}
 	{name} {A magic scroll}
-}
+    }
+};
 #VAR {_item[^A pair of dirty gloves$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -228,11 +242,12 @@
 	}
 	{id} {gloves}
 	{nomap} {1}
-	{global} {1}
 	{name} {A pair of dirty gloves}
-}
+    }
+};
 #VAR {_item[^A pair of gloves$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -244,11 +259,12 @@
 	}
 	{id} {gloves}
 	{nomap} {1}
-	{global} {1}
 	{name} {A pair of gloves}
-}
+    }
+};
 #VAR {_item[^A rifle$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -262,11 +278,12 @@
 	}
 	{id} {rifle}
 	{nomap} {1}
-	{global} {1}
 	{name} {A rifle}
-}
+    }
+};
 #VAR {_item[^A ruby necklace$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -276,12 +293,13 @@
 		{4} {It looks light.}
 	}
 	{id} {amulet}
-	{global} {1}
 	{nomap} {1}
 	{name} {A ruby necklace}
-}
+    }
+};
 #VAR {_item[^A shiny, platinum amulet$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -292,12 +310,13 @@
 		{5} {It looks light.}
 	}
 	{id} {amulet}
-	{global} {1}
 	{nomap} {1}
 	{name} {A shiny, platinum amulet}
-}
+    }
+};
 #VAR {_item[^A short green wand$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -312,11 +331,12 @@
 	}
 	{id} {wand of backfire}
 	{nomap} {1}
-	{global} {1}
 	{name} {A short green wand}
-}
+    }
+};
 #VAR {_item[^A slender crystal wand$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -327,11 +347,12 @@
 	}
 	{id} {wand}
 	{nomap} {1}
-	{global} {1}
 	{name} {A slender crystal wand}
-}
+    }
+};
 #VAR {_item[^A spear \x28enchanted\x29$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -342,13 +363,14 @@
 		{5} {This weapon gains benefits from your polearm weapon skill.}
 		{6} {It doesn't look too heavy.}
 	}
-	{global} {1}
 	{id} {spear}
 	{nomap} {1}
 	{name} {A spear (enchanted)}
-}
+    }
+};
 #VAR {_item[^A Statue of a Smiling Leprechaun$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -357,13 +379,14 @@
 		{3} {Some even say that if you rub its belly it will bring you good luck.}
 		{4} {It looks light.}
 	}
-	{global} {1}
 	{id} {statue}
 	{nomap} {1}
 	{name} {A Statue of a Smiling Leprechaun}
-}
+    }
+};
 #VAR {_item[^A steel longsword$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -376,12 +399,13 @@
 		{7} {It looks light.}
 	}
 	{id} {longsword}
-	{global} {1}
 	{nomap} {1}
 	{name} {A steel longsword}
-}
+    }
+};
 #VAR {_item[^A straight black wand$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -396,11 +420,12 @@
 	}
 	{id} {wand}
 	{nomap} {1}
-	{global} {1}
 	{name} {A straight black wand}
-}
+    }
+};
 #VAR {_item[^A sturdy wooden staff$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -414,11 +439,12 @@
 	}
 	{id} {staff}
 	{nomap} {1}
-	{global} {1}
 	{name} {A sturdy wooden staff}
-}
+    }
+};
 #VAR {_item[^A suit of armor$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -431,11 +457,12 @@
 	}
 	{id} {armour}
 	{nomap} {1}
-	{global} {1}
 	{name} {A suit of armor}
-}
+    }
+};
 #VAR {_item[^A white khopesh$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -456,9 +483,11 @@
 		}
 	}
 	{name} {A white khopesh}
-}
+    }
+};
 #VAR {_item[^Amulet$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -469,11 +498,12 @@
 	}
 	{id} {amulet}
 	{nomap} {1}
-	{global} {1}
 	{name} {Amulet}
-}
+    }
+};
 #VAR {_item[^Armour$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -484,11 +514,12 @@
 	}
 	{id} {armour}
 	{nomap} {1}
-	{global} {1}
 	{name} {Armour}
-}
+    }
+};
 #VAR {_item[^bag$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -497,21 +528,23 @@
 		{3} {You can put things in it.}
 		{4} {It looks light.}
 	}
-	{global} {1}
 	{id} {bag}
 	{name} {bag}
 	{nomap} {1}
 	{pickup} {1}
-}
+    }
+};
 #VAR {_item[^Bag$]}
 {
+    @fFormatItemData{
 	{_area} {global}
-	{global} {1}
 	{nomap} {1}
 	{pickup} {-1}
-}
+    }
+};
 #VAR {_item[^Belt$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -520,13 +553,14 @@
 		{3} {An identification spell may reveal more information.}
 		{4} {It looks light.}
 	}
-	{global} {1}
 	{id} {belt}
 	{nomap} {1}
 	{name} {Belt}
-}
+    }
+};
 #VAR {_item[^black stone$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -534,12 +568,13 @@
 		{1} {A black stone.  It is currently unidentified.}
 		{2} {It looks light.}
 	}
-	{global} {1}
 	{nomap} {1}
 	{pickup} {-1}
-}
+    }
+};
 #VAR {_item[^Bone White Armour$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -551,12 +586,13 @@
 		{6} {It doesn't look too heavy.}
 	}
 	{id} {armour}
-	{global} {1}
 	{nomap} {1}
 	{name} {Bone White Armour}
-}
+    }
+};
 #VAR {_item[^Bone White Shield$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -569,11 +605,12 @@
 	}
 	{id} {shield}
 	{nomap} {1}
-	{global} {1}
 	{name} {Bone White Shield}
-}
+    }
+};
 #VAR {_item[^Boots$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -584,11 +621,12 @@
 	}
 	{id} {boots}
 	{nomap} {1}
-	{global} {1}
 	{name} {Boots}
-}
+    }
+};
 #VAR {_item[^Brass Codpiece$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -598,12 +636,13 @@
 		{4} {It looks light.}
 	}
 	{id} {other}
-	{global} {1}
 	{nomap} {1}
 	{name} {Brass Codpiece}
-}
+    }
+};
 #VAR {_item[^Brass Gloves$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -615,11 +654,12 @@
 	}
 	{id} {gloves}
 	{nomap} {1}
-	{global} {1}
 	{name} {Brass Gloves}
-}
+    }
+};
 #VAR {_item[^Brass Helmet$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -630,11 +670,12 @@
 	}
 	{id} {helmet}
 	{nomap} {1}
-	{global} {1}
 	{name} {Brass Helmet}
-}
+    }
+};
 #VAR {_item[^Bronze Codpiece$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -645,11 +686,12 @@
 	}
 	{id} {other}
 	{nomap} {1}
-	{global} {1}
 	{name} {Bronze Codpiece}
-}
+    }
+};
 #VAR {_item[^Bronze Gloves$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -661,11 +703,12 @@
 	}
 	{id} {gloves}
 	{nomap} {1}
-	{global} {1}
 	{name} {Bronze Gloves}
-}
+    }
+};
 #VAR {_item[^Bronze Helmet$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -676,11 +719,12 @@
 	}
 	{id} {helmet}
 	{nomap} {1}
-	{global} {1}
 	{name} {Bronze Helmet}
-}
+    }
+};
 #VAR {_item[^Cloak of Blue Cloth$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -693,11 +737,12 @@
 	}
 	{id} {cloak}
 	{nomap} {1}
-	{global} {1}
 	{name} {Cloak of Blue Cloth}
-}
+    }
+};
 #VAR {_item[^Cloak$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -710,11 +755,12 @@
 	}
 	{id} {cloak}
 	{nomap} {1}
-	{global} {1}
 	{name} {Cloak}
-}
+    }
+};
 #VAR {_item[^Cloth Armour$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -724,12 +770,13 @@
 		{4} {It looks light.}
 	}
 	{id} {armour}
-	{global} {1}
 	{nomap} {1}
 	{name} {Cloth Armour}
-}
+    }
+};
 #VAR {_item[^Cloth Cloak$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -740,11 +787,12 @@
 	}
 	{id} {cloak}
 	{nomap} {1}
-	{global} {1}
 	{name} {Cloth Cloak}
-}
+    }
+};
 #VAR {_item[^Cotton Cloak$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -754,12 +802,13 @@
 		{4} {It looks light.}
 	}
 	{id} {cloak}
-	{global} {1}
 	{nomap} {1}
 	{name} {Cotton Cloak}
-}
+    }
+};
 #VAR {_item[^Crystal ball$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -769,13 +818,14 @@
 		{4} {You get the distinct impression that it is magical in nature.}
 	}
 	{id} {ball}
-	{global} {1}
 	{nomap} {1}
 	{pickup} {-1}
 	{name} {Crystal ball}
-}
+    }
+};
 #VAR {_item[^crystal ball$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -783,13 +833,14 @@
 		{2} {A crystal ball.  It is currently unidentified.}
 	}
 	{id} {crystal ball}
-	{global} {1}
 	{nomap} {1}
 	{pickup} {-1}
 	{name} {crystal ball}
-}
+    }
+};
 #VAR {_item[^Crystalline Cloak$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -802,11 +853,12 @@
 	}
 	{id} {cloak}
 	{nomap} {1}
-	{global} {1}
 	{name} {Crystalline Cloak}
-}
+    }
+};
 #VAR {_item[^Dragonscale Gloves$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -818,11 +870,12 @@
 	}
 	{id} {gloves}
 	{nomap} {1}
-	{global} {1}
 	{name} {Dragonscale Gloves}
-}
+    }
+};
 #VAR {_item[^Dragonscale Shield$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -834,11 +887,12 @@
 	}
 	{id} {shield}
 	{nomap} {1}
-	{global} {1}
 	{name} {Dragonscale Shield}
-}
+    }
+};
 #VAR {_item[^Electrum Codpiece$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -849,11 +903,12 @@
 	}
 	{id} {other}
 	{nomap} {1}
-	{global} {1}
 	{name} {Electrum Codpiece}
-}
+    }
+};
 #VAR {_item[^Electrum Gloves$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -865,11 +920,12 @@
 	}
 	{id} {gloves}
 	{nomap} {1}
-	{global} {1}
 	{name} {Electrum Gloves}
-}
+    }
+};
 #VAR {_item[^Electrum Helmet$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -880,11 +936,12 @@
 	}
 	{id} {helmet}
 	{nomap} {1}
-	{global} {1}
 	{name} {Electrum Helmet}
-}
+    }
+};
 #VAR {_item[^Fur Boots$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -895,11 +952,12 @@
 	}
 	{id} {boots}
 	{nomap} {1}
-	{global} {1}
 	{name} {Fur Boots}
-}
+    }
+};
 #VAR {_item[^Gold Amulet$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -910,11 +968,12 @@
 	}
 	{id} {amulet}
 	{nomap} {1}
-	{global} {1}
 	{name} {Gold Amulet}
-}
+    }
+};
 #VAR {_item[^Gold Cloth cloak$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -926,12 +985,13 @@
 		{6} {It looks very heavy.}
 	}
 	{id} {cloak}
-	{global} {1}
 	{nomap} {1}
 	{name} {Gold Cloth cloak}
-}
+    }
+};
 #VAR {_item[^Gold Helmet$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -941,12 +1001,13 @@
 		{4} {It looks light.}
 	}
 	{id} {helmet}
-	{global} {1}
 	{nomap} {1}
 	{name} {Gold Helmet}
-}
+    }
+};
 #VAR {_item[^Helmet$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -956,12 +1017,13 @@
 		{4} {It looks light.}
 	}
 	{id} {helmet}
-	{global} {1}
 	{nomap} {1}
 	{name} {Helmet}
-}
+    }
+};
 #VAR {_item[^Hide boots$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -972,11 +1034,12 @@
 	}
 	{id} {boots}
 	{nomap} {1}
-	{global} {1}
 	{name} {Hide boots}
-}
+    }
+};
 #VAR {_item[^Iron Chainmail$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -986,12 +1049,13 @@
 		{4} {It looks light.}
 	}
 	{id} {armour}
-	{global} {1}
 	{nomap} {1}
 	{name} {Iron Chainmail}
-}
+    }
+};
 #VAR {_item[^Iron Codpiece$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -1001,12 +1065,13 @@
 		{4} {It looks light.}
 	}
 	{id} {other}
-	{global} {1}
 	{nomap} {1}
 	{name} {Iron Codpiece}
-}
+    }
+};
 #VAR {_item[^Iron Gauntlets$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -1018,11 +1083,12 @@
 	}
 	{id} {gloves}
 	{nomap} {1}
-	{global} {1}
 	{name} {Iron Gauntlets}
-}
+    }
+};
 #VAR {_item[^Iron Gloves$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -1033,11 +1099,12 @@
 	}
 	{id} {gloves}
 	{nomap} {1}
-	{global} {1}
 	{name} {Iron Gloves}
-}
+    }
+};
 #VAR {_item[^Iron Helmet$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -1048,11 +1115,12 @@
 	}
 	{id} {helmet}
 	{nomap} {1}
-	{global} {1}
 	{name} {Iron Helmet}
-}
+    }
+};
 #VAR {_item[^Leather Armour$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -1063,11 +1131,12 @@
 	}
 	{id} {armour}
 	{nomap} {1}
-	{global} {1}
 	{name} {Leather Armour}
-}
+    }
+};
 #VAR {_item[^Leather Boots$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -1079,11 +1148,12 @@
 	}
 	{id} {boots}
 	{nomap} {1}
-	{global} {1}
 	{name} {Leather Boots}
-}
+    }
+};
 #VAR {_item[^Leather Girdle$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -1096,11 +1166,12 @@
 	}
 	{id} {other}
 	{nomap} {1}
-	{global} {1}
 	{name} {Leather Girdle}
-}
+    }
+};
 #VAR {_item[^Leather Gloves$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -1111,11 +1182,12 @@
 	}
 	{id} {gloves}
 	{nomap} {1}
-	{global} {1}
 	{name} {Leather Gloves}
-}
+    }
+};
 #VAR {_item[^Leather Helmet$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -1127,11 +1199,12 @@
 	}
 	{id} {helmet}
 	{nomap} {1}
-	{global} {1}
 	{name} {Leather Helmet}
-}
+    }
+};
 #VAR {_item[^Leather girdle$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -1142,11 +1215,12 @@
 	}
 	{id} {girdle}
 	{nomap} {1}
-	{global} {1}
 	{name} {Leather girdle}
-}
+    }
+};
 #VAR {_item[^Marble Gloves$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -1158,11 +1232,12 @@
 	}
 	{id} {gloves}
 	{nomap} {1}
-	{global} {1}
 	{name} {Marble Gloves}
-}
+    }
+};
 #VAR {_item[^Mylar Straps$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -1174,11 +1249,12 @@
 	}
 	{id} {boots}
 	{nomap} {1}
-	{global} {1}
 	{name} {Mylar Straps}
-}
+    }
+};
 #VAR {_item[^Obsidian Gloves$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -1190,11 +1266,12 @@
 	}
 	{id} {gloves}
 	{nomap} {1}
-	{global} {1}
 	{name} {Obsidian Gloves}
-}
+    }
+};
 #VAR {_item[^Old Dusty Hat$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -1210,12 +1287,13 @@
 		{10} {It looks light.}
 	}
 	{id} {helmet}
-	{global} {1}
 	{nomap} {1}
 	{name} {Old Dusty Hat}
-}
+    }
+};
 #VAR {_item[^Platinum Codpiece$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -1225,12 +1303,13 @@
 		{4} {It looks light.}
 	}
 	{id} {other}
-	{global} {1}
 	{nomap} {1}
 	{name} {Platinum Codpiece}
-}
+    }
+};
 #VAR {_item[^Platinum Gloves$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -1241,12 +1320,13 @@
 		{5} {It looks light.}
 	}
 	{id} {gloves}
-	{global} {1}
 	{nomap} {1}
 	{name} {Platinum Gloves}
-}
+    }
+};
 #VAR {_item[^Platinum Helmet$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -1256,12 +1336,13 @@
 		{4} {It looks light.}
 	}
 	{id} {helmet}
-	{global} {1}
 	{nomap} {1}
 	{name} {Platinum Helmet}
-}
+    }
+};
 #VAR {_item[^Random Codpiece$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -1271,12 +1352,13 @@
 		{4} {It looks light.}
 	}
 	{id} {other}
-	{global} {1}
 	{nomap} {1}
 	{name} {Random Codpiece}
-}
+    }
+};
 #VAR {_item[^Sapphire Amulet$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -1287,11 +1369,12 @@
 	}
 	{id} {amulet}
 	{nomap} {1}
-	{global} {1}
 	{name} {Sapphire Amulet}
-}
+    }
+};
 #VAR {_item[^Scaley Armour$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -1302,11 +1385,12 @@
 	}
 	{id} {armour}
 	{nomap} {1}
-	{global} {1}
 	{name} {Scaley Armour}
-}
+    }
+};
 #VAR {_item[^Scaley Boots$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -1318,11 +1402,12 @@
 	}
 	{id} {boots}
 	{nomap} {1}
-	{global} {1}
 	{name} {Scaley Boots}
-}
+    }
+};
 #VAR {_item[^Scaley Helmet$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -1333,11 +1418,12 @@
 	}
 	{id} {helmet}
 	{nomap} {1}
-	{global} {1}
 	{name} {Scaley Helmet}
-}
+    }
+};
 #VAR {_item[^set of dice$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -1349,11 +1435,12 @@
 	}
 	{id} {set of dice}
 	{nomap} {1}
-	{global} {1}
 	{name} {set of dice}
-}
+    }
+};
 #VAR {_item[^Silver Codpiece$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -1363,12 +1450,13 @@
 		{4} {It looks light.}
 	}
 	{id} {other}
-	{global} {1}
 	{nomap} {1}
 	{name} {Silver Codpiece}
-}
+    }
+};
 #VAR {_item[^Silver Gloves$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -1380,11 +1468,12 @@
 	}
 	{id} {gloves}
 	{nomap} {1}
-	{global} {1}
 	{name} {Silver Gloves}
-}
+    }
+};
 #VAR {_item[^Steel Chainmail$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -1395,11 +1484,12 @@
 	}
 	{id} {armour}
 	{nomap} {1}
-	{global} {1}
 	{name} {Steel Chainmail}
-}
+    }
+};
 #VAR {_item[^Steel Codpiece$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -1410,11 +1500,12 @@
 	}
 	{id} {other}
 	{nomap} {1}
-	{global} {1}
 	{name} {Steel Codpiece}
-}
+    }
+};
 #VAR {_item[^Steel Gloves$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -1426,11 +1517,12 @@
 	}
 	{id} {gloves}
 	{nomap} {1}
-	{global} {1}
 	{name} {Steel Gloves}
-}
+    }
+};
 #VAR {_item[^Steel Helmet$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -1440,12 +1532,13 @@
 		{4} {It looks light.}
 	}
 	{id} {helmet}
-	{global} {1}
 	{nomap} {1}
 	{name} {Steel Helmet}
-}
+    }
+};
 #VAR {_item[^Steel Platemail Gauntlets$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -1456,12 +1549,13 @@
 		{5} {It doesn't look too heavy.}
 	}
 	{id} {gloves}
-	{global} {1}
 	{nomap} {1}
 	{name} {Steel Platemail Gauntlets}
-}
+    }
+};
 #VAR {_item[^Steel Shield$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -1472,11 +1566,12 @@
 	}
 	{id} {shield}
 	{nomap} {1}
-	{global} {1}
 	{name} {Steel Shield}
-}
+    }
+};
 #VAR {_item[^Steel bracers$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -1487,11 +1582,12 @@
 	}
 	{id} {other}
 	{nomap} {1}
-	{global} {1}
 	{name} {Steel bracers}
-}
+    }
+};
 #VAR {_item[^Stone Boots$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -1502,11 +1598,12 @@
 	}
 	{id} {boots}
 	{nomap} {1}
-	{global} {1}
 	{name} {Stone Boots}
-}
+    }
+};
 #VAR {_item[^(Aluminum|Amber|Amethyst|Aquamarine|Bloodstone|Bone|Brass|Bronze|Ceramic|Copper|Coral|Diamond|Ebony|Electrum|Emerald|Garnet|Glass|Gold|Granite|Jacinth|Lead|Iron|Ivory|Jade|Jasper|Mahogany|Malachite|Maple|Marble|Moonstone|Oak|Obsidian|Onyx|Opal|Pearl|Peridot|Platinum|Pyrite|Quartz|Ruby|Sapphire|Sardonyx|Silver|Sodalite|Steel|Stone|Tin|Titanium|Topaz|Turquoise|Zinc|Zirconian) ring$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -1518,11 +1615,12 @@
 	}
 	{id} {ring}
 	{nomap} {1}
-	{global} {1}
 	{name} {Amber ring}
-}
+    }
+};
 #VAR {_item[^A(n|) (bloody|double-bladed|dark|dull|engraved|extremely sharp|finely cut|finely crafted|glowing|heavy|hooked|jagged|light|lightly glowing|long|long thin|nasty|nicked|old|ornate|polished|razor-sharp|runed|sharp|shining|short|single edged|small|spiked|triple-edged|very dull|very sharp|wicked|)(, |)(adamantium|ash|aspen|balsam|birch|bronze|cedar|ebony|elm|gold|granite|iron|jade|mahogany|maple|mithril|oak|obsidian|onyx|pine|platinum|sardonyx|silver|steel|stone|titanium|white|) (bastardsword|battleaxe|blackjack|blade|broadsword|claymore|club|cudgel|cutlass|dagger|dirk|double-edged axe|falchion|flail|foil|handaxe|hatchet|jo|katana|khopesh|knife|kynac|longsword|mace|machete|main gauche|mattock|morningstar|no-dachi|nunchaku|pick|pickaxe|quarterstaff|rapier|sabre|sai|scimitar|shortsword|sledgehammer|staff|stiletto|sword|trident|two-handed sword|warhammer|war-axe|war-mattock|woodsman's axe)( \x28enchanted\x29|)$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -1537,11 +1635,12 @@
 	}
 	{id} {shortsword}
 	{nomap} {1}
-	{global} {1}
 	{name} {A double-bladed, silver shortsword}
-}
+    }
+};
 #VAR {_item[^candle$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -1550,12 +1649,13 @@
 		{3} {It looks light.}
 	}
 	{id} {candle}
-	{global} {1}
 	{nomap} {1}
 	{name} {candle}
-}
+    }
+};
 #VAR {_item[^(brown|green|orange|red|violet|yellow|black) gemstone$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -1563,13 +1663,14 @@
 		{2} {A green gemstone.  It is currently unidentified.}
 		{3} {It looks light.}
 	}
-	{global} {1}
 	{id} {green gemstone}
 	{nomap} {1}
 	{name} {green gemstone}
-}
+    }
+};
 #VAR {_item[^miniature tools$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -1582,11 +1683,12 @@
 	}
 	{id} {miniature tools}
 	{nomap} {1}
-	{global} {1}
 	{name} {miniature tools}
-}
+    }
+};
 #VAR {_item[^set of three dice$]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -1596,11 +1698,12 @@
 	}
 	{id} {set of three dice}
 	{nomap} {1}
-	{global} {1}
 	{name} {set of three dice}
-}
+    }
+};
 #VAR {_item[bag]}
 {
+    @fFormatItemData{
 	{_area} {global}
 	{desc}
 	{
@@ -1611,7 +1714,7 @@
 	}
 	{id} {bag}
 	{nomap} {1}
-	{global} {1}
 	{name} {bag}
 	{pickup} {1}
-}
+    }
+};
