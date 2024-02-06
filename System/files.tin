@@ -43,7 +43,8 @@
 {
 	.debug FILE {LOAD: %1};
 	#CLASS {%1} KILL;
-    #LINE QUIET #CLASS {%1} ASSIGN
+#NOP    #LINE QUIET #CLASS {%1} ASSIGN;
+    #CLASS {%1} ASSIGN
     {
         #READ {%1};
     };
