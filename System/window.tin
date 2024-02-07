@@ -3,101 +3,101 @@
 #NOP {windowname} {windowline} {content};
 #ALIAS {.WindowSetLine}
 {
-    #NOP %1;
-    .WindowCreate {%1};
-    #VAR {_Window[buffer][%1][%2]} {%3};
-    .WindowUpdated {%1};
+	#NOP %1;
+	.WindowCreate {%1};
+	#VAR {_Window[buffer][%1][%2]} {%3};
+	.WindowUpdated {%1};
 };
 
 #ALIAS {.WindowSet}
 {
-    #NOP %1;
-    .WindowCreate {%1};
-    #VAR {_Window[buffer][%1]} {%2};
-    .WindowUpdated {%1};
+	#NOP %1;
+	.WindowCreate {%1};
+	#VAR {_Window[buffer][%1]} {%2};
+	.WindowUpdated {%1};
 };
 
 #ALIAS {.WindowAppend}
 {
-    #NOP %1;
-    .WindowCreate {%1};
-    #LIST {_Window[buffer][%1]} {add} {%2};
-    #WHILE {&_Window[buffer][%1][] > @fScreen{{full}{rows}}}
-    {
-        #LIST {_Window[buffer][%1]} {delete} {1};
-    };
-    #VAR {_Window[tail][%1]} {1};
-    .WindowUpdated {%1};
+	#NOP %1;
+	.WindowCreate {%1};
+	#LIST {_Window[buffer][%1]} {add} {%2};
+	#WHILE {&_Window[buffer][%1][] > @fScreen{{full}{rows}}}
+	{
+		#LIST {_Window[buffer][%1]} {delete} {1};
+	};
+	#VAR {_Window[tail][%1]} {1};
+	.WindowUpdated {%1};
 };
 
 #ALIAS {.WindowUpdated}
 {
-    #NOP %1;
-    #VAR {_Window[update][%1]} {1};
-    #NOP .WindowNotify
+	#NOP %1;
+	#VAR {_Window[update][%1]} {1};
+	event_raise {e_window_updated} {%1};
 };
 
 #ALIAS {.WindowCreate}
 {
-    #NOP %1;
-    #IF {&_Window[names][%1] == 0}
-    {
-        #IF {"%2" != ""}
-        {
-            #VAR {_Window[names][%1]} {%2};
-        };
-        #ELSE
-        {
-            #IF {@fScreen{{right}{cols}} > 5}
-            {
-                #VAR {_Window[names][%1]} {right};
-            };
-            #ELSE
-            {
-                #VAR {_Window[names][%1]} {head};
-            };
-        };
-        #LIST {_Window[index][$_Window[names][%1]]} {ADD} {%1};
-    };  
+	#NOP %1;
+	#IF {&_Window[names][%1] == 0}
+	{
+		#IF {"%2" != ""}
+		{
+			#VAR {_Window[names][%1]} {%2};
+		};
+		#ELSE
+		{
+			#IF {@fScreen{{right}{cols}} > 5}
+			{
+				#VAR {_Window[names][%1]} {right};
+			};
+			#ELSE
+			{
+				#VAR {_Window[names][%1]} {head};
+			};
+		};
+		#LIST {_Window[index][$_Window[names][%1]]} {ADD} {%1};
+	};
 };
 
 #ALIAS {.WindowSwap}
 {
-    #NOP %1;
-    #FOREACH {*_Window[index][]} {v}
-    {
-        #IF {"$_Window[index][$v][1]" == "" } {#RETURN;};
-        #LIST {_Window[index][$v]} {add} {$_Window[index][$v][1]};
-        #LIST {_Window[index][$v]} {delete} {1};
-        .WindowRefresh {$_Window[index][$v][1]};
-        event_raise {e_window_swap} {$v} {$_Window[index][$v][1]};
-    };
+	#NOP %1;
+	#FOREACH {*_Window[index][]} {v}
+	{
+		#IF {"$_Window[index][$v][1]" == "" } {#RETURN;};
+		#LIST {_Window[index][$v]} {add} {$_Window[index][$v][1]};
+		#LIST {_Window[index][$v]} {delete} {1};
+		.WindowRefresh {$_Window[index][$v][1]};
+		event_raise {e_window_swap} {$v} {$_Window[index][$v][1]};
+	};
 };
 
 #ALIAS {.WindowRefresh}
 {
-    #NOP %1;
-    #IF {@fLocked{window.%*}} {#DELAY {2} {.WindowRefresh %0};#RETURN};
-    #FOREACH {*_Window[index][]} {s}
-    {
-        #IF {"%1" == "$_Window[index][$s][1]" || "%1" == ""}
-        {
-            #VAR {w} {$_Window[index][$s][1]};
-            #DRAW TILE @fScreen{{$s}{y}} @fScreen{{$s}{x}} @fScreen{{$s}{y2}} @fScreen{{$s}{x2}} $_Window[buffer][$w][1..-1];
-            #VAR {_Window[update][$w]} {0};
-        };
-    };
+	#NOP %1;
+	#IF {@fLocked{window.%*}} {#DELAY {2} {.WindowRefresh %0};#RETURN};
+	#FOREACH {*_Window[index][]} {s}
+	{
+		#IF {"%1" == "$_Window[index][$s][1]" || "%1" == ""}
+		{
+			#VAR {w} {$_Window[index][$s][1]};
+			#DRAW TILE @fScreen{{$s}{y}} @fScreen{{$s}{x}} @fScreen{{$s}{y2}} @fScreen{{$s}{x2}} $_Window[buffer][$w][1..-1];
+			#VAR {_Window[update][$w]} {0};
+		};
+	};
    #NOP .WindowNotify;
 };
 event_register {e_screen_resize} {h_window_refresh} {.WindowRefresh {$_Window[index][1]}};
 
 #FUNCTION {fWindowActive}
 {
-    #FOREACH {*_Window[index][]} {v}
-    {
-        #IF {"$_Window[index][$v][1]" == "%0"} {#RETURN 1;};
-    };    
-    #RETURN 0;
+	#FOREACH {*_Window[index][]} {v}
+	{
+		#IF {"$_Window[index][$v][1]" == "%0"} {#RETURN 1;};
+	};
+	#RETURN 0;
 };
 
 #FUNCTION {fWindowPosition}
