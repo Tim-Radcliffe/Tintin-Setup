@@ -27,8 +27,8 @@
 			#ECHO {Checking satchel for ingredients that will give PXP:};
 			#FOREACH {*craft_ingredients[]} {i}
 			{
-				#IF { $my[professions][Transmuter][level] >= $craft_ingredients[$i][level][Transmuter][min] &&
-				      $my[professions][Transmuter][level] <= $craft_ingredients[$i][level][Transmuter][max] }
+				#IF { $my[professions][transmuter][level] >= $craft_ingredients[$i][level][Transmuter][min] &&
+				      $my[professions][transmuter][level] <= $craft_ingredients[$i][level][Transmuter][max] }
 				{
 					#ECHO {$i};
 					#FOREACH {*_t[data][]} {q}
@@ -46,7 +46,7 @@
 			#ECHO {Refining satchel ingredients:};
 			#FOREACH {*craft_ingredients[]} {i}
 			{
-				#IF { $my[professions][Transmuter][level] >= $craft_ingredients[$i][level][Transmuter][min] }				
+				#IF { $my[professions][transmuter][level] >= $craft_ingredients[$i][level][Transmuter][min] }				
 				#FOREACH {*_t[data][]} {q}
 				{
 					#IF {$_craft[satchel][$i][subtotal][$_t[data][$q][quality]] >= $_t[data][$q][quantity]}
