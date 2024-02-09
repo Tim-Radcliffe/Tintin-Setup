@@ -14,22 +14,22 @@
 		#IF {"$map[file]" == ""} #RETURN;
 		#IF {"$_Window[maproom][on]" == "1"}
 		{
-				#VAR {_Window[maproom][y1]} {@fScreen{{right}{y}}};
-				#VAR {_Window[maproom][x1]} {@fScreen{{right}{x}}};
-				#MATH {_Window[maproom][y2]} {@fScreen{{right}{y}}+5};
-				#VAR {_Window[maproom][x2]} {@fScreen{{right}{x2}}};
+				#VAR {_Window[maproom][y1]}  {@fScreen{{$_Window[names][map]}{y}}};
+				#VAR {_Window[maproom][x1]}  {@fScreen{{$_Window[names][map]}{x}}};
+				#MATH {_Window[maproom][y2]} {@fScreen{{$_Window[names][map]}{y}}+5};
+				#VAR {_Window[maproom][x2]}  {@fScreen{{$_Window[names][map]}{x2}}};
 
-				#MATH {_Window[map][y1]} {@fScreen{{right}{y}}+6};
-				#VAR {_Window[map][x1]} {@fScreen{{right}{x}}};
-				#VAR {_Window[map][y2]} {@fScreen{{right}{y2}}};
-				#VAR {_Window[map][x2]} {@fScreen{{right}{x2}}};
+				#MATH {_Window[map][y1]}     {@fScreen{{$_Window[names][map]}{y}}+6};
+				#VAR {_Window[map][x1]}      {@fScreen{{$_Window[names][map]}{x}}};
+				#VAR {_Window[map][y2]}      {@fScreen{{$_Window[names][map]}{y2}}};
+				#VAR {_Window[map][x2]}      {@fScreen{{$_Window[names][map]}{x2}}};
 		};
 		#ELSE
 		{
-				#VAR {_Window[map][y1]} {@fScreen{{right}{y}}};
-				#VAR {_Window[map][x1]} {@fScreen{{right}{x}}};
-				#VAR {_Window[map][y2]} {@fScreen{{right}{y2}}};
-				#VAR {_Window[map][x2]} {@fScreen{{right}{x2}}};
+				#VAR {_Window[map][y1]}      {@fScreen{{$_Window[names][map]}{y}}};
+				#VAR {_Window[map][x1]}      {@fScreen{{$_Window[names][map]}{x}}};
+				#VAR {_Window[map][y2]}      {@fScreen{{$_Window[names][map]}{y2}}};
+				#VAR {_Window[map][x2]}      {@fScreen{{$_Window[names][map]}{x2}}};
 		};
 		#SWITCH {"%1"}
 		{
@@ -53,8 +53,9 @@
 				};
 		};
 };
-event_register {e_map_refresh} {h_window_map} {.HandlerWindowMap};
-event_register {e_window_swap} {h_window_map} {.HandlerWindowMap};
+event_register {e_map_refresh}    {h_window_map} {.HandlerWindowMap};
+event_register {e_window_swap}    {h_window_map} {.HandlerWindowMap};
+event_register {e_window_updated} {window.map.tin} {.HandlerWindowMap};
 event_register {e_map_area_enter} {h_window_map} {.HandlerWindowMap};
 
 #ALIAS {.HandlerMapMouseClick}
@@ -78,4 +79,4 @@ event_register {e_mouse_map_pressed} {h_window_map} {.HandlerMapMouseClick};
 };
 event_register {e_mouse_map_moved} {h_window_map} {.HandlerMapMouseMove};
 
-.WindowCreate {map};
+.WindowCreate {map} {topright};

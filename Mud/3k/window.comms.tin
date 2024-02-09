@@ -4,4 +4,5 @@
   .WindowAppend {messages} {$_hWC[1] $_hWC[5]};
   .WindowRefresh;
 };
+.WindowCreate {messages} {top};
 event_register {e_comms} {window.comms.tin} {.handler_window_comms};
