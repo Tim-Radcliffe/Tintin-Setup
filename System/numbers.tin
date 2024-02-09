@@ -36,6 +36,15 @@
     #RETURN $_fNTD;
 };
 
+#FUNCTION {fCleanNumber}
+{
+    #IF {"%1" == ""} {#RETURN};
+    #LOCAL {_fCN} {%1};
+    #REPLACE {_fCN} {,} {};
+    #RETURN {$_fCN};
+};
+
+#NOP Currently works into the hundreds range...broken for larger complex numbers.
 #FUNCTION {fTextToInt}
 {
     #LOCAL wordValue {
