@@ -1,18 +1,21 @@
 #ALIAS {profs}
-{
-	#ACTION {{^\s+Profession #\d : (\w+)\s+\(Level (\d+)\) \[([.o]+)\]$}}
-	{
-        #LOCAL {_profName} {%%2};
-        #FORMAT {_profName} {%l} {$_profName};
-		#VAR {my[professions][$_profName][level]} {%%3};
-	};
-    #ACTION {^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~$}
+{   
+    #IF {"%1" == ""}
     {
-        .loadProfs;
-        #UNACTION {{^\s+Profession #\d : (\w+)\s+\(Level (\d+)\) \[([.o]+)\]$}};
-        #UNACTION {^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~$};
+        #ACTION {{^\s+Profession #\d : (\w+)\s+\(Level (\d+)\) \[([.o]+)\]$}}
+        {
+            #LOCAL {_profName} {%%2};
+            #FORMAT {_profName} {%l} {$_profName};
+            #VAR {my[professions][$_profName][level]} {%%3};
+        };
+        #ACTION {^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~$}
+        {
+            .loadProfs;
+            #UNACTION {{^\s+Profession #\d : (\w+)\s+\(Level (\d+)\) \[([.o]+)\]$}};
+            #UNACTION {^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~$};
+        };
     };
-	#SEND {profs};
+	#SEND {!profs %0};
 };
 
 #ALIAS {.loadProfs}
