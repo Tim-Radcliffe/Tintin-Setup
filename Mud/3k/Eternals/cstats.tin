@@ -1,0 +1,53 @@
+#ALIAS {handler_auto_cstats}
+{
+	#NOP %1;
+	.debug ETERNALS {CSTATS: %0};
+	#IF {"%2" != ""}
+	{
+		#VAR {_hACS} {};
+		#VAR {_hACS[regex]} {@fGetNPCRegex{%3}};
+		#IF {&map[area][scaler] == 0}
+		{
+			scaler
+		};
+		#ACTION {^Damage Taken:%s%S$}
+		{
+			#VAR {_hACS[damage]} {@fCleanNumber{%%2}};
+		};
+		#ACTION {^Combat Rounds:%s%S$}
+		{
+			#VAR {_hACS[rounds]} {@fCleanNumber{%%2}};
+		};
+		#ACTION {^XP Gained:%s%S$}
+		{
+			#VAR {_hACS[xp]} {@fCleanNumber{%%2}};
+		};
+		#ACTION {^Combat details have been cleared.$}
+		{
+			#MATH {_hACS[avg_dmg]} {$_hACS[damage] / $_hACS[rounds]};
+			.debug ETERNALS {Avg Damage : $_hACS[damage]  / $_hACS[rounds] = $_hACS[avg_dmg]};
+
+			#IF {&_npc[${_hACS[regex]}][size][$map[area][scaler]][avg_dmg_taken_per_round] == 0} 
+			{
+				#VAR {_npc[${_hACS[regex]}][size][$map[area][scaler]][avg_dmg_taken_per_round]} {$_hACS[avg_dmg]};
+			};
+			#IF {&_npc[${_hACS[regex]}][size][$map[area][scaler]][avg_xp] == 0} 
+			{
+				#VAR {_npc[${_hACS[regex]}][size][$map[area][scaler]][avg_xp]} {$_hACS[xp]};
+			};
+
+			#MATH {_npc[${_hACS[regex]}][size][$map[area][scaler]][avg_dmg_taken_per_round]} {(($_npc[${_hACS[regex]}][size][$map[area][scaler]][avg_dmg_taken_per_round] * $_npc[${_hACS[regex]}][size][$map[area][scaler]][kills]) + $_hACS[avg_dmg]) / ($_npc[${_hACS[regex]}][size][$map[area][scaler]][kills] + 1)};
+			#MATH {_npc[${_hACS[regex]}][size][$map[area][scaler]][avg_xp]} {(($_npc[${_hACS[regex]}][size][$map[area][scaler]][avg_xp] * $_npc[${_hACS[regex]}][size][$map[area][scaler]][kills]) + $_hACS[xp]) / ($_npc[${_hACS[regex]}][size][$map[area][scaler]][kills] + 1)};
+			.scanRoomNPCSave {$_hACS[regex]};
+			#UNVAR {_hACS};
+			#UNACTION {^Damage Taken:%s%S$};			
+			#UNACTION {^Combat Rounds:%s%S$};
+			#UNACTION {^XP Gained:%s%S$};
+			#UNACTION {^Combat details have been cleared.$};			
+		} {3};
+		#SEND {!(cstats};
+		#SEND {!(csclear};
+	};
+};
+
+auto add {cstats} {#SEND {!(csclear}} {e_killed_opponent} {};

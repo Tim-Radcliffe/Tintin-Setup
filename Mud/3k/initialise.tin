@@ -13,3 +13,9 @@
 .file loadall {$path[guild]/*.tin};
 .file loadall {$path[professions]/*.tin};
 .file loadall {$path[hm]/*.tin};
+
+#IF {$my[level] > 110}
+{
+    .SetPath {eternals} {$path[mud]/Eternals};
+    .file loadall {$path[eternals]/*.tin};
+};
