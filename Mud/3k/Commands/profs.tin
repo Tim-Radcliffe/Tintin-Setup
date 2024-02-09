@@ -2,7 +2,31 @@
 {
 	#ACTION {{^\s+Profession #\d : (\w+)\s+\(Level (\d+)\) \[([.o]+)\]$}}
 	{
-		#VAR {my[professions][%%2][level]} {%%3};
+        #LOCAL {_profName} {%%2};
+        #FORMAT {_profName} {%l} {$_profName};
+		#VAR {my[professions][$_profName][level]} {%%3};
 	};
+    #ACTION {^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~$}
+    {
+        .loadProfs;
+        #UNACTION {{^\s+Profession #\d : (\w+)\s+\(Level (\d+)\) \[([.o]+)\]$}};
+        #UNACTION {^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~$};
+    };
 	#SEND {profs};
+};
+
+#ALIAS {.loadProfs}
+{
+    #LOCAL {_prof[filelist]} {@fFileList{$path[professions]}};
+
+    #FOREACH {$_prof[filelist][]} {_prof[item]}
+    {
+        #LOCAL {_prof[path]} {$_prof[item]};
+        #REPLACE {_prof[item]} {$path[professions]/} {};
+        #REPLACE {_prof[item]} {.tin} {};
+        #IF {&my[professions][$_prof[item]] > 0}
+        {
+            .file load {$_prof[path]}
+        };
+    };
 };
