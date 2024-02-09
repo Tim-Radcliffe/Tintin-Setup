@@ -76,7 +76,7 @@
         #ELSEIF {&_fSearchLink[matchlist][] > 1}
         {
             #NOP /* More than one match - stop matching, move to next stage */;
-            #VAR {_fSearchLinklist]} {$_fSearchLink[matchlist]};
+            #NOP #VAR {_fSearchLinklist]} {$_fSearchLink[matchlist]};
             #BREAK;
         };
         

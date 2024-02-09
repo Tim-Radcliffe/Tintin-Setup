@@ -251,11 +251,11 @@
             #CLASS {$path[areas]/$map[area][path]/$map[area][name].data.tin} {ASSIGN}
             {
                 #VAR {_mapVariable[%2][%3]} {%4};
-                #VAR {_mapVariable[%2][%3][area]} {$map[area][path]};
+                #VAR {_mapVariable[%2][%3][_area]} {$map[area][path]};
             };
             #CLASS {$path[areas]/$map[area][path]/$map[area][name].data.tin} {WRITE} {$path[areas]/$map[area][path]/$map[area][name].data.tin};
             #VAR {%2[%3]} {%4};
-            #VAR {%2[%3][area]} {$map[area][path]};
+            #VAR {%2[%3][_area]} {$map[area][path]};
         };
         #CASE {"load"}
         {

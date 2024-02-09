@@ -75,7 +75,7 @@ event_register {e_room_npc} {h_scan_npc} {.scanRoomNPC};
 {
 	#IF {&map[area][path] > 0}
 	{
-		#IF {$_npc[%1][_area] == ""}
+		#IF {"$_npc[%1][_area]" == ""}
 		{
 			#VAR {_npc[%1][_area]} {$map[area][path]};
 		};
@@ -126,7 +126,7 @@ event_register {e_room_npc} {h_scan_npc} {.scanRoomNPC};
 
 #ALIAS {.scanRoomNPCSave}
 {
-	#IF {"$_npc[%1][nomap]"" != "1" && &map[area][path] > 0}
+	#IF {"$_npc[%1][nomap]" != "1" && &map[area][path] > 0}
 	{
 		.mapVariable add {_npc} {%1} {$_npc[%1]};
 	};
@@ -161,7 +161,7 @@ event_register {e_room_npc} {h_scan_npc} {.scanRoomNPC};
 {
 	#NOP %1;
 	#LOCAL {_npcData} {%0};
-	#FOREACH {_area;alignment;desc;hunts;id;location;name;nokill;size;undead;vulnerabilities} {_f}
+	#FOREACH {_area;alignment;autokill;desc;hunts;id;location;name;nokill;size;undead;vulnerabilities} {_f}
 	{
 
 		#IF {&_npcData[$_f] == 0}
