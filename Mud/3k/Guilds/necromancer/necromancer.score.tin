@@ -1,0 +1,25 @@
+#ALIAS {.necromancer_score}
+{
+	#NOP %1;
+	#IF {"%2" == "sc" || "%2" == "score"}
+	{
+		#ACTION {^Circle: %*  NP: %d/%d  Worth: %d%%}
+		{
+			#LOCAL {_necTier} {@fNumeralsToDec{%%1}};
+			#IF {"$_necTier" != ""}
+			{
+				#VAR {my[necromancer][tier]} {$_necTier};
+			};
+			#ELSE
+			{
+				#VAR {my[necromancer][level]} {%%1};
+			};
+			#VAR {my[gp1][current]}                   {%%2};
+			#VAR {my[gp1][max]}                       {%%3};
+			#VAR {my[necromancer][worth]} {%%4};
+			#UNACTION {^Circle: %*  NP: %d/%d  Worth: %d%%};
+		};
+	};
+};
+
+event_register {e_command} {necromancer.score.tin} {.necromancer_score};

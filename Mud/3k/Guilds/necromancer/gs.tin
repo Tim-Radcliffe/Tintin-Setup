@@ -6,7 +6,7 @@
     
     #ACTION {^ |  All Circles:[%s%d/60]}
     {
-        #VAR {my[necromancer][circle]} {%%2};
+        #VAR {my[necromancer][level]} {%%2};
     };
 
     #ACTION {{^ \| HP:(\d+)\/(\d+)(\((\d+)\/(\d+)\)|)\s+SP:(\d+)\/(\d+)(\((\d+)\/(\d+)\)|)\s+NP:(\d+)\/(\d+)\s+Worth:(\d+)(%)}}
