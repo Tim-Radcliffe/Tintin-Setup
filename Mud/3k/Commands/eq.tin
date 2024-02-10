@@ -15,31 +15,32 @@
         #VAR {_eq[filetable][$_eq[item]]} {$_eq[path]};
     };
 
-    #ACTION {{^([^:]{3,13}):\s+(.*)$}}
+#NOP    #ACTION {{^([^:]{3,13}):\s+(.*)$}};
+    #ACTION {{^(.{12})\s{2}(.*)$}}
 	{
-		#IF {"%%2" != "Resistances"}
+		#IF {"%%2" != "Resistances:"}
 		{
+            #IF {"%%2" != "            "}
+            {
+                #VAR {_eq[type]} {%%2};
+            };
 			#IF {"%%3" != "none"} 
 			{
-                #VAR {my[eq][%%2]} {%%3};
+                #VAR {my[eq][%%3][type]} {$_eq[type]};
                 .eqLoadScript {%%3};
 			};
 		};
-	};
-
-	#ACTION {_command.eq}
-	{
-		#LINE GAG;
-        #UNVAR {_eq};
-		#UNACTION {{^([^:]{3,13}):\s+(.*)$}};
-        #UNACTION {_command.eq};
+        #ELSE
+        {
+            #UNVAR {_eq};
+            #UNACTION {{^(.{12})\s{2}(.*)$}};
+        };
 	};
 
     #UNVAR {my[eq]};
     #KILL CLASS {$path[equipment]/%*};
     event_remove_handler {$path[equipment]/%*};
-	#SEND {eq %0};
-	#SEND {_command.eq};
+	#SEND {!eq %0};
 };
 
 #ALIAS {.eqLoadScript}
