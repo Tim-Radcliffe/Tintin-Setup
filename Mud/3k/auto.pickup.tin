@@ -43,6 +43,10 @@ autopickup min;
 #ALIAS {handler_room_pickup}
 {
     #NOP %1;
+    #IF {@fLocked{scan.%*}}
+    {
+        #RETURN;
+    };
     #IF {"$room[break]" != "1"}
     {
         .debug PICKUP {%2 : %3 : %4};

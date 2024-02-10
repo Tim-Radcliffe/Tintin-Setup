@@ -3,54 +3,53 @@
   #NOP %1;
   #IF {"%1" == "stop"}
   {
-    #UNVAR {map[run]};
+	#UNVAR {map[run]};
   };
   #ELSEIF {"%1" == "pause"}
   {
-    #VAR {map[run][pause]} {1};
+	#VAR {map[run][pause]} {1};
   };
   #ELSEIF {"%1" == "unpause"}
   {
-    #UNVAR {map[run][pause]};
-    .mapRun;
+	#UNVAR {map[run][pause]};
+	.mapRun;
   };
   #ELSE
   {
-    #IF {"%1" != ""}
-    {
-      #VAR {map[run][dest]} {%1};
-      #MAP FIND $map[run][dest];
-      #PATH SAVE FORWARD {map[run][path]};
-      #LIST {map[run][path]} {CREATE} {$map[run][path]};
-      #VAR {map[run][position]} {1};
-    };
-    #IF {"$map[run][dest]" != "" && 
-         "$map[run][pause]" != "1" && 
-         $map[run][position] <= &map[run][path][]}
-    {
-      #PATH SAVE POSITION {map[run][position]};
-      #VAR {map[run][step]} {$map[run][path][$map[run][position]]};
-      #MAP EXIT {$map[run][step]} SAVE {map[run][command]};
-      .Lock {maprun};
-      #PATH WALK;
-      .mapRun;
-    };
-    #ELSEIF {$map[run][position] >= &map[run][path][]}
-    {
-      #VAR {map[run][hash]} {@fGetHash{$map[run][path]}};
-      #LINE SUBSTITUTE VARIABLES 
-      { 
-        #ACTION {map.goto.tin.mapRun.complete.$map[run][hash]}
-        {
-          #NOP %%1;
-          #LINE GAG;        
-          #UNVAR {map[run]};
-          .Unlock {maprun};
-          #UNACTION {map.goto.tin.mapRun.complete.$map[run][hash]};
-        }
-      };
-      #SEND {!map.goto.tin.mapRun.complete.$map[run][hash]};
-    };
+	#IF {"%1" != ""}
+	{
+	  #VAR {map[run][dest]} {%1};
+	  #MAP FIND $map[run][dest];
+	  #PATH SAVE FORWARD {map[run][path]};
+	  #LIST {map[run][path]} {CREATE} {$map[run][path]};
+	  #VAR {map[run][position]} {1};
+	};
+	#IF {"$map[run][dest]" != "" &&
+		 "$map[run][pause]" != "1" &&
+		 $map[run][position] <= &map[run][path][]}
+	{
+	  #PATH SAVE POSITION {map[run][position]};
+	  #VAR {map[run][step]} {$map[run][path][$map[run][position]]};
+	  #MAP EXIT {$map[run][step]} SAVE {map[run][command]};
+	  #PATH WALK;
+	  .mapRun;
+	};
+	#ELSEIF {$map[run][position] >= &map[run][path][]}
+	{
+	  #VAR {map[run][hash]} {@fGetHash{$map[run][path]}};
+	  #LINE SUBSTITUTE VARIABLES
+	  {
+		#ACTION {map.goto.tin.mapRun.complete.$map[run][hash]}
+		{
+		  #NOP %%1;
+		  #LINE GAG;
+		  #UNVAR {map[run]};
+		  .Unlock {%*.maprun};
+		  #UNACTION {map.goto.tin.mapRun.complete.$map[run][hash]};
+		}
+	  };
+	  #SEND {!map.goto.tin.mapRun.complete.$map[run][hash]};
+	};
   };
 };
 
@@ -62,66 +61,68 @@
 
   #IF {"%1" == ""}
   {
-    #ECHO {You must enter something to search for!};
+	#ECHO {You must enter something to search for!};
   };
   #ELSE
   {
-    #FOREACH {roomnote;roomarea} {v}
-    {
-      #IF {"$map[rooms][+1]" == ""}
-      {
-        #MAP list {$v} {%i%*%0%*} {variable} {map[rooms]};
-      };
-    };
+	#FOREACH {roomnote;roomarea} {v}
+	{
+	  #IF {"$map[rooms][+1]" == ""}
+	  {
+		#MAP list {$v} {%i%*%0%*} {variable} {map[rooms]};
+	  };
+	};
 
-    #IF {"$map[rooms][+1]" != ""}
-    {
-      #IF {"$map[rooms][+2]" == ""}
-      {
-        #FOREACH {*map[rooms][]} {r}
-        {
-          #VAR {map[destination]} {$r};
-        };
-        .mapRun $map[destination];
-      };
+	#IF {"$map[rooms][+1]" != ""}
+	{
+	  #IF {"$map[rooms][+2]" == ""}
+	  {
+		#FOREACH {*map[rooms][]} {r}
+		{
+		  #VAR {map[destination]} {$r};
+		};
+		.Lock {scan.maprun};
+		.Lock {window.maprun};
+		.mapRun $map[destination];
+	  };
 
-      #ELSE
-      {
-        #ECHO {Please select from the list (0 to cancel):};
-        #CLASS {cMapGotoMacros} {open};
-        #MACRO {0}
-        {
-          #CLASS {cMapGotoMacros} {kill};
-          #ECHO {Cancelled};
-        };
-        #ALIAS {.GotoMacro}
-        {
-          #MACRO {%%1}
-          {
-            #NOP delay added because ticker wouldn't add from macro for some reason;
-            #DELAY {0.1} {.mapRun %%2};
-            #CLASS {cMapGotoMacros} {kill};
-          };
-        };
+	  #ELSE
+	  {
+		#ECHO {Please select from the list (0 to cancel):};
+		#CLASS {cMapGotoMacros} {open};
+		#MACRO {0}
+		{
+		  #CLASS {cMapGotoMacros} {kill};
+		  #ECHO {Cancelled};
+		};
+		#ALIAS {.GotoMacro}
+		{
+		  #MACRO {%%1}
+		  {
+			#NOP delay added because ticker wouldn't add from macro for some reason;
+			#DELAY {0.1} {.Lock {scan.maprun};.Lock {window.maprun};.mapRun %%2};
+			#CLASS {cMapGotoMacros} {kill};
+		  };
+		};
 
-        #VAR {i} {0};
+		#VAR {i} {0};
 
-        #FOREACH {*map[rooms][]} {r}
-        {
-          #MATH {i} {$i + 1};
-          #IF {$i < 27}
-          {
-            #FORMAT {map[temp][macroletter]} {%a} {$i+96};
-            .GotoMacro {$map[temp][macroletter]} {$r};
-            #VAR {map[temp][info]} {@fMapRoomInfo{$r}};
-            #ECHO {$map[temp][macroletter] : $map[rooms][$r][distance] $map[temp][info][roomname] ($map[temp][info][roomarea])};
-          };
-          #IF {$i == 27}
-          {
-            #ECHO {Further matches not shown.};
-          };
-        };
-      };
-    };
+		#FOREACH {*map[rooms][]} {r}
+		{
+		  #MATH {i} {$i + 1};
+		  #IF {$i < 27}
+		  {
+			#FORMAT {map[temp][macroletter]} {%a} {$i+96};
+			.GotoMacro {$map[temp][macroletter]} {$r};
+			#VAR {map[temp][info]} {@fMapRoomInfo{$r}};
+			#ECHO {$map[temp][macroletter] : $map[rooms][$r][distance] $map[temp][info][roomname] ($map[temp][info][roomarea])};
+		  };
+		  #IF {$i == 27}
+		  {
+			#ECHO {Further matches not shown.};
+		  };
+		};
+	  };
+	};
   };
 };

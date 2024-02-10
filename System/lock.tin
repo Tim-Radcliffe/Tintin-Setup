@@ -30,7 +30,9 @@
             #MATH {_lock[%1]} {$_lock[%1] + 3600};
         };
         .file write {$path[profile]/lock.tin};        
+        .debug LOCK {Lock: %1 : %2};
         event_raise {e_lock_added} {%0};
+
     };
 };
 
@@ -46,9 +48,11 @@
         #FOREACH {*_lock[%1]} {_lock_record}
         {
             event_raise {e_lock_removed} {$_lock_record};
+            .debug LOCK {Unlock: $_lock_record};            
         };
         #UNVAR {_lock[%1]};
         .file write {$path[profile]/lock.tin};
+
     };
 };
 

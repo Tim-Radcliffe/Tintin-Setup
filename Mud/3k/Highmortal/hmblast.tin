@@ -6,7 +6,7 @@
     #IF {!@fLocked{hm.hmblast}}
     {
         #SEND {!hmblast mind};
-        .Lock {hm.hmblast} {3600};
+        .Lock {hm.hmblast} {3601};
     };
 };
 
