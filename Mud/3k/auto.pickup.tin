@@ -30,7 +30,7 @@
 
   #IF {$flags[autopickup] > 0 }
   {
-    event_register e_scan_room_item h_auto_pickup handler_room_pickup;
+    event_register e_room_item h_auto_pickup handler_room_pickup;
   };
   #ELSE
   {
@@ -46,31 +46,35 @@ autopickup min;
     #IF {"$room[break]" != "1"}
     {
         .debug PICKUP {%2 : %3 : %4};
-        #SWITCH {"$_item[%2][pickup]"}
+        #LOCAL {_hRP[data]} {%5};
+        #IF {&_hRP[data][] != 0}
         {
-            #CASE {"-1"}
+            #SWITCH {"$_hRP[data][pickup]"}
             {
-                .debug PICKUP {Item flagged do not pick up};
-                #UNVAR {room[commandbuffer]};
-                #VAR {room[break]} {1};                
-            };
-            #CASE {"1"}
-            {
-                .debug PICKUP {Item flagged always pick up};            
-                #VAR {room[commandbuffer]} {@fAutoGetCommand{%4}};
-            };
-            #CASE {""}
-            {
-                .debug PICKUP {Item not specifically flagged};            
-            };
-            #CASE {"0"}
-            {
-                .debug PICKUP {Item not specifically flagged};            
-            };
-            #DEFAULT 
-            {
-                .debug PICKUP {Item has special command: $_item[%2][pickup]};            
-                #FORMAT {room[commandbuffer]} {$_item[%2][pickup]} {%3};
+                #CASE {"-1"}
+                {
+                    .debug PICKUP {Item flagged do not pick up};
+                    #UNVAR {room[commandbuffer]};
+                    #VAR {room[break]} {1};                
+                };
+                #CASE {"1"}
+                {
+                    .debug PICKUP {Item flagged always pick up};            
+                    #VAR {room[commandbuffer]} {@fAutoGetCommand{%2}};
+                };
+                #CASE {""}
+                {
+                    .debug PICKUP {Item not specifically flagged};            
+                };
+                #CASE {"0"}
+                {
+                    .debug PICKUP {Item not specifically flagged};            
+                };
+                #DEFAULT 
+                {
+                    .debug PICKUP {Item has special command: $_hRP[data][pickup]};            
+                    #LINE SUBSTITUTE VARIABLES #FORMAT {room[commandbuffer]} {$_hRP[data][pickup]} {%3};
+                };
             };
         };
     };
@@ -78,12 +82,12 @@ autopickup min;
     #IF {"$room[commandbuffer]" != ""}
     {
         .debug PICKUP {Command added to command queue: $room[commandbuffer]};
-        #LIST {room[commandqueue]} {add} {$room[commandbuffer]};
+        .RoomAddCommand {$room[commandbuffer]} {8};
     };
     #ELSEIF {"$room[break]" != "1" && "$flags[autopickup]" == "2"}
     {
         .debug PICKUP {Full Pickup - get item added to command queue: $room[commandbuffer]};
-        #LIST {room[commandqueue]} {add} {@fAutoGetCommand{%4}};
+        .RoomAddCommand {@fAutoGetCommand{%2}} {8};
     };
 
     #UNVAR {room[break]};

@@ -22,6 +22,10 @@
 #ALIAS {handler_room_contents}
 {
 	#NOP %1;
+    #IF {@fLocked{maprun}}
+    {
+        #RETURN;
+    };
     #LOCAL {_HRC} {};
 	#LIST {_HRC[tokenized]} CREATE {%2};
 	#LOCAL {_HRC[item][id]} {$_HRC[tokenized][2]};
@@ -34,14 +38,16 @@
 	{
 		#CASE {"npc"}
 		{
-			#LOCAL {_HRC[item][data]} {$_npc[@fGetNPCRegex{$_HRC[item][name]}]};
+            #LOCAL {_HRC[item][regexp]} {@fGetNPCRegex{$_HRC[item][name]}};
+			#LOCAL {_HRC[item][data]} {$_npc[$_HRC[item][regexp]]};
 		};
 		#CASE {"item"}
 		{
-			#LOCAL {_HRC[item][data]} {$_item[@fGetItemRegex{$_HRC[item][name]}]};
+            #LOCAL {_HRC[item][regexp]} {@fGetItemRegex{$_HRC[item][name]}};
+			#LOCAL {_HRC[item][data]} {$_item[$_HRC[item][regexp]]};
 		};
 	};
-	event_raise e_room_${_HRC[tokenized][1]} {$_HRC[item][id]} {$_HRC[item][name]} {$_HRC[item][actions]} {$_HRC[item][data]};
+	event_raise e_room_${_HRC[tokenized][1]} {$_HRC[item][id]} {$_HRC[item][name]} {$_HRC[item][actions]} {$_HRC[item][data]} {$_HRC[item][regexp]};
 };
 event_register e_mip_HAA h_room_contents handler_room_contents;
 event_register e_mip_HAB h_room_contents handler_room_contents;
@@ -51,12 +57,17 @@ event_register e_mip_HAB h_room_contents handler_room_contents;
 	#NOP %1;
 	#IF {&room[contents][player][] <= 0}
 	{
-		#IF {"&room[commandqueue][1]" != "0"}
+		#IF {"&room[commandqueue][]" != "0"}
 		{
-			#FOREACH {$room[commandqueue][%*]} {v}
-			{
-				#LINE SUBSTITUTE VARIABLES {$v};
-			};
+            #LOCAL {_hRE} {};
+            #FOREACH {$room[commandqueue][]} {_hRE[priority]}
+            {
+                #FOREACH {$_hRE[priority][]} {_hRE[command]}
+                {
+                    .debug SCAN {Command: $_hRE[command]};
+                    #LINE SUBSTITUTE VARIABLES {$_hRE[command]};
+                };
+            };
 			#UNVAR {room[commandqueue]};
 		};
 		event_raise e_roomscan_end;
@@ -112,3 +123,20 @@ event_register {e_mip_DDD} {h_room_exits} {.HandlerRoomExits};
 };
 #NOP event_register {e_mip_BAD} {h_room_name} {.HandlerRoomName};
 event_register {e_ansiflag_R} {h_room_name} {.HandlerRoomName};
+
+#ALIAS {.RoomAddCommand}
+{
+    #NOP %1;
+    #IF {"%1" == ""}
+    {
+        #RETURN;
+    };
+    #IF {"%2" == ""}
+    {
+        #LIST {room[commandqueue][5]} ADD {%1};
+    };
+    #ELSE 
+    {
+        #LIST {room[commandqueue][%2]} ADD {%1};
+    };
+};

@@ -53,7 +53,7 @@
 {
     #NOP %1;
     .Lock {room.automine};
-    #LIST {room[commandqueue]} {add} {spelunk};
+    .RoomAddCommand {!spelunk} {8};
 };
 
 auto add {mine}

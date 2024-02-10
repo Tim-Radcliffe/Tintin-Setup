@@ -1,19 +1,20 @@
 #ALIAS {.scanRoomItem}
 {
 	#IF {@fLocked{scan.%*}} {#RETURN};
-	#LOCAL {_sRN[match]} {@fGetItemRegex{%3}};
+	#LOCAL {_sRN[match]} {%6};
+    .debug SCAN {Item: $_sRN[match]};
 	#FORMAT {_sRN[hash]} {%H} {$_sRN[match]};
-	#VAR {_item[$_sRN[match]]} {@fFormatItemData{$_item[$_sRN[match]]}};
-	.scanRoomItemID       {$_sRN[match]} {%3} {%2};
-	.scanRoomItemDesc     {$_sRN[match]} {%3} {%2} {$_sRN[hash]};
-	.scanRoomItemLocation {$_sRN[match]};
-	event_raise {e_scan_room_item} {$_sRN[match]} {%3} {%2} {$_sRN[hash]};
+	#LINE SUBSTITUTE VARIABLES {.RoomAddCommand {#VAR {_item[$_sRN[match]]} {@fFormatItemData{$_item[$_sRN[match]]}}} {3}};
+	#LINE SUBSTITUTE VARIABLES {.RoomAddCommand {.scanRoomItemID       {$_sRN[match]} {%3} {%2}} {3}};
+	#LINE SUBSTITUTE VARIABLES {.RoomAddCommand {.scanRoomItemDesc     {$_sRN[match]} {%3} {%2} {$_sRN[hash]}} {3}};
+	#LINE SUBSTITUTE VARIABLES {.RoomAddCommand {.scanRoomItemLocation {$_sRN[match]}} {3}};
+	#LINE SUBSTITUTE VARIABLES {.RoomAddCommand {event_raise {e_scan_room_item} {$_sRN[match]} {%3} {%2} {$_sRN[hash]}} {4}};
 };
 event_register {e_room_item} {scan.room.item.tin} {.scanRoomItem};
 
 #ALIAS {.scanRoomItemID}
 {
-	#IF {&_item[%1][id] == 0}
+    #IF {"$_item[%1][id]" == ""}
 	{
 		#VAR {_item[%1][id]} {%3};
 		#VAR {_item[%1][name]} {%2};
@@ -52,16 +53,16 @@ event_register {e_room_item} {scan.room.item.tin} {.scanRoomItem};
 				} {1};
 			};
 
-			#LIST {room[commandqueue]} ADD {!_scan.room.item.desc.%4};
+			#SEND {!_scan.room.item.desc.%4};
 			#IF {"$_item[%1][id]" != ""}
 			{
-				#LINE SUBSTITUTE VARIABLES {#LIST {room[commandqueue]} ADD {!exa $_item[%1][id] on ground}};
+				#SEND {!exa $_item[%1][id] on ground};
 			};
 			#ELSE
 			{
-				#LIST {room[commandqueue]} ADD {!exa %3 on ground};
+				#SEND {!exa %3 on ground};
 			};
-			#LIST {room[commandqueue]} ADD {!_scan.room.item.desc.end.%4};
+			#SEND {!_scan.room.item.desc.end.%4};
 		};
 	};
 };
@@ -90,8 +91,9 @@ event_register {e_room_item} {scan.room.item.tin} {.scanRoomItem};
 
 #ALIAS {.scanRoomItemSave}
 {
-	#IF {$_item[%1][nomap] != 1 && &map[area][path] > 0}
+	#IF {"$_item[%1][nomap]" != "1" && &map[area][path] > 0}
 	{
+        .debug SCAN {Item save: %1};
 		.mapVariable add {_item} {%1} {$_item[%1]};
 	};
 };

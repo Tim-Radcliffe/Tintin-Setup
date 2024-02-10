@@ -1,9 +1,19 @@
 #VAR {_item[([\(\[])([\-\|\*]{5})[\)\]]\s.*$]} 
 {
-    {_area} {global}
-    {global} {1}
-    {pickup} {.corpse get}
-    {nomap} {1}
+    @fFormatItemData{
+        {_area} {global}
+        {desc}
+        {
+            {1} {A corpse specially preserved to last}
+            {2} {longer than a normal, untreated one would.}
+            {3} {It doesn't look too heavy.}
+        }
+        {id} {preservation}
+        {name} {preservation}
+        {global} {1}
+        {pickup} {.corpse get}
+        {nomap} {1}
+    }
 };
 
 #ALIAS {.cs_held_get}     {#SEND {!get preservation %1};#SEND {!keep preservation};};
