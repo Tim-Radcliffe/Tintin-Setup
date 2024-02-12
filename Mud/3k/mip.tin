@@ -47,8 +47,8 @@
     #CASE {"BAD"} {#NOP Room Description;};
     #CASE {"BAE"} {#NOP Mud Lag;#VAR {session[Lag]} {%2};};
     #CASE {"BAF"} {#NOP Send Edit;};
-    #CASE {"BBA"} {#NOP Guild Point1 Mask;#VAR {my[gp1][name]} {%2};};
-    #CASE {"BBB"} {#NOP Guild Point2 Mask;#VAR {my[gp2][name]} {%2};};
+    #CASE {"BBA"} {#NOP Guild Point1 Mask;#IF {!&my[gp1][name]} {#VAR {my[gp1][name]} {%2}}};
+    #CASE {"BBB"} {#NOP Guild Point2 Mask;#IF {!&my[gp2][name]} {#VAR {my[gp2][name]} {%2}}};
     #CASE {"BBC"} {#NOP Hit Point Mask;#VAR {my[hp][name]} {%1};};
     #CASE {"BBD"} {#NOP Spell Point Mask;#VAR {my[sp][name]} {%1};};
     #CASE {"CAA"} {#NOP Chat Messages;.aMipProcessComms {CAA} {%2};};
