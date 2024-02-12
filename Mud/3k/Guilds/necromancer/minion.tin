@@ -1,0 +1,70 @@
+#VAR {_guild[minions]}
+{
+    {Skeleton}{} {Zombie}{} {Ghoul}{} {Valpur}{}
+    {Ghast}{} {Manshi}{} {Bolwyn}{} {Greesh}{}
+    {Wight}{} {Heucuva}{} {Tholen}{} {Bayen}{}
+    {Quarin}{} {Mohrg}{} {Grimare}{} {Valithyn}{}
+};
+
+#ALIAS {animate}
+{
+    #SWITCH {"%1"}
+    {
+        #CASE {"dead"}
+        {
+            #SEND {!animate dead};
+            #SEND {!drop corpse};
+            #SEND {!chant};
+            #IF {&my[necromancer][undead][name]}
+            {
+                #SEND {!=name $my[necromancer][undead][name]}
+            };
+            #IF {&my[necromancer][undead][gender]}
+            {
+                #SEND {!=gender $my[necromancer][undead][gender]}
+            }
+            #SEND {!=lead};
+        };
+        #DEFAULT
+        {
+            #SEND {!animate %0};
+        };
+    };
+};
+
+#ALIAS {=heal}
+{
+    #NOP 50np raises Valithyn approx 1% hp.
+};
+event_register {e_necro_gline_Undead} {minion.tin} {=heal};
+
+#FUNCTION {fMinionPresent}
+{
+	#LOCAL {_fMPi} {};
+	#LOCAL {_fMPt} {};
+	#FORMAT {_fMPt} {%n} {$my[necromancer][undead][type]};
+	#FOREACH {$room[contents][npc]} {_fMPi}
+	{
+		#IF {"$room[contents][npc][$_fMPi][id]" == ""}
+		{
+			#CONTINUE;
+		};
+		#ELSEIF {"$room[contents][npc][$_fMPi][id]" == "$my[necromancer][undead][name] the $_fMPt"}
+		{
+			#RETURN 1;
+		};
+		#ELSEIF {&_guild[minions][$room[contents][npc][$_fMPi][id]] > 0}
+		{
+			#RETURN 1;
+		};
+	};
+	#RETURN 0;
+};
+
+#ACTION {^A {bayen|bolwyn|ghast|ghoul|greesh|grimare|heucuva|manshi|mohrg|quarin|skeleton|tholen|valithyn|valpur|wight|zombie} {trudges in|drifts in on a ghostly vapor}.}
+{
+	#LOCAL {_aMinEnter} {%1};
+	#FORMAT {_aMinEnter} {%n} {$_aMinEnter};
+	#LIST {room[contents][npc]} {ADD} {{{id}{$_aMinEnter}}};
+	handler_auto_corpse;
+};

@@ -1,11 +1,4 @@
 #NOP ************* Necromancer Guild *********;
-#VAR {_guild[minions]}
-{
-    {Skeleton}{} {Zombie}{} {Ghoul}{} {Valpur}{}
-    {Ghast}{} {Manshi}{} {Bolwyn}{} {Greesh}{}
-    {Wight}{} {Heucuva}{} {Tholen}{} {Bayen}{}
-    {Quarin}{} {Mohrg}{} {Grimare}{} {Valithyn}{}
-};
 
 /* Teleport to Guild */
 #ACTION {^Visions of the guild appear first in your mind, then reality...}
@@ -125,34 +118,3 @@ auto {add} {veil} {} {e_combat} {};
     };
 };
 auto {add} {glamor} {} {e_combat_round} {};
-
-#FUNCTION {fMinionPresent}
-{
-	#LOCAL {_fMPi} {};
-	#LOCAL {_fMPt} {};
-	#FORMAT {_fMPt} {%n} {$my[necromancer][undead][type]};
-	#FOREACH {$room[contents][npc]} {_fMPi}
-	{
-		#IF {"$room[contents][npc][$_fMPi][id]" == ""}
-		{
-			#CONTINUE;
-		};
-		#ELSEIF {"$room[contents][npc][$_fMPi][id]" == "$my[necromancer][undead][name] the $_fMPt"}
-		{
-			#RETURN 1;
-		};
-		#ELSEIF {&_guild[minions][$room[contents][npc][$_fMPi][id]] > 0}
-		{
-			#RETURN 1;
-		};
-	};
-	#RETURN 0;
-};
-
-#ACTION {^A {bayen|bolwyn|ghast|ghoul|greesh|grimare|heucuva|manshi|mohrg|quarin|skeleton|tholen|valithyn|valpur|wight|zombie} {trudges in|drifts in on a ghostly vapor}.}
-{
-	#LOCAL {_aMinEnter} {%1};
-	#FORMAT {_aMinEnter} {%n} {$_aMinEnter};
-	#LIST {room[contents][npc]} {ADD} {{{id}{$_aMinEnter}}};
-	handler_auto_corpse;
-};
