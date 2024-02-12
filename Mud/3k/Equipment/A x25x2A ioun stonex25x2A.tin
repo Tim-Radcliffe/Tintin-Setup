@@ -1,0 +1,15 @@
+#GAG {^The ioun stone glows with %* light as it hangs in the air.$};
+#GAG {^You feel power flow through you from the ioun stone.$};
+#GAG {^The ivory ioun stone zips past your ear.$};
+
+#ALIAS {handler_ioun_stone}
+{
+    #REGEXP {"%2"} {\(floating\)}
+    {}
+    {
+        #SEND {!spin ioun stone};
+    };
+    #UNALIAS {handler_ioun_stone};
+};
+
+event_oneshot {e_equipment_loaded} {A x25x2A ioun stonex25x2A.tin} {handler_ioun_stone};

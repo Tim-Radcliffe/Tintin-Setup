@@ -1,61 +1,129 @@
 #ALIAS {i}
 {
-    #CLASS {cNecroI} {open};
+	#UNVAR {my[eq]};
+	.eqLoadFilelist;
 
-    #VAR {_undead}
-    {
-        {Skeleton}{} {Zombie}{}  {Ghoul}{}   {Valpur}{}
-        {Ghast}{}    {Manshi}{}  {Bolwyn}{}  {Greesh}{}
-        {Wight}{}    {Heucuva}{} {Tholen}{}  {Bayen}{}
-        {Quarin}{}   {Mohrg}{}   {Grimare}{} {Valithyn}{}
-    };
+	#CLASS {cNecroI} {open};
+
+	#ACTION {^Wielded Weapon: %*}
+	{
+		.iTidyUp;
+		#VAR {my[eq][%%1][category]} {Weapons};
+		#VAR {my[eq][%%1][type]} {weapon};
+		#VAR {my[eq][%%1][equipped]} {1};
+		.eqLoadScript {%%1};
+	};
+
+	#ACTION {^Armour (worn)}
+	{
+		.iTidyUp;
+		#CLASS {cNecroI} ASSIGN #ACTION {{^\s{2}(\w+)\s{2,6}-[ *]{2}(.*)\s\(worn.*\)$}}
+		{
+			#VAR {my[eq][%%%3][category]} {Armour};
+			#VAR {my[eq][%%%3][type]} {%%%2};
+			#VAR {my[eq][%%%3][equipped]} {1};
+			.eqLoadScript {%%%3};
+		};
+	};
+
+	#ACTION {^Armour$}
+	{
+		.iTidyUp;
+		#CLASS {cNecroI} ASSIGN #ACTION {{^\s{2}(\w+)\s{2,6}-[ *]{2}(.*)$}}
+		{
+			#VAR {my[eq][%%%3][category]} {Armour};
+			#VAR {my[eq][%%%3][type]} {%%%2};
+			#NOP .eqLoadScript {%%%3};
+		};
+	};
+
+	#ACTION {^Weapons$}
+	{
+		.iTidyUp;
+		#CLASS {cNecroI} ASSIGN #ACTION {{^[ *]{2}(.*)$}}
+		{
+			#VAR {my[eq][%%%2][category]} {Weapons};
+			#NOP .eqLoadScript {%%%2};
+		};
+	};
+
+	#ACTION {^{(Autoloading)}$}
+	{
+		.iTidyUp;
+		#ECHO {<149>Autoloading<099> <hidden by script>};
+		#CLASS {cNecroI} ASSIGN #ACTION {{^[ *]{2}(.*)$}}
+		{
+			#LINE GAG;
+			#VAR {my[eq][%%%2][category]} {%%1};
+			.eqLoadScript {%%%2};
+		};
+		#LINE GAG;
+	};
+
+	#ACTION {^{(Containers|Other)}$}
+	{
+		.iTidyUp;
+		#CLASS {cNecroI} ASSIGN #ACTION {{^[ *]{2}(.*)$}}
+		{
+			#VAR {my[eq][%%%2][category]} {%%1};
+			.eqLoadScript {%%%2};
+		};
+	};
+
 	#ACTION {{^(\w+)\s+\[\s?(\d+)\/\s?(\d+)\|\s?(\d+)\%\|\s?(\d+)c]}}
-    {
-        #IF {"%%2" == "Coffin"}
-        {
-            #VAR {my[corpse][coffin][current]} {%%5};
-            #VAR {my[corpse][coffin][max]}     {%%4};
-        };
-        #ELSEIF {"%%2" == "Smuggling"}
-        {
-            #VAR {my[corpse][smuggle][current]} {%%5};
-            #VAR {my[corpse][smuggle][max]}     {%%4};
-        };
-        #ELSEIF {"%%2" == "Encumberance"}
-        {
-            #VAR {my[encumberance][current]} {%%3};
-            #VAR {my[encumberance][max]} {%%4};
-            #VAR {my[encumberance][percentage]} {%%5};
-            #VAR {my[corpse][held][current]} {%%6};
-            
-            #NOP /* Increase/Decrease max corpses held to keep encumberance between 70% and 80% */;
-            #IF {$my[corpse][held][current] == $my[corpse][held][max]}
-            {
-                #IF {@fEval{((%%3*100)/%%4) < 70}}
-                {
-                    #VAR {my[corpse][held][max]} {@fEval{$my[corpse][held][max] + 1}};
-                };
-                #ELSEIF {@fEval{((%%3*100)/%%4) > 80}}
-                {
-                    #VAR {my[corpse][held][max]} {@fEval{$my[corpse][held][max] - 1}};
-                };                
-            };
-        };
-        #ELSEIF {&_undead[%%2] > 0}
-        {
-            #VAR {my[corpse][minion][current]} {%%5};
-            #IF {%%5 > 0}
-            {
-                #NOP /* Set max corpse capacity of minion based on average weight of current minion corpses */;
+	{
+		.iTidyUp;
+		#IF {"%%2" == "Coffin"}
+		{
+			#VAR {my[corpse][coffin][current]} {%%5};
+			#VAR {my[corpse][coffin][max]}     {%%4};
+		};
+		#ELSEIF {"%%2" == "Smuggling"}
+		{
+			#VAR {my[corpse][smuggle][current]} {%%5};
+			#VAR {my[corpse][smuggle][max]}     {%%4};
+		};
+		#ELSEIF {"%%2" == "Encumberance"}
+		{
+			#VAR {my[encumberance][current]} {%%3};
+			#VAR {my[encumberance][max]} {%%4};
+			#VAR {my[encumberance][percentage]} {%%5};
+			#VAR {my[corpse][held][current]} {%%6};
 
-                #VAR {my[corpse][minion][max]} {@fEval{(%%4/(%%3/%%6))-1}};
-            };
-        };
-    } {1};
+			#NOP /* Increase/Decrease max corpses held to keep encumberance between 70% and 80% */;
+			#IF {$my[corpse][held][current] == $my[corpse][held][max]}
+			{
+				#IF {@fEval{((%%3*100)/%%4) < 70}}
+				{
+					#VAR {my[corpse][held][max]} {@fEval{$my[corpse][held][max] + 1}};
+				};
+				#ELSEIF {@fEval{((%%3*100)/%%4) > 80}}
+				{
+					#VAR {my[corpse][held][max]} {@fEval{$my[corpse][held][max] - 1}};
+				};
+			};
+		};
+		#ELSEIF {&_guild[minions][%%2] > 0}
+		{
+			#VAR {my[corpse][minion][current]} {%%5};
+			#IF {%%5 > 0}
+			{
+				#NOP /* Set max corpse capacity of minion based on average weight of current minion corpses */;
 
-    #CLASS {cNecroI} {close};
+				#VAR {my[corpse][minion][max]} {@fEval{(%%4/(%%3/%%6))-1}};
+			};
+		};
+	} {1};
 
-    event_oneshot {e_prompt} {cNecroI} {#NOP %%1;#CLASS {cNecroI} {kill};};    
-   
-    #SEND {!i %0};
+	#ALIAS {.iTidyUp}
+	{
+		#UNACTION {{^.{11}-[ *]{2}(.*)$}};
+		#UNACTION {{^[ *]{2}(.*)$}};
+	};
+
+	#CLASS {cNecroI} {close};
+
+	event_oneshot {e_prompt} {cNecroI} {#NOP %%1;#CLASS {cNecroI} {kill};};
+
+	#SEND {!i %0};
 };

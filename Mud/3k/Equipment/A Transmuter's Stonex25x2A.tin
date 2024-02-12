@@ -1,0 +1,17 @@
+#GAG {^The colours in your transmuter's stone begins to swirl.$};
+#ACTION {^Your transmuter's stone bursts with %d new colours!$}
+{
+    #LINE GAG;
+    #MATH {my[professions][transmuter][colours]} {$my[professions][transmuter][colours] + %1};
+};
+
+#ALIAS {handler_transmuter_stone}
+{
+    #REGEXP {"%2"} {filled with %d colours}
+    {
+        #VAR {my[professions][transmuter][colours]} {&1};
+    };
+    #UNALIAS {handler_transmuter_stone};
+};
+
+event_oneshot {e_equipment_loaded} {A Transmuter's Stonex25x2A.tin} {handler_transmuter_stone};

@@ -1,24 +1,13 @@
 #ALIAS {eq}
 {
     #NOP %1;
-    #VAR {_eq[filelist]} {@fFileList{$path[equipment]}};
-
-    #FOREACH {$_eq[filelist][]} {_eq[item]}
-    {
-        #VAR {_eq[path]} {$_eq[item]};
-        #REPLACE {_eq[item]} {$path[equipment]/} {};
-        #REPLACE {_eq[item]} {.tin} {};
-        #FOREACH {{(}{)}{<}{>}{?}{!}{*}{%}{"}} {_eq[char]}
-        {
-          #REPLACE {_eq[item]} {@fAsciiHex{{$_eq[char]}{x}}} {$_eq[char]};
-        }        
-        #VAR {_eq[filetable][$_eq[item]]} {$_eq[path]};
-    };
+    .eqCleanup;
+    .eqLoadFilelist;
 
 #NOP    #ACTION {{^([^:]{3,13}):\s+(.*)$}};
-    #ACTION {{^(.{12})\s{2}(.*)$}}
+    #ACTION {{^(?:(.*):\s{1,11}|\s{14})(\w.*)$}}
 	{
-		#IF {"%%2" != "Resistances:"}
+		#IF {"%%2" != "Resistances"}
 		{
             #IF {"%%2" != "            "}
             {
@@ -32,15 +21,36 @@
 		};
         #ELSE
         {
-            #UNVAR {_eq};
-            #UNACTION {{^(.{12})\s{2}(.*)$}};
+            #UNVAR {_eq};        
+            #UNACTION {{^(?:(.*):\s{1,11}|\s{14})(\w.*)$}};
         };
 	};
 
+	#SEND {!eq %0};
+};
+
+#ALIAS {.eqCleanup}
+{
     #UNVAR {my[eq]};
     #KILL CLASS {$path[equipment]/%*};
     event_remove_handler {$path[equipment]/%*};
-	#SEND {!eq %0};
+};
+
+#ALIAS {.eqLoadFilelist}
+{
+    #VAR {_eq[filelist]} {@fFileList{$path[equipment]}};
+
+    #FOREACH {$_eq[filelist][]} {_eq[item]}
+    {
+        #VAR {_eq[path]} {$_eq[item]};
+        #REPLACE {_eq[item]} {$path[equipment]/} {};
+        #REPLACE {_eq[item]} {.tin} {};
+        #FOREACH {{(}{)}{<}{>}{?}{!}{*}{%}{"}} {_eq[char]}
+        {
+          #REPLACE {_eq[item]} {@fAsciiHex{{$_eq[char]}{x}}} {$_eq[char]};
+        }        
+        #VAR {_eq[filetable][$_eq[item]]} {$_eq[path]};
+    };
 };
 
 #ALIAS {.eqLoadScript}
@@ -51,6 +61,7 @@
         #REGEXP {%1} {$_eq[match]}
         {
             .file load {$_eq[filetable][$_eq[match]]};
+            event_raise {e_equipment_loaded} {%1} {$_eq[filetable][$_eq[match]]};
         };
     };
 };
