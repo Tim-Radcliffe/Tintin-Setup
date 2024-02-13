@@ -20,6 +20,7 @@
 	#GAG {^  We will be together soon enough %+.};
 	#GAG {^  You escaped my grasp this time %+... this time.};
 	#GAG {^  Your destiny will wait a bit longer %+.};
+    #GAG {^C:O=|======> %*!$};
 };
 
 #ALIAS {necro_gag_off}
@@ -44,5 +45,6 @@
 	#UNGAG {^  We will be together soon enough %+.};
 	#UNGAG {^  You escaped my grasp this time %+... this time.};
 	#UNGAG {^  Your destiny will wait a bit longer %+.};	
+    #UNGAG {^C:O=|======> %*!$};
 }
 auto {add} {necrogag} {necro_gag_on} {} {necro_gag_off};

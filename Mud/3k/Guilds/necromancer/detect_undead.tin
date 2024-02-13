@@ -24,3 +24,6 @@
     };
 };
 event_register e_scan_room_npc {detect_undead.tin} {handler_auto_detectundead};
+
+#NOP Shambling zombie is undead...                                                                                                                                                                                                     
+#NOP   His power is weaker than yours.

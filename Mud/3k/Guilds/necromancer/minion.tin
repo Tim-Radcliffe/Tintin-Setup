@@ -34,7 +34,35 @@
 
 #ALIAS {=heal}
 {
-    #NOP 50np raises Valithyn approx 1% hp.
+    #NOP 50np raises Valithyn approx 1% hp.;
+    #SWITCH {"%1"}
+    {
+        #LOCAL {_heal} {0};
+        #CASE {"e_necro_gline_Undead"}
+        {
+            #MATH {_heal} {(100 - $my[necromancer][undead][hp]) * 50};
+            #IF {$_heal > 0}
+            {
+                #SEND {!=heal $_heal};
+            };
+        };
+        #CASE {"full"}
+        {
+            #MATH {_heal} {(100 - $my[necromancer][undead][hp]) * 50};
+            #IF {$_heal > 0}
+            {
+                #SEND {!=heal $_heal};
+            };
+            #ELSE 
+            {
+                #ECHO {Minion does not need healing};
+            };
+        };
+        #DEFAULT 
+        {
+            #SEND {!=heal %0};
+        };
+    };
 };
 event_register {e_necro_gline_Undead} {minion.tin} {=heal};
 

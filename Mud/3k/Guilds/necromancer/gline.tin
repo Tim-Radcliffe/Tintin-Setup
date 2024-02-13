@@ -173,7 +173,9 @@ event_register {e_mip_FFF_J} {gline.tin} {handler_necro_gline};
 #ALIAS {handler_necro_gline_Undead}
 {
     #NOP %1;
-    #VAR {my[necromancer][undead][hp]} {%1};
+    #LOCAL {_hNGU} {%1};
+    #REPLACE {_hNGU} {%} {};
+    #VAR {my[necromancer][undead][hp]} {$_hNGU};
 };
 
 #ALIAS {handler_necro_gline_W}
