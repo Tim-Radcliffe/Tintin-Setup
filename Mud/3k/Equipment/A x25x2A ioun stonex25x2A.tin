@@ -1,6 +1,7 @@
 #GAG {^The ioun stone glows with %* light as it hangs in the air.$};
 #GAG {^You feel power flow through you from the ioun stone.$};
-#GAG {^The ivory ioun stone zips past your ear.$};
+#GAG {^The %* ioun stone zips past your ear.$};
+#GAG {^The %* stone slowly spins about your head.$};
 
 #ALIAS {handler_ioun_stone}
 {
