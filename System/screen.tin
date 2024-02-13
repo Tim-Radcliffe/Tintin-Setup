@@ -68,6 +68,11 @@
     #VAR {_Screen[bottomright][y]}  {$_Screen[status][y]};
     #VAR {_Screen[bottomright][y2]} {$_Screen[status][y2]};
 
+    #VAR  {_Screen[fullleft][y]}    {$_Screen[head][y]};
+    #MATH {_Screen[fullleft][y2]}   {$_Screen[body][y2]};
+
+    #VAR  {_Screen[fullright][y]}   {$_Screen[head][y]};
+    #MATH {_Screen[fullright][y2]}  {$_Screen[body][y2]};    
 
     #SCREEN get cols {_Screen[full][cols]};
     #VAR  {_Screen[head][cols]}     {$_Screen[full][cols]};
@@ -113,6 +118,12 @@
 
     #VAR {_Screen[bottomright][x]}  {$_Screen[right][x]};
     #VAR {_Screen[bottomright][x2]} {$_Screen[right][x2]};
+
+    #VAR  {_Screen[fullleft][x]}    {$_Screen[left][x]};
+    #MATH {_Screen[fullleft][x2]}   {$_Screen[left][x2]};
+
+    #VAR  {_Screen[fullright][x]}    {$_Screen[right][x]};
+    #MATH {_Screen[fullright][x2]}   {$_Screen[right][x2]};
 
     #VAR  {_Screen[input][x]}       {1};
     #MATH {_Screen[input][x2]}      {$_Screen[input][x] + $_Screen[input][cols]};

@@ -50,7 +50,7 @@
 		{
 			#IF {@fScreen{{right}{cols}} > 5}
 			{
-				#VAR {_Window[names][%1]} {right};
+				#VAR {_Window[names][%1]} {fullright};
 			};
 			#ELSE
 			{

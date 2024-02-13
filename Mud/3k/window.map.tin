@@ -79,4 +79,4 @@ event_register {e_mouse_map_pressed} {h_window_map} {.HandlerMapMouseClick};
 };
 event_register {e_mouse_map_moved} {h_window_map} {.HandlerMapMouseMove};
 
-.WindowCreate {map} {topright};
+.WindowCreate {map};
