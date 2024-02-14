@@ -1,46 +1,4 @@
-#ALIAS {autopickup}
-{
-  #IF {"%1" == "off" || "%1" == "stop"}
-  {
-    #VAR {flags[autopickup]} {0};
-    #ECHO {Auto Pickup Off};
-    #RETURN;
-  };
-  #IF {"%1" == "min"} {#VAR {flags[autopickup]} {0};};
-  #IF {"%1" == "full"} {#VAR {flags[autopickup]} {1};};
-
-  #SWITCH {"$flags[autopickup]"}
-  {
-    #CASE {"0"}
-    {
-      #VAR {flags[autopickup]} {1};
-      #ECHO {Auto Pickup Minimal};
-    }
-    #CASE {"1"}
-    {
-      #VAR {flags[autopickup]} {2};
-      #ECHO {Auto Pickup Full};
-    };
-    #CASE {"2"}
-    {
-      #VAR {flags[autopickup]} {1};
-      #ECHO {Auto Pickup Minimal};
-    };
-  };
-
-  #IF {$flags[autopickup] > 0 }
-  {
-    event_register e_room_item h_auto_pickup handler_room_pickup;
-  };
-  #ELSE
-  {
-    event_remove_handler h_auto_pickup;
-  };
-};
-
-autopickup min;
-
-#ALIAS {handler_room_pickup}
+#ALIAS {handler_auto_pickup}
 {
     #NOP %1;
     #IF {@fLocked{scan.%*}}
@@ -88,7 +46,7 @@ autopickup min;
         .debug PICKUP {Command added to command queue: $room[commandbuffer]};
         .RoomAddCommand {$room[commandbuffer]} {8};
     };
-    #ELSEIF {"$room[break]" != "1" && "$flags[autopickup]" == "2"}
+    #ELSEIF {"$room[break]" != "1" && "$auto[pickup][variable]" == "full"}
     {
         .debug PICKUP {Full Pickup - get item added to command queue: $room[commandbuffer]};
         .RoomAddCommand {@fAutoGetCommand{%2}} {8};
@@ -101,10 +59,12 @@ autopickup min;
 /* Returns all the commands to perform when getting an object */
 #FUNCTION {fAutoGetCommand}
 {
-    #LOCAL {_fAGC} {#SEND {!get %0}};
+    #LOCAL {_fAGC} {#SEND {!get %0};};
     #IF {$auto[bag][status]}
     {
-        #LOCAL {_fAGC} {${_fAGC};#SEND {!put %0 in bag};};
+        #CAT {_fAGC} {#SEND {!put %0 in bag}};
     };
     #RETURN {$_fAGC};
 };
+
+auto add {pickup} {.file load {$path[mud]/Scripts/auto.pickup.tin}} {e_room_item} {#NOP %1;#CLASS {$path[mud]/Scripts/auto.pickup.tin} KILL;};
