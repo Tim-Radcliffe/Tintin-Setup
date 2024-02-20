@@ -1,0 +1,21 @@
+#NOP The black diamond starts to glow.
+#NOP The black diamond gets slightly brighter.
+#NOP black         edged
+#NOP white         blunt
+#NOP red           fire
+#NOP blue          ice
+#NOP green         acid
+#NOP yellow        electric
+#NOP purple        mind
+#NOP pink          energy
+#NOP dark green    poison
+#NOP aqua          radiation
+
+#ACTION {{^The (.*) diamond (?:starts to glow|gets slightly brighter)\.$}}
+{
+    #IF {&opponent[regexp]}
+    {
+        #VAR {_npc[$opponent[regexp]][attacks][@fStandardDamage{{%2}{diamond necklace}}]} {1};
+        .scanRoomNPCSave {$opponent[regexp]};
+    };
+};
