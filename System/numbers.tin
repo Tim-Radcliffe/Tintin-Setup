@@ -1,3 +1,113 @@
+#NOP Return minimum of a list of values;
+#NOP {value 1} {value 2} {value 3} ...;
+#FUNCTION {fMin}
+{
+  #LOCAL {result} {%1};
+  #FOREACH {%0} {_fMin}
+  {
+    #IF {"$_fMin" == ""} {#LOCAL {_fMin} {0};};
+    #IF {$_fMin < $result} {#LOCAL {result} {$_fMin};};
+  }
+  #UNVAR {_fMin};
+  #RETURN {$result};
+};
+
+#NOP Return maximum of a list of values;
+#NOP {value 1} {value 2} {value 3} ...;
+#FUNCTION {fMax}
+{
+  #LOCAL {result} {%1};
+  #FOREACH {%0} {_fMax}
+  {
+    #IF {"$_fMax" == ""} {#LOCAL {_fMax} {0};};
+    #IF {$_fMax > $result} {#LOCAL {result} {$_fMax};};
+  }
+  #UNVAR {_fMax};
+  #RETURN {$result};
+};
+
+#NOP Calculate the sum of an array of numbers;
+#FUNCTION {fSumArray}
+{
+  #LOCAL {tmpkey} {0};
+  #LOCAL {tmp} {};
+  #LOCAL {fSumArray} {0};
+  #FOREACH {%0} {tmp}
+  {
+    #IF {$tmpkey == 1}
+    {
+      #MATH {fSumArray} {$fSumArray + $tmp};
+      #LOCAL {tmpkey} {0};
+    }
+    {
+      #LOCAL {tmpkey} {1};
+    }
+  }
+  #RETURN {$fSumArray};
+};
+
+#NOP Return 1 if passed value is a number
+#FUNCTION {fIsNumber}
+{
+    #VAR result {0};
+    #IF {"%1" == "%d" && "%1" != ""}
+    {
+        #VAR result {1};
+    };
+};
+
+#NOP Evaluate a calculation;
+#FUNCTION {fEval}
+{
+  #LOCAL {_fEval} {};
+  #MATH {_fEval} {%1};
+  #RETURN {$_fEval};
+};
+
+#NOP returns an index table of all sequence permutations of input array values
+#NOP Index table used to clear duplicates
+#NOP Uses quickperm algorithm https://www.quickperm.org/
+#FUNCTION {fGetPermutations}
+{
+    #VAR {_perms[i]} {1};
+    #LIST {_perms[values]} ADD %0;
+    #VAR {_perms[output]} {$_perms[values]};
+    #LIST {_perms[output]} COLLAPSE {;}; 
+    #VAR {_perms[table][$_perms[output]]} {};
+    #LOOP {1} {&_perms[values][]} {_perms[l]}
+    {
+        #LIST {_perms[p]} {ADD} {1};
+    };
+    #WHILE {$_perms[i] <= &_perms[values][]}
+    {
+        #IF {$_perms[p][$_perms[i]] < $_perms[i]}
+        {
+            #IF {@fEval{$_perms[i]%%2}}
+            {
+                #VAR {_perms[j]} {1};
+            };
+            #ELSE
+            {
+                #VAR {_perms[j]} {$_perms[p][$_perms[i]]};
+            };
+            #LIST {_perms[values]} SWAP {$_perms[j]} {$_perms[i]};
+            #VAR {_perms[output]} {$_perms[values]};
+            #LIST {_perms[output]} COLLAPSE {;}; 
+            #VAR {_perms[table][$_perms[output]]} {};            
+            #MATH {_perms[p][$_perms[i]]} {$_perms[p][$_perms[i]] + 1};
+            #VAR {_perms[i]} {1};
+        };
+        #ELSE
+        {
+            #VAR {_perms[p][$_perms[i]]} {1};
+            #MATH {_perms[i]} {$_perms[i] + 1};
+        };
+    };
+    #VAR {result} {$_perms[table]};
+    #UNVAR {_perms};
+    #RETURN {$result};
+};
+
 #FUNCTION {fDecToNumerals}
 {
     #IF {%1 >= 1000} {#RETURN @fConcat{{M}  {@fDecToNumerals{@fEval{%1 - 1000}}}}};
@@ -92,13 +202,13 @@
     #LIST {numInput} EXPLODE { };
 
     #LOCAL {numWord} {};
-    #FOREACH {$numInput[]} {numWord} 
+    #FOREACH {$numInput[]} {numWord}
     {
         #IF {$wordValue[$numWord] > 99}
         {
             #LOCAL {numOperator} {*};
         };
-        #ELSE 
+        #ELSE
         {
             #LOCAL {numOperator} {+};
         };
@@ -111,6 +221,6 @@
             #LOCAL {numExpression} {$wordValue[$numWord]};
         };
     };
-   
+
     #RETURN @fEval{$numExpression};
 };

@@ -54,26 +54,6 @@ event_register {e_5_mins} {System/utils.tin} {.aProfileSave};
   };
 };
 
-#NOP Calculate the sum of an array of numbers;
-#FUNCTION {fSumArray}
-{
-  #LOCAL {tmpkey} {0};
-  #LOCAL {tmp} {};
-  #LOCAL {fSumArray} {0};
-  #FOREACH {%0} {tmp}
-  {
-    #IF {$tmpkey == 1}
-    {
-      #MATH {fSumArray} {$fSumArray + $tmp};
-      #LOCAL {tmpkey} {0};
-    }
-    {
-      #LOCAL {tmpkey} {1};
-    }
-  }
-  #RETURN {$fSumArray};
-};
-
 #NOP Truncate a string to a specific length;
 #NOP { {data to truncate} {length} };
 #FUNCTION {fTrunc}
@@ -157,14 +137,6 @@ event_register {e_5_mins} {System/utils.tin} {.aProfileSave};
   #RETURN {$_fLP[result]};
 };
 
-#NOP Evaluate a calculation;
-#FUNCTION {fEval}
-{
-  #LOCAL {_fEval} {};
-  #MATH {_fEval} {%1};
-  #RETURN {$_fEval};
-};
-
 #NOP Get a specific entry from a semi-colon delimited list;
 #NOP { {list} {index} };
 #FUNCTION {fListValue}
@@ -240,44 +212,6 @@ event_register {e_5_mins} {System/utils.tin} {.aProfileSave};
   #RETURN {$_fES[string]};
 };
 
-#NOP Return minimum of a list of values;
-#NOP {value 1} {value 2} {value 3} ...;
-#FUNCTION {fMin}
-{
-  #LOCAL {result} {%1};
-  #FOREACH {%0} {_fMin}
-  {
-    #IF {"$_fMin" == ""} {#LOCAL {_fMin} {0};};    
-    #IF {$_fMin < $result} {#LOCAL {result} {$_fMin};};
-  }
-  #UNVAR {_fMin};
-  #RETURN {$result};
-};
-
-#NOP Return maximum of a list of values;
-#NOP {value 1} {value 2} {value 3} ...;
-#FUNCTION {fMax}
-{
-  #LOCAL {result} {%1};
-  #FOREACH {%0} {_fMax}
-  {
-    #IF {"$_fMax" == ""} {#LOCAL {_fMax} {0};};
-    #IF {$_fMax > $result} {#LOCAL {result} {$_fMax};};
-  }
-  #UNVAR {_fMax};
-  #RETURN {$result};
-};
-
-#NOP Return 1 if passed value is a number
-#FUNCTION {fIsNumber}
-{
-    #VAR result {0};
-    #IF {"%1" == "%d" && "%1" != ""}
-    {
-        #VAR result {1};
-    };
-};
-
 #NOP Return a comma separated string from a list of values;
 #FUNCTION {fCommaList}
 {
@@ -346,14 +280,6 @@ event_register {e_5_mins} {System/utils.tin} {.aProfileSave};
             #REPLACE {result[$l]} {+SP+} { };
         };
     };
-    #RETURN {$result};
-};
-
-#FUNCTION {fMath}
-{
-    #MATH {_fMath} {%0};
-    #LOCAL result {$_fMath};
-    #UNVAR {_fMath};
     #RETURN {$result};
 };
 
