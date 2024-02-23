@@ -3,7 +3,7 @@
 	@fFormatNPCData{
 		{_area} {global}
 		{nomap} {1}
-		{nokill} {1}
+		{autokill} {-1}
 	}
 };
 #VAR {_npc[^A tank named]}
@@ -11,7 +11,7 @@
 	@fFormatNPCData{
 		{_area} {global}
 		{nomap} {1}
-		{nokill} {1}
+		{autokill} {-1}
 	}
 };
 #VAR {_npc[^A cargo truck$]}
@@ -28,7 +28,7 @@
 		}
 		{id} {Truck}
 		{nomap} {1}
-		{nokill} {1}
+		{autokill} {-1}
 		{name} {A cargo truck}
 		{size}
 		{
@@ -44,7 +44,7 @@
 	@fFormatNPCData{
 		{_area} {global}
 		{nomap} {1}
-		{nokill} {1}
+		{autokill} {-1}
 	}
 };
 #VAR {_npc[Jugger Support Mech]}
@@ -52,7 +52,7 @@
 	@fFormatNPCData{
 		{_area} {global}
 		{nomap} {1}
-		{nokill} {1}
+		{autokill} {-1}
 	}
 };
 #VAR {_npc[esquire]}
@@ -60,7 +60,7 @@
 	@fFormatNPCData{
 		{_area} {global}
 		{nomap} {1}
-		{nokill} {1}
+		{autokill} {-1}
 	}
 };
 #VAR {_npc[the {Bayen|Bolwyn|Ghast|Greesh|Grimare|Heucuva|Manshi|Mohrg|Quarin|Skeleton|Tholen|Valithyn|Valpur|Wight|Zombie}]}
@@ -85,7 +85,7 @@
 		}
 		{id} {undead}
 		{nomap} {1}
-		{nokill} {1}
+		{autokill} {-1}
 		{size}
 		{
 			{0}
@@ -101,7 +101,7 @@
 	@fFormatNPCData{
 		{_area} {global}
 		{nomap} {1}
-		{nokill} {1}
+		{autokill} {-1}
 	}
 };
 #VAR {_npc[under the control of]}
@@ -126,7 +126,7 @@
 			{12} {She is better than perfect.}
 		}
 		{name} {A valithyn under the control of Blutash}
-		{nokill} {1}
+		{autokill} {-1}
 		{nomap} {1}
 		{size}
 		{
@@ -154,7 +154,7 @@
 		}
 		{id} {Vilgan}
 		{nomap} {1}
-		{nokill} {1}
+		{autokill} {-1}
 		{name} {Vilgan}
 		{size}
 		{
