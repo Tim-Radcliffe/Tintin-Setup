@@ -11,7 +11,6 @@
     {
       #IF {"$l" == "$map[area][path]"}
       {
-        #IF {"$m[nokill]" == "1"}          {#VAR {_wANPC[data][$m[name]][No Kill]} {1}};
         #IF {&m[location][$l][]}  {#VAR {_wANPC[data][$m[name]][Locations]} {@fCommaList{*m[location][$l][-3..-1]}}};
         #IF {&m[size][$map[area][scaler]][]}
         {
@@ -19,10 +18,10 @@
           #ELSEIF {&m[size][$map[area][scaler]][consider]} {#VAR {_wANPC[data][$m[name]][Size]} {$m[size][$map[area][scaler]][consider]}};
           #IF {&m[size][$map[area][scaler]][kills]} {#VAR {_wANPC[data][$m[name]][Kills]} {$m[size][$map[area][scaler]][kills]}};          
         };
-        #IF {"$m[autokill]" == "1"}
+        #IF {"$m[autokill]" != ""}
         {
           #IF {$m[autokill] > 0} {#VAR {_wANPC[data][$m[name]][Auto Kill]} {X}};
-          #IF {$m[autokill] < 0} {#VAR {_wANPC[data][$m[name]][Auto Kill]} { }};
+          #ELSE {#VAR {_wANPC[data][$m[name]][Auto Kill]} {-}};
         };
       };
     };

@@ -136,7 +136,7 @@ event_register {e_room_npc} {h_scan_npc} {.scanRoomNPC};
 {
 	#UNVAR {_fGNR};
 	#VAR {_fGNR[input]} {%1};
-	#REGEXP {$_fGNR[input]} {{^(.+?)(\s\<[.?*!^]+\>)?(\s\[(scratched|wounded|dying)\])?(\sattacking you!)?$}}
+	#REGEXP {$_fGNR[input]} {{^(.+?)(\s\<[.?*!^]+\>)?(\(demoralized\))?(\s\[(scratched|wounded|dying)\])?(\sattacking you!)?$}}
 	{
 		#VAR {_fGNR[input]} {&2};
 	};
@@ -161,9 +161,8 @@ event_register {e_room_npc} {h_scan_npc} {.scanRoomNPC};
 {
 	#NOP %1;
 	#LOCAL {_npcData} {%0};
-	#FOREACH {_area;alignment;autokill;desc;hunts;id;location;name;nokill;size;undead;vulnerabilities} {_f}
+	#FOREACH {_area;alignment;attacks;autokill;desc;hunts;id;location;name;size;undead;vulnerabilities} {_f}
 	{
-
 		#IF {&_npcData[$_f] == 0}
 		{
 			#VAR {_npcData[$_f]} {};

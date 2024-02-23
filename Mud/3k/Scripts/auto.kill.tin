@@ -14,18 +14,14 @@
 	{
 		#VAR {room[current]} {%5};
 
-		#IF {"$room[current][nokill]" == "1"}
-		{
-			#BREAK;
-		};
-		#ELSEIF {"$room[current][autokill]" == "-1"}
+		#IF {"$room[current][autokill]" == "-1"}
 		{
 			#BREAK;
 		};
 		#ELSEIF {"$room[current][autokill]" == "1"}
 		{
 			#LINE SUBSTITUTE VARIABLES {.RoomAddCommand {!kill $room[current][id]} {9}};
-			handler_auto_kill_combat;
+			.RoomAddCommand {handler_auto_kill_combat} {9};
 		};
 		#ELSE
 		{
