@@ -12,13 +12,13 @@ CINVISIBLE <208>
 CPATHS <138>
 CROOMS <178>
 CSYMBOLS <128>
-CUSER <258>
+CUSER <139>
 
-F 1048585
+F 1048587
 
 G 0
 
-I 52
+I 118
 
 L {ASCII NESW LINE} {NO EXITS} {x}
 L {ASCII NESW LINE} {N} {o}
@@ -36,7 +36,7 @@ L {ASCII NESW LINE} {    S W} {+}
 L {ASCII NESW LINE} {N   S W} {+}
 L {ASCII NESW LINE} {  E S W} {+}
 L {ASCII NESW LINE} {N E S W} {+}
-L {ASCII NESW MISC} {USER} {■}
+L {ASCII NESW MISC} {USER} {#}
 L {ASCII NESW MISC} {DIR UNKNOWN} {+}
 L {ASCII NESW MISC} {N S VOID} {|}
 L {ASCII NESW MISC} {E W VOID} {-}
@@ -746,9 +746,8 @@ R {117}{0}{<178>}{A Strange Archway}{ }{You can vaguely make out the shapes of P
 E {80}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {118}{e}{e}{2}{0}{}{1.000}{}{0.00}
 
-R {118}{0}{<178>}{A Peaceful Cemetery}{ }{Surrounding you are manicured lawns covered with pristine white gravestones. Before you, three incomplete arches push up towards the sky, a small white-pebbled courtyard lying beneath them.  In the distance, you can make out a white arch and black monument.  A blood red dish, embedded in the stones of hallow ground, contains an undying flame. }{Mud}{}{}{}{1.000}{}
+R {118}{0}{<178>}{A Peaceful Cemetery}{ }{Surrounding you are manicured lawns covered with pristine white gravestones. Before you, three incomplete arches push up towards the sky, a small white-pebbled courtyard lying beneath them.  In the distance, you can make out a white arch and black monument.  A blood red dish, embedded in the stones of hallow ground, contains an undying flame. }{Mud}{{content}{{item}{{^Death's Valued Customers List$}{{name}{Death's Valued Customers List}}}{noun}{{arch}{{name}{arch}}{arches}{{name}{arches}}{courtyard}{{name}{courtyard}}{lawns}{{name}{lawns}}{red}{{name}{red}}}}}{}{}{1.000}{}
 E {117}{w}{w}{8}{0}{}{1.000}{}{0.00}
-E {200}{d}{d}{32}{0}{}{1.000}{}{0.00}
 
 R {119}{0}{<178>}{Gallery Atrium}{ }{}{}{}{}{}{1.000}{}
 E {82}{s}{s}{4}{0}{}{1.000}{}{0.00}
@@ -1054,7 +1053,7 @@ E {25}{s}{s}{4}{0}{}{1.000}{}{0.00}
 
 R {199}{0}{<000>}{LINK: Pinnacle/Fantasy}{<138>*}{}{Pinnacle/Fantasy}{{link}{}}{}{}{1.000}{}
 
-R {200}{0}{}{A Peaceful Cemetery}{ }{Surrounding you are manicured lawns covered with pristine white gravestones. Before you, three incomplete arches push up towards the sky, a small white-pebbled courtyard lying beneath them.  In the distance, you can make out a white arch and black monument.  A blood red dish, embedded in the stones of hallow ground, contains an undying flame.  }{}{}{}{}{1.000}{}
+R {200}{0}{}{Ethereal Tomb}{ }{Surrounding you are manicured lawns covered with pristine white gravestones. Before you, three incomplete arches push up towards the sky, a small white-pebbled courtyard lying beneath them.  In the distance, you can make out a white arch and black monument.  A blood red dish, embedded in the stones of hallow ground, contains an undying flame.  }{}{}{}{}{1.000}{}
 E {118}{u}{u}{16}{0}{}{1.000}{}{0.00}
 E {201}{d}{d}{32}{0}{}{1.000}{}{0.00}
 

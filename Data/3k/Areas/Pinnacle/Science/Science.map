@@ -12,13 +12,13 @@ CINVISIBLE <208>
 CPATHS <138>
 CROOMS <178>
 CSYMBOLS <128>
-CUSER <258>
+CUSER <139>
 
-F 1048584
+F 1048586
 
 G 0
 
-I 190
+I 420
 
 L {ASCII NESW LINE} {NO EXITS} {x}
 L {ASCII NESW LINE} {N} {o}
@@ -36,7 +36,7 @@ L {ASCII NESW LINE} {    S W} {+}
 L {ASCII NESW LINE} {N   S W} {+}
 L {ASCII NESW LINE} {  E S W} {+}
 L {ASCII NESW LINE} {N E S W} {+}
-L {ASCII NESW MISC} {USER} {■}
+L {ASCII NESW MISC} {USER} {#}
 L {ASCII NESW MISC} {DIR UNKNOWN} {+}
 L {ASCII NESW MISC} {N S VOID} {|}
 L {ASCII NESW MISC} {E W VOID} {-}
@@ -2588,13 +2588,14 @@ E {420}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {496}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {418}{w}{w}{8}{0}{}{1.000}{}{0.00}
 
-R {420}{0}{<048>}{The Rocky Mountains}{ }{The Rocky Mountains The trees here are tall and sparsely foliated, the effects of radiation and pollution taking their toll.  You wonder if they will ever grow into the lush, verdant forest that once stood here.  You've got to wonder how anything could survive way out here in these harsh mountains.  Noble and majestic, the Rockies rise up before you. They look steep and dangerous. To the north you sense the continuation of the Rockies.  A small, partially hidden path leads to the north. }{}{}{}{}{1.000}{}
+R {420}{0}{<068>}{The Rocky Mountains}{ }{The Rocky Mountains The mountains around you rise and fall in a never ending pattern.  The mountains rise up around you and cast huge shadows over the valleys and cliffs that make up this incredible mountain range.  Naked soil shifts beneath your feet, a true sign of the desolation wrought here.  To the north and west you vaguely make out the continuation of the Rockies.  A small, partially hidden path leads to the north. }{Mud}{{content}{{noun}{{cliffs}{{name}{cliffs}}{mountains}{{name}{mountains}}}}}{}{}{1.000}{}
 E {415}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {421}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {495}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {419}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {1298}{path}{.mapLink {Pinnacle/Science/Luddite Commune} {} {path};}{0}{1}{}{1.000}{}{0.00}
 
-R {421}{0}{<178>}{Desolate plains}{ }{Desolate plains A foul wind whips by you as you survey this desolate landscape.  You wonder if you'll ever find the end of this rolling expanse.  The ground under your feet cracks and snaps as you walk. The dirt is jet black, with soot, ash, and pieces of bone strewn throughout.  To the east you barely detect the continuation of the plains.   }{}{}{}{}{1.000}{}
+R {421}{0}{<178>}{Desolate plains}{ }{Desolate plains Could it be your imagination, or is that the smell of burning flesh?  The clouds above you move in over the sun and block out its light.  You see a bright flash of light far in the distance. It takes a very long time for the sound of the explosion to reach you.  To the east you just make out the continuation of the plains.   }{Mud}{{content}{{noun}{{clouds}{{name}{clouds}}{flash}{{name}{flash}}{smell}{{name}{smell}}{sun}{{name}{sun}}}}}{}{}{1.000}{}
 E {414}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {422}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {494}{n}{n}{1}{0}{}{1.000}{}{0.00}
@@ -2966,19 +2967,20 @@ E {484}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {513}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {482}{e}{e}{2}{0}{}{1.000}{}{0.00}
 
-R {484}{0}{<178>}{Rolling Hills}{ }{Rolling Hills Small, rolling hills covered in scraggly grass and weeds march towards the horizon in every direction.  The sun dips behind some clouds, hidden behind the dark promise of rain.  Tufts of grass sprout from the gently rolling hills.  Each looks as though it would be considered a weed elsewhere, but out here where water is scarce and the sun bakes the earth, they are a sight for sore eyes.  To the north you sense the continuation of the hills.   }{}{}{}{}{1.000}{}
+R {484}{0}{<178>}{Entrance to a Bomb Shelter}{ }{Rolling Hills Gently rolling hills stretch out towards the horizon.  The soft ground is a comfort beneath your feet, a sure sign that life will continue to flourish here, even if it is only scrubgrass.  Blades of grass sway gently in the wind, struggling to survive in the dusty and dry heartland of North America.  To the north you just make out the continuation of the hills.   }{Mud}{{content}{{noun}{{grass}{{name}{grass}}{hills}{{name}{hills}}}}}{}{}{1.000}{}
 E {431}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {485}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {512}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {483}{e}{e}{2}{0}{}{1.000}{}{0.00}
 
-R {485}{0}{<048>}{Entrance to a Bomb Shelter}{ }{A bomb has exploded here recently, as indicated by the shrapnel laying about, spraying dust and dirt everywhere.  The explosion has unearthed a bomb shelter, splitting the dry, cracked soil and jutting out into the air.  The sunlight shines off the entrance door into your eyes.  The door leads down into the shelter.}{Bomb Shelter}{}{}{}{1.000}{}
+R {485}{0}{<068>}{Entrance to a Bomb Shelter}{}{A bomb has exploded here recently, as indicated by the shrapnel laying about, spraying dust and dirt everywhere.  The explosion has unearthed a bomb shelter, splitting the dry, cracked soil and jutting out into the air.  The sunlight shines off the entrance door into your eyes.  The door leads down into the shelter.}{Pinnacle/Science/Bomb Shelter}{{content}{{noun}{{dirt}{{name}{dirt}}{door}{{name}{door}}{dust}{{name}{dust}}{shrapnel}{{name}{shrapnel}}{soil}{{name}{soil}}{sunlight}{{name}{sunlight}}{walls}{{name}{walls}}}}{link}{}}{}{}{1.000}{}
 E {430}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {486}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {511}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {484}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {1297}{enter}{open door;.mapLink {Pinnacle/Science/Bomb Shelter} {} {enter};}{0}{0}{}{1.000}{}{0.00}
 
-R {486}{0}{<178>}{Rolling Hills}{ }{Rolling Hills Wind rustles through the grass and carries with it the hint of searing heat from nearby.  The desolation seen in the grasslands has only been spared in the hills because of the tentative hold that the plants have here.  The sun dips behind some clouds, hidden behind the dark promise of rain.  Small, rolling hills covered in scraggly grass and weeds march towards the horizon in every direction.  To the west you detect the continuation of the hills.   }{}{}{}{}{1.000}{}
+R {486}{0}{<178>}{Rolling Hills}{ }{Rolling Hills Tufts of grass sprout from the gently rolling hills.  Each looks as though it would be considered a weed elsewhere, but out here where water is scarce and the sun bakes the earth, they are a sight for sore eyes.  The soft ground is a comfort beneath your feet, a sure sign that life will continue to flourish here, even if it is only scrubgrass.  You stand atop a small hill staring out over the countryside.  To the east, north and south you see the continuation of the hills.   }{Mud}{{content}{{noun}{{grass}{{name}{grass}}{hill}{{name}{hill}}{sun}{{name}{sun}}}}}{}{}{1.000}{}
 E {429}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {487}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {510}{n}{n}{1}{0}{}{1.000}{}{0.00}
@@ -3715,11 +3717,12 @@ E {610}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {625}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {608}{w}{w}{8}{0}{}{1.000}{}{0.00}
 
-R {610}{0}{<048>}{The Appalachian Mountains}{ }{The Appalachian Mountains The mountains around you rise and fall in a never ending pattern.  It looks like it has taken a long time to destroy this forest.  The trees here are impressively tall. They tower above you hundreds of feet, but for every tree there is a stump next to it.  To the west you vaguely sense the continuation of the Appalachians.  To the north you can see the entrance to a cave, poorly hidden behind some bushes. }{}{}{}{}{1.000}{}
+R {610}{0}{<068>}{The Appalachian Mountains}{ }{The Appalachian Mountains The trees here look like the pollution and smog have just about killed them off. You wonder if anything will grow here again.  The mountains around you rise and fall in a never ending pattern.  You can hear the roar of some far off motor. Who'd be way out here?  To the east and north you just make out the continuation of the Appalachians.  To the north you can see the entrance to a cave, poorly hidden behind some bushes. }{Mud}{{content}{{noun}{{mountains}{{name}{mountains}}{trees}{{name}{trees}}}}}{}{}{1.000}{}
 E {542}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {611}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {624}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {609}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {1292}{enter}{.mapLink {Pinnacle/Science/Oil Storage Cave} {} {enter};}{0}{1}{}{1.000}{}{0.00}
 
 R {611}{0}{<178>}{The Appalachian Mountains}{ }{The Appalachian Mountains You've got to wonder how anything could survive way out here.  Huge mountains rise up before you here. They look steep and dangerous.  The trees here look like the pollution and smog have just about killed them off. You wonder if anything will grow here again.  To the east, south and north you sort of see the continuation of the Appalachians.   }{}{}{}{}{1.000}{}
 E {541}{s}{s}{4}{0}{}{1.000}{}{0.00}
@@ -3789,7 +3792,7 @@ E {624}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {694}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {622}{e}{e}{2}{0}{}{1.000}{}{0.00}
 
-R {624}{0}{<178>}{The Appalachian Mountains}{ }{The Appalachian Mountains The mountains around you rise and fall in a never ending pattern.  You can hear the roar of some far off motor. Who'd be way out here?  Huge stumps of old trees surround you here. It looks like something must have come through here and cut everything down.  To the east, west and south you vaguely make out the continuation of the Appalachians.   }{}{}{}{}{1.000}{}
+R {624}{0}{<178>}{The Appalachian Mountains}{ }{The Appalachian Mountains There is a mist that covers the ground here. It smells of sulfur.  Huge stumps of old trees surround you here. It looks like something must have come through here and cut everything down.  Huge mountains rise up before you here. They look steep and dangerous.  To the south, east and north you almost miss the continuation of the Appalachians.   }{Mud}{{content}{{noun}{{mist}{{name}{mist}}{mountains}{{name}{mountains}}{stumps}{{name}{stumps}}{trees}{{name}{trees}}}}}{}{}{1.000}{}
 E {610}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {625}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {693}{n}{n}{1}{0}{}{1.000}{}{0.00}
@@ -3813,13 +3816,14 @@ E {628}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {690}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {626}{e}{e}{2}{0}{}{1.000}{}{0.00}
 
-R {628}{0}{<048>}{Desolate plains}{ }{Desolate plains You've got to wonder how anything could survive way out here.  You catch the smell of something rancid burning. You probably don't want to find out what it could be that could be burning.  The clouds above you move in over the sun and block out its light.  A rusty ladder leads down through a small hole in the ground. }{}{}{}{}{1.000}{}
+R {628}{0}{<068>}{Desolate plains}{ }{Desolate plains You've got to wonder how anything could survive way out here.  The ground under your feet cracks and snaps as you walk. The dirt is jet black, with soot, ash, and pieces of bone strewn throughout.  Before you stretches a vast expanse of destruction and desolation.  To the east and south you sense the continuation of the plains.  A rusty ladder leads down through a small hole in the ground. }{Mud}{{content}{{noun}{{bone}{{name}{bone}}{ground}{{name}{ground}}}}}{}{}{1.000}{}
 E {606}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {629}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {689}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {627}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {1293}{ladder}{.mapLink {Pinnacle/Science/Collapsed Subway} {} {ladder};}{0}{1}{}{1.000}{}{0.00}
 
-R {629}{0}{<178>}{Desolate plains}{ }{Desolate plains Before you stretches a vast expanse of destruction and desolation.  You catch the smell of something rancid burning. You probably don't want to find out what it could be that could be burning.  You wonder if you'll ever find the end of this rolling expanse.  To the west and south you sense the continuation of the plains.   }{}{}{}{}{1.000}{}
+R {629}{0}{<178>}{Desolate plains}{ }{Desolate plains The ground under your feet cracks and snaps as you walk. The dirt is jet black, with soot, ash, and pieces of bone strewn throughout.  Huge clouds of dust and ash rise in the distance as you look around.  You wonder if you'll ever find the end of this rolling expanse.  To the north, west and south you barely see the continuation of the plains.   }{Mud}{{content}{{noun}{{ash}{{name}{ash}}{bone}{{name}{bone}}{clouds}{{name}{clouds}}{dust}{{name}{dust}}{ground}{{name}{ground}}}}}{}{}{1.000}{}
 E {605}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {630}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {688}{n}{n}{1}{0}{}{1.000}{}{0.00}
@@ -4447,13 +4451,14 @@ E {735}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {741}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {731}{e}{e}{2}{0}{}{1.000}{}{0.00}
 
-R {735}{0}{<048>}{The Rocky Mountains}{ }{The Rocky Mountains The trees here are impressively tall. They tower above you hundreds of feet, but for every tree there is a stump next to it.  The rugged peaks of the Rockies rise up all around you.  Storm clouds hang high on the mountain peaks, dark with rain or snow.  To the east and south you see the continuation of the Rockies.   }{}{}{}{}{1.000}{}
+R {735}{0}{<068>}{The Rocky Mountains}{ }{The Rocky Mountains The mountains around you rise and fall in a never ending pattern.  You've got to wonder how anything could survive way out here in these harsh mountains.  The trees here are impressively tall. They tower above you hundreds of feet, but for every tree there is a stump next to it.  To the east you vaguely detect the continuation of the Rockies.   }{Mud}{{content}{{item}{{^A small camoflauged tent$}{{name}{A small camoflauged tent}}}{noun}{{binoculars}{{name}{binoculars}}{chairs}{{name}{chairs}}{clouds}{{name}{clouds}}{monitor}{{name}{monitor}}{mountains}{{name}{mountains}}{table}{{name}{table}}{tent}{{name}{tent}}{tree}{{name}{tree}}{trees}{{name}{trees}}{unit}{{name}{unit}}}{npc}{{^A Huge Mercenary Soldier$}{{name}{A Huge Mercenary Soldier}}}}{link}{}}{}{}{1.000}{}
 E {662}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {736}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {740}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {734}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {1296}{enter}{.mapLink {Pinnacle/Science/Mercenary Tent} {} {enter};}{0}{1}{}{1.000}{}{0.00}
 
-R {736}{0}{<178>}{The Rocky Mountains}{ }{The Rocky Mountains Snow capped mountain peaks rise in the distance, a reminder of a once pure world.  The mountains rise up around you and cast huge shadows over the valleys and cliffs that make up this incredible mountain range.  Remarkably spared from the nuclear nightmare which washed over the United States, the lasting effects of the radiation can easily be seen here in the destruction of a once thriving ecosystem.  To the south, north and east you detect the continuation of the Rockies.   }{}{}{}{}{1.000}{}
+R {736}{0}{<178>}{The Rocky Mountains}{ }{The Rocky Mountains The rugged peaks of the Rockies rise up all around you.  Remarkably spared from the nuclear nightmare which washed over the United States, the lasting effects of the radiation can easily be seen here in the destruction of a once thriving ecosystem.  The trees here are tall and sparsely foliated, the effects of radiation and pollution taking their toll.  You wonder if they will ever grow into the lush, verdant forest that once stood here.  To the east and west you barely see the continuation of the Rockies.   }{}{{content}{{noun}{{trees}{{name}{trees}}}}}{}{}{1.000}{}
 E {661}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {737}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {739}{n}{n}{1}{0}{}{1.000}{}{0.00}
@@ -4784,12 +4789,13 @@ E {762}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {794}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {792}{e}{e}{2}{0}{}{1.000}{}{0.00}
 
-R {794}{0}{<048>}{Desolate plains}{ }{Desolate plains A foul wind whips by you as you survey this desolate landscape.  A gigantic crater lies before you. It's hard to imagine what could have exploded and caused something as impressive as this.  You've got to wonder how anything could survive way out here.  To the west and south you vaguely make out the continuation of the plains.  The sprawling city of Chicago curves around the southern end of Lake Michigan, braving the harsh winds and acid rain to provide homes for millions.  The entrance to that city's airport lies just ahead. }{}{}{}{}{1.000}{}
+R {794}{0}{<068>}{Desolate plains}{ }{Desolate plains The ground under your feet cracks and snaps as you walk. The dirt is jet black, with soot, ash, and pieces of bone strewn throughout.  You wonder if you'll ever find the end of this rolling expanse.  The clouds above you move in over the sun and block out its light.  The sprawling city of Chicago curves around the southern end of Lake Michigan, braving the harsh winds and acid rain to provide homes for millions.  The entrance to that city's airport lies just ahead. }{Mud}{{content}{{noun}{{airport}{{name}{airport}}{bone}{{name}{bone}}{city}{{name}{city}}{clouds}{{name}{clouds}}{entrance}{{name}{entrance}}{ground}{{name}{ground}}{sun}{{name}{sun}}}}}{}{}{1.000}{}
 E {761}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {795}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {793}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {1291}{enter}{.mapLink {Pinnacle/Science/O'Hare International Airport} {} {enter};}{0}{1}{}{1.000}{}{0.00}
 
-R {795}{0}{<178>}{Desolate plains}{ }{Desolate plains You've got to wonder how anything could survive way out here.  You catch the smell of something rancid burning. You probably don't want to find out what it could be that could be burning.  A foul wind whips by you as you survey this desolate landscape.  To the north and south you sort of see the continuation of the plains.   }{}{}{}{}{1.000}{}
+R {795}{0}{<178>}{Desolate plains}{ }{Desolate plains You catch the smell of something rancid burning. You probably don't want to find out what it could be that could be burning.  You can hear the roar of some far off motor. Who'd be way out here?  Before you stretches a vast expanse of destruction and desolation.  To the north you just make out the continuation of the plains.   }{Mud}{{content}{{noun}{{smell}{{name}{smell}}}}}{}{}{1.000}{}
 E {760}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {796}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {848}{n}{n}{1}{0}{}{1.000}{}{0.00}
@@ -4868,7 +4874,7 @@ E {811}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {842}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {804}{e}{e}{2}{0}{}{1.000}{}{0.00}
 
-R {811}{0}{<178>}{Desolate plains}{ }{Desolate plains You catch the smell of something rancid burning. You probably don't want to find out what it could be that could be burning.  The clouds above you move in over the sun and block out its light.  Could it be your imagination, or is that the smell of burning flesh?  To the west and south you sort of detect the continuation of the plains.  A staircase leads down into the ground here.  A metal antenna rises incongruously from the dirt. }{}{}{}{}{1.000}{}
+R {811}{0}{<178>}{Desolate plains}{ }{Desolate plains You can hear the roar of some far off motor. Who'd be way out here?  The ground under your feet cracks and snaps as you walk. The dirt is jet black, with soot, ash, and pieces of bone strewn throughout.  Huge clouds of dust and ash rise in the distance as you look around.  To the north you barely see the continuation of the plains.  A staircase leads down into the ground here.  A metal antenna rises incongruously from the dirt. }{Mud}{{content}{{noun}{{antenna}{{name}{antenna}}{ash}{{name}{ash}}{bone}{{name}{bone}}{clouds}{{name}{clouds}}{dust}{{name}{dust}}{ground}{{name}{ground}}{staircase}{{name}{staircase}}}}}{}{}{1.000}{}
 E {751}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {812}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {840}{d}{d}{32}{0}{}{1.000}{}{0.00}
@@ -5000,11 +5006,12 @@ E {833}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {934}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {831}{w}{w}{8}{0}{}{1.000}{}{0.00}
 
-R {833}{0}{<048>}{Rolling Hills}{ }{Rolling Hills The sun dips behind some clouds, hidden behind the dark promise of rain. You stand atop a small hill staring out over the countryside.  Wind rustles through the grass and carries with it the hint of searing heat from nearby.  The desolation seen in the grasslands has only been spared in the hills because of the tentative hold that the plants have here.  To the west you barely see the continuation of the hills.   }{}{}{}{}{1.000}{}
+R {833}{0}{<068>}{Rolling Hills}{ }{Rolling Hills Clouds roll across the sky, carrying with them the faint promise of much needed rain.  Small, rolling hills covered in scraggly grass and weeds march towards the horizon in every direction.  Blades of grass sway gently in the wind, struggling to survive in the dusty and dry heartland of North America.  To the north, east and west you vaguely detect the continuation of the hills.   }{Mud}{{content}{{item}{{^A ruined barn$}{{name}{A ruined barn}}}{noun}{{ash}{{name}{ash}}{barn}{{name}{barn}}{bone}{{name}{bone}}{clouds}{{name}{clouds}}{cobwebs}{{name}{cobwebs}}{dust}{{name}{dust}}{flash}{{name}{flash}}{grass}{{name}{grass}}{ground}{{name}{ground}}{hills}{{name}{hills}}{smell}{{name}{smell}}{sun}{{name}{sun}}{walls}{{name}{walls}}}}}{}{}{1.000}{}
 E {818}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {834}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {933}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {832}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {1294}{enter}{.mapLink {Pinnacle/Science/Ruined Barn} {} {enter};}{0}{1}{}{1.000}{}{0.00}
 
 R {834}{0}{<178>}{Rolling Hills}{ }{Rolling Hills Gently rolling hills stretch out towards the horizon.  Wind rustles through the grass and carries with it the hint of searing heat from nearby.  The desolation seen in the grasslands has only been spared in the hills because of the tentative hold that the plants have here.  The sun dips behind some clouds, hidden behind the dark promise of rain.  To the south and west you barely see the continuation of the hills.   }{}{}{}{}{1.000}{}
 E {817}{s}{s}{4}{0}{}{1.000}{}{0.00}
@@ -5042,7 +5049,7 @@ E {841}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {927}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {838}{w}{w}{8}{0}{}{1.000}{}{0.00}
 
-R {840}{0}{<109>}{}{ }{}{}{}{}{}{1.000}{}
+R {840}{0}{}{Control Bunker}{ }{A tidy, spartan concrete bunker.  The floor and ceiling are bare concrete, and the walls are plain cinder block.  The only furniture is a desk and a single chair, which sit in the middle of the room.  Upon the desk rests a red telephone.  A metal panel is set into the back wall.  Stairs lead back up to the outside world. }{Hidden Bunkers}{{wiz}{Thyros}}{}{}{1.000}{}
 E {811}{u}{u}{16}{0}{}{1.000}{}{0.00}
 
 R {841}{0}{<178>}{Desolate plains}{ }{Desolate plains A gigantic crater lies before you. It's hard to imagine what could have exploded and caused something as impressive as this.  Before you stretches a vast expanse of destruction and desolation.  You can hear the roar of some far off motor. Who'd be way out here?  To the north and west you just make out the continuation of the plains.   }{}{}{}{}{1.000}{}
@@ -5536,7 +5543,7 @@ E {933}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {949}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {931}{e}{e}{2}{0}{}{1.000}{}{0.00}
 
-R {933}{0}{<178>}{Rolling Hills}{ }{Rolling Hills The sun dips behind some clouds, hidden behind the dark promise of rain. Small, rolling hills covered in scraggly grass and weeds march towards the horizon in every direction.  Tufts of grass sprout from the gently rolling hills.  Each looks as though it would be considered a weed elsewhere, but out here where water is scarce and the sun bakes the earth, they are a sight for sore eyes.  To the south and north you just barely see the continuation of the hills.   }{}{}{}{}{1.000}{}
+R {933}{0}{<178>}{Rolling Hills}{ }{Rolling Hills Gently rolling hills stretch out towards the horizon.  The sun dips behind some clouds, hidden behind the dark promise of rain.  Blades of grass sway gently in the wind, struggling to survive in the dusty and dry heartland of North America.   }{}{{content}{{noun}{{grass}{{name}{grass}}{hills}{{name}{hills}}{sun}{{name}{sun}}}}}{}{}{1.000}{}
 E {833}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {934}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {948}{n}{n}{1}{0}{}{1.000}{}{0.00}
@@ -5588,11 +5595,12 @@ E {940}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {942}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {989}{n}{n}{1}{0}{}{1.000}{}{0.00}
 
-R {942}{0}{<048>}{The Rocky Mountains}{ }{The Rocky Mountains The mountains around you rise and fall in a never ending pattern.  Storm clouds hang high on the mountain peaks, dark with rain or snow.  The mountains rise up around you and cast huge shadows over the valleys and cliffs that make up this incredible mountain range.  To the north you barely see the continuation of the Rockies.  A treacherous trail winds up into the mountains. }{}{}{}{}{1.000}{}
+R {942}{0}{<068>}{The Rocky Mountains}{ }{The Rocky Mountains You've got to wonder how anything could survive way out here in these harsh mountains.  Snow capped mountain peaks rise in the distance, a reminder of a once pure world.  The mountains rise up around you and cast huge shadows over the valleys and cliffs that make up this incredible mountain range.  To the east and west you vaguely detect the continuation of the Rockies.  A treacherous trail winds up into the mountains. }{Mud}{{content}{{noun}{{cliffs}{{name}{cliffs}}{mountains}{{name}{mountains}}{trail}{{name}{trail}}}}}{}{}{1.000}{}
 E {939}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {943}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {988}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {941}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {1295}{trail}{.mapLink {Pinnacle/Science/Rocky Mountainside} {} {trail};}{0}{1}{}{1.000}{}{0.00}
 
 R {943}{0}{<178>}{The Rocky Mountains}{ }{The Rocky Mountains Remarkably spared from the nuclear nightmare which washed over the United States, the lasting effects of the radiation can easily be seen here in the destruction of a once thriving ecosystem.  The mountains around you rise and fall in a never ending pattern.  Huge boulders have been pounded to rubble leaving only small pebbles strewn about you.  Some great force has ravaged the landscape.  To the south you vaguely detect the continuation of the Rockies.   }{}{}{}{}{1.000}{}
 E {938}{s}{s}{4}{0}{}{1.000}{}{0.00}
@@ -5862,7 +5870,7 @@ E {988}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {992}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {986}{e}{e}{2}{0}{}{1.000}{}{0.00}
 
-R {988}{0}{<178>}{The Rocky Mountains}{ }{The Rocky Mountains Snow capped mountain peaks rise in the distance, a reminder of a once pure world.  Naked soil shifts beneath your feet, a true sign of the desolation wrought here.  The mountains rise up around you and cast huge shadows over the valleys and cliffs that make up this incredible mountain range.  To the south, north and east you make out the continuation of the Rockies.   }{}{}{}{}{1.000}{}
+R {988}{0}{<178>}{The Rocky Mountains}{ }{The Rocky Mountains Remarkably spared from the nuclear nightmare which washed over the United States, the lasting effects of the radiation can easily be seen here in the destruction of a once thriving ecosystem.  The trees here are tall and sparsely foliated, the effects of radiation and pollution taking their toll.  You wonder if they will ever grow into the lush, verdant forest that once stood here.  The mountains around you rise and fall in a never ending pattern.   }{Mud}{{content}{{noun}{{mountains}{{name}{mountains}}{trees}{{name}{trees}}}}}{}{}{1.000}{}
 E {942}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {989}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {991}{n}{n}{1}{0}{}{1.000}{}{0.00}
@@ -7242,3 +7250,19 @@ R {1288}{0}{<000>}{LINK: Pinnacle/Science/Alien\Alpha}{<138>*}{}{Pinnacle/Scienc
 R {1289}{0}{<000>}{LINK: Pinnacle/Science/Ruined Reactor}{<138>*}{}{Pinnacle/Science/Ruined Reactor}{{content}{{noun}{{crater}{{name}{crater}}{desk}{{name}{desk}}{doors}{{name}{doors}}{monitors}{{name}{monitors}}{rubble}{{name}{rubble}}{wind}{{name}{wind}}}}{link}{}}{}{}{1.000}{}
 
 R {1290}{0}{<000>}{LINK: Pinnacle/Science/UED Installation}{<138>*}{}{Pinnacle/Science/UED Installation}{{link}{}}{}{}{1.000}{}
+
+R {1291}{0}{<000>}{LINK: Pinnacle/Science/O'Hare International Airport}{<138>*}{}{Pinnacle/Science/O'Hare International Airport}{{content}{{noun}{{airport}{{name}{airport}}{bone}{{name}{bone}}{buses}{{name}{buses}}{cars}{{name}{cars}}{cesspool}{{name}{cesspool}}{city}{{name}{city}}{clouds}{{name}{clouds}}{doors}{{name}{doors}}{entrance}{{name}{entrance}}{ground}{{name}{ground}}{people}{{name}{people}}{sign}{{name}{sign}}{sun}{{name}{sun}}{throng}{{name}{throng}}}}{link}{}}{}{}{1.000}{}
+
+R {1292}{0}{<000>}{LINK: Pinnacle/Science/Oil Storage Cave}{<138>*}{}{Pinnacle/Science/Oil Storage Cave}{{content}{{noun}{{cave}{{name}{cave}}{mountains}{{name}{mountains}}{opening}{{name}{opening}}{trees}{{name}{trees}}{walls}{{name}{walls}}}}{link}{}}{}{}{1.000}{}
+
+R {1293}{0}{<000>}{LINK: Pinnacle/Science/Collapsed Subway}{<138>*}{}{Pinnacle/Science/Collapsed Subway}{{content}{{noun}{{bone}{{name}{bone}}{ceiling}{{name}{ceiling}}{ground}{{name}{ground}}{ladder}{{name}{ladder}}{tunnel}{{name}{tunnel}}}}{link}{}}{}{}{1.000}{}
+
+R {1294}{0}{<000>}{LINK: Pinnacle/Science/Ruined Barn}{<138>*}{}{Pinnacle/Science/Ruined Barn}{{content}{{item}{{^A ruined barn$}{{name}{A ruined barn}}}{noun}{{ash}{{name}{ash}}{barn}{{name}{barn}}{bone}{{name}{bone}}{clouds}{{name}{clouds}}{cobwebs}{{name}{cobwebs}}{dust}{{name}{dust}}{flash}{{name}{flash}}{grass}{{name}{grass}}{ground}{{name}{ground}}{hills}{{name}{hills}}{smell}{{name}{smell}}{sun}{{name}{sun}}{walls}{{name}{walls}}}}{link}{}}{}{}{1.000}{}
+
+R {1295}{0}{<000>}{LINK: Pinnacle/Science/Rocky Mountainside}{<138>*}{}{Pinnacle/Science/Rocky Mountainside}{{content}{{noun}{{boulders}{{name}{boulders}}{cliffs}{{name}{cliffs}}{grass}{{name}{grass}}{hills}{{name}{hills}}{mountain}{{name}{mountain}}{mountains}{{name}{mountains}}{mountainside}{{name}{mountainside}}{path}{{name}{path}}{peak}{{name}{peak}}{rocks}{{name}{rocks}}{sun}{{name}{sun}}{trail}{{name}{trail}}}}{link}{}}{}{}{1.000}{}
+
+R {1296}{0}{<000>}{LINK: Pinnacle/Science/Mercenary Tent}{<138>*}{}{Pinnacle/Science/Mercenary Tent}{{content}{{item}{{^A small camoflauged tent$}{{name}{A small camoflauged tent}}}{noun}{{binoculars}{{name}{binoculars}}{chairs}{{name}{chairs}}{clouds}{{name}{clouds}}{monitor}{{name}{monitor}}{mountains}{{name}{mountains}}{table}{{name}{table}}{tent}{{name}{tent}}{tree}{{name}{tree}}{trees}{{name}{trees}}{unit}{{name}{unit}}}{npc}{{^A Huge Mercenary Soldier$}{{name}{A Huge Mercenary Soldier}}}}{link}{}}{}{}{1.000}{}
+
+R {1297}{0}{}{}{ }{}{}{}{}{}{1.000}{}
+
+R {1298}{0}{<000>}{LINK: Pinnacle/Science/Luddite Commune}{<138>*}{}{Pinnacle/Science/Luddite Commune}{{content}{{noun}{{cliffs}{{name}{cliffs}}{clouds}{{name}{clouds}}{dirt}{{name}{dirt}}{flash}{{name}{flash}}{forest}{{name}{forest}}{grass}{{name}{grass}}{hills}{{name}{hills}}{mountains}{{name}{mountains}}{pathway}{{name}{pathway}}{stumps}{{name}{stumps}}{sun}{{name}{sun}}{trees}{{name}{trees}}}}{link}{}}{}{}{1.000}{}
