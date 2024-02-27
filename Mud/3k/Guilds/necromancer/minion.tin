@@ -22,7 +22,7 @@
             #IF {&my[necromancer][undead][gender]}
             {
                 #SEND {!=gender $my[necromancer][undead][gender]}
-            }
+            };
             #SEND {!=lead};
         };
         #DEFAULT
