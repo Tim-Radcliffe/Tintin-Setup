@@ -16,7 +16,7 @@
 #NOP /********************************************************************/;
 
 #NOP **** Database Connection Info ****;
-
+#NOP #VAR {dbSettings} {{database}{<databaseName>}{pass}{<databasePassword>}{server}{<server>}{port}{3306}{user}{<databaseUser>}};
 .file load {$path[local]/dbSettings.tin};
 
 #NOP **** Constants ****;
@@ -52,8 +52,8 @@
     ${dbFormat};
 
     #NOP /* Send constructed SQL command to the database, collecting returned raw output (if any) into db[Return] */;
-    .debug {DATABASE} {mysql -h ${dbSettings[server]} -u ${dbSettings[user]} -p${dbSettings[pass]} -D ${dbSettings[database]} -Be ${db[Command]}};
-    #SCRIPT {db[return]} {mysql -h ${dbSettings[server]} -u ${dbSettings[user]} -p${dbSettings[pass]} -D ${dbSettings[database]} -Be "${db[Command]}"};
+    .debug {DATABASE} {mysql -h ${dbSettings[server]} -P ${dbSettings[port]} -u ${dbSettings[user]} -p${dbSettings[pass]} -D ${dbSettings[database]} -Be ${db[Command]}};
+    #SCRIPT {db[return]} {mysql -h ${dbSettings[server]} -P ${dbSettings[port]} -u ${dbSettings[user]} -p${dbSettings[pass]} -D ${dbSettings[database]} -Be "${db[Command]}"};
 
     #VAR {db[output]} {};
     #VAR {db[temp]} {};
