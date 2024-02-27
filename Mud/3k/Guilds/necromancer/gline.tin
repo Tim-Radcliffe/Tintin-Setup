@@ -165,8 +165,8 @@ event_register {e_mip_FFF_J} {gline.tin} {handler_necro_gline};
     #NOP %1;
     #REGEXP {%1} {%d/%d}
     {
-        #VAR {my[necromancer][teleports][current]} {&1};
-        #VAR {my[necromancer][teleports][max]}     {&2};
+        #VAR {my[necromancer][teleport][current]} {&1};
+        #VAR {my[necromancer][teleport][max]}     {&2};
     };
 };
 

@@ -1,0 +1,48 @@
+#NOP Teleport command handling script
+#NOP Balthus - 26th Feb 2024
+
+#ALIAS {teleport}
+{
+    #LOCAL {_teleport[parms]} {%0};
+    #LIST {_teleport[parms]} EXPLODE { };
+    #SWITCH {"$_teleport[parms][+1]"}
+    {
+        #CASE {""}
+        {
+            #IF {$my[necromancer][teleport][remember]}
+            {
+                #VAR {my[necromancer][teleport][list][1][map]} {$map[area][path]};
+                #MAP GET ROOMVNUM {my[necromancer][teleport][list][1][room]};
+            };
+#NOP        Teleport to the guild;
+            #ACTION {^Visions of the guild appear first in your mind, then reality...}
+            {
+                #NOP %1;
+                .mapLoad {Pinnacle/Fantasy/Necromancer Guild};
+                #MAP GOTO {20};
+                #UNACTION {^Visions of the guild appear first in your mind, then reality...};
+            };
+        };
+        #CASE {"list"}
+        {
+
+        };
+        #CASE {"set"}
+        {
+
+        };
+        #CASE {"remember"}
+        {
+            #VAR {my[necromancer][teleport][remember]} {1};
+        };
+        #CASE {"forget"}
+        {
+            #VAR {my[necromancer][teleport][remember]} {0};
+        };
+        #DEFAULT
+        {
+
+        };
+    };
+    #SEND {!teleport %0};
+};

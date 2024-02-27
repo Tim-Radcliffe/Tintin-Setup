@@ -26,8 +26,8 @@
     
     #ACTION {^ | Teleports:%d/%d, Form Glamors:%d/%d (%w)}
     {
-        #VAR {my[necromancer][teleports][current]}  {%%1};
-        #VAR {my[necromancer][teleports][max]}      {%%2};
+        #VAR {my[necromancer][teleport][current]}  {%%1};
+        #VAR {my[necromancer][teleport][max]}      {%%2};
         #VAR {my[necromancer][glamors][current]}    {%%3};
         #VAR {my[necromancer][glamors][max]}        {%%4};
     };

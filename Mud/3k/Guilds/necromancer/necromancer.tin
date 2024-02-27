@@ -1,13 +1,5 @@
 #NOP ************* Necromancer Guild *********;
 
-/* Teleport to Guild */
-#ACTION {^Visions of the guild appear first in your mind, then reality...}
-{
-    #NOP %1;
-    .mapLoad {Pinnacle/Fantasy/Necromancer Guild};
-    #map goto {20};
-};
-
 /* Call your familiar into combat automatically when you "kill" */
 #ALIAS {handler_auto_call}
 {

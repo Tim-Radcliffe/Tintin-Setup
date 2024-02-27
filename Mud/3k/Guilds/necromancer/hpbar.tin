@@ -129,7 +129,7 @@
     #VAR {my[necromancer][glamors][active]} {};
     #REGEXP {%1} {{(\d+)\|(\d+)(\/(\d+)%|)}}
     {
-        #VAR {my[necromancer][teleports][current]} {&2};
+        #VAR {my[necromancer][teleport][current]} {&2};
         #VAR {my[necromancer][glamors][current]}   {&3};
         #VAR {my[necromancer][glamors][active]}    {&4};
     };
