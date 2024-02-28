@@ -21,6 +21,19 @@ auto {add} {call} {} {e_combat} {};
 };
 auto {add} {corrode} {} {e_combat} {};
 
+/* Psibleed your opponent automatically */
+#ALIAS {handler_auto_psibleed}
+{
+    #NOP %1;
+    #IF {$my[necromancer][power][psibleed] > 0 &&
+         $my[gp1][current] > 100}
+    {
+        #SEND {!psibleed};
+    };
+
+};
+auto {add} {psibleed} {} {e_combat} {};
+
 /* Contribute half of coins picked up to the guild, between 10 and 1000 */
 #ALIAS {handler_auto_contribute}
 {
