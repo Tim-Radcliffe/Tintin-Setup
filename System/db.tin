@@ -40,11 +40,7 @@
       {
         #REPLACE {db[Temp]} {"} {'};
         #REPLACE {db[Temp]} {'} {''};
-        #IF {"$db[Temp]" != ""}
-        {
-
-          #VAR {dbFormat} {${dbFormat}{${db[Temp]}}};
-        };
+        #VAR {dbFormat} {${dbFormat}{${db[Temp]}}};
       };
     };
 
