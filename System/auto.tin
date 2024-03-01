@@ -25,16 +25,27 @@
 {
     #IF {"%1" == "" || "%1" == "status"}
     {
+        #LOCAL {_autoStatusTable} {};
         #FOREACH {*auto[]} {i}
         {
             #IF {"$auto[$i][status]" == "1"}
             {
-                #ECHO {AUTO: <128>$i on<098> $auto[$1][variable]};
+                #LOCAL {_autoStatusTable[$i]} 
+                {
+                    {toggle} {<128>on<098>}
+                    {variable} {$auto[$i][variable]}
+                };
             }
             {
-                #ECHO {AUTO: <118>$i off<098>};
+                #LOCAL {_autoStatusTable[$i]} 
+                {
+                    {toggle} {<118>off<098>}
+                };
             };
         };
+        #LOCAL {_autoStatusTable} {@fTable{$_autoStatusTable}};
+        #LIST {_autoStatusTable} COLLAPSE {\n};
+        #ECHO {$_autoStatusTable};            
     };
     #ELSEIF {"%1" == "add"}
     {
