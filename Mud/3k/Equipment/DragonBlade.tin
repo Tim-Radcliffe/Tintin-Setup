@@ -1,0 +1,7 @@
+#LOCAL {_classLoaded} {};
+#CLASS {$path[equipment]/The Rod of Lordly Might.tin} SIZE {_classLoaded};
+
+#IF {"$_classLoaded" == "0"}
+{
+    .file load {$path[equipment]/The Rod of Lordly Might.tin};
+};

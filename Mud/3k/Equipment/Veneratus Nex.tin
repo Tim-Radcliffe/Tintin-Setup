@@ -32,7 +32,7 @@
         #SEND {!orare};
     };
 
-    #IF {$my[hp][current] < @fMath{$my[hp][max]/2} && $_Veneratus[actus] > 2}
+    #IF {$my[hp][current] < @fEval{$my[hp][max]/2} && $_Veneratus[actus] > 2}
     {
         #SEND {!medicor};
     };
