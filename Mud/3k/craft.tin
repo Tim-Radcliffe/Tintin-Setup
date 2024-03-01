@@ -265,4 +265,5 @@
 #NOP ############## AUTO ACTIONS ############
 
 #VAR {path[craft]} {$path[mud]/Craft};
+.file load {$path[craft]/tomes.tin};
 auto add {farm} {.file load {$path[craft]/farm.tin}} {} {#CLASS {$path[craft]/farm.tin} {kill}};
