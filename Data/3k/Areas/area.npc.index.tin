@@ -2,6 +2,30 @@
 
 #VARIABLE {_area_npc_index}
 {
+    {Mischievous ruffian} 
+    {
+        {Pinnacle/Fantasy/Around the town of Angelo/Forest Trail/Encampment/The City of Westersea} {194}
+    }
+    {Shady leader} 
+    {
+        {Pinnacle/Fantasy/Around the town of Angelo/Forest Trail/Encampment/The City of Westersea} {192}
+    }
+    {Tough looking brigand} 
+    {
+        {Pinnacle/Fantasy/Around the town of Angelo/Forest Trail/Encampment/The City of Westersea} {361}
+    }
+    {^4-Armed Guard$} 
+    {
+        {Pinnacle/Science/New York/NASTAR} {12}
+    }
+    {^5-Armed Guard$} 
+    {
+        {Pinnacle/Science/New York/NASTAR} {33}
+    }
+    {^A '72 Plymouth Duster$} 
+    {
+        {Pinnacle/Science/Detroit} {21}
+    }
     {^A 1973 Plymouth Duster, back from the dead$} 
     {
         {Pinnacle/Science/Atlanta} {5}
@@ -22,6 +46,10 @@
     {
         {Pinnacle/Science/Atlanta} {26}
     }
+    {^A Channel 38 news reporter$} 
+    {
+        {Pinnacle/Science/Atlanta} {35}
+    }
     {^A Channel 41 news reporter$} 
     {
         {Pinnacle/Science/Atlanta} {16}
@@ -38,65 +66,387 @@
     {
         {Pinnacle/Science/Atlanta} {40}
     }
+    {^A Child$} 
+    {
+        {Pinnacle/Chaos/Erratio Forest/The Tabard Inn} {10}
+    }
+    {^A Cohesard$} 
+    {
+        {Pinnacle/Fantasy/Kourlyn Temple} {7}
+    }
+    {^A Crazy$} 
+    {
+        {Pinnacle/Science/Forgotten sewers} {1}
+    }
     {^A Cure Gang Member$} 
     {
         {Pinnacle/Science/Atlanta} {66}
     }
+    {^A Despian$} 
+    {
+        {Pinnacle/Science/Alien Ship} {38}
+    }
+    {^A Devourer$} 
+    {
+        {Pinnacle/Fantasy/Kourlyn Temple} {45}
+    }
     {^A Disoreinted Typo \x28Lost\x29$} 
     {
         {Pinnacle/Chaos} {96}
+        {Pinnacle/Chaos/Chaos Cinemaplex/Hotel Transylvania} {62}
+    }
+    {^A Djinn$} 
+    {
+        {Pinnacle/Fantasy/Kourlyn Temple} {15}
+    }
+    {^A Doctor From the Disease Control Center$} 
+    {
+        {Pinnacle} {13}
+    }
+    {^A Drunk$} 
+    {
+        {Pinnacle/Fantasy} {621}
+    }
+    {^A Floater$} 
+    {
+        {Pinnacle/Science/Alien Ship} {7}
+    }
+    {^A Ford Fiction 128XL$} 
+    {
+        {Pinnacle/Science/Detroit} {149}
+    }
+    {^A GM Good Idea$} 
+    {
+        {Pinnacle/Science/Detroit} {128}
+    }
+    {^A Gambler$} 
+    {
+        {Pinnacle/Fantasy} {619}
+    }
+    {^A Gargoyle$} 
+    {
+        {Pinnacle/Fantasy/Kourlyn Temple} {24}
     }
     {^A Ghoul Militia$} 
     {
         {Pinnacle/Fantasy/Catacombs 2} {76}
     }
+    {^A Giant Radioactive Blob$} 
+    {
+        {Pinnacle/Science/Forgotten sewers} {55}
+    }
+    {^A Goblin Lord$} 
+    {
+        {Pinnacle/Fantasy/Catacombs 2} {25}
+    }
+    {^A Goblin Scout$} 
+    {
+        {Pinnacle/Fantasy} {58}
+    }
     {^A Green Lightning gang member$} 
     {
         {Pinnacle/Science/Atlanta} {22}
+    }
+    {^A Grizzled Explorer$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain} {50}
     }
     {^A Guide of Catacombs$} 
     {
         {Pinnacle/Fantasy/Catacombs 2} {19}
     }
+    {^A Huge Baby Cow Herd$} 
+    {
+        {Pinnacle/Chaos/CowVille/Hell Cows} {4}
+    }
+    {^A Huge Mercenary Soldier$} 
+    {
+        {Pinnacle/Science/Mercenary Tent} {1}
+    }
+    {^A Huge Owlbear$} 
+    {
+        {Pinnacle/Fantasy/Portal of Life v2} {107}
+    }
     {^A Huge Security Guard$} 
     {
         {Pinnacle/Science/Atlanta} {50}
+    }
+    {^A Human \x28dying\x29$} 
+    {
+        {Pinnacle/Science/Alien Ship} {15}
+    }
+    {^A Kayos Mouse$} 
+    {
+        {Pinnacle} {95}
+    }
+    {^A Knight \x28honorable\x29$} 
+    {
+        {Pinnacle/Fantasy/Lonely Keep} {6}
     }
     {^A Lady \x28waiting to use the toilet\x29$} 
     {
         {Pinnacle/Science/New York/Carnegie Hall} {90}
     }
+    {^A Large Baby Cow Herd$} 
+    {
+        {Pinnacle/Chaos/CowVille/Hell Cows} {12}
+    }
+    {^A Large Ice Toad$} 
+    {
+        {Pinnacle/Fantasy/Portal of Life v2} {107}
+    }
     {^A Large Usher$} 
     {
         {Pinnacle/Science/New York/Carnegie Hall} {41}
+    }
+    {^A Lonesome Baby Cow$} 
+    {
+        {Pinnacle/Chaos/CowVille/Hell Cows} {12}
+    }
+    {^A Mammoth Radioactive Blob$} 
+    {
+        {Pinnacle/Science/Forgotten sewers} {87}
+    }
+    {^A Marsh Goblin$} 
+    {
+        {Pinnacle/Fantasy} {55}
+    }
+    {^A Mean Janitor \x28mean\x29$} 
+    {
+        {Pinnacle/Science/New York/NASTAR} {7}
+    }
+    {^A Megatech Security Enforcer Sergeant$} 
+    {
+        {Pinnacle/Science/Atlanta/DC Megatech/D.C. Megatech 2.0} {543}
+    }
+    {^A Megatech Security Enforcer$} 
+    {
+        {Pinnacle/Science/Atlanta/DC Megatech/D.C. Megatech 2.0} {543}
+    }
+    {^A Miniature Unicorn$} 
+    {
+        {Pinnacle/Fantasy} {443}
+    }
+    {^A Mistwraith$} 
+    {
+        {Pinnacle/Fantasy/Kourlyn Temple} {15}
+    }
+    {^A Mugger$} 
+    {
+        {Pinnacle/Fantasy} {119}
+    }
+    {^A Mutated Creature \x28flaming\x29$} 
+    {
+        {Pinnacle/Science/Fallout Shelter} {49}
+    }
+    {^A Mutated Creature \x28ice cold\x29$} 
+    {
+        {Pinnacle} {20}
+        {Pinnacle/Science/Fallout Shelter} {43}
+    }
+    {^A Muton Man$} 
+    {
+        {Pinnacle/Science/Alien Ship} {46}
     }
     {^A New Yorker \x28waiting in line\x29$} 
     {
         {Pinnacle/Science/New York/Carnegie Hall} {7}
     }
+    {^A New Yorker trying to find her seat$} 
+    {
+        {Pinnacle/Science/New York/Carnegie Hall} {110}
+    }
     {^A New Yorker trying to find his seat$} 
     {
         {Pinnacle/Science/New York/Carnegie Hall} {35}
+    }
+    {^A Pilgrim$} 
+    {
+        {Pinnacle/Fantasy/A Missionary Camp} {6}
+    }
+    {^A Priest of Kecyc$} 
+    {
+        {Pinnacle/Fantasy/A Missionary Camp} {7}
+    }
+    {^A Priest$} 
+    {
+        {Pinnacle/Fantasy} {107}
+    }
+    {^A Priestess of Kecyc$} 
+    {
+        {Pinnacle/Fantasy/A Missionary Camp} {8}
+    }
+    {^A Priestess of Kourlyn$} 
+    {
+        {Pinnacle/Fantasy} {122}
+    }
+    {^A Radioactive Baby Blob$} 
+    {
+        {Pinnacle/Science/Forgotten sewers} {78}
+    }
+    {^A Radioactive Blob$} 
+    {
+        {Pinnacle/Science/Forgotten sewers} {31}
+    }
+    {^A Red Caped Guard$} 
+    {
+        {Pinnacle/Fantasy} {138}
+    }
+    {^A Refugee$} 
+    {
+        {Pinnacle/Chaos/Chess Board} {49}
+    }
+    {^A Scholar$} 
+    {
+        {Pinnacle/Fantasy} {138}
+    }
+    {^A Sectoid Leader$} 
+    {
+        {Pinnacle/Science/Alien Ship} {57}
+    }
+    {^A Sectoid$} 
+    {
+        {Pinnacle/Science/Alien Ship} {11}
+    }
+    {^A Serpentine$} 
+    {
+        {Pinnacle/Fantasy/Kourlyn Temple} {79}
+    }
+    {^A Shade$} 
+    {
+        {Pinnacle/Fantasy/Kourlyn Temple} {84}
+    }
+    {^A Shadow$} 
+    {
+        {Pinnacle/Fantasy/Kourlyn Temple} {29}
+    }
+    {^A Sizeable Baby Cow Herd$} 
+    {
+        {Pinnacle/Chaos/CowVille/Hell Cows} {12}
+    }
+    {^A Skeletal Figure$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain/Azra's Tunnel} {8}
+    }
+    {^A Small Baby Cow Herd$} 
+    {
+        {Pinnacle/Chaos/CowVille/Hell Cows} {12}
+    }
+    {^A Small P.E.T. Gang Member$} 
+    {
+        {Pinnacle/Science/Detroit} {149}
+    }
+    {^A Student$} 
+    {
+        {Pinnacle/Fantasy} {94}
+    }
+    {^A Surgeon$} 
+    {
+        {Pinnacle/Science/Alien Ship} {15}
+    }
+    {^A Ticket Agent$} 
+    {
+        {Pinnacle/Science/O'Hare International Airport} {8}
     }
     {^A Tour Guide who's way too happy$} 
     {
         {Pinnacle/Chaos/Carina's Observatory} {10}
     }
+    {^A Translucent Figure$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain/Ethereal Tower} {10}
+    }
     {^A Vampire$} 
     {
         {Pinnacle/Fantasy/Catacombs 2} {77}
+    }
+    {^A Vicious Jaguar$} 
+    {
+        {Pinnacle/Science/The Amazon Research Center} {47}
+    }
+    {^A Vivaror$} 
+    {
+        {Pinnacle/Fantasy/Kourlyn Temple} {15}
     }
     {^A Volkswagon Emperor$} 
     {
         {Pinnacle/Science/Atlanta} {10}
     }
+    {^A War Correspondent$} 
+    {
+        {Pinnacle/Chaos/Chess Board} {6}
+    }
+    {^A Young P.E.T. Gang Member$} 
+    {
+        {Pinnacle/Science/Detroit} {164}
+    }
+    {^A Zombie$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain} {325}
+        {Pinnacle/Fantasy/Murus Faralain/Ethereal Tower} {7}
+    }
+    {^A babbling Megatech Security Enforcer$} 
+    {
+        {Pinnacle/Science/Atlanta/DC Megatech/D.C. Megatech 2.0} {38}
+    }
+    {^A banshee$} 
+    {
+        {Pinnacle/Chaos/Chess Board/Archon} {18}
+    }
+    {^A basilisk$} 
+    {
+        {Pinnacle/Chaos/Chess Board/Archon} {19}
+    }
+    {^A benevolent wizard$} 
+    {
+        {Pinnacle/Chaos/Chess Board/Archon} {49}
+    }
+    {^A big-footed fae$} 
+    {
+        {Pinnacle/Fantasy/A Quiet Henge} {11}
+    }
+    {^A black and white skunk$} 
+    {
+        {Pinnacle/Fantasy} {721}
+    }
     {^A black snake$} 
     {
         {Pinnacle/Fantasy/Around the town of Angelo/Forest Trail/Encampment} {9}
     }
+    {^A blind Megatech Security Enforcer$} 
+    {
+        {Pinnacle/Science/Atlanta/DC Megatech/D.C. Megatech 2.0} {35}
+    }
+    {^A bloodthirsty alien$} 
+    {
+        {Pinnacle/Science/Alien\Alpha} {9}
+    }
+    {^A blue chinese checker$} 
+    {
+        {Pinnacle/Chaos/Chinese Checkers} {16}
+    }
     {^A bodyguard \x28ex-mafia\x29$} 
     {
         {Pinnacle/Science/New York/Carnegie Hall} {38}
+    }
+    {^A bodyguard$} 
+    {
+        {Pinnacle/Fantasy} {792}
+    }
+    {^A bored security guard$} 
+    {
+        {Pinnacle/Science/Atlanta/DC Megatech/D.C. Megatech 2.0} {1}
+    }
+    {^A boy$} 
+    {
+        {Pinnacle/Chaos/Crydee} {46}
+        {Pinnacle/Fantasy/Lonely Keep} {9}
+        {Pinnacle/Science} {485}
+        {Pinnacle/Science/Bomb Shelter} {3}
+    }
+    {^A bridge guard$} 
+    {
+        {Pinnacle/Fantasy} {38}
     }
     {^A broom$} 
     {
@@ -106,6 +456,30 @@
     {
         {Pinnacle/Chaos/Chaos Cinemaplex/Hotel Transylvania} {72}
     }
+    {^A busy pedestrian$} 
+    {
+        {Pinnacle/Science/New York} {6}
+    }
+    {^A buzzard$} 
+    {
+        {Pinnacle/Fantasy} {397}
+    }
+    {^A carefree fae$} 
+    {
+        {Pinnacle/Fantasy/A Quiet Henge} {3}
+    }
+    {^A chained woman$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain/Ethereal Tower} {18}
+    }
+    {^A chicken \x28undead\x29$} 
+    {
+        {Pinnacle/Fantasy/Lonely Keep} {10}
+    }
+    {^A chicken$} 
+    {
+        {Pinnacle/Science/New York/NASTAR} {69}
+    }
     {^A chubby vampire$} 
     {
         {Pinnacle/Chaos/Chaos Cinemaplex/Hotel Transylvania} {69}
@@ -114,9 +488,66 @@
     {
         {Pinnacle/Science/Atlanta} {37}
     }
+    {^A clean farmer$} 
+    {
+        {Pinnacle/Science/Luddite Commune} {15}
+    }
+    {^A cockroach$} 
+    {
+        {Pinnacle/Science/Fallout Shelter} {12}
+    }
     {^A common street thug$} 
     {
         {Pinnacle/Science/Atlanta} {10}
+    }
+    {^A cooper's hawk$} 
+    {
+        {Pinnacle} {175}
+        {Pinnacle/Fantasy} {730}
+        {Pinnacle/Fantasy/Necromancer Guild} {1}
+        {Pinnacle/Fantasy/Portal of Life v2} {1}
+    }
+    {^A cow \x28undead\x29$} 
+    {
+        {Pinnacle/Fantasy/Lonely Keep} {8}
+    }
+    {^A crazy scientist$} 
+    {
+        {Pinnacle/Science/Forgotten sewers} {12}
+    }
+    {^A cybernetically enhanced door warden$} 
+    {
+        {Pinnacle/Science/Antimammonist Vault} {1}
+    }
+    {^A dapper-looking man$} 
+    {
+        {Pinnacle/Science/Detroit/European Robotics - Survey, Design and Development Office} {11}
+    }
+    {^A dire wolf$} 
+    {
+        {Pinnacle/Fantasy} {757}
+        {Pinnacle/Fantasy/Necromancer Guild} {3}
+        {Pinnacle/Fantasy/Portal of Life v2} {1}
+    }
+    {^A dirty farmer$} 
+    {
+        {Pinnacle/Science/Luddite Commune} {15}
+    }
+    {^A djinni$} 
+    {
+        {Pinnacle/Chaos/Chess Board/Archon} {40}
+    }
+    {^A dragon$} 
+    {
+        {Pinnacle/Chaos/Chess Board/Archon} {71}
+    }
+    {^A drunk Megatech Security Enforcer$} 
+    {
+        {Pinnacle/Science/Atlanta/DC Megatech/D.C. Megatech 2.0} {17}
+    }
+    {^A fat Megatech Security Enforcer$} 
+    {
+        {Pinnacle/Science/Atlanta/DC Megatech/D.C. Megatech 2.0} {4}
     }
     {^A fat hairy wandering spider$} 
     {
@@ -132,31 +563,91 @@
     }
     {^A foul-smelling Armadillo$} 
     {
+        {Pinnacle} {27}
         {Pinnacle/Chaos} {15}
+        {Pinnacle/Chaos/Chaos Cinemaplex/Hotel Transylvania} {1}
+    }
+    {^A frantically-digging cyber$} 
+    {
+        {Pinnacle/Science/Rocky Mountainside} {5}
     }
     {^A fuzzy hickabop$} 
     {
         {Pinnacle/Fantasy/Around the town of Angelo/Forest Trail/Encampment} {9}
     }
+    {^A gargantuan red tyrannosaurus rex$} 
+    {
+        {Pinnacle} {6}
+    }
+    {^A gas-station attendant$} 
+    {
+        {Pinnacle/Science/Gas Station} {4}
+    }
     {^A ghoul$} 
     {
         {Pinnacle/Fantasy/Catacombs 2} {47}
+    }
+    {^A giant bat$} 
+    {
+        {Pinnacle/Fantasy/Giant Camp} {4}
+    }
+    {^A giant spider$} 
+    {
+        {Pinnacle/Science/Ruined Barn} {4}
     }
     {^A gibbering trist$} 
     {
         {Pinnacle/Fantasy/New Arovian Graveyard} {14}
     }
+    {^A girl$} 
+    {
+        {Pinnacle/Chaos/Crydee} {47}
+    }
+    {^A goat$} 
+    {
+        {Pinnacle/Science/New York/NASTAR} {64}
+    }
     {^A goblin warrior$} 
     {
+        {Pinnacle/Fantasy/Catacombs} {19}
         {Pinnacle/Fantasy/Catacombs 2} {19}
+    }
+    {^A goblin$} 
+    {
+        {Pinnacle/Chaos/Chess Board/Archon} {3}
     }
     {^A goblyn$} 
     {
         {Pinnacle/Fantasy/Ravenloft} {101}
     }
+    {^A gold noble-looking puddle of slime$} 
+    {
+        {Pinnacle} {1}
+        {Pinnacle/Townhall} {1}
+    }
+    {^A gray jay$} 
+    {
+        {Pinnacle/Fantasy} {55}
+    }
+    {^A green chinese checker$} 
+    {
+        {Pinnacle/Chaos/Chinese Checkers} {11}
+    }
+    {^A grocer$} 
+    {
+        {Pinnacle/Science/Luddite Commune} {12}
+    }
     {^A guard stands lax against the gate$} 
     {
         {Pinnacle/Science/Contention Training Grounds} {3}
+    }
+    {^A highborn$} 
+    {
+        {Pinnacle/Fantasy/Around the town of Angelo/Forest Trail/Encampment/The City of Westersea} {127}
+    }
+    {^A hoar fox$} 
+    {
+        {Pinnacle/Fantasy} {931}
     }
     {^A homeless man$} 
     {
@@ -170,37 +661,230 @@
     {
         {Pinnacle/Science/Atlanta} {38}
     }
+    {^A hooded figure$} 
+    {
+        {Pinnacle/Fantasy/Katin/Necromancer Guild (old)} {186}
+    }
+    {^A horde of massive broodlings [40]$} 
+    {
+        {Pinnacle/Chaos/Chaos Cinemaplex/Hotel Transylvania} {17}
+    }
     {^A horse$} 
     {
         {Pinnacle/Fantasy/Ravenloft} {67}
+    }
+    {^A host of massive broodlings [4]$} 
+    {
+        {Pinnacle/Chaos/Chaos Cinemaplex/Hotel Transylvania} {17}
+    }
+    {^A huge Metallaskull gang member$} 
+    {
+        {Pinnacle/Science/Detroit} {29}
+    }
+    {^A huge rat$} 
+    {
+        {Pinnacle/Science/Fallout Shelter} {7}
     }
     {^A huge rotting corpse$} 
     {
         {Pinnacle/Fantasy/Catacombs 2} {45}
     }
+    {^A huge skeleton$} 
+    {
+        {Pinnacle/Fantasy/Around the town of Angelo/Forest Trail/Elven Graveyard} {17}
+    }
+    {^A hulking Megatech Security Enforcer$} 
+    {
+        {Pinnacle/Science/Atlanta/DC Megatech/D.C. Megatech 2.0} {66}
+    }
     {^A hulking bone golem$} 
     {
         {Pinnacle/Fantasy/New Arovian Graveyard/Tomb of King Alaren} {11}
     }
+    {^A hungry mosquito$} 
+    {
+        {Pinnacle/Chaos/Brewery Swamp} {5}
+    }
+    {^A knight$} 
+    {
+        {Pinnacle/Chaos/Chess Board/Archon} {29}
+    }
+    {^A kobold$} 
+    {
+        {Pinnacle/Fantasy/Wayhaven Docks/Serinth} {359}
+    }
+    {^A lady in a hurry to find her seat$} 
+    {
+        {Pinnacle/Science/New York/Carnegie Hall} {188}
+    }
+    {^A large Megatech Security Enforcer$} 
+    {
+        {Pinnacle/Science/Atlanta/DC Megatech/D.C. Megatech 2.0} {4}
+    }
     {^A large Rat$} 
     {
+        {Pinnacle/Fantasy/Catacombs} {5}
         {Pinnacle/Fantasy/Catacombs 2} {19}
+    }
+    {^A large black spider gang member$} 
+    {
+        {Pinnacle/Science/Detroit} {121}
+    }
+    {^A large bobcat$} 
+    {
+        {Pinnacle/Fantasy} {643}
+    }
+    {^A large brown elk$} 
+    {
+        {Pinnacle/Fantasy} {674}
+    }
+    {^A large brown hare$} 
+    {
+        {Pinnacle/Fantasy} {958}
+    }
+    {^A large porcupine$} 
+    {
+        {Pinnacle/Fantasy} {405}
+        {Pinnacle/Fantasy/Katin/Necromancer Guild (old)} {1}
+        {Pinnacle/Fantasy/Necromancer Guild} {1}
+    }
+    {^A large rat$} 
+    {
+        {Pinnacle/Chaos/Crydee} {63}
+        {Pinnacle/Science/Fallout Shelter} {3}
+    }
+    {^A large timber wolf$} 
+    {
+        {Pinnacle/Fantasy} {478}
+        {Pinnacle/Fantasy/Portal of Life v2} {1}
+    }
+    {^A large white wolf$} 
+    {
+        {Pinnacle/Fantasy} {815}
+    }
+    {^A lazy weaver$} 
+    {
+        {Pinnacle/Science/Luddite Commune} {7}
+    }
+    {^A leggy Metallaskull gang member$} 
+    {
+        {Pinnacle/Science/Detroit} {21}
     }
     {^A lost and bewildered knight$} 
     {
         {Pinnacle/Fantasy/Ravenloft/Masque} {3}
     }
+    {^A man in a hurry to find his seat$} 
+    {
+        {Pinnacle/Science/New York/Carnegie Hall} {110}
+    }
+    {^A manticore$} 
+    {
+        {Pinnacle/Chaos/Chess Board/Archon} {14}
+    }
+    {^A massive black wandering spider$} 
+    {
+        {Pinnacle} {52}
+    }
+    {^A mechanic-shaped mound of grease$} 
+    {
+        {Pinnacle/Science/Gas Station} {5}
+    }
+    {^A medium brown hare$} 
+    {
+        {Pinnacle/Fantasy} {718}
+    }
+    {^A medium grizzly bear$} 
+    {
+        {Pinnacle/Fantasy} {532}
+    }
+    {^A medium sized skeleton$} 
+    {
+        {Pinnacle/Fantasy/Around the town of Angelo/Forest Trail/Elven Graveyard} {14}
+    }
+    {^A member of the audience hurrying to her seat$} 
+    {
+        {Pinnacle/Science/New York/Carnegie Hall} {132}
+    }
+    {^A member of the audience hurrying to his seat$} 
+    {
+        {Pinnacle/Science/New York/Carnegie Hall} {169}
+    }
+    {^A mischievous imp$} 
+    {
+        {Pinnacle/Fantasy/Katin/Necromancer Guild (old)} {1}
+    }
     {^A partially hidden scout$} 
     {
         {Pinnacle/Fantasy/Around the town of Angelo/Forest Trail/Encampment} {8}
+    }
+    {^A patrol drone$} 
+    {
+        {Pinnacle/Science/Atlanta/DC Megatech/D.C. Megatech 2.0} {3}
+    }
+    {^A peaceful fae$} 
+    {
+        {Pinnacle/Fantasy/A Quiet Henge} {3}
+    }
+    {^A phoenix$} 
+    {
+        {Pinnacle/Chaos/Chess Board/Archon} {48}
+    }
+    {^A pig$} 
+    {
+        {Pinnacle/Science/New York/NASTAR} {60}
+    }
+    {^A pleasant looking secretary$} 
+    {
+        {Pinnacle/Science/Detroit/European Robotics - Survey, Design and Development Office} {3}
+    }
+    {^A polar bear$} 
+    {
+        {Pinnacle/Fantasy} {837}
     }
     {^A polite audience member$} 
     {
         {Pinnacle/Science/New York/Carnegie Hall} {129}
     }
+    {^A poplar$} 
+    {
+        {Pinnacle/Fantasy} {908}
+    }
+    {^A prophet of Inyxx$} 
+    {
+        {Pinnacle/Fantasy} {649}
+        {Pinnacle/Fantasy/Lonely Keep} {3}
+    }
+    {^A puny Megatech Security Enforcer$} 
+    {
+        {Pinnacle/Science/Atlanta/DC Megatech/D.C. Megatech 2.0} {4}
+    }
+    {^A rat$} 
+    {
+        {Pinnacle/Chaos/Erratio Forest/The Tabard Inn} {26}
+    }
+    {^A red chinese checker$} 
+    {
+        {Pinnacle/Chaos/Chinese Checkers} {3}
+    }
+    {^A red-breasted robin$} 
+    {
+        {Pinnacle/Fantasy} {676}
+    }
     {^A red-crested woodpecker$} 
     {
+        {Pinnacle} {175}
         {Pinnacle/Fantasy} {666}
+        {Pinnacle/Fantasy/Necromancer Guild} {1}
+        {Pinnacle/Fantasy/Portal of Life v2} {1}
+    }
+    {^A red-tailed hawk$} 
+    {
+        {Pinnacle/Fantasy} {52}
+    }
+    {^A rich bastard driver$} 
+    {
+        {Pinnacle/Science/Atlanta} {35}
     }
     {^A rift shadow$} 
     {
@@ -214,13 +898,51 @@
     {
         {Pinnacle/Chaos/Carina's Observatory} {5}
     }
+    {^A rust monster with large antennae$} 
+    {
+        {Pinnacle/Fantasy} {336}
+    }
+    {^A sailor$} 
+    {
+        {Pinnacle/Fantasy} {708}
+        {Pinnacle/Fantasy/Wayhaven Docks} {5}
+    }
+    {^A scared survivor$} 
+    {
+        {Pinnacle/Science/Forgotten sewers} {12}
+    }
     {^A scientist$} 
     {
         {Pinnacle/Chaos} {113}
+        {Pinnacle/Chaos/Good Humor Truck} {1}
+    }
+    {^A second story thief, trying to break in$} 
+    {
+        {Pinnacle/Chaos/Oj Cow} {3}
+    }
+    {^A serious fae$} 
+    {
+        {Pinnacle/Fantasy/A Quiet Henge} {1}
+    }
+    {^A sleek black cat$} 
+    {
+        {Pinnacle/Fantasy/Around the town of Angelo/Forest Trail/Encampment/The City of Westersea} {126}
     }
     {^A sleeping audience member$} 
     {
         {Pinnacle/Science/New York/Carnegie Hall} {118}
+    }
+    {^A small Rimalkin$} 
+    {
+        {Pinnacle/Fantasy/Rimalkin Cave 2} {5}
+    }
+    {^A small black spider gang member$} 
+    {
+        {Pinnacle/Science/Detroit} {121}
+    }
+    {^A small black wolf$} 
+    {
+        {Pinnacle/Fantasy} {730}
     }
     {^A small boy \x28frightened\x29$} 
     {
@@ -230,9 +952,73 @@
     {
         {Pinnacle/Fantasy/Ravenloft} {60}
     }
+    {^A small brown hare$} 
+    {
+        {Pinnacle/Fantasy} {428}
+    }
+    {^A small furry groundhog$} 
+    {
+        {Pinnacle/Fantasy} {495}
+    }
+    {^A small puddle of slime$} 
+    {
+        {Pinnacle} {52}
+    }
+    {^A small red fox$} 
+    {
+        {Pinnacle/Fantasy} {332}
+    }
     {^A small skeleton$} 
     {
         {Pinnacle/Fantasy/Catacombs 2} {45}
+    }
+    {^A small sloth bear$} 
+    {
+        {Pinnacle/Fantasy} {456}
+    }
+    {^A small wandering spider$} 
+    {
+        {Pinnacle} {1}
+        {Pinnacle/Chaos} {5}
+        {Pinnacle/Chaos/Chaos Cinemaplex/Hotel Transylvania} {18}
+        {Pinnacle/Fantasy/Portal of Life v2} {10}
+    }
+    {^A small, agile bat$} 
+    {
+        {Pinnacle/Fantasy/A hidden crevice} {3}
+    }
+    {^A speedy roadrunner$} 
+    {
+        {Pinnacle/Science} {27}
+    }
+    {^A stern Megatech Security Enforcer$} 
+    {
+        {Pinnacle/Fantasy/Portal of Life v2} {1}
+        {Pinnacle/Science/Atlanta/DC Megatech/D.C. Megatech 2.0} {47}
+    }
+    {^A stocky Metallaskull gang member$} 
+    {
+        {Pinnacle/Science/Detroit} {21}
+    }
+    {^A stone fish$} 
+    {
+        {Pinnacle/Fantasy/Giant Camp} {6}
+    }
+    {^A stone golem$} 
+    {
+        {Pinnacle/Chaos/Chess Board/Archon} {34}
+    }
+    {^A sturdy blacksmith$} 
+    {
+        {Pinnacle/Science/Luddite Commune} {8}
+    }
+    {^A tall, bulky man$} 
+    {
+        {Pinnacle/Science/Detroit/European Robotics - Survey, Design and Development Office} {8}
+    }
+    {^A thin black spider gang member$} 
+    {
+        {Pinnacle/Science/Detroit} {149}
     }
     {^A thin lady with blue hair and a nose ring, sipping a latte$} 
     {
@@ -246,6 +1032,10 @@
     {
         {Pinnacle/Chaos} {65}
     }
+    {^A toothless Megatech Security Enforcer$} 
+    {
+        {Pinnacle/Science/Atlanta/DC Megatech/D.C. Megatech 2.0} {4}
+    }
     {^A tourist that looks confused$} 
     {
         {Pinnacle/Chaos/Carina's Observatory} {7}
@@ -253,6 +1043,32 @@
     {^A tourist who forgot to shower$} 
     {
         {Pinnacle/Chaos/Carina's Observatory} {10}
+    }
+    {^A trained medic$} 
+    {
+        {Pinnacle/Science/Luddite Commune} {6}
+    }
+    {^A travelling gypsy merchant$} 
+    {
+        {Pinnacle/Fantasy} {792}
+    }
+    {^A troll$} 
+    {
+        {Pinnacle/Chaos/Chess Board/Archon} {18}
+    }
+    {^A tropical fern$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain} {50}
+    }
+    {^A truck named Loadi$} 
+    {
+        {Pinnacle/Fantasy/Portal of Life} {137}
+    }
+    {^A tufted titmouse$} 
+    {
+        {Pinnacle/Fantasy} {658}
+        {Pinnacle/Fantasy/Katin/Necromancer Guild (old)} {1}
+        {Pinnacle/Fantasy/Necromancer Guild} {1}
     }
     {^A typical commuter$} 
     {
@@ -266,13 +1082,86 @@
     {
         {Pinnacle/Science/Atlanta} {12}
     }
+    {^A typical teenage driver$} 
+    {
+        {Pinnacle/Science/Atlanta} {1}
+    }
+    {^A unicorn$} 
+    {
+        {Pinnacle/Chaos/Chess Board/Archon} {43}
+    }
+    {^A valithyn under the control of Blutash$} 
+    {
+        {Pinnacle} {1}
+        {Pinnacle/Chaos/Puppy Mill} {15}
+    }
+    {^A valkyrie$} 
+    {
+        {Pinnacle/Chaos/Chess Board/Archon} {45}
+    }
+    {^A very evil alien$} 
+    {
+        {Pinnacle/Science/Alien\Alpha} {10}
+    }
+    {^A vile alien$} 
+    {
+        {Pinnacle/Science/Alien\Alpha} {9}
+    }
     {^A vile scum of a politician$} 
     {
         {Pinnacle/Science/Atlanta} {28}
     }
+    {^A vulture$} 
+    {
+        {Pinnacle/Fantasy} {395}
+    }
+    {^A wandering pedestrian$} 
+    {
+        {Pinnacle/Science/New York} {6}
+    }
+    {^A wandering shroomhead$} 
+    {
+        {Pinnacle/Science/Gas Station} {1}
+    }
     {^A wandering tourist$} 
     {
         {Pinnacle/Chaos/Carina's Observatory} {5}
+    }
+    {^A weary Merchant$} 
+    {
+        {Pinnacle/Fantasy} {106}
+    }
+    {^A well armed guard$} 
+    {
+        {Pinnacle/Science/Luddite Commune} {5}
+    }
+    {^A wicked alien$} 
+    {
+        {Pinnacle/Science/Alien\Alpha} {8}
+    }
+    {^A wiry man with a moustache$} 
+    {
+        {Pinnacle/Science/Detroit/European Robotics - Survey, Design and Development Office} {10}
+    }
+    {^A wolf$} 
+    {
+        {Pinnacle/Fantasy/Wayhaven Docks/Serinth} {157}
+    }
+    {^A woman$} 
+    {
+        {Pinnacle/Fantasy/Lonely Keep} {9}
+    }
+    {^A wounded soldier$} 
+    {
+        {Pinnacle/Science/New York/NASTAR} {108}
+    }
+    {^A young red headed man$} 
+    {
+        {Pinnacle/Science/New York/NASTAR} {64}
+    }
+    {^A young woman \x28cOvErEd In WhItE FuZz\x29$} 
+    {
+        {Pinnacle/Fantasy} {44}
     }
     {^A zombie bell hop waiting to carry your things$} 
     {
@@ -286,9 +1175,26 @@
     {
         {Pinnacle/Chaos/Chaos Cinemaplex/Hotel Transylvania} {20}
     }
+    {^ALPHA Team member, code name Mamma Bear$} 
+    {
+        {Pinnacle/Science} {97}
+        {Pinnacle/Science/Alien\Alpha} {1}
+    }
+    {^ALPHA Team member, code name Nacho$} 
+    {
+        {Pinnacle/Science/Alien\Alpha} {4}
+    }
+    {^Aaron Kosminski$} 
+    {
+        {Pinnacle/Chaos/Old London} {23}
+    }
     {^Adam Clayton$} 
     {
         {Pinnacle/Science/New York/Carnegie Hall} {75}
+    }
+    {^Adam$} 
+    {
+        {Pinnacle/Chaos/Erratio Forest/The Tabard Inn} {4}
     }
     {^Aegis Sentry Model 60-FT$} 
     {
@@ -302,6 +1208,10 @@
     {
         {Pinnacle/Science/New York/Aegis Global} {148}
     }
+    {^Aika Highwalker$} 
+    {
+        {Pinnacle/Fantasy/Blingdenwood Village} {12}
+    }
     {^Al Pacino Jr$} 
     {
         {Pinnacle/Science/New York/Carnegie Hall} {78}
@@ -310,9 +1220,53 @@
     {
         {Pinnacle/Fantasy/New Arovian Graveyard/Tomb of King Alaren} {45}
     }
+    {^Alexander$} 
+    {
+        {Pinnacle/Chaos/Erratio Forest/The Tabard Inn} {12}
+    }
+    {^Alhoon$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain} {318}
+    }
+    {^Alison, The Carpenter's Wife$} 
+    {
+        {Pinnacle/Chaos/Erratio Forest/The Tabard Inn} {23}
+    }
+    {^Allayna the Learned Necromancer$} 
+    {
+        {Pinnacle/Fantasy/Necromancer Guild} {82}
+    }
+    {^Alligator \x28glowing\x29$} 
+    {
+        {Pinnacle/Science/Detroit} {132}
+    }
+    {^Alpha$} 
+    {
+        {Pinnacle/Chaos/Android Showroom} {10}
+    }
+    {^Alvis Stormer HMV \x28righteous\x29$} 
+    {
+        {Pinnacle/Chaos/Chaos Cinemaplex/Hotel Transylvania} {17}
+    }
+    {^Amara the Chronicler \x28good\x29$} 
+    {
+        {Pinnacle/Fantasy} {121}
+    }
     {^Amos the barkeep$} 
     {
         {Pinnacle/Science/Atlanta} {55}
+    }
+    {^An Ancient Silverback Piranha Monkey$} 
+    {
+        {Pinnacle/Science/The Amazon Research Center} {47}
+    }
+    {^An Archaeologist$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain} {208}
+    }
+    {^An Armoured Carrier$} 
+    {
+        {Pinnacle/Science/Detroit} {121}
     }
     {^An Arovian honor guard$} 
     {
@@ -322,21 +1276,62 @@
     {
         {Pinnacle/Science/Atlanta} {39}
     }
+    {^An Aviarol$} 
+    {
+        {Pinnacle/Fantasy/Kourlyn Temple} {18}
+    }
     {^An Aztech Uno$} 
     {
         {Pinnacle/Science/Atlanta} {50}
+    }
+    {^An Earthen Spirit$} 
+    {
+        {Pinnacle/Chaos/Terra's Terrific Treehouse} {13}
+    }
+    {^An Effriit$} 
+    {
+        {Pinnacle/Fantasy/Kourlyn Temple} {15}
     }
     {^An Elderly Female Piranha Monkey$} 
     {
         {Pinnacle/Science/The Amazon Research Center} {47}
     }
+    {^An Enormous Cloud Giant$} 
+    {
+        {Pinnacle/Chaos/Care Bears} {1}
+    }
+    {^An Enormous Radioactive Blob$} 
+    {
+        {Pinnacle/Science/Forgotten sewers} {59}
+    }
+    {^An Enormous Storm Giant$} 
+    {
+        {Pinnacle/Chaos/Care Bears} {1}
+    }
     {^An Evil Lich$} 
     {
         {Pinnacle/Fantasy/Catacombs 2} {99}
     }
+    {^An Honorable Knight$} 
+    {
+        {Pinnacle} {136}
+    }
+    {^An Imp$} 
+    {
+        {Pinnacle/Fantasy/Kourlyn Temple} {15}
+    }
+    {^An Irradiated Monstrosity \x28glowing\x29$} 
+    {
+        {Pinnacle/Science/Fallout Shelter} {40}
+    }
     {^An Old Man$} 
     {
         {Pinnacle/Chaos} {106}
+        {Pinnacle/Chaos/Good Humor Truck} {1}
+    }
+    {^An Old Thin Zookeeper$} 
+    {
+        {Pinnacle/Science/Detroit} {149}
     }
     {^An Usher$} 
     {
@@ -359,29 +1354,109 @@
     {
         {Pinnacle/Chaos/Starbuck's Coffee} {1}
     }
+    {^An archer$} 
+    {
+        {Pinnacle/Chaos/Chess Board/Archon} {9}
+    }
+    {^An architect, hard at work$} 
+    {
+        {Pinnacle/Science/Detroit/European Robotics - Survey, Design and Development Office} {7}
+    }
+    {^An arctic fox$} 
+    {
+        {Pinnacle/Fantasy} {823}
+    }
+    {^An arctic wolf$} 
+    {
+        {Pinnacle/Fantasy} {928}
+    }
+    {^An audience member rushing to get to her seat$} 
+    {
+        {Pinnacle/Science/New York/Carnegie Hall} {117}
+    }
     {^An audience member rushing to get to his seat$} 
     {
         {Pinnacle/Science/New York/Carnegie Hall} {108}
+    }
+    {^An evil looking necromancer$} 
+    {
+        {Pinnacle/Chaos/Chess Board/Archon} {64}
+    }
+    {^An evil sorceress$} 
+    {
+        {Pinnacle/Chaos/Chess Board/Archon} {70}
     }
     {^An indecisive customer$} 
     {
         {Pinnacle/Chaos/Starbuck's Coffee} {4}
     }
+    {^An old crow flying around$} 
+    {
+        {Pinnacle/Science/Swede Research Center} {8}
+    }
     {^An old dwarven smith$} 
     {
         {Pinnacle} {52}
+    }
+    {^An old man is here, smiling at you$} 
+    {
+        {Pinnacle/Fantasy} {417}
+    }
+    {^An old woman$} 
+    {
+        {Pinnacle/Fantasy/Necromancer Guild} {1}
     }
     {^An overweight man with blue hair and dark makeup, writing poetry$} 
     {
         {Pinnacle/Chaos/Starbuck's Coffee} {3}
     }
+    {^An ugly looking swampfrog sits here$} 
+    {
+        {Pinnacle/Science/Swede Research Center} {1}
+    }
     {^An ugly vampire$} 
     {
         {Pinnacle/Chaos/Chaos Cinemaplex/Hotel Transylvania} {69}
     }
+    {^Anderson looks cool with his socks up$} 
+    {
+        {Pinnacle/Chaos/Beavis and Butthead} {7}
+    }
+    {^Android 1.0$} 
+    {
+        {Pinnacle/Chaos/Android Showroom} {8}
+    }
+    {^Android 1.1$} 
+    {
+        {Pinnacle/Chaos/Android Showroom} {7}
+    }
+    {^Angry Drow Mob \x28about 470 members\x29$} 
+    {
+        {Pinnacle/Fantasy/Rabbit Fields/The Drow Kingdom of fe dar Shad} {108}
+    }
+    {^Angry Horse$} 
+    {
+        {Pinnacle/Chaos/Chess Board} {15}
+    }
+    {^Angry War Elephant$} 
+    {
+        {Pinnacle/Chaos/Chess Board} {17}
+    }
     {^Antonio, the Estate Agent$} 
     {
         {Pinnacle} {22}
+    }
+    {^Apple fanboy$} 
+    {
+        {Pinnacle/Chaos/Android Showroom} {3}
+    }
+    {^Arcita \x28wounded\x29$} 
+    {
+        {Pinnacle/Chaos/Erratio Forest/The Tabard Inn} {20}
+    }
+    {^Arcita$} 
+    {
+        {Pinnacle/Chaos/Erratio Forest/The Tabard Inn} {18}
     }
     {^Ares Roadster, trying to kill you$} 
     {
@@ -395,13 +1470,80 @@
     {
         {Pinnacle} {6}
     }
+    {^Artful Dodger :: Champion of the Demon Planets [:\x2A:] \x28righteous\x29$} 
+    {
+        {Pinnacle} {1}
+    }
+    {^Artful Dodger :: Defender of the Nomad Cluster [\x2A\x2A\x2A\x2A\x2A\x2A\x2A] \x28moral\x29$} 
+    {
+        {Pinnacle} {1}
+    }
+    {^Asoua Aspian$} 
+    {
+        {Pinnacle/Science/Alien Ship} {27}
+    }
+    {^Assembly line worker$} 
+    {
+        {Pinnacle/Science/Hamilton Plant} {5}
+    }
+    {^Atriel the Guardian$} 
+    {
+        {Pinnacle} {2}
+    }
+    {^Aurelan Sidhe, Herald of Summer$} 
+    {
+        {Pinnacle/Fantasy/A Quiet Henge} {5}
+    }
+    {^Avatar of Elentil \x28bound by Whoknows\x29$} 
+    {
+        {Pinnacle/Chaos} {9}
+    }
+    {^Awk the happy red panda$} 
+    {
+        {Pinnacle/Chaos/Chaos Cinemaplex/Hotel Transylvania} {18}
+    }
+    {^Ba'alzamon the Grimare$} 
+    {
+        {Pinnacle/Fantasy/Necromancer Guild} {20}
+    }
+    {^Baby Cow King$} 
+    {
+        {Pinnacle/Chaos/CowVille/Hell Cows} {34}
+    }
     {^Baby Dragon$} 
     {
+        {Pinnacle/Fantasy} {757}
+        {Pinnacle/Fantasy/Portal of Life} {17}
         {Pinnacle/Fantasy/Portal of Life v2} {367}
+        {Pinnacle/Fantasy/Portal of Life v3} {295}
+    }
+    {^Baglady$} 
+    {
+        {Pinnacle/Science/Detroit} {21}
+    }
+    {^Balchian :: Defender of the Blasted Darkness [\x3C\x3C:\x2A:\x3E\x3E] \x28pure\x29$} 
+    {
+        {Pinnacle/Chaos} {21}
+    }
+    {^Banana Spider$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain} {48}
+    }
+    {^Bandit$} 
+    {
+        {Pinnacle/Fantasy} {791}
     }
     {^Bank teller$} 
     {
         {Pinnacle/Science/Atlanta} {7}
+    }
+    {^Barath the Ferryman$} 
+    {
+        {Pinnacle/Fantasy} {708}
+    }
+    {^Barbazu$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain} {50}
     }
     {^Barovian man$} 
     {
@@ -411,9 +1553,29 @@
     {
         {Pinnacle/Fantasy/Ravenloft} {59}
     }
+    {^Beastlie$} 
+    {
+        {Pinnacle/Chaos/Care Bears} {28}
+    }
+    {^Beavis is here picking his nose$} 
+    {
+        {Pinnacle/Chaos/Beavis and Butthead} {1}
+    }
+    {^Befriend the Zombie$} 
+    {
+        {Pinnacle/Fantasy/Necromancer Guild} {20}
+    }
+    {^Belshazzar$} 
+    {
+        {Pinnacle/Chaos/Erratio Forest/The Tabard Inn} {8}
+    }
     {^Benny$} 
     {
         {Pinnacle/Science/Bandit Camp} {5}
+    }
+    {^Beta$} 
+    {
+        {Pinnacle/Chaos/Android Showroom} {9}
     }
     {^Beyonce$} 
     {
@@ -423,57 +1585,240 @@
     {
         {Pinnacle/Science/Atlanta} {13}
     }
+    {^Bill Goblinface \x28adventurer\x29$} 
+    {
+        {Pinnacle/Fantasy} {526}
+    }
+    {^Bill the Quick \x28adventurer\x29$} 
+    {
+        {Pinnacle/Fantasy} {405}
+    }
+    {^Billy Bob the Budweiser Frog$} 
+    {
+        {Pinnacle/Chaos/Brewery Swamp} {11}
+    }
     {^Billy Crystal$} 
     {
         {Pinnacle/Science/New York/Carnegie Hall} {84}
     }
+    {^Birthday Bear$} 
+    {
+        {Pinnacle/Chaos/Care Bears} {4}
+    }
+    {^Bitterheart Bear$} 
+    {
+        {Pinnacle/Chaos/Care Bears} {23}
+    }
+    {^Black Abishai$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain} {89}
+    }
+    {^Black Chinese Dragon$} 
+    {
+        {Pinnacle/Chaos/Mahjongg} {18}
+    }
+    {^Black Patrol Captain$} 
+    {
+        {Pinnacle/Fantasy/Portal of Life v3} {182}
+    }
     {^Black Patrol Guard$} 
     {
+        {Pinnacle/Fantasy/Portal of Life} {112}
         {Pinnacle/Fantasy/Portal of Life v2} {317}
+        {Pinnacle/Fantasy/Portal of Life v3} {79}
     }
     {^Black Patrol Leader$} 
     {
+        {Pinnacle/Fantasy/Portal of Life} {112}
         {Pinnacle/Fantasy/Portal of Life v2} {317}
+        {Pinnacle/Fantasy/Portal of Life v3} {182}
+    }
+    {^Black Spinagon$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain} {201}
+    }
+    {^Black Tiger$} 
+    {
+        {Pinnacle/Chaos/Mahjongg} {50}
+    }
+    {^Black panther hunting in the dark$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain} {51}
     }
     {^Black wolf$} 
     {
         {Pinnacle/Fantasy/Ravenloft/Schloss Mordenheim} {5}
     }
+    {^BlackHeart Bear$} 
+    {
+        {Pinnacle/Chaos/Care Bears} {51}
+    }
+    {^Blade the apathetic$} 
+    {
+        {Pinnacle/Science/Atlanta} {102}
+    }
+    {^Bleedingheart Bear$} 
+    {
+        {Pinnacle/Chaos/Care Bears} {21}
+    }
+    {^Blue Dolphin$} 
+    {
+        {Pinnacle/Chaos/Mahjongg} {24}
+    }
+    {^Blue Erinyes$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain} {50}
+    }
+    {^Bob Dragonslayer \x28adventurer\x29$} 
+    {
+        {Pinnacle/Fantasy} {583}
+    }
+    {^Bojek Twisttale$} 
+    {
+        {Pinnacle/Fantasy/Blingdenwood Village} {12}
+    }
     {^Bono$} 
     {
         {Pinnacle/Science/New York/Carnegie Hall} {75}
+    }
+    {^Brave Heart Lion$} 
+    {
+        {Pinnacle/Chaos/Care Bears} {39}
+    }
+    {^Bray the alchemist \x28neutral\x29$} 
+    {
+        {Pinnacle/Fantasy/Necromancer Guild} {76}
+    }
+    {^Bright Heart Raccoon$} 
+    {
+        {Pinnacle/Chaos/Care Bears} {40}
+    }
+    {^Brown Spinagon$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain} {296}
     }
     {^Brown wolf$} 
     {
         {Pinnacle/Fantasy/Around the town of Angelo/Forest Trail/Mountain Path} {1}
     }
+    {^Brownleaf gnome$} 
+    {
+        {Pinnacle/Fantasy/Wayhaven Docks/Serinth} {20}
+    }
+    {^Bubba the nine foot crocodile$} 
+    {
+        {Pinnacle/Chaos/Brewery Swamp} {30}
+    }
     {^Burger$} 
     {
         {Pinnacle/Chaos/Sweetboots' House} {36}
     }
+    {^Butthead is standing here, scratching his butt$} 
+    {
+        {Pinnacle/Chaos/Beavis and Butthead} {1}
+    }
+    {^Buzzard$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain} {73}
+    }
     {^Cancer the tradesman$} 
     {
         {Pinnacle} {6}
+        {Pinnacle/Fantasy/Alizarian Tower} {1}
     }
     {^Carina the leading Astronomer$} 
     {
         {Pinnacle/Chaos/Carina's Observatory} {11}
     }
+    {^Cave Lizard$} 
+    {
+        {Pinnacle/Fantasy/Portal of Life v3} {386}
+    }
+    {^Cave giant$} 
+    {
+        {Pinnacle/Fantasy/Giant Camp} {9}
+    }
+    {^Caveman$} 
+    {
+        {Pinnacle/Fantasy} {823}
+    }
     {^Cepheus the Stargazer$} 
     {
         {Pinnacle/Chaos/Carina's Observatory} {13}
     }
+    {^Champ Bear$} 
+    {
+        {Pinnacle/Chaos/Care Bears} {39}
+    }
+    {^Chance the Newbie \x28adventurer\x29$} 
+    {
+        {Pinnacle/Fantasy} {718}
+    }
+    {^Charging Ram$} 
+    {
+        {Pinnacle/Chaos/Mahjongg} {19}
+    }
     {^Chavee the Crafter$} 
     {
+        {Pinnacle} {199}
         {Pinnacle/Crafting} {1}
+        {Pinnacle/Crafting/Mines 6} {1}
+    }
+    {^Cheer Bear$} 
+    {
+        {Pinnacle/Chaos/Care Bears} {8}
+    }
+    {^Child$} 
+    {
+        {Pinnacle/Science/Lost City} {33}
+    }
+    {^Chirping cricket$} 
+    {
+        {Pinnacle/Chaos/Brewery Swamp} {11}
+    }
+    {^Choco Taco$} 
+    {
+        {Pinnacle/Chaos/Good Humor Truck} {8}
+    }
+    {^Chocolate Eclair Bar$} 
+    {
+        {Pinnacle/Chaos/Good Humor Truck} {4}
     }
     {^Choker$} 
     {
         {Pinnacle/Fantasy/Wayhaven Docks/Isle of Ao} {187}
     }
+    {^Chucky the marine$} 
+    {
+        {Pinnacle/Science/UED Installation} {7}
+    }
+    {^Citizen$} 
+    {
+        {Pinnacle/Fantasy} {38}
+        {Pinnacle/Fantasy/Necromancer Guild} {1}
+        {Pinnacle/Fantasy/Portal of Life v2} {1}
+    }
+    {^Civilian$} 
+    {
+        {Pinnacle/Science/UED Installation} {5}
+    }
+    {^Clan MacCleod Haggis the store-owner$} 
+    {
+        {Pinnacle/Science/Atlanta} {102}
+    }
+    {^Clay Golem$} 
+    {
+        {Pinnacle/Fantasy/Zelligar's Castle} {3}
+    }
     {^Cleric of Lathander$} 
     {
+        {Pinnacle/Fantasy/Portal of Life} {23}
         {Pinnacle/Fantasy/Portal of Life v2} {23}
+        {Pinnacle/Fantasy/Portal of Life v3} {23}
+    }
+    {^Clerk of NASTAR$} 
+    {
+        {Pinnacle/Science/New York/NASTAR} {3}
     }
     {^Coffer Corpse$} 
     {
@@ -482,34 +1827,181 @@
     {^Cold Tiro has a Halibut by the tail\x21$} 
     {
         {Pinnacle} {3}
+        {Pinnacle/Chaos} {66}
+        {Pinnacle/Fantasy/Portal of Life v2} {1}
+        {Pinnacle/Palisade Pub} {1}
+    }
+    {^Collioke Mosquito Trap$} 
+    {
+        {Pinnacle/Fantasy/Wayhaven Docks/Serinth} {359}
+    }
+    {^Colonius the bartender$} 
+    {
+        {Pinnacle/Chaos/Brewery Swamp} {31}
+    }
+    {^Compost beast$} 
+    {
+        {Pinnacle/Science/New York/NASTAR} {61}
+    }
+    {^Condor$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain} {50}
+    }
+    {^Cooper$} 
+    {
+        {Pinnacle/Chaos/Old London} {26}
+    }
+    {^Core Guard$} 
+    {
+        {Pinnacle/Science/Fallout Shelter} {78}
+    }
+    {^Cornholio, the Almighty Bunghole$} 
+    {
+        {Pinnacle/Chaos/Beavis and Butthead} {3}
+    }
+    {^Corristo the Wandering Traveler$} 
+    {
+        {Pinnacle/Fantasy} {424}
+    }
+    {^Count Dracula$} 
+    {
+        {Pinnacle/Chaos/Chaos Cinemaplex/Hotel Transylvania} {8}
+    }
+    {^Cowardly Heart Bear$} 
+    {
+        {Pinnacle/Chaos/Care Bears} {37}
+    }
+    {^Creon, The King of Thebes$} 
+    {
+        {Pinnacle/Chaos/Erratio Forest/The Tabard Inn} {16}
+    }
+    {^Crop spider$} 
+    {
+        {Pinnacle/Fantasy/Wayhaven Docks/Serinth} {255}
+    }
+    {^Crow$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain} {50}
+    }
+    {^Crydee Guard$} 
+    {
+        {Pinnacle/Chaos/Crydee} {18}
+    }
+    {^Crysler C.O.F. turbo$} 
+    {
+        {Pinnacle/Science/Detroit} {121}
+    }
+    {^Crystal Elder$} 
+    {
+        {Pinnacle/Fantasy/Land of the Ice People} {80}
+    }
+    {^Cupcake$} 
+    {
+        {Pinnacle/Chaos/Android Showroom} {24}
+    }
+    {^Cur, the tradesman's dog \x28cOvErEd In WhItE FuZz\x29$} 
+    {
+        {Pinnacle} {13}
     }
     {^Cur, the tradesman's dog$} 
     {
         {Pinnacle} {6}
+        {Pinnacle/Fantasy/Alizarian Tower} {1}
+    }
+    {^Cyber Enforcer$} 
+    {
+        {Pinnacle/Science/Detroit} {121}
+    }
+    {^D$} 
+    {
+        {Pinnacle/Science/Lost City} {23}
     }
     {^Daisy-mae the harlot$} 
     {
         {Pinnacle/Chaos/Puppy Mill} {7}
     }
+    {^Dan Jarvis, The Smith$} 
+    {
+        {Pinnacle/Chaos/Erratio Forest/The Tabard Inn} {34}
+    }
+    {^Daniel - The Grizzled Old Miner$} 
+    {
+        {Pinnacle} {199}
+        {Pinnacle/Crafting} {20}
+        {Pinnacle/Crafting/Mines 6} {1}
+    }
+    {^Dark jaguarundi hunting in the dark$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain} {24}
+    }
+    {^Dark spotted jaguar lays in wait$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain} {134}
+    }
     {^Darkmantle$} 
     {
         {Pinnacle/Fantasy/Wayhaven Docks/Isle of Ao} {187}
     }
+    {^Dave the marine$} 
+    {
+        {Pinnacle/Science/UED Installation} {9}
+    }
     {^Decarabia, Greater Demon \x7BFifth plane\x7D$} 
     {
+        {Pinnacle/Fantasy} {726}
         {Pinnacle/Fantasy/Katin/Necromancer Guild (old)} {117}
     }
     {^Demon Minion$} 
     {
         {Pinnacle/Fantasy/Katin/Necromancer Guild (old)} {1}
     }
+    {^Desert Lizard$} 
+    {
+        {Pinnacle/Science} {190}
+        {Pinnacle/Science/Lost City} {5}
+    }
+    {^Desperate Mother$} 
+    {
+        {Pinnacle/Science} {485}
+        {Pinnacle/Science/Bomb Shelter} {3}
+    }
+    {^Development$} 
+    {
+        {Pinnacle/Chaos/Android Showroom} {42}
+    }
+    {^Dire wolf$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft} {15}
+    }
+    {^Dog$} 
+    {
+        {Pinnacle/Science/Lost City} {11}
+    }
     {^Donavich the priest$} 
     {
         {Pinnacle/Fantasy/Ravenloft} {107}
     }
+    {^Donut$} 
+    {
+        {Pinnacle/Chaos/Android Showroom} {26}
+    }
+    {^Dorthinick Autuick the Death Knight \x28undead\x29$} 
+    {
+        {Pinnacle/Fantasy/Wayhaven Docks/Serinth} {695}
+    }
     {^Dr. Rudolph Van Richten$} 
     {
         {Pinnacle/Fantasy/Ravenloft} {50}
+    }
+    {^Dracolich$} 
+    {
+        {Pinnacle/Fantasy/Portal of Life} {455}
+        {Pinnacle/Fantasy/Portal of Life v2} {455}
+        {Pinnacle/Fantasy/Portal of Life v3} {384}
+    }
+    {^Drider Guard$} 
+    {
+        {Pinnacle/Fantasy/Rabbit Fields/The Drow Kingdom of fe dar Shad} {4}
     }
     {^Drow Palace Guard$} 
     {
@@ -527,21 +2019,153 @@
     {
         {Pinnacle/Fantasy/Necromancer Guild} {48}
     }
+    {^Durskaen$} 
+    {
+        {Pinnacle} {1}
+    }
+    {^E.D. 1000$} 
+    {
+        {Pinnacle/Science/Detroit} {29}
+    }
+    {^E.D. 260$} 
+    {
+        {Pinnacle/Science/Detroit} {149}
+    }
+    {^E.D. 280$} 
+    {
+        {Pinnacle/Science/Detroit} {149}
+    }
+    {^Earth Elemental Lord$} 
+    {
+        {Pinnacle/Chaos/Terra's Terrific Treehouse} {32}
+    }
+    {^Earth Elemental$} 
+    {
+        {Pinnacle/Chaos/Terra's Terrific Treehouse} {31}
+    }
+    {^Eclair$} 
+    {
+        {Pinnacle/Chaos/Android Showroom} {13}
+    }
+    {^Edro Aspian \x28evil\x29$} 
+    {
+        {Pinnacle/Science/Alien Ship} {55}
+    }
+    {^Einav, the auctioneer$} 
+    {
+        {Pinnacle} {133}
+    }
+    {^Elf Defender$} 
+    {
+        {Pinnacle/Fantasy/Longshadow Camp/Longshadow Battleground} {658}
+    }
+    {^Elf Fighter$} 
+    {
+        {Pinnacle/Fantasy/Longshadow Camp/Longshadow Battleground} {58}
+    }
+    {^Elf High Commander$} 
+    {
+        {Pinnacle/Fantasy/Longshadow Camp/Longshadow Battleground} {61}
+    }
+    {^Elf Keeper \x7Btenacious\x7D$} 
+    {
+        {Pinnacle/Fantasy/Longshadow Camp/Longshadow Battleground} {59}
+    }
+    {^Elf Phalanx \x7Btenacious\x7D$} 
+    {
+        {Pinnacle/Fantasy/Longshadow Camp/Longshadow Battleground} {19}
+    }
+    {^Elf Priest$} 
+    {
+        {Pinnacle/Fantasy/Longshadow Camp/Longshadow Battleground} {23}
+    }
+    {^Elf Traveller$} 
+    {
+        {Pinnacle/Fantasy} {342}
+        {Pinnacle/Fantasy/Lonely Keep} {3}
+    }
+    {^Elf Warden$} 
+    {
+        {Pinnacle/Fantasy/Longshadow Camp/Longshadow Battleground} {17}
+    }
+    {^Eli, the capitalist shopkeeper$} 
+    {
+        {Pinnacle/Science/Luddite Commune} {11}
+    }
+    {^Elite Drow warrior$} 
+    {
+        {Pinnacle/Fantasy/Rabbit Fields/The Drow Kingdom of fe dar Shad} {6}
+    }
+    {^Eliza, the lego Cat$} 
+    {
+        {Pinnacle/Chaos/New Legoland} {7}
+    }
+    {^Emily$} 
+    {
+        {Pinnacle/Chaos/Erratio Forest/The Tabard Inn} {13}
+    }
+    {^Employee peeing$} 
+    {
+        {Pinnacle/Science/Hamilton Plant} {16}
+    }
+    {^Erig$} 
+    {
+        {Pinnacle/Fantasy/Zelligar's Castle} {44}
+    }
     {^Eugene$} 
     {
         {Pinnacle/Science/Bandit Camp} {5}
     }
     {^Faerie Lizard$} 
     {
+        {Pinnacle/Fantasy/Portal of Life} {86}
         {Pinnacle/Fantasy/Portal of Life v2} {89}
+        {Pinnacle/Fantasy/Portal of Life v3} {116}
+    }
+    {^Feather Vendor$} 
+    {
+        {Pinnacle/Fantasy} {718}
     }
     {^Female fire giant$} 
     {
         {Pinnacle/Fantasy/Fire Giant Lair} {5}
     }
+    {^Fighting Master$} 
+    {
+        {Pinnacle/Science/New York/NASTAR} {29}
+    }
+    {^Flesh Golem$} 
+    {
+        {Pinnacle/Fantasy/Zelligar's Castle} {12}
+    }
+    {^Flying Praying Mantis$} 
+    {
+        {Pinnacle/Science/Mantis Swamp} {10}
+    }
+    {^Foofoo the Handbag Dog$} 
+    {
+        {Pinnacle/Science/New York/Carnegie Hall} {74}
+    }
+    {^Forest goblin$} 
+    {
+        {Pinnacle/Fantasy/Wayhaven Docks/Serinth} {359}
+    }
+    {^Francis Tumblety$} 
+    {
+        {Pinnacle/Chaos/Old London} {7}
+    }
+    {^Frank$} 
+    {
+        {Pinnacle/Chaos/Chaos Cinemaplex/Hotel Transylvania} {9}
+        {Pinnacle/Science/Lost City} {33}
+    }
     {^Fred the Used Car Salesman$} 
     {
         {Pinnacle/Chaos} {108}
+    }
+    {^Frederick Deeming$} 
+    {
+        {Pinnacle/Chaos/Old London} {15}
     }
     {^Friar Tuck \x28jolly\x29$} 
     {
@@ -551,9 +2175,41 @@
     {
         {Pinnacle/Science/Crashed Plane} {4}
     }
+    {^Fritz the Chef$} 
+    {
+        {Pinnacle/Crafting} {13}
+    }
+    {^Frolag Guard$} 
+    {
+        {Pinnacle/Fantasy/Land of the Ice People} {82}
+    }
+    {^Froyo$} 
+    {
+        {Pinnacle/Chaos/Android Showroom} {14}
+    }
+    {^Fudgesicle Bar$} 
+    {
+        {Pinnacle/Chaos/Good Humor Truck} {4}
+    }
+    {^Gangmember$} 
+    {
+        {Pinnacle/Science/Lost City} {4}
+    }
+    {^Gator$} 
+    {
+        {Pinnacle/Fantasy} {735}
+    }
+    {^Gemina, rogue of the black-hand$} 
+    {
+        {Pinnacle/Fantasy} {348}
+    }
     {^George Weathermay \x28ranger\x29 \x28good\x29$} 
     {
         {Pinnacle/Fantasy/Ravenloft} {101}
+    }
+    {^Ghost of Dorthinick Autuick the Death Knight \x28undead\x29$} 
+    {
+        {Pinnacle/Fantasy/Wayhaven Docks/Serinth} {695}
     }
     {^Ghoul of the Damned$} 
     {
@@ -563,65 +2219,506 @@
     {
         {Pinnacle/Science/Atlanta} {5}
     }
+    {^Giant Neapolitan Sandwich$} 
+    {
+        {Pinnacle/Chaos/Good Humor Truck} {5}
+    }
+    {^Giant Praying Mantis$} 
+    {
+        {Pinnacle/Science/Mantis Swamp} {19}
+    }
+    {^Giant Vanilla Sandwich$} 
+    {
+        {Pinnacle/Chaos/Good Humor Truck} {5}
+    }
     {^Giant Wasp$} 
     {
         {Pinnacle/Fantasy} {671}
+    }
+    {^Giant ant$} 
+    {
+        {Pinnacle/Fantasy} {773}
+    }
+    {^Giant$} 
+    {
+        {Pinnacle/Fantasy/Wayhaven Docks/Serinth} {255}
+    }
+    {^Gingerbread$} 
+    {
+        {Pinnacle/Chaos/Android Showroom} {5}
+    }
+    {^Glass Golem$} 
+    {
+        {Pinnacle/Fantasy/Zelligar's Castle} {6}
+    }
+    {^Gold Chinese Dragon$} 
+    {
+        {Pinnacle/Chaos/Mahjongg} {49}
+    }
+    {^Golden Phoenix$} 
+    {
+        {Pinnacle/Chaos/Mahjongg} {28}
+    }
+    {^Gramms Bear$} 
+    {
+        {Pinnacle/Chaos/Care Bears} {38}
+    }
+    {^Gray Erinyes$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain} {277}
     }
     {^Greater Demon$} 
     {
         {Pinnacle/Fantasy/Alizarian Tower} {76}
     }
+    {^Green Abishai$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain} {26}
+    }
+    {^Green Chinese Dragon$} 
+    {
+        {Pinnacle/Chaos/Mahjongg} {11}
+    }
+    {^Green Erinyes$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain} {50}
+    }
+    {^Grimy Beast$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {11}
+    }
+    {^Grumpy Bear$} 
+    {
+        {Pinnacle/Chaos/Care Bears} {9}
+    }
+    {^Grus the man/crane$} 
+    {
+        {Pinnacle/Fantasy} {521}
+    }
+    {^Gunnery Sergeant Gregory Danvers$} 
+    {
+        {Pinnacle/Science/Mantis Swamp} {13}
+    }
+    {^Gwillim the River-Troll$} 
+    {
+        {Pinnacle/Fantasy} {333}
+    }
+    {^Hairy Spider$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain/Faunist Guild} {86}
+    }
+    {^Hamatula$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain} {50}
+    }
+    {^Harakir, Champion of King Alaren$} 
+    {
+        {Pinnacle/Fantasy/New Arovian Graveyard/Tomb of King Alaren} {29}
+    }
+    {^Hell Hound$} 
+    {
+        {Pinnacle/Fantasy/Rabbit Fields/The Drow Kingdom of fe dar Shad} {194}
+    }
+    {^Hercules$} 
+    {
+        {Pinnacle/Chaos/Erratio Forest/The Tabard Inn} {6}
+    }
+    {^Hey You the Palisade Bartender$} 
+    {
+        {Pinnacle/Palisade Pub} {1}
+    }
+    {^Hick$} 
+    {
+        {Pinnacle/Fantasy} {749}
+    }
+    {^Hill Dwarf$} 
+    {
+        {Pinnacle/Fantasy} {900}
+    }
+    {^Hippolyta, The Queen of Scythia$} 
+    {
+        {Pinnacle/Chaos/Erratio Forest/The Tabard Inn} {13}
+    }
     {^Ho-San the shopkeeper$} 
     {
         {Pinnacle} {31}
+    }
+    {^Hoarace the Mighty \x28adventurer\x29$} 
+    {
+        {Pinnacle/Fantasy} {572}
+    }
+    {^Homeless Man$} 
+    {
+        {Pinnacle/Science/Detroit} {149}
+    }
+    {^Honeycomb$} 
+    {
+        {Pinnacle/Chaos/Android Showroom} {22}
+    }
+    {^Huge Praying Mantis$} 
+    {
+        {Pinnacle/Science/Mantis Swamp} {15}
     }
     {^Huge bat$} 
     {
         {Pinnacle/Fantasy/Around the town of Angelo/Forest Trail/Elven Graveyard} {28}
     }
+    {^Human Traveller$} 
+    {
+        {Pinnacle/Fantasy} {424}
+    }
+    {^Ice Child$} 
+    {
+        {Pinnacle/Fantasy/Land of the Ice People} {10}
+    }
+    {^Ice Cream Sandwich$} 
+    {
+        {Pinnacle/Chaos/Android Showroom} {20}
+    }
+    {^Ice Man$} 
+    {
+        {Pinnacle/Fantasy/Land of the Ice People} {2}
+    }
+    {^Ice Woman$} 
+    {
+        {Pinnacle/Fantasy/Land of the Ice People} {9}
+    }
+    {^Ice Youth$} 
+    {
+        {Pinnacle/Fantasy/Land of the Ice People} {46}
+    }
     {^Ice golem$} 
     {
         {Pinnacle/Fantasy/Around the town of Angelo/Forest Trail/Mountain Path} {40}
+    }
+    {^Ice snake$} 
+    {
+        {Pinnacle/Fantasy} {905}
+    }
+    {^Intuil the Arch-Mage of the Platinum Star$} 
+    {
+        {Pinnacle} {188}
+    }
+    {^Irene$} 
+    {
+        {Pinnacle/Science/Lost City} {34}
     }
     {^Ismark the villager$} 
     {
         {Pinnacle/Fantasy/Ravenloft} {63}
     }
+    {^Ixitxachitl$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain/Faunist Guild} {238}
+    }
+    {^Jackie$} 
+    {
+        {Pinnacle/Science/Lost City} {19}
+    }
+    {^Jade Phoenix$} 
+    {
+        {Pinnacle/Chaos/Mahjongg} {4}
+    }
+    {^Jarl the mercenary$} 
+    {
+        {Pinnacle/Fantasy/Around the town of Angelo/Forest Trail} {13}
+    }
     {^Jay-Z$} 
     {
         {Pinnacle/Science/New York/Carnegie Hall} {78}
+    }
+    {^Jeffrey Hamilton \x28owner\x29$} 
+    {
+        {Pinnacle/Science/Hamilton Plant} {21}
+    }
+    {^Jellybean$} 
+    {
+        {Pinnacle/Chaos/Android Showroom} {17}
+    }
+    {^Jenna Rosesinger$} 
+    {
+        {Pinnacle} {6}
+    }
+    {^Joe the Budweiser Frog$} 
+    {
+        {Pinnacle/Chaos/Brewery Swamp} {11}
     }
     {^Joe$} 
     {
         {Pinnacle/Chaos/Sweetboots' House} {22}
     }
+    {^Johawn the ferrymaster$} 
+    {
+        {Pinnacle/Fantasy} {708}
+        {Pinnacle/Fantasy/Wayhaven Docks} {1}
+    }
+    {^John, The Carpenter$} 
+    {
+        {Pinnacle/Chaos/Erratio Forest/The Tabard Inn} {28}
+    }
+    {^Johney the little boy \x28Pinnacle\x29 \x28thought it was a fart\x29$} 
+    {
+        {Pinnacle} {7}
+    }
     {^Johney the little boy \x28Pinnacle\x29$} 
     {
         {Pinnacle} {3}
+        {Pinnacle/Chaos} {172}
+        {Pinnacle/Chaos/Chaos Cinemaplex} {14}
+        {Pinnacle/Fantasy} {726}
+    }
+    {^Jordance the Simple \x28adventurer\x29$} 
+    {
+        {Pinnacle/Fantasy} {780}
+    }
+    {^Joseph Barnett$} 
+    {
+        {Pinnacle/Chaos/Old London} {18}
+    }
+    {^Judge Dredd$} 
+    {
+        {Pinnacle/Chaos} {64}
     }
     {^Julie$} 
     {
         {Pinnacle/Chaos/Old Woman in the Shoe} {4}
     }
+    {^Julius Caesar$} 
+    {
+        {Pinnacle/Chaos/Erratio Forest/The Tabard Inn} {1}
+    }
+    {^Kaleb the shopkeeper$} 
+    {
+        {Pinnacle/Fantasy/Wayhaven Docks} {5}
+    }
+    {^Kaleth$} 
+    {
+        {Pinnacle/Fantasy} {621}
+    }
+    {^King Cone Bar$} 
+    {
+        {Pinnacle/Chaos/Good Humor Truck} {2}
+    }
+    {^KitKat$} 
+    {
+        {Pinnacle/Chaos/Android Showroom} {4}
+    }
+    {^Kujab the bartering dwarf$} 
+    {
+        {Pinnacle/Fantasy} {138}
+    }
+    {^Kylie Kendrick : Core Guard Captain$} 
+    {
+        {Pinnacle/Science/Fallout Shelter} {96}
+    }
     {^Lady Shadowborn$} 
     {
         {Pinnacle/Fantasy/Ravenloft/Ebonbane} {16}
+    }
+    {^Large Tank$} 
+    {
+        {Pinnacle/Science/UED Installation} {7}
     }
     {^Larry Mullen Jr$} 
     {
         {Pinnacle/Science/New York/Carnegie Hall} {75}
     }
+    {^Larry The Bud delivery man$} 
+    {
+        {Pinnacle/Chaos/Brewery Swamp} {14}
+    }
+    {^Leaping Rat$} 
+    {
+        {Pinnacle/Chaos/Mahjongg} {30}
+    }
+    {^Lee$} 
+    {
+        {Pinnacle/Science/Lost City} {43}
+    }
+    {^Lego Lost Soul$} 
+    {
+        {Pinnacle/Chaos/New Legoland} {60}
+    }
     {^Lesser Demon$} 
     {
         {Pinnacle/Fantasy/Alizarian Tower} {68}
+    }
+    {^Letter A \x3C^\x3E$} 
+    {
+        {Pinnacle/Chaos/Alphabet Land} {3}
+    }
+    {^Letter A$} 
+    {
+        {Pinnacle/Chaos/Alphabet Land} {3}
+    }
+    {^Letter B$} 
+    {
+        {Pinnacle/Chaos/Alphabet Land} {5}
+    }
+    {^Letter C$} 
+    {
+        {Pinnacle/Chaos/Alphabet Land} {6}
+    }
+    {^Letter D$} 
+    {
+        {Pinnacle/Chaos/Alphabet Land} {8}
+    }
+    {^Letter E$} 
+    {
+        {Pinnacle/Chaos/Alphabet Land} {9}
+    }
+    {^Letter F$} 
+    {
+        {Pinnacle/Chaos/Alphabet Land} {4}
+    }
+    {^Letter G$} 
+    {
+        {Pinnacle/Chaos/Alphabet Land} {11}
+    }
+    {^Letter H$} 
+    {
+        {Pinnacle/Chaos/Alphabet Land} {7}
+    }
+    {^Letter I$} 
+    {
+        {Pinnacle/Chaos/Alphabet Land} {15}
+    }
+    {^Letter J$} 
+    {
+        {Pinnacle/Chaos/Alphabet Land} {10}
+    }
+    {^Letter K$} 
+    {
+        {Pinnacle/Chaos/Alphabet Land} {18}
+    }
+    {^Letter L$} 
+    {
+        {Pinnacle/Chaos/Alphabet Land} {13}
+    }
+    {^Letter M$} 
+    {
+        {Pinnacle/Chaos/Alphabet Land} {12}
+    }
+    {^Letter N$} 
+    {
+        {Pinnacle/Chaos/Alphabet Land} {14}
+    }
+    {^Letter O$} 
+    {
+        {Pinnacle/Chaos/Alphabet Land} {17}
+    }
+    {^Letter P$} 
+    {
+        {Pinnacle/Chaos/Alphabet Land} {19}
+    }
+    {^Letter Q$} 
+    {
+        {Pinnacle/Chaos/Alphabet Land} {26}
+    }
+    {^Letter R$} 
+    {
+        {Pinnacle/Chaos/Alphabet Land} {28}
+    }
+    {^Letter S$} 
+    {
+        {Pinnacle/Chaos/Alphabet Land} {16}
+    }
+    {^Letter T$} 
+    {
+        {Pinnacle/Chaos/Alphabet Land} {20}
+    }
+    {^Letter U$} 
+    {
+        {Pinnacle/Chaos/Alphabet Land} {27}
+    }
+    {^Letter V$} 
+    {
+        {Pinnacle/Chaos/Alphabet Land} {25}
+    }
+    {^Letter W$} 
+    {
+        {Pinnacle/Chaos/Alphabet Land} {24}
+    }
+    {^Letter X$} 
+    {
+        {Pinnacle/Chaos/Alphabet Land} {22}
+    }
+    {^Letter Y$} 
+    {
+        {Pinnacle/Chaos/Alphabet Land} {21}
+    }
+    {^Letter Z$} 
+    {
+        {Pinnacle/Chaos/Alphabet Land} {23}
+    }
+    {^Linus Maxwell$} 
+    {
+        {Pinnacle/Science/Fallout Shelter} {61}
+    }
+    {^Lion$} 
+    {
+        {Pinnacle/Science/Detroit} {170}
+    }
+    {^Living Fungus$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {349}
+    }
+    {^Lleera the forest elf$} 
+    {
+        {Pinnacle/Fantasy} {657}
+        {Pinnacle/Fantasy/Lleera's Tree} {1}
+    }
+    {^Loading Dock Worker$} 
+    {
+        {Pinnacle/Science/Hamilton Plant} {1}
+    }
+    {^Lollipop$} 
+    {
+        {Pinnacle/Chaos/Android Showroom} {18}
+    }
+    {^Lonely Panda$} 
+    {
+        {Pinnacle/Science/Detroit} {169}
+    }
+    {^Lord Marshinal, High priest of Morike$} 
+    {
+        {Pinnacle/Fantasy} {348}
+    }
+    {^Lots-a-Heart Elephant$} 
+    {
+        {Pinnacle/Chaos/Care Bears} {35}
+    }
+    {^Lucifer$} 
+    {
+        {Pinnacle/Chaos/Erratio Forest/The Tabard Inn} {3}
+    }
+    {^Luck Bear$} 
+    {
+        {Pinnacle/Chaos/Care Bears} {24}
+    }
+    {^Lumbering Ox$} 
+    {
+        {Pinnacle/Chaos/Mahjongg} {51}
     }
     {^Lynda the librarian \x28neutral\x29$} 
     {
         {Pinnacle/Fantasy/Necromancer Guild} {45}
     }
+    {^Mainframe$} 
+    {
+        {Pinnacle/Science/New York/NASTAR} {33}
+    }
+    {^Majestic deer$} 
+    {
+        {Pinnacle/Chaos/Mystic Forest} {11}
+    }
     {^Major Henkey, PhD$} 
     {
         {Pinnacle/Science} {3}
+    }
+    {^Man$} 
+    {
+        {Pinnacle/Science/Bomb Shelter} {4}
     }
     {^Marilyn Roast$} 
     {
@@ -631,13 +2728,56 @@
     {
         {Pinnacle} {128}
     }
+    {^Marshmallow$} 
+    {
+        {Pinnacle/Chaos/Android Showroom} {37}
+    }
+    {^Martin O'Dell \x28supervising\x29$} 
+    {
+        {Pinnacle/Science/Hamilton Plant} {18}
+    }
+    {^Mass of Troll Flesh$} 
+    {
+        {Pinnacle} {1}
+        {Pinnacle/Fantasy} {900}
+        {Pinnacle/Fantasy/Around the town of Angelo} {1}
+    }
+    {^Mavis$} 
+    {
+        {Pinnacle/Chaos/Chaos Cinemaplex/Hotel Transylvania} {16}
+    }
     {^Mel Brooks$} 
     {
         {Pinnacle/Science/New York/Carnegie Hall} {80}
     }
+    {^Merchant$} 
+    {
+        {Pinnacle/Fantasy} {411}
+        {Pinnacle/Fantasy/Lonely Keep} {3}
+    }
+    {^Metro Cop$} 
+    {
+        {Pinnacle/Science/Detroit} {149}
+    }
+    {^Michael Aspian$} 
+    {
+        {Pinnacle/Science/Alien Ship} {41}
+    }
     {^Michael Rudolph Guilioomberg \x28taking a dump\x29$} 
     {
         {Pinnacle/Science/New York/Carnegie Hall} {301}
+    }
+    {^Mike McKelly : Ultra Technician$} 
+    {
+        {Pinnacle/Science/Fallout Shelter} {88}
+    }
+    {^Military guard \x28on watch\x29$} 
+    {
+        {Pinnacle/Science/Fallout Shelter} {8}
+    }
+    {^Mircarla, High priestess to King Alaren$} 
+    {
+        {Pinnacle/Fantasy/New Arovian Graveyard/Tomb of King Alaren} {27}
     }
     {^Mistoffolees, the mischievous black cat$} 
     {
@@ -647,17 +2787,70 @@
     {
         {Pinnacle/Science/Atlanta} {12}
     }
+    {^Moby the ALPHA Team Leader \x28fearless\x29$} 
+    {
+        {Pinnacle/Science} {97}
+        {Pinnacle/Science/Alien\Alpha} {1}
+    }
     {^Mollig$} 
     {
         {Pinnacle/Fantasy/Wayhaven Docks/Isle of Ao} {16}
+    }
+    {^Molsworth the tiny mole$} 
+    {
+        {Pinnacle} {1}
+    }
+    {^Mottled green Spinagon$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain} {66}
+    }
+    {^Mouse deer$} 
+    {
+        {Pinnacle/Fantasy/Wayhaven Docks/Serinth} {20}
     }
     {^Mr. Johnson$} 
     {
         {Pinnacle/Science/Atlanta} {56}
     }
+    {^Mr. Swain$} 
+    {
+        {Pinnacle/Science/New York/NASTAR} {49}
+    }
+    {^Muck Monster$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {354}
+    }
+    {^Mud Golem$} 
+    {
+        {Pinnacle/Fantasy/Zelligar's Castle} {10}
+    }
+    {^Mudman$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {4}
+    }
+    {^Murray$} 
+    {
+        {Pinnacle/Chaos/Chaos Cinemaplex/Hotel Transylvania} {13}
+    }
+    {^Mutant reactor worker$} 
+    {
+        {Pinnacle/Science/Ruined Reactor} {4}
+    }
+    {^Mutated Freak \x28irradiated\x29$} 
+    {
+        {Pinnacle/Science/Fallout Shelter} {46}
+    }
     {^Natjoow-Ahild, guardian of the blood realm$} 
     {
         {Pinnacle/Fantasy/Around the town of Angelo/Forest Trail/Mountain Path} {45}
+    }
+    {^Nebuchadnezzar$} 
+    {
+        {Pinnacle/Chaos/Erratio Forest/The Tabard Inn} {7}
+    }
+    {^Nero$} 
+    {
+        {Pinnacle/Chaos/Erratio Forest/The Tabard Inn} {11}
     }
     {^New York Chief of Police$} 
     {
@@ -666,6 +2859,30 @@
     {^New York Fire Chief$} 
     {
         {Pinnacle/Science/New York/Carnegie Hall} {86}
+    }
+    {^Nicholas, The Scholar$} 
+    {
+        {Pinnacle/Chaos/Erratio Forest/The Tabard Inn} {33}
+    }
+    {^NoHeart$} 
+    {
+        {Pinnacle/Chaos/Care Bears} {31}
+    }
+    {^Nougat$} 
+    {
+        {Pinnacle/Chaos/Android Showroom} {39}
+    }
+    {^Nuke Addict$} 
+    {
+        {Pinnacle/Science/Detroit} {21}
+    }
+    {^Nuke Dealer$} 
+    {
+        {Pinnacle/Science/Detroit} {158}
+    }
+    {^O.C.P. Riot Officer$} 
+    {
+        {Pinnacle/Science/Detroit} {149}
     }
     {^O.J. Simpson$} 
     {
@@ -683,6 +2900,30 @@
     {
         {Pinnacle/Chaos/Carina's Observatory} {11}
     }
+    {^Old Man$} 
+    {
+        {Pinnacle/Science/Lost City} {11}
+    }
+    {^Old Nichol$} 
+    {
+        {Pinnacle/Chaos/Old London} {20}
+    }
+    {^Old Tiger$} 
+    {
+        {Pinnacle/Science/Detroit} {167}
+    }
+    {^Old Woman$} 
+    {
+        {Pinnacle/Science/Lost City} {11}
+    }
+    {^Old refugee$} 
+    {
+        {Pinnacle/Science/Fallout Shelter} {9}
+    }
+    {^Olorin's R1 Astromech Droid Droopy$} 
+    {
+        {Pinnacle/Chaos/Chaos Cinemaplex/Hotel Transylvania} {18}
+    }
     {^Onan$} 
     {
         {Pinnacle/Science/Bandit Camp} {8}
@@ -695,9 +2936,126 @@
     {
         {Pinnacle/Fantasy/Wayhaven Docks/Isle of Ao} {177}
     }
+    {^Orange Sherbet Pop-Up$} 
+    {
+        {Pinnacle/Chaos/Good Humor Truck} {7}
+    }
     {^Orange fox$} 
     {
         {Pinnacle/Fantasy/Around the town of Angelo/Forest Trail/Mountain Path} {4}
+    }
+    {^Orc Archer$} 
+    {
+        {Pinnacle/Fantasy/Longshadow Camp/Longshadow Battleground} {15}
+    }
+    {^Orc Blood Guard$} 
+    {
+        {Pinnacle/Fantasy/Longshadow Camp/Longshadow Battleground} {25}
+    }
+    {^Orc Centurion$} 
+    {
+        {Pinnacle/Fantasy/Longshadow Camp/Longshadow Battleground} {94}
+    }
+    {^Orc Champion$} 
+    {
+        {Pinnacle/Fantasy/Longshadow Camp/Longshadow Battleground} {89}
+    }
+    {^Orc Grunt$} 
+    {
+        {Pinnacle/Fantasy/Longshadow Camp/Longshadow Battleground} {97}
+    }
+    {^Orc High Warlord$} 
+    {
+        {Pinnacle/Fantasy/Longshadow Camp/Longshadow Battleground} {254}
+    }
+    {^Orc Legionnaire \x7Benraged\x7D$} 
+    {
+        {Pinnacle/Fantasy/Longshadow Camp/Longshadow Battleground} {27}
+    }
+    {^Orc Legionnaire$} 
+    {
+        {Pinnacle/Fantasy/Longshadow Camp/Longshadow Battleground} {77}
+    }
+    {^Orc Lieutenant$} 
+    {
+        {Pinnacle/Fantasy/Longshadow Camp/Longshadow Battleground} {87}
+    }
+    {^Orc Mage$} 
+    {
+        {Pinnacle/Fantasy/Longshadow Camp} {13}
+    }
+    {^Orc Patrol$} 
+    {
+        {Pinnacle/Fantasy/Longshadow Camp} {13}
+    }
+    {^Orc Scout$} 
+    {
+        {Pinnacle/Fantasy/Longshadow Camp/Longshadow Battleground} {83}
+    }
+    {^Orc Sergeant$} 
+    {
+        {Pinnacle/Fantasy/Longshadow Camp/Longshadow Battleground} {79}
+    }
+    {^Orc Shaman$} 
+    {
+        {Pinnacle/Fantasy/Longshadow Camp/Longshadow Battleground} {82}
+    }
+    {^Orc Stone Guard$} 
+    {
+        {Pinnacle/Fantasy/Longshadow Camp/Longshadow Battleground} {100}
+    }
+    {^Orc Warlock$} 
+    {
+        {Pinnacle/Fantasy/Longshadow Camp/Longshadow Battleground} {96}
+    }
+    {^Orc Warlord$} 
+    {
+        {Pinnacle/Fantasy/Longshadow Camp/Longshadow Battleground} {93}
+    }
+    {^Orc$} 
+    {
+        {Pinnacle/Fantasy} {783}
+        {Pinnacle/Fantasy/Lonely Keep} {3}
+    }
+    {^Oreo$} 
+    {
+        {Pinnacle/Chaos/Android Showroom} {35}
+    }
+    {^Osyluth$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain} {48}
+    }
+    {^Otyugh$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain/Faunist Guild} {216}
+    }
+    {^P.C. Charlie Baker$} 
+    {
+        {Pinnacle/Chaos/Old London} {5}
+    }
+    {^P.C. James Harvey$} 
+    {
+        {Pinnacle/Chaos/Old London} {17}
+    }
+    {^P.C. Shaun O'Flaherty$} 
+    {
+        {Pinnacle/Chaos/Old London} {19}
+    }
+    {^P.C. William Jones$} 
+    {
+        {Pinnacle/Chaos/Old London} {24}
+    }
+    {^P.E.T. Gang Leader$} 
+    {
+        {Pinnacle/Science/Detroit} {165}
+    }
+    {^Patrol Officer$} 
+    {
+        {Pinnacle/Science/Detroit} {127}
+    }
+    {^Paul - The Aged Farmer$} 
+    {
+        {Pinnacle/Crafting} {12}
     }
     {^Petunia, the puppy lady$} 
     {
@@ -707,71 +3065,420 @@
     {
         {Pinnacle/Fantasy/Ravenloft/Masque} {11}
     }
+    {^Plainsman$} 
+    {
+        {Pinnacle/Fantasy} {337}
+    }
     {^Planar Spirit$} 
     {
         {Pinnacle/Fantasy/Alizarian Tower} {19}
+    }
+    {^Playful Heart Monkey$} 
+    {
+        {Pinnacle/Chaos/Care Bears} {36}
+    }
+    {^Please the Zombie$} 
+    {
+        {Pinnacle/Fantasy/Necromancer Guild} {41}
+    }
+    {^Police Officer$} 
+    {
+        {Pinnacle/Science/New York} {9}
+    }
+    {^Pooki Maya$} 
+    {
+        {Pinnacle/Fantasy/Wayhaven Docks/Isle of Ao} {57}
     }
     {^Porsche 944 turbo, driven by a psychotic maniac$} 
     {
         {Pinnacle/Science/Atlanta} {34}
     }
+    {^Praying Mantis$} 
+    {
+        {Pinnacle/Science/Mantis Swamp} {5}
+    }
+    {^Predator \x28hunter\x29$} 
+    {
+        {Pinnacle/Science/New York/NASTAR} {89}
+    }
+    {^Predator \x28warrior\x29$} 
+    {
+        {Pinnacle/Science/New York/NASTAR} {102}
+    }
+    {^Predator \x28worker\x29$} 
+    {
+        {Pinnacle/Science/New York/NASTAR} {71}
+    }
+    {^Princess Qi$} 
+    {
+        {Pinnacle/Chaos/Mahjongg} {1}
+    }
+    {^Processing Plant Guard$} 
+    {
+        {Pinnacle/Science/Hamilton Plant} {4}
+    }
+    {^Professor Cold-Heart$} 
+    {
+        {Pinnacle/Chaos/Care Bears} {52}
+    }
+    {^Puma$} 
+    {
+        {Pinnacle/Fantasy/Wayhaven Docks/Serinth} {255}
+    }
+    {^Punk$} 
+    {
+        {Pinnacle/Science/Detroit} {149}
+        {Pinnacle/Science/Lost City} {30}
+    }
+    {^Puppy$} 
+    {
+        {Pinnacle/Science/Lost City} {24}
+    }
+    {^Purple Butterfly$} 
+    {
+        {Pinnacle/Chaos/Mahjongg} {67}
+    }
+    {^Queen of the Blobs$} 
+    {
+        {Pinnacle/Science/Forgotten sewers} {79}
+    }
+    {^Queen's Elite Guardswoman \x28demoralized\x29$} 
+    {
+        {Pinnacle/Fantasy/Portal of Life v2} {4}
+    }
     {^Queen's Elite Guardswoman$} 
     {
+        {Pinnacle/Fantasy} {726}
         {Pinnacle/Fantasy/Portal of Life} {4}
         {Pinnacle/Fantasy/Portal of Life v2} {83}
+        {Pinnacle/Fantasy/Portal of Life v3} {4}
     }
     {^Rabid Wolf$} 
     {
+        {Pinnacle/Fantasy/Portal of Life} {31}
         {Pinnacle/Fantasy/Portal of Life v2} {78}
+        {Pinnacle/Fantasy/Portal of Life v3} {322}
     }
-    {^Ragged Peasant$} 
+    {^Rachlan the Pure Necromancer \x28pure\x29$} 
+    {
+        {Pinnacle/Fantasy/Necromancer Guild} {76}
+    }
+    {^Ragged Peasant \x28demoralized\x29$} 
     {
         {Pinnacle/Fantasy/Portal of Life v2} {1}
     }
+    {^Ragged Peasant$} 
+    {
+        {Pinnacle/Fantasy} {726}
+        {Pinnacle/Fantasy/Portal of Life} {145}
+        {Pinnacle/Fantasy/Portal of Life v2} {1}
+        {Pinnacle/Fantasy/Portal of Life v3} {1}
+    }
+    {^Ragnok Aspian$} 
+    {
+        {Pinnacle/Science/Alien Ship} {51}
+    }
+    {^Rainbow Sherbet Pop-Up$} 
+    {
+        {Pinnacle/Chaos/Good Humor Truck} {7}
+    }
+    {^Rattle Snake$} 
+    {
+        {Pinnacle/Fantasy} {439}
+    }
+    {^Ray the marine$} 
+    {
+        {Pinnacle/Science/UED Installation} {3}
+    }
     {^Raylorn the Prime Necromancer \x28neutral\x29$} 
     {
+        {Pinnacle/Fantasy} {757}
         {Pinnacle/Fantasy/Necromancer Guild} {5}
+        {Pinnacle/Fantasy/Portal of Life v2} {1}
+    }
+    {^Red Abishai$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain} {94}
+    }
+    {^Red Butterfly$} 
+    {
+        {Pinnacle/Chaos/Mahjongg} {27}
+    }
+    {^Red Charioteer$} 
+    {
+        {Pinnacle/Chaos/Chess Board} {51}
+    }
+    {^Red Chinese Dragon$} 
+    {
+        {Pinnacle/Chaos/Mahjongg} {60}
+    }
+    {^Red Counsellor$} 
+    {
+        {Pinnacle/Chaos/Chess Board} {54}
+    }
+    {^Red Cross Medic$} 
+    {
+        {Pinnacle/Chaos/Chess Board} {31}
+    }
+    {^Red Foot Soldier$} 
+    {
+        {Pinnacle/Chaos/Chess Board} {35}
+    }
+    {^Red Horseman$} 
+    {
+        {Pinnacle/Chaos/Chess Board} {37}
+    }
+    {^Red King$} 
+    {
+        {Pinnacle/Chaos/Chess Board} {57}
+    }
+    {^Red Priest$} 
+    {
+        {Pinnacle/Chaos/Chess Board} {53}
+    }
+    {^Red Rabbit$} 
+    {
+        {Pinnacle/Chaos/Mahjongg} {59}
+    }
+    {^Red jaguarundi stalking the rubble$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain} {132}
+    }
+    {^Red-bellied sapsucker$} 
+    {
+        {Pinnacle/Fantasy/Wayhaven Docks/Serinth} {117}
+    }
+    {^Refugee \x28good\x29$} 
+    {
+        {Pinnacle/Science/Fallout Shelter} {4}
+    }
+    {^Refugee$} 
+    {
+        {Pinnacle/Science/Fallout Shelter} {32}
+    }
+    {^Rhyson's storm servant Baggage$} 
+    {
+        {Pinnacle} {6}
+    }
+    {^Robert$} 
+    {
+        {Pinnacle} {85}
+    }
+    {^Robotic sparring partner$} 
+    {
+        {Pinnacle/Science/New York/NASTAR} {29}
     }
     {^Rocko the redneck$} 
     {
         {Pinnacle/Chaos/Puppy Mill} {16}
     }
+    {^Rocky the Tough \x28adventurer\x29$} 
+    {
+        {Pinnacle/Fantasy} {454}
+    }
     {^Rolan the wise sage \x28Pinnacle\x29$} 
     {
         {Pinnacle} {114}
+    }
+    {^Roland Smith, the shop keeper$} 
+    {
+        {Pinnacle/Fantasy/Around the town of Angelo} {32}
+    }
+    {^Royal House Guard$} 
+    {
+        {Pinnacle/Chaos/Crydee} {36}
     }
     {^Rudolph Guiliani \x28taking a dump\x29$} 
     {
         {Pinnacle/Science/New York/Carnegie Hall} {301}
     }
+    {^Rul'taasa \x28nomad\x29$} 
+    {
+        {Pinnacle/Fantasy} {763}
+        {Pinnacle/Fantasy/Lonely Keep} {3}
+    }
+    {^Sabretoothed tiger$} 
+    {
+        {Pinnacle/Fantasy} {804}
+    }
     {^Sales Clerk$} 
     {
         {Pinnacle} {81}
+    }
+    {^Sammy the Budweiser Frog$} 
+    {
+        {Pinnacle/Chaos/Brewery Swamp} {11}
+    }
+    {^Samson$} 
+    {
+        {Pinnacle/Chaos/Erratio Forest/The Tabard Inn} {5}
+    }
+    {^Sandra$} 
+    {
+        {Pinnacle/Science/Lost City} {35}
     }
     {^Scared Mother$} 
     {
         {Pinnacle/Science} {295}
         {Pinnacle/Science/Crashed Plane} {1}
     }
+    {^Screetchie$} 
+    {
+        {Pinnacle/Chaos/Care Bears} {30}
+    }
+    {^Screw Ball$} 
+    {
+        {Pinnacle/Chaos/Good Humor Truck} {10}
+    }
+    {^Sea Serpent$} 
+    {
+        {Pinnacle/Chaos/Mahjongg} {16}
+    }
+    {^Sebastian - The Legendary Enchanter$} 
+    {
+        {Pinnacle/Crafting} {9}
+    }
     {^Second Lieutenant Na-Eethe$} 
     {
         {Pinnacle} {203}
     }
+    {^Secret Bear$} 
+    {
+        {Pinnacle/Chaos/Care Bears} {15}
+    }
+    {^Sergeant Alvis Andromanche$} 
+    {
+        {Pinnacle/Science/Detroit} {23}
+    }
+    {^Sergeant$} 
+    {
+        {Pinnacle/Science/UED Installation} {7}
+    }
+    {^Servant \x28working\x29$} 
+    {
+        {Pinnacle/Chaos/Crydee} {18}
+    }
+    {^Señor Meow-meow the fluffy persian cat$} 
+    {
+        {Pinnacle/Chaos/Care Bears} {1}
+    }
+    {^Sgt. Raymond Perez$} 
+    {
+        {Pinnacle/Science/The Amazon Research Center} {47}
+    }
     {^Shadow Guard$} 
     {
+        {Pinnacle/Fantasy/Portal of Life} {94}
         {Pinnacle/Fantasy/Portal of Life v2} {324}
+        {Pinnacle/Fantasy/Portal of Life v3} {94}
+    }
+    {^Shaggy rabbit$} 
+    {
+        {Pinnacle/Chaos/Mystic Forest} {6}
+    }
+    {^Share Bear$} 
+    {
+        {Pinnacle/Chaos/Care Bears} {10}
+    }
+    {^Siem's CZ Secretary Droid GNK$} 
+    {
+        {Pinnacle/Chaos/Chaos Cinemaplex/Hotel Transylvania} {17}
+    }
+    {^Siem's LOM Series Protocol Droid GNK$} 
+    {
+        {Pinnacle/Chaos/Chaos Cinemaplex/Hotel Transylvania} {17}
+    }
+    {^Siem's MN-2E General Maintenance Droid GNK$} 
+    {
+        {Pinnacle/Chaos/Chaos Cinemaplex/Hotel Transylvania} {64}
+    }
+    {^Silvana Sidhe, Herald of Winter$} 
+    {
+        {Pinnacle/Fantasy/A Quiet Henge} {16}
+    }
+    {^Simon Kendrick$} 
+    {
+        {Pinnacle/Science/Detroit} {133}
+    }
+    {^Sir Prilmas, Knight of the Obsidian Order$} 
+    {
+        {Pinnacle/Fantasy} {348}
     }
     {^Skeletal Bat$} 
     {
         {Pinnacle/Fantasy/Ravenloft/Schloss Mordenheim} {12}
     }
+    {^Skeletal Warrior Lord$} 
+    {
+        {Pinnacle/Fantasy/Wayhaven Docks/Serinth} {694}
+    }
+    {^Skeletal Warrior$} 
+    {
+        {Pinnacle/Fantasy/Wayhaven Docks/Serinth} {691}
+    }
     {^Skeleton guard$} 
     {
         {Pinnacle/Fantasy/Around the town of Angelo/Forest Trail/Elven Graveyard} {20}
     }
+    {^Slithering snake$} 
+    {
+        {Pinnacle/Chaos/Brewery Swamp} {10}
+    }
+    {^Slug$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {1}
+    }
+    {^Small Deer$} 
+    {
+        {Pinnacle/Fantasy} {331}
+    }
+    {^Small black bat \x28shriveled\x29$} 
+    {
+        {Pinnacle/Fantasy/Wayhaven Docks/Serinth} {686}
+    }
+    {^Small black bat$} 
+    {
+        {Pinnacle/Fantasy/Wayhaven Docks/Serinth} {690}
+    }
+    {^Small brown bat \x28shriveled\x29$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain/Faunist Guild} {58}
+    }
+    {^Small brown bat$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain/Faunist Guild} {58}
+    }
+    {^Small brown rat$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain/Faunist Guild} {86}
+    }
+    {^Small gray mouse$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain/Faunist Guild} {9}
+    }
+    {^Small rabbit$} 
+    {
+        {Pinnacle/Chaos/Mystic Forest} {6}
+    }
+    {^Smallheart Bear$} 
+    {
+        {Pinnacle/Chaos/Care Bears} {21}
+    }
+    {^Snake$} 
+    {
+        {Pinnacle/Fantasy} {594}
+    }
+    {^Snow Cone$} 
+    {
+        {Pinnacle/Chaos/Good Humor Truck} {10}
+    }
     {^Some moron with a lead pipe$} 
     {
         {Pinnacle/Chaos/Puppy Mill} {15}
+    }
+    {^Some mosquitos flying around$} 
+    {
+        {Pinnacle/Science/Swede Research Center} {3}
     }
     {^Some vines$} 
     {
@@ -781,9 +3488,33 @@
     {
         {Pinnacle/Science/New York/Carnegie Hall} {88}
     }
+    {^Spider-Man Bar$} 
+    {
+        {Pinnacle/Chaos/Good Humor Truck} {9}
+    }
     {^Spirit of a drowned mage$} 
     {
         {Pinnacle/Fantasy/Around the town of Angelo/Forest Trail} {19}
+    }
+    {^Sqeek$} 
+    {
+        {Pinnacle/Fantasy/Wayhaven Docks/Isle of Ao} {8}
+    }
+    {^Squirrel$} 
+    {
+        {Pinnacle/Fantasy} {658}
+    }
+    {^Squirrel's storm servant Acorn$} 
+    {
+        {Pinnacle} {7}
+    }
+    {^Starling$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain} {50}
+    }
+    {^Steel Golem$} 
+    {
+        {Pinnacle/Fantasy/Zelligar's Castle} {7}
     }
     {^Steve Roast$} 
     {
@@ -793,9 +3524,65 @@
     {
         {Pinnacle} {56}
     }
+    {^Stewart wants to come out of the closet now$} 
+    {
+        {Pinnacle/Chaos/Beavis and Butthead} {3}
+    }
+    {^Stewart's mum is crying$} 
+    {
+        {Pinnacle/Chaos/Beavis and Butthead} {6}
+    }
+    {^Stone Golem$} 
+    {
+        {Pinnacle/Fantasy/Zelligar's Castle} {8}
+    }
+    {^Stone giant$} 
+    {
+        {Pinnacle/Fantasy/Giant Camp} {1}
+    }
+    {^Straw Golem$} 
+    {
+        {Pinnacle/Fantasy/Zelligar's Castle} {4}
+    }
+    {^Strawberry Shortcake Bar$} 
+    {
+        {Pinnacle/Chaos/Good Humor Truck} {6}
+    }
+    {^Stupidheart Bear$} 
+    {
+        {Pinnacle/Chaos/Care Bears} {21}
+    }
     {^Sumaren, Vizier to King Alaren$} 
     {
         {Pinnacle/Fantasy/New Arovian Graveyard/Tomb of King Alaren} {26}
+    }
+    {^Sung$} 
+    {
+        {Pinnacle/Science/Lost City} {47}
+    }
+    {^Sunset Pygmy$} 
+    {
+        {Pinnacle/Fantasy/Wayhaven Docks/Serinth} {157}
+    }
+    {^Sunshine Bear$} 
+    {
+        {Pinnacle/Chaos/Care Bears} {20}
+    }
+    {^Superintendant Thomas Arnold$} 
+    {
+        {Pinnacle/Chaos/Old London} {11}
+    }
+    {^Swamp thing$} 
+    {
+        {Pinnacle/Fantasy/Wayhaven Docks/Serinth} {157}
+    }
+    {^Swedish Heart Bear$} 
+    {
+        {Pinnacle/Chaos/Care Bears} {47}
+    }
+    {^Swiftheart the Rabbit$} 
+    {
+        {Pinnacle/Chaos/Care Bears} {43}
     }
     {^Sylth \x28rotted\x29$} 
     {
@@ -803,19 +3590,111 @@
     }
     {^Sylvan Elf$} 
     {
+        {Pinnacle/Fantasy} {726}
+        {Pinnacle/Fantasy/Portal of Life} {9}
         {Pinnacle/Fantasy/Portal of Life v2} {197}
+        {Pinnacle/Fantasy/Portal of Life v3} {94}
+    }
+    {^TSA Security$} 
+    {
+        {Pinnacle/Science/O'Hare International Airport} {14}
+    }
+    {^TSA Tactical Response Officer$} 
+    {
+        {Pinnacle/Science/O'Hare International Airport} {11}
+    }
+    {^Tabol the Newbie \x28adventurer\x29$} 
+    {
+        {Pinnacle/Fantasy} {792}
+    }
+    {^Taki the Mighty \x28adventurer\x29$} 
+    {
+        {Pinnacle/Fantasy/Lonely Keep} {3}
+    }
+    {^Taki the Newbie \x28adventurer\x29$} 
+    {
+        {Pinnacle/Fantasy} {411}
+    }
+    {^Tattered Monkey$} 
+    {
+        {Pinnacle/Science/Detroit} {166}
+    }
+    {^Tenderheart$} 
+    {
+        {Pinnacle/Chaos/Care Bears} {7}
+    }
+    {^Terra, Knight of Earth$} 
+    {
+        {Pinnacle/Chaos/Terra's Terrific Treehouse} {34}
+    }
+    {^Thanamere, Keeper of the scrolls$} 
+    {
+        {Pinnacle/Fantasy/Necromancer Guild} {40}
+    }
+    {^The Alphabet Serial Killer$} 
+    {
+        {Pinnacle/Chaos/Alphabet Land} {1}
     }
     {^The Cobra Commander$} 
     {
         {Pinnacle/Chaos/Sweetboots' House} {20}
     }
+    {^The Cook$} 
+    {
+        {Pinnacle/Chaos/Erratio Forest/The Tabard Inn} {1}
+    }
     {^The Edge$} 
     {
         {Pinnacle/Science/New York/Carnegie Hall} {75}
     }
+    {^The Good Humor Ice Cream Man$} 
+    {
+        {Pinnacle/Chaos} {79}
+        {Pinnacle/Chaos/Good Humor Truck} {1}
+    }
+    {^The Great White$} 
+    {
+        {Pinnacle/Chaos/Good Humor Truck} {9}
+    }
     {^The Gypsy$} 
     {
         {Pinnacle} {20}
+    }
+    {^The High Priestess of Kourlyn$} 
+    {
+        {Pinnacle/Fantasy/Kourlyn Temple} {152}
+    }
+    {^The Holy Priest of the 3 Kingdoms$} 
+    {
+        {Pinnacle} {66}
+    }
+    {^The Knight$} 
+    {
+        {Pinnacle/Chaos/Erratio Forest/The Tabard Inn} {1}
+    }
+    {^The Miller$} 
+    {
+        {Pinnacle/Chaos/Erratio Forest/The Tabard Inn} {1}
+    }
+    {^The Monk$} 
+    {
+        {Pinnacle/Chaos/Erratio Forest/The Tabard Inn} {1}
+    }
+    {^The Nameless One$} 
+    {
+        {Pinnacle/Fantasy/Kourlyn Temple} {152}
+    }
+    {^The Plant with the Most Soul$} 
+    {
+        {Pinnacle/Chaos} {94}
+    }
+    {^The Pope$} 
+    {
+        {Pinnacle} {80}
+    }
+    {^The Spirit of Vindaes$} 
+    {
+        {Pinnacle/Fantasy/Tower of Vindaes} {11}
     }
     {^The Twilight Guardian$} 
     {
@@ -829,9 +3708,21 @@
     {
         {Pinnacle} {18}
     }
+    {^The village shaman$} 
+    {
+        {Pinnacle/Science/New York/NASTAR} {54}
+    }
     {^Theela the Necromancer \x28moral\x29$} 
     {
         {Pinnacle/Fantasy/Necromancer Guild} {46}
+    }
+    {^Theseus, The Duke of Athens$} 
+    {
+        {Pinnacle/Chaos/Erratio Forest/The Tabard Inn} {20}
+    }
+    {^Thorn beast$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {364}
     }
     {^Timmy the Ghost$} 
     {
@@ -841,6 +3732,10 @@
     {
         {Pinnacle/Science/Atlanta} {59}
     }
+    {^Toasted Almond Bar$} 
+    {
+        {Pinnacle/Chaos/Good Humor Truck} {6}
+    }
     {^Toe lint \x28angry\x29$} 
     {
         {Pinnacle/Chaos} {65}
@@ -849,9 +3744,69 @@
     {
         {Pinnacle} {35}
     }
+    {^Torician beetle$} 
+    {
+        {Pinnacle/Fantasy/Wayhaven Docks/Serinth} {157}
+    }
+    {^Torix - The Ultimate Wrangler$} 
+    {
+        {Pinnacle/Crafting} {8}
+    }
+    {^Torture Adept$} 
+    {
+        {Pinnacle/Fantasy/Tower of Vindaes} {9}
+    }
+    {^Torture Apprentice$} 
+    {
+        {Pinnacle/Fantasy/Tower of Vindaes} {9}
+    }
+    {^Toucan$} 
+    {
+        {Pinnacle/Fantasy/Wayhaven Docks/Serinth} {255}
+    }
+    {^Tourist$} 
+    {
+        {Pinnacle/Science/O'Hare International Airport} {9}
+    }
+    {^Town Guard of Angelo$} 
+    {
+        {Pinnacle/Fantasy/Around the town of Angelo} {24}
+    }
+    {^Town Peasant$} 
+    {
+        {Pinnacle/Fantasy/Around the town of Angelo} {24}
+    }
+    {^Toxic Waste Bear$} 
+    {
+        {Pinnacle/Chaos/Care Bears} {51}
+    }
+    {^Toyota-Chrysler Jackrabbit 2050, driven by your Dean of Students$} 
+    {
+        {Pinnacle/Science/Atlanta} {102}
+    }
+    {^TreatHeart Pig$} 
+    {
+        {Pinnacle/Chaos/Care Bears} {41}
+    }
+    {^Tree Guardian$} 
+    {
+        {Pinnacle/Chaos/Terra's Terrific Treehouse} {21}
+    }
+    {^Trisky's 3PO Protocol Droid Alfred$} 
+    {
+        {Pinnacle/Chaos/Chaos Cinemaplex/Hotel Transylvania} {1}
+    }
     {^Trixie Hilton$} 
     {
         {Pinnacle/Science/New York/Carnegie Hall} {72}
+    }
+    {^Troll$} 
+    {
+        {Pinnacle/Fantasy} {710}
+    }
+    {^Truck Driver$} 
+    {
+        {Pinnacle/Science/Hamilton Plant} {1}
     }
     {^Truck driver$} 
     {
@@ -861,6 +3816,10 @@
     {
         {Pinnacle/Chaos/Sweetboots' House} {30}
     }
+    {^Two-Headed Troll$} 
+    {
+        {Pinnacle/Fantasy/Rabbit Fields/The Drow Kingdom of fe dar Shad} {107}
+    }
     {^U-Pick Turkey Farmer$} 
     {
         {Pinnacle} {8}
@@ -869,6 +3828,10 @@
     {
         {Pinnacle/Science} {295}
         {Pinnacle/Science/Crashed Plane} {1}
+    }
+    {^Ugolino, Count of Pisa$} 
+    {
+        {Pinnacle/Chaos/Erratio Forest/The Tabard Inn} {10}
     }
     {^Undead Dragon$} 
     {
@@ -898,17 +3861,161 @@
     {
         {Pinnacle/Fantasy/Alizarian Tower} {19}
     }
+    {^Uumul Erg of Fire \x28burning\x29$} 
+    {
+        {Pinnacle/Science/Fallout Shelter} {98}
+    }
+    {^Varant Aspian$} 
+    {
+        {Pinnacle/Science/Alien Ship} {52}
+    }
+    {^Venomous sludge$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {7}
+    }
+    {^Veteran adventurer$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain} {326}
+    }
+    {^Video-Camera$} 
+    {
+        {Pinnacle/Science/New York/NASTAR} {21}
+    }
+    {^Vilgan$} 
+    {
+        {Pinnacle} {1}
+    }
+    {^Village Wisewoman$} 
+    {
+        {Pinnacle/Fantasy/Portal of Life} {144}
+        {Pinnacle/Fantasy/Portal of Life v2} {144}
+    }
+    {^Villager$} 
+    {
+        {Pinnacle/Fantasy/Wayhaven Docks/Serinth} {359}
+    }
+    {^Vindaes, the Torture Master$} 
+    {
+        {Pinnacle/Fantasy/Tower of Vindaes} {12}
+    }
     {^Vinnie$} 
     {
         {Pinnacle/Chaos/Sweetboots' House} {8}
     }
+    {^Volt$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain/Faunist Guild} {5}
+    }
+    {^Vulture$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain} {186}
+    }
+    {^Warehouse Supervisor$} 
+    {
+        {Pinnacle/Science/Hamilton Plant} {3}
+    }
+    {^Warriv the Caravan Leader$} 
+    {
+        {Pinnacle/Chaos/Gamer's House/Diablo 2/Normal/Hell Cows} {1}
+    }
+    {^Watch the Zombie$} 
+    {
+        {Pinnacle/Fantasy/Necromancer Guild} {45}
+    }
+    {^Wayhaven City Guard Sergeant$} 
+    {
+        {Pinnacle/Fantasy} {31}
+    }
+    {^Wayhaven City Guard$} 
+    {
+        {Pinnacle/Fantasy} {31}
+    }
+    {^Wayne$} 
+    {
+        {Pinnacle/Chaos/Chaos Cinemaplex/Hotel Transylvania} {10}
+    }
+    {^Weak Heart Bear$} 
+    {
+        {Pinnacle/Chaos/Care Bears} {37}
+    }
+    {^Weary old man$} 
+    {
+        {Pinnacle/Science/O'Hare International Airport} {5}
+    }
+    {^Wesley the marine$} 
+    {
+        {Pinnacle/Science} {190}
+        {Pinnacle/Science/UED Installation} {1}
+    }
+    {^Whisper-to the Ghoul$} 
+    {
+        {Pinnacle/Fantasy/Necromancer Guild} {41}
+    }
+    {^White Charioteer$} 
+    {
+        {Pinnacle/Chaos/Chess Board} {59}
+    }
+    {^White Counsellor$} 
+    {
+        {Pinnacle/Chaos/Chess Board} {64}
+    }
+    {^White Foot Soldier$} 
+    {
+        {Pinnacle/Chaos/Chess Board} {5}
+    }
+    {^White Horseman$} 
+    {
+        {Pinnacle/Chaos/Chess Board} {15}
+    }
+    {^White King$} 
+    {
+        {Pinnacle/Chaos/Chess Board} {65}
+    }
+    {^White Priest$} 
+    {
+        {Pinnacle/Chaos/Chess Board} {17}
+    }
+    {^White Tiger$} 
+    {
+        {Pinnacle/Chaos/Mahjongg} {25}
+    }
+    {^Widerlich$} 
+    {
+        {Pinnacle/Fantasy/Wayhaven Docks/Isle of Ao} {12}
+    }
+    {^Wife of King Capaneus$} 
+    {
+        {Pinnacle/Chaos/Erratio Forest/The Tabard Inn} {15}
+    }
     {^Wild Stag$} 
     {
+        {Pinnacle/Fantasy/Portal of Life} {89}
         {Pinnacle/Fantasy/Portal of Life v2} {122}
+        {Pinnacle/Fantasy/Portal of Life v3} {261}
+    }
+    {^Winged Horse$} 
+    {
+        {Pinnacle/Chaos/Mahjongg} {5}
+    }
+    {^Wish Bear$} 
+    {
+        {Pinnacle/Chaos/Care Bears} {17}
+    }
+    {^Woman in Black$} 
+    {
+        {Pinnacle/Chaos/Erratio Forest/The Tabard Inn} {15}
     }
     {^Woody Allen$} 
     {
         {Pinnacle/Science/New York/Carnegie Hall} {88}
+    }
+    {^Worn Out Bear$} 
+    {
+        {Pinnacle/Science/Detroit} {168}
+    }
+    {^Wretch$} 
+    {
+        {Pinnacle/Science/Lost City} {14}
     }
     {^Wysath, Medals Archivist$} 
     {
@@ -920,16 +4027,110 @@
     }
     {^Wyvern$} 
     {
+        {Pinnacle/Fantasy/Portal of Life} {92}
         {Pinnacle/Fantasy/Portal of Life v2} {260}
+        {Pinnacle/Fantasy/Portal of Life v3} {309}
+    }
+    {^Xaryl's aerial servant Princess$} 
+    {
+        {Pinnacle/Chaos/Chaos Cinemaplex/Hotel Transylvania} {1}
     }
     {^Xithe the priest$} 
     {
         {Pinnacle/Fantasy/Ravenloft} {129}
     }
+    {^Xxixx Erg of Radiation \x28radioactive\x29$} 
+    {
+        {Pinnacle/Science/Fallout Shelter} {99}
+    }
+    {^Yeti$} 
+    {
+        {Pinnacle/Fantasy} {929}
+    }
     {^Young Boy$} 
     {
         {Pinnacle/Science} {295}
         {Pinnacle/Science/Crashed Plane} {1}
+    }
+    {^Young refugee$} 
+    {
+        {Pinnacle/Science/Fallout Shelter} {16}
+    }
+    {^Yulli the Ship's Bosun$} 
+    {
+        {Pinnacle/Fantasy/Wayhaven Docks/Thistlebeard's Galleon} {1}
+    }
+    {^Yvon the Blacksmith$} 
+    {
+        {Pinnacle/Crafting} {21}
+    }
+    {^Zamuza$} 
+    {
+        {Pinnacle/Science/Section Z} {145}
+    }
+    {^Zarinth, Mage of the Flaming Palm$} 
+    {
+        {Pinnacle/Fantasy} {348}
+    }
+    {^Zed$} 
+    {
+        {Pinnacle/Science/Lost City} {18}
+    }
+    {^Zelligar the Apprentice Golem Master$} 
+    {
+        {Pinnacle/Fantasy/Zelligar's Castle} {81}
+    }
+    {^Zelligar the Learned Golem Master$} 
+    {
+        {Pinnacle/Fantasy/Zelligar's Castle} {81}
+    }
+    {^Zenobia$} 
+    {
+        {Pinnacle/Chaos/Erratio Forest/The Tabard Inn} {9}
+    }
+    {^Zoomaster$} 
+    {
+        {Pinnacle/Science/Detroit} {171}
+    }
+    {^Zulzor Erg of Electricity \x28arcing\x29$} 
+    {
+        {Pinnacle/Science/Fallout Shelter} {97}
+    }
+    {^a Clone Soldier$} 
+    {
+        {Pinnacle/Science/Section Z} {13}
+    }
+    {^a Cloud Eye$} 
+    {
+        {Pinnacle/Science/Section Z} {26}
+    }
+    {^a Groma$} 
+    {
+        {Pinnacle/Science/Section Z} {53}
+    }
+    {^a Leago$} 
+    {
+        {Pinnacle/Science/Section Z} {31}
+    }
+    {^a Leeva$} 
+    {
+        {Pinnacle/Science/Section Z} {44}
+    }
+    {^a Massive Generator$} 
+    {
+        {Pinnacle/Science/Section Z} {69}
+    }
+    {^a Ripper$} 
+    {
+        {Pinnacle/Science/Section Z} {67}
+    }
+    {^a Spiral Gun$} 
+    {
+        {Pinnacle/Science/Section Z} {17}
+    }
+    {^a bottle of Turnhold brand whiskey$} 
+    {
+        {Pinnacle} {1}
     }
     {^a featureless stone statue$} 
     {
@@ -951,6 +4152,14 @@
     {
         {Pinnacle/Fantasy/Catacombs 2} {98}
     }
+    {^a mosquito$} 
+    {
+        {Pinnacle} {6}
+    }
+    {^a small, pointy-nosed troll$} 
+    {
+        {Pinnacle/Fantasy} {703}
+    }
     {^a statue crafted of wood$} 
     {
         {Pinnacle/Fantasy/Catacombs 2} {98}
@@ -962,6 +4171,10 @@
     {^a stray cat$} 
     {
         {Pinnacle} {77}
+    }
+    {^a swift falcon$} 
+    {
+        {Pinnacle/Fantasy/Portal of Life v2} {107}
     }
     {^a vampire soldier$} 
     {
@@ -990,6 +4203,10 @@
     {^dark treant \x28adult\x29$} 
     {
         {Pinnacle/Fantasy/Ravenloft/Treant Forest} {42}
+    }
+    {^dark treant \x28elder\x29$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Treant Forest} {29}
     }
     {^dark treant \x28young\x29$} 
     {
@@ -1059,9 +4276,17 @@
     {
         {Pinnacle/Science/New York/Aegis Global} {89}
     }
+    {^shadow creature$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Treant Forest} {29}
+    }
     {^shambling zombie$} 
     {
         {Pinnacle/Science/New York/Aegis Global} {17}
+    }
+    {^skeletal bat$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Treant Forest} {42}
     }
     {^skeletal elf$} 
     {
@@ -1082,6 +4307,11 @@
     {^vampire bat$} 
     {
         {Pinnacle/Fantasy/Ravenloft} {35}
+    }
+    {^villager$} 
+    {
+        {Pinnacle} {27}
+        {Pinnacle/Chaos} {21}
     }
     {^vomit-splattered zombie$} 
     {

@@ -2,6 +2,39 @@
 
 #VARIABLE {_area_item_index}
 {
+    { \(.+ liquid\)} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {191}
+        {Pinnacle/Fantasy/Alizarian Tower} {37}
+        {Pinnacle/Fantasy/Land of the Ice People} {1}
+    }
+    {([\(\[])([\-\|\*]{5})[\)\]]\s.*$} 
+    {
+        {Pinnacle} {1}
+        {Pinnacle/Chaos/Chaos Cinemaplex/Hotel Transylvania} {52}
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {131}
+        {Pinnacle/Fantasy} {791}
+        {Pinnacle/Fantasy/Alizarian Tower} {43}
+        {Pinnacle/Fantasy/Catacombs} {19}
+        {Pinnacle/Fantasy/Katin/Necromancer Guild (old)} {1}
+        {Pinnacle/Fantasy/Kourlyn Temple} {84}
+        {Pinnacle/Fantasy/Necromancer Guild} {1}
+        {Pinnacle/Fantasy/New Arovian Graveyard/Tomb of King Alaren} {15}
+        {Pinnacle/Fantasy/Portal of Life v2} {271}
+        {Pinnacle/Fantasy/Wayhaven Docks/Isle of Ao} {12}
+        {Pinnacle/Science/Atlanta/DC Megatech/D.C. Megatech 2.0} {69}
+        {Pinnacle/Science/Detroit} {162}
+        {Pinnacle/Science/Lost City} {13}
+        {Pinnacle/Science/New York/Carnegie Hall} {159}
+        {Pinnacle/Science/O'Hare International Airport} {13}
+    }
+    {-\d.} 
+    {
+        {Pinnacle} {113}
+        {Pinnacle/Science/Detroit} {162}
+        {Pinnacle/Science/Fallout Shelter} {78}
+        {Pinnacle/Science/O'Hare International Airport} {13}
+    }
     {ATM} 
     {
         {Pinnacle} {7}
@@ -9,6 +42,18 @@
         {Pinnacle/Fantasy/Necromancer Guild} {73}
         {Pinnacle/Fantasy/Ravenloft} {66}
         {Pinnacle/Science/Atlanta} {14}
+    }
+    {^(Aluminum|Amber|Amethyst|Aquamarine|Bloodstone|Bone|Brass|Bronze|Ceramic|Copper|Coral|Diamond|Ebony|Electrum|Emerald|Garnet|Glass|Gold|Granite|Jacinth|Lead|Iron|Ivory|Jade|Jasper|Mahogany|Malachite|Maple|Marble|Moonstone|Oak|Obsidian|Onyx|Opal|Pearl|Peridot|Platinum|Pyrite|Quartz|Ruby|Sapphire|Sardonyx|Silver|Sodalite|Steel|Stone|Tin|Titanium|Topaz|Turquoise|Zinc|Zirconian) ring$} 
+    {
+        {Pinnacle} {6}
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {276}
+        {Pinnacle/Fantasy} {341}
+        {Pinnacle/Fantasy/Alizarian Tower} {37}
+        {Pinnacle/Fantasy/Land of the Ice People} {2}
+    }
+    {^(brown|green|orange|red|violet|yellow|black) gemstone$} 
+    {
+        {Pinnacle/Fantasy/Alizarian Tower} {48}
     }
     {^A Black Cape \x28glowing\x29$} 
     {
@@ -18,6 +63,10 @@
     {
         {Pinnacle/Chaos} {97}
     }
+    {^A Book$} 
+    {
+        {Pinnacle/Chaos} {77}
+    }
     {^A Bookcase$} 
     {
         {Pinnacle/Fantasy/Ravenloft/Ebonbane} {18}
@@ -26,25 +75,113 @@
     {
         {Pinnacle/Chaos} {108}
     }
+    {^A Bundle of Clothes$} 
+    {
+        {Pinnacle/Chaos/Chess Board} {49}
+    }
     {^A CD. \x28pirated\x29$} 
     {
         {Pinnacle/Chaos} {23}
     }
+    {^A Camera$} 
+    {
+        {Pinnacle/Chaos/Chess Board} {6}
+    }
+    {^A Cauldron$} 
+    {
+        {Pinnacle/Chaos/Care Bears} {29}
+    }
     {^A Chocolate Cake$} 
     {
         {Pinnacle/Chaos} {9}
+        {Pinnacle/Chaos/Chaos Cinemaplex/Hotel Transylvania} {1}
+    }
+    {^A Clear Blue potion$} 
+    {
+        {Pinnacle/Fantasy/Kourlyn Temple} {135}
+    }
+    {^A Cloud Car$} 
+    {
+        {Pinnacle/Chaos/Care Bears} {26}
+    }
+    {^A Concussion Rifle$} 
+    {
+        {Pinnacle/Science/Detroit} {127}
+    }
+    {^A Crazily Canted and Odd Pipe$} 
+    {
+        {Pinnacle/Chaos} {6}
+        {Pinnacle/Chaos/Chaos Cinemaplex/Hotel Transylvania} {1}
+    }
+    {^A Deep Green potion$} 
+    {
+        {Pinnacle/Fantasy/Kourlyn Temple} {106}
+    }
+    {^A Duplo ruler$} 
+    {
+        {Pinnacle} {6}
+    }
+    {^A Forge$} 
+    {
+        {Pinnacle/Crafting} {25}
+    }
+    {^A Green Lightning Jacket$} 
+    {
+        {Pinnacle/Science/Atlanta} {35}
+    }
+    {^A HUGE refrigerator$} 
+    {
+        {Pinnacle/Chaos} {20}
+    }
+    {^A Hawaiian shirt$} 
+    {
+        {Pinnacle/Science/O'Hare International Airport} {6}
+    }
+    {^A Heavy Plasma Rifle$} 
+    {
+        {Pinnacle/Science/Alien Ship} {51}
     }
     {^A Hockey Ticket$} 
     {
         {Pinnacle/Chaos} {102}
+        {Pinnacle/Chaos/Good Humor Truck} {1}
     }
     {^A Jaguar Skin$} 
     {
         {Pinnacle/Science/The Amazon Research Center} {47}
     }
+    {^A Keycard$} 
+    {
+        {Pinnacle/Science/Alien Ship} {51}
+    }
+    {^A Kiln$} 
+    {
+        {Pinnacle/Crafting} {24}
+    }
+    {^A LARGE WARNING SIGN$} 
+    {
+        {Pinnacle/Fantasy/Zelligar's Castle} {1}
+    }
+    {^A LED sign$} 
+    {
+        {Pinnacle/Science/O'Hare International Airport} {8}
+    }
     {^A Large Clunky Crowbar$} 
     {
         {Pinnacle/Chaos/Oj Cow} {3}
+        {Pinnacle/Science/New York/Carnegie Hall} {156}
+    }
+    {^A Laser Cartridge$} 
+    {
+        {Pinnacle/Science/Alien Ship} {7}
+    }
+    {^A Laser Rifle$} 
+    {
+        {Pinnacle/Science/Alien Ship} {7}
+    }
+    {^A Length of Chain \x28enchanted\x29$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain/Ethereal Tower} {18}
     }
     {^A Long row of Lockers$} 
     {
@@ -54,6 +191,25 @@
     {
         {Pinnacle/Chaos} {63}
     }
+    {^A Medkit$} 
+    {
+        {Pinnacle/Chaos/Chess Board} {31}
+    }
+    {^A Megatech Taser Stick \x28TM\x29 \x28enchanted\x29$} 
+    {
+        {Pinnacle/Fantasy/Necromancer Guild} {41}
+        {Pinnacle/Science/Atlanta/DC Megatech/D.C. Megatech 2.0} {4}
+    }
+    {^A Metallic Shield$} 
+    {
+        {Pinnacle/Chaos/Erratio Forest/The Tabard Inn} {16}
+    }
+    {^A Parcel$} 
+    {
+        {Pinnacle} {175}
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {148}
+        {Pinnacle/Fantasy/Alizarian Tower} {40}
+    }
     {^A Pink Plastic Flamingo$} 
     {
         {Pinnacle} {116}
@@ -62,29 +218,135 @@
     {
         {Pinnacle/Science/The Amazon Research Center} {47}
     }
+    {^A Plasma Clip$} 
+    {
+        {Pinnacle/Science/Alien Ship} {51}
+    }
     {^A Pumpkin$} 
     {
         {Pinnacle/Chaos} {91}
+        {Pinnacle/Chaos/Chaos Cinemaplex/Hotel Transylvania} {1}
+    }
+    {^A Ragged Cloak \x28glowing\x29$} 
+    {
+        {Pinnacle/Fantasy/Necromancer Guild} {47}
+    }
+    {^A Ruined Junction Box$} 
+    {
+        {Pinnacle/Science/The Amazon Research Center} {47}
+    }
+    {^A Ruined Town$} 
+    {
+        {Pinnacle/Fantasy} {792}
+    }
+    {^A Rusty Knife$} 
+    {
+        {Pinnacle/Chaos/Old London} {26}
+    }
+    {^A Scalpel$} 
+    {
+        {Pinnacle/Science/Alien Ship} {15}
+    }
+    {^A Small ChaosBrand\x28tm\x29 Television Set$} 
+    {
+        {Pinnacle/Chaos} {20}
+    }
+    {^A Sparkling Tower$} 
+    {
+        {Pinnacle/Fantasy} {456}
+    }
+    {^A Stall$} 
+    {
+        {Pinnacle/Fantasy} {5}
     }
     {^A Statue of Cancer the King$} 
     {
         {Pinnacle} {1}
+        {Pinnacle/Chaos/Chaos Cinemaplex/Hotel Transylvania} {136}
+        {Pinnacle/Fantasy/Land of the Ice People} {82}
+        {Pinnacle/Fantasy/Necromancer Guild} {1}
+        {Pinnacle/Science/Alien\Alpha} {15}
+        {Pinnacle/Townhall} {1}
+    }
+    {^A Statue$} 
+    {
+        {Pinnacle/Fantasy} {112}
+    }
+    {^A Strange Helicopter Bike$} 
+    {
+        {Pinnacle/Chaos/Care Bears} {32}
+    }
+    {^A Student Toga$} 
+    {
+        {Pinnacle/Fantasy} {94}
+    }
+    {^A Tome of 'A Farmer's Journey', Volume I$} 
+    {
+        {Pinnacle/Science/Genlab} {10}
+    }
+    {^A Tome of 'To Serve Man', Volume I$} 
+    {
+        {Pinnacle/Fantasy/Portal of Life v2} {238}
+    }
+    {^A Tome of 'To Serve Man', Volume II$} 
+    {
+        {Pinnacle/Crafting} {4}
+    }
+    {^A Tome of \'} 
+    {
+        {Pinnacle} {1}
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {735}
+        {Pinnacle/Crafting} {4}
+        {Pinnacle/Fantasy/Katin/Necromancer Guild (old)} {183}
+        {Pinnacle/Fantasy/Necromancer Guild} {25}
+        {Pinnacle/Fantasy/Portal of Life v2} {261}
     }
     {^A Trashcan$} 
     {
         {Pinnacle} {6}
         {Pinnacle/Chaos} {108}
         {Pinnacle/Crafting} {4}
+        {Pinnacle/Fantasy} {621}
+        {Pinnacle/Fantasy/Alizarian Tower} {1}
+        {Pinnacle/Fantasy/Around the town of Angelo} {32}
         {Pinnacle/Fantasy/Necromancer Guild} {46}
+        {Pinnacle/Fantasy/Wayhaven Docks} {5}
         {Pinnacle/Science/Atlanta} {59}
+    }
+    {^A Very Old Piece of Paper$} 
+    {
+        {Pinnacle/Chaos/Crydee} {36}
     }
     {^A Weird Hanging Ladder$} 
     {
         {Pinnacle/Chaos} {28}
+        {Pinnacle/Chaos/Chaos Cinemaplex/Hotel Transylvania} {1}
+    }
+    {^A White Fence$} 
+    {
+        {Pinnacle/Chaos} {140}
+    }
+    {^A Witchwood Tree$} 
+    {
+        {Pinnacle/Chaos/Erratio Forest} {7}
+    }
+    {^A Work Order$} 
+    {
+        {Pinnacle} {1}
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {1076}
+    }
+    {^A Yellow Hardhat$} 
+    {
+        {Pinnacle/Science/Genlab} {1}
+    }
+    {^A ancient skeleton$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain} {56}
     }
     {^A banana peel$} 
     {
         {Pinnacle/Chaos} {105}
+        {Pinnacle/Chaos/Good Humor Truck} {1}
     }
     {^A barbell$} 
     {
@@ -92,6 +354,7 @@
     }
     {^A beautiful gold engagement ring$} 
     {
+        {Pinnacle} {1}
         {Pinnacle/Chaos} {99}
     }
     {^A bed$} 
@@ -101,18 +364,47 @@
     {^A big BLACK and WHITE inflatable cow$} 
     {
         {Pinnacle/Chaos} {45}
+        {Pinnacle/Chaos/Chaos Cinemaplex/Hotel Transylvania} {1}
+    }
+    {^A big red button$} 
+    {
+        {Pinnacle/Fantasy/Necromancer Guild} {1}
+        {Pinnacle/Science/Alien\Alpha} {15}
+        {Pinnacle/Townhall} {1}
     }
     {^A big red shoe$} 
     {
         {Pinnacle/Chaos} {65}
     }
+    {^A bit of thyme$} 
+    {
+        {Pinnacle/Fantasy} {468}
+        {Pinnacle/Fantasy/Around the town of Angelo} {1}
+    }
+    {^A black case$} 
+    {
+        {Pinnacle/Chaos} {176}
+        {Pinnacle/Chaos/Good Humor Truck} {1}
+    }
     {^A black mace$} 
     {
         {Pinnacle/Fantasy/Around the town of Angelo/Forest Trail/Elven Graveyard} {20}
     }
+    {^A black onyx ring$} 
+    {
+        {Pinnacle/Science/New York/Carnegie Hall} {75}
+    }
     {^A black platemail$} 
     {
         {Pinnacle/Fantasy/Around the town of Angelo/Forest Trail/Elven Graveyard} {20}
+    }
+    {^A black reed$} 
+    {
+        {Pinnacle/Fantasy/Wayhaven Docks/Serinth} {157}
+    }
+    {^A black tree with spotted leaves$} 
+    {
+        {Pinnacle/Chaos/Erratio Forest} {16}
     }
     {^A blazing brazier$} 
     {
@@ -122,25 +414,70 @@
     {
         {Pinnacle/Chaos} {54}
     }
+    {^A bleeding corpse of Johney the little boy, crucified to a cross$} 
+    {
+        {Pinnacle} {7}
+    }
+    {^A blue sparkling gem$} 
+    {
+        {Pinnacle/Fantasy/Alizarian Tower} {37}
+    }
+    {^A blue stone necklace$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {133}
+    }
+    {^A blueberry flavored shelter ration$} 
+    {
+        {Pinnacle/Science/Fallout Shelter} {10}
+    }
     {^A bone dagger \x28glowing\x29 \x28enchanted\x29$} 
     {
         {Pinnacle/Fantasy/Catacombs 2} {100}
+    }
+    {^A bone wand$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {208}
+        {Pinnacle/Fantasy/Land of the Ice People} {40}
     }
     {^A bottle of pepper spray$} 
     {
         {Pinnacle/Science/New York/Carnegie Hall} {301}
     }
+    {^A bouncing bingo ball$} 
+    {
+        {Pinnacle/Chaos} {26}
+    }
     {^A bouncing frankfurter$} 
     {
         {Pinnacle/Chaos} {15}
+        {Pinnacle/Chaos/Chaos Cinemaplex/Hotel Transylvania} {1}
+    }
+    {^A box$} 
+    {
+        {Pinnacle/Science/New York/NASTAR} {21}
+    }
+    {^A bright multicoloured rainbow$} 
+    {
+        {Pinnacle/Chaos} {30}
+        {Pinnacle/Chaos/Care Bears} {1}
+    }
+    {^A bright red wand$} 
+    {
+        {Pinnacle/Fantasy/Alizarian Tower} {37}
     }
     {^A bright, colorful rainbow$} 
     {
         {Pinnacle/Chaos} {30}
+        {Pinnacle/Chaos/Chaos Cinemaplex/Hotel Transylvania} {1}
+    }
+    {^A broken skeleton$} 
+    {
+        {Pinnacle/Science/Forgotten sewers} {55}
     }
     {^A bronze plaque$} 
     {
         {Pinnacle/Chaos} {1}
+        {Pinnacle/Chaos/Chaos Cinemaplex/Hotel Transylvania} {1}
     }
     {^A broom's bristle$} 
     {
@@ -153,18 +490,46 @@
     {^A burning funeral pyre$} 
     {
         {Pinnacle/Fantasy/Catacombs 2} {97}
+        {Pinnacle/Fantasy/Necromancer Guild} {20}
     }
     {^A camera with someone's initials on it$} 
     {
         {Pinnacle/Chaos/Carina's Observatory} {5}
     }
+    {^A can of Budweiser$} 
+    {
+        {Pinnacle/Chaos/Brewery Swamp} {19}
+    }
+    {^A can of food$} 
+    {
+        {Pinnacle/Science/Bomb Shelter} {4}
+    }
+    {^A can opener$} 
+    {
+        {Pinnacle/Science/Bomb Shelter} {3}
+    }
+    {^A cannister-topped cannon$} 
+    {
+        {Pinnacle/Fantasy/Alizarian Tower} {37}
+    }
     {^A canon super lens$} 
     {
         {Pinnacle/Chaos/Carina's Observatory} {10}
     }
+    {^A chain$} 
+    {
+        {Pinnacle} {1}
+        {Pinnacle/Fantasy/Portal of Life v2} {87}
+        {Pinnacle/Fantasy/Wayhaven Docks} {4}
+        {Pinnacle/Science/Alien\Alpha} {15}
+    }
     {^A chair$} 
     {
         {Pinnacle/Fantasy/Ravenloft} {59}
+    }
+    {^A chest$} 
+    {
+        {Pinnacle/Chaos/Gamer's House/Diablo 2/Normal/Hell Cows} {1}
     }
     {^A circle of glowing runes$} 
     {
@@ -174,10 +539,35 @@
     {
         {Pinnacle/Fantasy/Katin/Necromancer Guild (old)} {118}
     }
+    {^A collection of oxygen cylinders$} 
+    {
+        {Pinnacle/Science/The Amazon Research Center} {47}
+    }
+    {^A colossal box \x28contains only 1 item\x29$} 
+    {
+        {Pinnacle} {175}
+    }
+    {^A comics page$} 
+    {
+        {Pinnacle/Chaos/The Book Nook} {9}
+    }
+    {^A counter$} 
+    {
+        {Pinnacle/Science/O'Hare International Airport} {8}
+    }
+    {^A cracked bone$} 
+    {
+        {Pinnacle/Chaos/CowVille/Hell Cows} {47}
+    }
     {^A crashed plane$} 
     {
         {Pinnacle} {1}
         {Pinnacle/Science} {295}
+    }
+    {^A crooked brown wand$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {202}
+        {Pinnacle/Fantasy/Land of the Ice People} {24}
     }
     {^A crowbar$} 
     {
@@ -187,29 +577,105 @@
     {
         {Pinnacle/Fantasy/Catacombs 2} {19}
     }
+    {^A curved gray wand$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {57}
+        {Pinnacle/Fantasy/Land of the Ice People} {23}
+    }
+    {^A cutthroat sash$} 
+    {
+        {Pinnacle} {136}
+    }
+    {^A dark obsidian vault$} 
+    {
+        {Pinnacle/Fantasy/Necromancer Guild} {44}
+    }
+    {^A dark purple cloak$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain/Ethereal Tower} {18}
+    }
     {^A dark, ethereal shadow$} 
     {
         {Pinnacle/Fantasy/Katin/Necromancer Guild (old)} {184}
+    }
+    {^A defaced book$} 
+    {
+        {Pinnacle/Chaos/The Book Nook} {5}
+        {Pinnacle/Fantasy/Necromancer Guild} {1}
+    }
+    {^A digital multimeter$} 
+    {
+        {Pinnacle} {6}
+    }
+    {^A double-edged blade \x28enchanted\x29$} 
+    {
+        {Pinnacle/Fantasy} {718}
+    }
+    {^A double-edged sword$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {187}
+    }
+    {^A double-edged, mithril scimitar$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {487}
+    }
+    {^A dull white wand$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {205}
+        {Pinnacle/Fantasy/Land of the Ice People} {23}
+    }
+    {^A dwindling portal \x28glowing\x29$} 
+    {
+        {Pinnacle/Fantasy} {439}
+    }
+    {^A fading portal \x28glowing\x29$} 
+    {
+        {Pinnacle/Fantasy} {57}
     }
     {^A fairy \x28Twinkling\x29$} 
     {
         {Pinnacle/Chaos} {45}
     }
+    {^A fanor tree$} 
+    {
+        {Pinnacle/Fantasy/Wayhaven Docks/Serinth} {20}
+    }
     {^A few chairs$} 
     {
         {Pinnacle/Fantasy/Ravenloft/Ebonbane} {8}
+    }
+    {^A finely cut, adamantium broadsword \x28enchanted\x29$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {345}
     }
     {^A fireplace$} 
     {
         {Pinnacle/Fantasy/Ravenloft} {59}
     }
+    {^A flickering portal \x28glowing\x29$} 
+    {
+        {Pinnacle/Fantasy} {958}
+    }
     {^A floating orb$} 
     {
         {Pinnacle} {203}
     }
+    {^A fluted lamp post$} 
+    {
+        {Pinnacle/Fantasy} {138}
+    }
     {^A fortune cookie$} 
     {
         {Pinnacle/Chaos} {17}
+    }
+    {^A four chain diamond necklace$} 
+    {
+        {Pinnacle} {85}
+        {Pinnacle/Science/New York/Carnegie Hall} {74}
+    }
+    {^A four leaf clover$} 
+    {
+        {Pinnacle/Chaos/Care Bears} {24}
     }
     {^A funky-looking fog$} 
     {
@@ -218,30 +684,93 @@
     {^A giant faucet$} 
     {
         {Pinnacle/Chaos} {105}
+        {Pinnacle/Chaos/Good Humor Truck} {1}
+    }
+    {^A giant silver spoon$} 
+    {
+        {Pinnacle/Chaos} {22}
     }
     {^A glass sign with moving liquid inside, pointing north$} 
     {
         {Pinnacle} {25}
+        {Pinnacle/Chaos/Chaos Cinemaplex/Hotel Transylvania} {1}
+    }
+    {^A gleaming silver spacecraft$} 
+    {
+        {Pinnacle} {1}
+        {Pinnacle/Science} {829}
+    }
+    {^A glimmering blue potion$} 
+    {
+        {Pinnacle/Fantasy/Necromancer Guild} {20}
+    }
+    {^A glowing marble pedestal$} 
+    {
+        {Pinnacle} {1}
     }
     {^A glowing portal$} 
     {
+        {Pinnacle} {175}
         {Pinnacle/Fantasy} {671}
+        {Pinnacle/Fantasy/Necromancer Guild} {1}
+        {Pinnacle/Fantasy/Portal of Life v2} {1}
+    }
+    {^A glowing white wand$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {127}
+        {Pinnacle/Fantasy/Land of the Ice People} {24}
+        {Pinnacle/Fantasy/Murus Faralain/Azra's Tunnel} {8}
+    }
+    {^A gnarled club$} 
+    {
+        {Pinnacle/Fantasy} {739}
     }
     {^A goblyn spear$} 
     {
         {Pinnacle/Fantasy/Ravenloft} {101}
     }
+    {^A golden staff$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {228}
+    }
     {^A gravestone and grave$} 
     {
         {Pinnacle/Fantasy/Alizarian Tower} {53}
     }
+    {^A gray staff$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {124}
+    }
     {^A greenish street sign$} 
     {
         {Pinnacle} {42}
+        {Pinnacle/Crafting/Mines 6} {1}
+        {Pinnacle/Fantasy} {726}
+        {Pinnacle/Fantasy/Portal of Life v2} {1}
+    }
+    {^A grey tombstone$} 
+    {
+        {Pinnacle/Fantasy} {437}
     }
     {^A gumball machine$} 
     {
         {Pinnacle/Chaos} {44}
+    }
+    {^A gypsy's wagon$} 
+    {
+        {Pinnacle/Fantasy} {792}
+    }
+    {^A hammer$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {373}
+    }
+    {^A hand-gun$} 
+    {
+        {Pinnacle/Fantasy/Alizarian Tower} {37}
+    }
+    {^A heavy, birch club$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {393}
     }
     {^A hip doorway$} 
     {
@@ -251,13 +780,59 @@
     {
         {Pinnacle/Chaos} {19}
     }
+    {^A holly bush$} 
+    {
+        {Pinnacle/Fantasy/A Quiet Henge} {15}
+    }
+    {^A hoof$} 
+    {
+        {Pinnacle/Chaos/CowVille/Hell Cows} {10}
+    }
+    {^A horrible corpse of Vilgan, crucified to a cross$} 
+    {
+        {Pinnacle} {1}
+    }
+    {^A hospital bed$} 
+    {
+        {Pinnacle/Science/Luddite Commune} {6}
+    }
+    {^A hovering airship$} 
+    {
+        {Pinnacle/Fantasy/Portal of Life v2} {1}
+        {Pinnacle/Fantasy/Xaxis} {23}
+        {Pinnacle/Fantasy/Xaxis/Isle of Equinity} {1}
+    }
+    {^A human skeleton$} 
+    {
+        {Pinnacle/Chaos/CowVille/Hell Cows} {44}
+    }
+    {^A jaguar pelt$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain} {51}
+    }
+    {^A jaguarundi pelt$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain} {24}
+    }
+    {^A jail cell key$} 
+    {
+        {Pinnacle} {6}
+    }
     {^A jar of peanut butter$} 
     {
         {Pinnacle/Chaos/Sweetboots' House} {21}
     }
+    {^A joystick$} 
+    {
+        {Pinnacle/Chaos} {79}
+    }
     {^A laboratory building, floating in the void$} 
     {
         {Pinnacle/Chaos} {113}
+    }
+    {^A large box \x28contains 24 items\x29$} 
+    {
+        {Pinnacle} {116}
     }
     {^A large box \x28contains 3 items\x29$} 
     {
@@ -267,7 +842,19 @@
     {
         {Pinnacle} {116}
     }
+    {^A large box \x28contains 74 items\x29$} 
+    {
+        {Pinnacle} {116}
+    }
+    {^A large box \x28contains 75 items\x29$} 
+    {
+        {Pinnacle} {116}
+    }
     {^A large box \x28contains 8 items\x29$} 
+    {
+        {Pinnacle} {116}
+    }
+    {^A large box \x28contains \d+ items\x29$} 
     {
         {Pinnacle} {116}
     }
@@ -278,18 +865,51 @@
     {^A large crystal tree$} 
     {
         {Pinnacle/Chaos} {107}
+        {Pinnacle/Chaos/Good Humor Truck} {1}
+    }
+    {^A large desk$} 
+    {
+        {Pinnacle} {2}
+    }
+    {^A large dual-headed axe$} 
+    {
+        {Pinnacle/Fantasy/Land of the Ice People} {82}
     }
     {^A large green metal sign$} 
     {
         {Pinnacle} {56}
     }
+    {^A large iron pot$} 
+    {
+        {Pinnacle/Fantasy/A Missionary Camp} {6}
+    }
     {^A large ladder$} 
     {
         {Pinnacle/Chaos} {5}
     }
+    {^A large metal box, humming quietly$} 
+    {
+        {Pinnacle} {1}
+    }
+    {^A large metal door \x28closed\x29$} 
+    {
+        {Pinnacle/Science/Fallout Shelter} {96}
+    }
+    {^A large metal oil drum$} 
+    {
+        {Pinnacle/Science/Atlanta} {102}
+    }
+    {^A large nest$} 
+    {
+        {Pinnacle/Fantasy/Talbo's Forest Home} {17}
+    }
     {^A large piece of lint$} 
     {
         {Pinnacle/Chaos} {65}
+    }
+    {^A large pile of gold coins$} 
+    {
+        {Pinnacle/Science/Genlab} {1}
     }
     {^A large plastic key$} 
     {
@@ -299,7 +919,31 @@
     {
         {Pinnacle} {6}
         {Pinnacle/Chaos} {108}
+        {Pinnacle/Chaos/Crydee} {18}
+        {Pinnacle/Fantasy} {621}
+        {Pinnacle/Fantasy/Alizarian Tower} {1}
+        {Pinnacle/Fantasy/Blingdenwood Village} {12}
+        {Pinnacle/Fantasy/Wayhaven Docks} {5}
         {Pinnacle/Science/Atlanta} {59}
+        {Pinnacle/Science/Luddite Commune} {11}
+        {Pinnacle/Science/UED Installation} {4}
+    }
+    {^A large steel door \x28closed\x29$} 
+    {
+        {Pinnacle/Science/Fallout Shelter} {32}
+    }
+    {^A large whirlpool$} 
+    {
+        {Pinnacle/Chaos} {83}
+    }
+    {^A light blue wand$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {190}
+        {Pinnacle/Fantasy/Land of the Ice People} {1}
+    }
+    {^A lightly glowing, gold rapier \x28enchanted\x29$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {98}
     }
     {^A little brown monkey doll$} 
     {
@@ -309,25 +953,103 @@
     {
         {Pinnacle/Fantasy/Ravenloft/Masque} {9}
     }
+    {^A lonely keep on the edge of the icelands$} 
+    {
+        {Pinnacle/Fantasy} {900}
+        {Pinnacle/Fantasy/Lonely Keep} {3}
+    }
+    {^A long fishing knife$} 
+    {
+        {Pinnacle/Fantasy/Wayhaven Docks} {4}
+    }
     {^A long leather leash hangs in midair$} 
     {
         {Pinnacle/Chaos} {41}
+    }
+    {^A long thin, steel pick \x28enchanted\x29$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {142}
     }
     {^A longsword$} 
     {
         {Pinnacle/Fantasy/Ravenloft} {101}
     }
+    {^A magazine rack$} 
+    {
+        {Pinnacle/Chaos/The Book Nook} {3}
+    }
+    {^A magic scroll$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {275}
+        {Pinnacle/Fantasy/Alizarian Tower} {37}
+    }
+    {^A magical sleigh$} 
+    {
+        {Pinnacle/Chaos} {86}
+    }
+    {^A manhole$} 
+    {
+        {Pinnacle/Science/Detroit} {149}
+    }
+    {^A massive menhir$} 
+    {
+        {Pinnacle/Fantasy/A Quiet Henge} {17}
+    }
+    {^A massive stone$} 
+    {
+        {Pinnacle/Fantasy/A Quiet Henge} {9}
+    }
+    {^A menhir$} 
+    {
+        {Pinnacle/Fantasy/A Quiet Henge} {5}
+    }
     {^A menu$} 
     {
         {Pinnacle} {128}
+    }
+    {^A metal cane$} 
+    {
+        {Pinnacle/Science/O'Hare International Airport} {5}
     }
     {^A mischievous looking imp$} 
     {
         {Pinnacle/Fantasy/Katin/Necromancer Guild (old)} {139}
     }
+    {^A misty curtain$} 
+    {
+        {Pinnacle/Fantasy/Necromancer Guild} {76}
+    }
+    {^A mud encrusted rake$} 
+    {
+        {Pinnacle/Science/Luddite Commune} {14}
+    }
+    {^A mud puddle$} 
+    {
+        {Pinnacle/Chaos} {172}
+    }
     {^A newspaper rack$} 
     {
         {Pinnacle} {78}
+        {Pinnacle/Palisade Pub} {1}
+    }
+    {^A nwerm leaf$} 
+    {
+        {Pinnacle} {175}
+        {Pinnacle/Fantasy} {478}
+        {Pinnacle/Fantasy/Necromancer Guild} {1}
+        {Pinnacle/Fantasy/Portal of Life v2} {1}
+    }
+    {^A pair of dirty gloves$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {78}
+    }
+    {^A pair of gloves$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {276}
+    }
+    {^A park bench$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain} {130}
     }
     {^A patch of mist$} 
     {
@@ -341,13 +1063,57 @@
     {
         {Pinnacle} {71}
     }
+    {^A piece of USA\x28r\x29 Today$} 
+    {
+        {Pinnacle/Chaos} {141}
+    }
+    {^A piece of bark$} 
+    {
+        {Pinnacle} {175}
+        {Pinnacle/Fantasy} {51}
+        {Pinnacle/Fantasy/Necromancer Guild} {1}
+        {Pinnacle/Fantasy/Portal of Life v2} {1}
+    }
+    {^A piece of blackrock$} 
+    {
+        {Pinnacle/Fantasy} {583}
+    }
+    {^A piece of bloodmoss$} 
+    {
+        {Pinnacle/Fantasy} {900}
+    }
+    {^A piece of crystalrock$} 
+    {
+        {Pinnacle} {1}
+        {Pinnacle/Fantasy} {545}
+    }
     {^A piece of granite$} 
     {
+        {Pinnacle} {1}
+        {Pinnacle/Fantasy} {900}
         {Pinnacle/Fantasy/Ravenloft} {117}
     }
     {^A piece of ivory$} 
     {
+        {Pinnacle/Fantasy} {341}
         {Pinnacle/Fantasy/Ravenloft} {114}
+    }
+    {^A piece of lava$} 
+    {
+        {Pinnacle/Fantasy} {113}
+    }
+    {^A piece of marjoram$} 
+    {
+        {Pinnacle/Fantasy} {671}
+        {Pinnacle/Fantasy/Around the town of Angelo} {1}
+    }
+    {^A piece of oakwood$} 
+    {
+        {Pinnacle} {175}
+        {Pinnacle/Fantasy} {55}
+        {Pinnacle/Fantasy/Around the town of Angelo} {1}
+        {Pinnacle/Fantasy/Necromancer Guild} {1}
+        {Pinnacle/Fantasy/Portal of Life v2} {1}
     }
     {^A piglet$} 
     {
@@ -357,6 +1123,18 @@
     {
         {Pinnacle/Fantasy/Catacombs 2} {100}
     }
+    {^A pile of gold coins$} 
+    {
+        {Pinnacle/Fantasy/Tower of Vindaes} {12}
+    }
+    {^A pile of rubble$} 
+    {
+        {Pinnacle/Science} {420}
+    }
+    {^A plastic magnifying glass$} 
+    {
+        {Pinnacle/Chaos} {94}
+    }
     {^A playhouse$} 
     {
         {Pinnacle/Chaos} {59}
@@ -365,58 +1143,200 @@
     {
         {Pinnacle/Chaos/Carina's Observatory} {10}
     }
+    {^A posted bulletin \x28READ THIS NOW\x29$} 
+    {
+        {Pinnacle/Science} {97}
+        {Pinnacle/Science/Alien\Alpha} {1}
+    }
+    {^A prism incandescent green ioun stone$} 
+    {
+        {Pinnacle/Science/New York/Carnegie Hall} {154}
+    }
     {^A pristine chinchilla fur pelt$} 
     {
         {Pinnacle/Chaos} {119}
+    }
+    {^A pulsing portal \x28glowing\x29$} 
+    {
+        {Pinnacle/Fantasy} {653}
     }
     {^A purple haze$} 
     {
         {Pinnacle/Chaos} {3}
     }
+    {^A putrid pool of filth$} 
+    {
+        {Pinnacle} {3}
+    }
+    {^A quaint candy store$} 
+    {
+        {Pinnacle/Chaos} {66}
+    }
+    {^A raised bed garden$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain} {23}
+    }
     {^A ray of sunlight illuminating a patch of daisies$} 
     {
         {Pinnacle/Fantasy/Katin/Necromancer Guild (old)} {98}
+        {Pinnacle/Fantasy/Necromancer Guild} {1}
+    }
+    {^A really large pile of gold coins$} 
+    {
+        {Pinnacle/Science/Genlab} {1}
     }
     {^A red mutant plant$} 
     {
         {Pinnacle/Chaos} {45}
     }
+    {^A rope leading down$} 
+    {
+        {Pinnacle/Chaos/Brewery Swamp/Stranger's Treehouse} {3}
+    }
+    {^A rope leading up$} 
+    {
+        {Pinnacle/Chaos/Brewery Swamp} {3}
+        {Pinnacle/Chaos/Brewery Swamp/Stranger's Treehouse} {1}
+    }
     {^A rotted, overgrown road sign$} 
     {
         {Pinnacle/Fantasy/Ravenloft/Der'Thalas} {1}
     }
+    {^A rotting carcass$} 
+    {
+        {Pinnacle/Chaos/CowVille/Hell Cows} {17}
+    }
+    {^A rotting corpse of Johney the little boy, crucified to a cross$} 
+    {
+        {Pinnacle} {20}
+    }
+    {^A round bone$} 
+    {
+        {Pinnacle/Chaos/CowVille/Hell Cows} {14}
+    }
+    {^A ruby necklace$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {186}
+    }
+    {^A rubywood tree$} 
+    {
+        {Pinnacle/Fantasy/Wayhaven Docks/Serinth} {255}
+    }
+    {^A ruined barn$} 
+    {
+        {Pinnacle/Science} {833}
+    }
+    {^A rundown trailer$} 
+    {
+        {Pinnacle/Science} {153}
+    }
     {^A rusty old android$} 
     {
         {Pinnacle/Chaos} {104}
+        {Pinnacle/Chaos/Good Humor Truck} {1}
     }
     {^A rusty ship anchor$} 
     {
         {Pinnacle/Chaos} {112}
     }
+    {^A secluded inn \x28quiet\x29$} 
+    {
+        {Pinnacle/Chaos/Erratio Forest} {18}
+    }
+    {^A secure-guard SMG$} 
+    {
+        {Pinnacle/Science/Atlanta/DC Megatech/D.C. Megatech 2.0} {1}
+    }
     {^A services offered sign$} 
     {
         {Pinnacle} {20}
+    }
+    {^A set of glowing red shackles, bound to} 
+    {
+        {Pinnacle/Science/Atlanta/DC Megatech/D.C. Megatech 2.0} {4}
     }
     {^A set of puppy tracks$} 
     {
         {Pinnacle/Chaos} {10}
     }
+    {^A severed cow-head$} 
+    {
+        {Pinnacle/Chaos/CowVille/Hell Cows} {43}
+    }
+    {^A shimmering blue portal$} 
+    {
+        {Pinnacle/Chaos/CowVille/Hell Cows} {1}
+    }
+    {^A shimmering portal$} 
+    {
+        {Pinnacle/Fantasy} {1}
+        {Pinnacle/Fantasy/Portal of Life v2} {1}
+    }
     {^A shiny new postcard rack$} 
     {
         {Pinnacle/Chaos} {125}
     }
+    {^A shiny titanium roboglove$} 
+    {
+        {Pinnacle/Science/New York/Carnegie Hall} {80}
+    }
+    {^A shiny, gold amulet$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {398}
+    }
+    {^A shiny, mithril amulet$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {1165}
+    }
+    {^A shiny, platinum amulet$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {189}
+    }
+    {^A short green wand$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {207}
+        {Pinnacle/Fantasy/Land of the Ice People} {64}
+    }
+    {^A short, birch club$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {727}
+    }
+    {^A shotgun$} 
+    {
+        {Pinnacle/Fantasy/Alizarian Tower} {37}
+    }
+    {^A shrubbery sign$} 
+    {
+        {Pinnacle/Chaos/Brewery Swamp} {4}
+    }
     {^A sign listing movie times and prices$} 
     {
         {Pinnacle/Chaos/Chaos Cinemaplex} {3}
+        {Pinnacle/Chaos/Chaos Cinemaplex/Hotel Transylvania} {1}
+    }
+    {^A sign pointing southwest$} 
+    {
+        {Pinnacle/Fantasy/Around the town of Angelo} {24}
     }
     {^A sign pointing to the Mist$} 
     {
         {Pinnacle/Chaos} {40}
     }
+    {^A sign with a map tacked to it$} 
+    {
+        {Pinnacle/Chaos/Chinese Checkers} {37}
+    }
+    {^A sign you can read$} 
+    {
+        {Pinnacle} {133}
+    }
     {^A sign$} 
     {
         {Pinnacle} {37}
+        {Pinnacle/Chaos/Chinese Checkers} {1}
         {Pinnacle/Fantasy/Ravenloft} {7}
+        {Pinnacle/Science/New York/NASTAR} {60}
+        {Pinnacle/Science/O'Hare International Airport} {7}
     }
     {^A sign, hammered into the grass$} 
     {
@@ -430,33 +1350,119 @@
     {
         {Pinnacle/Chaos} {3}
     }
+    {^A single gold c$} 
+    {
+        {Pinnacle} {1}
+    }
+    {^A single gold coin$} 
+    {
+        {Pinnacle} {175}
+        {Pinnacle/Chaos/Chaos Cinemaplex/Hotel Transylvania} {136}
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {171}
+        {Pinnacle/Fantasy/Necromancer Guild} {1}
+        {Pinnacle/Townhall} {1}
+    }
+    {^A singled edged blade \x28enchanted\x29$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {187}
+    }
+    {^A singled edged sword$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {209}
+    }
+    {^A singled edged, bronze scimitar$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {503}
+    }
+    {^A singled edged, gold no-dachi$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {285}
+    }
+    {^A singled edged, granite shortsword \x28enchanted\x29$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {348}
+    }
+    {^A singled edged, silver claymore \x28enchanted\x29$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {417}
+    }
+    {^A singled edged, steel shortsword \x28enchanted\x29$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {219}
+    }
     {^A skeleton in tattered robes$} 
     {
         {Pinnacle/Fantasy/Alizarian Tower} {19}
+    }
+    {^A slender crystal wand$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {429}
+        {Pinnacle/Fantasy} {838}
+        {Pinnacle/Fantasy/Land of the Ice People} {2}
     }
     {^A slim orange rod$} 
     {
         {Pinnacle/Fantasy/Catacombs 2} {100}
     }
+    {^A small box \x28contains only 1 item\x29$} 
+    {
+        {Pinnacle} {116}
+    }
     {^A small box of Laundry Detergent$} 
     {
         {Pinnacle/Chaos} {48}
+    }
+    {^A small brown tab$} 
+    {
+        {Pinnacle/Science/New York/NASTAR} {89}
+    }
+    {^A small camoflauged tent$} 
+    {
+        {Pinnacle/Science} {665}
+    }
+    {^A small chunk of cheese$} 
+    {
+        {Pinnacle} {136}
     }
     {^A small clipboard$} 
     {
         {Pinnacle/Chaos/Carina's Observatory} {21}
     }
+    {^A small dandelion$} 
+    {
+        {Pinnacle/Fantasy} {483}
+    }
     {^A small dispensing machine$} 
     {
         {Pinnacle/Chaos} {9}
+    }
+    {^A small ferryboat$} 
+    {
+        {Pinnacle/Fantasy/Wayhaven Docks/Isle of Ao} {1}
     }
     {^A small figurine$} 
     {
         {Pinnacle/Fantasy/Ravenloft/Masque} {5}
     }
+    {^A small iron key$} 
+    {
+        {Pinnacle/Fantasy/Zelligar's Castle} {44}
+    }
     {^A small magical globe$} 
     {
         {Pinnacle/Fantasy/Alizarian Tower} {102}
+    }
+    {^A small metal key$} 
+    {
+        {Pinnacle} {6}
+    }
+    {^A small mushroom$} 
+    {
+        {Pinnacle/Fantasy/Wayhaven Docks/Serinth} {359}
+    }
+    {^A small pile of gold coins$} 
+    {
+        {Pinnacle/Fantasy/Portal of Life v2} {12}
     }
     {^A small plastic key$} 
     {
@@ -466,9 +1472,20 @@
     {
         {Pinnacle/Chaos} {92}
     }
+    {^A small shuttle$} 
+    {
+        {Pinnacle/Science/Alien\Alpha} {4}
+    }
+    {^A small sign$} 
+    {
+        {Pinnacle} {112}
+        {Pinnacle/Fantasy} {708}
+        {Pinnacle/Fantasy/Wayhaven Docks} {1}
+    }
     {^A small stone bench$} 
     {
         {Pinnacle/Fantasy/Katin/Necromancer Guild (old)} {98}
+        {Pinnacle/Fantasy/Necromancer Guild} {1}
     }
     {^A small table$} 
     {
@@ -477,15 +1494,46 @@
     {^A small wooden sign$} 
     {
         {Pinnacle} {175}
+        {Pinnacle/Fantasy} {726}
+        {Pinnacle/Fantasy/Necromancer Guild} {1}
+        {Pinnacle/Fantasy/Portal of Life v2} {1}
+    }
+    {^A small worn book$} 
+    {
+        {Pinnacle/Chaos/The Book Nook} {8}
     }
     {^A small, dark hole$} 
     {
         {Pinnacle/Chaos} {119}
     }
+    {^A spear \x28enchanted\x29$} 
+    {
+        {Pinnacle/Fantasy/Alizarian Tower} {40}
+    }
+    {^A spectral warehouse$} 
+    {
+        {Pinnacle/Chaos} {81}
+    }
+    {^A sphere ivory ioun stone$} 
+    {
+        {Pinnacle/Fantasy/Necromancer Guild} {15}
+    }
+    {^A sphere stone, ivory in color$} 
+    {
+        {Pinnacle/Fantasy/Kourlyn Temple} {152}
+    }
     {^A sprig of mistletoe$} 
     {
+        {Pinnacle} {175}
         {Pinnacle/Fantasy} {671}
+        {Pinnacle/Fantasy/Katin/Necromancer Guild (old)} {1}
+        {Pinnacle/Fantasy/Necromancer Guild} {1}
+        {Pinnacle/Fantasy/Portal of Life v2} {1}
         {Pinnacle/Fantasy/Ravenloft} {117}
+    }
+    {^A sprig of rosemary$} 
+    {
+        {Pinnacle/Fantasy} {483}
     }
     {^A staircase$} 
     {
@@ -493,31 +1541,151 @@
     }
     {^A stalk of shimmerweed$} 
     {
+        {Pinnacle} {175}
         {Pinnacle/Fantasy} {675}
+        {Pinnacle/Fantasy/Necromancer Guild} {1}
+        {Pinnacle/Fantasy/Portal of Life v2} {1}
     }
     {^A stand selling Mentos$} 
     {
         {Pinnacle/Chaos} {89}
     }
+    {^A standard$} 
+    {
+        {Pinnacle/Fantasy/A Missionary Camp} {3}
+    }
+    {^A statue of Galan$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain} {124}
+    }
+    {^A statue of Kyron$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain} {261}
+    }
+    {^A statue of Torickii$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain} {318}
+    }
+    {^A steel longsword$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {141}
+    }
+    {^A stone fish fang$} 
+    {
+        {Pinnacle/Fantasy/Giant Camp} {6}
+    }
+    {^A stone pillar$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain} {124}
+    }
+    {^A straight black wand$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {232}
+        {Pinnacle/Fantasy/Land of the Ice People} {76}
+    }
+    {^A strange boy$} 
+    {
+        {Pinnacle/Chaos} {129}
+    }
+    {^A strange cottage on stilts$} 
+    {
+        {Pinnacle/Fantasy} {440}
+    }
     {^A strange necklace$} 
     {
         {Pinnacle} {7}
+    }
+    {^A strangely dense, very blue wooden ring \x7Bradiant\x7D [\x3C\x2A/\x2A\x28O\x29\x2A\\x2A\x3E]$} 
+    {
+        {Pinnacle} {85}
     }
     {^A street sign$} 
     {
         {Pinnacle/Chaos} {62}
     }
+    {^A striped tree with purple leaves$} 
+    {
+        {Pinnacle/Chaos/Erratio Forest} {37}
+    }
+    {^A sturdy wooden staff$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {11}
+    }
+    {^A suit of armor$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {21}
+    }
     {^A suit of battered chainmail \x28glowing\x29$} 
     {
         {Pinnacle/Fantasy/Catacombs 2} {77}
+        {Pinnacle/Fantasy/Necromancer Guild} {47}
+    }
+    {^A suit of crimson enameled armour \x28glowing\x29$} 
+    {
+        {Pinnacle/Fantasy/Necromancer Guild} {47}
+    }
+    {^A sundial$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain} {23}
+    }
+    {^A swirling portal$} 
+    {
+        {Pinnacle/Fantasy/Necromancer Guild} {76}
     }
     {^A swirling void$} 
     {
         {Pinnacle/Chaos} {21}
     }
+    {^A swirling wormhole$} 
+    {
+        {Pinnacle/Science/Mantis Swamp} {13}
+    }
+    {^A table with a gold dragon ring$} 
+    {
+        {Pinnacle/Chaos/The Book Nook} {8}
+    }
     {^A tall street light$} 
     {
         {Pinnacle} {48}
+        {Pinnacle/Chaos/Chaos Cinemaplex} {14}
+        {Pinnacle/Chaos/Chaos Cinemaplex/Hotel Transylvania} {1}
+        {Pinnacle/Crafting/Mines 6} {1}
+        {Pinnacle/Fantasy} {726}
+        {Pinnacle/Fantasy/Portal of Life v2} {1}
+        {Pinnacle/Palisade Pub} {1}
+    }
+    {^A tattered cloak$} 
+    {
+        {Pinnacle/Fantasy/Around the town of Angelo/Forest Trail/Encampment/The City of Westersea} {361}
+    }
+    {^A tattered shirt$} 
+    {
+        {Pinnacle/Fantasy/Around the town of Angelo/Forest Trail/Encampment/The City of Westersea} {321}
+    }
+    {^A tear in the fabric of time$} 
+    {
+        {Pinnacle/Fantasy/Wayhaven Docks/Serinth} {117}
+    }
+    {^A theatre map$} 
+    {
+        {Pinnacle/Chaos/Chaos Cinemaplex} {6}
+        {Pinnacle/Chaos/Chaos Cinemaplex/Hotel Transylvania} {1}
+    }
+    {^A thin shiny staff$} 
+    {
+        {Pinnacle/Fantasy/Alizarian Tower} {37}
+    }
+    {^A tiny hovel$} 
+    {
+        {Pinnacle/Fantasy} {917}
+    }
+    {^A tiny key$} 
+    {
+        {Pinnacle} {6}
+    }
+    {^A titan sycamore$} 
+    {
+        {Pinnacle/Fantasy} {521}
     }
     {^A toddler's sippy cup$} 
     {
@@ -525,15 +1693,45 @@
     }
     {^A torch lighting your way$} 
     {
+        {Pinnacle/Fantasy} {726}
         {Pinnacle/Fantasy/Katin/Necromancer Guild (old)} {183}
+        {Pinnacle/Fantasy/Necromancer Guild} {1}
+    }
+    {^A torrina shrub$} 
+    {
+        {Pinnacle/Fantasy/Wayhaven Docks/Serinth} {255}
     }
     {^A toy chest$} 
     {
         {Pinnacle/Chaos} {65}
     }
+    {^A translucent tree with purple leaves$} 
+    {
+        {Pinnacle/Chaos/Erratio Forest} {10}
+    }
     {^A tree$} 
     {
         {Pinnacle} {77}
+    }
+    {^A triple-edged, gold sabre \x28enchanted\x29$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {746}
+    }
+    {^A triple-edged, platinum scimitar$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {920}
+    }
+    {^A tuft of surus grass$} 
+    {
+        {Pinnacle/Fantasy/Wayhaven Docks/Serinth} {117}
+    }
+    {^A turquoise tree with red leaves$} 
+    {
+        {Pinnacle/Chaos/Erratio Forest} {5}
+    }
+    {^A vanilla flavored shelter ration$} 
+    {
+        {Pinnacle/Science/Fallout Shelter} {10}
     }
     {^A veil of mists$} 
     {
@@ -542,46 +1740,206 @@
     {^A velvet rope$} 
     {
         {Pinnacle/Chaos} {96}
+        {Pinnacle/Chaos/Chaos Cinemaplex/Hotel Transylvania} {62}
     }
     {^A velvet witch hat$} 
     {
         {Pinnacle/Chaos} {41}
+        {Pinnacle/Chaos/Good Humor Truck} {1}
+    }
+    {^A very greasy hamburger$} 
+    {
+        {Pinnacle/Chaos} {1}
+        {Pinnacle/Chaos/Good Humor Truck} {1}
+    }
+    {^A visored helmet$} 
+    {
+        {Pinnacle/Fantasy/Necromancer Guild} {41}
+        {Pinnacle/Science/Atlanta/DC Megatech/D.C. Megatech 2.0} {4}
+        {Pinnacle/Science/Megatech v2.0} {1}
     }
     {^A vivitar elite$} 
     {
         {Pinnacle/Chaos/Carina's Observatory} {5}
     }
+    {^A warning sign$} 
+    {
+        {Pinnacle/Science/New York/NASTAR} {69}
+    }
+    {^A wavering blue portal$} 
+    {
+        {Pinnacle/Chaos/Mahjongg} {3}
+    }
+    {^A wavering portal \x28glowing\x29$} 
+    {
+        {Pinnacle/Fantasy} {903}
+    }
+    {^A waypoint$} 
+    {
+        {Pinnacle/Chaos/Gamer's House/Diablo 2/Normal/Hell Cows} {1}
+    }
     {^A weathered wooden sign, pointing west$} 
     {
         {Pinnacle} {47}
+        {Pinnacle/Crafting/Mines 6} {1}
+        {Pinnacle/Fantasy} {726}
+        {Pinnacle/Fantasy/Portal of Life v2} {1}
+    }
+    {^A weathered, wooden sign$} 
+    {
+        {Pinnacle} {199}
+        {Pinnacle/Crafting} {20}
+        {Pinnacle/Crafting/Mines 6} {1}
     }
     {^A welcome mat$} 
     {
         {Pinnacle/Chaos/Sweetboots' House} {1}
     }
+    {^A white falchion$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {354}
+    }
+    {^A white khopesh$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {438}
+    }
+    {^A white sabre$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {451}
+    }
+    {^A white two-handed sword$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {499}
+    }
     {^A wicked whip$} 
     {
         {Pinnacle/Chaos/Sweetboots' House} {31}
+    }
+    {^A wishbone$} 
+    {
+        {Pinnacle/Chaos/Care Bears} {17}
+    }
+    {^A wooden staircase rises up above you$} 
+    {
+        {Pinnacle/Chaos/The Book Nook} {3}
     }
     {^A wooden table$} 
     {
         {Pinnacle/Fantasy/Ravenloft} {59}
     }
+    {^A worn cloak$} 
+    {
+        {Pinnacle/Fantasy/Around the town of Angelo/Forest Trail/Encampment/The City of Westersea} {361}
+    }
+    {^A worn lockbox$} 
+    {
+        {Pinnacle/Fantasy/Around the town of Angelo/Forest Trail/Encampment/The City of Westersea} {364}
+    }
+    {^A worn shirt$} 
+    {
+        {Pinnacle/Fantasy/Around the town of Angelo/Forest Trail/Encampment/The City of Westersea} {361}
+    }
+    {^A(n|) (bloody|double-bladed|dark|dull|engraved|extremely sharp|finely cut|finely crafted|glowing|heavy|hooked|jagged|light|lightly glowing|long|long thin|nasty|nicked|old|ornate|polished|razor-sharp|runed|sharp|shining|short|single edged|small|spiked|triple-edged|very dull|very sharp|wicked|)(, |)(adamantium|ash|aspen|balsam|birch|bronze|cedar|ebony|elm|gold|granite|iron|jade|mahogany|maple|mithril|oak|obsidian|onyx|pine|platinum|sardonyx|silver|steel|stone|titanium|white|) (bastardsword|battleaxe|blackjack|blade|broadsword|claymore|club|cudgel|cutlass|dagger|dirk|double-edged axe|falchion|flail|foil|handaxe|hatchet|jo|katana|khopesh|knife|kynac|longsword|mace|machete|main gauche|mattock|morningstar|no-dachi|nunchaku|pick|pickaxe|quarterstaff|rapier|sabre|sai|scimitar|shortsword|sledgehammer|staff|stiletto|sword|trident|two-handed sword|warhammer|war-axe|war-mattock|woodsman's axe)( \x28enchanted\x29|)$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {1}
+        {Pinnacle/Fantasy} {791}
+        {Pinnacle/Fantasy/Alizarian Tower} {37}
+    }
+    {^A(n|) (bloody|double-bladed|double-edged|dark|dull|engraved|extremely sharp|finely cut|finely crafted|glowing|heavy|hooked|jagged|light|lightly glowing|long|long thin|nasty|nicked|old|ornate|polished|razor-sharp|runed|sharp|shining|short|single edged|small|spiked|triple-edged|very dull|very sharp|wicked|)(, |)(adamantium|ash|aspen|balsam|birch|bronze|cedar|ebony|elm|gold|granite|iron|jade|mahogany|maple|mithril|oak|obsidian|onyx|pine|platinum|sardonyx|silver|steel|stone|titanium|white|) (bastardsword|battleaxe|blackjack|blade|broadsword|claymore|club|cudgel|cutlass|dagger|dirk|double-edged axe|falchion|flail|foil|handaxe|hatchet|jo|katana|khopesh|knife|kynac|longsword|mace|machete|main gauche|mattock|morningstar|no-dachi|nunchaku|pick|pickaxe|quarterstaff|rapier|sabre|sai|scimitar|shortsword|sledgehammer|staff|stiletto|sword|trident|two-handed sword|warhammer|war-axe|war-mattock|woodsman's axe)( \x28enchanted\x29|)$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {214}
+    }
     {^Adamantite Dual Staff \x28faintly glowing\x29$} 
     {
         {Pinnacle/Fantasy/Portal of Life v2} {4}
+    }
+    {^Adamantite Dual Staff$} 
+    {
+        {Pinnacle/Fantasy/Portal of Life} {15}
+    }
+    {^Adamantium Ring of Protection$} 
+    {
+        {Pinnacle/Fantasy/Rabbit Fields/The Drow Kingdom of fe dar Shad} {238}
+    }
+    {^Adult dark treant$} 
+    {
+        {Pinnacle/Fantasy/Ravenloft/Treant Forest} {42}
+    }
+    {^Alien talon$} 
+    {
+        {Pinnacle/Science/Alien\Alpha} {8}
+    }
+    {^Amber Ring of Corpse Reanimation$} 
+    {
+        {Pinnacle} {7}
+    }
+    {^Amber ring$} 
+    {
+        {Pinnacle/Fantasy/Land of the Ice People} {62}
+    }
+    {^Amethyst ring$} 
+    {
+        {Pinnacle/Fantasy/Land of the Ice People} {16}
+    }
+    {^Amulet$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {211}
+    }
+    {^An AC/DC shirt$} 
+    {
+        {Pinnacle/Chaos/Beavis and Butthead} {1}
+    }
+    {^An Ancient Scroll Case$} 
+    {
+        {Pinnacle/Fantasy/Necromancer Guild} {40}
+    }
+    {^An Anti-Vampire Flail \x28glowing\x29 \x28enchanted\x29$} 
+    {
+        {Pinnacle/Fantasy/Necromancer Guild} {47}
+    }
+    {^An Enfield T27 shotgun$} 
+    {
+        {Pinnacle/Science/Atlanta} {35}
     }
     {^An Illuminati Pyramid$} 
     {
         {Pinnacle/Chaos} {45}
     }
+    {^An Incense Stick$} 
+    {
+        {Pinnacle/Fantasy} {94}
+    }
+    {^An Old Sign$} 
+    {
+        {Pinnacle/Fantasy} {619}
+    }
+    {^An Orc Encampment$} 
+    {
+        {Pinnacle/Fantasy} {483}
+    }
+    {^An Outhouse$} 
+    {
+        {Pinnacle/Chaos} {78}
+    }
+    {^An Ultimate Disc \x7Bin mid-air\x7D$} 
+    {
+        {Pinnacle/Chaos} {98}
+    }
     {^An accommodation notice board$} 
     {
         {Pinnacle/Chaos} {70}
     }
+    {^An ammo clip$} 
+    {
+        {Pinnacle/Science/Atlanta/DC Megatech/D.C. Megatech 2.0} {1}
+    }
     {^An ancient brazier holding a magical flame$} 
     {
         {Pinnacle/Fantasy/Katin/Necromancer Guild (old)} {182}
+    }
+    {^An ancient marble fountain$} 
+    {
+        {Pinnacle/Fantasy/Katin/Necromancer Guild (old)} {185}
     }
     {^An ancient runestone$} 
     {
@@ -589,11 +1947,52 @@
     }
     {^An ancient skeleton$} 
     {
+        {Pinnacle/Fantasy/Catacombs} {5}
         {Pinnacle/Fantasy/Catacombs 2} {16}
     }
     {^An eighteenth hole flag$} 
     {
         {Pinnacle/Chaos} {4}
+    }
+    {^An electric fence going north and east$} 
+    {
+        {Pinnacle/Science/Swede Research Center} {4}
+    }
+    {^An electric fence leading east-west$} 
+    {
+        {Pinnacle/Science/Swede Research Center} {1}
+    }
+    {^An electric fence leading in the north-south direction$} 
+    {
+        {Pinnacle/Science/Swede Research Center} {5}
+    }
+    {^An electric fence leading north and south$} 
+    {
+        {Pinnacle/Science/Swede Research Center} {9}
+    }
+    {^An electric fence leading north and west$} 
+    {
+        {Pinnacle/Science/Swede Research Center} {3}
+    }
+    {^An electric fence leading south and east$} 
+    {
+        {Pinnacle/Science/Swede Research Center} {6}
+    }
+    {^An electric fence leading south and west$} 
+    {
+        {Pinnacle/Science/Swede Research Center} {8}
+    }
+    {^An electric fence leading west and east$} 
+    {
+        {Pinnacle/Science/Swede Research Center} {7}
+    }
+    {^An expensive diamond ring$} 
+    {
+        {Pinnacle/Science/New York/Carnegie Hall} {177}
+    }
+    {^An expensive ladies wristwatch$} 
+    {
+        {Pinnacle/Science/New York/Carnegie Hall} {143}
     }
     {^An expensive mens wristwatch$} 
     {
@@ -615,57 +2014,353 @@
     {
         {Pinnacle/Science/New York/Carnegie Hall} {140}
     }
+    {^An expensive silk cravat$} 
+    {
+        {Pinnacle/Science/New York/Carnegie Hall} {174}
+    }
+    {^An expensive suitcoat$} 
+    {
+        {Pinnacle/Science/New York/Carnegie Hall} {169}
+    }
+    {^An expensive titanium ring$} 
+    {
+        {Pinnacle/Science/New York/Carnegie Hall} {162}
+    }
+    {^An expensive wool pashmina$} 
+    {
+        {Pinnacle/Science/New York/Carnegie Hall} {156}
+    }
+    {^An expensive wool skirt$} 
+    {
+        {Pinnacle/Science/New York/Carnegie Hall} {127}
+    }
     {^An exquisite brick walkway leading into the keep$} 
     {
+        {Pinnacle/Fantasy} {757}
         {Pinnacle/Fantasy/Necromancer Guild} {8}
+        {Pinnacle/Fantasy/Portal of Life v2} {1}
+    }
+    {^An extremely sharp, oak staff \x28enchanted\x29$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {171}
+    }
+    {^An extremely sharp, obsidian katana$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {300}
+    }
+    {^An icy blue portal$} 
+    {
+        {Pinnacle/Fantasy} {832}
+        {Pinnacle/Fantasy/Land of the Ice People} {10}
+    }
+    {^An oak sproutling$} 
+    {
+        {Pinnacle/Fantasy/A Quiet Henge} {4}
     }
     {^An old dusty book$} 
     {
         {Pinnacle/Chaos} {54}
     }
+    {^An old log$} 
+    {
+        {Pinnacle/Chaos/Brewery Swamp} {19}
+    }
+    {^An old shack$} 
+    {
+        {Pinnacle/Fantasy} {706}
+    }
+    {^An old signpost$} 
+    {
+        {Pinnacle} {175}
+    }
+    {^An unexploded nuclear warhead$} 
+    {
+        {Pinnacle/Science/Mantis Swamp} {13}
+    }
+    {^Anderson's glasses$} 
+    {
+        {Pinnacle/Chaos/Beavis and Butthead} {7}
+    }
     {^Anna, the ghostly shopkeeper$} 
     {
         {Pinnacle/Fantasy/Catacombs 2} {4}
+    }
+    {^Another 3k Top Player List$} 
+    {
+        {Pinnacle/Palisade Pub} {1}
     }
     {^Aon Chainmail$} 
     {
         {Pinnacle/Fantasy/Wayhaven Docks/Isle of Ao} {194}
     }
+    {^Apple Cape$} 
+    {
+        {Pinnacle/Chaos/Android Showroom} {3}
+    }
     {^Arch of Time$} 
     {
         {Pinnacle/Chaos} {107}
+        {Pinnacle/Chaos/Good Humor Truck} {1}
+    }
+    {^Arena Ticket$} 
+    {
+        {Pinnacle/Chaos} {92}
     }
     {^Armband of the Ancients$} 
     {
+        {Pinnacle} {1}
         {Pinnacle/Fantasy/Ravenloft} {101}
+    }
+    {^Armour of Kourlyn$} 
+    {
+        {Pinnacle/Fantasy/Kourlyn Temple} {132}
+    }
+    {^Armour$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {181}
     }
     {^Baby Dragon Talons \x28envenomed\x29$} 
     {
+        {Pinnacle/Fantasy} {757}
         {Pinnacle/Fantasy/Portal of Life v2} {112}
+    }
+    {^Baby Dragon Talons \x28venomous\x29$} 
+    {
+        {Pinnacle/Fantasy/Portal of Life v3} {345}
+    }
+    {^Baby Dragon Talons$} 
+    {
+        {Pinnacle} {1}
+        {Pinnacle/Fantasy/Portal of Life} {15}
+    }
+    {^Bag of Stretching$} 
+    {
+        {Pinnacle/Fantasy/Necromancer Guild} {1}
+        {Pinnacle/Science/Lost City} {13}
+        {Pinnacle/Science/New York/Carnegie Hall} {139}
+    }
+    {^Bag$} 
+    {
+        {Pinnacle/Fantasy/Alizarian Tower} {51}
+    }
+    {^Barrel$} 
+    {
+        {Pinnacle/Science/Lost City} {12}
     }
     {^Bat$} 
     {
         {Pinnacle/Fantasy/Ravenloft/Treant Forest} {9}
     }
+    {^Bathroom Bear's Gloves \x7Bgood\x7D$} 
+    {
+        {Pinnacle/Chaos/Care Bears} {42}
+    }
+    {^Battered armour plating$} 
+    {
+        {Pinnacle/Fantasy/Longshadow Camp/Longshadow Battleground} {11}
+    }
+    {^Belt of Wisdom$} 
+    {
+        {Pinnacle/Science/Lost City} {47}
+    }
+    {^Black Belt$} 
+    {
+        {Pinnacle/Science/Lost City} {39}
+    }
     {^Blacklight lantern$} 
     {
         {Pinnacle/Fantasy/Ravenloft} {117}
+    }
+    {^Bloodstone ring$} 
+    {
+        {Pinnacle/Fantasy/Land of the Ice People} {39}
     }
     {^Bone Ring of Ao$} 
     {
         {Pinnacle/Fantasy/Wayhaven Docks/Isle of Ao} {187}
     }
+    {^Bone White Shield$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {165}
+    }
+    {^Bone armour$} 
+    {
+        {Pinnacle/Fantasy/Around the town of Angelo/Forest Trail/Elven Graveyard} {17}
+    }
+    {^Bone shield$} 
+    {
+        {Pinnacle/Fantasy/Around the town of Angelo/Forest Trail/Elven Graveyard} {14}
+    }
+    {^Boots$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {269}
+    }
+    {^Brass Codpiece$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {165}
+    }
+    {^Brass Gloves$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {1074}
+    }
+    {^Brass Helmet$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {571}
+    }
+    {^Brass knuckles$} 
+    {
+        {Pinnacle/Fantasy/Around the town of Angelo/Forest Trail/Encampment/The City of Westersea} {194}
+    }
+    {^Brass ring$} 
+    {
+        {Pinnacle/Fantasy/Land of the Ice People} {69}
+        {Pinnacle/Fantasy/Murus Faralain/Azra's Tunnel} {8}
+    }
     {^Braziers of a shimmering black metal$} 
     {
         {Pinnacle/Fantasy/Katin/Necromancer Guild (old)} {181}
+    }
+    {^Broken orc shield$} 
+    {
+        {Pinnacle/Fantasy/Longshadow Camp/Longshadow Battleground} {77}
+    }
+    {^Bronze Codpiece$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {223}
+    }
+    {^Bronze Gloves$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {89}
+    }
+    {^Bronze Helmet$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {128}
+    }
+    {^Bronze Ring of Adornment$} 
+    {
+        {Pinnacle} {20}
+    }
+    {^Bronze ring$} 
+    {
+        {Pinnacle/Fantasy/Land of the Ice People} {16}
+    }
+    {^Budweiser delivery truck$} 
+    {
+        {Pinnacle/Chaos/Brewery Swamp} {14}
+    }
+    {^Budweiser racing boat$} 
+    {
+        {Pinnacle/Chaos/Brewery Swamp} {27}
+    }
+    {^Ceramic Ring of Hunger$} 
+    {
+        {Pinnacle} {16}
+    }
+    {^Ceramic ring$} 
+    {
+        {Pinnacle/Fantasy/Land of the Ice People} {76}
+    }
+    {^Chainmail armour$} 
+    {
+        {Pinnacle/Fantasy} {718}
+    }
+    {^Cheese$} 
+    {
+        {Pinnacle/Science/Lost City} {42}
+    }
+    {^Chinchilla Fur$} 
+    {
+        {Pinnacle} {1}
+    }
+    {^City of Zolifo$} 
+    {
+        {Pinnacle/Fantasy/Wayhaven Docks/Serinth} {255}
+    }
+    {^Clerical Cloak of Lathander \x28glowing\x29$} 
+    {
+        {Pinnacle/Fantasy/Portal of Life v2} {23}
+    }
+    {^Cloak of Blue Cloth$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {157}
+    }
+    {^Cloak of Mind Shielding$} 
+    {
+        {Pinnacle} {85}
+    }
+    {^Cloak$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {1128}
+    }
+    {^Cloth Armour$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {208}
+    }
+    {^Cloth Cloak$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {296}
     }
     {^Copper Ring of Burden$} 
     {
         {Pinnacle} {20}
     }
+    {^Copper ring$} 
+    {
+        {Pinnacle/Fantasy/Land of the Ice People} {57}
+    }
+    {^Coral ring$} 
+    {
+        {Pinnacle/Fantasy/Land of the Ice People} {32}
+    }
+    {^Cotton Cloak$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {217}
+    }
+    {^Cow guts$} 
+    {
+        {Pinnacle/Chaos/CowVille/Hell Cows} {12}
+    }
+    {^Cowskin Ring$} 
+    {
+        {Pinnacle} {1}
+    }
     {^Crafter's Donation Box \x28open\x29$} 
     {
         {Pinnacle/Crafting} {4}
+    }
+    {^Crypt$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain} {114}
+    }
+    {^Crystal ball$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {232}
+        {Pinnacle/Fantasy/Alizarian Tower} {43}
+    }
+    {^Crystalline Cloak$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {485}
+        {Pinnacle/Fantasy/Alizarian Tower} {37}
+    }
+    {^Cupcake$} 
+    {
+        {Pinnacle/Chaos/Care Bears} {10}
+    }
+    {^Damaged catapult$} 
+    {
+        {Pinnacle/Fantasy/Longshadow Camp/Longshadow Battleground} {87}
+    }
+    {^Damaged trebuchet$} 
+    {
+        {Pinnacle/Fantasy/Longshadow Camp/Longshadow Battleground} {67}
+    }
+    {^Dark Black Amulet$} 
+    {
+        {Pinnacle/Fantasy/Necromancer Guild} {20}
+    }
+    {^Dark Black Potion with Yellow Floaties$} 
+    {
+        {Pinnacle/Fantasy/Necromancer Guild} {20}
     }
     {^Dark elven mace$} 
     {
@@ -674,38 +2369,149 @@
     {^Death's Valued Customers List$} 
     {
         {Pinnacle} {118}
+        {Pinnacle/Science/Atlanta/DC Megatech/D.C. Megatech 2.0} {547}
     }
     {^Der'Thalasian helm$} 
     {
         {Pinnacle/Fantasy/Ravenloft/Der'Thalas} {15}
     }
+    {^Diamond Ring of Adornment$} 
+    {
+        {Pinnacle} {16}
+    }
+    {^Diamond ring$} 
+    {
+        {Pinnacle/Fantasy/Land of the Ice People} {39}
+    }
+    {^Diamond$} 
+    {
+        {Pinnacle/Chaos/Care Bears} {31}
+    }
     {^Dirty Leather Armor$} 
     {
         {Pinnacle/Fantasy/Rabbit Fields/The Drow Kingdom of fe dar Shad} {107}
+    }
+    {^Disc of Kourlyn$} 
+    {
+        {Pinnacle/Fantasy/Kourlyn Temple} {152}
+    }
+    {^Disc of atomic slicing$} 
+    {
+        {Pinnacle/Science/New York/NASTAR} {89}
     }
     {^Donation bin \x28contains 32 items\x29$} 
     {
         {Pinnacle} {113}
     }
+    {^Donation bin \x28contains \d+ items\x29$} 
+    {
+        {Pinnacle} {136}
+    }
     {^Double Attacker Blade \x28glowing\x29 \x28enchanted\x29$} 
     {
         {Pinnacle/Fantasy/Catacombs 2} {104}
+        {Pinnacle/Fantasy/Necromancer Guild} {47}
+    }
+    {^Double Swordpole$} 
+    {
+        {Pinnacle/Science/Lost City} {26}
+    }
+    {^Dragon Symbol$} 
+    {
+        {Pinnacle/Science/Lost City} {15}
+    }
+    {^Dragonne \x28stuffed\x29$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain/Faunist Guild} {266}
+    }
+    {^Dragonscale Gloves$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {266}
+    }
+    {^Dragonscale Shield$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {267}
+    }
+    {^Ebony ring$} 
+    {
+        {Pinnacle/Fantasy/Land of the Ice People} {39}
+    }
+    {^Electro-baton$} 
+    {
+        {Pinnacle/Science/Fallout Shelter} {8}
+    }
+    {^Electrum Codpiece$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {380}
+    }
+    {^Electrum Helmet$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {155}
+    }
+    {^Electrum Plated Hilt$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain} {320}
+    }
+    {^Elf corpse$} 
+    {
+        {Pinnacle/Fantasy/Longshadow Camp/Longshadow Battleground} {74}
+    }
+    {^Elven banner$} 
+    {
+        {Pinnacle/Fantasy/Longshadow Camp/Longshadow Battleground} {85}
+    }
+    {^Emerald Ring of Darkness$} 
+    {
+        {Pinnacle} {20}
     }
     {^Erratio Forest$} 
     {
         {Pinnacle/Chaos} {70}
     }
+    {^Ethereal Dagger \x28enchanted\x29$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain/Ethereal Tower} {10}
+    }
+    {^Ethereal Ring$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain/Ethereal Tower} {12}
+    }
+    {^Ethereal Staff \x28enchanted\x29$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain/Ethereal Tower} {20}
+    }
+    {^Faerie Lizard Wings \x28diaphanous\x29$} 
+    {
+        {Pinnacle/Fantasy/Portal of Life v3} {286}
+    }
     {^Faerie Lizard Wings \x28spritely\x29$} 
     {
         {Pinnacle/Fantasy/Portal of Life v2} {184}
+    }
+    {^Faerie Lizard Wings$} 
+    {
+        {Pinnacle} {1}
+        {Pinnacle/Fantasy/Portal of Life} {79}
     }
     {^Faintly glowing moss clinging to the stone$} 
     {
         {Pinnacle/Fantasy/Catacombs 2} {91}
     }
+    {^Fat Glass Jar$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain/Faunist Guild} {257}
+    }
+    {^Fern tendril$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain} {68}
+    }
     {^Fireseed Basket containing 0 fireseeds$} 
     {
         {Pinnacle} {128}
+    }
+    {^Fist of fire$} 
+    {
+        {Pinnacle/Science/Fallout Shelter} {45}
     }
     {^Flesh Whip \x28enchanted\x29$} 
     {
@@ -715,6 +2521,18 @@
     {
         {Pinnacle/Chaos/Carina's Observatory} {1}
     }
+    {^Fur Boots$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {1135}
+    }
+    {^Gaming Die$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain} {308}
+    }
+    {^Gas Mask$} 
+    {
+        {Pinnacle/Science/UED Installation} {11}
+    }
     {^Giant Platemail$} 
     {
         {Pinnacle/Fantasy/Fire Giant Lair} {5}
@@ -723,9 +2541,67 @@
     {
         {Pinnacle/Fantasy/Fire Giant Lair} {5}
     }
+    {^Giant wolf claws$} 
+    {
+        {Pinnacle/Fantasy/Portal of Life v3} {195}
+    }
+    {^Glass Jar$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain/Faunist Guild} {255}
+    }
+    {^Glimmering full platemail$} 
+    {
+        {Pinnacle} {6}
+    }
+    {^Glock 9MM$} 
+    {
+        {Pinnacle/Science/O'Hare International Airport} {14}
+    }
+    {^Gloves of Acid Protection$} 
+    {
+        {Pinnacle/Fantasy} {412}
+        {Pinnacle/Fantasy/Zelligar's Castle} {20}
+    }
+    {^Gloves$} 
+    {
+        {Pinnacle/Fantasy/Alizarian Tower} {37}
+    }
+    {^Goblin Gauntlets$} 
+    {
+        {Pinnacle/Fantasy/Wayhaven Docks/Isle of Ao} {12}
+    }
+    {^Goblin Spear$} 
+    {
+        {Pinnacle/Fantasy/Wayhaven Docks/Isle of Ao} {14}
+    }
+    {^Goggles$} 
+    {
+        {Pinnacle/Science/Detroit} {127}
+    }
     {^Gold Amulet of the Frog$} 
     {
         {Pinnacle} {20}
+    }
+    {^Gold Amulet$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {126}
+        {Pinnacle/Fantasy/Alizarian Tower} {37}
+    }
+    {^Gold Cloth cloak$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {140}
+    }
+    {^Gold Helmet$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {182}
+    }
+    {^Gold Ring of Adornment$} 
+    {
+        {Pinnacle} {20}
+    }
+    {^Gold ring$} 
+    {
+        {Pinnacle/Fantasy/Land of the Ice People} {76}
     }
     {^Golden Platemail$} 
     {
@@ -743,61 +2619,284 @@
     {
         {Pinnacle} {128}
     }
+    {^Goodberry Basket containing \d+ berries$} 
+    {
+        {Pinnacle} {128}
+    }
+    {^Granite ring$} 
+    {
+        {Pinnacle/Fantasy/Land of the Ice People} {69}
+    }
     {^Grenade$} 
     {
         {Pinnacle/Science/Bandit Camp} {8}
+    }
+    {^Grumpy's Galoshes \x7Bgood\x7D$} 
+    {
+        {Pinnacle/Chaos/Care Bears} {9}
+    }
+    {^Halfnium Control Rod$} 
+    {
+        {Pinnacle/Science/Fallout Shelter} {54}
     }
     {^Hall of Game Shows$} 
     {
         {Pinnacle/Chaos} {38}
     }
+    {^Heart of Malykkar$} 
+    {
+        {Pinnacle} {1}
+    }
     {^Heavy Club$} 
     {
+        {Pinnacle/Fantasy/Necromancer Guild} {20}
         {Pinnacle/Fantasy/Rabbit Fields/The Drow Kingdom of fe dar Shad} {107}
+    }
+    {^Heavy Oak Door$} 
+    {
+        {Pinnacle/Fantasy/Tower of Vindaes} {7}
+    }
+    {^Helmet$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {498}
+    }
+    {^Hide boots$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {167}
+    }
+    {^Honorable knight$} 
+    {
+        {Pinnacle/Fantasy/Lonely Keep} {3}
+    }
+    {^Huge crater$} 
+    {
+        {Pinnacle/Fantasy/Longshadow Camp/Longshadow Battleground} {23}
+    }
+    {^Ice Cream Wrapper$} 
+    {
+        {Pinnacle/Chaos/Good Humor Truck} {10}
+    }
+    {^Ice dagger$} 
+    {
+        {Pinnacle/Science/Fallout Shelter} {54}
     }
     {^Ice wolf pelt$} 
     {
         {Pinnacle/Fantasy/Around the town of Angelo/Forest Trail/Mountain Path} {43}
     }
+    {^Iron Chainmail$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {462}
+    }
+    {^Iron Codpiece$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {499}
+    }
+    {^Iron Gauntlets$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {282}
+    }
+    {^Iron Gloves$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {1122}
+    }
+    {^Iron Helmet$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {142}
+    }
+    {^Iron Ring of Adornment$} 
+    {
+        {Pinnacle} {16}
+    }
+    {^Iron Ring of Heroism$} 
+    {
+        {Pinnacle} {20}
+    }
+    {^Iron ring$} 
+    {
+        {Pinnacle/Fantasy/Alizarian Tower} {37}
+        {Pinnacle/Fantasy/Land of the Ice People} {76}
+    }
+    {^Ivory Wand$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain/Faunist Guild} {238}
+    }
+    {^Ivory ring$} 
+    {
+        {Pinnacle/Fantasy/Land of the Ice People} {56}
+    }
+    {^Jacinth Ring of the Seven Seas$} 
+    {
+        {Pinnacle} {20}
+    }
+    {^Jacinth ring$} 
+    {
+        {Pinnacle/Fantasy/Land of the Ice People} {17}
+    }
+    {^Jade ring$} 
+    {
+        {Pinnacle/Fantasy/Land of the Ice People} {70}
+    }
+    {^Jasper Ring of Adornment$} 
+    {
+        {Pinnacle} {20}
+    }
+    {^Jasper Ring of Influence \x28glowing\x29$} 
+    {
+        {Pinnacle/Fantasy/Necromancer Guild} {47}
+    }
     {^Jeep$} 
     {
         {Pinnacle/Science/Bandit Camp} {4}
+    }
+    {^Jeffrey Hamilton's Brain$} 
+    {
+        {Pinnacle/Science/Hamilton Plant} {21}
+    }
+    {^Ladder$} 
+    {
+        {Pinnacle/Chaos/Care Bears} {21}
+    }
+    {^Large Glass Jar$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain/Faunist Guild} {253}
     }
     {^Large wolf claws$} 
     {
         {Pinnacle/Fantasy/Portal of Life v2} {107}
     }
+    {^Lead ring$} 
+    {
+        {Pinnacle/Fantasy/Land of the Ice People} {66}
+    }
+    {^Leather Armour$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {177}
+    }
+    {^Leather Boots$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {10}
+    }
+    {^Leather Girdle$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {266}
+    }
+    {^Leather Gloves$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {232}
+    }
+    {^Leather Helmet$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {223}
+    }
+    {^Leather girdle$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {146}
+    }
+    {^Lock Pick$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain/Faunist Guild} {216}
+    }
     {^Long Sword$} 
     {
+        {Pinnacle/Fantasy/Alizarian Tower} {1}
+        {Pinnacle/Fantasy/Necromancer Guild} {20}
         {Pinnacle/Fantasy/Rabbit Fields/The Drow Kingdom of fe dar Shad} {4}
+    }
+    {^Luminous Globe$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain/Faunist Guild} {263}
     }
     {^Magic mushroom magically stuck in the ground$} 
     {
         {Pinnacle/Chaos} {21}
     }
+    {^Magical aura$} 
+    {
+        {Pinnacle/Fantasy/Longshadow Camp/Longshadow Battleground} {63}
+    }
     {^Magical globes of light$} 
     {
         {Pinnacle/Fantasy/Katin/Necromancer Guild (old)} {179}
     }
+    {^Mahogany ring$} 
+    {
+        {Pinnacle/Fantasy/Land of the Ice People} {53}
+    }
     {^Many points of light sparkle beautifully above you$} 
     {
+        {Pinnacle/Fantasy} {757}
         {Pinnacle/Fantasy/Necromancer Guild} {8}
+        {Pinnacle/Fantasy/Portal of Life v2} {1}
+    }
+    {^Maple ring$} 
+    {
+        {Pinnacle/Fantasy/Land of the Ice People} {60}
+    }
+    {^Marble Codpiece$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {455}
+    }
+    {^Marble Helmet$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {276}
     }
     {^Marble obelisk$} 
     {
         {Pinnacle/Fantasy/Alizarian Tower} {108}
     }
+    {^Marble ring$} 
+    {
+        {Pinnacle/Fantasy/Land of the Ice People} {79}
+    }
     {^Matt Sweetboots$} 
     {
         {Pinnacle/Chaos/Sweetboots' House} {3}
+    }
+    {^Mausoleum$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain} {115}
+    }
+    {^Mental Harmonizing Stimulator$} 
+    {
+        {Pinnacle} {175}
+        {Pinnacle/Fantasy/Portal of Life v2} {226}
     }
     {^Metal case$} 
     {
         {Pinnacle/Science/Bandit Camp} {8}
     }
+    {^Metallic dagger$} 
+    {
+        {Pinnacle/Fantasy/Around the town of Angelo/Forest Trail/Encampment/The City of Westersea} {363}
+    }
+    {^Mineral Mining Equipment$} 
+    {
+        {Pinnacle/Science/UED Installation} {11}
+    }
+    {^Moonstone ring$} 
+    {
+        {Pinnacle/Fantasy/Land of the Ice People} {52}
+    }
     {^Mounds of sparkling gems$} 
     {
         {Pinnacle/Fantasy/New Arovian Graveyard/Tomb of King Alaren} {50}
+    }
+    {^Murdock Security Keycard$} 
+    {
+        {Pinnacle} {1}
+    }
+    {^Myril Aura$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain} {50}
+    }
+    {^Myril Helmet$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain} {8}
+    }
+    {^Myril Ring$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain} {8}
     }
     {^Necromancer Rod$} 
     {
@@ -807,29 +2906,246 @@
     {
         {Pinnacle/Chaos/Sweetboots' House} {32}
     }
+    {^NoHeart's Amulet \x7Bgood\x7D$} 
+    {
+        {Pinnacle/Chaos/Care Bears} {31}
+    }
+    {^NoHeart's Amulet \x7Bgreat\x7D$} 
+    {
+        {Pinnacle/Chaos/Care Bears} {31}
+    }
+    {^Oak ring$} 
+    {
+        {Pinnacle/Fantasy/Land of the Ice People} {32}
+    }
     {^Observatory brochure$} 
     {
         {Pinnacle/Chaos/Carina's Observatory} {10}
+    }
+    {^Obsidian Helmet$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {312}
     }
     {^Obsidian Ring of Slow Digestion$} 
     {
         {Pinnacle} {20}
     }
+    {^Obsidian ring$} 
+    {
+        {Pinnacle/Fantasy/Land of the Ice People} {17}
+    }
+    {^Old Dusty Hat$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {222}
+    }
+    {^Old Mile Post$} 
+    {
+        {Pinnacle/Fantasy} {526}
+    }
+    {^Old Steel key$} 
+    {
+        {Pinnacle/Science/Lost City} {13}
+    }
+    {^Onyx ring$} 
+    {
+        {Pinnacle/Fantasy/Land of the Ice People} {45}
+    }
+    {^Opal Ring of Burden$} 
+    {
+        {Pinnacle} {20}
+    }
+    {^Opal ring$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {269}
+    }
+    {^Orc corpse$} 
+    {
+        {Pinnacle/Fantasy/Longshadow Camp/Longshadow Battleground} {63}
+    }
+    {^Orcish banner$} 
+    {
+        {Pinnacle/Fantasy/Longshadow Camp/Longshadow Battleground} {15}
+    }
     {^Overgrown swamp$} 
     {
         {Pinnacle/Chaos} {8}
     }
+    {^Patrol Flak Jacket$} 
+    {
+        {Pinnacle/Science/Detroit} {127}
+    }
+    {^Pearl ring$} 
+    {
+        {Pinnacle/Fantasy/Land of the Ice People} {2}
+    }
     {^Peasant's Rags \x28Gloves\x29$} 
     {
+        {Pinnacle} {1}
+        {Pinnacle/Fantasy/Necromancer Guild} {1}
         {Pinnacle/Fantasy/Portal of Life v2} {1}
     }
     {^Pedestal$} 
     {
         {Pinnacle/Fantasy/Alizarian Tower} {111}
     }
+    {^Pile Of Bones$} 
+    {
+        {Pinnacle/Fantasy/Portal of Life} {455}
+        {Pinnacle/Fantasy/Portal of Life v2} {455}
+        {Pinnacle/Fantasy/Portal of Life v3} {384}
+    }
     {^Pipe wrench$} 
     {
         {Pinnacle/Science/Bandit Camp} {5}
+    }
+    {^Pitch Black Armour$} 
+    {
+        {Pinnacle/Fantasy/Wayhaven Docks/Serinth} {694}
+    }
+    {^Pitch Black Boots$} 
+    {
+        {Pinnacle/Fantasy/Wayhaven Docks/Serinth} {694}
+    }
+    {^Pitch Black Cloak$} 
+    {
+        {Pinnacle/Fantasy/Wayhaven Docks/Serinth} {694}
+    }
+    {^Pitch Black Helmet$} 
+    {
+        {Pinnacle/Fantasy/Wayhaven Docks/Serinth} {694}
+    }
+    {^Platemail Armour$} 
+    {
+        {Pinnacle/Chaos/Erratio Forest/The Tabard Inn} {21}
+    }
+    {^Platinum Codpiece$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {365}
+    }
+    {^Platinum Gloves$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {273}
+    }
+    {^Platinum Helmet$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {513}
+    }
+    {^Platinum Lace Circlet$} 
+    {
+        {Pinnacle} {175}
+        {Pinnacle/Fantasy} {726}
+        {Pinnacle/Fantasy/Necromancer Guild} {1}
+        {Pinnacle/Fantasy/Portal of Life v2} {1}
+    }
+    {^Platinum ring$} 
+    {
+        {Pinnacle/Fantasy/Land of the Ice People} {26}
+    }
+    {^Plinth$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain/Faunist Guild} {266}
+    }
+    {^Pool of green blood$} 
+    {
+        {Pinnacle/Fantasy/Longshadow Camp/Longshadow Battleground} {65}
+    }
+    {^Portal of Life$} 
+    {
+        {Pinnacle/Fantasy} {712}
+        {Pinnacle/Fantasy/Portal of Life v2} {1}
+    }
+    {^Potion of Shattering$} 
+    {
+        {Pinnacle/Fantasy/Kourlyn Temple} {6}
+    }
+    {^Power Amulet \x28radiating\x29$} 
+    {
+        {Pinnacle/Science/Alien Ship} {55}
+    }
+    {^Power Armor \x28radiating\x29$} 
+    {
+        {Pinnacle/Science/Alien Ship} {55}
+    }
+    {^Power Axe \x28evil\x29 \x28radiating\x29$} 
+    {
+        {Pinnacle/Science/Alien Ship} {55}
+    }
+    {^Power Bar$} 
+    {
+        {Pinnacle/Science/Alien Ship} {7}
+    }
+    {^Power Boots \x28radiating\x29$} 
+    {
+        {Pinnacle/Science/Alien Ship} {41}
+    }
+    {^Power Cloak \x28radiating\x29$} 
+    {
+        {Pinnacle/Science/Alien Ship} {52}
+    }
+    {^Power Gloves \x28radiating\x29$} 
+    {
+        {Pinnacle/Science/Alien Ship} {51}
+    }
+    {^Power Helmet \x28radiating\x29$} 
+    {
+        {Pinnacle/Science/Alien Ship} {41}
+    }
+    {^Power Ring \x28radiating\x29$} 
+    {
+        {Pinnacle/Science/Alien Ship} {52}
+    }
+    {^Powered Utility Boots$} 
+    {
+        {Pinnacle/Science/Fallout Shelter} {98}
+    }
+    {^Powered Utility Cloak$} 
+    {
+        {Pinnacle/Science/Fallout Shelter} {97}
+    }
+    {^Powered Utility Helmet$} 
+    {
+        {Pinnacle/Science/Fallout Shelter} {99}
+    }
+    {^Powered Utility Ring$} 
+    {
+        {Pinnacle/Science/Fallout Shelter} {100}
+    }
+    {^Professor Cold-Heart's Ray Gun \x7Bgood\x7D$} 
+    {
+        {Pinnacle/Chaos/Care Bears} {52}
+    }
+    {^Psionatrix of Clairsentience$} 
+    {
+        {Pinnacle} {1}
+        {Pinnacle/Fantasy/Portal of Life v2} {122}
+    }
+    {^Pyrite ring$} 
+    {
+        {Pinnacle/Fantasy/Land of the Ice People} {62}
+    }
+    {^Quartz ring$} 
+    {
+        {Pinnacle/Fantasy/Land of the Ice People} {45}
+    }
+    {^Radioactive slimeball$} 
+    {
+        {Pinnacle/Science/Forgotten sewers} {79}
+    }
+    {^Random Codpiece$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {230}
+    }
+    {^Random Helmet$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {66}
+    }
+    {^Reactor Core Access Card$} 
+    {
+        {Pinnacle/Science/Fallout Shelter} {81}
+    }
+    {^Red wiring matrix$} 
+    {
+        {Pinnacle/Science/Fallout Shelter} {88}
     }
     {^Rifle$} 
     {
@@ -839,17 +3155,199 @@
     {
         {Pinnacle/Fantasy/Alizarian Tower} {111}
     }
+    {^Ring of Fortitude$} 
+    {
+        {Pinnacle/Fantasy/Wayhaven Docks/Serinth} {359}
+    }
+    {^Robotic arm \x28enchanted\x29$} 
+    {
+        {Pinnacle/Science/New York/NASTAR} {20}
+    }
+    {^Rocky debris$} 
+    {
+        {Pinnacle/Fantasy/Longshadow Camp/Longshadow Battleground} {3}
+    }
+    {^Ruby Codpiece$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {39}
+    }
+    {^Ruby Helmet$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {834}
+    }
+    {^Ruby Ring of Evisserger$} 
+    {
+        {Pinnacle} {1}
+    }
+    {^Ryft's Pub Crawl Dispenser$} 
+    {
+        {Pinnacle/Palisade Pub} {1}
+    }
+    {^SWAT Armour$} 
+    {
+        {Pinnacle/Science/O'Hare International Airport} {13}
+    }
+    {^Sapphire Amulet$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {211}
+    }
+    {^Sapphire Codpiece$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {795}
+    }
+    {^Sardonyx Ring of Evisserger$} 
+    {
+        {Pinnacle} {1}
+    }
+    {^Sardonyx Ring of Heroism$} 
+    {
+        {Pinnacle} {20}
+    }
+    {^Sardonyx ring$} 
+    {
+        {Pinnacle/Fantasy/Land of the Ice People} {53}
+    }
+    {^Scaley Armour$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {149}
+    }
+    {^Scaley Boots$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {169}
+    }
+    {^Scaley Helmet$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {179}
+    }
+    {^Screetchie's Mirror$} 
+    {
+        {Pinnacle/Chaos/Care Bears} {30}
+    }
+    {^Section Z game cabinet$} 
+    {
+        {Pinnacle/Fantasy/Necromancer Guild} {1}
+    }
+    {^Segmented chitinous body armour$} 
+    {
+        {Pinnacle/Science/New York/NASTAR} {89}
+    }
+    {^Shadow Staff \x28brightly glowing\x29$} 
+    {
+        {Pinnacle/Fantasy/Portal of Life v3} {40}
+    }
     {^Shadow Staff \x28faintly glowing\x29$} 
     {
         {Pinnacle/Fantasy/Portal of Life v2} {317}
+    }
+    {^Shadow Staff$} 
+    {
+        {Pinnacle/Fantasy/Portal of Life} {279}
+    }
+    {^Shard of Blue Glass$} 
+    {
+        {Pinnacle/Chaos/Chinese Checkers} {16}
+    }
+    {^Shard of Green Glass$} 
+    {
+        {Pinnacle/Chaos/Chinese Checkers} {11}
+    }
+    {^Shard of Red Glass$} 
+    {
+        {Pinnacle/Chaos/Chinese Checkers} {3}
+    }
+    {^Shattered glass$} 
+    {
+        {Pinnacle/Chaos/Beavis and Butthead} {1}
+    }
+    {^Shield of the Spirit \x7Bradiant\x7D$} 
+    {
+        {Pinnacle} {86}
+    }
+    {^Shortsword of quickness \x28enchanted\x29$} 
+    {
+        {Pinnacle/Fantasy/Lonely Keep} {6}
+    }
+    {^Silicon armour$} 
+    {
+        {Pinnacle/Science/New York/NASTAR} {20}
+    }
+    {^Silver Codpiece$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {728}
+    }
+    {^Silver Helmet$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {5}
+    }
+    {^Silver Megatech Security Armour$} 
+    {
+        {Pinnacle/Fantasy/Necromancer Guild} {41}
+        {Pinnacle/Science/Atlanta/DC Megatech/D.C. Megatech 2.0} {4}
+    }
+    {^Silver Platemail \x28glowing\x29$} 
+    {
+        {Pinnacle/Fantasy/Necromancer Guild} {47}
+    }
+    {^Silver Slicer \x28glowing\x29 \x28enchanted\x29$} 
+    {
+        {Pinnacle/Fantasy/Necromancer Guild} {47}
+    }
+    {^Silver ring$} 
+    {
+        {Pinnacle/Fantasy/Land of the Ice People} {17}
     }
     {^Small flute$} 
     {
         {Pinnacle/Fantasy/Alizarian Tower} {37}
     }
+    {^Small hut$} 
+    {
+        {Pinnacle/Fantasy} {906}
+    }
+    {^Smoldering arrows$} 
+    {
+        {Pinnacle/Fantasy/Longshadow Camp/Longshadow Battleground} {21}
+    }
+    {^Soaker Well$} 
+    {
+        {Pinnacle/Science/Detroit} {162}
+    }
+    {^Some moss$} 
+    {
+        {Pinnacle/Fantasy/Wayhaven Docks/Serinth} {255}
+    }
+    {^Sopem$} 
+    {
+        {Pinnacle/Fantasy/Wayhaven Docks/Serinth} {359}
+    }
     {^Soul Bead Music Box containing 0 soul beads$} 
     {
         {Pinnacle} {128}
+    }
+    {^Soul Bead Music Box containing \d+ soul beads$} 
+    {
+        {Pinnacle} {128}
+    }
+    {^Spear$} 
+    {
+        {Pinnacle/Chaos/Erratio Forest/The Tabard Inn} {16}
+    }
+    {^Spherical Portal$} 
+    {
+        {Pinnacle/Fantasy/Longshadow Camp} {13}
+        {Pinnacle/Fantasy/Longshadow Camp/Longshadow Battleground} {1}
+    }
+    {^Spices$} 
+    {
+        {Pinnacle/Fantasy} {341}
+    }
+    {^Spiked Pipe$} 
+    {
+        {Pinnacle/Science/Lost City} {4}
+    }
+    {^Spiky mace$} 
+    {
+        {Pinnacle/Fantasy/Around the town of Angelo/Forest Trail/Encampment/The City of Westersea} {193}
     }
     {^Spiritual Essence$} 
     {
@@ -871,9 +3369,67 @@
     {
         {Pinnacle/Fantasy/Portal of Life v2} {295}
     }
+    {^Stag Antlers \x2822 point\x29$} 
+    {
+        {Pinnacle/Fantasy/Portal of Life v3} {288}
+    }
+    {^Stag Antlers$} 
+    {
+        {Pinnacle/Fantasy/Portal of Life} {15}
+    }
+    {^Stairs leading up to the surface$} 
+    {
+        {Pinnacle/Science/Fallout Shelter} {3}
+    }
+    {^Statue of a Frightening Creature$} 
+    {
+        {Pinnacle/Fantasy} {811}
+    }
     {^Statues of the most revered Necromancers$} 
     {
         {Pinnacle/Fantasy/Katin/Necromancer Guild (old)} {109}
+        {Pinnacle/Fantasy/Necromancer Guild} {1}
+    }
+    {^Steel Chainmail$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {202}
+    }
+    {^Steel Codpiece$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {863}
+    }
+    {^Steel Gloves$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {14}
+    }
+    {^Steel Platemail Gauntlets$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {4}
+    }
+    {^Steel Shield$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {188}
+    }
+    {^Steel bracers$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {150}
+    }
+    {^Steel ring$} 
+    {
+        {Pinnacle/Fantasy/Land of the Ice People} {24}
+    }
+    {^Steel sword \x28faintly glowing\x29 \x28enchanted\x29$} 
+    {
+        {Pinnacle} {136}
+    }
+    {^Stone Hearth$} 
+    {
+        {Pinnacle/Fantasy/Portal of Life} {147}
+        {Pinnacle/Fantasy/Portal of Life v2} {142}
+    }
+    {^Stone club$} 
+    {
+        {Pinnacle/Fantasy/Giant Camp} {1}
     }
     {^Stone coffin \x28Closed\x29$} 
     {
@@ -883,17 +3439,111 @@
     {
         {Pinnacle/Fantasy/New Arovian Graveyard/Tomb of King Alaren} {26}
     }
+    {^Stone door \x28east\x29$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain/Faunist Guild} {95}
+    }
+    {^Stone door \x28north\x29$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain/Faunist Guild} {86}
+    }
+    {^Stone door \x28south\x29$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain/Faunist Guild} {86}
+    }
+    {^Stone door \x28west\x29$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain/Faunist Guild} {95}
+    }
+    {^Stone door$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain/Faunist Guild} {86}
+    }
+    {^Stone ring$} 
+    {
+        {Pinnacle/Fantasy/Land of the Ice People} {52}
+    }
+    {^Storm Amulet$} 
+    {
+        {Pinnacle/Fantasy/Kourlyn Temple} {142}
+    }
+    {^Storm Boots$} 
+    {
+        {Pinnacle/Fantasy/Kourlyn Temple} {20}
+    }
+    {^Storm Cloak$} 
+    {
+        {Pinnacle/Fantasy/Kourlyn Temple} {141}
+    }
+    {^Storm Gloves$} 
+    {
+        {Pinnacle/Fantasy/Kourlyn Temple} {140}
+    }
+    {^Sword of Light \x28enchanted\x29$} 
+    {
+        {Pinnacle/Fantasy/Lonely Keep} {3}
+    }
+    {^Sword of Shadow \x7Bgood\x7D \x28enchanted\x29$} 
+    {
+        {Pinnacle/Chaos/Care Bears} {51}
+    }
+    {^Sylvan Sword \x28jagged\x29$} 
+    {
+        {Pinnacle/Fantasy/Portal of Life v3} {20}
+    }
     {^Sylvan Sword \x28shimmering\x29$} 
     {
         {Pinnacle/Fantasy/Portal of Life v2} {197}
+    }
+    {^Sylvan Sword$} 
+    {
+        {Pinnacle/Fantasy/Lleera's Tree} {1}
+        {Pinnacle/Fantasy/Portal of Life} {9}
+    }
+    {^Talisman of Honor$} 
+    {
+        {Pinnacle/Fantasy/Lonely Keep} {3}
     }
     {^Tattered Robe$} 
     {
         {Pinnacle/Fantasy/Alizarian Tower} {53}
     }
+    {^Tattered boots$} 
+    {
+        {Pinnacle/Fantasy/Around the town of Angelo/Forest Trail/Encampment/The City of Westersea} {194}
+    }
+    {^Tattered breeches$} 
+    {
+        {Pinnacle/Fantasy/Around the town of Angelo/Forest Trail/Encampment/The City of Westersea} {363}
+    }
+    {^Tenderheart's Heart-shaped Shield \x7Bgreat\x7D$} 
+    {
+        {Pinnacle/Chaos/Care Bears} {7}
+    }
+    {^Tensor Marble$} 
+    {
+        {Pinnacle} {202}
+    }
     {^The 3-K Kill List$} 
     {
         {Pinnacle} {1}
+        {Pinnacle/Chaos/Chaos Cinemaplex/Hotel Transylvania} {136}
+        {Pinnacle/Fantasy/Land of the Ice People} {82}
+        {Pinnacle/Fantasy/Necromancer Guild} {1}
+        {Pinnacle/Science/Alien\Alpha} {15}
+        {Pinnacle/Townhall} {1}
+    }
+    {^The 3k Top Player List$} 
+    {
+        {Pinnacle/Palisade Pub} {1}
+    }
+    {^The Amulet of Energy$} 
+    {
+        {Pinnacle/Science/Alien Ship} {26}
+    }
+    {^The Big Stick\x28TM\x29$} 
+    {
+        {Pinnacle/Chaos/Care Bears} {23}
     }
     {^The Book of Necrology$} 
     {
@@ -907,13 +3557,139 @@
     {
         {Pinnacle/Chaos} {91}
     }
+    {^The Lance of Doran \x28enchanted\x29$} 
+    {
+        {Pinnacle} {175}
+        {Pinnacle/Fantasy} {726}
+        {Pinnacle/Fantasy/Necromancer Guild} {1}
+        {Pinnacle/Fantasy/Portal of Life v2} {1}
+    }
+    {^The Letter A$} 
+    {
+        {Pinnacle/Chaos/Alphabet Land} {3}
+    }
+    {^The Letter B$} 
+    {
+        {Pinnacle/Chaos/Alphabet Land} {5}
+    }
+    {^The Letter C$} 
+    {
+        {Pinnacle/Chaos/Alphabet Land} {6}
+    }
+    {^The Letter D$} 
+    {
+        {Pinnacle/Chaos/Alphabet Land} {8}
+    }
+    {^The Letter E$} 
+    {
+        {Pinnacle/Chaos/Alphabet Land} {9}
+    }
+    {^The Letter F$} 
+    {
+        {Pinnacle/Chaos/Alphabet Land} {4}
+    }
+    {^The Letter G$} 
+    {
+        {Pinnacle/Chaos/Alphabet Land} {11}
+    }
+    {^The Letter H$} 
+    {
+        {Pinnacle/Chaos/Alphabet Land} {7}
+    }
+    {^The Letter I$} 
+    {
+        {Pinnacle/Chaos/Alphabet Land} {15}
+    }
+    {^The Letter J$} 
+    {
+        {Pinnacle/Chaos/Alphabet Land} {10}
+    }
+    {^The Letter K$} 
+    {
+        {Pinnacle/Chaos/Alphabet Land} {18}
+    }
+    {^The Letter L$} 
+    {
+        {Pinnacle/Chaos/Alphabet Land} {13}
+    }
+    {^The Letter M$} 
+    {
+        {Pinnacle/Chaos/Alphabet Land} {12}
+    }
+    {^The Letter N$} 
+    {
+        {Pinnacle/Chaos/Alphabet Land} {14}
+    }
+    {^The Letter O$} 
+    {
+        {Pinnacle/Chaos/Alphabet Land} {17}
+    }
+    {^The Letter P$} 
+    {
+        {Pinnacle/Chaos/Alphabet Land} {19}
+    }
+    {^The Letter Q$} 
+    {
+        {Pinnacle/Chaos/Alphabet Land} {26}
+    }
+    {^The Letter R$} 
+    {
+        {Pinnacle/Chaos/Alphabet Land} {28}
+    }
+    {^The Letter S$} 
+    {
+        {Pinnacle/Chaos/Alphabet Land} {16}
+    }
+    {^The Letter T$} 
+    {
+        {Pinnacle/Chaos/Alphabet Land} {20}
+    }
+    {^The Letter U$} 
+    {
+        {Pinnacle/Chaos/Alphabet Land} {27}
+    }
+    {^The Letter V$} 
+    {
+        {Pinnacle/Chaos/Alphabet Land} {25}
+    }
+    {^The Letter W$} 
+    {
+        {Pinnacle/Chaos/Alphabet Land} {24}
+    }
+    {^The Letter X$} 
+    {
+        {Pinnacle/Chaos/Alphabet Land} {22}
+    }
+    {^The Letter Y$} 
+    {
+        {Pinnacle/Chaos/Alphabet Land} {21}
+    }
+    {^The Letter Z$} 
+    {
+        {Pinnacle/Chaos/Alphabet Land} {23}
+    }
+    {^The Minimental \x28not grafted\x29$} 
+    {
+        {Pinnacle} {1}
+    }
     {^The Necromancers' Standard flying the Lich banner$} 
     {
         {Pinnacle/Fantasy/Necromancer Guild} {5}
     }
+    {^The Necromancers' Standard flying the Vampire banner$} 
+    {
+        {Pinnacle/Fantasy} {757}
+        {Pinnacle/Fantasy/Necromancer Guild} {20}
+        {Pinnacle/Fantasy/Portal of Life v2} {1}
+    }
+    {^The Necromancers' Standard flying the Were banner$} 
+    {
+        {Pinnacle/Fantasy/Necromancer Guild} {45}
+    }
     {^The Necromancers' Tapestry honoring Dracula$} 
     {
         {Pinnacle/Fantasy/Necromancer Guild} {20}
+        {Pinnacle/Science/Alien\Alpha} {1}
     }
     {^The Observatory Telescope$} 
     {
@@ -923,9 +3699,23 @@
     {
         {Pinnacle} {126}
     }
+    {^The Phial of Despair$} 
+    {
+        {Pinnacle/Science/Detroit} {162}
+        {Pinnacle/Science/New York/Carnegie Hall} {144}
+    }
+    {^The Three-Kingdoms 'Least Wanted' poster$} 
+    {
+        {Pinnacle/Palisade Pub} {1}
+    }
     {^The Ticket Booth: 'Buy your tickets here\x21'$} 
     {
         {Pinnacle/Chaos/Chaos Cinemaplex} {3}
+        {Pinnacle/Chaos/Chaos Cinemaplex/Hotel Transylvania} {1}
+    }
+    {^The Town of Grindur$} 
+    {
+        {Pinnacle/Fantasy} {788}
     }
     {^The amulet of twilight$} 
     {
@@ -939,9 +3729,25 @@
     {
         {Pinnacle/Fantasy/New Arovian Graveyard/Tomb of King Alaren} {26}
     }
+    {^The engine$} 
+    {
+        {Pinnacle/Science/New York/NASTAR} {104}
+    }
     {^The eye of twilight [dull]$} 
     {
         {Pinnacle/Fantasy/New Arovian Graveyard/Tomb of King Alaren} {11}
+    }
+    {^The eye of twilight [glowing dimly]$} 
+    {
+        {Pinnacle/Science/New York/Carnegie Hall} {166}
+    }
+    {^The green furry hide of Luck Bear \x7Bgood\x7D$} 
+    {
+        {Pinnacle/Chaos/Care Bears} {24}
+    }
+    {^The green furry hide of Luck Bear \x7Bgreat\x7D$} 
+    {
+        {Pinnacle/Chaos/Care Bears} {24}
     }
     {^The pants of Vinnie$} 
     {
@@ -959,45 +3765,203 @@
     {
         {Pinnacle} {82}
     }
+    {^The tower shield of the Akh'Velahr$} 
+    {
+        {Pinnacle/Fantasy/Portal of Life v2} {174}
+    }
+    {^There is a hole here$} 
+    {
+        {Pinnacle/Chaos/Chess Board} {1}
+    }
+    {^Thieves' Lockpicks$} 
+    {
+        {Pinnacle/Fantasy/Alizarian Tower} {47}
+    }
+    {^Tin ring$} 
+    {
+        {Pinnacle/Fantasy/Land of the Ice People} {58}
+    }
+    {^Titanium ring$} 
+    {
+        {Pinnacle/Fantasy/Land of the Ice People} {26}
+    }
     {^Top Dog Plaque$} 
     {
         {Pinnacle} {141}
+    }
+    {^Topaz ring$} 
+    {
+        {Pinnacle/Fantasy/Land of the Ice People} {76}
+    }
+    {^Torture Master's Hood$} 
+    {
+        {Pinnacle/Fantasy/Tower of Vindaes} {12}
+    }
+    {^Troll Hide$} 
+    {
+        {Pinnacle/Fantasy} {333}
+    }
+    {^Trophy Case$} 
+    {
+        {Pinnacle/Fantasy/Necromancer Guild} {76}
+    }
+    {^Turquoise ring$} 
+    {
+        {Pinnacle/Fantasy/Land of the Ice People} {65}
+    }
+    {^Unholy Symbol of Dorthinick$} 
+    {
+        {Pinnacle/Fantasy/Wayhaven Docks/Serinth} {695}
+    }
+    {^Valuable Crystals$} 
+    {
+        {Pinnacle/Science/UED Installation} {8}
+    }
+    {^Ventra's secret chest \x28open\x29$} 
+    {
+        {Pinnacle} {116}
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {373}
+        {Pinnacle/Fantasy} {619}
+        {Pinnacle/Fantasy/Land of the Ice People} {81}
+        {Pinnacle/Fantasy/Portal of Life v2} {284}
+    }
+    {^Vindaes' Key$} 
+    {
+        {Pinnacle/Fantasy/Tower of Vindaes} {12}
+    }
+    {^Vortex Stabilizer$} 
+    {
+        {Pinnacle} {1}
     }
     {^Weathermay gloves$} 
     {
         {Pinnacle/Fantasy/Ravenloft} {101}
     }
+    {^Wide shield of the flame$} 
+    {
+        {Pinnacle/Fantasy/Lonely Keep} {3}
+    }
+    {^Wide shield of the moon$} 
+    {
+        {Pinnacle/Fantasy/Lonely Keep} {6}
+    }
+    {^Wide shield of the serpent$} 
+    {
+        {Pinnacle/Fantasy/Lonely Keep} {6}
+    }
+    {^Wings of the Aviarol$} 
+    {
+        {Pinnacle/Fantasy/Kourlyn Temple} {135}
+    }
+    {^Wolf claws$} 
+    {
+        {Pinnacle/Fantasy/Portal of Life} {79}
+    }
     {^Worm's Talon Airship$} 
     {
         {Pinnacle/Fantasy/Around the town of Angelo/Forest Trail/Encampment} {12}
     }
+    {^Worn boots$} 
+    {
+        {Pinnacle/Fantasy/Around the town of Angelo/Forest Trail/Encampment/The City of Westersea} {366}
+    }
+    {^Worn breeches$} 
+    {
+        {Pinnacle/Fantasy/Around the town of Angelo/Forest Trail/Encampment/The City of Westersea} {195}
+    }
+    {^Wyvern Talons \x28venomous\x29$} 
+    {
+        {Pinnacle/Fantasy/Portal of Life v3} {382}
+    }
     {^Wyvern Talons$} 
     {
+        {Pinnacle} {1}
+        {Pinnacle/Fantasy/Portal of Life} {144}
         {Pinnacle/Fantasy/Portal of Life v2} {92}
     }
     {^X53.3 high-voltage taser baton$} 
     {
         {Pinnacle/Science/New York/Carnegie Hall} {95}
     }
-    {^a Bullmastiff puppy$} 
+    {^Xaran's secret chest \x28open\x29$} 
     {
-        {Pinnacle/Chaos/Puppy Mill} {16}
+        {Pinnacle/Fantasy/Necromancer Guild} {46}
     }
-    {^a German Wirehaired Pointer puppy$} 
+    {^Zelligar's Headband =\x28O\x29=$} 
     {
-        {Pinnacle/Chaos/Puppy Mill} {16}
+        {Pinnacle/Fantasy/Zelligar's Castle} {81}
     }
-    {^a Manchester Terrier puppy$} 
+    {^Zelligar's Headband =\x28\x7B.\x7D\x29=$} 
     {
-        {Pinnacle/Chaos/Puppy Mill} {15}
+        {Pinnacle/Fantasy/Zelligar's Castle} {80}
+    }
+    {^Zinc ring$} 
+    {
+        {Pinnacle/Fantasy/Land of the Ice People} {69}
+        {Pinnacle/Fantasy/Murus Faralain/Azra's Tunnel} {8}
+    }
+    {^Zippo Case$} 
+    {
+        {Pinnacle/Chaos} {64}
+    }
+    {^Zirconian ring$} 
+    {
+        {Pinnacle/Fantasy/Land of the Ice People} {49}
+    }
+    {^\x28----\x2A\x29 a preserved, sliced up corpse of Sylvan elf$} 
+    {
+        {Pinnacle/Chaos/Chaos Cinemaplex/Hotel Transylvania} {63}
+    }
+    {^\x28-|---\x29 a preserved, sliced up corpse of Radioactive mouse$} 
+    {
+        {Pinnacle/Fantasy/Murus Faralain} {66}
+    }
+    {^\x2AA hover board$} 
+    {
+        {Pinnacle} {1}
+    }
+    {^\x2AFrosted helmet of Aylin$} 
+    {
+        {Pinnacle} {116}
+    }
+    {^\x2AThe wand of backfire \x2825\x29$} 
+    {
+        {Pinnacle} {20}
+    }
+    {^\x2Aholy torch \x28lit\x29$} 
+    {
+        {Pinnacle} {1}
+    }
+    {^a Carnegie Hall Ticket$} 
+    {
+        {Pinnacle/Science/Detroit} {149}
+        {Pinnacle/Science/New York/Carnegie Hall} {159}
     }
     {^a battered suit of platemail \x28glowing\x29$} 
     {
         {Pinnacle/Fantasy/Catacombs 2} {89}
+        {Pinnacle/Fantasy/Necromancer Guild} {47}
+    }
+    {^a big frickin' boulder$} 
+    {
+        {Pinnacle/Chaos/Chess Board/Archon} {18}
+    }
+    {^a birthday present$} 
+    {
+        {Pinnacle/Chaos/Care Bears} {4}
+    }
+    {^a black beanie hat$} 
+    {
+        {Pinnacle/Science/New York/Carnegie Hall} {84}
     }
     {^a black cube \x28pulsing\x29$} 
     {
+        {Pinnacle/Fantasy/Ravenloft} {42}
         {Pinnacle/Fantasy/Ravenloft/Treant Forest} {9}
+    }
+    {^a bone sword \x28glowing\x29 \x28enchanted\x29$} 
+    {
+        {Pinnacle/Fantasy/Necromancer Guild} {47}
     }
     {^a brass ring$} 
     {
@@ -1019,13 +3983,29 @@
     {
         {Pinnacle/Fantasy/Catacombs 2} {24}
     }
+    {^a chalky white club$} 
+    {
+        {Pinnacle/Fantasy/Catacombs} {19}
+    }
     {^a cold hearth$} 
     {
         {Pinnacle/Fantasy/Ravenloft/Der'Thalas} {172}
     }
+    {^a corpse$} 
+    {
+        {Pinnacle/Fantasy/Lonely Keep} {3}
+    }
     {^a dark, moldy corpse$} 
     {
         {Pinnacle/Fantasy/Ravenloft} {42}
+    }
+    {^a dirty magazine$} 
+    {
+        {Pinnacle/Science/O'Hare International Airport} {6}
+    }
+    {^a heavy bronze buckler$} 
+    {
+        {Pinnacle/Chaos/Chess Board/Archon} {22}
     }
     {^a large round shield$} 
     {
@@ -1035,17 +4015,57 @@
     {
         {Pinnacle/Chaos/Puppy Mill} {15}
     }
+    {^a lock$} 
+    {
+        {Pinnacle/Chaos/Care Bears} {15}
+    }
     {^a long, curved steel crowbar$} 
     {
         {Pinnacle/Chaos/Puppy Mill} {16}
+    }
+    {^a longbow$} 
+    {
+        {Pinnacle/Chaos/Chess Board/Archon} {9}
+    }
+    {^a metal clipboard$} 
+    {
+        {Pinnacle/Science/O'Hare International Airport} {8}
+    }
+    {^a pair of doeskin boots \x28magical\x29$} 
+    {
+        {Pinnacle} {6}
+    }
+    {^a pair of green shades$} 
+    {
+        {Pinnacle/Science/New York/Carnegie Hall} {84}
     }
     {^a pair of scuffed boots \x28glowing\x29$} 
     {
         {Pinnacle/Fantasy/Catacombs 2} {24}
     }
+    {^a pair of scuffed boots$} 
+    {
+        {Pinnacle/Fantasy/Catacombs} {19}
+    }
+    {^a pale blue capsule$} 
+    {
+        {Pinnacle/Science/Section Z} {67}
+    }
+    {^a pale green capsule$} 
+    {
+        {Pinnacle/Science/Section Z} {215}
+    }
+    {^a pale orange capsule$} 
+    {
+        {Pinnacle/Science/Section Z} {67}
+    }
     {^a plumed helmet$} 
     {
         {Pinnacle/Fantasy/New Arovian Graveyard/Tomb of King Alaren} {15}
+    }
+    {^a ramshackle throne$} 
+    {
+        {Pinnacle/Fantasy/Catacombs 2} {25}
     }
     {^a rope ladder hangs from the branches of the desolate tree$} 
     {
@@ -1055,29 +4075,88 @@
     {
         {Pinnacle/Fantasy/Ravenloft/Der'Thalas} {11}
     }
+    {^a rusty dagger$} 
+    {
+        {Pinnacle/Chaos/Chess Board/Archon} {3}
+    }
     {^a rusty sword \x28glowing\x29$} 
     {
         {Pinnacle/Fantasy/Catacombs 2} {24}
+    }
+    {^a set of leathers$} 
+    {
+        {Pinnacle/Chaos/Chess Board/Archon} {25}
     }
     {^a shard of treant bark$} 
     {
         {Pinnacle/Fantasy/Ravenloft/Treant Forest} {9}
     }
+    {^a shiny sword$} 
+    {
+        {Pinnacle/Chaos/Chess Board/Archon} {22}
+    }
+    {^a sign you should certainly read$} 
+    {
+        {Pinnacle/Science/Section Z} {3}
+    }
     {^a silver ingot$} 
     {
         {Pinnacle/Fantasy/Ravenloft} {115}
     }
+    {^a silver piece$} 
+    {
+        {Pinnacle/Science/O'Hare International Airport} {4}
+    }
+    {^a small pedestal$} 
+    {
+        {Pinnacle/Fantasy} {105}
+    }
+    {^a small storm cloud$} 
+    {
+        {Pinnacle/Chaos/Care Bears} {9}
+    }
+    {^a small switchblade$} 
+    {
+        {Pinnacle/Science/Forgotten sewers} {1}
+    }
+    {^a strangely shimmering suit of chainmail \x28glowing\x29$} 
+    {
+        {Pinnacle/Fantasy/Necromancer Guild} {47}
+    }
+    {^a suit of studded leather armor \x28glowing\x29$} 
+    {
+        {Pinnacle/Fantasy/Necromancer Guild} {47}
+    }
+    {^a suit of tattered leather armor \x28glowing\x29$} 
+    {
+        {Pinnacle/Fantasy/Catacombs 2} {24}
+    }
     {^a tall street light$} 
     {
         {Pinnacle} {1}
+        {Pinnacle/Chaos/Chaos Cinemaplex/Hotel Transylvania} {136}
+        {Pinnacle/Fantasy/Land of the Ice People} {82}
+        {Pinnacle/Fantasy/Necromancer Guild} {1}
+        {Pinnacle/Science/Alien\Alpha} {15}
+        {Pinnacle/Townhall} {1}
+    }
+    {^a unicorn's horn$} 
+    {
+        {Pinnacle/Chaos/Chess Board/Archon} {43}
     }
     {^a wavering portal$} 
     {
+        {Pinnacle/Fantasy} {757}
         {Pinnacle/Fantasy/Necromancer Guild} {1}
+        {Pinnacle/Fantasy/Portal of Life v2} {1}
     }
     {^a whirring terminal$} 
     {
         {Pinnacle/Science} {21}
+    }
+    {^a white pearl \x28shining\x29$} 
+    {
+        {Pinnacle/Fantasy/Necromancer Guild} {47}
     }
     {^a wooden rolling pin$} 
     {
@@ -1087,17 +4166,29 @@
     {
         {Pinnacle/Fantasy/Catacombs 2} {24}
     }
+    {^a worm eaten shield$} 
+    {
+        {Pinnacle/Fantasy/Catacombs} {19}
+    }
     {^a writhing tendril$} 
     {
         {Pinnacle/Chaos} {27}
+    }
+    {^a.* puppy$} 
+    {
+        {Pinnacle/Chaos/Puppy Mill} {15}
     }
     {^acorn$} 
     {
         {Pinnacle/Fantasy/Alizarian Tower} {53}
     }
-    {^an Irish Setter puppy$} 
+    {^adhesive computer chip$} 
     {
-        {Pinnacle/Chaos/Puppy Mill} {15}
+        {Pinnacle} {1}
+    }
+    {^an ancient iron key$} 
+    {
+        {Pinnacle/Fantasy/Lonely Keep} {9}
     }
     {^an old rope ladder hangs here$} 
     {
@@ -1115,6 +4206,11 @@
     {
         {Pinnacle/Fantasy/Ravenloft/Der'Thalas} {179}
     }
+    {^bag$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {232}
+        {Pinnacle/Fantasy/Alizarian Tower} {47}
+    }
     {^bits of pottery$} 
     {
         {Pinnacle/Fantasy/Ravenloft/Der'Thalas} {211}
@@ -1122,6 +4218,15 @@
     {^black gemstone$} 
     {
         {Pinnacle/Fantasy/Alizarian Tower} {43}
+    }
+    {^black stone$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {866}
+        {Pinnacle/Fantasy/Alizarian Tower} {51}
+    }
+    {^book$} 
+    {
+        {Pinnacle/Fantasy/Alizarian Tower} {37}
     }
     {^bottle bin$} 
     {
@@ -1135,6 +4240,10 @@
     {
         {Pinnacle/Fantasy/Ravenloft/Der'Thalas} {179}
     }
+    {^broken orc tusk$} 
+    {
+        {Pinnacle} {136}
+    }
     {^broken shelving$} 
     {
         {Pinnacle/Fantasy/Ravenloft/Der'Thalas} {171}
@@ -1147,13 +4256,32 @@
     {
         {Pinnacle/Fantasy/Ravenloft} {101}
     }
+    {^candle$} 
+    {
+        {Pinnacle/Fantasy/Alizarian Tower} {44}
+    }
+    {^chaotic essence$} 
+    {
+        {Pinnacle/Fantasy/Alizarian Tower} {19}
+        {Pinnacle/Fantasy/Portal of Life v2} {15}
+        {Pinnacle/Fantasy/Portal of Life v3} {309}
+        {Pinnacle/Science/New York/Carnegie Hall} {5}
+    }
     {^charred books$} 
     {
         {Pinnacle/Fantasy/Ravenloft/Der'Thalas} {181}
     }
+    {^chicken platemail$} 
+    {
+        {Pinnacle/Fantasy/Lonely Keep} {10}
+    }
     {^cooking utensils$} 
     {
         {Pinnacle/Fantasy/Ravenloft/Der'Thalas} {171}
+    }
+    {^cow platemail$} 
+    {
+        {Pinnacle/Fantasy/Lonely Keep} {8}
     }
     {^cracked water basin$} 
     {
@@ -1163,6 +4291,11 @@
     {
         {Pinnacle/Fantasy/Ravenloft} {101}
     }
+    {^crystal ball$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {354}
+        {Pinnacle/Fantasy/Alizarian Tower} {40}
+    }
     {^decaying boots$} 
     {
         {Pinnacle/Fantasy/Ravenloft/Der'Thalas} {177}
@@ -1171,17 +4304,74 @@
     {
         {Pinnacle/Fantasy/Ravenloft/Der'Thalas} {174}
     }
+    {^double-headed orcish greataxe$} 
+    {
+        {Pinnacle} {136}
+    }
+    {^drum magazine$} 
+    {
+        {Pinnacle/Science/O'Hare International Airport} {13}
+    }
+    {^elevator doors \x28closed\x29$} 
+    {
+        {Pinnacle/Chaos/Android Showroom} {3}
+    }
+    {^elevator doors \x28open\x29$} 
+    {
+        {Pinnacle/Chaos/Android Showroom} {3}
+    }
+    {^erratic light$} 
+    {
+        {Pinnacle/Chaos} {75}
+    }
     {^hanging from the tall branches, a rope ladder is here$} 
     {
         {Pinnacle/Fantasy/Ravenloft/Der'Thalas} {125}
+    }
+    {^kindling branches$} 
+    {
+        {Pinnacle/Fantasy/Necromancer Guild} {20}
+    }
+    {^leather gloves$} 
+    {
+        {Pinnacle} {136}
+    }
+    {^magazine$} 
+    {
+        {Pinnacle/Science/O'Hare International Airport} {14}
+    }
+    {^miniature tools$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {1178}
+        {Pinnacle/Fantasy/Alizarian Tower} {44}
+    }
+    {^orange gemstone$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {371}
+    }
+    {^orcish throwing knife$} 
+    {
+        {Pinnacle} {136}
     }
     {^paper ashes$} 
     {
         {Pinnacle/Fantasy/Ravenloft/Der'Thalas} {210}
     }
+    {^pillow$} 
+    {
+        {Pinnacle/Chaos/Care Bears} {11}
+    }
+    {^plastic torso-plates$} 
+    {
+        {Pinnacle/Fantasy/Alizarian Tower} {37}
+    }
     {^pottery$} 
     {
         {Pinnacle/Fantasy/Ravenloft/Der'Thalas} {173}
+    }
+    {^registry$} 
+    {
+        {Pinnacle/Chaos/Chaos Cinemaplex/Hotel Transylvania} {8}
     }
     {^rotted tunic$} 
     {
@@ -1191,9 +4381,18 @@
     {
         {Pinnacle/Fantasy/Ravenloft/Der'Thalas} {170}
     }
+    {^rotting and mutilated corpses$} 
+    {
+        {Pinnacle/Fantasy/Catacombs 2} {25}
+    }
     {^rusted elven blade$} 
     {
         {Pinnacle/Fantasy/Ravenloft/Der'Thalas} {175}
+    }
+    {^set of three dice$} 
+    {
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {335}
+        {Pinnacle/Fantasy/Alizarian Tower} {50}
     }
     {^shattered musicbox$} 
     {
@@ -1203,21 +4402,125 @@
     {
         {Pinnacle/Fantasy/Alizarian Tower} {19}
     }
+    {^sturdy platemail$} 
+    {
+        {Pinnacle/Fantasy/Lonely Keep} {3}
+    }
     {^tarnished steel breastplate$} 
     {
         {Pinnacle/Fantasy/New Arovian Graveyard/Tomb of King Alaren} {19}
+    }
+    {^thornseed$} 
+    {
+        {Pinnacle} {136}
+    }
+    {^whetstone$} 
+    {
+        {Pinnacle/Fantasy} {775}
     }
     {^wolf pelt$} 
     {
         {Pinnacle/Fantasy/Ravenloft} {100}
     }
+    {^yellow gemstone$} 
+    {
+        {Pinnacle/Fantasy/Alizarian Tower} {50}
+    }
+    {bag} 
+    {
+        {Pinnacle/Fantasy/Alizarian Tower} {43}
+    }
+    {coins} 
+    {
+        {Pinnacle} {20}
+        {Pinnacle/Chaos/Alphabet Land} {3}
+        {Pinnacle/Chaos/Chaos Cinemaplex/Hotel Transylvania} {25}
+        {Pinnacle/Chaos/CowVille/Hell Cows} {12}
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {1}
+        {Pinnacle/Chaos/Puppy Mill} {15}
+        {Pinnacle/Fantasy} {333}
+        {Pinnacle/Fantasy/Blingdenwood Village} {1}
+        {Pinnacle/Fantasy/Kourlyn Temple} {15}
+        {Pinnacle/Fantasy/Land of the Ice People} {1}
+        {Pinnacle/Fantasy/Necromancer Guild} {20}
+        {Pinnacle/Fantasy/New Arovian Graveyard} {11}
+        {Pinnacle/Fantasy/New Arovian Graveyard/Tomb of King Alaren} {4}
+        {Pinnacle/Fantasy/Portal of Life} {456}
+        {Pinnacle/Fantasy/Portal of Life v2} {86}
+        {Pinnacle/Fantasy/Portal of Life v3} {385}
+        {Pinnacle/Fantasy/Rabbit Fields/The Drow Kingdom of fe dar Shad} {24}
+        {Pinnacle/Fantasy/Rampage} {1}
+        {Pinnacle/Science/Atlanta} {1}
+        {Pinnacle/Science/Atlanta/DC Megatech/D.C. Megatech 2.0} {4}
+        {Pinnacle/Science/Detroit} {127}
+        {Pinnacle/Science/Fallout Shelter} {8}
+        {Pinnacle/Science/Lost City} {4}
+        {Pinnacle/Science/Megatech v2.0} {1}
+        {Pinnacle/Science/New York/Aegis Global} {5}
+        {Pinnacle/Science/New York/Carnegie Hall} {41}
+        {Pinnacle/Science/O'Hare International Airport} {5}
+        {Pinnacle/Science/Oil Storage Cave} {4}
+    }
     {containing \d+ messages} 
     {
         {Pinnacle} {37}
         {Pinnacle/Chaos/Chaos Cinemaplex/Hotel Transylvania} {17}
+        {Pinnacle/Chaos/Crydee} {18}
+        {Pinnacle/Chaos/The Book Nook} {10}
         {Pinnacle/Crafting} {1}
+        {Pinnacle/Crafting/Mines 6} {1}
+        {Pinnacle/Fantasy} {757}
         {Pinnacle/Fantasy/Around the town of Angelo/Forest Trail/Encampment} {12}
+        {Pinnacle/Fantasy/Longshadow Camp/Longshadow Battleground} {1}
+        {Pinnacle/Fantasy/Murus Faralain} {1}
         {Pinnacle/Fantasy/Necromancer Guild} {20}
+        {Pinnacle/Fantasy/Portal of Life v2} {1}
+        {Pinnacle/Science} {829}
+        {Pinnacle/Science/Alien Ship} {1}
+        {Pinnacle/Science/Alien\Alpha} {1}
+    }
+    {empty} 
+    {
+        {Pinnacle} {175}
+        {Pinnacle/Chaos} {40}
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {276}
+        {Pinnacle/Fantasy/Land of the Ice People} {18}
+    }
+    {essence of} 
+    {
+        {Pinnacle/Chaos/Chaos Cinemaplex/Hotel Transylvania} {102}
+        {Pinnacle/Fantasy/Alizarian Tower} {19}
+        {Pinnacle/Fantasy/Katin/Necromancer Guild (old)} {183}
+        {Pinnacle/Fantasy/Portal of Life v2} {274}
+        {Pinnacle/Science/New York/Carnegie Hall} {10}
+    }
+    {fear} 
+    {
+        {Pinnacle} {20}
+    }
+    {fragment of} 
+    {
+        {Pinnacle/Chaos/Chaos Cinemaplex/Hotel Transylvania} {121}
+        {Pinnacle/Chaos/CowVille/Hell Cows} {18}
+        {Pinnacle/Chaos/Mouse Trails Cottage/Chaotic Sewers} {269}
+        {Pinnacle/Fantasy/Alizarian Tower} {41}
+        {Pinnacle/Fantasy/Land of the Ice People} {42}
+        {Pinnacle/Fantasy/Portal of Life v2} {54}
+        {Pinnacle/Fantasy/Zelligar's Castle} {14}
+        {Pinnacle/Science/New York/Carnegie Hall} {88}
+    }
+    {heart of} 
+    {
+        {Pinnacle/Fantasy/Alizarian Tower} {18}
+        {Pinnacle/Fantasy/Portal of Life v2} {218}
+    }
+    {phial} 
+    {
+        {Pinnacle/Fantasy/Alizarian Tower} {51}
+    }
+    {3} 
+    {
+        {Pinnacle} {1}
     }
 }
 
