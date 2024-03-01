@@ -1,41 +1,59 @@
 #ALIAS {rating}
 {
-  #CLASS {cRating} {OPEN};
-  #ACTION {{^\S*AREA NAME\S*:\s(.*)\s\S*\[\W*(\w+)\S*\]\S*$}}
-  {
-    #IF {"$room[location][name]" != "%%2" || "$room[location][wiz]" != "%%3"}
-    {
-      #VAR {map[area][name]} {%%2};
-      #VAR {map[area][wiz]} {%%3};
-      #VAR {room[location][name]} {%%2};
-      #VAR {room[location][wiz]} {%%3};
-    };
-    event_raise {e_command_rating} {%%2} {%%3};
-    event_oneshot {e_prompt} {h_command_rating} {#NOP %%%1;#CLASS {cRating} {KILL};};
-  } {1};
-  #ACTION {{^\S*AREA RATING\S* -> .* \S*\[\W*(\w+)\S*\]\S*$}}
-  {
-    #IF {"$room[location][name]" != "%%2"}
-    {
-      #VAR {map[area][name]} {%%2};
-      #VAR {map[area][wiz]} {};
-      #VAR {room[location][name]} {%%2};
-      #VAR {room[location][wiz]} {};      
-    };
-    event_raise {e_command_rating} {%%2} {};
-    event_oneshot {e_prompt} {h_command_rating} {#NOP %%%1;#CLASS {cRating} {KILL};};
-  } {1};
-  #ACTION {^This area has no rating.  Please use the idea command to request one.}
-  {
-    #IF {"$map[area][name]" != ""}
-    {
-      #VAR {map[area][name]} {};
-      #VAR {room[location][name]} {};
-    };
-    event_raise {e_command_rating} {} {};
-    event_oneshot {e_prompt} {h_command_rating} {#NOP %%%1;#CLASS {cRating} {KILL};};
-    where;
-  } {1};    
-  #CLASS {cRating} {CLOSE}; 
-  #SEND {!rating};
+	#CLASS {cRating} {OPEN};
+	#VAR {_rating} {};
+	#ACTION {{^\S*AREA NAME\S*:\s(.*)\s\S*\[\W*(\w+)\S*\]\S*$}}
+	{
+		#VAR {_rating[name]} {%%2};
+		#VAR {_rating[wiz]} {%%3};
+		#IF {"$room[location][name]" != "%%2" || "$room[location][wiz]" != "%%3"}
+		{
+			#VAR {map[area][name]} {%%2};
+			#VAR {map[area][wiz]} {%%3};
+			#VAR {room[location][name]} {%%2};
+			#VAR {room[location][wiz]} {%%3};
+		};
+		event_oneshot {e_prompt} {h_command_rating} {#NOP %%%1;.ratingEnd;};
+	} {2};
+	#ACTION {{^\S*AREA RATING\S* -> .* \S*\[\W*(\w+)\S*\]\S*$}}
+	{
+		#VAR {_rating[name]} {%%2};
+		#VAR {_rating[wiz]} {};
+		#IF {"$room[location][name]" != "%%2"}
+		{
+			#VAR {map[area][name]} {%%2};
+			#VAR {map[area][wiz]} {};
+			#VAR {room[location][name]} {%%2};
+			#VAR {room[location][wiz]} {};
+		};
+		event_oneshot {e_prompt} {h_command_rating} {#NOP %%%1;.ratingEnd;};
+	} {2};
+	#ACTION {^This area has no rating.  Please use the idea command to request one.}
+	{
+		#IF {"$map[area][name]" != ""}
+		{
+			#VAR {map[area][name]} {};
+			#VAR {room[location][name]} {};
+		};
+		event_oneshot {e_prompt} {h_command_rating} {#NOP %%%1;.ratingEnd;};
+		where;
+	} {2};
+	#ACTION {^Monster class range since inception: %* to %*$}
+	{
+		#VAR {_rating[npc_min]} {@fCleanNumber{%%1}};
+		#VAR {_rating[npc_max]} {@fCleanNumber{%%2}};
+		event_oneshot {e_prompt} {h_command_rating} {#NOP %%%1;.ratingEnd;};
+	} {2};
+	#ACTION {^This area has %d discovered rooms.$}
+	{
+		#VAR {_rating[rooms]} {%%1};
+		event_oneshot {e_prompt} {h_command_rating} {#NOP %%%1;.ratingEnd;};
+	} {2};
+	#ALIAS {.ratingEnd}
+	{
+		event_raise {e_command_rating} {$_rating[name]} {$_rating[wiz]} {$_rating};
+		#CLASS {cRating} {KILL};
+	};
+	#CLASS {cRating} {CLOSE};
+	#SEND {!rating};
 };
