@@ -1,0 +1,78 @@
+#DELAY {2} 
+{
+    #VAR {_item[^A Tome of \']}   
+    {
+        @fFormatItemData{
+            {_area} {global}
+            {desc}
+            {
+                {1} {A Tome of 'To Serve Man', Volume I}
+                {2} {This recipe and picture book is the first volume in the series 'To Serve}
+                {3} {Man', penned by none other than Fritz, whose happy, beaming face gazes}
+                {4} {out at you from the cover.  Next to Fritz's head is a comic strip word}
+                {5} {bubble with the words 'Anybody can cook!'.  Perhaps you can read it?}                                                             [ ]---[ ]---[ ]---[ ]---[ ]---[ ]---[ ]---[ ]---[ ]---[ ]---[ ]---[ ]---[ ]---[ ]---[ ]        
+                {6} {Tradeskill : Chef}
+                {7} {Minimum Skill: 1}
+                {8} {Trivial Skill: 33}
+                {9} {It looks light.}                
+            }
+            {nomap} {1}
+            {pickup} {handler_tome_pickup {%s}}
+        }
+    };
+};
+
+#NOP You are still overwhelmed by the last tome you recently read.
+#NOP It will be 695 minutes before you can read another.
+
+#NOP You open the tome and greedily consume the knowledge within!  The tome crumbles
+#NOP to dust.
+
+#NOP A Tome of 'To Serve Man', Volume I.
+#NOP A Tome of 'Harnessing the Chaos', Volume I
+#NOP A Tome of 'A Farmer's Journey', Volume I
+#NOP A Tome of 'Forge and Hammer', Volume II
+#NOP A Tome of 'Deep Delving', Volume II
+#NOP A Tome of 'Enhancing Enchanting', Volume
+
+#ALIAS {handler_tome_pickup}
+{
+    #NOP %1;
+    #VAR {_tomePickup[title]}
+    {
+        {A Farmer's Journey} {Farming}
+        {Deep Delving} {Mining}
+        {Enhancing Enchanting} {Enchanter}
+        {Forge and Hammer} {Blacksmith}
+        {Harnessing the Chaos} {Wrangling}
+        {To Serve Man} {Chef}
+    };
+    #REGEXP {%1} {{A Tome of '(.*)', Volume ([I]{1,3})}}
+    {
+        #SEND {!get tome};
+        #IF {"&3" == "III" && @fEval{$my[craft][$_tomePickup[title][&2]] >= 66} 
+                           && !@fLocked{craft.tome}}
+        {
+            #SEND {!read tome};
+            .Lock {craft.tome} {42000};
+        };
+        #ELSEIF {"&3" == "II" && @fEval{$my[craft][$_tomePickup[title][&2]] >= 33} 
+                              && @fEval{$my[craft][$_tomePickup[title][&2]] < 66}
+                              && !@fLocked{craft.tome}}
+        {
+            #SEND {!read tome};
+            .Lock {craft.tome} {42000};
+        };
+        #ELSEIF {"&3" == "I" && @fEval{$my[craft][$_tomePickup[title][&2]] < 33}
+                             && !@fLocked{craft.tome}}
+        {
+            #SEND {!read tome};
+            .Lock {craft.tome} {42000};
+        };
+        #ELSE 
+        {
+            #SEND {!ch tome};
+        };
+    };
+    #UNVAR {_tomePickup};
+};

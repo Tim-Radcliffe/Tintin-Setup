@@ -6,7 +6,6 @@
     #VAR {_item[fragment of]}     {@fFormatItemData{{_area}{global}{global}{1}{nomap}{1}{pickup}{handler_craft_pickup {fragment}}}};
     #VAR {_item[essence of]}      {@fFormatItemData{{_area}{global}{global}{1}{nomap}{1}{pickup}{handler_craft_pickup {essence}}}};
     #VAR {_item[heart of]}        {@fFormatItemData{{_area}{global}{global}{1}{nomap}{1}{pickup}{handler_craft_pickup {heart}}}};
-    #VAR {_item[^A Tome of \']}   {@fFormatItemData{{_area}{global}{global}{1}{nomap}{1}{pickup}{1}}};
 };
 
 #action {^{>\s|}%sWhat luck!  You have found %1} 
