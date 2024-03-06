@@ -18,7 +18,7 @@ F 1048586
 
 G 0
 
-I 420
+I 453
 
 L {ASCII NESW LINE} {NO EXITS} {x}
 L {ASCII NESW LINE} {N} {o}
@@ -2764,17 +2764,18 @@ E {449}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {467}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {447}{w}{w}{8}{0}{}{1.000}{}{0.00}
 
-R {449}{0}{<178>}{The Appalachian Mountains}{ }{The Appalachian Mountains It looks like you're in the mountains, high above the surrounding areas. The mountains rise up around you and cast huge shadows over the valleys and cliffs that make up this incredible mountain range.  You've got to wonder how anything could survive way out here.  To the west and east you sense the continuation of the Appalachians.   }{}{}{}{}{1.000}{}
+R {449}{0}{<178>}{The Appalachian Mountains}{ }{The Appalachian Mountains It looks like you're in the mountains, high above the surrounding areas. The mountains rise up around you and cast huge shadows over the valleys and cliffs that make up this incredible mountain range.  You've got to wonder how anything could survive way out here.  To the west and east you sense the continuation of the Appalachians.   }{Mud}{}{}{}{1.000}{}
 E {385}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {450}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {466}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {448}{w}{w}{8}{0}{}{1.000}{}{0.00}
 
-R {450}{0}{<048>}{The Appalachian Mountains}{ }{The Appalachian Mountains Huge stumps of old trees surround you here. It looks like something must have come through here and cut everything down.  It looks like it has taken a long time to destroy this forest.  It looks like you're in the mountains, high above the surrounding areas.  To the south and east you vaguely sense the continuation of the Appalachians.  A small valley lies just below this vantage point. }{}{}{}{}{1.000}{}
+R {450}{0}{<068>}{The Appalachian Mountains}{ }{The Appalachian Mountains Huge stumps of old trees surround you here. It looks like something must have come through here and cut everything down.  It looks like it has taken a long time to destroy this forest.  It looks like you're in the mountains, high above the surrounding areas.  To the south and east you vaguely sense the continuation of the Appalachians.  A small valley lies just below this vantage point. }{Mud}{}{}{}{1.000}{}
 E {384}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {451}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {465}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {449}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {1299}{enter}{.mapLink {Pinnacle/Science/Satellite Tracking Station} {} {enter};}{0}{1}{}{1.000}{}{0.00}
 
 R {451}{0}{<178>}{The Appalachian Mountains}{ }{The Appalachian Mountains Huge mountains rise up before you here. They look steep and dangerous.  You can hear the roar of some far off motor. Who'd be way out here?  The trees here are impressively tall. They tower above you hundreds of feet, but for every tree there is a stump next to it.  To the east, north and west you make out the continuation of the Appalachians.   }{}{}{}{}{1.000}{}
 E {383}{s}{s}{4}{0}{}{1.000}{}{0.00}
@@ -2782,18 +2783,18 @@ E {452}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {464}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {450}{w}{w}{8}{0}{}{1.000}{}{0.00}
 
-R {452}{0}{<178>}{The Appalachian Mountains}{ }{The Appalachian Mountains The mountains around you rise and fall in a never ending pattern.  The trees here look like the pollution and smog have just about killed them off. You wonder if anything will grow here again.  You can hear the roar of some far off motor. Who'd be way out here?  To the north you barely detect the continuation of the Appalachians.   }{}{}{}{}{1.000}{}
+R {452}{0}{<178>}{The Appalachian Mountains}{ }{The Appalachian Mountains Gigantic clouds of dust and pollution flow over the mountains here.  You can hear the roar of some far off motor. Who'd be way out here?  The mountains rise up around you and cast huge shadows over the valleys and cliffs that make up this incredible mountain range.   }{}{{content}{{noun}{{cliffs}{{name}{cliffs}}{clouds}{{name}{clouds}}{dust}{{name}{dust}}{mountains}{{name}{mountains}}}}}{}{}{1.000}{}
 E {382}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {453}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {463}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {451}{w}{w}{8}{0}{}{1.000}{}{0.00}
 
-R {453}{0}{<178>}{Coastal Wastelands}{ }{Coastal Wastelands You wonder if you'll ever find the end of this rolling expanse.  Before you stretches a vast expanse of destruction and desolation.  This whole area looks like someone has come through and strip mined it. It looks much more desolate than the rest.  To the south you make out the continuation of the wasteland.  There appears to be some kind of depression here. }{}{}{}{}{1.000}{}
+R {453}{0}{<068>}{The Appalachian Mountains}{ }{Coastal Wastelands Before you stretches a vast expanse of destruction and desolation.  You wonder if you'll ever find the end of this rolling expanse.  This whole area looks like someone has come through and strip mined it. It looks much more desolate than the rest.  To the south and east you barely detect the continuation of the wasteland.  There appears to be some kind of depression here. }{Mud}{}{}{}{1.000}{}
 E {381}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {454}{e}{e}{2}{0}{}{1.000}{}{0.00}
-E {461}{d}{d}{32}{0}{}{1.000}{}{0.00}
 E {462}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {452}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {461}{d}{.mapLink {Pinnacle/Science/Toxic Dump} {} {d};}{32}{1}{}{1.000}{}{0.00}
 
 R {454}{0}{<178>}{Coastal Wastelands}{ }{Coastal Wastelands A gigantic crater lies before you. It's hard to imagine what could have exploded and caused something as impressive as this.  Could it be your imagination, or is that the smell of burning flesh?  The clouds above you move in over the sun and block out its light.   }{}{}{}{}{1.000}{}
 E {380}{s}{s}{4}{0}{}{1.000}{}{0.00}
@@ -2832,7 +2833,7 @@ E {462}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {535}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {459}{e}{e}{2}{0}{}{1.000}{}{0.00}
 
-R {461}{0}{<109>}{}{ }{}{}{}{}{}{1.000}{}
+R {461}{0}{<000>}{LINK: Pinnacle/Science/Toxic Dump}{<138>*}{}{Pinnacle/Science/Toxic Dump}{{link}{}}{}{}{1.000}{}
 E {453}{u}{u}{16}{0}{}{1.000}{}{0.00}
 
 R {462}{0}{<178>}{Coastal Wastelands}{ }{Coastal Wastelands You see a bright flash of light far in the distance. It takes a very long time for the sound of the explosion to reach you.  Huge clouds of dust and ash rise in the distance as you look around.  You can hear the roar of some far-off motor. Who'd be way out here?  To the south you barely see the continuation of the wasteland.   }{}{}{}{}{1.000}{}
@@ -7266,3 +7267,5 @@ R {1296}{0}{<000>}{LINK: Pinnacle/Science/Mercenary Tent}{<138>*}{}{Pinnacle/Sci
 R {1297}{0}{}{}{ }{}{}{}{}{}{1.000}{}
 
 R {1298}{0}{<000>}{LINK: Pinnacle/Science/Luddite Commune}{<138>*}{}{Pinnacle/Science/Luddite Commune}{{content}{{noun}{{cliffs}{{name}{cliffs}}{clouds}{{name}{clouds}}{dirt}{{name}{dirt}}{flash}{{name}{flash}}{forest}{{name}{forest}}{grass}{{name}{grass}}{hills}{{name}{hills}}{mountains}{{name}{mountains}}{pathway}{{name}{pathway}}{stumps}{{name}{stumps}}{sun}{{name}{sun}}{trees}{{name}{trees}}}}{link}{}}{}{}{1.000}{}
+
+R {1299}{0}{<000>}{LINK: Pinnacle/Science/Satellite Tracking Station}{<138>*}{}{Pinnacle/Science/Satellite Tracking Station}{{content}{{noun}{{area}{{name}{area}}{concrete}{{name}{concrete}}{construction}{{name}{construction}}{foothills}{{name}{foothills}}{gatehouse}{{name}{gatehouse}}{pass}{{name}{pass}}{road}{{name}{road}}{valley}{{name}{valley}}{walls}{{name}{walls}}}{npc}{{^Lieutenant Johnson$}{{name}{Lieutenant Johnson}}}}{link}{}}{}{}{1.000}{}

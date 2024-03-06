@@ -14,11 +14,11 @@ CROOMS <178>
 CSYMBOLS <128>
 CUSER <139>
 
-F 1048587
+F 1048586
 
 G 0
 
-I 118
+I 109
 
 L {ASCII NESW LINE} {NO EXITS} {x}
 L {ASCII NESW LINE} {N} {o}
@@ -527,7 +527,7 @@ R {63}{0}{<178>}{The Beginning of Infinity}{ }{}{}{}{}{}{1.000}{}
 E {60}{u}{u}{16}{1}{}{1.000}{}{0.00}
 E {107}{d}{d}{32}{0}{}{1.000}{}{0.00}
 
-R {64}{0}{<178>}{Lord's promenade}{ }{You are at the south end of Lord's promenade, the saintly trail that honors the lords and ladies of every realm of the three kingdoms.  To the east you can see a pleasant country lane while to the west you can see a clearing in the great and wild forest that makes Pinnacle's western border. }{Mud}{{content}{{item}{{light}{{name}{A tall street light}}}{noun}{{clearing}{{name}{clearing}}{forest}{{name}{forest}}}}}{}{}{1.000}{}
+R {64}{0}{<178>}{Flamers way}{ }{You are at the south end of Lord's promenade, the saintly trail that honors the lords and ladies of every realm of the three kingdoms.  To the east you can see a pleasant country lane while to the west you can see a clearing in the great and wild forest that makes Pinnacle's western border. }{Mud}{{content}{{item}{{light}{{name}{A tall street light}}}{noun}{{clearing}{{name}{clearing}}{forest}{{name}{forest}}}}}{}{}{1.000}{}
 E {60}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {108}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {109}{e}{e}{2}{0}{}{1.000}{}{0.00}
@@ -573,7 +573,7 @@ E {83}{e}{e}{2}{0}{}{1.000}{}{0.00}
 R {76}{0}{<158>}{A rocky plateau}{<138>G}{}{}{guild;}{}{}{1.000}{}
 E {57}{w}{w}{8}{0}{}{1.000}{}{0.00}
 
-R {77}{0}{<178>}{Silicon row}{ }{You are wandering down Silicon row, an otherwise pleasant village street marred only by the strange soot on the walls and pebblestones.  A tall museum-like structure lies to the east.  A small shop lies to the west. }{}{}{}{}{1.000}{}
+R {77}{0}{<178>}{Silicon row}{ }{You are wandering down Silicon row, an otherwise pleasant village street marred only by the strange soot on the walls and pebblestones.  A tall museum-like structure lies to the east.  A small shop lies to the west. }{Mud}{{content}{{item}{{^A tree$}{{name}{A tree}}}{noun}{{shop}{{name}{shop}}{soot}{{name}{soot}}{street}{{name}{street}}{structure}{{name}{structure}}{walls}{{name}{walls}}}}}{}{}{1.000}{}
 E {54}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {80}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {81}{w}{w}{8}{0}{}{1.000}{}{0.00}
@@ -586,7 +586,7 @@ E {79}{d}{d}{32}{1}{}{1.000}{}{0.00}
 R {79}{0}{<178>}{Pinnacle branch of the 3KP}{ }{}{}{}{}{}{1.000}{}
 E {78}{u}{u}{16}{0}{}{1.000}{}{0.00}
 
-R {80}{0}{<068>}{Flamers way}{ }{You are at the intersection of Silicon row, a tarry village street to the north, and Flamer's way, a pleasant country lane which starts here and gently inclines to the west.  You are struck by the sharp contrast between the smog-filled vista to the east, and the strange winking archway visible there, and the pleasant fields to the south. }{Mud}{}{}{}{1.000}{}
+R {80}{0}{<068>}{Flamers way}{ }{You are at the intersection of Silicon row, a tarry village street to the north, and Flamer's way, a pleasant country lane which starts here and gently inclines to the west.  You are struck by the sharp contrast between the smog-filled vista to the east, and the strange winking archway visible there, and the pleasant fields to the south. }{Mud}{{content}{{noun}{{archway}{{name}{archway}}{fields}{{name}{fields}}{intersection}{{name}{intersection}}{street}{{name}{street}}{vista}{{name}{vista}}}}}{}{}{1.000}{}
 E {77}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {114}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {115}{se}{.mapLink {Pinnacle/Gentech Guild} {} {se};}{6}{0}{}{1.000}{}{0.00}
@@ -710,7 +710,7 @@ E {110}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 E {111}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 E {112}{w}{w}{8}{0}{}{1.000}{}{0.00}
 
-R {109}{0}{<178>}{Flamers way}{ }{You are walking along a pleasant country lane.  You can see the spires of a stately church to your north rising high above the tree tops.  A narrow path cuts through a pasture to the south, ending at a tall and oddly out of place iron gate! }{}{}{}{}{1.000}{}
+R {109}{0}{<178>}{Flamers way}{ }{You are walking along a pleasant country lane.  You can see the spires of a stately church to your north rising high above the tree tops.  A narrow path cuts through a pasture to the south, ending at a tall and oddly out of place iron gate! }{Mud}{{content}{{noun}{{church}{{name}{church}}{spires}{{name}{spires}}}}}{}{}{1.000}{}
 E {64}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {113}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {114}{e}{e}{2}{0}{}{1.000}{}{0.00}
@@ -725,24 +725,25 @@ E {108}{out}{out}{0}{0}{}{1.000}{}{0.00}
 R {112}{0}{<158>}{Office of Professional Registration}{<138>?}{The sounds of clattering feet and murmuring voices completely fills this dark and rough hewen stone building.  While the interior of the structure is more visually appealing than the exterior, with its soft iridescent glow, its 20 foot vaulted ceiling, and its dark oak counters, there is still the hint of a much rougher underbelly, as evidenced by the dusty and half-worked stones underneath it all.  People mill around the area, not pausing at all for pleasantries but rather working as efficiently and quickly as possible, then exiting once their transactions are complete.  One wouldn't expect more from the Office of Professional Registration, an organization whose sole purpose is to keep track of the various professions and the people who practice it.}{Professions}{{content}{{item}{{board}{{name}{The Professions Board containing 41 messages (4 unread messages)}}{sign}{{name}{A small sign}}}{noun}{{people}{{name}{people}}{stones}{{name}{stones}}}}{special}{}}{}{}{1.000}{}
 E {108}{e}{e}{2}{0}{}{1.000}{}{0.00}
 
-R {113}{0}{<068>}{Newbies' End}{ }{You are on the narrow pasture path known, affectionately, as Newbies' End!  A narrow stone lane leads west, just north of a rickety wood building.  The smells of appetizing food drift from the quaint restaurant to the east.  But overpowering all your senses is the huge, iron gate that just rears up offering no truck or bargain.  Enter it and take your chances.  Or turn around and go home.  Pinnacle is just to the north, after all. }{Mud}{}{}{}{1.000}{}
+R {113}{0}{<068>}{Newbies' End}{ }{You are on the narrow pasture path known, affectionately, as Newbies' End!  A narrow stone lane leads west, just north of a rickety wood building.  The smells of appetizing food drift from the quaint restaurant to the east.  But overpowering all your senses is the huge, iron gate that just rears up offering no truck or bargain.  Enter it and take your chances.  Or turn around and go home.  Pinnacle is just to the north, after all. }{Mud}{{content}{{noun}{{gate}{{name}{gate}}{lane}{{name}{lane}}{pasture}{{name}{pasture}}{path}{{name}{path}}{restaurant}{{name}{restaurant}}}}}{}{}{1.000}{}
 E {109}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {121}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 E {127}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {128}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {122}{s}{.mapLink {Pinnacle/Newbie} {} {s};}{4}{1}{}{1.000}{}{0.00}
 
-R {114}{0}{<178>}{Flamers way}{ }{You are walking along a pleasant country lane.  You can see the side of a whitewashed shop to the north.  And a small and curiously shaped building to the south. }{}{}{}{}{1.000}{}
+R {114}{0}{<178>}{Flamers way}{ }{You are walking along a pleasant country lane.  You can see the side of a whitewashed shop to the north.  And a small and curiously shaped building to the south. }{Mud}{{content}{{item}{{^A tall street light$}{{name}{A tall street light}}}{noun}{{building}{{name}{building}}{shop}{{name}{shop}}}{npc}{{^Rolan the wise sage \x28Pinnacle\x29$}{{name}{Rolan the wise sage (Pinnacle)}}}}}{}{}{1.000}{}
 E {109}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {80}{e}{e}{2}{0}{}{1.000}{}{0.00}
 
 R {115}{0}{<158>}{A quiet forest glen}{<138>G}{You stand in a small quiet forest glen. Trees surround a circular patch of grass. Within the patch are five strange looking hi-tech pillars that stand about as high as your waist. Shining bands of blue-white light burst back and forth around the circle from the tops of the pillars.}{Gentech Guild}{guild;guild;link;}{}{}{1.000}{}
 E {80}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 
-R {116}{0}{<158>}{A quiet cul de sac}{<138>?}{}{}{{resid}{}{special}{}}{}{}{1.000}{}
+R {116}{0}{<068>}{A quiet cul de sac}{<138>?}{Silicon row ends its southward run here, in what can only be termed the Residential Complex of Pinnacle.  A quiet cul de sac has been carved out of the surrounding woodlands to shelter the homes of 3Kingdom's wealthy patrons.  Columned southern mansions stand side by side with medieval castles and classic victorian homes.  To have a home in this crime free, exclusive neighborhood is a sign of wealth and success in the realms.}{Mud}{{content}{{noun}{{home}{{name}{home}}{homes}{{name}{homes}}}}{resid}{}{special}{}}{}{}{1.000}{}
 E {80}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {208}{home}{.mapLink {Pinnacle/Home} {} {home};}{0}{1}{}{1.000}{}{0.00}
 
-R {117}{0}{<178>}{A Strange Archway}{ }{You can vaguely make out the shapes of Pinnacle to the west. A dense smog cloud, laced with strange bursts of dazzling micro-lightning hovers about you.  A smell of ozone is in the air, almost certainly coming from the impressive archway before you.  Made of a strange oily metal, and covered with odd glyphs, it is filled with an inky darkness. }{}{}{}{}{1.000}{}
+R {117}{0}{<178>}{A Strange Archway}{ }{You can vaguely make out the shapes of Pinnacle to the west. A dense smog cloud, laced with strange bursts of dazzling micro-lightning hovers about you.  A smell of ozone is in the air, almost certainly coming from the impressive archway before you.  Made of a strange oily metal, and covered with odd glyphs, it is filled with an inky darkness. }{Mud}{{content}{{noun}{{archway}{{name}{archway}}{bursts}{{name}{bursts}}{micro-lightning}{{name}{micro-lightning}}{shapes}{{name}{shapes}}{smog}{{name}{smog}}}}}{}{}{1.000}{}
 E {80}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {118}{e}{e}{2}{0}{}{1.000}{}{0.00}
 
@@ -1053,13 +1054,9 @@ E {25}{s}{s}{4}{0}{}{1.000}{}{0.00}
 
 R {199}{0}{<000>}{LINK: Pinnacle/Fantasy}{<138>*}{}{Pinnacle/Fantasy}{{link}{}}{}{}{1.000}{}
 
-R {200}{0}{}{Ethereal Tomb}{ }{Surrounding you are manicured lawns covered with pristine white gravestones. Before you, three incomplete arches push up towards the sky, a small white-pebbled courtyard lying beneath them.  In the distance, you can make out a white arch and black monument.  A blood red dish, embedded in the stones of hallow ground, contains an undying flame.  }{}{}{}{}{1.000}{}
+R {200}{0}{}{Ethereal Tomb}{ }{Ethereal Tomb. You are encased in a sealed tomb, buried deep below the living world. Near one end of the long room is a white sarcophagus resting on a stone platform. The opposite end of the room has no wall, there is nothing there but a narrow staircase leading downwards toward dense mists and ethereal vapors. Voiceless souls are emerging into the tomb from the earth above and passing into the mists on their way to the land of the dead. In the exact center is a plain brazier in which a single colorless flame eternally burns.                                                 }{}{{content}{{noun}{{brazier}{{name}{brazier}}{earth}{{name}{earth}}{flame}{{name}{flame}}{mists}{{name}{mists}}{sarcophagus}{{name}{sarcophagus}}{souls}{{name}{souls}}{staircase}{{name}{staircase}}{stone}{{name}{stone}}{tomb}{{name}{tomb}}}}}{}{}{1.000}{}
 E {118}{u}{u}{16}{0}{}{1.000}{}{0.00}
-E {201}{d}{d}{32}{0}{}{1.000}{}{0.00}
-
-R {201}{0}{<178>}{Ethereal Tomb}{ }{Ethereal Tomb. You are encased in a sealed tomb, buried deep below the living world. Near one end of the long room is a white sarcophagus resting on a stone platform. The opposite end of the room has no wall, there is nothing there but a narrow staircase leading downwards toward dense mists and ethereal vapors. Voiceless souls are emerging into the tomb from the earth above and passing into the mists on their way to the land of the dead. In the exact center is a plain brazier in which a single colorless flame eternally burns.                                                 }{}{{content}{{noun}{{brazier}{{name}{brazier}}{earth}{{name}{earth}}{flame}{{name}{flame}}{mists}{{name}{mists}}{sarcophagus}{{name}{sarcophagus}}{souls}{{name}{souls}}{staircase}{{name}{staircase}}{stone}{{name}{stone}}{tomb}{{name}{tomb}}}}}{}{}{1.000}{}
-E {200}{u}{u}{16}{0}{}{1.000}{}{0.00}
-E {201}{d}{d}{32}{0}{}{1.000}{}{0.00}
+E {200}{d}{d}{32}{0}{}{1.000}{}{0.00}
 
 R {202}{0}{<068>}{Dark Chapel}{ }{You stand in what appears to be an abandoned chapel far beneath the city of Pinnacle.  The air here is musty and you feel the coldness of evil and darkness surrounding your very soul.  The room is very unadorned, save a jet black marble dais sitting peacefully in the center.  A small black sphere hovers above the altar, floating gently in the stale air.  An intense feeling of absolute dread radiates from the entire room, sending waves of revulsion through your very soul.}{Mud}{{content}{{noun}{{altar}{{name}{altar}}{dais}{{name}{dais}}{marble}{{name}{marble}}{sphere}{{name}{sphere}}}}}{}{}{1.000}{}
 E {66}{u}{stairs}{16}{0}{}{1.000}{}{0.00}
@@ -1081,3 +1078,5 @@ E {56}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 
 R {207}{0}{<178>}{The Vigilant: Situation Room}{ }{A spotless metal oval table dominates this austere room.  Purple lights racing along the chrome walls are reflected along the table's shiny surface, and back again along the length of the walls.  It is eerily silent in here, and you assume something must be deliberately muffling the sound from the adjacent spaces.}{Kayos Wars}{}{}{}{1.000}{}
 E {203}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {208}{0}{<000>}{LINK: Pinnacle/Home}{<138>*}{}{Pinnacle/Home}{{content}{{noun}{{home}{{name}{home}}{homes}{{name}{homes}}}}{link}{}{resid}{}{special}{}}{}{}{1.000}{}
