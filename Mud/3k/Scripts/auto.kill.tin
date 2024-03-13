@@ -101,7 +101,7 @@
 	.Lock {room.autokill};
 	handler_auto_kill_choice {};
 	#UNVAR {room[target]};
-	event_oneshot {e_killed_opponent} {auto.kill.tin} {handler_auto_kill_finish};
+	event_oneshot {e_combat_finished} {auto.kill.tin} {handler_auto_kill_finish};
 };
 
 #ALIAS {handler_auto_kill_finish}
