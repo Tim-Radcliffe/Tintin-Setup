@@ -129,10 +129,12 @@ event_register {e_ansiflag_R} {h_room_name} {.HandlerRoomName};
     };
     #IF {"%2" == ""}
     {
+        .debug SCAN {room command (5) : %1};
         #LIST {room[commandqueue][5]} ADD {%1};
     };
     #ELSE 
     {
+        .debug SCAN {room command (%2) : %1};
         #LIST {room[commandqueue][%2]} ADD {%1};
     };
 };
