@@ -7,7 +7,7 @@
     };
     #ELSE
     {
-        .WindowSetLine {notify} {1} {};
+        .WindowSetLine {notify} {1} {_______________________________________________________________________________};
     }
     .WindowRefresh;    
 };

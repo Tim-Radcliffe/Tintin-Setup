@@ -36,3 +36,5 @@ event_register {e_map_enter} {window.area.npc.tin} {.WindowAreaNPC};
 {
   .WindowAreaNPC;
 };
+
+.WindowCreate {AreaNPC} {right};

@@ -33,3 +33,5 @@ event_register {e_mip_DDD} {h_window_room} {.HandlerWinExits};
 };
 event_register {e_mip_HAA} {h_window_room} {.HandlerWinContent};
 event_register {e_mip_HAB} {h_window_room} {.HandlerWinContent};
+
+.WindowCreate {room} {topright};
