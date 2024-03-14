@@ -76,7 +76,7 @@
 
     #SCREEN get cols {_Screen[full][cols]};
     #VAR  {_Screen[head][cols]}     {$_Screen[full][cols]};
-    #VAR  {_Screen[notify][cols]}   {$_Screen[head][cols]};
+    #VAR  {_Screen[notify][cols]}   {$_Screen[body][cols]};
     #VAR  {_Screen[left][cols]}     {$_Screen[split][left]};
     #MATH {_Screen[body][cols]}     {$_Screen[full][cols] - $_Screen[split][left] - $_Screen[split][right]};
     #VAR  {_Screen[right][cols]}    {$_Screen[split][right]};
@@ -89,17 +89,17 @@
     #VAR  {_Screen[head][x]}        {1};
     #MATH {_Screen[head][x2]}       {$_Screen[head][x] + $_Screen[head][cols]};
 
-    #VAR  {_Screen[notify][x]}      {$_Screen[head][x]};
-    #MATH {_Screen[notify][x2]}     {$_Screen[notify][x] + $_Screen[notify][cols]};
-
     #VAR  {_Screen[left][x]}        {1};
     #MATH {_Screen[left][x2]}       {$_Screen[left][x] + $_Screen[left][cols]};
 
-    #MATH {_Screen[body][x]}        {$_Screen[left][x] + $_Screen[left][cols]};
+    #MATH {_Screen[body][x]}        {$_Screen[left][x] + $_Screen[left][cols] + 1};
     #MATH {_Screen[body][x2]}       {$_Screen[body][x] + $_Screen[body][cols]};
-
-    #MATH {_Screen[right][x]}       {$_Screen[body][x] + $_Screen[body][cols]};       
+   
+    #MATH {_Screen[right][x]}       {$_Screen[body][x] + $_Screen[body][cols] + 1};       
     #MATH {_Screen[right][x2]}      {$_Screen[right][x] + $_Screen[right][cols]};
+
+    #VAR  {_Screen[notify][x]}      {$_Screen[body][x]};
+    #MATH {_Screen[notify][x2]}     {$_Screen[notify][x] + $_Screen[notify][cols]};
 
     #VAR {_Screen[topleft][x]}      {$_Screen[left][x]};
     #VAR {_Screen[topleft][x2]}     {$_Screen[left][x2]};
