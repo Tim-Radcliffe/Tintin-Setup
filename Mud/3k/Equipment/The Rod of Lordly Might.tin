@@ -348,4 +348,6 @@ event_register {e_combat_round} {$path[equipment]/The Rod of Lordly Might.tin} {
     };
 };
 
+ibrief rod of lordly might
+
 touch crown rune
