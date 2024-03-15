@@ -89,7 +89,7 @@
     #VAR  {_Screen[head][x]}        {1};
     #MATH {_Screen[head][x2]}       {$_Screen[head][x] + $_Screen[head][cols]};
 
-    #VAR  {_Screen[left][x]}        {1};
+    #MATH {_Screen[left][x]}        {$_Screen[split][left] > 0};
     #MATH {_Screen[left][x2]}       {$_Screen[left][x] + $_Screen[left][cols]};
 
     #MATH {_Screen[body][x]}        {$_Screen[left][x] + $_Screen[left][cols] + 1};
