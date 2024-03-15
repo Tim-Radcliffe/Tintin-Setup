@@ -34,6 +34,22 @@ auto {add} {corrode} {} {e_combat} {};
 };
 auto {add} {psibleed} {} {e_combat} {};
 
+/* Psibleed your opponent automatically */
+#ALIAS {handler_auto_shackle}
+{
+    #NOP %1;
+    #IF {@fEval{$my[necromancer][power][shackle] > 0} || @fEval{$my[necromancer][tier] >= 3}}  
+    {
+        #IF {$my[gp1][current] > 40}
+        {
+            #SEND {!shackle};
+        };
+    };
+
+};
+auto {add} {shackle} {} {e_combat} {};
+
+
 /* Contribute half of coins picked up to the guild, between 10 and 1000 */
 #ALIAS {handler_auto_contribute}
 {
