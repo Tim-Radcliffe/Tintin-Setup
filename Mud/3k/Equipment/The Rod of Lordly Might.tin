@@ -114,7 +114,7 @@ event_register {e_combat_round} {$path[equipment]/The Rod of Lordly Might.tin} {
 
 #ALIAS {.rolm_weapon_rune}
 {
-    #IF {$_rolm[rune][%1][trained] > 24}
+    #IF {$_rolm[rune][%1][trained] >= 24}
     {
         #VAR {_rolm[weapon]} {%1};
     };
@@ -348,6 +348,6 @@ event_register {e_combat_round} {$path[equipment]/The Rod of Lordly Might.tin} {
     };
 };
 
-ibrief rod of lordly might
+ibrief rod of lordly might on
 
 touch crown rune
