@@ -14,11 +14,11 @@ CROOMS <178>
 CSYMBOLS <128>
 CUSER <139>
 
-F 1048586
+F 1048587
 
 G 0
 
-I 797
+I 665
 
 L {ASCII NESW LINE} {NO EXITS} {x}
 L {ASCII NESW LINE} {N} {o}
@@ -4388,11 +4388,12 @@ E {667}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {663}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 E {674}{se}{se}{6}{0}{}{1.000}{}{0.00}
 
-R {665}{0}{<158>}{Forest}{<138>?}{Forest Strange shadows flutter around you, contradicting the bright sunlight barely filtering to the ground around you.  The ground is moist and very soft to the touch.  You travel through a strange and enchanted forest.   }{}{{special}{}}{}{}{1.000}{}
+R {665}{0}{<068>}{Nowhere}{}{You have taken a right turn from normal reality and have left the prime material plane behind.  You can still see the forest where you stumbled into here, but it seems very distant and hazy.  Other parts of the prime material plane besides you have also been swallowed into the pocket dimension.  In every direction away from the forest, you see only pitch black void.}{Mud}{{content}{{item}{{^A large tree casting an impossibly black shadow$}{{name}{A large tree casting an impossibly black shadow}}}{noun}{{animals}{{name}{animals}}{forest}{{name}{forest}}{leaves}{{name}{leaves}}{plane}{{name}{plane}}{reality}{{name}{reality}}}}{special}{}}{}{}{1.000}{}
 E {1062}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {1065}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {685}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {1077}{e}{e}{2}{0}{}{1.000}{}{0.00}
+E {1311}{enter shadow}{.mapLink {Pinnacle/Fantasy/Shadow Tree} {} {enter shadow};}{0}{1}{}{1.000}{}{0.00}
 
 R {666}{0}{<178>}{Forest}{ }{Forest Far in the distance, you can hear animals moving about.  You travel through a strange and enchanted forest.  The ancient trees stand like giant sentinels in the area.  They stand with a majestic, yet strange feel of honor.  Further to the west and north you see that the forest continues, while to the south you can see a forest.   }{Mud}{{content}{{noun}{{animals}{{name}{animals}}{forest}{{name}{forest}}{trees}{{name}{trees}}}}}{}{}{1.000}{}
 E {664}{n}{n}{1}{0}{}{1.000}{}{0.00}
@@ -6832,13 +6833,13 @@ E {977}{se}{se}{6}{0}{}{1.000}{}{0.00}
 R {979}{0}{<000>}{LINK: Pinnacle/Fantasy/Desert Palace}{<138>*}{}{Pinnacle/Fantasy/Desert Palace}{{link}{}}{}{}{1.000}{}
 E {996}{n}{n}{1}{0}{}{1.000}{}{0.00}
 
-R {980}{0}{<178>}{Desert}{ }{Desert The dry desert heat continually sucks moisture from your body.  The desert sands shift about as a gust of wind whips around you.  The desert stretches on as far as your eyes can see. The sands shift in the wind and ripples appear all over the sand dunes.   }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{moisture}{{name}{moisture}}{sand}{{name}{sand}}{sands}{{name}{sands}}{wind}{{name}{wind}}}}}{}{}{1.000}{}
+R {980}{0}{<068>}{Desert}{ }{Desert The midday sun is high in a cloudless sky, baking the desert sands.  The desert seems quite barren but you spot some movement on the next dune. Then again, maybe the heat is playing tricks on your mind.  You see some footsteps in the sand and you wonder where they lead.   }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{footsteps}{{name}{footsteps}}{moisture}{{name}{moisture}}{sand}{{name}{sand}}{sands}{{name}{sands}}{sun}{{name}{sun}}{wind}{{name}{wind}}}}}{}{}{1.000}{}
 E {978}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {977}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {982}{s}{s}{4}{0}{}{1.000}{}{0.00}
-E {983}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {981}{se}{se}{6}{0}{}{1.000}{}{0.00}
 E {975}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {1310}{w}{.mapLink {Pinnacle/Fantasy/Sphinx} {} {w};}{8}{1}{}{1.000}{}{0.00}
 
 R {981}{0}{<068>}{Desert}{ }{Desert The desert stretches out to the horizon. Your feet sink into the sand beneath you and every step you take drains your mind and body.  The boiling sun burns your back as you look out across the bleak hot landscape.  You look back the way you came and see your footsteps in the sand.  There is a deep pit here in the sand. }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{footsteps}{{name}{footsteps}}{pit}{{name}{pit}}{sand}{{name}{sand}}{sun}{{name}{sun}}}}}{}{}{1.000}{}
 E {977}{n}{n}{1}{0}{}{1.000}{}{0.00}
@@ -6860,8 +6861,7 @@ E {993}{se}{se}{6}{0}{}{1.000}{}{0.00}
 E {997}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 E {977}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {983}{0}{<158>}{Desert}{<138>?}{This section of sand feels eerily different than the rest of the desert. The sand here is unaffected by the wind, as if some strange force is holding it down. Whatever is causing this peculiar occurrence is something magical indeed.}{Sphinx}{{content}{{item}{{^A statue of a sphinx$}{{name}{A statue of a sphinx}}}{noun}{{force}{{name}{force}}{sand}{{name}{sand}}}}{wiz}{Olower}}{}{}{1.000}{}
-E {980}{e}{e}{2}{0}{}{1.000}{}{0.00}
+R {983}{0}{<000>}{LINK: Pinnacle/Fantasy/Sphinx}{<138>*}{}{Pinnacle/Fantasy/Sphinx}{{content}{{noun}{{cliffside}{{name}{cliffside}}{desert}{{name}{desert}}{sand}{{name}{sand}}{sands}{{name}{sands}}{wind}{{name}{wind}}}}{link}{}}{}{}{1.000}{}
 E {995}{s}{s}{4}{0}{}{1.000}{}{0.00}
 
 R {984}{0}{<178>}{Desert}{ }{Desert You see some footsteps in the sand and you wonder where they lead.  The desert stretches on as far as your eyes can see. The sands shift in the wind and ripples appear all over the sand dunes.  The desert sands shift about as a gust of wind whips around you.   }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{footsteps}{{name}{footsteps}}{sand}{{name}{sand}}{sands}{{name}{sands}}{wind}{{name}{wind}}}}}{}{}{1.000}{}
@@ -6965,12 +6965,12 @@ E {998}{se}{se}{6}{0}{}{1.000}{}{0.00}
 E {995}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 E {981}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {995}{0}{<178>}{Desert}{ }{Desert The heat is taking its toll on you as you begin to hallucinate.  The desert sands shift about as a gust of wind whips around you.  The desert stretches on as far as your eyes can see. The sands shift in the wind and ripples appear all over the sand dunes.  A steep cliffside rises up in the west. }{Mud}{{content}{{noun}{{cliffside}{{name}{cliffside}}{desert}{{name}{desert}}{sand}{{name}{sand}}{sands}{{name}{sands}}{wind}{{name}{wind}}}}}{}{}{1.000}{}
+R {995}{0}{<068>}{Desert}{ }{Desert The heat is taking its toll on you as you begin to hallucinate.  The desert sands shift about as a gust of wind whips around you.  The desert stretches on as far as your eyes can see. The sands shift in the wind and ripples appear all over the sand dunes.  A steep cliffside rises up in the west. }{Mud}{{content}{{noun}{{cliffside}{{name}{cliffside}}{desert}{{name}{desert}}{sand}{{name}{sand}}{sands}{{name}{sands}}{wind}{{name}{wind}}}}}{}{}{1.000}{}
 E {982}{e}{e}{2}{0}{}{1.000}{}{0.00}
-E {983}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {997}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {995}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {994}{se}{se}{6}{0}{}{1.000}{}{0.00}
+E {983}{n}{.mapLink {Pinnacle/Fantasy/Sphinx} {} {n};}{1}{1}{}{1.000}{}{0.00}
 
 R {996}{0}{<068>}{Desert}{ }{Desert The dry desert heat continually sucks moisture from your body.  The desert seems the same every way you look. You see an oasis in the distance, however on second inspection it turns out to be just a mirage. The midday sun is high in a cloudless sky, baking the desert sands.  Cliffs rise from the sand to the west. }{Mud}{{content}{{noun}{{desert}{{name}{desert}}{moisture}{{name}{moisture}}{oasis}{{name}{oasis}}{sand}{{name}{sand}}{sun}{{name}{sun}}}{npc}{{^A vulture$}{{name}{A vulture}}}}}{}{}{1.000}{}
 E {994}{n}{n}{1}{0}{}{1.000}{}{0.00}
@@ -7377,7 +7377,7 @@ E {1062}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {1060}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {1065}{e}{e}{2}{0}{}{1.000}{}{0.00}
 
-R {1062}{0}{<178>}{Forest}{ }{Forest Birds and other animals can be heard all around you.  An eerie, yet sunny woods, deep in the forest.  Strange shadows flutter around you, contradicting the bright sunlight barely filtering to the ground around you.  Further to the east and south you can see that the forest continues.   }{}{}{}{}{1.000}{}
+R {1062}{0}{<178>}{Forest}{ }{Forest The ground is moist and very soft to the touch.  Strange shadows flutter around you, contradicting the bright sunlight barely filtering to the ground around you.  You are in a sunny, but shadowed forest.  Further to the north you notice a forest, while to the west you note that the forest continues.   }{Mud}{{content}{{noun}{{forest}{{name}{forest}}{ground}{{name}{ground}}{shadows}{{name}{shadows}}{sunlight}{{name}{sunlight}}}}}{}{}{1.000}{}
 E {1042}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {686}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {1061}{s}{s}{4}{0}{}{1.000}{}{0.00}
@@ -8141,6 +8141,11 @@ R {1307}{0}{<000>}{LINK: Pinnacle/Fantasy/Vago's Stronghold}{<138>*}{}{Pinnacle/
 R {1308}{0}{<000>}{LINK: Pinnacle/Fantasy/Kazhir's Hut}{<138>*}{}{Pinnacle/Fantasy/Kazhir's Hut}{{content}{{noun}{{bay}{{name}{bay}}{cliffs}{{name}{cliffs}}{dirt}{{name}{dirt}}{footprints}{{name}{footprints}}{gap}{{name}{gap}}{hill}{{name}{hill}}{hut}{{name}{hut}}{mountain}{{name}{mountain}}{ocean}{{name}{ocean}}{outcropping}{{name}{outcropping}}{peaks}{{name}{peaks}}{plants}{{name}{plants}}{rock}{{name}{rock}}{stone}{{name}{stone}}{structure}{{name}{structure}}{tree}{{name}{tree}}{wall}{{name}{wall}}{waves}{{name}{waves}}}{npc}{{^A large timber wolf$}{{name}{A large timber wolf}}}}{link}{}}{}{}{1.000}{}
 
 R {1309}{0}{<000>}{LINK: Pinnacle/Fantasy/Ruined Dovaron School of Dark Magic}{<138>*}{}{Pinnacle/Fantasy/Ruined Dovaron School of Dark Magic}{{content}{{item}{{^A glowing portal$}{{name}{A glowing portal}}{^A piece of crystalrock$}{{name}{A piece of crystalrock}}{^A piece of lava$}{{name}{A piece of lava}}{^A single gold coin$}{{name}{A single gold coin}}{^A small wooden sign$}{{name}{A small wooden sign}}{^whetstone$}{{name}{whetstone}}}{noun}{{barrier}{{name}{barrier}}{base}{{name}{base}}{cave}{{name}{cave}}{hill}{{name}{hill}}{ice}{{name}{ice}}{mountain}{{name}{mountain}}{mountains}{{name}{mountains}}{opening}{{name}{opening}}{opposite}{{name}{opposite}}{orb}{{name}{orb}}{peak}{{name}{peak}}{peaks}{{name}{peaks}}{rock}{{name}{rock}}{room}{{name}{room}}{side}{{name}{side}}{snow}{{name}{snow}}{stone}{{name}{stone}}{tree}{{name}{tree}}}{npc}{{^Cindy the Tough \x28adventurer\x29$}{{name}{Cindy the Tough (adventurer)}}{^Merchant$}{{name}{Merchant}}}}{link}{}}{}{}{1.000}{}
+
+R {1310}{0}{<000>}{LINK: Pinnacle/Fantasy/Sphinx}{<138>*}{}{Pinnacle/Fantasy/Sphinx}{{content}{{noun}{{desert}{{name}{desert}}{moisture}{{name}{moisture}}{sand}{{name}{sand}}{sands}{{name}{sands}}{wind}{{name}{wind}}}}{link}{}}{}{}{1.000}{}
+E {980}{e}{e}{2}{0}{}{1.000}{}{0.00}
+
+R {1311}{0}{<000>}{LINK: Pinnacle/Fantasy/Shadow Tree}{<138>*}{}{Pinnacle/Fantasy/Shadow Tree}{{content}{{item}{{^A large tree casting an impossibly black shadow$}{{name}{A large tree casting an impossibly black shadow}}}{noun}{{animals}{{name}{animals}}{forest}{{name}{forest}}{leaves}{{name}{leaves}}}}{link}{}{special}{}}{}{}{1.000}{}
 
 R {2000}{0}{<158>}{The entrance to Fantasy}{<138>?}{The road ends at a large portal here in the forest.  The portal itself is large and circular, with sprays of color shooting across it, and strange, mystical energy flickering within.  A road into Pinnacle lies to the east, while you can vaguely make out the outlines of a mysterious tower to the west. }{Mud}{{special}{}}{}{}{1.000}{}
 E {1}{portal wayhaven}{portal wayhaven}{0}{0}{}{1.000}{}{0.00}

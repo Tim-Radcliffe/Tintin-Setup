@@ -18,7 +18,7 @@ F 1048587
 
 G 0
 
-I 19
+I 21
 
 L {ASCII NESW LINE} {NO EXITS} {x}
 L {ASCII NESW LINE} {N} {o}
@@ -321,7 +321,6 @@ E {9}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {19}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {20}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {21}{w}{w}{8}{0}{}{1.000}{}{0.00}
-E {184}{eat mushroom}{.mapLink {Pinnacle/Chaos/Ladder} {} {eat mushroom};}{0}{1}{}{1.000}{}{0.00}
 
 R {13}{0}{<000>}{LINK: Pinnacle/Chaos/Hippie Commune}{<138>*}{}{Pinnacle/Chaos/Hippie Commune}{{link}{}}{}{}{1.000}{}
 E {6}{s}{s}{4}{0}{}{1.000}{}{0.00}
@@ -359,6 +358,8 @@ R {21}{0}{<068>}{Eastwick}{ }{This is further down the road of Eastwick.  The sk
 E {65}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {12}{w}{w}{8}{1}{}{1.000}{}{0.00}
 E {167}{enter void}{.mapLink {Pinnacle/Chaos/Tree of Life} {} {enter void};}{0}{1}{}{1.000}{}{0.00}
+E {184}{eat mushroom}{.mapLink {Pinnacle/Chaos/Ladder} {} {eat mushroom};}{0}{1}{}{1.000}{}{0.00}
+E {202}{embrace void}{.mapLink {Pinnacle/Chaos/Tree of Life v2} {} {embrace void};}{0}{1}{}{1.000}{}{0.00}
 
 R {22}{0}{<068>}{The Upper Rack}{ }{You're now standing in the middle of the upper rack of a giant dishwasher.  Plastic compartments line the rack from one end to to the other.  Soapy water splashes up and over you every few seconds, leaving you smelling a little better, but it sure does sting the eyes!}{}{}{}{}{1.000}{}
 E {20}{d}{d}{32}{0}{}{1.000}{}{0.00}
@@ -837,6 +838,7 @@ E {135}{e}{e}{2}{0}{}{1.000}{}{0.00}
 R {135}{0}{<068>}{Da Pits}{ }{Your careening path of destruction has come to an end or it has just started.  You have just been ejected from the thingie, or you just flew through the air into it.  This is confusing.  There are peanuts on the ground and the tang of orangutan poop is in the air.}{Mud}{}{}{}{1.000}{}
 E {134}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {136}{e}{.mapLink {Pinnacle/Chaos/Chicago Zoo} {} {e};}{2}{1}{}{1.000}{}{0.00}
+E {201}{study book}{.mapLink {Pinnacle/Chaos/The Ten Commandments} {} {study book};}{0}{1}{}{1.000}{}{0.00}
 
 R {136}{0}{<000>}{LINK: Pinnacle/Chaos/Chicago Zoo}{<138>*}{}{Pinnacle/Chaos/Chicago Zoo}{{link}{}}{}{}{1.000}{}
 E {135}{w}{w}{8}{0}{}{1.000}{}{0.00}
@@ -951,7 +953,7 @@ R {182}{0}{<000>}{LINK: Pinnacle/Chaos/Teenage Mutant Turtles}{<138>*}{}{Pinnacl
 
 R {183}{0}{<000>}{LINK: Pinnacle/Chaos/Einstein's Cottage}{<138>*}{}{Pinnacle/Chaos/Einstein's Cottage}{{link}{}}{}{}{1.000}{}
 
-R {184}{0}{<000>}{LINK: Pinnacle/Chaos/Ladder}{<138>*}{}{Pinnacle/Chaos/Ladder}{{link}{}}{}{}{1.000}{}
+R {184}{0}{<000>}{LINK: Pinnacle/Chaos/Ladder}{<138>*}{}{Pinnacle/Chaos/Ladder}{{content}{{item}{{^A swirling void$}{{name}{A swirling void}}{^Magic mushroom magically stuck in the ground$}{{name}{Magic mushroom magically stuck in the ground}}}{noun}{{sky}{{name}{sky}}}{npc}{{^villager$}{{name}{villager}}}}{link}{}}{}{}{1.000}{}
 
 R {185}{0}{<000>}{LINK: Pinnacle/Chaos/Humpty Dumpty}{<138>*}{}{Pinnacle/Chaos/Humpty Dumpty}{{link}{}}{}{}{1.000}{}
 
@@ -985,3 +987,7 @@ E {8}{e}{e}{2}{0}{}{1.000}{}{0.00}
 R {199}{0}{<000>}{LINK: Pinnacle/Chaos/Mcdonald's}{<138>*}{}{Pinnacle/Chaos/Mcdonald's}{{content}{{noun}{{doors}{{name}{doors}}{road}{{name}{road}}}}{link}{}}{}{}{1.000}{}
 
 R {200}{0}{<000>}{LINK: Pinnacle/Chaos/Dundee Poachers}{<138>*}{}{Pinnacle/Chaos/Dundee Poachers}{{content}{{item}{{^A large ladder$}{{name}{A large ladder}}{^A little brown monkey doll$}{{name}{A little brown monkey doll}}{^A very greasy hamburger$}{{name}{A very greasy hamburger}}{^Overgrown swamp$}{{name}{Overgrown swamp}}{containing \d+ messages}{{name}{Dundee Poachers Main Board containing 16 messages (10 unread messages)}}}{noun}{{billboard}{{name}{billboard}}{dirt}{{name}{dirt}}{grass}{{name}{grass}}{ground}{{name}{ground}}{marshland}{{name}{marshland}}{swamp}{{name}{swamp}}{track}{{name}{track}}{tufts}{{name}{tufts}}}{npc}{{^Permit Officer$}{{name}{Permit Officer}}}}{link}{}}{}{}{1.000}{}
+
+R {201}{0}{<000>}{LINK: Pinnacle/Chaos/The Ten Commandments}{<138>*}{}{Pinnacle/Chaos/The Ten Commandments}{{content}{{item}{{^A Chocolate Cake$}{{name}{A Chocolate Cake}}{^A HUGE refrigerator$}{{name}{A HUGE refrigerator}}{^A Hockey Ticket$}{{name}{A Hockey Ticket}}{^A Pumpkin$}{{name}{A Pumpkin}}{^A banana peel$}{{name}{A banana peel}}{^A big BLACK and WHITE inflatable cow$}{{name}{A big BLACK and WHITE inflatable cow}}{^A giant faucet$}{{name}{A giant faucet}}{^A rusty ship anchor$}{{name}{A rusty ship anchor}}{^A shiny new postcard rack$}{{name}{A shiny new postcard rack}}{^A velvet rope$}{{name}{A velvet rope}}{^A velvet witch hat$}{{name}{A velvet witch hat}}{^The Good Humor, Ice Cream Truck$}{{name}{The Good Humor, Ice Cream Truck}}}{noun}{{area}{{name}{area}}{branches}{{name}{branches}}{broccoli}{{name}{broccoli}}{buildings}{{name}{buildings}}{bunches}{{name}{bunches}}{circle}{{name}{circle}}{city}{{name}{city}}{clouds}{{name}{clouds}}{farmland}{{name}{farmland}}{grass}{{name}{grass}}{ground}{{name}{ground}}{head}{{name}{head}}{herd}{{name}{herd}}{leaves}{{name}{leaves}}{mountain}{{name}{mountain}}{mountains}{{name}{mountains}}{ozone}{{name}{ozone}}{peanuts}{{name}{peanuts}}{plants}{{name}{plants}}{pole}{{name}{pole}}{poop}{{name}{poop}}{rope}{{name}{rope}}{skies}{{name}{skies}}{slide}{{name}{slide}}{stake}{{name}{stake}}{tang}{{name}{tang}}{totem}{{name}{totem}}{trail}{{name}{trail}}{trees}{{name}{trees}}{vines}{{name}{vines}}}{npc}{{^A Disoreinted Typo \x28Lost\x29$}{{name}{A Disoreinted Typo (Lost)}}{^An Old Man$}{{name}{An Old Man}}}}{link}{}}{}{}{1.000}{}
+
+R {202}{0}{<000>}{LINK: Pinnacle/Chaos/Tree of Life v2}{<138>*}{}{Pinnacle/Chaos/Tree of Life v2}{{content}{{item}{{^A swirling void$}{{name}{A swirling void}}{^Magic mushroom magically stuck in the ground$}{{name}{Magic mushroom magically stuck in the ground}}}{noun}{{sky}{{name}{sky}}}{npc}{{^villager$}{{name}{villager}}}}{link}{}}{}{}{1.000}{}
