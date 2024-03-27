@@ -1,0 +1,13 @@
+#NOP The Spork Lance tingles and you feel refreshed.
+#NOP SP boost +90 ish
+
+#NOP The Spork Lance SLICES into <npc>!
+#NOP The Spork Lance GASHES <npc>!
+
+#NOP A spork tine breaks off into <npc>!
+#NOP <npc> bleeds from where the spork tine is embedded in <him/her>!
+#NOP The spork tine falls out of <npc>.
+
+#GAG {bleeds from where the spork tine is embedded in};
+
+ibrief on spork lance;

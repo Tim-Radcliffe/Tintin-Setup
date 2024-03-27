@@ -1,0 +1,6 @@
+#ALIAS {handler_battle_glove}
+{
+    #NOP %1;
+    #SEND {!strike};
+};
+event_register {e_combat_round} {$path[equipment]/Battle Glove.tin} {handler_battle_glove}
