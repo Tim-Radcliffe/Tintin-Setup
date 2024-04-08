@@ -281,7 +281,7 @@
 		{pickup} {1}
 	}
 };
-#VAR {item[^A Work Order$]}
+#VAR {_item[^A Work Order$]}
 {
 	@fFormatItemData{
 		{_area} {global}
@@ -301,4 +301,44 @@
 		{pickup} {1}
 	}
 };
-
+#VAR {_item{^Emission Gem$}}
+{
+	@fFormatItemData{
+        {_area} {global}
+        {desc} 
+        {
+            {1} {Emission Gem}
+            {2} {Within the crystal walls of this finely crafted gem, a storm of elements}
+            {3} {chaotically flux and intertwine their energies.  Peering inside you see}
+            {4} {the waves of an ocean surf, and then suddenly, a burning inferno.  Each}
+            {5} {time you look within the crystal, another elemental scene takes shape. }
+            {6} {Should the holder of this precious stone draw upon the elements, he or}
+            {7} {she need not worry about faltering.  It seems as if this gem itself was}
+            {8} {a direct pathway to the astral planes beyond.This appears to be an artifact for the elemental guild.}
+            {9} {It looks light.}
+        }
+        {id} {miniature elemental}
+        {name} {Emission Gem}
+        {nomap} {1}
+        {pickup} {1}
+    }
+};
+#VAR {_item{^large dark leather flask$}} 
+{
+    @fFormatItemData{
+        {_area} {global}
+        {desc} 
+        {
+            {1} {large dark leather flask}
+            {2} {This large, dark, leather flask contains a sweet smelling liquid that}
+            {3} {seems to have the consistency of honey, or perhaps syrup.  You could}
+            {4} {likely drink from the flask if you were so inclined.}
+            {5} {This appears to be an artifact for the bard guild.}
+            {6} {It looks light.}
+        }
+        {id} {leather flask}
+        {name} {large dark leather flask}
+        {nomap} {1}
+        {pickup} {1}
+    }
+};
