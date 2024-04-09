@@ -4,7 +4,7 @@
     {
         #CASE {"ask"}
         {
-            #ACTION {^You have been offered the mission '%%*'.$}
+            #ACTION {^You have been offered the mission '%*'.$}
             {
                 .log add {missions.log} {MISSION ACCEPTED: %%1};
                 #SEND {!mission accept 1};
@@ -12,21 +12,21 @@
         };
         #CASE {"return"}
         {
-            #ACTION {^Congratulations!  You have completed the mission '%%*'.$}
+            #ACTION {^Congratulations!  You have completed the mission '%*'.$}
             {
                 .log add {missions.log} {MISSION COMPLETE: %%1};
             };
 
-            #ACTION {^You have been awarded %%* for your efforts.}
+            #ACTION {^You have been awarded %* for your efforts.}
             {
                 .log add {missions.log} {MISSION REWARD: %%1};
             };
         };
         #CASE {"cleanup"}
         {
-            #UNACTION {^You have been offered the mission '%%*'.$};
-            #UNACTION {^Congratulations!  You have completed the mission '%%*'.$};
-            #UNACTION {^You have been awarded %%* for your efforts.};
+            #UNACTION {^You have been offered the mission '%*'.$};
+            #UNACTION {^Congratulations!  You have completed the mission '%*'.$};
+            #UNACTION {^You have been awarded %* for your efforts.};
             #RETURN;
         };
     };

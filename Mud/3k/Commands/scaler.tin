@@ -1,18 +1,18 @@
 #ALIAS {scaler}
 {
 	#UNVAR {map[area][scaler]};
-	#ACTION {^Current scaled level of the dungeon you're in: %%d$}
+	#ACTION {^Current scaled level of the dungeon you're in: %d$}
 	{
 		#VAR {map[area][scaler]} {%%1};
 	} {3};
-	#ACTION {^Your dungeon scaler is currently set to level: %%d$}
+	#ACTION {^Your dungeon scaler is currently set to level: %d$}
 	{
 		#IF {&map[area][scaler] == 0}
 		{
 			#VAR {map[area][scaler]} {0};
 		};
-		#UNACTION {^Current scaled level of the dungeon you're in: %%d$};
-		#UNACTION {^Your dungeon scaler is currently set to level: %%d$};
+		#UNACTION {^Current scaled level of the dungeon you're in: %d$};
+		#UNACTION {^Your dungeon scaler is currently set to level: %d$};
 	} {3};
 	#IF {"%1" != ""}
 	{

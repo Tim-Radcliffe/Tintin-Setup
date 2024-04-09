@@ -28,7 +28,7 @@
 
 #ALIAS {sl}
 {
-    #ACTION {^%%*%%s|%%s%%d%%s|%%s%%d%%s|%%s%%d%%s|%%s%%d%%s|%%s%%d%%s|%%s%%d%%s|%%s%%d%%s|%%s%%d%%s|} 
+    #ACTION {^%*%s|%s%d%s|%s%d%s|%s%d%s|%s%d%s|%s%d%s|%s%d%s|%s%d%s|%s%d%s|} 
     {
         #FORMAT {_craft[ingredient]} {%l} {%%1};
         #VAR {_craft[satchel][$_craft[ingredient]][total]} {%%4};
@@ -42,10 +42,10 @@
         .ingredientScan $_craft[ingredient];
     };
     
-    #ACTION {You have %%d/%%d items in your satchel.}
+    #ACTION {You have %d/%d items in your satchel.}
     {
-        #UNACTION {^%%*%%s|%%s%%d%%s|%%s%%d%%s|%%s%%d%%s|%%s%%d%%s|%%s%%d%%s|%%s%%d%%s|%%s%%d%%s|%%s%%d%%s|};
-        #UNACTION {You have %%d/%%d items in your satchel.};
+        #UNACTION {^%*%s|%s%d%s|%s%d%s|%s%d%s|%s%d%s|%s%d%s|%s%d%s|%s%d%s|%s%d%s|};
+        #UNACTION {You have %d/%d items in your satchel.};
     };
 
     #SEND {!stashlist %0};
@@ -224,7 +224,7 @@
         #VAR {_craft[level][%%%2][$_si[type]][min]} {$_si[min]};
       };     
     };
-    event_register e_prompt h_ingredients {#NOP %%%1;#UNACTION {^%%d %%*%%s$};#UNVAR {_si};event_remove_specific e_prompt h_ingredients;};
+    event_register e_prompt h_ingredients {#NOP %%%1;#UNACTION {^%d %*%s$};#UNVAR {_si};event_remove_specific e_prompt h_ingredients;};
         
     #UNACTION {^-INGREDIENTS-};
   };

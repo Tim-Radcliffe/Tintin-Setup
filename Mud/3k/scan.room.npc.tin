@@ -104,11 +104,11 @@ event_register {e_room_npc} {h_scan_npc} {.scanRoomNPC};
 		#ACTION {_scan.room.npc.consider.%4}
 		{
 			#LINE GAG;
-			#ACTION {^Monster class: %%%*$}
+			#ACTION {^Monster class: %*$}
 			{
 				#VAR {_npc[%1][size][$map[area][scaler]][consider]} {%%%1};
 				.scanRoomNPCSave {%1};
-				#UNACTION {^Monster class: %%%*$};
+				#UNACTION {^Monster class: %*$};
 			};
 			#UNACTION {_scan.room.npc.consider.%4};
 		} {1};
