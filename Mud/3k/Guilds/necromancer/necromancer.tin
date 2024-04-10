@@ -12,11 +12,13 @@ auto {add} {call} {} {e_combat} {};
 #ALIAS {handler_auto_corrode}
 {
     #NOP %1;
-    #IF {$my[necromancer][power][corrode] > 0 &&
-         $my[gp1][current] > 50 &&
+    #IF {$my[gp1][current] > 50 &&
          $my[sp][current] > 50}
     {
-        #SEND {!corrode};
+        #IF {@fEval{$my[necromancer][power][corrode] > 0} || @fEval{$my[necromancer][tier] >= 3}} 
+        {
+            #SEND {!corrode};
+        };
     };
 };
 auto {add} {corrode} {} {e_combat} {};
@@ -25,10 +27,12 @@ auto {add} {corrode} {} {e_combat} {};
 #ALIAS {handler_auto_psibleed}
 {
     #NOP %1;
-    #IF {$my[necromancer][power][psibleed] > 0 &&
-         $my[gp1][current] > 100}
+    #IF {$my[gp1][current] > 100}
     {
-        #SEND {!psibleed};
+        #IF {@fEval{$my[necromancer][power][psibleed] > 0} || @fEval{$my[necromancer][tier] >= 3}} 
+        {
+            #SEND {!psibleed};
+        };
     };
 
 };
@@ -87,11 +91,16 @@ auto {add} {spfuse} {} {e_combat_round} {};
 #ALIAS {handler_auto_protection}
 {
     #NOP %1;
-    #IF {"$my[necromancer][protection]" != "ON" && 
-         $my[necromancer][power][protection] > 0 &&
-         $my[gp1][current] > 55}
+    #IF {"$my[necromancer][protection]" != "ON" && $my[gp1][current] > 55}
     {
-        #SEND {!protection};
+        #IF {$my[necromancer][tier] >= 3} 
+        {
+            #SEND {!protection};
+        };
+        #ELSEIF {$my[necromancer][power][protection] > 0} 
+        {
+            #SEND {!protection};
+        };
     };
 };
 auto {add} {protection} {} {e_combat_round} {};
