@@ -80,5 +80,10 @@
 {
     event_raise {e_veneratus_notitia} {%2} {%3} {%4};
 };
+
 auto add {veneratus} {notitia on} {e_veneratus_notitia} {notitia off};
-auto veneratus on;
+
+#IF {"$auto[veneratus][status]" != "1"}
+{
+    auto veneratus on;
+};

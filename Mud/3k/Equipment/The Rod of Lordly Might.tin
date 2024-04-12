@@ -107,9 +107,8 @@ event_register {e_combat_round} {$path[equipment]/The Rod of Lordly Might.tin} {
             #CASE {"diamond"} {.rolm_diamond_rune};
             #DEFAULT {#NOP};
         };
+        #SEND {%0};        
     };
-
-    #SEND {%0};
 };
 
 #ALIAS {.rolm_weapon_rune}
@@ -117,6 +116,7 @@ event_register {e_combat_round} {$path[equipment]/The Rod of Lordly Might.tin} {
     #IF {$_rolm[rune][%1][trained] >= 24}
     {
         #VAR {_rolm[weapon]} {%1};
+        #SEND {!touch %1 rune};
     };
     #ELSE
     {
