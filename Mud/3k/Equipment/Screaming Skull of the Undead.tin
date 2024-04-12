@@ -1,0 +1,27 @@
+#VAR {_item[^Screaming Skull of the Undead$]} 
+{
+    {_area} {global}
+    {desc} 
+    {
+        {1} {Screaming Skull of the Undead}
+        {2} {A large polished human skull. It gleams with a bright green glow.}
+        {3} {A brilliant bright green light shines through its open eye}
+        {4} {sockets, nose socket and gaping bony jaws. It feels like it has}
+        {5} {just the perfect weight to throw.}
+        {6} {It looks very heavy.}
+    }
+    {id} {screaming skull}
+    {name} {Screaming Skull of the Undead}
+    {nomap} {1}
+    {pickup} {!get screaming skull;!keep screaming skull}
+};
+
+#ALIAS {handler_screaming_skull}
+{
+    #NOP %1;
+    #IF {"$opponent[data][id]" != ""}
+    {
+        #SEND {!throw skull at $opponent[data][id]};
+    };
+};
+event_register e_combat {$path[equipment]/Screaming Skull of the Undead.tin} {handler_screaming_skull};

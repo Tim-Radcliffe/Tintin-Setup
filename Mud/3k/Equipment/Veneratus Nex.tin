@@ -11,11 +11,49 @@
 
 #ALIAS {agnosco}
 {
+    #SUBSTITUTE {Actus} {Level};
+    #SUBSTITUTE {Proximus} {Progress};
+    #SUBSTITUTE {Vis} {Power};
+    #SUBSTITUTE {Loricatus} { Items};
+    #SUBSTITUTE {Desino} {Off};
+    #SUBSTITUTE {Ineo} {On };
+    #SUBSTITUTE {Tutaminis} {Tutaminis (Defence) };
+    #SUBSTITUTE {Vivifico} {Vivifico (Light)   };
+    #SUBSTITUTE {Victus} {Victus (HP Regen)};
+    #SUBSTITUTE {Praesentia} {Praesentia (SP Regen)};
+    #SUBSTITUTE {Incursus} {Incursus (Attack)  };
     #ACTION {^Actus:%s[%d]}
     {
         #VAR {_Veneratus[actus]} {%%2};
+        #UNACTION {^Actus:%s[%d]};
     };
     #SEND {!agnosco};
+};
+
+#ALIAS {notitia}
+{
+    #NOP %1;
+    #ACTION {^Your knowledge of the Power of the Unliving no longer extends into combat.$}
+    {
+        #VAR {_Veneratus[notitia]} {0};
+        #IF {"%1" == "on"} {notitia on};
+        #ELSE 
+        {
+            #UNACTION {^Your knowledge of the Power of the Unliving no longer extends into combat.$};
+            #unACTION {^Your knowledge of the Power of the Unliving extends into combat.$};
+        };
+    };
+    #ACTION {^Your knowledge of the Power of the Unliving extends into combat.$}
+    {
+        #VAR {_Veneratus[notitia]} {1};
+        #IF {"%1" == "off"} {notitia off};
+        #ELSE 
+        {
+            #UNACTION {^Your knowledge of the Power of the Unliving no longer extends into combat.$};
+            #unACTION {^Your knowledge of the Power of the Unliving extends into combat.$};
+        };
+    };
+    #SEND {!notitia};
 };
 
 #ALIAS {handler_auto_veneratus}
@@ -26,7 +64,7 @@
     #VAR {_Veneratus[vis][max]} {%3};
     #VAR {_Veneratus[proximus]} {%4};
 
-    #IF {$_Veneratus[vis][current] < 100}
+    #IF {$_Veneratus[vis][current] < 20}
     {
         #SEND {!drop corpse};
         #SEND {!orare};
@@ -42,6 +80,5 @@
 {
     event_raise {e_veneratus_notitia} {%2} {%3} {%4};
 };
-auto add {veneratus} {.file load {$path[local]/Equipment/Veneratus Nex.tin}} {e_veneratus_notitia} {#SEND {notitia};};
-agnosco;
-#SEND {!notitia};
+auto add {veneratus} {notitia on} {e_veneratus_notitia} {notitia off};
+auto veneratus on;

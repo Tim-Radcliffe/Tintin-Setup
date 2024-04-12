@@ -1,0 +1,30 @@
+#NOP Reflecting some of Zombie's mental onslaught, a psionic blast thunders
+#NOP from your amulet, staggering it!
+
+#NOP Reflecting some of Zombie's energetic blows, a beam of light shines from
+#NOP your amulet, obliterating it!
+
+#NOP Reflecting some of Ugly Vampire's radioactive blows, a humming ray 
+#NOP radiates from your amulet, obliterating it!
+
+#NOP Reflecting some of Chubby Vampire's frigid blows, a cone of cold streams
+#NOP from your amulet, mauling it!
+
+#NOP Reflecting some of Chubby Vampire's caustic attack, a gout of acid
+#NOP sprays from your amulet, decimating it!
+
+#NOP Reflecting some of Faerie Lizard's toxic blows, a sickly green cloud
+#NOP pours from your amulet, mauling her!
+
+#NOP Reflecting some of Wyvern's fiery attack, a ball of fire shoots from
+#NOP your amulet, devastating him!
+
+
+#ACTION {^Reflecting some of %*'s %w}
+{
+    #IF {&opponent[regexp]}
+    {
+        #VAR {_npc[$opponent[regexp]][attacks][@fStandardDamage{{%2}{amulet of reflection}}]} {1};
+        .scanRoomNPCSave {$opponent[regexp]};
+    };    
+};
