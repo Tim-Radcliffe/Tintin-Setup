@@ -49,22 +49,15 @@
     #ELSEIF {"$room[break]" != "1" && "$auto[pickup][variable]" == "full"}
     {
         .debug PICKUP {Full Pickup - get item added to command queue: $room[commandbuffer]};
-        .RoomAddCommand {@fAutoGetCommand{%2}} {8};
+        .RoomAddCommand {#SEND {!get %2}} {8};
+        #IF {$auto[bag][status]}
+        {
+            .RoomAddCommand {#SEND {!put %2 in bag}} {9};
+        };
     };
 
     #UNVAR {room[break]};
     #UNVAR {room[commandbuffer]};
-};
-
-/* Returns all the commands to perform when getting an object */
-#FUNCTION {fAutoGetCommand}
-{
-    #LOCAL {_fAGC} {#SEND {!get %0};};
-    #IF {$auto[bag][status]}
-    {
-        #CAT {_fAGC} {#SEND {!put %0 in bag}};
-    };
-    #RETURN {$_fAGC};
 };
 
 auto add {pickup} {.file load {$path[mud]/Scripts/auto.pickup.tin}} {e_room_item} {#NOP %1;#CLASS {$path[mud]/Scripts/auto.pickup.tin} KILL;};
