@@ -6,16 +6,16 @@
     #FORMAT {_dmg[source]} {%l} {%2};
     #VAR {_dmg[table]} 
     { 
-        {edged}         {{tauron}{swashbuckling}{necromancer}{edged}    {corpse}{sliced up}     {precious stone}{razine}    {diamond necklace}{black}} 
-        {blunt}         {{tauron}{bludgeoning}  {necromancer}{crushing} {corpse}{bashed up}     {precious stone}{brutal}    {diamond necklace}{white}}
-        {ice}           {{tauron}{frost}        {necromancer}{cold}     {corpse}{frozen}        {precious stone}{icey}      {diamond necklace}{blue}}
-        {fire}          {{tauron}{dragonslaying}{necromancer}{flame}    {corpse}{charred}       {precious stone}{flaming}   {diamond necklace}{red}}
-        {mind}          {{tauron}{spirit}       {necromancer}{psionic}  {corpse}{brainless}     {precious stone}{humming}   {diamond necklace}{purple}}
-        {electric}      {{tauron}{stormfire}    {necromancer}{lightning}{corpse}{electrocuted}  {precious stone}{crackling} {diamond necklace}{yellow}}
-        {acid}          {{tauron}{corrosion}    {necromancer}{corrosion}{corpse}{skinless}      {precious stone}{acidic}    {diamond necklace}{green}}
-        {poison}        {{tauron}{toxins}       {necromancer}{virulence}{corpse}{putrid}        {precious stone}{poisonous} {diamond necklace}{dark green}}
-        {energy}        {{tauron}{absorption}   {necromancer}{power}    {corpse}{glowing}       {precious stone}{glowing}   {diamond necklace}{pink}}
-        {radiation}     {{tauron}{atomics}      {necromancer}{light}    {corpse}{melted}        {precious stone}{radiant}   {diamond necklace}{aqua}}
+        {edged}         {{tauron}{swashbuckling}{necromancer}{edged}    {corpse}{sliced up}     {precious stone}{razine}    {diamond necklace}{black}      {amulet of reflection}{}} 
+        {blunt}         {{tauron}{bludgeoning}  {necromancer}{crushing} {corpse}{bashed up}     {precious stone}{brutal}    {diamond necklace}{white}      {amulet of reflection}{}}
+        {ice}           {{tauron}{frost}        {necromancer}{cold}     {corpse}{frozen}        {precious stone}{icey}      {diamond necklace}{blue}       {amulet of reflection}{frigid}}
+        {fire}          {{tauron}{dragonslaying}{necromancer}{flame}    {corpse}{charred}       {precious stone}{flaming}   {diamond necklace}{red}        {amulet of reflection}{fiery}}
+        {mind}          {{tauron}{spirit}       {necromancer}{psionic}  {corpse}{brainless}     {precious stone}{humming}   {diamond necklace}{purple}     {amulet of reflection}{mental}}
+        {electric}      {{tauron}{stormfire}    {necromancer}{lightning}{corpse}{electrocuted}  {precious stone}{crackling} {diamond necklace}{yellow}     {amulet of reflection}{electrical}}
+        {acid}          {{tauron}{corrosion}    {necromancer}{corrosion}{corpse}{skinless}      {precious stone}{acidic}    {diamond necklace}{green}      {amulet of reflection}{caustic}}
+        {poison}        {{tauron}{toxins}       {necromancer}{virulence}{corpse}{putrid}        {precious stone}{poisonous} {diamond necklace}{dark green} {amulet of reflection}{toxic}}
+        {energy}        {{tauron}{absorption}   {necromancer}{power}    {corpse}{glowing}       {precious stone}{glowing}   {diamond necklace}{pink}       {amulet of reflection}{energetic}}
+        {radiation}     {{tauron}{atomics}      {necromancer}{light}    {corpse}{melted}        {precious stone}{radiant}   {diamond necklace}{aqua}       {amulet of reflection}{radioactive}}
     };
 
     #IF {"%1" == "table"}
