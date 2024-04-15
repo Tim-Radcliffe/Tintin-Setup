@@ -287,7 +287,8 @@
                 .debug MAP {Unloading map variables: $t : $map[area][path]};
 
                 #LIST {$t} INDEXATE {_area};
-                #LIST {$t} FILTER {} {$map[area][path]};
+#NOP                #LIST {$t} FILTER {} {$map[area][path]};
+                #LIST {$t} FILTER {global};
             };
             #UNVAR {_mapVariable};
         };
@@ -331,22 +332,23 @@
     };
     #ELSE
     {
-        #VAR {_mAL} {};
-        #VAR {_mAL[linkroom]} {@fMapGetVnum{%1}};
+        #LOCAL {_mAL} {};
+        #LOCAL {_mAL[destpath]} {@fMapResolvePath{%2}};
+        #LOCAL {_mAL[linkroom]} {@fMapGetVnum{%1}};
         #IF {"$_mAL[linkroom]" == ""}
         {
             #MAP DIG {%1} {NEW};
-            #VAR {_mAL[linkroom]} {@fMapGetVnum{%1}};
+            #LOCAL {_mAL[linkroom]} {@fMapGetVnum{%1}};
         };
         #MAP AT $_mAL[linkroom] .mapRoom {link};
-        #MAP AT $_mAL[linkroom] #MAP SET roomarea {@fMapResolvePath{%2}};
-        #MAP AT $_mAL[linkroom] #MAP SET roomname {LINK: @fMapResolvePath{%2}};
-        #MAP EXIT {%1} COMMAND {.mapLink {@fMapResolvePath{%2}} {%3} {%1};};
+        #MAP AT $_mAL[linkroom] #MAP SET roomarea {$_mAL[destpath]};
+        #MAP AT $_mAL[linkroom] #MAP SET roomname {LINK: $_mAL[destpath]};
+        #MAP EXIT {%1} COMMAND {.mapLink {$_mAL[destpath]} {%3} {%1};};
         #MAP EXITFLAG {%1} HIDE;
         .mapRefresh
         #ECHO {CREATING MAP LINK:};
-        #ECHO {FROM: @fFileGetPath{$map[file]} @fMapGetVnum{}};
-        #ECHO {TO  : @fMapResolvePath{%2} %3};
+        #ECHO {FROM: $map[file] @fMapGetVnum{}};
+        #ECHO {TO  : $_mAL[destpath] %3};
     };
 };
 
