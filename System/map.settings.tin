@@ -1,0 +1,6 @@
+#ALIAS {.mapSettings} 
+{
+    #MAP FLAG DIRECTION OFF;
+    #MAP LEGEND {16} {#};
+    #MAP COLOR USER {<139>};
+};
