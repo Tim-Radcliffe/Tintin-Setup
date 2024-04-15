@@ -1,0 +1,12 @@
+#ALIAS {k} 
+{
+    #NOP %0;
+    kill %0;
+};
+
+#ALIAS {kill}
+{
+    #NOP %0;
+    #SEND {!kill %0};
+    event_raise e_kill {%0};
+};

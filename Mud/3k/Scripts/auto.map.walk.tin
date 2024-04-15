@@ -7,6 +7,11 @@
  * Balthus - 12th March 2018                                           *
 \***********************************************************************/
 
+#NOP TODO: Record last room seen with an exit not followed. 
+#NOP       if mapper runs out of exits on current path and there is a link
+#NOP       to a lower numbered room that is higher than the last room with
+#NOP       an exit to follow, skip to the lower numbered room.
+
 #VAR {_hWalk} {};
 
 /* Get exits for the current room and work out the next exit to take */
@@ -58,6 +63,7 @@
             };
         };
     };
+    .debug MAPWALK {Next move: $_hWalk[move]};
 };
 event_register {e_map_room_enter} {auto.map.walk.tin} {.handler_mapwalk_room};
 
@@ -79,12 +85,12 @@ event_register {e_map_room_enter} {auto.map.walk.tin} {.handler_mapwalk_room};
     #ELSEIF {"$_hWalk[move]" != ""}
     {
         #VAR {_hWalk[retry]} {$_hWalk[move]};
-        .debug mapwalk {MOVE: $_hWalk[move]};
+        .debug MAPWALK {MOVE: $_hWalk[move]};
         $_hWalk[move];
     };
     #ELSE
     {
-        .debug mapwalk {INFO: Walk Complete};
+        .debug MAPWALK {INFO: Walk Complete};
         auto mapwalk off;
     };
 };

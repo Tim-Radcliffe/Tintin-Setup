@@ -1,10 +1,10 @@
 #ALIAS {handler_auto_mapfind}
 {
     #NOP %1;
-    #REGEXP {%2} {%i$auto[mapfind][variable]} 
+    #REGEXP {%3} {%i$auto[mapfind][variable]} 
     {
-	    #ECHO {MAPFIND: Found %2};
-        event_raise {e_mapfind} {%2};
+	    #ECHO {MAPFIND: Found %3};
+        event_raise {e_mapfind} {%3};
         auto mapfind off;
     };
 };
@@ -32,7 +32,7 @@
 
 #IF {!&auto[mapfind]}
 {
-    auto add {mapfind} {.file load {$path[mud]/Scripts/auto.map.find.tin}} {e_scan_room_item;e_scan_room_npc} {#NOP %%1;handler_auto_mapfind_end};
+    auto add {mapfind} {.file load {$path[mud]/Scripts/auto.map.find.tin}} {e_room_item;e_room_npc} {#NOP %%1;handler_auto_mapfind_end};
 };
 
 handler_auto_mapfind_start;

@@ -20,7 +20,7 @@
 		};
 		#ELSEIF {"$room[current][autokill]" == "1"}
 		{
-			#LINE SUBSTITUTE VARIABLES {.RoomAddCommand {!kill $room[current][id]} {9}};
+			#LINE SUBSTITUTE VARIABLES {.RoomAddCommand {kill $room[current][id]} {9}};
 			.RoomAddCommand {handler_auto_kill_combat} {9};
 		};
 		#ELSE
@@ -62,13 +62,13 @@
 		#MACRO {o}
 		{
 			handler_auto_kill_combat;
-			#SEND {!kill %1};
+			kill %1;
 			handler_auto_kill_choice {};
 		};
 		#MACRO {\ea}
 		{
 			handler_auto_kill_combat;
-			#SEND {!kill %1};
+			kill %1;
 			handler_auto_kill_choice {};
 		};
 		#MACRO {a}
@@ -77,7 +77,7 @@
 			#VAR {_npc[$_autoKillNPC][autokill]} {1};
 			.scanRoomNPCSave {$_autoKillNPC};
 			handler_auto_kill_combat;
-			#SEND {!kill %1};
+			kill %1;
 			handler_auto_kill_choice {};
 		};
 		#MACRO {s}
