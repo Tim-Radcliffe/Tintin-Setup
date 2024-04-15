@@ -5,13 +5,13 @@
 
 	#CLASS {cNecroI} {open};
 
-	#ACTION {^Wielded Weapon: %*}
+	#ACTION {{^Wielded Weapon:[ *]{1,2}(.*)$}}
 	{
 		.iTidyUp;
-		#VAR {my[eq][%%1][category]} {Weapons};
-		#VAR {my[eq][%%1][type]} {weapon};
-		#VAR {my[eq][%%1][equipped]} {1};
-		.eqLoadScript {%%1};
+		#VAR {my[eq][%%2][category]} {Weapons};
+		#VAR {my[eq][%%2][type]} {weapon};
+		#VAR {my[eq][%%2][equipped]} {1};
+		.eqLoadScript {%%2};
 	};
 
 	#ACTION {^Armour (worn)}
