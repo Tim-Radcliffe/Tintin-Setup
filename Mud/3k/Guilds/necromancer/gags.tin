@@ -5,7 +5,7 @@
     #GAG {^* You blink into unconsciousness *};
     #GAG {^* You recover your senses *};
     #GAG {^>>Atrancing};
-    #GAG {^$my[necromancer][familiar] tells you:};
+    #GAG {$my[necromancer][familiar] tells you:};
     #GAG {^  You'll have to wait a moment %+.};
     #GAG {^  You will now absorb corpses from %+ first %+.};
     #GAG {^Shadowy powers compel you to %+};
@@ -30,7 +30,7 @@
     #UNGAG {^* You blink into unconsciousness *};
     #UNGAG {^* You recover your senses *};
     #UNGAG {^>>Atrancing};
-    #UNGAG {^$my[necromancer][familiar] tells you:};
+    #UNGAG {$my[necromancer][familiar] tells you:};
     #UNGAG {^  You'll have to wait a moment %+.};
     #UNGAG {^  You will now absorb corpses from %+ first %+.};    
     #UNGAG {^Shadowy powers compel you to %+};

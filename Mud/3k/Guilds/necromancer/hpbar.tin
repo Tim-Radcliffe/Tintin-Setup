@@ -4,6 +4,10 @@
 #ACTION {{^(\S:|)((HP|SP|NP|E|HSN|HSN%|Status|Cr|Corpses|Exp|TG|Moon|Planes|Reag|Memory)\[.*\].*$)}}
 {
     handler_necro_hpbar {%3};
+    #IF {$auto[necrogag][status]}
+    {
+        #LINE GAG;
+    };
 };
 
 /* Pass one HPBar section data at a time to the appropriate parser */

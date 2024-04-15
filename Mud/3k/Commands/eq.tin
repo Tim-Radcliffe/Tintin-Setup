@@ -66,4 +66,6 @@
     };
 };
 
+#VAR {_equipment} {};
+
 eq;

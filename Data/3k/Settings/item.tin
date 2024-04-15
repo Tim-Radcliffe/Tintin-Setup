@@ -30,6 +30,7 @@
 	}
 	{id} {shackles}
 	{nomap} {1}
+	{pickup} {-1}    
     }
 };
 #VAR {_item[^A Trashcan$]}

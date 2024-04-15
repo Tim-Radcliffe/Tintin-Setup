@@ -32,3 +32,9 @@ auto {add} {bag} {#ACTION {There is not room for more.} {.bagswap}} {} {#UNACTIO
     #SEND {!keep all bag};
     #SEND {!_bag.swap.end};
 };
+
+#NOP You reach into the bag and your hand passes through the objects                                                                                                      [ ]         [ ]   [ ]         [?]                          
+#NOP within.  This can't be right... they were just illusions!
+
+#NOP As you reach into the bag, something latches onto your arm!!                                                                                                                            |     |     |     |     | / \ | /       
+#NOP You scream in pain as you feel sharp teeth bite into your skin! 
