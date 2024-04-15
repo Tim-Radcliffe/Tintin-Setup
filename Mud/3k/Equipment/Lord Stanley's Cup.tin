@@ -1,0 +1,6 @@
+#ACTION {^{Out of nowhere a crazed hockey fan leaps towards the Cup|A hockey fan sprints out and dies}}
+{
+    .corpse preserve;
+};
+
+#SEND {!ibrief on lord stanley's cup};
