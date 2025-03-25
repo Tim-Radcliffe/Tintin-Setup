@@ -15,7 +15,7 @@
   {tell}           {{colour}{[32m}{tag}{C}}
   {soul}           {{colour}{[32;1m}{tag}{C}}
   {skill_dodge}    {{colour}{[0m}{tag}{S}}
-  {skill_crit}     {{colour}{[0m}{tag}{S}}
+  {skill_crit}     {{colour}{[0m}{tag}{K}}
   {shield_block}   {{colour}{[0m}{tag}{S}}
   {skill_freecast} {{colour}{[0m}{tag}{S}}
 }

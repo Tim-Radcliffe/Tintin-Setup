@@ -1,0 +1,24 @@
+#GAG {As you look through the mask, the eyes flash briefly with a dim, blue light.};
+
+#NOP trace glyph to turn the mask on/off
+
+#ACTION {^%w's eyes glow bright green upon the fallen}                                         
+{
+    #IF {"%1" == "$my[name]"}
+    {
+        .corpse preserve;
+    };
+};
+
+#ALIAS {trace glyph}
+{
+    #ACTION {^The mask emits a dull glow.$}
+    {
+
+    };
+    #ACTION {^The mask shines brightly.$} 
+    {
+
+    };
+    #SEND {!trace glyph};
+};

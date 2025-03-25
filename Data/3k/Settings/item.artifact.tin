@@ -1,4 +1,4 @@
-#VAR {_item[^a weathered catchpocket$]}
+#VAR {_item[global][^a weathered catchpocket$]}
 {
 	@fFormatItemData{
 		{_area} {global}
@@ -17,9 +17,10 @@
 		{name} {a weathered catchpocket}
 		{nomap} {1}
 		{pickup} {1}
+{type} {artifact}
 	}
 };
-#VAR {_item[^Mystic Rift$]}
+#VAR {_item[global][^Mystic Rift$]}
 {
 	@fFormatItemData{
 		{_area} {global}
@@ -37,9 +38,10 @@
 		{name} {Mystic Rift}
 		{nomap} {1}
 		{pickup} {1}
+{type} {artifact}
 	}
 };
-#VAR {_item[^Nectar Of The Gods$]}
+#VAR {_item[global][^Nectar Of The Gods$]}
 {
 	@fFormatItemData{
 		{_area} {global}
@@ -58,9 +60,10 @@
 		{name} {Nectar Of The Gods}
 		{nomap} {1}
 		{pickup} {1}
+{type} {artifact}
 	}
 };
-#VAR {_item[^a vial of holy water$]}
+#VAR {_item[global][^a vial of holy water$]}
 {
 	@fFormatItemData{
 		{_area} {global}
@@ -81,49 +84,66 @@
 		{name} {a vial of holy water}
 		{nomap} {1}
 		{pickup} {1}
+{type} {artifact}
 	}
 };
-#VAR {_item[crystal charm]}
+#VAR {_item[global][crystal charm]}
 {
 	@fFormatItemData{
 		{_area} {global}
 		{nomap} {1}
 		{pickup} {1}
+{type} {artifact}
 	}
 };
-#VAR {_item[platinum coin]}
+#VAR {_item[global][platinum coin]}
 {
 	@fFormatItemData{
 		{_area} {global}
 		{nomap} {1}
 		{pickup} {1}
+{type} {artifact}
 	}
 };
-#VAR {_item[small grey stone]}
+#VAR {_item[global][small grey stone]}
 {
 	@fFormatItemData{
 		{_area} {global}
 		{nomap} {1}
 		{pickup} {1}
+{type} {artifact}
 	}
 };
-#VAR {_item[dark leather strap]}
+#VAR {_item[global][dark leather strap]}
+{
+	@fFormatItemData{
+		{_area} {global}
+        {desc} 
+        {
+            {1} {dark leather strap}
+            {2} {A thin leather strap made of some unknown dark hide.  On the}
+            {3} {buckle is a grinning skull.  The object feels very cold to}
+            {4} {the touch.  It seems that only a mortal that is familiar with}
+            {5} {death would know more about such a thing.}
+            {6} {This appears to be an artifact for the necromancer guild.}
+        }
+        {id} {pledge}
+        {name} {dark leather strap}                        
+		{nomap} {1}
+		{pickup} {1}
+        {type} {artifact}
+	}
+};
+#VAR {_item[global][cloudy glass sphere]}
 {
 	@fFormatItemData{
 		{_area} {global}
 		{nomap} {1}
 		{pickup} {1}
+{type} {artifact}
 	}
 };
-#VAR {_item[cloudy glass sphere]}
-{
-	@fFormatItemData{
-		{_area} {global}
-		{nomap} {1}
-		{pickup} {1}
-	}
-};
-#VAR {_item[dark skull key]}
+#VAR {_item[global][dark skull key]}
 {
 	@fFormatItemData{
 		{_area} {global}
@@ -140,17 +160,19 @@
 		{name} {dark skull key}
 		{nomap} {1}
 		{pickup} {1}
+{type} {artifact}
 	}
 };
-#VAR {_item[shattered jaw bone]}
+#VAR {_item[global][shattered jaw bone]}
 {
 	@fFormatItemData{
 		{_area} {global}
 		{nomap} {1}
 		{pickup} {1}
+{type} {artifact}
 	}
 };
-#VAR {_item[^The tower shield of the Akh'Velahr$]}
+#VAR {_item[global][^The tower shield of the Akh'Velahr$]}
 {
 	@fFormatItemData{
 		{_area} {global}
@@ -173,9 +195,10 @@
 		{name} {The tower shield of the Akh'Velahr}
 		{nomap} {1}
 		{pickup} {1}
+{type} {artifact}
 	}
 };
-#VAR {_item[^Vortex Stabilizer$]}
+#VAR {_item[global][^Vortex Stabilizer$]}
 {
 	@fFormatItemData{
 		{_area} {global}
@@ -193,9 +216,10 @@
 		{name} {Vortex Stabilizer}
 		{nomap} {1}
 		{pickup} {1}
+{type} {artifact}
 	}
 };
-#VAR {_item[^Mental Harmonizing Stimulator$]}
+#VAR {_item[global][^Mental Harmonizing Stimulator$]}
 {
 	@fFormatItemData{
 		{_area} {global}
@@ -215,9 +239,10 @@
 		{name} {Mental Harmonizing Stimulator}
 		{nomap} {1}
 		{pickup} {1}
+{type} {artifact}
 	}
 };
-#VAR {_item[^Platinum Lace Circlet$]}
+#VAR {_item[global][^Platinum Lace Circlet$]}
 {
 	@fFormatItemData{
 		{_area} {global}
@@ -238,9 +263,10 @@
 		{name} {Platinum Lace Circlet}
 		{nomap} {1}
 		{pickup} {1}
+{type} {artifact}
 	}
 };
-#VAR {_item[^Heart of Malykkar$]}
+#VAR {_item[global][^Heart of Malykkar$]}
 {
 	@fFormatItemData{
 		{_area} {global}
@@ -260,9 +286,10 @@
 		{name} {Heart of Malykkar}
 		{nomap} {1}
 		{pickup} {1}
+{type} {artifact}
 	}
 };
-#VAR {_item[^adhesive computer chip$]}
+#VAR {_item[global][^adhesive computer chip$]}
 {
 	@fFormatItemData{
 		{_area} {global}
@@ -279,9 +306,10 @@
 		{name} {adhesive computer chip}
 		{nomap} {1}
 		{pickup} {1}
+{type} {artifact}
 	}
 };
-#VAR {_item[^A Work Order$]}
+#VAR {_item[global][^A Work Order$]}
 {
 	@fFormatItemData{
 		{_area} {global}
@@ -299,9 +327,10 @@
 		{name} {A Work Order}
 		{nomap} {1}
 		{pickup} {1}
+{type} {artifact}
 	}
 };
-#VAR {_item{^Emission Gem$}}
+#VAR {_item[global][^Emission Gem$]}
 {
 	@fFormatItemData{
         {_area} {global}
@@ -321,9 +350,10 @@
         {name} {Emission Gem}
         {nomap} {1}
         {pickup} {1}
+{type} {artifact}
     }
 };
-#VAR {_item{^large dark leather flask$}} 
+#VAR {_item[global][^large dark leather flask$]} 
 {
     @fFormatItemData{
         {_area} {global}
@@ -340,5 +370,6 @@
         {name} {large dark leather flask}
         {nomap} {1}
         {pickup} {1}
+{type} {artifact}
     }
 };

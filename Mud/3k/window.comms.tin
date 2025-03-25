@@ -1,7 +1,7 @@
 #ALIAS {.handler_window_comms}
 {
   #LOCAL {_hWC} {%2};
-  .WindowAppend {messages} {$_hWC[1] $_hWC[5]};
+  .WindowAppend {messages} {<139>$_hWC[1]<099> $_hWC[5]};
   .WindowRefresh;
 };
 .WindowCreate {messages} {top};

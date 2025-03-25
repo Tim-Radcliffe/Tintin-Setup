@@ -26,6 +26,15 @@
   #RETURN {$result};
 };
 
+#NOP Return the absolute value of a number;
+#NOP @fAbs {number}
+#FUNCTION {fAbs}
+{
+    #LOCAL {result} {%1};
+    #MATH {result} {($result * $result) // 2};
+    #RETURN {$result};
+};
+
 #NOP Calculate the sum of an array of numbers;
 #FUNCTION {fSumArray}
 {

@@ -1,0 +1,8 @@
+#IF {@fIsNumber{$my[skills][Main][Penetration]}}
+{
+    #ACTION {You drive your attack past %*'s resistances!}
+    {
+        .record_frequency {SPECIAL HIT} {Penetration ($my[skills][Main][Penetration])} {$_combat[attacks][outgoing]} {outgoing attacks};
+        #LINE GAG
+    };
+};

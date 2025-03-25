@@ -9,6 +9,9 @@
 #NOP Incursus  [Ineo]
 #NOP -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
 
+#NOP Your armour grows cold and dead as the power of the Death Lord wanes.
+#NOP VIS down to 0
+
 #ALIAS {agnosco}
 {
     #SUBSTITUTE {Actus} {Level};
@@ -18,14 +21,33 @@
     #SUBSTITUTE {Desino} {Off};
     #SUBSTITUTE {Ineo} {On };
     #SUBSTITUTE {Tutaminis} {Tutaminis (Defence) };
-    #SUBSTITUTE {Vivifico} {Vivifico (Light)   };
+    #SUBSTITUTE {Vivifico} {Vivifico (Life)    };
     #SUBSTITUTE {Victus} {Victus (HP Regen)};
     #SUBSTITUTE {Praesentia} {Praesentia (SP Regen)};
     #SUBSTITUTE {Incursus} {Incursus (Attack)  };
-    #ACTION {^Actus:%s[%d]}
+    #CLASS {veneratus_agnosco} {ASSIGN} 
     {
-        #VAR {_Veneratus[actus]} {%%2};
-        #UNACTION {^Actus:%s[%d]};
+        #ACTION {^Actus:%s[%d]}
+        {
+            #VAR {_Veneratus[actus]} {%%2};
+        };
+        #ACTION {^Incursus%s\[}
+        {
+            #DELAY {0.5} {
+                #UNSUBSTITUTE {Actus};
+                #UNSUBSTITUTE {Proximus};
+                #UNSUBSTITUTE {Vis};
+                #UNSUBSTITUTE {Loricatus};
+                #UNSUBSTITUTE {Desino};
+                #UNSUBSTITUTE {Ineo};
+                #UNSUBSTITUTE {Tutaminis};
+                #UNSUBSTITUTE {Vivifico};
+                #UNSUBSTITUTE {Victus};
+                #UNSUBSTITUTE {Praesentia};
+                #UNSUBSTITUTE {Incursus};   
+                #CLASS {veneratus_agnosco} {KILL};
+            };
+        };
     };
     #SEND {!agnosco};
 };

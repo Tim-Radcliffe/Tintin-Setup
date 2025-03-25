@@ -17,7 +17,7 @@ auto {add} {call} {} {e_combat} {};
     {
         #IF {@fEval{$my[necromancer][power][corrode] > 0} || @fEval{$my[necromancer][tier] >= 3}} 
         {
-            #SEND {!corrode};
+           corrode;
         };
     };
 };
@@ -31,12 +31,15 @@ auto {add} {corrode} {} {e_combat} {};
     {
         #IF {@fEval{$my[necromancer][power][psibleed] > 0} || @fEval{$my[necromancer][tier] >= 3}} 
         {
-            #SEND {!psibleed};
+            #IF {"$opponent[psibleed]" != "1"}
+            {
+                psibleed;
+            };
         };
     };
 
 };
-auto {add} {psibleed} {} {e_combat} {};
+auto {add} {psibleed} {} {e_combat_round} {};
 
 /* Psibleed your opponent automatically */
 #ALIAS {handler_auto_shackle}
@@ -79,7 +82,7 @@ auto {add} {contribute} {} {e_pickup;e_combat_round} {};
 #ALIAS {handler_auto_spfuse}
 {
     #NOP %1;
-    #VAR {_necSP[Diff]} {@fEval{($my[sp][max]+0.00-($my[sp][max]-$my[sp][current]))/$my[sp][max]}};
+    #LOCAL {_necSP[Diff]} {@fEval{($my[sp][max]+0.00-($my[sp][max]-$my[sp][current]))/$my[sp][max]}};
     #IF {$_necSP[Diff] < 0.75 && $my[necromancer][spfuse][current] > 0} 
     {
         #SEND {!spfuse $my[necromancer][spfuse][current]};
@@ -109,25 +112,12 @@ auto {add} {protection} {} {e_combat_round} {};
 #ALIAS {handler_auto_veil}
 {
     #NOP %1;
-#NOP Veil now works for non-undead (just less effective)
-#NOP     #IF {"$_npc[%2][undead]" == "1" && "$my[necromancer][veil]" != "ON"}
-#NOP     {
-#NOP         #SEND {!veil invoke};
-#NOP         #VAR {my[necromancer][veil]} {ON};
-#NOP     };
-#NOP     #ELSEIF {"$_npc[%2][undead]" != "1" && "$my[necromancer][veil]" == "ON"}
-#NOP     {
-#NOP         #SEND {!veil disperse};
-#NOP         #VAR {my[necromancer][veil]} {OFF};
-#NOP     };
-
     #IF {"$my[necromancer][veil]" != "ON"}
     {
-        #SEND {!veil invoke};
-        #VAR {my[necromancer][veil]} {ON};
+        veil invoke;
     };
 };
-auto {add} {veil} {} {e_combat} {};
+auto {add} {veil} {} {e_combat;e_combat_round;} {};
 
 /* Automatically fire glamors */
 #ALIAS {handler_auto_glamor}
@@ -139,11 +129,11 @@ auto {add} {veil} {} {e_combat} {};
     {
         #IF {"$my[necromancer][glamors][command]" != ""}
         {
-            #SEND {!$my[necromancer][glamors][command]};
+            $my[necromancer][glamors][command];
         };
         #ELSE
         {
-            #ECHO {AUTO GLAMOR WARNING: my[necromancer][glamors][command not set};
+            #ECHO {AUTO GLAMOR WARNING: my[necromancer][glamors][command] not set};
         };
     };
 };

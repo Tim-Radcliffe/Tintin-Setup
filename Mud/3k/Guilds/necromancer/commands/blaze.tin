@@ -1,0 +1,39 @@
+#ALIAS {blaze}
+{
+    
+    #CLASS {necromancer_blaze} {ASSIGN}
+    {
+        #GAG {^Blazing hellfire scorches your enemy to a cinder!$};
+        #GAG {^Blazing magic sears gaping wounds into your foe!$};
+        #GAG {^Gore splatters your face as you attack with demonic fury!$};
+        #GAG {^Hellfire explodes from your fingertips!$};
+        #GAG {^Hellfire leaps from your outstretched hands and scorches your foe!};            
+        #GAG {^Infernal fire scorches the flesh off your foe!$};
+        #GAG {^Laughing mercilessly, you cripple your enemy!$};
+        #GAG {^Liquid fire envelopes your opponent and consumes their very soul!$};
+        #GAG {^Liquid heat flows from your body, boiling your enemy alive!$};
+        #GAG {^The realm cringes as you land a devastating blow!$};
+        #GAG {^You burn the eyes from your enemy's sockets in blazing fury!$};
+        #GAG {^You bury your skeletal talons into your enemy's flesh!$};
+        #GAG {^You call the fires of hell into your soul!$};
+        #GAG {^You call upon Silthos to shorten your foe's life!$};
+        #GAG {^You clutch your foe in your talons and drain their life away!$};
+        #GAG {^You devastate your opponent with hell-driven fury!$};
+        #GAG {^You devastate your enemy with the fury of death!$};
+        #GAG {^You dismember your foe with inhuman accuracy!$};
+        #GAG {^You explode upon your enemy with demonic fury!$};
+        #GAG {^You rake a skeletal claw across the face of your foe!$};
+        #GAG {^You strangle your foe with your skeletal hands!$};
+        #GAG {^You strike with supernatural fury!$};        
+        #GAG {^You stun your enemy with the strength granted you by Silthos!$};
+        #GAG {^You viciously tear at your opponent's eyes!};
+
+        #GAG {^Red flames of hellfire flicker along %* body.$};
+
+        #ACTION {^The hellfire blazing fades from your soul.}
+        {
+            #CLASS {necromancer_blaze} {KILL};
+        };
+    };
+    #SEND {!blaze};
+};

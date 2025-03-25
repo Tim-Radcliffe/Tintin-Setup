@@ -1,0 +1,72 @@
+#ALIAS {veil}
+{
+    #SWITCH {"%1"}
+    {
+        #CASE {"invoke"}
+        {
+            #CLASS {necromancer_veil} {ASSIGN}
+            {
+                #ACTION {^Your veil of darkness completely negates the undead creature's attack!!$} 
+                {
+                    handler_veil {1};
+                };
+                #ACTION {^/-= DEFLECT =-/$} 
+                {
+                    handler_veil {1};
+                };
+                #ACTION {^The veil of darkness helps protect you from the abomination.$}
+                {
+                    handler_veil {1};
+                };
+                #ACTION {^The shadowy powers of the veil partially deflect the assault.$}
+                {
+                    handler_veil;
+                };            
+                #ACTION {^You remain protected by the veil of darkness.$}
+                {
+                    handler_veil;
+                };  
+                #ACTION {^The veil of darkness protects you.$}
+                {
+                    handler_veil;
+                };  
+                #ACTION {^The shadowed veil protects you against the fiend.$}
+                {
+                    handler_veil;
+                };  
+                #ACTION {^The darkened veil absorbs part of the blow.$}
+                {
+                    handler_veil;
+                };  
+                #ACTION {^The creature battles against the veil of darkness.$}
+                {
+                    handler_veil;
+                };              
+            };
+            #VAR {my[necromancer][veil]} {ON};
+        };
+        #CASE {"disperse"}
+        {
+            #VAR {my[necromancer][veil]} {OFF};
+            #CLASS {necromancer_veil} {KILL};
+        };
+        #DEFAULT
+        {
+            
+        };
+    }
+    #SEND {!veil %1};
+};
+
+#ALIAS {handler_veil}
+{
+    #NOP %1;
+    #IF {"$opponent[data][undead]" == "1"} {#LOCAL {_hVeil[title]} {Necromancer Veil vs Undead}};
+    #ELSE {#LOCAL {_hVeil[title]} {Necromancer Veil vs Living}};
+
+    #IF {"%1" == "1"} {#LOCAL {_hVeil[type]} {BLOCK}};
+    #ELSE {#LOCAL {_hVeil[type]} {DAMAGE REDUCTION}};
+
+    .record_frequency {$_hVeil[type]} {$_hVeil[title]} {$_combat[attacks][incoming]} {incoming attacks};
+    #IF {"$auto[necrogag][status]" == "1"} {#LINE GAG;};
+};

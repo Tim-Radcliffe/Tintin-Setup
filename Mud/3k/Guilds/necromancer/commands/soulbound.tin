@@ -1,0 +1,35 @@
+#NOP You merge your thoughts with the guild to see within your soul...
+#NOP 
+#NOP  ( 1}`.(divine)`.,_.{< Wyvern
+#NOP  ( 2}`.(divine)`.,_.{< Faerie Lizard
+#NOP  ( 3}`.(divine)`.,_.{< Zombie
+#NOP  ( 4}`.(divine)`.,_.{< Zombie
+#NOP  ( 5}`.(divine)`.,_.{< Zombie
+#NOP  ( 6}`.(divine)`.,_.{< a giant protruding forehead
+#NOP  ( 7}`.(divine)`.,_.{< Zombie;
+
+#ALIAS {soulbound}
+{
+    #CLASS {necromancer_soulbound} ASSIGN
+    {
+        #ACTION {{^ \(\s*(\d+).*\((.*)\).*< (.*)$}}
+        {
+            #VAR {my[necromancer][soulbound]} {%%2};
+        };
+    };
+    event_oneshot e_prompt soulbound.tin {#NOP %%1;#CLASS {necromancer_soulbound} KILL;};
+    #SEND {!soulbound %0};
+};
+
+#ALIAS {handler_necro_soulbound}
+{
+    #NOP %1;
+    #IF {$my[necromancer][soulbound] < 10}
+    {
+        #MATH {my[necromancer][soulbound]} {$my[necromancer][soulbound] + 1}
+    };
+};
+
+#IF {!@fIsNumber{$my[necromancer][soulbound]}} {#VAR {my[necromancer][soulbound]} {0}};
+
+event_register {e_killed_opponent} {soulbound.tin} {handler_necro_soulbound};

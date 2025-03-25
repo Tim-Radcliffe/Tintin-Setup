@@ -1,0 +1,11 @@
+#ACTION {^The bracers flare, and the attack misses you!$}
+{
+    .record_frequency {BLOCK} {Bracers of the Spirit} {$_combat[attacks][incoming]} {incoming attacks};
+    #LINE GAG;
+};
+
+#ACTION {^Your shield blocks %*'s attack!}
+{
+    .record_frequency {BLOCK} {Shield of the Spirit} {$_combat[attacks][incoming]} {incoming attacks};
+    #LINE GAG;    
+};

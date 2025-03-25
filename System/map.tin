@@ -76,19 +76,6 @@
     }
 };
 
-.file load {$path[areas]/area.item.index.tin};
-.file load {$path[areas]/area.npc.index.tin};
-
-#EVENT {VARIABLE UPDATED _area_item_index}
-{
-    #CLASS {$path[areas]/area.item.index.tin} {WRITE} {$path[areas]/area.item.index.tin};
-};
-
-#EVENT {VARIABLE UPDATED _area_npc_index}
-{
-    #CLASS {$path[areas]/area.npc.index.tin} {WRITE} {$path[areas]/area.npc.index.tin};
-};
-
 #EVENT {MAP ENTER MAP}
 {
     #MAP FLAG STATIC ON;
@@ -216,82 +203,6 @@
             #MAP GOTO %2;
         };
         #UNVAR {_mL};
-    };
-};
-
-/* Set a variable in the map area specific data file */
-#ALIAS {.mapVariable}
-{
-    #NOP %1;
-    #IF {"%1" == ""}
-    {
-            #ECHO {You must define an action (add/load/unload)};
-            #RETURN;
-    };
-    #SWITCH {"%1"}
-    {
-        #CASE {"add"}
-        {
-            #IF {"$map[file]" == ""}
-            {
-                    #ECHO {Map not loaded};
-                    #RETURN;
-            };            
-            #IF {"%2" == ""}
-            {
-                #ECHO {You must define a variable name};
-                #RETURN;
-            };
-            #IF {"%3" == ""}
-            {
-                #ECHO {You must define a subvariable name};
-                #RETURN;
-            };
-
-            #CLASS {$path[areas]/$map[area][path]/$map[area][name].data.tin} {ASSIGN}
-            {
-                #VAR {_mapVariable[%2][%3]} {%4};
-                #VAR {_mapVariable[%2][%3][_area]} {$map[area][path]};
-            };
-            #CLASS {$path[areas]/$map[area][path]/$map[area][name].data.tin} {WRITE} {$path[areas]/$map[area][path]/$map[area][name].data.tin};
-            #VAR {%2[%3]} {%4};
-            #VAR {%2[%3][_area]} {$map[area][path]};
-        };
-        #CASE {"load"}
-        {
-            #IF {"$map[file]" == ""}
-            {
-                    #ECHO {Map not loaded};
-                    #RETURN;
-            };            
-            #FOREACH {*_mapVariable[]} {v}
-            {
-                #CAT {${v}} {$_mapVariable[$v]};
-            };
-        };
-        #CASE {"unload"}
-        {
-            #FOREACH {*_mapVariable[]} {t}
-            {
-#NOP                 #FOREACH {*_mapVariable[$t][]} {v}
-#NOP                 {
-#NOP                     #IF {"${t}[${v}][_area]" == "global"}
-#NOP                     {
-#NOP                         #UNVAR {${t}[${v}][location]};
-#NOP                     };
-#NOP                     #ELSE
-#NOP                     {
-#NOP                         #UNVAR {${t}[${v}]};
-#NOP                     };
-#NOP                 };
-                .debug MAP {Unloading map variables: $t : $map[area][path]};
-
-                #LIST {$t} INDEXATE {_area};
-#NOP                #LIST {$t} FILTER {} {$map[area][path]};
-                #LIST {$t} FILTER {global};
-            };
-            #UNVAR {_mapVariable};
-        };
     };
 };
 

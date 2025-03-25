@@ -29,21 +29,24 @@
 	#REPLACE {_HRC[tokenized][4]} {/} {;};
 	#REPLACE {_HRC[tokenized][4]} {#N} {$_HRC[tokenized][2]};
 	#LIST {_HRC[item][actions]} CREATE {$_HRC[tokenized][4]};
-	#LIST {room[contents][$_HRC[tokenized][1]]} ADD {{$_HRC[item]}};
 	#SWITCH {"${_HRC[tokenized][1]}"}
 	{
 		#CASE {"npc"}
 		{
-            #LOCAL {_HRC[item][regexp]} {@fGetNPCRegex{$_HRC[item][name]}};
-			#LOCAL {_HRC[item][data]} {$_npc[$_HRC[item][regexp]]};
+            #REGEXP {$_HRC[item][name]} {{^(.+?)(\s\<[.?*!^]+\>)?(\(demoralized\))?(\s\[(scratched|wounded|dying)\])?(\sattacking you!)?$}}
+            {
+                #VAR {_HRC[item][name]} {&2};                
+            };  
+			#LOCAL {_HRC[item][data]} {@fGetMapData{{_npc}{$_HRC[item][name]}}};
 		};
 		#CASE {"item"}
 		{
-            #LOCAL {_HRC[item][regexp]} {@fGetItemRegex{$_HRC[item][name]}};
-			#LOCAL {_HRC[item][data]} {$_item[$_HRC[item][regexp]]};
-		};
+            #LOCAL {_HRC[item][data]} {@fGetMapData{{_item}{$_HRC[item][name]}}};
+ 		};
 	};
-	event_raise e_room_${_HRC[tokenized][1]} {$_HRC[item][id]} {$_HRC[item][name]} {$_HRC[item][actions]} {$_HRC[item][data]} {$_HRC[item][regexp]};
+	#LIST {room[contents][$_HRC[tokenized][1]]} ADD {{$_HRC[item]}};
+    #LIST {room[contents][$_HRC[tokenized][1]]} SIZE {_HRC[itemnum]};
+    event_raise e_room_${_HRC[tokenized][1]} {$_HRC[item][id]} {$_HRC[item][name]} {$_HRC[item][actions]} {$_HRC[item][data]} {$_HRC[item][data][regexp]} {room[contents][$_HRC[tokenized][1]][$_HRC[itemnum]]};
 };
 event_register e_mip_HAA h_room_contents handler_room_contents;
 event_register e_mip_HAB h_room_contents handler_room_contents;
@@ -70,7 +73,7 @@ event_register e_mip_HAB h_room_contents handler_room_contents;
 		#IF {!@fLocked{room.%*}}
 		{
 			.debug SCAN {Finished};
-			event_raise e_roomscan_finished;
+            event_raise e_roomscan_finished;			
 		};
 		#ELSE 
 		{
@@ -79,8 +82,9 @@ event_register e_mip_HAB h_room_contents handler_room_contents;
                 #NOP %%1;
 				#IF {!%@fLocked{room.%*}} 
                 {
+                    event_remove_specific {e_lock_removed} {scan.room.tin};
                     .debug SCAN {Lock Removed};
-                    #SEND {!glance}
+                    event_raise e_roomscan_finished;
                 };
 			};
 		};

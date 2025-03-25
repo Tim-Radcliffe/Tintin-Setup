@@ -1,0 +1,32 @@
+#ALIAS {skills}
+{
+    #NOP %1;
+    #CLASS {command_skills} ASSIGN
+    {
+        #VAR {_skills[category]} {Main};
+        #ACTION {{^\s\*\*\s+Available Skills: (.*?)\s+\*\*$}}
+        {
+            #VAR {_skills[category]} {%%2};
+        } {2};
+        #ACTION {{\s+(.*?)\s+: (\d+)\/(\d+)}}
+        {
+            #IF {"%%2" != ""}
+            {
+                #IF {"%%3" != "0"}
+                {
+                    #VAR {my[skills][$_skills[category]][%%2]} {%%3}; 
+                }
+                #ELSE 
+                {
+                    #UNVAR {my[skills][$_skills[category]][%%2]};    
+                };
+
+                #IF {"%%2" == "Vigor"}
+                {
+                    #CLASS {command_skills} KILL;
+                };
+            };
+        } {2};
+    };
+    #SEND {!skills %0};
+};

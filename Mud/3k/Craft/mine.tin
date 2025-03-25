@@ -59,7 +59,7 @@
 auto add {mine}
 {
     .file load {$path[craft]/mine.tin};
-    #VAR {_item[A {copper|bronze|iron|steel|silver|gold|mithril|titanium|ebon|adamantium|obsidian|nethernium|voidstone|phasemetal|chaostone} ore deposit]}
+    #VAR {_item[global][A {copper|bronze|iron|steel|silver|gold|mithril|titanium|ebon|adamantium|obsidian|nethernium|voidstone|phasemetal|chaostone} ore deposit]}
     {
         {_area} {global}        
         {nomap} {1}
@@ -68,7 +68,7 @@ auto add {mine}
 }
 {e_roomscan_end}
 {
-    #UNVAR {_item[A {copper|bronze|iron|steel|silver|gold|mithril|titanium|ebon|adamantium|obsidian|nethernium|voidstone|phasemetal|chaostone} ore deposit]};
+    #UNVAR {_item[global][A {copper|bronze|iron|steel|silver|gold|mithril|titanium|ebon|adamantium|obsidian|nethernium|voidstone|phasemetal|chaostone} ore deposit]};
     handler_auto_mine_end;
     #CLASS {$path[craft]/mine.tin} {kill};
 };

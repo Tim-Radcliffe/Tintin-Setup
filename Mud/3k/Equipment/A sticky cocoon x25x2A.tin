@@ -14,5 +14,10 @@
 };
 event_register {e_combat_round} {$path[equipment]/A sticky cocoon.tin} {handler_cocoon};
 
-#GAG {The sticky cocoon absorbs part of the attack!};
-#GAG {The cocoon fuses with the attack and grows stronger!};
+#ACTION {^The sticky cocoon absorbs part of the attack!$}
+{
+    .record_frequency {DAMAGE REDUCTION} {A sticky cocoon} {$_combat[attacks][incoming]} {incoming attacks};
+    #LINE GAG;
+};
+#GAG {^The cocoon fuses with the attack and grows stronger!$};
+#GAG {^You sacrifice some of your health to make the cocoon stronger!$};

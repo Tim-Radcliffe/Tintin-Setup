@@ -3,7 +3,7 @@
     #NOP %1;
     #IF {"%2" != ""}
     {
-        #IF {"$_npc[%2][alignment]" == ""}
+        #IF {&%2[alignment] == 0}
         {
             #CLASS {cNecromancerAlignment%5} {open};
             #VAR {_alignments} {{hellish evilness}{-4}{extreme evil}{-3}{evil}{-2}{weak evil}{-1}
@@ -14,12 +14,12 @@
                 #LOCAL {string} {};
                 #FORMAT {string} {%l} {%%2};
                 #LOCAL {match} {};
-                #FORMAT {match} {%l} {%2};
+                #FORMAT {match} {%l} {%6};
                 .debug {GUILD} {GUILD: Detect Alignment: $string : $match};
                 #REGEXP {$string} {{$match}} 
                 {
-                    #VAR {_npc[%2][alignment]} {$_alignments[%%3]};
-                    .scanRoomNPCSave {%2};                      
+                    #VAR {%2[alignment]} {$_alignments[%%3]};
+                    .scanRoomNPCSave {%6};                      
                 };             
             } {3};
 

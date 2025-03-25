@@ -1,23 +1,23 @@
-#DELAY {2} 
-{
-    #VAR {_item[([\(\[])([\-\|\*]{5})[\)\]]\s.*$]} 
-    {
-        @fFormatItemData{
-            {_area} {global}
-            {desc}
-            {
-                {1} {A corpse specially preserved to last}
-                {2} {longer than a normal, untreated one would.}
-                {3} {It doesn't look too heavy.}
-            }
-            {id} {preservation}
-            {name} {preservation}
-            {global} {1}
-            {pickup} {.corpse get}
-            {nomap} {1}
-        }
-    };
-};
+#NOP #DELAY {2} 
+#NOP {
+#NOP     #VAR {_item[global][([\(\[])([\-\|\*]{5})[\)\]]\s.*$]} 
+#NOP     {
+#NOP         @fFormatItemData{
+#NOP             {_area} {global}
+#NOP             {desc}
+#NOP             {
+#NOP                 {1} {A corpse specially preserved to last}
+#NOP                 {2} {longer than a normal, untreated one would.}
+#NOP                 {3} {It doesn't look too heavy.}
+#NOP             }
+#NOP             {id} {preservation}
+#NOP             {name} {preservation}
+#NOP             {global} {1}
+#NOP             {pickup} {.corpse get}
+#NOP             {nomap} {1}
+#NOP         }
+#NOP     };
+#NOP };
 
 #ALIAS {.cs_held_get}     {#SEND {!get preservation %1};#SEND {!keep preservation};};
 #ALIAS {.cs_held_drop}    {#SEND {!drop preservation %1};};
@@ -72,7 +72,7 @@
                     .AbsorbCorpse ground;
                 };                
             };
-            #SEND {!glance};
+#NOP            #SEND {!glance}; 
 		};
 		#CASE {"retrieve"}
 		{
@@ -121,7 +121,7 @@ auto {add} {consecrate} {#ACTION {^  You are already at 100% consecration master
 	#NOP %1;
 	.corpse preserve;
 };
-auto {add} {preserve} {} {e_killed_opponent} {};
+auto {add} {preserve} {} {e_room_corpse} {};
 
 /* handler_corpse_move {from} {corpse index number} {to} */
 #ALIAS {handler_corpse_move}

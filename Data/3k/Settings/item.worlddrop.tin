@@ -1,4 +1,42 @@
-#VAR {_item[^Frosted helmet of Aylin$]}
+#VAR {_item[global][^Buckler of Eternia \x3CX\x3E$]}
+{
+    @fFormatItemData{    
+        {_area} {global}
+        {desc} 
+        {
+            {1} {Buckler of Eternia <X>}
+            {2} {You hold a shining buckler shield that appears to be formed from}
+            {3} {redsilver.  Among the rarest of all metals in existence, the}
+            {4} {indestructible redsilver is only found at the very deepest reaches of}
+            {5} {the great Chasm of Arehs.  Even when found, it takes a master}
+            {6} {blacksmith to form the metal into anything useful, much less something}
+            {7} {so beautiful as this.  Only the gods could have performed the acts}
+            {8} {necessary to bring an artifact such as this into the realm of}
+            {9} {existence.  Long and slender, with only a single-hammered star}
+            {10} {adorning the center and a long slit along the closer side, the}
+            {11} {entirety of the flawless shield gleams with an inner, crimson light. }
+            {12} {The buckler feels unbelievably dextrous in your grasp, yet even so,}
+            {13} {you notice something else about the slit.  Oddly enough, you can see}
+            {14} {right into the opening, as if your arm isn't even there.  Even more}
+            {15} {amazing, you can view an entire otherworldly space as well.  What an}
+            {16} {amazing relic indeed! The star at the center of the shield gleams with}
+            {17} {a ruby light.}
+            {18} {This item will bind to you when picked up.}
+            {19} {The shield is in perfect condition.}
+            {20} {It has a magical glow about it.}
+            {21} {This armor has the following resistances:}
+            {22} {very impressive edged, very impressive blunt, very impressive fire, very}
+            {23} {impressive ice, very impressive acid}
+            {24} {You must be level 17 to wear this.}
+            {25} {It looks light.}
+        }
+        {id} {Buckler of Eternia}
+        {name} {Buckler of Eternia <X>}
+        {nomap} {1}
+        {pickup} {1}
+    }
+};
+#VAR {_item[global][^Frosted helmet of Aylin$]}
 {
     @fFormatItemData{
         {_area} {global}
@@ -20,6 +58,55 @@
         }
         {id} {helmet}
         {name} {Frosted helmet of Aylin}
+        {nomap} {1}
+        {pickup} {1}
+    }
+};
+#VAR {_item[global][^Shimmering cloak of Aylin$]} 
+{
+    @fFormatItemData{
+        {_area} {global}
+        {desc} 
+        {
+            {1} {Shimmering cloak of Aylin}
+            {2} {This strikingly elegant cloak shimmers with an icy blue glow.  Rumor has it that this cloak was worn by Aylin and is imbued with elemental power.  It is so soft to the touch, you want to rub it against your skin.}
+            {3} {This item will bind to you when equipped.}
+            {4} {The cloak is in perfect condition.}
+            {5} {It has a magical glow about it.}
+            {6} {This armor has the following resistances:}
+            {7} {impressive edged, impressive blunt, impressive ice, impressive electric,}
+            {8} {very good energy, very good radiation}
+            {9} {You must be level 17 to wear this.}
+            {10} {It doesn't look too heavy.}
+        }
+        {id} {cloak}
+        {name} {Shimmering cloak of Aylin}
+        {nomap} {1}
+        {pickup} {1}
+    }
+}
+#VAR {_item[global][^Thundering$]}
+{
+    @fFormatItemData{     
+        {_area} {global}
+        {desc} 
+        {
+            {1} {Thundering}
+            {2} {You see a delicate silver ring attached to a small silver disc by what}
+            {3} {appears to be a delicate chain of platinum.  Looking closely, you can}
+            {4} {see small, needle-like protrusions on one side of the disc.  You feel}
+            {5} {shivers run up and down your spine just from holding the item.}
+            {6} {This item is bound to you.}
+            {7} {You will enter the game with this item up through boot #2027.}
+            {8} {The ring is in perfect condition.}
+            {9} {It has a magical glow about it.}
+            {10} {This armor has the following resistances:}
+            {11} {good edged, good blunt, very good electric, very good radiation}
+            {12} {You must be level 55 to wear this.}
+            {13} {It looks light.}
+        }
+        {id} {Thundering}
+        {name} {Thundering}
         {nomap} {1}
         {pickup} {1}
     }

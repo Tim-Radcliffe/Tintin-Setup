@@ -1,0 +1,8 @@
+#ACTION {^Your form shimmers and becomes impenetrable.$}
+{
+    .record_frequency {BLOCK} {Eternals Immunity} {$_combat[round]} {combat rounds};
+    #LINE GAG;
+};
+
+#GAG {^The assault glances harmlessly off your aura.$};
+#GAG {^You have become grounded in this plane yet again.$};

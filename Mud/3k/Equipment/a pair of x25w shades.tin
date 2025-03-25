@@ -1,3 +1,9 @@
-#GAG {^A flare of light from your shades puts};
-#GAG {^Light flashes off your shades, briefly distracting};
-#GAG {%* is distracted by seeing %w reflection in your shades.};
+#NOP #GAG {^A flare of light from your shades puts};
+#NOP #GAG {^Light flashes off your shades, briefly distracting};
+#NOP #GAG {%* is distracted by seeing %w reflection in your shades.};
+
+#ACTION {{^A flare of light from your shades puts|^Light flashes off your shades, briefly distracting|.* is distracted by seeing .* reflection in your shades.}}
+{
+    .record_frequency {DAMAGE REDUCTION} *my[eq][%* shades] {$_combat[attacks][incoming]} {incoming attacks};
+    #LINE GAG;
+};

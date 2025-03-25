@@ -47,8 +47,8 @@
         #LOCAL {_lock_record} {};
         #FOREACH {*_lock[%1]} {_lock_record}
         {
+            .debug LOCK {Unlock: $_lock_record};    
             event_raise {e_lock_removed} {$_lock_record};
-            .debug LOCK {Unlock: $_lock_record};            
         };
         #UNVAR {_lock[%1]};
         .file write {$path[profile]/lock.tin};

@@ -20,14 +20,14 @@
 		};
 		#ELSEIF {"$room[current][autokill]" == "1"}
 		{
-			#LINE SUBSTITUTE VARIABLES {.RoomAddCommand {kill $room[current][id]} {9}};
-			.RoomAddCommand {handler_auto_kill_combat} {9};
+			#NOP #LINE SUBSTITUTE VARIABLES {.RoomAddCommand {kill $room[current][id]} {9}};
+			.RoomAddCommand {handler_auto_kill_combat {$room[current][id]}} {9};
 		};
 		#ELSE
 		{
 			#VAR {room[target][id]} {$room[current][id]};
 			#VAR {room[target][name]} {$room[current][name]};
-			event_register {e_roomscan_end} {auto.kill.tin} {handler_auto_kill_fire};
+			event_register {e_roomscan_finished} {auto.kill.tin} {handler_auto_kill_fire};
 		};
 	};
 };
@@ -61,23 +61,20 @@
 		event_raise {e_notify} {Autokill} {%1 [O]nce [S]kip [A]lways [N]ever};
 		#MACRO {o}
 		{
-			handler_auto_kill_combat;
-			kill %1;
+			handler_auto_kill_combat {%1};
 			handler_auto_kill_choice {};
 		};
 		#MACRO {\ea}
 		{
-			handler_auto_kill_combat;
-			kill %1;
+			handler_auto_kill_combat {%1};
 			handler_auto_kill_choice {};
 		};
 		#MACRO {a}
 		{
-			#LOCAL {_autoKillNPC} {@fGetNPCRegex{%2}};
-			#VAR {_npc[$_autoKillNPC][autokill]} {1};
-			.scanRoomNPCSave {$_autoKillNPC};
-			handler_auto_kill_combat;
-			kill %1;
+			#LOCAL {_autoKillNPC} {@fGetMapData{{_npc}{%2}}};
+			#VAR {${_autoKillNPC[path]}[autokill]} {1};
+			.scanRoomNPCSave {$_autoKillNPC[regexp]};
+			handler_auto_kill_combat {%1};
 			handler_auto_kill_choice {};
 		};
 		#MACRO {s}
@@ -86,9 +83,9 @@
 		};
 		#MACRO {n}
 		{
-			#LOCAL {_autoKillNPC} {@fGetNPCRegex{%2}};
-			#VAR {_npc[$_autoKillNPC][autokill]} {-1};
-			.scanRoomNPCSave {$_autoKillNPC};
+			#LOCAL {_autoKillNPC} {@fGetMapData{{_npc}{%2}}};
+			#VAR {${_autoKillNPC[path]}[autokill]} {-1};
+			.scanRoomNPCSave {$_autoKillNPC[regexp]};
 			handler_auto_kill_finish;
 		};
 		.Lock {room.autokill};
@@ -98,10 +95,20 @@
 #ALIAS {handler_auto_kill_combat}
 {
 	#NOP %1;
-	.Lock {room.autokill};
-	handler_auto_kill_choice {};
-	#UNVAR {room[target]};
-	event_oneshot {e_combat_finished} {auto.kill.tin} {handler_auto_kill_finish};
+	#IF {!@fLocked{room.autokill}}
+	{
+	    .Lock {room.autokill};
+	    handler_auto_kill_choice {};
+	    #UNVAR {room[target]};
+        #SEND {!kill %1};    
+	    event_oneshot {e_combat_finished} {auto.kill.tin} {handler_auto_kill_roomscan};
+    };
+};
+
+#ALIAS {handler_auto_kill_roomscan}
+{
+    #NOP %1;
+    event_oneshot {e_roomscan_end} {auto.kill.tin} {handler_auto_kill_finish};  
 };
 
 #ALIAS {handler_auto_kill_finish}

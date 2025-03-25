@@ -14,11 +14,11 @@ CROOMS <178>
 CSYMBOLS <128>
 CUSER <139>
 
-F 1048587
+F 1048586
 
 G 0
 
-I 21
+I 68
 
 L {ASCII NESW LINE} {NO EXITS} {x}
 L {ASCII NESW LINE} {N} {o}
@@ -529,7 +529,7 @@ E {9}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {63}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {146}{count 123}{.mapLink {Pinnacle/Chaos/Sesame Street} {} {count 123};}{0}{1}{}{1.000}{}{0.00}
 
-R {63}{0}{<068>}{Wickland Street}{ }{Wickland Street continues merrily along, now winding through what appears to be a bamboo forest. A thick one at that! The trees of the forest are so thick on each side of the street that they almost run right up against the curbs.}{Mud}{{content}{{item}{{^A Mahjongg tile$}{{name}{A Mahjongg tile}}}{noun}{{bamboo}{{name}{bamboo}}{forest}{{name}{forest}}{street}{{name}{street}}{trees}{{name}{trees}}}}}{}{}{1.000}{}
+R {63}{0}{<068>}{Wickland Street}{ }{Wickland Street continues merrily along, now winding through what appears to be a bamboo forest. A thick one at that! The trees of the forest are so thick on each side of the street that they almost run right up against the curbs.}{Mud}{{content}{{item}{{}{{name}{A Mahjongg tile}}{^A Mahjongg tile$}{{name}{A Mahjongg tile}}}{noun}{{bamboo}{{name}{bamboo}}{forest}{{name}{forest}}{street}{{name}{street}}{trees}{{name}{trees}}}}}{}{}{1.000}{}
 E {62}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {68}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {147}{draw tile}{.mapLink {Pinnacle/Chaos/Mahjongg} {} {draw tile};}{0}{1}{}{1.000}{}{0.00}
@@ -554,8 +554,9 @@ E {151}{enter store}{.mapLink {Pinnacle/Chaos/Chaos Candy Store} {} {enter store
 R {67}{0}{<000>}{LINK: Pinnacle/Chaos/Waldo's House}{<138>*}{}{Pinnacle/Chaos/Waldo's House}{{link}{}}{}{}{1.000}{}
 E {65}{w}{w}{8}{0}{}{1.000}{}{0.00}
 
-R {68}{0}{<178>}{Wickwood Forest}{ }{The ground underfoot is hard-packed dirt and a multitude of strange trees surrounds you. You recognize a few varieties such as bamboo and palm, but what are these others? Some of the wood is bright red, others are purple, and some of these 'trees' actually appear to be giant Q-tips!}{Mud}{{content}{{noun}{{bamboo}{{name}{bamboo}}{dirt}{{name}{dirt}}{ground}{{name}{ground}}{others}{{name}{others}}{trees}{{name}{trees}}{varieties}{{name}{varieties}}{wood}{{name}{wood}}}}}{}{}{1.000}{}
+R {68}{0}{<068>}{Wickwood Forest}{ }{The ground underfoot is hard-packed dirt and a multitude of strange trees surrounds you. You recognize a few varieties such as bamboo and palm, but what are these others? Some of the wood is bright red, others are purple, and some of these 'trees' actually appear to be giant Q-tips!}{Mud}{{content}{{item}{{}{{name}{Hiking stick}}}{noun}{{bamboo}{{name}{bamboo}}{dirt}{{name}{dirt}}{ground}{{name}{ground}}{others}{{name}{others}}{trees}{{name}{trees}}{varieties}{{name}{varieties}}{wood}{{name}{wood}}}{npc}{{global}{{name}{Prospero the Valithyn}}}}}{}{}{1.000}{}
 E {63}{n}{n}{1}{0}{}{1.000}{}{0.00}
+E {203}{grasp stick}{.mapLink {Pinnacle/Chaos/Stonemaze Pass} {} {grasp stick};}{0}{1}{}{1.000}{}{0.00}
 
 R {69}{0}{<000>}{LINK: Pinnacle/Chaos/Barney's Studio}{<138>*}{}{Pinnacle/Chaos/Barney's Studio}{{link}{}}{}{}{1.000}{}
 E {59}{n}{n}{1}{0}{}{1.000}{}{0.00}
@@ -991,3 +992,5 @@ R {200}{0}{<000>}{LINK: Pinnacle/Chaos/Dundee Poachers}{<138>*}{}{Pinnacle/Chaos
 R {201}{0}{<000>}{LINK: Pinnacle/Chaos/The Ten Commandments}{<138>*}{}{Pinnacle/Chaos/The Ten Commandments}{{content}{{item}{{^A Chocolate Cake$}{{name}{A Chocolate Cake}}{^A HUGE refrigerator$}{{name}{A HUGE refrigerator}}{^A Hockey Ticket$}{{name}{A Hockey Ticket}}{^A Pumpkin$}{{name}{A Pumpkin}}{^A banana peel$}{{name}{A banana peel}}{^A big BLACK and WHITE inflatable cow$}{{name}{A big BLACK and WHITE inflatable cow}}{^A giant faucet$}{{name}{A giant faucet}}{^A rusty ship anchor$}{{name}{A rusty ship anchor}}{^A shiny new postcard rack$}{{name}{A shiny new postcard rack}}{^A velvet rope$}{{name}{A velvet rope}}{^A velvet witch hat$}{{name}{A velvet witch hat}}{^The Good Humor, Ice Cream Truck$}{{name}{The Good Humor, Ice Cream Truck}}}{noun}{{area}{{name}{area}}{branches}{{name}{branches}}{broccoli}{{name}{broccoli}}{buildings}{{name}{buildings}}{bunches}{{name}{bunches}}{circle}{{name}{circle}}{city}{{name}{city}}{clouds}{{name}{clouds}}{farmland}{{name}{farmland}}{grass}{{name}{grass}}{ground}{{name}{ground}}{head}{{name}{head}}{herd}{{name}{herd}}{leaves}{{name}{leaves}}{mountain}{{name}{mountain}}{mountains}{{name}{mountains}}{ozone}{{name}{ozone}}{peanuts}{{name}{peanuts}}{plants}{{name}{plants}}{pole}{{name}{pole}}{poop}{{name}{poop}}{rope}{{name}{rope}}{skies}{{name}{skies}}{slide}{{name}{slide}}{stake}{{name}{stake}}{tang}{{name}{tang}}{totem}{{name}{totem}}{trail}{{name}{trail}}{trees}{{name}{trees}}{vines}{{name}{vines}}}{npc}{{^A Disoreinted Typo \x28Lost\x29$}{{name}{A Disoreinted Typo (Lost)}}{^An Old Man$}{{name}{An Old Man}}}}{link}{}}{}{}{1.000}{}
 
 R {202}{0}{<000>}{LINK: Pinnacle/Chaos/Tree of Life v2}{<138>*}{}{Pinnacle/Chaos/Tree of Life v2}{{content}{{item}{{^A swirling void$}{{name}{A swirling void}}{^Magic mushroom magically stuck in the ground$}{{name}{Magic mushroom magically stuck in the ground}}}{noun}{{sky}{{name}{sky}}}{npc}{{^villager$}{{name}{villager}}}}{link}{}}{}{}{1.000}{}
+
+R {203}{0}{<000>}{LINK: Pinnacle/Chaos/Stonemaze Pass}{<138>*}{}{Pinnacle/Chaos/Stonemaze Pass}{{content}{{item}{{}{{name}{Hiking stick}}}{noun}{{air}{{name}{air}}{bamboo}{{name}{bamboo}}{ceiling}{{name}{ceiling}}{dead-end}{{name}{dead-end}}{dirt}{{name}{dirt}}{exit}{{name}{exit}}{floor}{{name}{floor}}{ground}{{name}{ground}}{others}{{name}{others}}{trail}{{name}{trail}}{trees}{{name}{trees}}{varieties}{{name}{varieties}}{walls}{{name}{walls}}{wood}{{name}{wood}}}{npc}{{}{{name}{Spectral Guardian}}}}{link}{}}{}{}{1.000}{}

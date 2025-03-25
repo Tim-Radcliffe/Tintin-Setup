@@ -60,7 +60,7 @@
     #CASE {"FFF"} {#NOP Combined Stats Data;.aMipProcessFFF {%2};};
     #CASE {"HAA"} {#NOP Room Items;#VAR {mip[%1][data]} {@fMipTildaConv{$mip[%1][data]}};};
     #CASE {"HAB"} {#NOP Item Actions;#VAR {mip[%1][data]} {@fMipTildaConv{$mip[%1][data]}};};
-    #DEFAULT {#NOP Every other non-handled flag;};
+    #DEFAULT {#NOP Every other non-handled flag;.log {add} {mip_unknown.log} {%1 %2};};
   };
   event_raise {e_mip_%1} {$mip[%1][data]};
   #VAR {mip[last]} {%1}; 

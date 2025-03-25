@@ -1,0 +1,50 @@
+#IF {$my[necromancer][circle] >= 40}
+{
+    #ALIAS {unholy ground}
+    {
+        #CLASS {necromancer_unholy_ground} ASSIGN
+        {
+            #GAG {^%* is scorched by the dark energy surrounding %*!};
+            #GAG {^%* recoils in a shock from striking %*!$};
+            #GAG {^%* strikes %* and is dealt a blast of dark energy!$};
+            #GAG {^A black bolt of energy blasts into %*$};
+            #GAG {^An explosion of black energy engulfs %*!$};
+            #GAG {^Black lightning races along %*'s body into %*!$};
+            #GAG {^Cold, purple lightning crackles into %*'s body!$};
+            #GAG {^Cool black lightning scorches across %*'s body!$};
+            #GAG {^Dark energy crackles from %* to %*!$};
+            #GAG {^Deathly black energy sizzles through %*'s flesh!$};
+            #GAG {^Jet black bolts of dark lightning slam into %*!$};
+            #GAG {^Purple lightning arcs from %* to %*!$};
+            #ACTION {^Your grounding to the negative material plane dissipates in a sparkle.$}
+            {
+                #CLASS {necromancer_unholy_ground} KILL;
+            };
+        };
+        #VAR {my[necromancer][unholy ground][ready]} {0};
+        #SEND {!unholy ground %0}; 
+    };
+    
+    #ALIAS {handler_auto_unholyground}
+    {
+        #NOP %1;
+        #SWITCH {"%1"}
+        {
+            #CASE {"e_combat"}
+            {
+                #IF {$my[necromancer][unholy ground][ready]}
+                {
+                    unholy ground;
+                };
+            };
+            #CASE {"e_mip_FFF_G"}
+            {
+                #IF {"%2" == "0"}
+                {
+                    #VAR {my[necromancer][unholy ground][ready]} {1};
+                };
+            };
+        };
+    };
+    auto {add} {unholyground} {} {e_combat;e_mip_FFF_G} {};
+};

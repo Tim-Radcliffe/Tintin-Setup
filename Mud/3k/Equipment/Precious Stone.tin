@@ -1,0 +1,15 @@
+#NOP Precious Stone surrounds Zombie in a faint blue aura for a moment.
+
+#NOP Precious stone shimmers, and transforms the edge of its blade into a
+#NOP humming blade!
+
+#VAR {_dmg[table][edged][precious stone]}     {razine};   
+#VAR {_dmg[table][blunt][precious stone]}     {brutal};  
+#VAR {_dmg[table][ice][precious stone]}       {icey};     
+#VAR {_dmg[table][fire][precious stone]}      {flaming};  
+#VAR {_dmg[table][mind][precious stone]}      {humming}; 
+#VAR {_dmg[table][electric][precious stone]}  {crackling};
+#VAR {_dmg[table][acid][precious stone]}      {acidic}; 
+#VAR {_dmg[table][poison][precious stone]}    {poisonous};
+#VAR {_dmg[table][energy][precious stone]}    {glowing};  
+#VAR {_dmg[table][radiation][precious stone]} {radiant};  

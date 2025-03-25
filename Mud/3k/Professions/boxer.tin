@@ -1,1 +1,7 @@
-#GAG {^The blood rushes through your head!$};
+#GAG {^A rush of blood to your head prepares you from an incoming assault!$};
+#GAG {^The blood stops rushing through your head and you return to normal.$};
+#ACTION {^The blood rushes through your head!$}
+{
+    .record_frequency {DAMAGE REDUCTION} {Boxer} {$_combat[attacks][incoming]} {incoming attacks};
+    #LINE GAG;
+};

@@ -3,14 +3,14 @@
     #NOP %1;
     #IF {"%2" != ""}
 	{
-        #IF {"$_npc[%2][undead]" == ""}
+        #IF {"$%2[undead]" == ""}
         {
-            #VAR {_npc[%2][undead]} {0};
+            #VAR {%2[undead]} {0};
             #CLASS {cNecromancerDetectUndead%5} {open};
             #ACTION {%3 is undead...}
             {
-                #VAR {_npc[%2][undead]} {1};
-				.scanRoomNPCSave {%2};               
+                #VAR {%2[undead]} {1};
+				.scanRoomNPCSave {%6};               
             } {3};
             #ACTION {_necromancer.detect.undead.end.%5}
             {

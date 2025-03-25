@@ -14,11 +14,11 @@ CROOMS <178>
 CSYMBOLS <128>
 CUSER <139>
 
-F 1048587
+F 1048586
 
 G 0
 
-I 3
+I 118
 
 L {ASCII NESW LINE} {NO EXITS} {x}
 L {ASCII NESW LINE} {N} {o}
@@ -335,7 +335,7 @@ E {16}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {20}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {23}{w}{w}{8}{0}{}{1.000}{}{0.00}
 
-R {20}{0}{<178>}{Receiving room}{<138>?}{This is the receiving room for the Necromancers' Guild.  It is a main gathering point for necromancers so it is lavishly furnished for comfort.  The main guild board is here for your perusal and you can type 'restore' if you have problems with your guild object.}{Necs}{{Receiving Room}{}{content}{{item}{{^The Necromancers' Tapestry honoring Dracula$}{{name}{The Necromancers' Tapestry honoring Dracula}}{board}{{name}{The Necromancers' Board containing 359 messages (no unread messages)}}{containing \d+ messages}{{name}{The Necromancers' Board containing 364 messages (no unread messages)}}{tapestry}{{name}{The Necromancers' Tapestry honoring Dracula}}}{noun}{{arch}{{name}{arch}}{block}{{name}{block}}{claws}{{name}{claws}}{corridor}{{name}{corridor}}{keystone}{{name}{keystone}}{light}{{name}{light}}{orbs}{{name}{orbs}}{rune}{{name}{rune}}}{npc}{{Pennywise the Valithyn}{{name}{Pennywise the Valithyn}}}}}{}{}{1.000}{}
+R {20}{0}{<178>}{Corridor}{<138>?}{This is the receiving room for the Necromancers' Guild.  It is a main gathering point for necromancers so it is lavishly furnished for comfort.  The main guild board is here for your perusal and you can type 'restore' if you have problems with your guild object.}{Necs}{{Receiving Room}{}{content}{{item}{{^The Necromancers' Tapestry honoring Dracula$}{{name}{The Necromancers' Tapestry honoring Dracula}}{_item[Pinnacle/Fantasy/Necromancer Guild][^The Necromancers' Board containing 376 messages \x28no unread messages\x29$]}{{name}{The Necromancers' Board containing 376 messages (no unread messages)}}{_item[Pinnacle/Fantasy/Necromancer Guild][^The Necromancers' Tapestry honoring Dracula$]}{{name}{The Necromancers' Tapestry honoring Dracula}}{board}{{name}{The Necromancers' Board containing 359 messages (no unread messages)}}{containing \d+ messages}{{name}{The Necromancers' Board containing 364 messages (no unread messages)}}{tapestry}{{name}{The Necromancers' Tapestry honoring Dracula}}}{noun}{{arch}{{name}{arch}}{block}{{name}{block}}{claws}{{name}{claws}}{corridor}{{name}{corridor}}{keystone}{{name}{keystone}}{light}{{name}{light}}{orbs}{{name}{orbs}}{rune}{{name}{rune}}}{npc}{{Pennywise the Valithyn}{{name}{Pennywise the Valithyn}}}}}{}{}{1.000}{}
 E {17}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {21}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {19}{w}{w}{8}{0}{}{1.000}{}{0.00}
@@ -405,13 +405,13 @@ E {36}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 R {36}{0}{<108>}{}{ }{}{}{}{}{}{1.000}{}
 E {35}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {37}{0}{<178>}{East Tower Annulus}{ }{This vast chamber has exits leading north and south that lead around the inside edge of the tower.  To your west is a large block arch that leads back into the entrance keep of the complex.  Necromancers of every circle push past you, busily tending to their business.}{}{}{}{}{1.000}{}
+R {37}{0}{<178>}{East Tower Annulus}{ }{This vast chamber has exits leading north and south that lead around the inside edge of the tower.  To your west is a large block arch that leads back into the entrance keep of the complex.  Necromancers of every circle push past you, busily tending to their business.}{Necs}{}{}{}{1.000}{}
 E {22}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {38}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {39}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {40}{e}{e}{2}{0}{}{1.000}{}{0.00}
 
-R {38}{0}{<178>}{East Tower Annulus}{ }{You are in a long curved corridor that appears to wrap around the outside edge of the eastern tower.  There is an occasional tapestry hung on the wall, probably to muffle the echoing sounds that bounce down the granite corridors.}{}{}{}{}{1.000}{}
+R {38}{0}{<178>}{East Tower Annulus}{ }{You are in a long curved corridor that appears to wrap around the outside edge of the eastern tower.  There is an occasional tapestry hung on the wall, probably to muffle the echoing sounds that bounce down the granite corridors.}{Necs}{}{}{}{1.000}{}
 E {37}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {94}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
@@ -643,12 +643,12 @@ E {362}{n}{portal}{1}{0}{}{1.000}{}{0.00}
 R {93}{0}{<178>}{A pulsing trophy room}{ }{You have arrived in a simple stone room.  The walls are made from a light yellow stone, which dimly pulses with all the colours of the spectrum.  Fuller illumination is provided by small orbs of light hanging from the walls.  Here, you can admire the accomplishments of other pure necromancers.}{}{}{}{}{1.000}{}
 E {92}{e}{e}{2}{0}{}{1.000}{}{0.00}
 
-R {94}{0}{<178>}{East Tower Annulus}{ }{The corridor opens up to a small intersection.  A hallway branches off to the southeast leading further towards the center of the eastern tower.  Several sconces line the hallways, illuminating the corridor as you travel along it.  A small breeze blows past your face from some unknown source inside the guild.}{}{}{}{}{1.000}{}
+R {94}{0}{<178>}{East Tower Annulus}{ }{The corridor opens up to a small intersection.  A hallway branches off to the southeast leading further towards the center of the eastern tower.  Several sconces line the hallways, illuminating the corridor as you travel along it.  A small breeze blows past your face from some unknown source inside the guild.}{Necs}{}{}{}{1.000}{}
 E {38}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 E {95}{se}{se}{6}{0}{}{1.000}{}{0.00}
 E {96}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {95}{0}{<178>}{Winding Staircase}{ }{The corridor you're in appears to end to your southeast at a large winding staircase.  The walls here are covered with heavy tapestries that suppress noise and seem to keep the area warmer.  There is a sconce on the wall that is a bit different from the rest.  The exit to the northwest leads back to the east tower annulus.}{}{}{}{}{1.000}{}
+R {95}{0}{<178>}{East Tower Annulus}{ }{The corridor you're in appears to end to your southeast at a large winding staircase.  The walls here are covered with heavy tapestries that suppress noise and seem to keep the area warmer.  There is a sconce on the wall that is a bit different from the rest.  The exit to the northwest leads back to the east tower annulus.}{Necs}{}{}{}{1.000}{}
 E {94}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 E {97}{se}{se}{6}{0}{}{1.000}{}{0.00}
 
@@ -656,7 +656,7 @@ R {96}{0}{<178>}{East Tower Annulus}{ }{You are rounding the northern end of the
 E {94}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
 E {100}{e}{e}{2}{0}{}{1.000}{}{0.00}
 
-R {97}{0}{<178>}{Winding Staircase}{ }{The corridor ends here at a staircase that winds up into the tower.  There are several sconces here illuminating the room in a soft, flickering light.  The walls are made from blocks of dark gray granite and they have heavy tapestries hanging from them.  An occasional necromancer hustles past, paying you no attention.}{}{}{}{}{1.000}{}
+R {97}{0}{<178>}{Winding Staircase}{ }{The corridor ends here at a staircase that winds up into the tower.  There are several sconces here illuminating the room in a soft, flickering light.  The walls are made from blocks of dark gray granite and they have heavy tapestries hanging from them.  An occasional necromancer hustles past, paying you no attention.}{Necs}{}{}{}{1.000}{}
 E {95}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 E {98}{u}{u}{16}{0}{}{1.000}{}{0.00}
 E {99}{d}{d}{32}{0}{}{1.000}{}{0.00}
@@ -738,15 +738,18 @@ E {120}{se}{se}{6}{0}{}{1.000}{}{0.00}
 E {121}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {122}{n}{unlock door}{1}{0}{}{1.000}{}{0.00}
 
-R {116}{0}{<178>}{A dim corridor}{ }{The dark stone corridor continues on into the depths of the tower.  To the southeast lies a flickering curtain of pure energy, blocking any details behind it.  There are two sconces here, one on each wall.  They cast an eerie artificial light into the hall.}{Necs}{}{}{}{1.000}{}
+R {116}{0}{<178>}{A dim corridor}{ }{The dark stone corridor continues on into the depths of the tower.  To the southeast lies a flickering curtain of pure energy, blocking any details behind it.  There are two sconces here, one on each wall.  They cast an eerie artificial light into the hall.}{Necs}{{content}{{noun}{{corridor}{{name}{corridor}}{curtain}{{name}{curtain}}{light}{{name}{light}}{sconces}{{name}{sconces}}}{npc}{{_npc[Pinnacle/Fantasy/Necromancer Guild][the {Bayen|Bolwyn|Ghast|Greesh|Grimare|Heucuva|Manshi|Mohrg|Quarin|Skeleton|Tholen|Valithyn|Valpur|Wight|Zombie}]}{{name}{Prospero the Valithyn}}}}}{}{}{1.000}{}
 E {98}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
 E {118}{se}{se}{6}{0}{}{1.000}{}{0.00}
 
 R {117}{0}{<178>}{Lord Room}{ }{This room is only available to the lords and ladies of the  Necromancers' guild.  The room is lavishly furnished and there are couches to lie upon and overstuffed chairs to sit upon.  A fireplace lies against the west wall and there is a bar set up at the northern end of the room.}{Necs}{}{}{}{1.000}{}
 E {114}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
 
-R {118}{0}{<108>}{}{ }{}{}{}{}{}{1.000}{}
+R {118}{0}{<068>}{The Necromancers' Marquis Room}{ }{This is the Administration room for the Necromancers' guild.  Only Necromancer Marquis and higher may enter here.  The room smells of stained oak and everything is arranged in perfect order.  It is a place of tranquility.}{Necs}{}{}{}{1.000}{}
 E {116}{nw}{nw}{9}{0}{}{1.000}{}{0.00}
+E {364}{sw}{sw}{12}{0}{}{1.000}{}{0.00}
+E {365}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {20}{rec}{rec}{0}{0}{}{1.000}{}{0.00}
 
 R {119}{0}{<178>}{Advocate Antechamber}{ }{This small comfortable chamber is the foyer to the Guild Advocate's chambers.  The walls are covered with tapestries and paintings depicting various necromancers throughout the ages.  There is a heavy wooden door blocking your way to the southwest.  The door is solid and you can here no sounds coming from the other side.}{Necs}{}{}{}{1.000}{}
 E {115}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
@@ -2080,3 +2083,10 @@ E {363}{u}{u}{16}{0}{}{1.000}{}{0.00}
 
 R {363}{0}{<178>}{The Planescape}{ }{You stand on the brink of existence.  Having stepped from the mortal confines of the guild halls, you now look out over what appears to be rolling waves of black and white.  As large as can be imagined, and as small as can be conceived, the waves are formed from the thoughts of the gods.  Where the waves crash into one another, bright crimson can be seen.  These energies are the positive and negative material planes of existence, and as a pure necromancer, you must choose one or both.  The choice of a plane to embrace can only occur by the free will of a red necromancer.  Red, the color of neutrality, can be embraced forever, or it can be shed, in favor of black or white.  The choice is yours.  'choose' the positive or negative plane, or choose to leave this room, remaining red for yet another day.}{Necs}{}{}{}{1.000}{}
 E {362}{d}{d}{32}{0}{}{1.000}{}{0.00}
+
+R {364}{0}{<068>}{The Necromancers' Marquis Room}{ }{The room is elaborately decorated.  Heavy tapestries hang from the walls muffling noises from outside the room leaving you a silent area to think and relax.  The furniture is ornate and looks extremely comfortable to sink into and relax your weary bones.  There are several candles and sconces around the room.  They cast enough light to read by, but still leave the room dim enough to relax.  There is a large unlighted fireplace in one corner used to spread warmth throughout the room.}{Necs}{{content}{{item}{{_item[Pinnacle/Fantasy/Necromancer Guild][containing \d+ messages]}{{name}{The Marquis Board containing 90 messages (90 unread messages)}}}{noun}{{candles}{{name}{candles}}{furniture}{{name}{furniture}}{sconces}{{name}{sconces}}{tapestries}{{name}{tapestries}}{walls}{{name}{walls}}}}}{}{}{1.000}{}
+E {118}{ne}{ne}{3}{0}{}{1.000}{}{0.00}
+E {20}{rec}{rec}{0}{0}{}{1.000}{}{0.00}
+
+R {365}{0}{<178>}{The Necromancers' Reporting Room}{ }{You are standing in the necromancer reporting room.  It is a sparse room with no furniture to make yourself comfortable or invite you to linger.  You shiver from the chill that comes from being deep underground, the torches on each wall barely providing enough light to see by.  On the west and east walls are two different tapestries, one in bright colors depicting a necromancer receiving an award for great courtesy and courage shown towards their brethren.  The other in darker hues showing chastisement over actions that have caused harm to another.  In the center of the room stands a large stone tablet.  its contents are a record of necromancer actions, both good and bad.  To stand here is an honor and privilege, the secrets on this board to remain here for all of time.  Looking behind you, you can see the portal back to the guild administration room.}{Necs}{{content}{{item}{{_item[Pinnacle/Fantasy/Necromancer Guild][containing \d+ messages]}{{name}{The Necromancers' Reporting Board containing 83 messages (83 unread messages)}}}}}{}{}{1.000}{}
+E {118}{sw}{sw}{12}{0}{}{1.000}{}{0.00}

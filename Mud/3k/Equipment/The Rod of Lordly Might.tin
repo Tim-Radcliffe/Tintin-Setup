@@ -39,6 +39,10 @@
             .rolm_inc_round {large};
         };
     };
+    #IF {"$my[eq][%*Pickling]" != ""}
+    {
+        .rolm_inc_round {drunk};
+    };
 
     .file write {$path[profile]/The Rod of Lordly Might.tin};
 };
@@ -120,6 +124,10 @@ event_register {e_combat_round} {$path[equipment]/The Rod of Lordly Might.tin} {
     };
     #ELSE
     {
+        #IF {$_rolm[rune][$_rolm[rune][%1][refers]][trained] >= 24 || &_rolm[rune][%1][refers] == 0}
+        {
+            #SEND {!touch %1 rune};
+        };
         touch $_rolm[rune][%1][refers] rune;
     };
 };
@@ -154,7 +162,9 @@ event_register {e_combat_round} {$path[equipment]/The Rod of Lordly Might.tin} {
             .log add {The Rod of Lordly Might.log} {TRAINED $_rolm_progress[rune] rune level $_rolm_progress[trained] (combat rounds $_rolm[combat][rounds])};
         };
         .file write {$path[profile]/The Rod of Lordly Might.tin};
+        #ECHO {==== %1 Rune trained to level $_rolm_progress[trained] ====};
     };
+    #LINE GAG 3;
 };
 
 
@@ -341,6 +351,7 @@ event_register {e_combat_round} {$path[equipment]/The Rod of Lordly Might.tin} {
                 {winch}
                 {
                     {trained} {1}
+                    {refers} {drunk}
                 }
             }
             {weapon} {star}

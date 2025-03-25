@@ -4,7 +4,7 @@
   #NOP %1;
   .WindowSet {AreaNPC} {Area NPCs};
   #VAR {_wANPC} {};
-  
+  #LOCAL {m} {1};
   #FOREACH {$_npc[]} {m}
   {
     #FOREACH {*m[location][]} {l}

@@ -1,0 +1,18 @@
+#IF {@fIsNumber{$my[skills][Main][Critical hit]}}
+{
+    #GAG {***THAWHACK*** You critically hit} {6};
+    #GAG {**THWACK** You critically hit} {6};
+
+    #ALIAS {handler_critical_hit}
+    {
+        #REGEXP {%2} {^\*\*\*}
+        {
+            .record_frequency {SPECIAL HIT} {Critical Hit ($my[skills][Main][Critical hit]) - thawhack} {$_combat[attacks][outgoing]} {outgoing attacks};
+        }
+        {
+            .record_frequency {SPECIAL HIT} {Critical Hit ($my[skills][Main][Critical hit]) - thwack} {$_combat[attacks][outgoing]} {outgoing attacks};
+        };
+    };
+
+    event_register {e_ansiflag_K} {skills.tin} {handler_critical_hit};
+};

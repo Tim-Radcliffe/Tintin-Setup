@@ -18,13 +18,13 @@
 		};
 		#CASE {"list"}
 		{
-			#VAR {_file[List]} {@fFileList{%1};};
+			#VAR {_file[List]} {@fFileList{%2};};
 			#FOREACH {$_file[List][%*]} {_file[Name]} {#ECHO {$_file[Name]};};
 			#UNVAR {_file};
 		};
 		#CASE {"tree"}
 		{
-			#VAR {_file[List]} {@fFileDirTree{%1}};
+			#VAR {_file[List]} {@fFileDirTree{%2}};
 			#FOREACH {$_file[List][%*]} {_file[Name]} {#ECHO {$_file[Name]};};
 			#UNVAR {_file};	  
 		};

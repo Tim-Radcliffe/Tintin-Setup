@@ -205,7 +205,7 @@ event_register {e_5_mins} {System/utils.tin} {.aProfileSave};
   };
   #LOCAL {_fES} {};
   #LINE SUBSTITUTE {braces} {#VAR _fES[string] %1};
-  #FOREACH {{(}{)}{<}{>}{?}{!}{*}{%}{"}} {_fES[char]}
+  #FOREACH {{(}{)}{<}{>}{?}{!}{*}{%}{"}{$}{^}} {_fES[char]}
   {
     #REPLACE {_fES[string]} {$_fES[char]} {@fAsciiHex{$_fES[char]}};
   }
@@ -238,8 +238,8 @@ event_register {e_5_mins} {System/utils.tin} {.aProfileSave};
 #FUNCTION {fStringContains} 
 {
 	#LOCAL _fStringContains {};
-  #MATH {_fStringContains} {"%2" == "%*%1%*"};
-  #RETURN {$_fStringContains};
+    #MATH {_fStringContains} {"%2" == "%*%1%*"};
+    #RETURN {$_fStringContains};
 };
 
 #NOP @fWordWrap{ {string} {length} }

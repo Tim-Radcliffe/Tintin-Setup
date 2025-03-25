@@ -4,14 +4,15 @@
 	#IF {"%1" == "stop"}
 	{
 		#UNVAR {map[run]};
-	};
+        .Unlock {%*.maprun};
+    };
 	#ELSEIF {"%1" == "pause"}
 	{
-		#VAR {map[run][pause]} {1};
+        .Lock {pause.maprun};
 	};
 	#ELSEIF {"%1" == "unpause"}
 	{
-		#UNVAR {map[run][pause]};
+        .Unlock {pause.maprun};
 		.debug MAPRUN {unpaused: Calling .mapRun};
 		.mapRun;
 	};
@@ -41,7 +42,7 @@
 			};
 		};
 		#IF {"$map[run][dest]" != "" &&
-	    	 "$map[run][pause]" != "1" &&
+	    	 !@fLocked{pause.maprun} &&
 			 $map[run][position] < &map[run][path][]}
 		{
 			#PATH SAVE POSITION {map[run][position]};

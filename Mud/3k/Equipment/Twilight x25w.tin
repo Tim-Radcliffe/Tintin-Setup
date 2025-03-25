@@ -1,0 +1,8 @@
+#NOP As Sumaren collapses their essence destroyed, you notice a thin                 │                                                                    |                                                                           
+#NOP trail of energy being drawn from Sumaren's corpse into the shield,              │                                                                    |                                                                           
+#NOP as if the shield were feeding on Sumaren's lifeforce.
+
+#ACTION {^as if the %w were feeding on %w\'s}
+{
+    #NOP todo- handle counting of charges
+}

@@ -1,0 +1,36 @@
+#NOP The essence of Sylvan Elf is pulled like a magnet into the Soul Drinker.
+#NOP A smokey wisp of soul essence trails from Wyvern to the Soul Drinker.
+#NOP With a wicked slash, Soul Drinker siphons essence from Faerie Lizard.
+#NOP Soul Drinker lashes at Faerie Lizard, capturing some of his essence.
+
+#NOP You tighten your grip on Soul Drinker. As the small emeralds in the grip
+#NOP dig into your hand, you feel the sword surge.
+#NOP A strong tendril of soul essence formed from the bodies of your animal
+#NOP enemies flows from the sword and slams into Wyvern.
+
+#NOP The emeralds are dark and empty.
+#NOP The emeralds glow and pulse faintly.
+#NOP The emeralds glow and pulse mildly.
+#NOP The emeralds glow and pulse slowly.
+#NOP The emeralds glow and pulse normally.
+#NOP The emeralds glow and pulse quickly.
+#NOP The emeralds glow and pulse rapidly.
+#NOP The emeralds glow and pulse brilliantly.
+
+#NOP 10 charges takes the blade from empty to mildly.
+
+#ACTION {^{The essence of .* is pulled|A smokey wisp of soul essence |With a wicked slash, |Soul Drinker lashes at }}
+{
+    #MATH {_equipment[souldrinker]} {$_equipment[souldrinker] + 1};
+};
+
+#ALIAS {handler_soul_drinker}
+{
+    #NOP %1;
+    #IF {$_equipment[souldrinker] > 10 && "$opponent[data][undead]" != "1"}
+    {
+        #UNVAR {_equipment[souldrinker]};
+        #SEND {!grip blade};
+    };
+};
+event_register {e_combat_round} {$path[equipment]/The Soul Drinker Blade.tin} {handler_soul_drinker};

@@ -1,4 +1,4 @@
-#VAR {_item[^A Parcel$]}
+#VAR {_item[global][^A Parcel$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -16,7 +16,7 @@
 	{name} {A Parcel}
     }
 };
-#VAR {_item[^A blue stone necklace$]}
+#VAR {_item[global][^A blue stone necklace$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -32,7 +32,7 @@
 	{name} {A blue stone necklace}
     }
 };
-#VAR {_item[^A bone wand$]}
+#VAR {_item[global][^A bone wand$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -51,7 +51,7 @@
 	{name} {A bone wand}
     }
 };
-#VAR {_item[^A cannister-topped cannon$]}
+#VAR {_item[global][^A cannister-topped cannon$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -67,7 +67,7 @@
 	{name} {A cannister-topped cannon}
     }
 };
-#VAR {_item[^A crooked brown wand$]}
+#VAR {_item[global][^A crooked brown wand$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -85,7 +85,7 @@
 	{name} {A crooked brown wand}
     }
 };
-#VAR {_item[^A curved gray wand$]}
+#VAR {_item[global][^A curved gray wand$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -103,7 +103,7 @@
 	{name} {A curved gray wand}
     }
 };
-#VAR {_item[^A dull white wand$]}
+#VAR {_item[global][^A dull white wand$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -121,7 +121,7 @@
 	{name} {A dull white wand}
     }
 };
-#VAR {_item[^A glowing white wand$]}
+#VAR {_item[global][^A glowing white wand$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -140,7 +140,7 @@
 	{name} {A glowing white wand}
     }
 };
-#VAR {_item[^A golden staff$]}
+#VAR {_item[global][^A golden staff$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -157,7 +157,7 @@
 	{name} {A golden staff}
     }
 };
-#VAR {_item[^A gray staff$]}
+#VAR {_item[global][^A gray staff$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -175,7 +175,7 @@
 	{name} {A gray staff}
     }
 };
-#VAR {_item[^A hammer$]}
+#VAR {_item[global][^A hammer$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -192,7 +192,7 @@
 	{name} {A hammer}
     }
 };
-#VAR {_item[^A light blue wand$]}
+#VAR {_item[global][^A light blue wand$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -210,7 +210,7 @@
 	{name} {A light blue wand}
     }
 };
-#VAR {_item[^A magic scroll$]}
+#VAR {_item[global][^A magic scroll$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -228,7 +228,7 @@
 	{name} {A magic scroll}
     }
 };
-#VAR {_item[^A pair of dirty gloves$]}
+#VAR {_item[global][^A pair of dirty gloves$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -245,7 +245,7 @@
 	{name} {A pair of dirty gloves}
     }
 };
-#VAR {_item[^A pair of gloves$]}
+#VAR {_item[global][^A pair of gloves$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -262,7 +262,7 @@
 	{name} {A pair of gloves}
     }
 };
-#VAR {_item[^A rifle$]}
+#VAR {_item[global][^A rifle$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -281,7 +281,7 @@
 	{name} {A rifle}
     }
 };
-#VAR {_item[^A ruby necklace$]}
+#VAR {_item[global][^A ruby necklace$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -297,7 +297,7 @@
 	{name} {A ruby necklace}
     }
 };
-#VAR {_item[^A shiny, platinum amulet$]}
+#VAR {_item[global][^A shiny, platinum amulet$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -314,7 +314,7 @@
 	{name} {A shiny, platinum amulet}
     }
 };
-#VAR {_item[^A short green wand$]}
+#VAR {_item[global][^A short green wand$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -334,7 +334,7 @@
 	{name} {A short green wand}
     }
 };
-#VAR {_item[^A slender crystal wand$]}
+#VAR {_item[global][^A slender crystal wand$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -350,7 +350,7 @@
 	{name} {A slender crystal wand}
     }
 };
-#VAR {_item[^A spear \x28enchanted\x29$]}
+#VAR {_item[global][^A spear \x28enchanted\x29$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -368,7 +368,7 @@
 	{name} {A spear (enchanted)}
     }
 };
-#VAR {_item[^A Statue of a Smiling Leprechaun$]}
+#VAR {_item[global][^A Statue of a Smiling Leprechaun$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -384,7 +384,7 @@
 	{name} {A Statue of a Smiling Leprechaun}
     }
 };
-#VAR {_item[^A steel longsword$]}
+#VAR {_item[global][^A steel longsword$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -403,7 +403,7 @@
 	{name} {A steel longsword}
     }
 };
-#VAR {_item[^A straight black wand$]}
+#VAR {_item[global][^A straight black wand$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -423,7 +423,7 @@
 	{name} {A straight black wand}
     }
 };
-#VAR {_item[^A sturdy wooden staff$]}
+#VAR {_item[global][^A sturdy wooden staff$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -442,7 +442,7 @@
 	{name} {A sturdy wooden staff}
     }
 };
-#VAR {_item[^A suit of armor$]}
+#VAR {_item[global][^A suit of armor$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -460,7 +460,7 @@
 	{name} {A suit of armor}
     }
 };
-#VAR {_item[^A white khopesh$]}
+#VAR {_item[global][^A white khopesh$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -485,7 +485,7 @@
 	{name} {A white khopesh}
     }
 };
-#VAR {_item[^Amulet$]}
+#VAR {_item[global][^Amulet$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -501,7 +501,7 @@
 	{name} {Amulet}
     }
 };
-#VAR {_item[^Armour$]}
+#VAR {_item[global][^Armour$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -517,7 +517,7 @@
 	{name} {Armour}
     }
 };
-#VAR {_item[^bag$]}
+#VAR {_item[global][^bag$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -534,7 +534,7 @@
 	{pickup} {1}
     }
 };
-#VAR {_item[^Bag$]}
+#VAR {_item[global][^Bag$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -542,7 +542,7 @@
 	{pickup} {-1}
     }
 };
-#VAR {_item[^Belt$]}
+#VAR {_item[global][^Belt$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -558,7 +558,7 @@
 	{name} {Belt}
     }
 };
-#VAR {_item[^black stone$]}
+#VAR {_item[global][^black stone$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -572,7 +572,7 @@
 	{pickup} {-1}
     }
 };
-#VAR {_item[^Bone White Armour$]}
+#VAR {_item[global][^Bone White Armour$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -590,7 +590,7 @@
 	{name} {Bone White Armour}
     }
 };
-#VAR {_item[^Bone White Shield$]}
+#VAR {_item[global][^Bone White Shield$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -608,7 +608,7 @@
 	{name} {Bone White Shield}
     }
 };
-#VAR {_item[^Boots$]}
+#VAR {_item[global][^Boots$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -624,7 +624,7 @@
 	{name} {Boots}
     }
 };
-#VAR {_item[^Brass Codpiece$]}
+#VAR {_item[global][^Brass Codpiece$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -640,7 +640,7 @@
 	{name} {Brass Codpiece}
     }
 };
-#VAR {_item[^Brass Gloves$]}
+#VAR {_item[global][^Brass Gloves$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -657,7 +657,7 @@
 	{name} {Brass Gloves}
     }
 };
-#VAR {_item[^Brass Helmet$]}
+#VAR {_item[global][^Brass Helmet$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -673,7 +673,7 @@
 	{name} {Brass Helmet}
     }
 };
-#VAR {_item[^Bronze Codpiece$]}
+#VAR {_item[global][^Bronze Codpiece$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -689,7 +689,7 @@
 	{name} {Bronze Codpiece}
     }
 };
-#VAR {_item[^Bronze Gloves$]}
+#VAR {_item[global][^Bronze Gloves$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -706,7 +706,7 @@
 	{name} {Bronze Gloves}
     }
 };
-#VAR {_item[^Bronze Helmet$]}
+#VAR {_item[global][^Bronze Helmet$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -722,7 +722,7 @@
 	{name} {Bronze Helmet}
     }
 };
-#VAR {_item[^Cloak of Blue Cloth$]}
+#VAR {_item[global][^Cloak of Blue Cloth$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -740,7 +740,7 @@
 	{name} {Cloak of Blue Cloth}
     }
 };
-#VAR {_item[^Cloak$]}
+#VAR {_item[global][^Cloak$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -758,7 +758,7 @@
 	{name} {Cloak}
     }
 };
-#VAR {_item[^Cloth Armour$]}
+#VAR {_item[global][^Cloth Armour$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -774,7 +774,7 @@
 	{name} {Cloth Armour}
     }
 };
-#VAR {_item[^Cloth Cloak$]}
+#VAR {_item[global][^Cloth Cloak$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -790,7 +790,7 @@
 	{name} {Cloth Cloak}
     }
 };
-#VAR {_item[^Cotton Cloak$]}
+#VAR {_item[global][^Cotton Cloak$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -806,7 +806,7 @@
 	{name} {Cotton Cloak}
     }
 };
-#VAR {_item[^Crystal ball$]}
+#VAR {_item[global][^Crystal ball$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -823,7 +823,7 @@
 	{name} {Crystal ball}
     }
 };
-#VAR {_item[^crystal ball$]}
+#VAR {_item[global][^crystal ball$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -838,7 +838,7 @@
 	{name} {crystal ball}
     }
 };
-#VAR {_item[^Crystalline Cloak$]}
+#VAR {_item[global][^Crystalline Cloak$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -856,7 +856,7 @@
 	{name} {Crystalline Cloak}
     }
 };
-#VAR {_item[^Dragonscale Gloves$]}
+#VAR {_item[global][^Dragonscale Gloves$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -873,7 +873,7 @@
 	{name} {Dragonscale Gloves}
     }
 };
-#VAR {_item[^Dragonscale Shield$]}
+#VAR {_item[global][^Dragonscale Shield$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -890,7 +890,7 @@
 	{name} {Dragonscale Shield}
     }
 };
-#VAR {_item[^Electrum Codpiece$]}
+#VAR {_item[global][^Electrum Codpiece$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -906,7 +906,7 @@
 	{name} {Electrum Codpiece}
     }
 };
-#VAR {_item[^Electrum Gloves$]}
+#VAR {_item[global][^Electrum Gloves$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -923,7 +923,7 @@
 	{name} {Electrum Gloves}
     }
 };
-#VAR {_item[^Electrum Helmet$]}
+#VAR {_item[global][^Electrum Helmet$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -939,7 +939,7 @@
 	{name} {Electrum Helmet}
     }
 };
-#VAR {_item[^Fur Boots$]}
+#VAR {_item[global][^Fur Boots$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -955,7 +955,7 @@
 	{name} {Fur Boots}
     }
 };
-#VAR {_item[^Gold Amulet$]}
+#VAR {_item[global][^Gold Amulet$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -971,7 +971,7 @@
 	{name} {Gold Amulet}
     }
 };
-#VAR {_item[^Gold Cloth cloak$]}
+#VAR {_item[global][^Gold Cloth cloak$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -989,7 +989,7 @@
 	{name} {Gold Cloth cloak}
     }
 };
-#VAR {_item[^Gold Helmet$]}
+#VAR {_item[global][^Gold Helmet$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -1005,7 +1005,7 @@
 	{name} {Gold Helmet}
     }
 };
-#VAR {_item[^Helmet$]}
+#VAR {_item[global][^Helmet$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -1021,7 +1021,7 @@
 	{name} {Helmet}
     }
 };
-#VAR {_item[^Hide boots$]}
+#VAR {_item[global][^Hide boots$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -1037,7 +1037,7 @@
 	{name} {Hide boots}
     }
 };
-#VAR {_item[^Iron Chainmail$]}
+#VAR {_item[global][^Iron Chainmail$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -1053,7 +1053,7 @@
 	{name} {Iron Chainmail}
     }
 };
-#VAR {_item[^Iron Codpiece$]}
+#VAR {_item[global][^Iron Codpiece$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -1069,7 +1069,7 @@
 	{name} {Iron Codpiece}
     }
 };
-#VAR {_item[^Iron Gauntlets$]}
+#VAR {_item[global][^Iron Gauntlets$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -1086,7 +1086,7 @@
 	{name} {Iron Gauntlets}
     }
 };
-#VAR {_item[^Iron Gloves$]}
+#VAR {_item[global][^Iron Gloves$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -1102,7 +1102,7 @@
 	{name} {Iron Gloves}
     }
 };
-#VAR {_item[^Iron Helmet$]}
+#VAR {_item[global][^Iron Helmet$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -1118,7 +1118,7 @@
 	{name} {Iron Helmet}
     }
 };
-#VAR {_item[^Leather Armour$]}
+#VAR {_item[global][^Leather Armour$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -1134,7 +1134,7 @@
 	{name} {Leather Armour}
     }
 };
-#VAR {_item[^Leather Boots$]}
+#VAR {_item[global][^Leather Boots$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -1151,7 +1151,7 @@
 	{name} {Leather Boots}
     }
 };
-#VAR {_item[^Leather Girdle$]}
+#VAR {_item[global][^Leather Girdle$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -1169,7 +1169,7 @@
 	{name} {Leather Girdle}
     }
 };
-#VAR {_item[^Leather Gloves$]}
+#VAR {_item[global][^Leather Gloves$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -1185,7 +1185,7 @@
 	{name} {Leather Gloves}
     }
 };
-#VAR {_item[^Leather Helmet$]}
+#VAR {_item[global][^Leather Helmet$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -1202,7 +1202,7 @@
 	{name} {Leather Helmet}
     }
 };
-#VAR {_item[^Leather girdle$]}
+#VAR {_item[global][^Leather girdle$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -1218,7 +1218,7 @@
 	{name} {Leather girdle}
     }
 };
-#VAR {_item[^Marble Gloves$]}
+#VAR {_item[global][^Marble Gloves$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -1235,7 +1235,7 @@
 	{name} {Marble Gloves}
     }
 };
-#VAR {_item[^Mylar Straps$]}
+#VAR {_item[global][^Mylar Straps$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -1252,7 +1252,7 @@
 	{name} {Mylar Straps}
     }
 };
-#VAR {_item[^Obsidian Gloves$]}
+#VAR {_item[global][^Obsidian Gloves$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -1269,7 +1269,7 @@
 	{name} {Obsidian Gloves}
     }
 };
-#VAR {_item[^Old Dusty Hat$]}
+#VAR {_item[global][^Old Dusty Hat$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -1291,7 +1291,7 @@
 	{name} {Old Dusty Hat}
     }
 };
-#VAR {_item[^Platinum Codpiece$]}
+#VAR {_item[global][^Platinum Codpiece$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -1307,7 +1307,7 @@
 	{name} {Platinum Codpiece}
     }
 };
-#VAR {_item[^Platinum Gloves$]}
+#VAR {_item[global][^Platinum Gloves$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -1324,7 +1324,7 @@
 	{name} {Platinum Gloves}
     }
 };
-#VAR {_item[^Platinum Helmet$]}
+#VAR {_item[global][^Platinum Helmet$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -1340,7 +1340,7 @@
 	{name} {Platinum Helmet}
     }
 };
-#VAR {_item[^Random Codpiece$]}
+#VAR {_item[global][^Random Codpiece$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -1356,7 +1356,7 @@
 	{name} {Random Codpiece}
     }
 };
-#VAR {_item[^Sapphire Amulet$]}
+#VAR {_item[global][^Sapphire Amulet$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -1372,7 +1372,7 @@
 	{name} {Sapphire Amulet}
     }
 };
-#VAR {_item[^Scaley Armour$]}
+#VAR {_item[global][^Scaley Armour$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -1388,7 +1388,7 @@
 	{name} {Scaley Armour}
     }
 };
-#VAR {_item[^Scaley Boots$]}
+#VAR {_item[global][^Scaley Boots$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -1405,7 +1405,7 @@
 	{name} {Scaley Boots}
     }
 };
-#VAR {_item[^Scaley Helmet$]}
+#VAR {_item[global][^Scaley Helmet$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -1421,7 +1421,7 @@
 	{name} {Scaley Helmet}
     }
 };
-#VAR {_item[^set of dice$]}
+#VAR {_item[global][^set of dice$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -1438,7 +1438,7 @@
 	{name} {set of dice}
     }
 };
-#VAR {_item[^Silver Codpiece$]}
+#VAR {_item[global][^Silver Codpiece$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -1454,7 +1454,7 @@
 	{name} {Silver Codpiece}
     }
 };
-#VAR {_item[^Silver Gloves$]}
+#VAR {_item[global][^Silver Gloves$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -1471,7 +1471,7 @@
 	{name} {Silver Gloves}
     }
 };
-#VAR {_item[^Steel Chainmail$]}
+#VAR {_item[global][^Steel Chainmail$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -1487,7 +1487,7 @@
 	{name} {Steel Chainmail}
     }
 };
-#VAR {_item[^Steel Codpiece$]}
+#VAR {_item[global][^Steel Codpiece$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -1503,7 +1503,7 @@
 	{name} {Steel Codpiece}
     }
 };
-#VAR {_item[^Steel Gloves$]}
+#VAR {_item[global][^Steel Gloves$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -1520,7 +1520,7 @@
 	{name} {Steel Gloves}
     }
 };
-#VAR {_item[^Steel Helmet$]}
+#VAR {_item[global][^Steel Helmet$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -1536,7 +1536,7 @@
 	{name} {Steel Helmet}
     }
 };
-#VAR {_item[^Steel Platemail Gauntlets$]}
+#VAR {_item[global][^Steel Platemail Gauntlets$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -1553,7 +1553,7 @@
 	{name} {Steel Platemail Gauntlets}
     }
 };
-#VAR {_item[^Steel Shield$]}
+#VAR {_item[global][^Steel Shield$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -1569,7 +1569,7 @@
 	{name} {Steel Shield}
     }
 };
-#VAR {_item[^Steel bracers$]}
+#VAR {_item[global][^Steel bracers$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -1585,7 +1585,7 @@
 	{name} {Steel bracers}
     }
 };
-#VAR {_item[^Stone Boots$]}
+#VAR {_item[global][^Stone Boots$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -1601,7 +1601,7 @@
 	{name} {Stone Boots}
     }
 };
-#VAR {_item[^(Aluminum|Amber|Amethyst|Aquamarine|Bloodstone|Bone|Brass|Bronze|Ceramic|Copper|Coral|Diamond|Ebony|Electrum|Emerald|Garnet|Glass|Gold|Granite|Jacinth|Lead|Iron|Ivory|Jade|Jasper|Mahogany|Malachite|Maple|Marble|Moonstone|Oak|Obsidian|Onyx|Opal|Pearl|Peridot|Platinum|Pyrite|Quartz|Ruby|Sapphire|Sardonyx|Silver|Sodalite|Steel|Stone|Tin|Titanium|Topaz|Turquoise|Zinc|Zirconian) ring$]}
+#VAR {_item[global][^(Aluminum|Amber|Amethyst|Aquamarine|Bloodstone|Bone|Brass|Bronze|Ceramic|Copper|Coral|Diamond|Ebony|Electrum|Emerald|Garnet|Glass|Gold|Granite|Jacinth|Lead|Iron|Ivory|Jade|Jasper|Mahogany|Malachite|Maple|Marble|Moonstone|Oak|Obsidian|Onyx|Opal|Pearl|Peridot|Platinum|Pyrite|Quartz|Ruby|Sapphire|Sardonyx|Silver|Sodalite|Steel|Stone|Tin|Titanium|Topaz|Turquoise|Zinc|Zirconian) ring$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -1618,7 +1618,7 @@
 	{name} {Amber ring}
     }
 };
-#VAR {_item[^A(n|) (bloody|double-bladed|double-edged|dark|dull|engraved|extremely sharp|finely cut|finely crafted|glowing|heavy|hooked|jagged|light|lightly glowing|long|long thin|nasty|nicked|old|ornate|polished|razor-sharp|runed|sharp|shining|short|single edged|small|spiked|triple-edged|very dull|very sharp|wicked|)(, |)(adamantium|ash|aspen|balsam|birch|bronze|cedar|ebony|elm|gold|granite|iron|jade|mahogany|maple|mithril|oak|obsidian|onyx|pine|platinum|sardonyx|silver|steel|stone|titanium|white|) (bastardsword|battleaxe|blackjack|blade|broadsword|claymore|club|cudgel|cutlass|dagger|dirk|double-edged axe|falchion|flail|foil|handaxe|hatchet|jo|katana|khopesh|knife|kynac|longsword|mace|machete|main gauche|mattock|morningstar|no-dachi|nunchaku|pick|pickaxe|quarterstaff|rapier|sabre|sai|scimitar|shortsword|sledgehammer|staff|stiletto|sword|trident|two-handed sword|warhammer|war-axe|war-mattock|woodsman's axe)( \x28enchanted\x29|)$]}
+#VAR {_item[global][^A(n|) (bloody|double-bladed|double-edged|dark|dull|engraved|extremely sharp|finely cut|finely crafted|glowing|heavy|hooked|jagged|light|lightly glowing|long|long thin|nasty|nicked|old|ornate|polished|razor-sharp|runed|sharp|shining|short|single edged|small|spiked|triple-edged|very dull|very sharp|wicked|)(, |)(adamantium|ash|aspen|balsam|birch|bronze|cedar|ebony|elm|gold|granite|iron|jade|mahogany|maple|mithril|oak|obsidian|onyx|pine|platinum|sardonyx|silver|steel|stone|titanium|white|) (bastardsword|battleaxe|blackjack|blade|broadsword|claymore|club|cudgel|cutlass|dagger|dirk|double-edged axe|falchion|flail|foil|handaxe|hatchet|jo|katana|khopesh|knife|kynac|longsword|mace|machete|main gauche|mattock|morningstar|no-dachi|nunchaku|pick|pickaxe|quarterstaff|rapier|sabre|sai|scimitar|shortsword|sledgehammer|staff|stiletto|sword|trident|two-handed sword|warhammer|war-axe|war-mattock|woodsman's axe)( \x28enchanted\x29|)$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -1638,7 +1638,7 @@
 	{name} {A double-bladed, silver shortsword}
     }
 };
-#VAR {_item[^candle$]}
+#VAR {_item[global][^candle$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -1653,7 +1653,7 @@
 	{name} {candle}
     }
 };
-#VAR {_item[^(brown|green|orange|red|violet|yellow|black) gemstone$]}
+#VAR {_item[global][^(brown|green|orange|red|violet|yellow|black) gemstone$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -1668,7 +1668,7 @@
 	{name} {green gemstone}
     }
 };
-#VAR {_item[^miniature tools$]}
+#VAR {_item[global][^miniature tools$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -1686,7 +1686,7 @@
 	{name} {miniature tools}
     }
 };
-#VAR {_item[^set of three dice$]}
+#VAR {_item[global][^set of three dice$]}
 {
     @fFormatItemData{
 	{_area} {global}
@@ -1701,7 +1701,7 @@
 	{name} {set of three dice}
     }
 };
-#VAR {_item[bag]}
+#VAR {_item[global][bag]}
 {
     @fFormatItemData{
 	{_area} {global}

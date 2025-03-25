@@ -1,0 +1,12 @@
+#NOP Handle dream
+#IF {@fIsNumber{$my[necromancer][tier]}}
+{
+    #MATH {_vDream[level]} {$my[necromancer][tier] + 4};
+};
+#ELSE 
+{
+    #MATH {_vDream[level]} {( $my[necromancer][level] - 36 ) / 6};
+};
+
+#GAG {^\{@fDecToNumerals{$_vDream[level]}\}};
+#UNVAR {_vDream};

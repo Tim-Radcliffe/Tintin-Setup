@@ -18,7 +18,7 @@ F 1048586
 
 G 0
 
-I 109
+I 183
 
 L {ASCII NESW LINE} {NO EXITS} {x}
 L {ASCII NESW LINE} {N} {o}
@@ -278,7 +278,7 @@ E {50}{s}{.mapLink {Pinnacle/Palisade Pub} {} {s};}{4}{0}{}{1.000}{}{0.00}
 R {5}{0}{<000>}{LINK: Pinnacle/Townhall}{<138>*}{}{Pinnacle/Townhall}{{link}{}}{}{}{1.000}{}
 E {1}{e}{e}{2}{0}{}{1.000}{}{0.00}
 
-R {6}{0}{<128>}{The Trading Post}{<138>%}{}{}{{shop}{}}{}{}{1.000}{}
+R {6}{0}{<128>}{The Trading Post}{<138>%}{            **  Welcome to the Trading Post!  **  In a time long past, the city of Pinnacle was built around this shop.  Since then the shop has grown to be the largest in the land.  Many things change hands here, from the most common, to the most bizarre.  There is a plaque hanging behind the counter. }{Mud}{{content}{{item}{{^A Trashcan$}{{name}{A Trashcan}}{^A large sign$}{{name}{A large sign}}}{noun}{{plaque}{{name}{plaque}}}{npc}{{^Cancer the tradesman$}{{name}{Cancer the tradesman}}{^Cur, the tradesman's dog$}{{name}{Cur, the tradesman's dog}}}}{shop}{}}{}{}{1.000}{}
 E {1}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {84}{u}{u}{16}{0}{}{1.000}{}{0.00}
 E {85}{d}{d}{32}{0}{}{1.000}{}{0.00}
@@ -607,11 +607,11 @@ E {75}{w}{w}{8}{0}{}{1.000}{}{0.00}
 R {84}{0}{<178>}{The 3K Modifications Office}{ }{}{}{}{}{}{1.000}{}
 E {6}{d}{d}{32}{0}{}{1.000}{}{0.00}
 
-R {85}{0}{<128>}{The Trading Post}{<138>$}{}{}{{atm}{}}{}{}{1.000}{}
+R {85}{0}{<128>}{Auction room}{<138>$}{You absorb the atmosphere of the auction!  The fold-up chairs, the smoke, the people, the booming speakers, the raised platform, the auctioneer.  You take it all in, and dream of bargains coming your way!}{Mud}{{atm}{}{content}{{item}{{ATM}{{name}{An ATM (c) Pinnacle Bank}}}{noun}{{bargains}{{name}{bargains}}}{npc}{{^Robert$}{{name}{Robert}}}}}{}{}{1.000}{}
 E {6}{u}{u}{16}{0}{}{1.000}{}{0.00}
 E {86}{d}{d}{32}{0}{}{1.000}{}{0.00}
 
-R {86}{0}{<128>}{The auction house}{<138>$}{}{}{{atm}{}}{}{}{1.000}{}
+R {86}{0}{<128>}{The auction house}{<138>$}{Bustling with great activity, the auction house is extraordinarily large and very unorganized.  High ceilings and a marble floor make the room appear even more spacious than it needs to be. Rows upon rows of wooden seats are lined in front of the auctioneer's podium, which is on a raised platform.  A small table stands next to the auctioneer's podium, holding whatever item is being bid on at the moment.  Numerous amounts of people stream in and out of the auction house, chatting, laughing loudly, and bidding.  The auctioneer screams out bids as they come in, trying to overcome the noise of the room.  Nobody seems to be sitting in the seats provided for them, however, the entire room is packed with auction items and the many people bumping into each other with their sweaty bodies.  The auction house is hot and jarringly loud.}{Mud}{{atm}{}{content}{{item}{{ATM}{{name}{An ATM (c) Pinnacle Bank}}{^A sign you can read$}{{name}{A sign you can read}}}{noun}{{ceilings}{{name}{ceilings}}{floor}{{name}{floor}}{house}{{name}{house}}{items}{{name}{items}}{marble}{{name}{marble}}{people}{{name}{people}}{room}{{name}{room}}{seats}{{name}{seats}}{table}{{name}{table}}}{npc}{{^Einav, the auctioneer$}{{name}{Einav, the auctioneer}}}}}{}{}{1.000}{}
 E {85}{u}{u}{16}{0}{}{1.000}{}{0.00}
 
 R {87}{0}{<178>}{A Horrible Sewer}{ }{You are in a hideous and stench-ridden sewer under the streets and lanes of Pinnacle.  Dark and malefic liquids drip from the slime-encrusted roof and walls.  A stream of liquid...and not so liquid...waste runs through the middle of the passage.  Only the lowliest and most desperate of adventurers would venture into this hell hole! }{}{}{}{}{1.000}{}
@@ -989,7 +989,7 @@ E {177}{s}{gate}{4}{0}{}{1.000}{}{0.00}
 R {179}{0}{<158>}{The End of the Path}{<138>G}{}{}{guild;}{}{}{1.000}{}
 E {176}{se}{se}{6}{0}{}{1.000}{}{0.00}
 
-R {180}{0}{<178>}{Ivory path}{ }{A well-travelled road runs north and south here through an awesome and ancient forest.  To the south the road ends in a clearing where a chapel is visible in the tree gloom. }{Mud}{}{}{}{1.000}{}
+R {180}{0}{<068>}{Ivory path}{ }{A well-travelled road runs north and south here through an awesome and ancient forest.  To the south the road ends in a clearing where a chapel is visible in the tree gloom. }{Mud}{{content}{{item}{{^A large sign$}{{name}{A large sign}}}}}{}{}{1.000}{}
 E {174}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {181}{s}{.mapLink {Pinnacle/Knights Guild} {} {s};}{4}{0}{}{1.000}{}{0.00}
 E {182}{e}{e}{2}{0}{}{1.000}{}{0.00}
@@ -997,12 +997,12 @@ E {182}{e}{e}{2}{0}{}{1.000}{}{0.00}
 R {181}{0}{<158>}{The Knight Castle and Chapel}{<138>G}{You have entered a clearing at the end of a well-kept gravel path. Towering to the east is a beautiful, airy, alabaster castle.  It is the home of the powerful and wealthy Knight Guild.  To the south a small, elegant chapel blends with the forest in a harmonious way.  This clearing is used by the Knight Guild to advance their members in their real levels and stats.  Non-members may join the guild here if they wish <join knight> or leave the guild <unjoin knights> at a cost of one-half of their total experience.  Both decisions are of great importance and should be carefully weighed before being made.  There is a row of spikes in front of the castle.   There's a small placard here. Commands: advance [level,str,con,int,wis,dex,cha]           cost, tally, required, questansi,           list [name -or- # -or- short] }{Knights Guild}{guild;link;}{}{}{1.000}{}
 E {180}{n}{n}{1}{0}{}{1.000}{}{0.00}
 
-R {182}{0}{<178>}{Dayln's Gladiatorial Extravaganza}{ }{}{}{}{}{}{1.000}{}
+R {182}{0}{<178>}{Dayln's Gladiatorial Extravaganza}{ }{The formerly empty, and abandoned ruins of the Priest Guild has been transformed into a gladiatorial arena. A crowd of rowdy citizens huddle around the circular ring, eagerly waiting for the bloodshed.  It is doubtful that the peaceful Priest of 3k could have forseen this when they decided to move to Wayhaven, oh well, let the games begin.}{Gladiatorial Arena}{{content}{{item}{{^A Sign \x28Look at it for the commands\x29$}{{name}{A Sign (Look at it for the commands)}}}}{wiz}{Dayln}}{}{}{1.000}{}
 E {180}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {183}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {184}{s}{s}{4}{0}{}{1.000}{}{0.00}
 
-R {183}{0}{<128>}{Gladiatorial Finance Room}{<138>$}{}{}{atm;}{}{}{1.000}{}
+R {183}{0}{<128>}{Gladiatorial Finance Room}{<138>$}{It looks like when the Priests moved that they left this ATM machine behind.  Dayln has 'borrowed' it for now so that he can get you to spend as much money as he can on his gladiator contests.}{Gladiatorial Arena}{{content}{{item}{{ATM}{{name}{An ATM (c) Pinnacle Bank}}}}{wiz}{Dayln}}{}{}{1.000}{}
 E {182}{s}{s}{4}{0}{}{1.000}{}{0.00}
 
 R {184}{0}{<178>}{Dayln's Gladiatorial Office}{ }{}{}{}{}{}{1.000}{}

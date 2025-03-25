@@ -1,18 +1,88 @@
-#NOP **** Triggers ****
-#NOP #ACTION {^{>\s|}You attack %*.}
-#NOP {
-#NOP	#VAR {opponent} {};
-#NOP	#VAR {opponent[longname]} {%2};
-#NOP	event_raise e_combat {%2};
-#NOP };
+#ACTION {^%1 {blow was deflected}.$} {handler_attack_incoming {%1} {%2}};
+#ACTION {^%1 {strike was ineffective}.$} {handler_attack_incoming {%1} {%2}};
+#ACTION {^%1 {bobble %* swing}.$} {handler_attack_incoming {%1} {%2}};
+#ACTION {^%1 {missed you}.$} {handler_attack_incoming {%1} {%2}};
+#ACTION {^%1 {struck, but did no damage to you}.$} {handler_attack_incoming {%1} {%2}};
+#ACTION {^%1 {tickled you in the stomach}.$} {handler_attack_incoming {%1} {%2}};
+#ACTION {^%1 {grazed you}.$} {handler_attack_incoming {%1} {%2}};
+#ACTION {^%1 {hit you}.$} {handler_attack_incoming {%1} {%2}};
+#ACTION {^%1 {hit you hard}.$} {handler_attack_incoming {%1} {%2}};
+#ACTION {^%1 {hit you very hard}.$} {handler_attack_incoming {%1} {%2}};
+#ACTION {^%1 {struck you a mighty blow}.$} {handler_attack_incoming {%1} {%2}};
+#ACTION {^%1 {smashed you with a bone crushing sound}.$} {handler_attack_incoming {%1} {%2}};
+#ACTION {^%1 {pulverized you with a powerful attack}.$} {handler_attack_incoming {%1} {%2}};
+#ACTION {^%1 {trounced you up and down}.$} {handler_attack_incoming {%1} {%2}};
+#ACTION {^%1 {pummeled you into small fragments}.$} {handler_attack_incoming {%1} {%2}};
+#ACTION {^%1 {massacred you into tiny fragments}.$} {handler_attack_incoming {%1} {%2}};
+#ACTION {^%1 {utterly annihilated you}.$} {handler_attack_incoming {%1} {%2}};
+#ACTION {^%1 {completely devastated you with awesome force}.$} {handler_attack_incoming {%1} {%2}};
+#ACTION {^%1 {destroyed you}.$} {handler_attack_incoming {%1} {%2}};
+#ACTION {^%1 {absolutely massacred you}.$} {handler_attack_incoming {%1} {%2}};
+#ACTION {^%1 {thrashed you completely}.$} {handler_attack_incoming {%1} {%2}};
+#ACTION {^%1 {demolished you}.$} {handler_attack_incoming {%1} {%2}};
+#ACTION {^%1 {nearly exterminated you}.$} {handler_attack_incoming {%1} {%2}};
+#ACTION {^%1 {obliterated you}.$} {handler_attack_incoming {%1} {%2}};
+#ACTION {^%1 {eradicated you}.$} {handler_attack_incoming {%1} {%2}};
+#ACTION {^%1 decimated you.} {handler_attack_incoming {%1} {%2}};
+#ACTION {^%1 {beat you like a rented mule}.$} {handler_attack_incoming {%1} {%2}};
+#ACTION {^%1 {exsanguinated you}.$} {handler_attack_incoming {%1} {%2}};
+#ACTION {^%1 {atomized you}.$} {handler_attack_incoming {%1} {%2}};
+#ACTION {^%1 {beat you like a red-headed step child}.$} {handler_attack_incoming {%1} {%2}};
+#ACTION {^%1 {drop-kicked you}.$} {handler_attack_incoming {%1} {%2}};
+
+#ALIAS {handler_attack_incoming}
+{
+    #LINE GAG;
+    .debug {COMBAT} {Attack Incoming: %1 %2};
+    #MATH {_combat[attacks][incoming]} {$_combat[attacks][incoming] + 1};    
+    event_raise {e_combat_attack_incoming} {%1} {%2} {%3};
+};
+
+#ACTION {^Your blow was deflected.$} {handler_attack_outgoing {%1}};
+#ACTION {^Your strike was ineffective.$} {handler_attack_outgoing {%1}};
+#ACTION {^You bobble your swing.$} {handler_attack_outgoing {%1}};
+#ACTION {^You missed %1.$} {handler_attack_outgoing {%1}};
+#ACTION {^You tickled %1 in the stomach.$} {handler_attack_outgoing {%1}};
+#ACTION {^You grazed %1.$} {handler_attack_outgoing {%1}};
+#ACTION {^You hit %1.} {handler_attack_outgoing {%1}};
+#ACTION {^You hit %1 hard.$} {handler_attack_outgoing {%1}};
+#ACTION {^You hit %1 very hard.$} {handler_attack_outgoing {%1}};
+#ACTION {^You struck %1 a mighty blow.$} {handler_attack_outgoing {%1}};
+#ACTION {^You smashed %1 with a bone crushing sound.$} {handler_attack_outgoing {%1}};
+#ACTION {^You pulverized %1 with a powerful attack.$} {handler_attack_outgoing {%1}};
+#ACTION {^You trounced %1 up and down.$} {handler_attack_outgoing {%1}};
+#ACTION {^You pummeled %1 into small fragments.$} {handler_attack_outgoing {%1}};
+#ACTION {^You massacred %1 into tiny fragments.$} {handler_attack_outgoing {%1}};
+#ACTION {^You utterly annihilated %1.$} {handler_attack_outgoing {%1}};
+#ACTION {^You completely devastated %1 with awesome force.$} {handler_attack_outgoing {%1}};
+#ACTION {^You destroyed %1.$} {handler_attack_outgoing {%1}};
+#ACTION {^You absolutely massacred %1.$} {handler_attack_outgoing {%1}};
+#ACTION {^You thrashed %1 completely.$} {handler_attack_outgoing {%1}};
+#ACTION {^You demolished %1.$} {handler_attack_outgoing {%1}};
+#ACTION {^You nearly exterminated %1.$} {handler_attack_outgoing {%1}};
+#ACTION {^You obliterated %1.$} {handler_attack_outgoing {%1}};
+#ACTION {^You eradicated %1.$} {handler_attack_outgoing {%1}};
+#ACTION {^You decimated %1.} {handler_attack_outgoing {%1}};
+#ACTION {^You beat %1 like a rented mule.$} {handler_attack_outgoing {%1}};
+#ACTION {^You exsanguinated %1.$} {handler_attack_outgoing {%1}};
+#ACTION {^You atomized %1.$} {handler_attack_outgoing {%1}};
+#ACTION {^You beat %1 like a red-headed step child.$} {handler_attack_outgoing {%1}};
+#ACTION {^You drop-kicked %1.$} {handler_attack_outgoing {%1}};
+
+#ALIAS {handler_attack_outgoing}
+{
+    #LINE GAG;
+    .debug {COMBAT} {Attack Outgoing: %1};    
+    #MATH {_combat[attacks][outgoing]} {$_combat[attacks][outgoing] + 1};    
+    event_raise {e_combat_attack_outgoing} {%1};
+};
 
 #ALIAS {handler_combat_start}
 {
     #IF {"%2" != ""}
     {
         #VAR {opponent} {};        
-        #VAR {opponent[regexp]} {@fGetNPCRegex{%2}};
-        #VAR {opponent[data]} {$_npc[$opponent[regexp]]};
+        #VAR {opponent[data]} {@fGetMapData{{_npc}{%2}}};
         #VAR {opponent[longname]} {%2};
         #ACTION {^{>\s|}{You've killed|(.*) dealt the killing blow to} %*.} 
         {
@@ -28,21 +98,36 @@
 };
 event_register {e_mip_FFF_K} {general.combat.tin} {handler_combat_start};
 
-#NOP **** Functions/Aliases ****
 #ALIAS {handler_combat}
 {
 	#NOP %1;
-	event_register e_killed_opponent h_combat_finished handler_combat_finished;
-	event_remove_specific e_combat h_combat;
+	event_register {e_killed_opponent}  {h_combat_finished} {handler_combat_finished};
+    event_register {e_mip_FFF_K}        {h_combat_check}    {handler_combat_check};
+    event_register {e_mip_FFF_L}        {h_combat_check}    {handler_combat_check};
+    event_register {e_mip_FFF_N}        {h_combat_check}    {handler_combat_check};
+    event_remove_specific e_combat h_combat;
 };
 event_register e_combat h_combat handler_combat;
+
+#ALIAS {handler_combat_check}
+{
+    #IF {"%2" == "" || "%2" == "0"}
+    {
+        handler_combat_finished;
+    };
+};
 
 #ALIAS {handler_combat_finished}
 {
     #NOP %1;
-    event_remove_specific e_killed_opponent h_combat_finished;
-    event_register e_combat h_combat handler_combat;
-    event_raise e_room_corpse;
+    event_remove_specific {e_mip_FFF_K}       {h_combat_check};
+    event_remove_specific {e_mip_FFF_L}       {h_combat_check};
+    event_remove_specific {e_mip_FFF_N}       {h_combat_check};    
+    event_remove_specific {e_killed_opponent} {h_combat_finished};
+    event_register        {e_combat}          {h_combat} {handler_combat};
+    event_raise           {e_room_corpse};
+    event_raise           {e_combat_finished};
+    #SEND {!glance};
     #BELL;
 };
 

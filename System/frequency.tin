@@ -1,0 +1,35 @@
+#NOP track frequency of events
+
+#NOP .record_frequency {type of occurrence} {item/source identifier} {time/round index} {index type (rounds/attacks/time etc)} {tracked value} 
+#ALIAS {.record_frequency}
+{
+    .debug FREQUENCY {%0};
+    #IF {"%1" == "" || "%2" == ""} {#RETURN};
+    #LOCAL {_flTemp[i]} {%3};
+    #CLASS {$path[profile]/frequency.tin} OPEN;
+
+    #MATH {_flTemp[dif]} {%3 - $_frequency[%1][%2][last]};
+    #LOCAL {_flTemp[dif]} {@fAbs{$_flTemp[dif]}};
+    #MATH {_flTemp[var]} {( $_frequency[%1][%2][avg_diff] - $_flTemp[dif] )};
+    #LOCAL {_flTemp[var]} {@fAbs{$_flTemp[var]}};
+    #MATH {_flTemp[var_limit]} {$_frequency[%1][%2][avg_diff] * 10};
+    #LOCAL {_flTemp[var_limit]} {@fAbs{$_flTemp[var_limit]}};
+
+    #IF {$_flTemp[var] < $_flTemp[var_limit] || &_frequency[%1][%2][avg_diff] == 0 || "$_frequency[%1][%2][avg_diff]" == "0" || "$_frequency[%1][%2][avg_diff]" == "0.000"}
+    {
+        #MATH {_flTemp[count]} {$_frequency[%1][%2][count] + 1};
+        #IF {"%5" != ""}
+        {
+            #MATH {_frequency[%1][%2][avg_value]} {( ( ( $_frequency[%1][%2][avg_value] * $_frequency[%1][%2][count] ) + %5 ) / $_flTemp[count] ) + 0.000};
+        };
+        #MATH {_frequency[%1][%2][avg_diff]} {( ( ( $_frequency[%1][%2][avg_diff] * $_frequency[%1][%2][count] ) + $_flTemp[dif] ) / $_flTemp[count] ) + 0.000};
+        #VAR {_frequency[%1][%2][count]} {$_flTemp[count]};
+    };
+
+    #VAR {_frequency[%1][%2][last]} {%3};
+    #VAR {_frequency[%1][%2][index_type]} {%4};
+
+    #CLASS {$path[profile]/frequency.tin} CLOSE;
+    #CLASS {$path[profile]/frequency.tin} WRITE {$path[profile]/frequency.tin};
+};
+

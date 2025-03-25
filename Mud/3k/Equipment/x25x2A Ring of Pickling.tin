@@ -1,4 +1,9 @@
 #GAG {^You burp.$};
 #GAG {^You hiccup.$};
 #GAG {^You feel drunk.$};
+#GAG {^You feel unbalanced.$};
 #GAG {^You feel a strange pulse of energy from the ring.$};
+#GAG {^You lift the drink to your mouth, but in your stomach$};
+#GAG {^you know you'll never be able to hold it down.$};
+
+ibrief on ring of pickling;

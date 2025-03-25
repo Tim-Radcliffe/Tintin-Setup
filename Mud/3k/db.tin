@@ -1,0 +1,449 @@
+#ALIAS {.dbNPCSave}
+{
+    #UNVAR dbSave;
+    #VAR {dbSave[data]} {%2};
+    #IF {"$dbSave[data][_area]" == ""} {#RETURN};
+    #VAR {dbSave[regexp]} {%1};
+    #IF {"$dbSave[regexp]" == ""} {#RETURN};
+    #VAR {dbSave[area]} {$dbSave[data][_area]};
+    #VAR {dbSave[id]} {$dbSave[data][id]};
+    #VAR {dbSave[name]} {$dbSave[data][name]};
+    #FOREACH {*dbSave[data][desc][]} {d}
+    {
+        #IF {"$dbSave[desc]" == ""}
+        {
+            #VAR {dbSave[desc]} {$dbSave[data][desc][$d]};
+        }
+        {
+            #VAR {dbSave[desc]} {$dbSave[desc]\n$dbSave[data][desc][$d]};
+        }
+    }
+
+    #IF {!@fIsNumber{*dbSave[data][size][+1]}}
+    {
+        #LOCAL {dbNPCSaveTemp} {$dbSave[data][size]};
+        #UNVAR {dbSave[data][size]};
+        #VAR {dbSave[data][size][0]} {$dbNPCSaveTemp};
+    };
+
+    #FOREACH {*dbSave[data][size][]} {dbSave[scaler]}
+    {
+        #IF {!@fIsNumber{$dbSave[scaler]}}
+        {
+            .log {add} {db_itemsave.log} {SCALER ERROR: $dbSave[area] : $dbSave[regexp] : $dbSave[scaler]}; 
+            #RETURN;                 
+        };
+        #VAR {dbSave[kills]}    {$dbSave[data][size][$dbSave[scaler]][kills]};
+        #VAR {dbSave[size_avg]} {$dbSave[data][size][$dbSave[scaler]][avg]};
+        #VAR {dbSave[size_min]} {$dbSave[data][size][$dbSave[scaler]][min]};
+        #VAR {dbSave[size_max]} {$dbSave[data][size][$dbSave[scaler]][max]};
+
+        db_submit {dbSave[result]}
+        {INSERT INTO npcs (areanum, scaler, regexpattern, id, name, description, alignment, undead, autokill, kills, size_avg, size_min, size_max) 
+        VALUES ( (SELECT recnum FROM areas WHERE path = '%s'), '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s')
+        ON DUPLICATE KEY UPDATE 
+        id          = '%s',
+        name        = '%s',
+        description = '%s',
+        alignment   = '%s',
+        undead      = '%s',
+        autokill    = '%s',
+        kills       = '%s',
+        size_avg    = '%s',
+        size_min    = '%s',
+        size_max    = '%s'
+        RETURNING recnum
+        }
+        {$dbSave[area]}
+        {$dbSave[scaler]}
+        {$dbSave[regexp]}
+        {$dbSave[id]}
+        {$dbSave[name]}
+        {$dbSave[desc]}
+        {$dbSave[data][alignment]}
+        {$dbSave[data][undead]}
+        {$dbSave[data][autokill]}
+        {$dbSave[kills]}
+        {$dbSave[size_avg]}
+        {$dbSave[size_min]}
+        {$dbSave[size_max]}
+        {$dbSave[id]}
+        {$dbSave[name]}
+        {$dbSave[desc]}
+        {$dbSave[data][alignment]}
+        {$dbSave[data][undead]}
+        {$dbSave[data][autokill]}
+        {$dbSave[kills]}
+        {$dbSave[size_avg]}
+        {$dbSave[size_min]}
+        {$dbSave[size_max]};
+        
+        #IF {$dbSave[result][1][recnum] > 0}
+        {
+            #FOREACH {*dbSave[data][defence][]} {dbSave[damagetype]}
+            {
+                db_submit {dbSave[result2]}
+                {
+                    INSERT INTO npcs_defence (objectnum, damagetype, value) 
+                    VALUES ('%s', (SELECT recnum FROM damage WHERE TYPE = '%s'), '%s')
+                    ON DUPLICATE KEY UPDATE value = '%s'
+                    RETURNING recnum
+                }
+                {$dbSave[result][1][recnum]}
+                {$dbSave[damagetype]}
+                {$dbSave[data][defence][$dbSave[damagetype]]}
+                {$dbSave[data][defence][$dbSave[damagetype]]};
+            };
+        }
+        {
+            .log {add} {db_itemsave.log} {FAIL: $dbSave[area] : $dbSave[regexp] : $dbSave[scaler]};        
+        }
+    }
+}
+
+
+
+#ALIAS {.dbItemSave}
+{
+
+    #UNVAR dbSave;
+    #VAR {dbSave[data]} {%2};
+    #IF {"$dbSave[data][_area]" == ""} {#RETURN};
+    #VAR {dbSave[regexp]} {%1};
+    #IF {"$dbSave[regexp]" == ""} {#RETURN};    
+    #VAR {dbSave[area]} {$dbSave[data][_area]};
+    #VAR {dbSave[id]} {$dbSave[data][id]};
+    #VAR {dbSave[name]} {$dbSave[data][name]};
+    #FOREACH {*dbSave[data][desc][]} {d}
+    {
+        #IF {"$dbSave[desc]" == ""}
+        {
+            #VAR {dbSave[desc]} {$dbSave[data][desc][$d]};
+        }
+        {
+            #VAR {dbSave[desc]} {$dbSave[desc]\n$dbSave[data][desc][$d]};
+        }
+    }
+    #FORMAT {dbSave[pickupLen]} {%L} {$dbSave[data][pickup]};
+    #IF {$dbSave[pickupLen] > 2} 
+    {
+        #VAR {dbSave[action]} {$dbSave[data][pickup]};
+    }
+    {
+        #VAR {dbSave[pickup]} {$dbSave[data][pickup]};
+    }
+    
+    #VAR {dbSave[type]} {$dbSave[data][type]};
+    #VAR {dbSave[weight]} {$dbSave[data][weight]};
+    #REPLACE {dbSave[regexp]} {x28} {(};
+    #REPLACE {dbSave[regexp]} {x29} {)};
+    #REPLACE {dbSave[regexp]} {x3C} {<};
+    #REPLACE {dbSave[regexp]} {x3E} {>};
+    #REPLACE {dbSave[regexp]} {x21} {!};
+    #REPLACE {dbSave[regexp]} {x3F} {?};
+    #REPLACE {dbSave[regexp]} {x2A} {*};
+    #REPLACE {dbSave[regexp]} {x25} {%};
+    #REPLACE {dbSave[regexp]} {x22} {"};
+
+    #VAR {dbSave[level]}     {$dbSave[data][level]};
+    #VAR {dbSave[binding]}   {$dbSave[data][binding]};
+    #VAR {dbSave[smd]}       {$dbSave[data][smd]};
+    #VAR {dbSave[block]}     {$dbSave[data][block]};
+
+    db_submit {dbSave[result]}
+    {INSERT INTO items (areanum, regexpattern, id, name, description, type, pickup, action, weight, level, binding, smd, block) 
+      VALUES ( (SELECT recnum FROM areas WHERE path = '%s'), '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s')
+      ON DUPLICATE KEY UPDATE 
+      id          = '%s',
+      name        = '%s',
+      description = '%s',
+      type        = '%s',
+      pickup      = '%s',
+      action      = '%s',
+      weight      = '%s',
+      level       = '%s',
+      binding     = '%s',
+      smd         = '%s',
+      block       = '%s'
+      RETURNING recnum
+    }
+    {$dbSave[area]}
+    {$dbSave[regexp]}
+    {$dbSave[id]}
+    {$dbSave[name]}
+    {$dbSave[desc]}
+    {$dbSave[type]}
+    {$dbSave[pickup]}
+    {$dbSave[action]}
+    {$dbSave[weight]}
+    {$dbSave[level]}
+    {$dbSave[binding]}
+    {$dbSave[smd]}
+    {$dbSave[block]}
+    {$dbSave[id]}
+    {$dbSave[name]}
+    {$dbSave[desc]}
+    {$dbSave[type]}
+    {$dbSave[pickup]}
+    {$dbSave[action]}
+    {$dbSave[weight]}
+    {$dbSave[level]}
+    {$dbSave[binding]}
+    {$dbSave[smd]}
+    {$dbSave[block]}; 
+   
+    #IF {$dbSave[result][1][recnum] > 0}
+    {
+        #VAR {dbSave[edged]}     {$dbSave[data][class][edged]};
+        #VAR {dbSave[blunt]}     {$dbSave[data][class][blunt]};
+        #VAR {dbSave[ice]}       {$dbSave[data][class][ice]};
+        #VAR {dbSave[fire]}      {$dbSave[data][class][fire]};
+        #VAR {dbSave[mind]}      {$dbSave[data][class][mind]};
+        #VAR {dbSave[electric]}  {$dbSave[data][class][electric]};
+        #VAR {dbSave[acid]}      {$dbSave[data][class][acid]};
+        #VAR {dbSave[poison]}    {$dbSave[data][class][poison]};
+        #VAR {dbSave[energy]}    {$dbSave[data][class][energy]};
+        #VAR {dbSave[radiation]} {$dbSave[data][class][radiation]};
+
+        #IF {"$dbSave[edged]" != ""  || "$dbSave[blunt]" != ""    ||
+             "$dbSave[ice]" != ""    || "$dbSave[fire]" != ""     ||
+             "$dbSave[mind]" != ""   || "$dbSave[electric]" != "" ||
+             "$dbSave[acid]" != ""   || "$dbSave[poison]" != ""   ||
+             "$dbSave[energy]" != "" || "$dbSave[radiation]" != ""}
+        {
+            db_submit {dbSave[result2]}
+            {
+                INSERT INTO items_class (itemnum, edged, blunt, ice, fire, mind, electric, acid, poison, energy, radiation)
+                VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s')
+            } 
+            {$dbSave[result][1][recnum]}
+            {$dbSave[edged]}
+            {$dbSave[blunt]}
+            {$dbSave[ice]}  
+            {$dbSave[fire]}
+            {$dbSave[mind]}
+            {$dbSave[electric]}
+            {$dbSave[acid]}
+            {$dbSave[poison]}
+            {$dbSave[energy]}  
+            {$dbSave[radiation]};
+        }
+    }
+    {
+        .log {add} {db_itemsave.log} {FAIL: $dbSave[area] : $dbSave[regexp]};
+    };
+}
+
+
+
+#NOP .dbLocationSave {area} {object type} {objectregexp} {roomnum}
+#ALIAS {.dbLocationSave}
+{
+    #IF {"%1" == "" || "%2" == "" || "%3" == "" || "%4" == ""} {#RETURN;}
+    #LOCAL {dbSave} {};
+
+    db_submit {dbSave[areanum]} 
+    {
+        SELECT recnum FROM areas WHERE path = '%s'
+    } {%1};
+
+    #LOCAL {dbSave[areanum]} {$dbSave[areanum][1][recnum]};
+
+    #SWITCH {"%2"} {
+        #CASE {"item"} 
+        {
+            db_submit {dbSave[objectnum]}
+            {
+                SELECT recnum FROM items WHERE areanum = '%s' AND regexpattern = '%s'
+            } 
+            {$dbSave[areanum]} {%3};
+        }
+        #CASE {"npc"} 
+        {
+            db_submit {dbSave[objectnum]}
+            {
+                SELECT recnum FROM npcs WHERE areanum = '%s' AND regexpattern = '%s'
+            } 
+            {$dbSave[areanum]} {%3};
+        }
+    };
+
+    #LOCAL {dbSave[objectnum]} {$dbSave[objectnum][1][recnum]};
+
+    #IF {"$dbSave[areanum]" == "" || "$dbSave[objectnum]" == ""} {#RETURN};
+
+    db_submit {dbSave[result]} 
+    {
+        INSERT INTO locations (areanum, objecttype, objectnum, location)
+        VALUES ('%s', '%s', '%s', '%s') ON DUPLICATE KEY UPDATE areanum = areanum
+    } {$dbSave[areanum]} {%2} {$dbSave[objectnum]} {%4};
+
+}
+
+#NOP .dbItemFind {area} {item name};
+#ALIAS {.dbItemSearch}
+{
+    #LOCAL {dbItem} {@fDBItemSearch{{%1}{%2}}};
+    #LOCAL {dbItem};
+}
+
+#NOP #VAR returnvariable {@fDbItemFind{{area}{item name}}};
+#FUNCTION {fDBItemSearch}
+{
+    #LOCAL {dbItemSearch};
+    #LOCAL {dbItemSearch[options]} {'global', '$my[guild]', '%1'};
+    db_submit {dbItemSearch[result]} 
+    {
+        SELECT items.*, areas.path 
+        FROM items INNER JOIN areas ON items.areanum = areas.recnum 
+        WHERE '%s' REGEXP items.regexpattern 
+    } {%2} {$dbItemSearch[options]};
+    #LIST {dbItemSearch[result]} INDEXATE {path};
+    #LIST {dbItemSearch[result]} REFINE {"&0" == "global" || "&0" == "$my[guild]" || "&0" == "%1"};
+    #RETURN {$dbItemSearch[result]};
+}
+
+#NOP #VAR returnvariable {@fDbNPCFind{{area}{npc name}}};
+#FUNCTION {fDBNPCSearch}
+{
+    #LOCAL {dbNPCSearch};
+    #LOCAL {dbNPCSearch[options]} {'global', '$my[guild]', '%1'};
+    db_submit {dbNPCSearch[result]} 
+    {
+        SELECT npcs.*, areas.path 
+        FROM npcs INNER JOIN areas ON npcs.areanum = areas.recnum 
+        WHERE '%s' REGEXP npcs.regexpattern 
+    } {%2} {$dbNPCSearch[options]};
+    #LIST {dbNPCSearch[result]} INDEXATE {path};
+    #LIST {dbNPCSearch[result]} REFINE {"&0" == "global" || "&0" == "$my[guild]" || "&0" == "%1"};    
+    #RETURN {$dbNPCSearch[result]};
+}
+
+#ALIAS {.dbItemStore}
+{
+    #IF {&{_item} < 1} {#RETURN};
+    #FOREACH {*_item[]} {a} 
+    {
+        #FOREACH {*_item[$a][]} {i} 
+        {
+            .scanRoomItemParse {_item[$a][$i]};        
+            .dbItemSave {$i} {$_item[$a][$i]};
+            #FOREACH {*_item[$a][$i][location][]} {l}
+            {
+                #FOREACH {*_item[$a][$i][location][$l][]} {n}
+                {
+                    .dbLocationSave {$l} {item} {$i} {$n};
+                }
+            }
+        }
+    }
+}
+
+#ALIAS {.dbRating}
+{
+    #LOCAL {_dbRating[input]} {%4};
+    #IF {"$map[area][path]" == ""} {#RETURN;}
+    db_submit {_dbRating[old]} {select * from areas where name = '%s'} {$_dbRating[input][name]};
+    #FOREACH {*_dbRating[old]} {_dbRating[field]}
+    {
+        #LOCAL {_dbRating[input][$_dbRating[field]]} {$_dbRating[old][$_dbRating[field]]};
+    };
+    db_submit {_dbRating[result]}
+    {INSERT INTO areas (path, name, realm, rooms, wizard, npc_min, npc_max, dungeon, scaling) 
+        VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s')
+        ON DUPLICATE KEY UPDATE
+        name    = '%s',
+        realm   = '%s',
+        rooms   = '%s',
+        wizard  = '%s',
+        npc_min = '%s',
+        npc_max = '%s',
+        dungeon = '%s',
+        scaling = '%s'}
+    {$map[area][path]}
+    {$_dbRating[input][name]}
+    {$_dbRating[input][realm]}
+    {$_dbRating[input][rooms]}
+    {$_dbRating[input][wiz]}
+    {$_dbRating[input][npc_min]}
+    {$_dbRating[input][npc_max]}
+    {$_dbRating[input][dungeon]}
+    {$_dbRating[input][scaling]}
+    {$_dbRating[input][name]}
+    {$_dbRating[input][realm]}
+    {$_dbRating[input][rooms]}
+    {$_dbRating[input][wiz]}
+    {$_dbRating[input][npc_min]}
+    {$_dbRating[input][npc_max]}
+    {$_dbRating[input][dungeon]}
+    {$_dbRating[input][scaling]};
+};
+event_register {e_command_rating} {dbScripts.tin} {.dbRating};
+
+#ALIAS {.dbPreload}
+{
+
+    db_submit {dbPreload[result]} {INSERT INTO areas (path) VALUES ('%s')} {global};
+
+    #LINE SUBSTITUTE VARIABLES {#SCRIPT {dbPreload[dirListing]} {find $path[areas] -type d -printf "%P\n"};};
+    
+    #TICKER {dbPreloadTicker} 
+    {
+        #IF {&dbPreload[dirListing] < 1} 
+        {
+            #UNTICKER {dbPreloadTicker};
+        }
+        {
+            #LOCAL {dbTick} {$dbPreload[dirListing][1]};
+            #ECHO {$dbTick};
+            .log {add} {dbpreload.log} {Area: $dbTick};
+            #LIST {dbPreload[dirListing]} {DELETE} {1};
+            db_submit {dbPreload[result]} {INSERT IGNORE INTO areas (path) VALUES ('%s')} {$dbTick};
+            #UNVAR {_mapVariable};
+            .file loadall {$path[areas]/$dbTick/*.tin};
+            #FOREACH {*_mapVariable[]} {v}
+            {
+                #CAT {${v}[$dbTick]} {$_mapVariable[$v]};
+            };
+            #DELAY {0.5} 
+            {
+                #IF {&{_item} > 0} 
+                {
+                    #FOREACH {*_item[]} {dbPreload[a]} 
+                    {
+                        #FOREACH {*_item[$dbPreload[a]][]} {dbPreload[i]} 
+                        {
+                            .log {add} {dbpreload.log} {ITEM: $dbPreload[i]};
+                            .scanRoomItemParse {_item[$dbPreload[a]][$dbPreload[i]]};
+                            .dbItemSave {$dbPreload[i]} {$_item[$dbPreload[a]][$dbPreload[i]]};                       
+                            #FOREACH {*_item[$dbPreload[a]][$dbPreload[i]][location][]} {l}
+                            {
+                                #FOREACH {*_item[$dbPreload[a]][$dbPreload[i]][location][$l][]} {n}
+                                {
+                                    .dbLocationSave {$l} {item} {$dbPreload[i]} {$n};
+                                };
+                            };
+                        };
+                    };
+                };
+                #IF {&{_npc} > 0}
+                {
+                    #FOREACH {*_npc[]} {dbPreload[a]} 
+                    {
+                        #FOREACH {*_npc[$dbPreload[a]][]} {dbPreload[i]} 
+                        {
+                            .log {add} {dbpreload.log} {NPC: $dbPreload[i]};
+                            #FOREACH {*_npc[$dbPreload[a]][$dbPreload[i]][vulnerabilities][]} {dbPreload[type]}
+                            {
+                                #MATH {_npc[$dbPreload[a]][$dbPreload[i]][defence][$dbPreload[type]]} {100 - $_npc[$dbPreload[a]][$dbPreload[i]][vulnerabilities][$dbPreload[type]]};
+                            };
+                            .dbNPCSave {$dbPreload[i]} {$_npc[$dbPreload[a]][$dbPreload[i]]};                                                       
+                        };                                  
+                    };
+                };
+                #UNVAR {_item};
+                #UNVAR {_npc};                
+            };
+        };
+    } {2};
+}

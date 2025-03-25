@@ -11,6 +11,10 @@
         #LOCAL {_hRP[data]} {%5};
         #IF {&_hRP[data][] != 0}
         {
+            #IF {"$_hRP[data][action]" != ""}
+            {
+                #VAR {_hRP[data][pickup]} {$_hRP[data][action]};
+            };
             #SWITCH {"$_hRP[data][pickup]"}
             {
                 #CASE {"-1"}

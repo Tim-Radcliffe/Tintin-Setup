@@ -1,4 +1,4 @@
-#VAR {_npc[^\w+, \w+'s .+$]}
+#VAR {_npc[global][^\w+, \w+'s .+$]}
 {
 	@fFormatNPCData{
 		{_area} {global}
@@ -6,7 +6,7 @@
 		{autokill} {-1}
 	}
 };
-#VAR {_npc[^A tank named]}
+#VAR {_npc[global][^A tank named]}
 {
 	@fFormatNPCData{
 		{_area} {global}
@@ -14,7 +14,7 @@
 		{autokill} {-1}
 	}
 };
-#VAR {_npc[^A cargo truck$]}
+#VAR {_npc[global][^A cargo truck$]}
 {
 	@fFormatNPCData{
 		{_area} {global}
@@ -39,7 +39,7 @@
 		}
 	}
 };
-#VAR {_npc[^.+ \(bound by \w+)$]}
+#VAR {_npc[global][^.+ \(bound by \w+)$]}
 {
 	@fFormatNPCData{
 		{_area} {global}
@@ -47,7 +47,7 @@
 		{autokill} {-1}
 	}
 };
-#VAR {_npc[Jugger Support Mech]}
+#VAR {_npc[global][Jugger Support Mech]}
 {
 	@fFormatNPCData{
 		{_area} {global}
@@ -55,7 +55,7 @@
 		{autokill} {-1}
 	}
 };
-#VAR {_npc[esquire]}
+#VAR {_npc[global][esquire]}
 {
 	@fFormatNPCData{
 		{_area} {global}
@@ -63,7 +63,7 @@
 		{autokill} {-1}
 	}
 };
-#VAR {_npc[the {Bayen|Bolwyn|Ghast|Greesh|Grimare|Heucuva|Manshi|Mohrg|Quarin|Skeleton|Tholen|Valithyn|Valpur|Wight|Zombie}]}
+#VAR {_npc[global][the {Bayen|Bolwyn|Ghast|Greesh|Grimare|Heucuva|Manshi|Mohrg|Quarin|Skeleton|Tholen|Valithyn|Valpur|Wight|Zombie}]}
 {
 	@fFormatNPCData{
 		{_area} {global}
@@ -96,7 +96,7 @@
 		{undead} {1}
 	}
 };
-#VAR {_npc[the packmule]}
+#VAR {_npc[global][the packmule]}
 {
 	@fFormatNPCData{
 		{_area} {global}
@@ -104,7 +104,7 @@
 		{autokill} {-1}
 	}
 };
-#VAR {_npc[under the control of]}
+#VAR {_npc[global][under the control of]}
 {
 	@fFormatNPCData{
 		{_area} {global}
@@ -138,7 +138,7 @@
 		{undead} {1}
 	}
 };
-#VAR {_npc[^Vilgan$]}
+#VAR {_npc[global][^Vilgan$]}
 {
 	@fFormatNPCData{
 		{_area} {global}

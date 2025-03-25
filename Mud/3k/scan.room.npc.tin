@@ -1,72 +1,72 @@
 #ALIAS {.scanRoomNPC}
 {
 	#IF {@fLocked{scan.%*}} {#RETURN};
-	#LOCAL {_sRN[match]} {%6};
-	#IF {"$_npc[$_sRN[match]][nomap]" == "1"}
-	{
-		#RETURN;
-	}
+    #LOCAL {_sRN[data]} {%5};
+	#LOCAL {_sRN[match]} {$_sRN[data][path]};
+	#IF {"%5[nomap]" == "1"} {#RETURN};
+    .debug SCAN {NPC: $_sRN[match]};    
 	#FORMAT {_sRN[hash]} {%H} {$_sRN[match]};
-    #LINE SUBSTITUTE VARIABLES {.RoomAddCommand {#VAR {_npc[$_sRN[match]]} {@fFormatNPCData{$_npc[$_sRN[match]]}}} {3}};
-	#LINE SUBSTITUTE VARIABLES {.RoomAddCommand {.scanRoomNPCID       {$_sRN[match]} {%3} {%2}} {3}};
-	#LINE SUBSTITUTE VARIABLES {.RoomAddCommand {.scanRoomNPCDesc     {$_sRN[match]} {%3} {%2} {$_sRN[hash]}} {3}};
-	#LINE SUBSTITUTE VARIABLES {.RoomAddCommand {.scanRoomNPCLocation {$_sRN[match]}} {3}};
-	#LINE SUBSTITUTE VARIABLES {.RoomAddCommand {.scanRoomNPCConsider {$_sRN[match]} {%3} {%2} {$_sRN[hash]}} {3}};
-	#LINE SUBSTITUTE VARIABLES {.RoomAddCommand {event_raise {e_scan_room_npc} {$_sRN[match]} {%3} {%2} {$_sRN[hash]}} {4}};
+    #VAR {%7[hash]} {$_sRN[hash]};
+#NOP    #LINE SUBSTITUTE VARIABLES {.RoomAddCommand {#VAR {_npc[$_sRN[match]]} {@fFormatNPCData{$_npc[$_sRN[match]]}}} {3}};
+	#LINE SUBSTITUTE VARIABLES {.RoomAddCommand {.scanRoomNPCID       {%7}} {3}};
+	#LINE SUBSTITUTE VARIABLES {.RoomAddCommand {.scanRoomNPCDesc     {%7}} {3}};
+	#LINE SUBSTITUTE VARIABLES {.RoomAddCommand {.scanRoomNPCLocation {$_sRN[match]} {%6}} {3}};
+	#LINE SUBSTITUTE VARIABLES {.RoomAddCommand {.scanRoomNPCConsider {$_sRN[match]} {%3} {%2} {$_sRN[hash]} {%6}} {3}};
+	#LINE SUBSTITUTE VARIABLES {.RoomAddCommand {event_raise {e_scan_room_npc} {$_sRN[match]} {%3} {%2} {$_sRN[hash]} {%6}} {4}};
 };
 event_register {e_room_npc} {h_scan_npc} {.scanRoomNPC};
 
 #ALIAS {.scanRoomNPCID}
 {
-	#IF {"$_npc[%1][id]" == ""}
+	#IF {"%1" != "" && ( &%1[data][id] == 0 || "$%1[data][id]" == "" ) }
 	{
-		#VAR {_npc[%1][id]} {%3};
-		#VAR {_npc[%1][name]} {%2};
-		.scanRoomNPCSave {%1};
+		#VAR {$%1[data][id]} {$%1[id]};
+		#VAR {$%1[data][name]} {$%1[name]};
+		.scanRoomNPCSave {$%1[data][regexp]};
 	};
 };
 
 #ALIAS {.scanRoomNPCDesc}
 {
 	#LOCAL {_sRND} {};
-	#CLASS {cScanNPC%4} SIZE {_sRND};
+	#CLASS {cScanNPC$%1[hash]} SIZE {_sRND};
 	#IF {$_sRND == 0}
 	{
-		#CLASS {cScanNPC%4} {kill};
-		#IF {&_npc[%1][desc][] == 0}
+		#CLASS {cScanNPC$%1[hash]} {kill};
+		#IF {"$%1[data][description]" == ""}
 		{
-			#CLASS {cScanNPC%4} {assign}
+			#CLASS {cScanNPC$%1[hash]} {assign}
 			{
-				#ACTION {_scan.room.npc.desc.%4}
+				#ACTION {_scan.room.npc.desc.$%1[hash]}
 				{
 					#LINE GAG;
-					#CLASS {cScanNPC%4} {assign}
+					#CLASS {cScanNPC$%1[hash]} {assign}
 					{
 						#ACTION {{^(.*$)}}
 						{
-							#LIST {_npc[%1][desc]} {add} {%%%0};
+							#LIST {%1[data][desc]} {add} {%%%0};
 						} {2};
 					};
 				} {1};
 
-				#ACTION {_scan.room.npc.desc.end.%4}
+				#ACTION {_scan.room.npc.desc.end.$%1[hash]}
 				{
 					#LINE GAG;
-					#CLASS {cScanNPC%4} {kill};
-					.scanRoomNPCSave {%1};
+					#CLASS {cScanNPC$%1[hash]} {kill};
+					.scanRoomNPCSave {$%1[data][regexp]};
 				} {1};
 			};
 
-			#SEND {!_scan.room.npc.desc.%4};
-			#IF {&_npc[%1][id] > 0}
+			#SEND {!_scan.room.npc.desc.$%1[hash]};
+			#IF {&%1[id] > 0}
 			{
-				#SEND {!exa $_npc[%1][id]};
+				#SEND {!exa $%1[id]};
 			};
 			#ELSE
 			{
-				#SEND {!exa %3};
+				#SEND {!exa $%1[name]};
 			};
-			#SEND {!_scan.room.npc.desc.end.%4};
+			#SEND {!_scan.room.npc.desc.end.$%1[hash]};
 		};
 	};
 };
@@ -75,20 +75,17 @@ event_register {e_room_npc} {h_scan_npc} {.scanRoomNPC};
 {
 	#IF {&map[area][path] > 0}
 	{
-		#IF {"$_npc[%1][_area]" == ""}
+		#IF {"$%1[data][_area]" == ""}
 		{
-			#VAR {_npc[%1][_area]} {$map[area][path]};
-		};
+			#VAR {%1[data][_area]} {$map[area][path]};
+			.scanRoomNPCSave {$%1[data][regexp]};
+        };
 		#LOCAL {_scanRoomVnum} {};
 		#MAP GET ROOMVNUM {_scanRoomVnum};
-		#IF {&_npc[%1][location][$map[area][path]][$_scanRoomVnum] == 0}
+		#IF {&%1[location][$map[area][path]][$_scanRoomVnum] == 0}
 		{
-			#VAR {_npc[%1][location][$map[area][path]][$_scanRoomVnum]} {};
-			#IF {&_area_npc_index[%1][$map[area][path]] == 0}
-			{
-				#VAR {_area_npc_index[%1][$map[area][path]]} {$_scanRoomVnum};
-			};
-			.scanRoomNPCSave {%1};
+			#VAR {%1[location][$map[area][path]][$_scanRoomVnum]} {};
+			.scanRoomNPCSave {$%1[data][regexp]};            
 		};
 	};
 };
@@ -99,23 +96,23 @@ event_register {e_room_npc} {h_scan_npc} {.scanRoomNPC};
 	{
 		#VAR {map[area][scaler]} {0};
 	};
-	#IF {"&_npc[%1][size][$map[area][scaler]][consider]" == "0"}
+	#IF {"&%1[size][$map[area][scaler]][consider]" == "0"}
 	{
 		#ACTION {_scan.room.npc.consider.%4}
 		{
 			#LINE GAG;
 			#ACTION {^Monster class: %*$}
 			{
-				#VAR {_npc[%1][size][$map[area][scaler]][consider]} {%%%1};
-				.scanRoomNPCSave {%1};
+				#VAR {%1[size][$map[area][scaler]][consider]} {%%%1};
+				.scanRoomNPCSave {%5};
 				#UNACTION {^Monster class: %*$};
 			};
 			#UNACTION {_scan.room.npc.consider.%4};
 		} {1};
 		#SEND {!_scan.room.npc.consider.%4};
-		#IF {&_npc[%1][id] > 0}
+		#IF {&%1[id] > 0}
 		{
-			#SEND {!consider $_npc[%1][id]};
+			#SEND {!consider $%1[id]};
 		};
 		#ELSE
 		{
@@ -126,35 +123,11 @@ event_register {e_room_npc} {h_scan_npc} {.scanRoomNPC};
 
 #ALIAS {.scanRoomNPCSave}
 {
-	#IF {"$_npc[%1][nomap]" != "1" && &map[area][path] > 0}
+	#IF {"$_npc[$map[area][path]][%1][nomap]" != "1" && &map[area][path] > 0}
 	{
-		.mapVariable add {_npc} {%1} {$_npc[%1]};
+        .debug SCAN {NPC save: %1};
+		.mapVariable add {_npc} {%1} {$_npc[$map[area][path]][%1]};
 	};
-};
-
-#FUNCTION {fGetNPCRegex}
-{
-	#UNVAR {_fGNR};
-	#VAR {_fGNR[input]} {%1};
-	#REGEXP {$_fGNR[input]} {{^(.+?)(\s\<[.?*!^]+\>)?(\(demoralized\))?(\s\[(scratched|wounded|dying)\])?(\sattacking you!)?$}}
-	{
-		#VAR {_fGNR[input]} {&2};
-	};
-	#FOREACH {*_npc[%*]} {_fGNR[regexp]}
-	{
-		#LINE SUBSTITUTE {variables}
-		{
-			#REGEXP {$_fGNR[input]} {{$_fGNR[regexp]}}
-			{
-				#VAR {_fGNR[match]} {1};
-			};
-		};
-		#IF {"$_fGNR[match]" == "1"}
-		{
-			#RETURN {$_fGNR[regexp]};
-		};
-	};
-	#RETURN {^@fEscapeString{$_fGNR[input]}$};
 };
 
 #FUNCTION {fFormatNPCData}

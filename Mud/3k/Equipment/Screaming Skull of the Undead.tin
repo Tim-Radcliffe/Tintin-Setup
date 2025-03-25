@@ -1,4 +1,4 @@
-#VAR {_item[^Screaming Skull of the Undead$]} 
+#VAR {_item[global][^Screaming Skull of the Undead$]} 
 {
     {_area} {global}
     {desc} 

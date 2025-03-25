@@ -1,2 +1,10 @@
-#GAG {^Light flashes off your ring, briefly distracting %*};
-#GAG {^A flare of light from your ring puts %*};
+#ACTION {^Light flashes off your ring, briefly distracting %*}
+{
+    .record_frequency {BLOCK} {A black onyx ring} {$_combat[attacks][incoming]} {incoming attacks};
+    #LINE GAG;
+};
+#ACTION {^A flare of light from your ring puts %*}
+{
+    .record_frequency {BLOCK} {A black onyx ring} {$_combat[attacks][incoming]} {incoming attacks};
+    #LINE GAG;
+};

@@ -1,0 +1,45 @@
+#IF {@fStringContains{{pure}{$my[necromancer][title]}} && $my[necromancer][circle] >= 38}
+{
+    #ALIAS {skullfire}
+    {
+        #CLASS {necromancer_skullfire} ASSIGN
+        {
+            #GAG {^Your eyes glow with a powerful, crimson light.$};
+            #ACTION {^You raise your palm forward and a %w, crimson skull}
+            {
+                #MATH {my[necromancer][soulbound]} {$my[necromancer][soulbound] - 1};
+                #LINE GAG 4;
+            };
+
+            #ACTION {^You stumble a moment as the connection to the energy planes subsides.}
+            {
+                #CLASS {necromancer_skullfire} KILL;
+            };
+        };
+        #VAR {my[necromancer][skullfire][ready]} {0};
+        #SEND {!skullfire %0}; 
+    };
+    
+    #ALIAS {handler_auto_skullfire}
+    {
+        #NOP %1;
+        #SWITCH {"%1"}
+        {
+            #CASE {"e_combat"}
+            {
+                #IF {$my[necromancer][soulbound] >= 7 && $my[necromancer][skullfire][ready]}
+                {
+                    skullfire;
+                };
+            };
+            #CASE {"e_mip_FFF_G"}
+            {
+                #IF {"%2" == "0"}
+                {
+                    #VAR {my[necromancer][skullfire][ready]} {1};
+                };
+            };
+        };
+    };
+    auto {add} {skullfire} {} {e_combat;e_mip_FFF_G} {};
+};

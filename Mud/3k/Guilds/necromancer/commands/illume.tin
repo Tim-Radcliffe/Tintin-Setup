@@ -1,0 +1,16 @@
+#ALIAS {illume}
+{
+    #CLASS {necromancer_illume} {ASSIGN}
+    {
+        #IF {"$auto[necrogag][status]" == "1"} 
+        {
+            #GAG {^You call upon the material planes of energy to power your soul!$};
+            #ACTION {^The magical illumination fades from your body.$}
+            {
+                #LINE GAG;
+                #CLASS {necromancer_illume} {KILL};
+            };
+        };
+    };
+    #SEND {!illume};
+};

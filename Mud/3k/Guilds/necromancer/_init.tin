@@ -1,0 +1,3 @@
+#NOP Necro Initialisation script - fires on load;
+
+.file loadall {$path[guild]/commands/*.tin};

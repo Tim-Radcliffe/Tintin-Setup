@@ -8,10 +8,12 @@
 .SetPath {equipment}   {$path[mud]/Equipment};
 .SetPath {professions} {$path[mud]/Professions};
 .SetPath {hm}          {$path[mud]/Highmortal};
+.SetPath {skills}      {$path[mud]/Skills};
 
 .file loadall {$path[commands]/*.tin};
 .file loadall {$path[guild]/*.tin};
 .file loadall {$path[hm]/*.tin};
+.file loadall {$path[skills]/*.tin};
 
 #IF {$my[level] > 110}
 {

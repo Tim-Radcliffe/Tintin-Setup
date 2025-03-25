@@ -5,24 +5,24 @@
 	#IF {"%2" != ""}
 	{
 		#VAR {_hADS} {};
-		#VAR {_hADS[regex]} {@fGetNPCRegex{%3}};
+		#VAR {_hADS[data]} {@fGetMapData{{_npc}{%3}}};
 		#IF {&map[area][scaler] == 0}
 		{
 			scaler
 		};
 		#ACTION {^{\s+1\).{20}\s+(\d+)\s+\*(.*)}$}
 		{
-			#IF {&_npc[${_hADS[regex]}][size][$map[area][scaler]][] <= 0 || "$_npc[${_hADS[regex]}][size][$map[area][scaler]][min]" == ""} 
+			#IF {&${_hADS[data][path]}[size][$map[area][scaler]][] <= 0 || "$${_hADS[data][path]}[size][$map[area][scaler]][min]" == ""} 
 			{
-				#VAR {_npc[${_hADS[regex]}][size][$map[area][scaler]][min]} {%%2};
-				#VAR {_npc[${_hADS[regex]}][size][$map[area][scaler]][max]} {%%2};
-				#VAR {_npc[${_hADS[regex]}][size][$map[area][scaler]][avg]} {0};
-				#VAR {_npc[${_hADS[regex]}][size][$map[area][scaler]][kills]} {0};
+				#VAR {${_hADS[data][path]}[size][$map[area][scaler]][min]} {%%2};
+				#VAR {${_hADS[data][path]}[size][$map[area][scaler]][max]} {%%2};
+				#VAR {${_hADS[data][path]}[size][$map[area][scaler]][avg]} {0};
+				#VAR {${_hADS[data][path]}[size][$map[area][scaler]][kills]} {0};
 			};
-			#MATH {_npc[${_hADS[regex]}][size][$map[area][scaler]][avg]} {(($_npc[${_hADS[regex]}][size][$map[area][scaler]][avg] * $_npc[${_hADS[regex]}][size][$map[area][scaler]][kills]) + %%2) / ($_npc[${_hADS[regex]}][size][$map[area][scaler]][kills] + 1)};
-			#MATH {_npc[${_hADS[regex]}][size][$map[area][scaler]][kills]} {$_npc[${_hADS[regex]}][size][$map[area][scaler]][kills] + 1};
-			#VAR {_npc[${_hADS[regex]}][size][$map[area][scaler]][min]} @fMin{{$_npc[${_hADS[regex]}][size][$map[area][scaler]][min]}{%%2}};
-			#VAR {_npc[${_hADS[regex]}][size][$map[area][scaler]][max]} @fMax{{$_npc[${_hADS[regex]}][size][$map[area][scaler]][max]}{%%2}};
+			#MATH {${_hADS[data][path]}[size][$map[area][scaler]][avg]} {(($${_hADS[data][path]}[size][$map[area][scaler]][avg] * $${_hADS[data][path]}[size][$map[area][scaler]][kills]) + %%2) / ($${_hADS[data][path]}[size][$map[area][scaler]][kills] + 1)};
+			#MATH {${_hADS[data][path]}[size][$map[area][scaler]][kills]} {$${_hADS[data][path]}[size][$map[area][scaler]][kills] + 1};
+			#VAR {${_hADS[data][path]}[size][$map[area][scaler]][min]} @fMin{{$${_hADS[data][path]}[size][$map[area][scaler]][min]}{%%2}};
+			#VAR {${_hADS[data][path]}[size][$map[area][scaler]][max]} @fMax{{$${_hADS[data][path]}[size][$map[area][scaler]][max]}{%%2}};
 			.scanRoomNPCSave {$_hADS[regex]};			
 			#UNACTION {^{\s+1\).{20}\s+(\d+)\s+\*(.*)}$};
 		} {3};

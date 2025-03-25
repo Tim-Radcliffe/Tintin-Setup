@@ -1,4 +1,14 @@
 #NOP /* Convert a Comma Separated Value (CSV) stream to a Tintin associative array */
+
+#FUNCTION {fParseCSV}
+{
+    #LOCAL {_fCSV} {};
+    #LOCAL {_fCSV[source]} {%1};
+    #IF {}
+    #LOCAL {_fCSV[separator]} {%2};
+};
+
+
 #FUNCTION {fCSVin}
 {
   #NOP %1;
