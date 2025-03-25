@@ -25,36 +25,37 @@
 		#CASE {"train"}
 		{
 			#ECHO {Checking satchel for ingredients that will give PXP:};
-			#FOREACH {*craft_ingredients[]} {i}
-			{
-				#IF { $my[professions][transmuter][level] >= $craft_ingredients[$i][level][Transmuter][min] &&
-				      $my[professions][transmuter][level] <= $craft_ingredients[$i][level][Transmuter][max] }
-				{
-					#ECHO {$i};
-					#FOREACH {*_t[data][]} {q}
-					{
-						#IF {$_craft[satchel][$i][subtotal][$_t[data][$q][quality]] >= $_t[data][$q][quantity]}
-						{
-							.transmute $q $i;
-						};
-					};
-				};
-			};
+
+            #FOREACH {*_craft[satchel][]} {_t[i]}
+            {
+                #FOREACH {*_t[data][]} {_t[q]}
+                {                
+                    #IF {$_craft[satchel][$_t[i]][subtotal][$_t[data][$_t[q]][quality]] >= $_t[data][$_t[q]][quantity]}
+                    {
+                        #IF {@fCheckCraftTrainingLevel{{$_t[i]}{Transmuter}{$my[professions][transmuter][level]}}}
+                        {       
+                            .transmute $_t[q] $_t[i];
+                        };
+                    };
+                }; 
+            };            
 		};
 		#CASE {"refine"}
 		{
 			#ECHO {Refining satchel ingredients:};
-			#FOREACH {*craft_ingredients[]} {i}
-			{
-				#IF { $my[professions][transmuter][level] >= $craft_ingredients[$i][level][Transmuter][min] }				
-				#FOREACH {*_t[data][]} {q}
-				{
-					#IF {$_craft[satchel][$i][subtotal][$_t[data][$q][quality]] >= $_t[data][$q][quantity]}
-					{
-						.transmute $q $i;
-					};
-				};
-			};
+            #FOREACH {*_craft[satchel][]} {_t[i]}
+            {
+                #FOREACH {*_t[data][]} {_t[q]}
+                {                
+                    #IF {$_craft[satchel][$_t[i]][subtotal][$_t[data][$_t[q]][quality]] >= $_t[data][$_t[q]][quantity]}
+                    {
+                        #IF {@fCheckCraftLevel{{$_t[i]}{Transmuter}{$my[professions][transmuter][level]}}}
+                        {       
+                            .transmute $_t[q] $_t[i];
+                        };
+                    };
+                }; 
+            };     
 		};
 		#DEFAULT 
 		{

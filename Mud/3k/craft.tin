@@ -267,3 +267,28 @@
 #VAR {path[craft]} {$path[mud]/Craft};
 .file load {$path[craft]/tomes.tin};
 auto add {farm} {.file load {$path[craft]/farm.tin}} {} {#CLASS {$path[craft]/farm.tin} {kill}};
+
+
+#NOP @fCheckCraftLevel{ {ingredient} {craft} {level} }
+#FUNCTION {fCheckCraftLevel}
+{
+    db_submit {result} 
+    {
+        SELECT 1 
+        FROM craft_ingredients 
+        WHERE ingredient = '%s' AND craft = '%s' AND min <= '%s'
+    } {%1} {%2} {%3};
+    #IF {"$result" != ""} {#VAR {result} {1}} {#VAR {result} {0}};
+}
+
+#NOP @fCheckCraftTrainingLevel{ {ingredient} {craft} {level} }
+#FUNCTION {fCheckCraftTrainingLevel}
+{
+    db_submit {result} 
+    {
+        SELECT 1 
+        FROM craft_ingredients 
+        WHERE ingredient = '%s' AND craft = '%s' AND min <= '%s' AND max >= '%s'
+    } {%1} {%2} {%3} {%3};
+    #IF {"$result" != ""} {#VAR {result} {1}} {#VAR {result} {0}};
+}
