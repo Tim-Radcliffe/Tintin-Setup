@@ -30,16 +30,17 @@
 {
     #ACTION {^%*%s|%s%d%s|%s%d%s|%s%d%s|%s%d%s|%s%d%s|%s%d%s|%s%d%s|%s%d%s|} 
     {
-        #FORMAT {_craft[ingredient]} {%l} {%%1};
-        #VAR {_craft[satchel][$_craft[ingredient]][total]} {%%4};
-        #VAR {_craft[satchel][$_craft[ingredient]][subtotal][1]} {%%7};
-        #VAR {_craft[satchel][$_craft[ingredient]][subtotal][2]} {%%10};
-        #VAR {_craft[satchel][$_craft[ingredient]][subtotal][3]} {%%13};
-        #VAR {_craft[satchel][$_craft[ingredient]][subtotal][4]} {%%16};
-        #VAR {_craft[satchel][$_craft[ingredient]][subtotal][5]} {%%19};
-        #VAR {_craft[satchel][$_craft[ingredient]][subtotal][6]} {%%22};
-        #VAR {_craft[satchel][$_craft[ingredient]][subtotal][7]} {%%25};
-        .ingredientScan $_craft[ingredient];
+        #FORMAT {_craft[component]} {%l} {%%1};
+        #VAR {_craft[satchel][$_craft[component]][total]} {%%4};
+        #VAR {_craft[satchel][$_craft[component]][subtotal][1]} {%%7};
+        #VAR {_craft[satchel][$_craft[component]][subtotal][2]} {%%10};
+        #VAR {_craft[satchel][$_craft[component]][subtotal][3]} {%%13};
+        #VAR {_craft[satchel][$_craft[component]][subtotal][4]} {%%16};
+        #VAR {_craft[satchel][$_craft[component]][subtotal][5]} {%%19};
+        #VAR {_craft[satchel][$_craft[component]][subtotal][6]} {%%22};
+        #VAR {_craft[satchel][$_craft[component]][subtotal][7]} {%%25};
+        .componentScan $_craft[component];
+        #UNVAR {_craft[component]};
     };
     
     #ACTION {You have %d/%d items in your satchel.}
@@ -51,7 +52,7 @@
     #SEND {!stashlist %0};
 };
 
-#ALIAS {.ingredientScan}
+#ALIAS {.componentScan}
 {
     #REGEXP {%0} {{fragment|essence}}
     {
@@ -76,21 +77,20 @@
         #MATH {_craft[delta]} {$_craft[satchel][%0][total] - $_craft[limit][current]};
         #IF {$_craft[delta] > 0} 
         {
-            #$_craft[delta] {.ingredientRecycle %0};
+            #$_craft[delta] {.componentRecycle %0};
         };
-        #LOCAL {_non_trivial} {0};
-        #FOREACH {*craft_ingredients[%0][level][]} {c}
+        #FOREACH {*my[craft][]} {c}
         {
-            #IF {$my[craft][$c] <= $craft_ingredients[%0][level][$c][max]}
+            #IF {@fCheckCraftLevel{{%0}{$c}{$my[craft][$c]}{nontrivial}}}
             {
-                #LOCAL {_non_trivial} {1};
+               #RETURN;
             };
         };
-        #IF {!$_non_trivial} {.ingredientRecycle %0};
+        .componentRecycle %0;
     };
 };
 
-#ALIAS {.ingredientRecycle}
+#ALIAS {.componentRecycle}
 {
     #REGEXP {%0} {{heart|gem of}}
     {
@@ -269,26 +269,47 @@
 auto add {farm} {.file load {$path[craft]/farm.tin}} {} {#CLASS {$path[craft]/farm.tin} {kill}};
 
 
-#NOP @fCheckCraftLevel{ {ingredient} {craft} {level} }
+#NOP @fCheckCraftLevel{ {component} {craft} {level} {training/nontrivial/} }
 #FUNCTION {fCheckCraftLevel}
 {
     db_submit {result} 
     {
-        SELECT 1 
-        FROM craft_ingredients 
-        WHERE ingredient = '%s' AND craft = '%s' AND min <= '%s'
-    } {%1} {%2} {%3};
-    #IF {"$result" != ""} {#VAR {result} {1}} {#VAR {result} {0}};
-}
-
-#NOP @fCheckCraftTrainingLevel{ {ingredient} {craft} {level} }
-#FUNCTION {fCheckCraftTrainingLevel}
-{
-    db_submit {result} 
+        SELECT * 
+        FROM craft_components 
+        WHERE component = '%s' AND craft = '%s'
+    } {%1} {%2};
+    #IF {"$result" == ""} {#RETURN};
+    #SWITCH {"%4"}
     {
-        SELECT 1 
-        FROM craft_ingredients 
-        WHERE ingredient = '%s' AND craft = '%s' AND min <= '%s' AND max >= '%s'
-    } {%1} {%2} {%3} {%3};
-    #IF {"$result" != ""} {#VAR {result} {1}} {#VAR {result} {0}};
-}
+        #CASE {"training"}
+        {
+            #IF {$result[1][min] <= %3 && $result[1][max] >= %3}
+            {
+                #VAR {result} {1};
+            } 
+            { 
+                #VAR {result} {0};
+            };
+        }
+        #CASE {"nontrivial"}
+        {
+            #IF {$result[1][max] >= %3}
+            {
+                #VAR {result} {1};
+            }
+            { 
+                #VAR {result} {0};
+            };            
+        }
+        #DEFAULT 
+        {
+            #IF {$result[1][min] <= %3}
+            {
+                #VAR {result} {1};
+            }
+            { 
+                #VAR {result} {0};
+            };     
+        };
+    };
+};

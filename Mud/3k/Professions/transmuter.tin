@@ -32,7 +32,7 @@
                 {                
                     #IF {$_craft[satchel][$_t[i]][subtotal][$_t[data][$_t[q]][quality]] >= $_t[data][$_t[q]][quantity]}
                     {
-                        #IF {@fCheckCraftTrainingLevel{{$_t[i]}{Transmuter}{$my[professions][transmuter][level]}}}
+                        #IF {@fCheckCraftLevel{{$_t[i]}{Transmuter}{$my[professions][transmuter][level]}{training}}}
                         {       
                             .transmute $_t[q] $_t[i];
                         };
