@@ -18,7 +18,7 @@ F 1048586
 
 G 0
 
-I 183
+I 147
 
 L {ASCII NESW LINE} {NO EXITS} {x}
 L {ASCII NESW LINE} {N} {o}
@@ -818,20 +818,20 @@ E {151}{w}{w}{8}{0}{}{1.000}{}{0.00}
 R {136}{0}{<158>}{Pinnacle Morgue}{<138>?}{This is the new and improved Pinnacle Morgue.  The recent renovations have really done wonders for the place.  The walls and floor are both tile with a large drain in the floor.  Probably for cleanup!  In the corner is a cart likely used by the mortician to move the bodies around. There is a sign here if you want more information.}{}{{morgue}{}}{}{}{1.000}{}
 E {135}{n}{n}{1}{0}{}{1.000}{}{0.00}
 
-R {137}{0}{<178>}{A misty cemetery}{ }{You are walking along a small stone path leading along a row of storefronts as well as many buildings for rent.}{}{}{}{}{1.000}{}
+R {137}{0}{<178>}{Pinnacle Row}{ }{You are walking along a small stone path leading along a row of storefronts as well as many buildings for rent.}{Mud}{}{}{}{1.000}{}
 E {151}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {138}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {146}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {141}{n}{n}{1}{0}{}{1.000}{}{0.00}
 
-R {138}{0}{<178>}{A misty cemetery}{ }{Heavy clouds frame the silky moon overhead in this dark and damp cemetery. Bare and gangling trees obscure most of what little light is left. A humble charnel house sits to your east at the bottom of a hill, across from a modest mausoleum at the west. The entrance to an underground crypt lies at your feet, beneath a towering and elegant monumental sepulcher which looms over you from the south. The familiar safety of Pinnacle Row can be seen to the north.}{}{}{}{}{1.000}{}
+R {138}{0}{<178>}{A misty cemetery}{ }{Heavy clouds frame the silky moon overhead in this dark and damp cemetery. Bare and gangling trees obscure most of what little light is left. A humble charnel house sits to your east at the bottom of a hill, across from a modest mausoleum at the west. The entrance to an underground crypt lies at your feet, beneath a towering and elegant monumental sepulcher which looms over you from the south. The familiar safety of Pinnacle Row can be seen to the north.}{Mud}{{content}{{noun}{{clouds}{{name}{clouds}}{crypt}{{name}{crypt}}{entrance}{{name}{entrance}}{house}{{name}{house}}{mausoleum}{{name}{mausoleum}}{moon}{{name}{moon}}{sepulcher}{{name}{sepulcher}}{trees}{{name}{trees}}}{npc}{{global}{{name}{Prospero the Valithyn}}}}}{}{}{1.000}{}
 E {137}{n}{n}{1}{1}{}{1.000}{}{0.00}
 E {142}{d}{d}{32}{0}{}{1.000}{}{0.00}
 E {143}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {144}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {145}{e}{e}{2}{0}{}{1.000}{}{0.00}
 
-R {139}{0}{<178>}{Pinnacle Row}{ }{You are walking along a small stone path leading along a row of storefronts as well as many buildings for rent.}{}{}{}{}{1.000}{}
+R {139}{0}{<178>}{Pinnacle Row}{ }{You are walking along a small stone path leading along a row of storefronts as well as many buildings for rent.}{Mud}{}{}{}{1.000}{}
 E {146}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {147}{s}{s}{4}{0}{}{1.000}{}{0.00}
 
@@ -844,30 +844,30 @@ E {137}{s}{s}{4}{0}{}{1.000}{}{0.00}
 R {142}{0}{<178>}{A dark crypt}{ }{This deep and cavernous crypt is lined with the tombs of celebrated and admired warriors.}{}{}{}{}{1.000}{}
 E {138}{u}{u}{16}{0}{}{1.000}{}{0.00}
 
-R {143}{0}{<178>}{An ornate sepulcher}{ }{This is an ornately decorated sepulcher. Monuments containing the remains of only the most legendary heroes and villains surround you at every side.}{}{}{}{}{1.000}{}
+R {143}{0}{<178>}{An ornate sepulcher}{ }{This is an ornately decorated sepulcher. Monuments containing the remains of only the most legendary heroes and villains surround you at every side.}{Mud}{{content}{{item}{{}{{name}{monuments to the dead}}}}}{}{}{1.000}{}
 E {138}{n}{n}{1}{0}{}{1.000}{}{0.00}
 
-R {144}{0}{<178>}{A mausoleum}{ }{This is a modestly sized mausoleum. The large wall in front of you is completely lined with coffins for those who began to make a name for themselves in the kindgoms.}{}{}{}{}{1.000}{}
+R {144}{0}{<178>}{A mausoleum}{ }{This is a modestly sized mausoleum. The large wall in front of you is completely lined with coffins for those who began to make a name for themselves in the kingdoms.}{Mud}{{content}{{item}{{}{{name}{a wall filled with coffins}}}}}{}{}{1.000}{}
 E {138}{e}{e}{2}{0}{}{1.000}{}{0.00}
 
-R {145}{0}{<178>}{A small charnel house}{ }{This is a very small charnel house. Bones and skulls are piled up to the ceiling in tribute to those whose accomplishments were not quite as extraordinary as some others may have been.}{}{}{}{}{1.000}{}
+R {145}{0}{<178>}{A misty cemetery}{ }{This is a very small charnel house. Bones and skulls are piled up to the ceiling in tribute to those whose accomplishments were not quite as extraordinary as some others may have been.}{Mud}{{content}{{item}{{}{{name}{a large pile of bones and skulls}}}{noun}{{ceiling}{{name}{ceiling}}}}}{}{}{1.000}{}
 E {138}{w}{w}{8}{0}{}{1.000}{}{0.00}
 
 R {146}{4104}{}{}{ }{}{}{}{}{}{1.000}{}
 E {139}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {137}{e}{e}{2}{0}{}{1.000}{}{0.00}
 
-R {147}{0}{<068>}{Pinnacle Row}{ }{You are walking along a small stone path leading along a row of storefronts as well as many buildings for rent.  A shimmering portal of rainbow hues is here, large enough you could walk through.}{Mud}{}{}{}{1.000}{}
+R {147}{0}{<068>}{Pinnacle Row}{ }{You are walking along a small stone path leading along a row of storefronts as well as many buildings for rent.  A shimmering portal of rainbow hues is here, large enough you could walk through.}{Mud}{{content}{{noun}{{portal}{{name}{portal}}}}}{}{}{1.000}{}
 E {139}{n}{n}{1}{0}{}{1.000}{}{0.00}
 E {148}{w}{w}{8}{0}{}{1.000}{}{0.00}
 E {186}{s}{.mapLink {Pinnacle/Eternals Guild} {1} {portal};}{4}{0}{}{1.000}{}{0.00}
 E {186}{portal}{.mapLink {Pinnacle/Eternals Guild} {1} {portal};}{0}{0}{}{1.000}{}{0.00}
 
-R {148}{0}{<178>}{Pinnacle Row}{ }{You are walking along a small stone path leading along a row of storefronts as well as many buildings for rent.}{}{}{}{}{1.000}{}
+R {148}{0}{<178>}{Pinnacle Row}{ }{You are walking along a small stone path leading along a row of storefronts as well as many buildings for rent.}{Mud}{}{}{}{1.000}{}
 E {147}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {149}{n}{n}{1}{0}{}{1.000}{}{0.00}
 
-R {149}{0}{<178>}{The Post Office}{ }{}{}{}{}{}{1.000}{}
+R {149}{0}{<178>}{The Post Office}{ }{The inside of the post office is cramped - people are much less important than letters and packages here. The walls are packed with pigeonholes and shelves\; paper and scrolls are jammed in with no apparent order. The smell of musty old paper and very organic glue makes this tiny space seem even more crowded. In the back wall is a half-door leading into the sorting area, with a small counter built into it. Over this door hangs a wanted poster, because this is a post office, after all. A clerk is puttering around the room, moving paper from place to place.}{Mud}{{content}{{item}{{}{{name}{A Sign}}}{noun}{{counter}{{name}{counter}}{door}{{name}{door}}{glue}{{name}{glue}}{half-door}{{name}{half-door}}{letters}{{name}{letters}}{office}{{name}{office}}{packages}{{name}{packages}}{paper}{{name}{paper}}{pigeonholes}{{name}{pigeonholes}}{post}{{name}{post}}{scrolls}{{name}{scrolls}}{sorting}{{name}{sorting}}{space}{{name}{space}}{wall}{{name}{wall}}{walls}{{name}{walls}}}{npc}{{}{{name}{Spengler the Postal Clerk}}}}}{}{}{1.000}{}
 E {148}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {150}{n}{n}{1}{0}{}{1.000}{}{0.00}
 
