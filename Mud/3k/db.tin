@@ -1,9 +1,10 @@
+#NOP .dbNPCSave {regexp} {data};
 #ALIAS {.dbNPCSave}
 {
     #UNVAR dbSave;
-    #VAR {dbSave[data]} {%2};
+    #VAR {dbSave[data]} {$%1};
     #IF {"$dbSave[data][_area]" == ""} {#RETURN};
-    #VAR {dbSave[regexp]} {%1};
+    #VAR {dbSave[regexp]} {$dbSave[data][regexp]};
     #IF {"$dbSave[regexp]" == ""} {#RETURN};
     #VAR {dbSave[area]} {$dbSave[data][_area]};
     #VAR {dbSave[id]} {$dbSave[data][id]};
@@ -39,19 +40,15 @@
         #VAR {dbSave[size_max]} {$dbSave[data][size][$dbSave[scaler]][max]};
 
         db_submit {dbSave[result]}
-        {INSERT INTO npcs (areanum, scaler, regexpattern, id, name, description, alignment, undead, autokill, kills, size_avg, size_min, size_max) 
-        VALUES ( (SELECT recnum FROM areas WHERE path = '%s'), '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s')
+        {INSERT INTO npcs (areanum, scaler, regexpattern, id, name, description, alignment, undead, autokill) 
+        VALUES ( (SELECT recnum FROM areas WHERE path = '%s'), '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s')
         ON DUPLICATE KEY UPDATE 
         id          = '%s',
         name        = '%s',
         description = '%s',
         alignment   = '%s',
         undead      = '%s',
-        autokill    = '%s',
-        kills       = '%s',
-        size_avg    = '%s',
-        size_min    = '%s',
-        size_max    = '%s'
+        autokill    = '%s'
         RETURNING recnum
         }
         {$dbSave[area]}
@@ -63,21 +60,13 @@
         {$dbSave[data][alignment]}
         {$dbSave[data][undead]}
         {$dbSave[data][autokill]}
-        {$dbSave[kills]}
-        {$dbSave[size_avg]}
-        {$dbSave[size_min]}
-        {$dbSave[size_max]}
         {$dbSave[id]}
         {$dbSave[name]}
         {$dbSave[desc]}
         {$dbSave[data][alignment]}
         {$dbSave[data][undead]}
-        {$dbSave[data][autokill]}
-        {$dbSave[kills]}
-        {$dbSave[size_avg]}
-        {$dbSave[size_min]}
-        {$dbSave[size_max]};
-        
+        {$dbSave[data][autokill]};
+
         #IF {$dbSave[result][1][recnum] > 0}
         {
             #FOREACH {*dbSave[data][defence][]} {dbSave[damagetype]}
@@ -97,11 +86,9 @@
         }
         {
             .log {add} {db_itemsave.log} {FAIL: $dbSave[area] : $dbSave[regexp] : $dbSave[scaler]};        
-        }
-    }
-}
-
-
+        };
+    };
+};
 
 #ALIAS {.dbItemSave}
 {

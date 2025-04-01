@@ -19,9 +19,31 @@
 
 #NOP *********** Aliases **************;
 
+
+#ALIAS {.HandlerRoomName}
+{
+	#NOP %1;
+	#VAR {room} {};
+	#REGEXP {%2} {{^(.*?)\s*\(([a-z\s,]*)\)\s*$}}
+	{
+		#VAR {room[name]} {&2};
+	}
+	{
+		#VAR {room[name]} {%2};
+	};
+	.debug SCAN {Room Name: $room[name]};
+    event_remove_handler {scan.room.tin};
+    event_oneshot e_prompt {scan.room.tin} {#NOP %%1;event_raise e_room_enter;};
+	event_oneshot e_prompt {scan.room.tin} handler_room_end;
+    event_oneshot e_combat {scan.room.tin} {#NOP %%1;event_remove_specific {e_lock_removed} {scan.room.tin};};
+};
+#NOP event_register {e_mip_BAD} {h_room_name} {.HandlerRoomName};
+event_register {e_ansiflag_R} {scan.room.tin} {.HandlerRoomName};
+
 #ALIAS {handler_room_contents}
 {
 	#NOP %1;
+    #IF {@fLocked{scan.%*}} {#RETURN};
     #LOCAL {_HRC} {};
 	#LIST {_HRC[tokenized]} CREATE {%2};
 	#LOCAL {_HRC[item][id]} {$_HRC[tokenized][2]};
@@ -70,29 +92,31 @@ event_register e_mip_HAB h_room_contents handler_room_contents;
 			#UNVAR {room[commandqueue]};
 		};
 		event_raise e_roomscan_end;
-		#IF {!@fLocked{room.%*}}
-		{
-			.debug SCAN {Finished};
-            event_raise e_roomscan_finished;			
-		};
-		#ELSE 
-		{
-			event_register {e_lock_removed} {scan.room.tin} 
-			{
-                #NOP %%1;
-				#IF {!%@fLocked{room.%*}} 
-                {
-                    event_remove_specific {e_lock_removed} {scan.room.tin};
-                    .debug SCAN {Lock Removed};
-                    event_raise e_roomscan_finished;
-                };
-			};
-		};
+        .HandlerRoomUnlocked        
 	};
 	#ELSE
 	{
 		event_raise e_roomscan_finished;
 	};
+};
+
+#ALIAS {.HandlerRoomUnlocked}
+{
+    #IF {!@fLocked{room.%*}}
+    {
+        event_remove_specific {e_lock_removed} {scan.room.tin};            
+        .debug SCAN {Finished};        
+        event_raise e_roomscan_finished;			
+    };
+    #ELSE 
+    {
+        .debug SCAN {Lock Removed Event Added};
+        event_register {e_lock_removed} {scan.room.tin} 
+        {
+            #NOP %%1;
+            .HandlerRoomUnlocked;
+        };
+    };    
 };
 
 #ALIAS {.HandlerRoomExits}
@@ -105,24 +129,6 @@ event_register e_mip_HAB h_room_contents handler_room_contents;
 	};
 };
 event_register {e_mip_DDD} {h_room_exits} {.HandlerRoomExits};
-
-#ALIAS {.HandlerRoomName}
-{
-	#NOP %1;
-	#VAR {room} {};
-	#REGEXP {%2} {{^(.*?)\s*\(([a-z\s,]*)\)\s*$}}
-	{
-		#VAR {room[name]} {&2};
-	}
-	{
-		#VAR {room[name]} {%2};
-	};
-	.debug SCAN {Room Name: $room[name]};
-	event_oneshot e_prompt h_room_enter {#NOP %%1;event_raise e_room_enter;};
-	event_oneshot e_prompt h_room_end handler_room_end;
-};
-#NOP event_register {e_mip_BAD} {h_room_name} {.HandlerRoomName};
-event_register {e_ansiflag_R} {h_room_name} {.HandlerRoomName};
 
 #ALIAS {.RoomAddCommand}
 {
