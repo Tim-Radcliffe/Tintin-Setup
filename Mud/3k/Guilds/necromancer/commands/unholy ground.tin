@@ -16,6 +16,8 @@
             #GAG {^Deathly black energy sizzles through %*'s flesh!$};
             #GAG {^Jet black bolts of dark lightning slam into %*!$};
             #GAG {^Purple lightning arcs from %* to %*!$};
+            #NOP Omega 25 messages;
+            #GAG {{^~[\/\\~\*-]{4,8}~.*!$}};
             #ACTION {^Your grounding to the negative material plane dissipates in a sparkle.$}
             {
                 #CLASS {necromancer_unholy_ground} KILL;
