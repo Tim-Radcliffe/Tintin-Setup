@@ -1,0 +1,6 @@
+#ALIAS {call}
+{
+    #NOP %1;
+    #SEND {!call %0};
+};
+.gag add {necro.familiar} {^$my[necromancer][familiar][name] %* $my[name]'s {adversary|attacker|enemy|foe}!$};
