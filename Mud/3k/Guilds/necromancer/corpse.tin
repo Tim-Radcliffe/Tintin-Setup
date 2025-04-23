@@ -49,29 +49,29 @@
 		};
 		#CASE {"preserve"}
 		{
-		    #IF {$my[corpse][held][current] <= $my[corpse][held][min]}
-    		{
-        		#SEND {!preserve remains};
+			#IF {$my[corpse][held][current] <= $my[corpse][held][min]}
+			{
+				#SEND {!preserve remains};
 				.corpse get;
 			};
 			#ELSEIF {$auto[consecrate][status]}
 			{
 				#SEND {!consecrate};
 			};
-            #ELSE
-            {
-                #SEND {!wrap remains};
-                #IF {$my[corpse][held][current] <= $my[corpse][held][max]}
-                {
-                    #SEND {!preserve remains};
-                    .corpse get;
-                    .corpse store;
-                };
-                #ELSE
-                {
-                    .AbsorbCorpse ground;
-                };                
-            };
+			#ELSE
+			{
+				#SEND {!wrap remains};
+				#IF {$my[corpse][held][current] <= $my[corpse][held][max]}
+				{
+					#SEND {!preserve remains};
+					.corpse get;
+					.corpse store;
+				};
+				#ELSE
+				{
+					.AbsorbCorpse ground;
+				};                
+			};
 #NOP            #SEND {!glance}; 
 		};
 		#CASE {"retrieve"}
@@ -80,7 +80,7 @@
 			{
 				handler_corpse_move {minion} {1} {held};
 			};
-            #ELSEIF {$my[corpse][coffin][current] > 0}
+			#ELSEIF {$my[corpse][coffin][current] > 0}
 			{
 				handler_corpse_move {coffin} {1} {held};
 			};
@@ -98,6 +98,15 @@
 		{
 			handler_corpse_rescan;
 		};
+		#CASE {"crypt"}
+		{
+			#ACTION {^  This room is set to teleport position 1.}
+			{
+				#SEND {!qtrance =give all/=get all/teleport/w/w/w/w/w/d/w/unkeep all corpse/store all/teleport 1};
+				#UNACTION {^  This room is set to teleport position 1.};
+			};
+			teleport set 1 auto crypt;
+		};
 		#DEFAULT
 		{
 			#ECHO {.corpse store/retrieve/sort/get/preserve/rescan};
@@ -109,7 +118,7 @@ auto {add} {consecrate} {#ACTION {^  You are already at 100% consecration master
 /* Clean up corpses if you can't carry them */
 #ACTION {^  You can't carry any more master, leaving it on the ground.}
 {
-    .AbsorbCorpse ground;
+	.AbsorbCorpse ground;
 } {3};
 
 #NOP #ACTION {{^All your corpses are already bigger than what is here.|^The coffin expels a corpse!}}
@@ -203,7 +212,7 @@ auto {add} {preserve} {} {e_room_corpse} {};
 	#CLASS {cCorpseRescan} {CLOSE};
 	#SEND {!ic};
 	#SEND {!iu c};
-    #SEND {corpse.rescan.finished};
+	#SEND {corpse.rescan.finished};
 };
 
 #ALIAS {handler_corpse_sort}
@@ -230,14 +239,14 @@ auto {add} {preserve} {} {e_room_corpse} {};
 		#@fEval{$my[corpse][held][current] - $my[corpse][held][max]} .corpse store;
 	};
 };
-auto {add} {corpse} {} {e_necro_gline_C} {};
+auto {add} {corpse} {event_register {e_minion_present} {corpse.tin} {handler_auto_corpse}} {e_necro_gline_C} {event_remove_specific {e_minion_present} {corpse.tin}};
 
 #ALIAS {.AbsorbCorpse}
 {
 	#NOP %1;
 	#IF {"%1" == "ground"}
 	{
-        #SEND {!absorb ground};		
+		#SEND {!absorb ground};		
 	};
 	#IF {$my[hp][current] < $my[hp][max]}
 	{
@@ -249,7 +258,7 @@ auto {add} {corpse} {} {e_necro_gline_C} {};
 	};
 	#IF {"%1" == "ground"}
 	{
-    	#SEND {!absorb inventory};
+		#SEND {!absorb inventory};
 	};
 };
 
@@ -313,52 +322,52 @@ auto {add} {corpse} {} {e_necro_gline_C} {};
 /* Swaps the two if true */
 #FUNCTION {fSwapCorpse}
 {
-    #IF {&my[corpse][%1][list][] == 0}
-    {
-        #RETURN 0;
-    };
-    #IF {&my[corpse][%2][list][1 == 0}
-    {
-        #RETURN 0;
-    };
-    #VAR {my[corpse][%1][sort][max][pos]} {0};
-    #VAR {my[corpse][%1][sort][max][size]} {0};
-    #FOREACH {*my[corpse][%1][list][]} {i}
-    {
-        #IF {$my[corpse][%1][list][$i] > $my[corpse][%1][sort][max][size]}
-        {
-            #VAR {my[corpse][%1][sort][max][size]} {$my[corpse][%1][list][$i]};
-            #VAR {my[corpse][%1][sort][max][pos]} {$i};
-        };
-    };
-    #VAR {my[corpse][%2][sort][min][pos]} {999};
-    #VAR {my[corpse][%2][sort][min][size]} {999};
-    #FOREACH {*my[corpse][%2][list][]} {i}
-    {
-        #IF {$my[corpse][%2][list][$i] < $my[corpse][%2][sort][min][size]}
-        {
-            #VAR {my[corpse][%2][sort][min][size]} {$my[corpse][%2][list][$i]};
-            #VAR {my[corpse][%2][sort][min][pos]} {$i};
-        };
-    };
-    #IF {$my[corpse][%1][sort][max][size] > $my[corpse][%2][sort][min][size]}
-    {
-        .cs_%2_drop {$my[corpse][%2][sort][min][pos]};
-        .cs_%1_drop {$my[corpse][%1][sort][max][pos]};
-        .cs_%2_get;
-        .cs_%1_get;
-        #LIST {my[corpse][%1][list]} {del} {$my[corpse][%1][sort][max][pos]};
-        #LIST {my[corpse][%1][list]} {ins} {1} {$my[corpse][%2][sort][min][size]};
-        #LIST {my[corpse][%2][list]} {del} {$my[corpse][%2][sort][min][pos]};
-        #LIST {my[corpse][%2][list]} {ins} {1} {$my[corpse][%1][sort][max][size]};
+	#IF {&my[corpse][%1][list][] == 0}
+	{
+		#RETURN 0;
+	};
+	#IF {&my[corpse][%2][list][1 == 0}
+	{
+		#RETURN 0;
+	};
+	#VAR {my[corpse][%1][sort][max][pos]} {0};
+	#VAR {my[corpse][%1][sort][max][size]} {0};
+	#FOREACH {*my[corpse][%1][list][]} {i}
+	{
+		#IF {$my[corpse][%1][list][$i] > $my[corpse][%1][sort][max][size]}
+		{
+			#VAR {my[corpse][%1][sort][max][size]} {$my[corpse][%1][list][$i]};
+			#VAR {my[corpse][%1][sort][max][pos]} {$i};
+		};
+	};
+	#VAR {my[corpse][%2][sort][min][pos]} {999};
+	#VAR {my[corpse][%2][sort][min][size]} {999};
+	#FOREACH {*my[corpse][%2][list][]} {i}
+	{
+		#IF {$my[corpse][%2][list][$i] < $my[corpse][%2][sort][min][size]}
+		{
+			#VAR {my[corpse][%2][sort][min][size]} {$my[corpse][%2][list][$i]};
+			#VAR {my[corpse][%2][sort][min][pos]} {$i};
+		};
+	};
+	#IF {$my[corpse][%1][sort][max][size] > $my[corpse][%2][sort][min][size]}
+	{
+		.cs_%2_drop {$my[corpse][%2][sort][min][pos]};
+		.cs_%1_drop {$my[corpse][%1][sort][max][pos]};
+		.cs_%2_get;
+		.cs_%1_get;
+		#LIST {my[corpse][%1][list]} {del} {$my[corpse][%1][sort][max][pos]};
+		#LIST {my[corpse][%1][list]} {ins} {1} {$my[corpse][%2][sort][min][size]};
+		#LIST {my[corpse][%2][list]} {del} {$my[corpse][%2][sort][min][pos]};
+		#LIST {my[corpse][%2][list]} {ins} {1} {$my[corpse][%1][sort][max][size]};
 		#UNVAR {my[corpse][%1][sort]};
 		#UNVAR {my[corpse][%2][sort]};
-        #RETURN 1;
-    };
-    #ELSE
-    {
+		#RETURN 1;
+	};
+	#ELSE
+	{
 		#UNVAR {my[corpse][%1][sort]};
 		#UNVAR {my[corpse][%2][sort]};		
-        #RETURN 0;
-    };
+		#RETURN 0;
+	};
 };
