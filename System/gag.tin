@@ -1,5 +1,7 @@
 #NOP Granular dynamic gag handling
 #NOP Balthus - 23/04/2025;
+#NOP This gags mud output while at the same time raising an event in case the output is needed to trigger functionality
+#NOP Groups of gags can be turned on/off with wildcards as long as they are given suitably similar types
 #NOP .gag add {type} {match string};
 #NOP .gag set {type} {on/off};
 #NOP .gag check {type};
@@ -11,7 +13,7 @@
         #CASE {"add"}
         {
             #LIST {_gag[on][%2]} ADD {%3};
-            #GAG {%3};
+            .gag_setup add {%2} {%3};
         };
         #CASE {"set"}
         {
@@ -21,7 +23,7 @@
                 {
                     #FOREACH {$_gag[off][$_gag[type]][]} {_gag[match]}
                     {
-                        #GAG {$_gag[match]};
+                        .gag_setup add {$_gag[type]} {$_gag[match]};                     
                         #LIST {_gag[on][$_gag[type]]} ADD {$_gag[match]};
                     };
                 };
@@ -33,7 +35,7 @@
                 {
                     #FOREACH {$_gag[on][$_gag[type]][]} {_gag[match]}
                     {
-                        #UNGAG {$_gag[match]};
+                        .gag_setup delete {$_gag[type]} {$_gag[match]};                          
                         #LIST {_gag[off][$_gag[type]]} ADD {$_gag[match]};
                     };
                 };
@@ -52,14 +54,14 @@
             {
                 #FOREACH {$_gag[on][$_gag[type]][]} {_gag[match]}
                 {
-                    #LIST {_gag[output][list]} ADD {{{setting} {<128>on<098>} {type} {$_gag[type]} {match} {$_gag[match]}}};
+                    #LIST {_gag[output][list]} ADD {{{Set} {<128>on<098>} {Type} {$_gag[type]} {Match} {@fTrunc{{$_gag[match]}{40}}}}};
                 };
             };
             #FOREACH {*_gag[off][%2]} {_gag[type]}
             {
                 #FOREACH {$_gag[off][$_gag[type]][]} {_gag[match]}
                 {
-                    #LIST {_gag[output][list]} ADD {{{setting} {<118>off<098>} {type} {$_gag[type]} {match} {$_gag[match]}}};
+                    #LIST {_gag[output][list]} ADD {{{Set} {<118>off<098>} {Type} {$_gag[type]} {Match} {@fTrunc{{$_gag[match]}{40}}}}};
                 };
             };
             #LOCAL {_gag[output][table]} {@fTable{$_gag[output][list]}};
@@ -69,5 +71,22 @@
             #UNVAR {_gag[type]};
             #UNVAR {_gag[match]};                   
         };
+    };
+};
+
+#ALIAS {.gag_setup}
+{
+    #IF {"%1" == "add"}
+    {
+        #ACTION {%3}
+        {
+            #NOP %%1;
+            #LINE GAG;
+            event_raise {e_gag_%2} {%%0};        
+        };
+    };
+    #ELSE
+    {
+        #UNACTION {%3};
     };
 };

@@ -2,27 +2,7 @@
 {
     #ALIAS {unholy ground}
     {
-        #CLASS {necromancer_unholy_ground} ASSIGN
-        {
-            #GAG {^%* is scorched by the dark energy surrounding %*!};
-            #GAG {^%* recoils in a shock from striking %*!$};
-            #GAG {^%* strikes %* and is dealt a blast of dark energy!$};
-            #GAG {^A black bolt of energy blasts into %*$};
-            #GAG {^An explosion of black energy engulfs %*!$};
-            #GAG {^Black lightning races along %*'s body into %*!$};
-            #GAG {^Cold, purple lightning crackles into %*'s body!$};
-            #GAG {^Cool black lightning scorches across %*'s body!$};
-            #GAG {^Dark energy crackles from %* to %*!$};
-            #GAG {^Deathly black energy sizzles through %*'s flesh!$};
-            #GAG {^Jet black bolts of dark lightning slam into %*!$};
-            #GAG {^Purple lightning arcs from %* to %*!$};
-            #NOP Omega 25 messages;
-            #GAG {{^~[\/\\~\*-]{4,8}~.*!$}};
-            #ACTION {^Your grounding to the negative material plane dissipates in a sparkle.$}
-            {
-                #CLASS {necromancer_unholy_ground} KILL;
-            };
-        };
+        .gag set {necro.unholy_ground%*} {on};
         #VAR {my[necromancer][unholy ground][ready]} {0};
         #SEND {!unholy ground %0}; 
     };
@@ -49,4 +29,31 @@
         };
     };
     auto {add} {unholyground} {} {e_combat;e_mip_FFF_G} {};
+
+    #IF {"$my[necromancer][omega][Unholy Ground]" == "25"}
+    {
+        #NOP Omega 25 messages;
+        .gag add {necro.unholy_ground} {{^~[\/\\~\*-]{4,8}~.*!$}};
+    };
+    #ELSE 
+    {  
+        .gag add {necro.unholy_ground} {^%* is scorched by the dark energy surrounding %*!};
+        .gag add {necro.unholy_ground} {^%* recoils in a shock from striking %*!$};
+        .gag add {necro.unholy_ground} {^%* strikes %* and is dealt a blast of dark energy!$};
+        .gag add {necro.unholy_ground} {^A black bolt of energy blasts into %*$};
+        .gag add {necro.unholy_ground} {^An explosion of black energy engulfs %*!$};
+        .gag add {necro.unholy_ground} {^Black lightning races along %*'s body into %*!$};
+        .gag add {necro.unholy_ground} {^Cold, purple lightning crackles into %*'s body!$};
+        .gag add {necro.unholy_ground} {^Cool black lightning scorches across %*'s body!$};
+        .gag add {necro.unholy_ground} {^Dark energy crackles from %* to %*!$};
+        .gag add {necro.unholy_ground} {^Deathly black energy sizzles through %*'s flesh!$};
+        .gag add {necro.unholy_ground} {^Jet black bolts of dark lightning slam into %*!$};
+        .gag add {necro.unholy_ground} {^Purple lightning arcs from %* to %*!$};
+    };
+    
+    .gag add {necro.unholy_ground.finished} {^Your grounding to the negative material plane dissipates in a sparkle.$};
+    event_register {e_gag_necro.unholy_ground.finished} {unholy ground.tin} {#NOP %1;.gag set {necro.unholy_ground%*} {off};};    
+
+    .gag set {necro.unholy_ground%*} {off};
 };
+
