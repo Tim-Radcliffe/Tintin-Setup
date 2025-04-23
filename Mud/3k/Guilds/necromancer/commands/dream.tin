@@ -1,12 +1,17 @@
-#NOP Handle dream
+#NOP Handle dream;
 #IF {@fIsNumber{$my[necromancer][tier]}}
 {
-    #MATH {_vDream[level]} {$my[necromancer][tier] + 4};
+    #VAR {_vDream[level]} {4};
+    #SWITCH {$my[necromancer][tier]}
+    {
+        #CASE {5} {#MATH {_vDream[level]} {$_vDream[level] + 4};};
+        #DEFAULT  {#MATH {_vDream[level]} {$_vDream[level] + $my[necromancer][tier]};};
+    };
 };
 #ELSE 
 {
     #MATH {_vDream[level]} {( $my[necromancer][level] - 36 ) / 6};
 };
 
-#GAG {^\{@fDecToNumerals{$_vDream[level]}\}};
+.gag add {necro.dream} {^\{@fDecToNumerals{$_vDream[level]}\}};
 #UNVAR {_vDream};

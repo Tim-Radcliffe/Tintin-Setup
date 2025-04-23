@@ -4,55 +4,17 @@
     {
         #CASE {"invoke"}
         {
-            #CLASS {necromancer_veil} {ASSIGN}
-            {
-                #ACTION {^Your veil of darkness completely negates the undead creature's attack!!$} 
-                {
-                    handler_veil {1};
-                };
-                #ACTION {^/-= DEFLECT =-/$} 
-                {
-                    handler_veil {1};
-                };
-                #ACTION {^The veil of darkness helps protect you from the abomination.$}
-                {
-                    handler_veil {1};
-                };
-                #ACTION {^The shadowy powers of the veil partially deflect the assault.$}
-                {
-                    handler_veil;
-                };            
-                #ACTION {^You remain protected by the veil of darkness.$}
-                {
-                    handler_veil;
-                };  
-                #ACTION {^The veil of darkness protects you.$}
-                {
-                    handler_veil;
-                };  
-                #ACTION {^The shadowed veil protects you against the fiend.$}
-                {
-                    handler_veil;
-                };  
-                #ACTION {^The darkened veil absorbs part of the blow.$}
-                {
-                    handler_veil;
-                };  
-                #ACTION {^The creature battles against the veil of darkness.$}
-                {
-                    handler_veil;
-                };              
-            };
+            .gag set {necro.invoke.%*} {on};
             #VAR {my[necromancer][veil]} {ON};
         };
         #CASE {"disperse"}
         {
+            .gag set {necro.invoke.%*} {off};
             #VAR {my[necromancer][veil]} {OFF};
-            #CLASS {necromancer_veil} {KILL};
         };
         #DEFAULT
         {
-            
+            #ECHO {ERROR: invoke %0 - unrecognised};
         };
     }
     #SEND {!veil %1};
@@ -70,3 +32,17 @@
     .record_frequency {$_hVeil[type]} {$_hVeil[title]} {$_combat[attacks][incoming]} {incoming attacks};
     #IF {"$auto[necrogag][status]" == "1"} {#LINE GAG;};
 };
+event_register {e_gag_necro.invoke.block} {veil.tin} {#NOP %1;handler_veil {1};};
+event_register {e_gag_necro.invoke.deflect} {veil.tin} {#NOP %1;handler_veil;};
+
+.gag add {necro.invoke.block} {^Your veil of darkness completely negates the undead creature's attack!!$} 
+.gag add {necro.invoke.block} {^/-= DEFLECT =-/$} 
+.gag add {necro.invoke.block} {^The veil of darkness helps protect you from the abomination.$}
+.gag add {necro.invoke.deflect} {^The shadowy powers of the veil partially deflect the assault.$}
+.gag add {necro.invoke.deflect} {^You remain protected by the veil of darkness.$}
+.gag add {necro.invoke.deflect} {^The veil of darkness protects you.$}
+.gag add {necro.invoke.deflect} {^The shadowed veil protects you against the fiend.$}
+.gag add {necro.invoke.deflect} {^The darkened veil absorbs part of the blow.$}
+.gag add {necro.invoke.deflect} {^The creature battles against the veil of darkness.$}
+
+.gag set {necro.invoke.%*} {off};
