@@ -1,0 +1,20 @@
+#NOP Omega command handling
+#ALIAS {omega}
+{
+    #CLASS {necro_omega} ASSIGN
+    {
+        #ACTION {{^\s*([a-zA-Z ]+)\s{5}-\s+(\d+)\)}}
+        {
+            #VAR {my[necromancer][omega][%%2]} {%%3};
+        };
+    };
+
+    event_oneshot {e_prompt} {omega.tin} {#NOP %%1;#CLASS {necro_omega} KILL;};
+
+    #SEND {!omega %0};
+};
+
+#ALIAS {omegas}
+{
+    omega %0;
+};
