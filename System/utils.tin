@@ -181,6 +181,7 @@ event_register {e_5_mins} {System/utils.tin} {.aProfileSave};
   #RETURN {$_fSB[result]};
 }; 
 
+#NOP output the hex code for any character
 #FUNCTION {fAsciiHex}
 {
     #LOCAL {_fAH} {};
@@ -197,19 +198,32 @@ event_register {e_5_mins} {System/utils.tin} {.aProfileSave};
     #RETURN {$_fAH[prefix]$_fAH[hex]};
 };
 
+#NOP convert certain ascii characters into their hex code versions
 #FUNCTION {fEscapeString}
 {
-  #IF {"%1" == ""}
-  {
-    #RETURN;
-  };
-  #LOCAL {_fES} {};
-  #LINE SUBSTITUTE {braces} {#VAR _fES[string] %1};
-  #FOREACH {{(}{)}{<}{>}{?}{!}{*}{%}{"}{$}{^}} {_fES[char]}
-  {
-    #REPLACE {_fES[string]} {$_fES[char]} {@fAsciiHex{$_fES[char]}};
-  }
-  #RETURN {$_fES[string]};
+    #IF {"%1" == ""}
+    {
+        #RETURN;
+    };
+    #LOCAL {_fES} {};
+    #LINE SUBSTITUTE {braces} {#VAR _fES[string] %1};
+    #FOREACH {{(}{)}{<}{>}{?}{!}{*}{%}{"}{$}{^}} {_fES[char]}
+    {
+        #REPLACE {_fES[string]} {$_fES[char]} {@fAsciiHex{$_fES[char]}};
+    }
+    #VAR {return} {$_fES[string]};
+    #UNVAR {_fES};
+    #RETURN {$_fES[string]};
+};
+
+#NOP convert hex codes within a string to their ascii character equivalent
+#FUNCTION {fUnescapeString}
+{
+    #IF {"%1" == ""}
+    {
+      #RETURN;
+    };
+    #LINE SUBSTITUTE ESCAPES #VAR {result} {%1};
 };
 
 #NOP Return a comma separated string from a list of values;
