@@ -1,15 +1,15 @@
 #ALIAS {corrode}
 {
     #NOP %1;
-    #CLASS {necromancer_corrode} {ASSIGN}
-    {
-        #GAG {^You affect %* with a dark, necromantic touch.$};
-        #GAG {^%* cries out in agony from the corroding decay!$};
-        #GAG {^%* flesh is corroded away by the curse!$};
-        #GAG {^The deadly corrosion wears away.$};
-        #GAG {^>>>The corrosion upon %* has faded.$};
-    };
-    event_oneshot {e_combat_finished} {$path[mud]/Guilds/necromancer/commands/corrode.tin} {#NOP %%1;#CLASS {necromancer_corrode} {KILL};};
+    event_oneshot {e_combat_finished} {$path[mud]/Guilds/necromancer/commands/corrode.tin} {#NOP %%1;.gag set {necro.corrode} {on};};
     #VAR {opponent[corrode]} {1};
+    .gag set {necro.corrode} {on};
     #SEND {!corrode %1};
 };
+
+.gag add {necro.corrode} {^You affect %* with a dark, necromantic touch.$};
+.gag add {necro.corrode} {^%* cries out in agony from the corroding decay!$};
+.gag add {necro.corrode} {^%* flesh is corroded away by the curse!$};
+.gag add {necro.corrode} {^The deadly corrosion wears away.$};
+.gag add {necro.corrode} {^>>>The corrosion upon %* has faded.$};
+.gag set {necro.corrode} {off};

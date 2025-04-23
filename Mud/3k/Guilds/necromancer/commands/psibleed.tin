@@ -3,27 +3,6 @@
     #NOP %1;
     #CLASS {necromancer_psibleed} {ASSIGN}
     {
-        #GAG {^Your iron will calls forth the powers of the material planes of energy.$};
-        #GAG {^The crimson field engulfing %* dissolves away.$};
-
-        #GAG {^You revel as the crimson energy feeds into your mind!$};
-        #GAG {^The crimson energy feeds directly into your willing mind.$};
-        #GAG {^The energy planes pull the power directly into your mind.$};
-        #GAG {^Your magical energies are refreshed by the crimson psibleed.$};
-        #GAG {^The crimson energy fills and refreshes your thirsty mind.$};
-        #GAG {^Your mind is refreshed from the power of the psibleed.$};
-        #GAG {^The pure crimson power flows directly into your open mind.$};
-
-        #GAG {^The crimson energy wraps %* in a painful, agonizing torment.$};
-        #GAG {^A crimson mist then appears and engulfs %*!$}; 
-        #GAG {^%* mind is sapped into the crimson field of energy.$};
-        #GAG {^%* is painfully drained by the crimson mist.$};
-        #GAG {^%* staggers from the painful crimson energy mist.$};
-        #GAG {^%* thoughts painfully dissipate into the crimson mist.$};
-        #GAG {^%* mind and thoughts drain away into the crimson mist.$};
-        #GAG {^The crimson energy field drains the mind of %*.$};
-        #GAG {^You invade your enemy's mind with visions of death and despair!$};
-
         #ACTION {^>>>The psibleed upon %* has dissipated.$}
         {
             handler_psibleed_cleanup;
@@ -37,11 +16,36 @@
         {
             #NOP %%1;
             #UNVAR {opponent[psibleed]};
+            .gag set {necro.psibleed} {off};              
             event_remove_specific {e_combat_finished} {$path[guild]/commands/psibleed.tin};
             #CLASS {necromancer_psibleed} {KILL};            
         };
         event_oneshot {e_combat_finished} {$path[guild]/commands/psibleed.tin} {#NOP %%1;handler_psibleed_cleanup;};
     };
-    #VAR {opponent[psibleed]} {1};    
+    #VAR {opponent[psibleed]} {1};  
+    .gag set {necro.psibleed} {on};      
     #SEND {!psibleed %1};    
 };
+
+.gag add {necro.psibleed} {^Your iron will calls forth the powers of the material planes of energy.$};
+.gag add {necro.psibleed} {^The crimson field engulfing %* dissolves away.$};
+
+.gag add {necro.psibleed} {^You revel as the crimson energy feeds into your mind!$};
+.gag add {necro.psibleed} {^The crimson energy feeds directly into your willing mind.$};
+.gag add {necro.psibleed} {^The energy planes pull the power directly into your mind.$};
+.gag add {necro.psibleed} {^Your magical energies are refreshed by the crimson psibleed.$};
+.gag add {necro.psibleed} {^The crimson energy fills and refreshes your thirsty mind.$};
+.gag add {necro.psibleed} {^Your mind is refreshed from the power of the psibleed.$};
+.gag add {necro.psibleed} {^The pure crimson power flows directly into your open mind.$};
+
+.gag add {necro.psibleed} {^The crimson energy wraps %* in a painful, agonizing torment.$};
+.gag add {necro.psibleed} {^A crimson mist then appears and engulfs %*!$}; 
+.gag add {necro.psibleed} {^%* mind is sapped into the crimson field of energy.$};
+.gag add {necro.psibleed} {^%* is painfully drained by the crimson mist.$};
+.gag add {necro.psibleed} {^%* staggers from the painful crimson energy mist.$};
+.gag add {necro.psibleed} {^%* thoughts painfully dissipate into the crimson mist.$};
+.gag add {necro.psibleed} {^%* mind and thoughts drain away into the crimson mist.$};
+.gag add {necro.psibleed} {^The crimson energy field drains the mind of %*.$};
+.gag add {necro.psibleed} {^You invade your enemy's mind with visions of death and despair!$};
+
+.gag set {necro.psibleed} {off};

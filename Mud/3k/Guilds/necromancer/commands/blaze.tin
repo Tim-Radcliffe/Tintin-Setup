@@ -3,37 +3,39 @@
     
     #CLASS {necromancer_blaze} {ASSIGN}
     {
-        #GAG {^Blazing hellfire scorches your enemy to a cinder!$};
-        #GAG {^Blazing magic sears gaping wounds into your foe!$};
-        #GAG {^Gore splatters your face as you attack with demonic fury!$};
-        #GAG {^Hellfire explodes from your fingertips!$};
-        #GAG {^Hellfire leaps from your outstretched hands and scorches your foe!};            
-        #GAG {^Infernal fire scorches the flesh off your foe!$};
-        #GAG {^Laughing mercilessly, you cripple your enemy!$};
-        #GAG {^Liquid fire envelopes your opponent and consumes their very soul!$};
-        #GAG {^Liquid heat flows from your body, boiling your enemy alive!$};
-        #GAG {^The realm cringes as you land a devastating blow!$};
-        #GAG {^You burn the eyes from your enemy's sockets in blazing fury!$};
-        #GAG {^You bury your skeletal talons into your enemy's flesh!$};
-        #GAG {^You call the fires of hell into your soul!$};
-        #GAG {^You call upon Silthos to shorten your foe's life!$};
-        #GAG {^You clutch your foe in your talons and drain their life away!$};
-        #GAG {^You devastate your opponent with hell-driven fury!$};
-        #GAG {^You devastate your enemy with the fury of death!$};
-        #GAG {^You dismember your foe with inhuman accuracy!$};
-        #GAG {^You explode upon your enemy with demonic fury!$};
-        #GAG {^You rake a skeletal claw across the face of your foe!$};
-        #GAG {^You strangle your foe with your skeletal hands!$};
-        #GAG {^You strike with supernatural fury!$};        
-        #GAG {^You stun your enemy with the strength granted you by Silthos!$};
-        #GAG {^You viciously tear at your opponent's eyes!};
-
-        #GAG {^Red flames of hellfire flicker along %* body.$};
-
         #ACTION {^The hellfire blazing fades from your soul.}
         {
+            .gag set {necro.blaze} {off};
             #CLASS {necromancer_blaze} {KILL};
         };
     };
+    .gag set {necro.blaze} {on};
     #SEND {!blaze};
 };
+
+.gag add {necro.blaze} {^Blazing hellfire scorches your enemy to a cinder!$};
+.gag add {necro.blaze} {^Blazing magic sears gaping wounds into your foe!$};
+.gag add {necro.blaze} {^Gore splatters your face as you attack with demonic fury!$};
+.gag add {necro.blaze} {^Hellfire explodes from your fingertips!$};
+.gag add {necro.blaze} {^Hellfire leaps from your outstretched hands and scorches your foe!};            
+.gag add {necro.blaze} {^Infernal fire scorches the flesh off your foe!$};
+.gag add {necro.blaze} {^Laughing mercilessly, you cripple your enemy!$};
+.gag add {necro.blaze} {^Liquid fire envelopes your opponent and consumes their very soul!$};
+.gag add {necro.blaze} {^Liquid heat flows from your body, boiling your enemy alive!$};
+.gag add {necro.blaze} {^Red flames of hellfire flicker along %* body.$};
+.gag add {necro.blaze} {^The realm cringes as you land a devastating blow!$};
+.gag add {necro.blaze} {^You burn the eyes from your enemy's sockets in blazing fury!$};
+.gag add {necro.blaze} {^You bury your skeletal talons into your enemy's flesh!$};
+.gag add {necro.blaze} {^You call the fires of hell into your soul!$};
+.gag add {necro.blaze} {^You call upon Silthos to shorten your foe's life!$};
+.gag add {necro.blaze} {^You clutch your foe in your talons and drain their life away!$};
+.gag add {necro.blaze} {^You devastate your opponent with hell-driven fury!$};
+.gag add {necro.blaze} {^You devastate your enemy with the fury of death!$};
+.gag add {necro.blaze} {^You dismember your foe with inhuman accuracy!$};
+.gag add {necro.blaze} {^You explode upon your enemy with demonic fury!$};
+.gag add {necro.blaze} {^You rake a skeletal claw across the face of your foe!$};
+.gag add {necro.blaze} {^You strangle your foe with your skeletal hands!$};
+.gag add {necro.blaze} {^You strike with supernatural fury!$};        
+.gag add {necro.blaze} {^You stun your enemy with the strength granted you by Silthos!$};
+.gag add {necro.blaze} {^You viciously tear at your opponent's eyes!};
+.gag set {necro.blaze} {off};
