@@ -17,7 +17,7 @@
 	#IF {"%1" != ""}
 	{
 		#SEND {!scaler %1};
-        #IF {%1 != $my[dungeon][$map[area][name]]}
+        #IF {"%1" != "$my[dungeon][$map[area][name]]"}
         {
             .aYesNo {Set $map[area][name] default scaler to %1?}
             {
