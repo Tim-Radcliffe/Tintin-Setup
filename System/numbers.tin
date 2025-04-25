@@ -59,7 +59,7 @@
 #FUNCTION {fIsNumber}
 {
     #VAR result {0};
-    #IF {"%1" == "%d" && "%1" != ""}
+    #IF {"%1" == "{^[0-9\,\.\-]+$}"}
     {
         #VAR result {1};
     };
