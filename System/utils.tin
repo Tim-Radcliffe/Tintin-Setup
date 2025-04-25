@@ -304,9 +304,7 @@ event_register {e_5_mins} {System/utils.tin} {.aProfileSave};
 
 #FUNCTION {fGetHash}
 {
-  #LOCAL {_fGH} {};
-  #FORMAT {_fGH} {%H} {%0};
-  #RETURN {$_fGH};
+  #FORMAT {result} {%H} {%0};
 };
 
 #NOP pass in a 2 dimensional array and it returns a formatted table of the data.

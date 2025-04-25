@@ -155,6 +155,7 @@
     #RETURN $_fNTD;
 };
 
+#NOP Remove commas from a number
 #FUNCTION {fCleanNumber}
 {
     #IF {"%1" == ""} {#RETURN};
