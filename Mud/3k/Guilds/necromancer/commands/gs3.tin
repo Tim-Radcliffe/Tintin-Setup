@@ -1,0 +1,84 @@
+#NOP Necromancer gs3 command
+#NOP Here is your one most recent kill master.               
+#NOP                                                           
+#NOP Kill#    Time    (diff)       Class  Name  (* best kill)
+#NOP --------------------------------------------------------  
+#NOP    1)   9:32:31             1397216 *Faerie Lizard      
+#NOP                            --------                       
+#NOP                     Total: 1397216    
+#NOP   Here are your three most recent kills master.          
+#NOP                                                          
+#NOP Kill#    Time    (diff)       Class  Name  (* best kill) 
+#NOP -------------------------------------------------------- 
+#NOP    1)   9:32:31             1397216  Faerie Lizard       
+#NOP    2)   9:33:05(      34)   1674026  Rabid Wolf          
+#NOP    3)   9:33:35(      30)   1677219 *Rabid Wolf          
+#NOP                            --------                      
+#NOP                     Total: 4748461 
+#NOP Your gscore3 is now cleared master.                                           │
+#NOP You have no recent kills master. 
+
+
+#ALIAS {gs3}
+{
+
+    #CLASS {necromancer_gs3} ASSIGN
+    {
+        #VAR {_gs3} {};
+        #ACTION {^%sHere %w your %w most recent %w master.$}
+        {
+            #IF {"%0" == "%*quiet%*"} 
+            {
+                #CLASS {necromancer_gs3} ASSIGN 
+                {
+                    #GAG {^Kill#    Time    (diff)       Class  Name  (* best kill)$};
+                    #GAG {^{( |-)+}$};
+                    #GAG {^$};   
+                };
+                #LINE GAG;         
+            };
+        } {2};
+        #ACTION {^{\s+(\d+)\).{20}\s+(\d+)\s+( |\*)(.*)}$}
+        {
+            #VAR {_gs3[list][%%2]} {{size}{%%3}{name}{%%5}};
+            #IF {"%0" == "%*quiet%*"} {#LINE GAG;};         
+        } {2};
+        #ACTION {{^\s+Total:\s+(\d+)$}}
+        {
+            #IF {"%0" == "%*quiet%*"} {#LINE GAG;};
+            #VAR {_gs3[total]} {%%2};
+            event_raise {e_gs3} {$$_gs3};
+            #CLASS {necromancer_gs3} KILL;            
+        } {2};
+        #ACTION {^  Your gscore3 is now cleared master.$}
+        {
+            #IF {"%0" == "%*quiet%*"} {#LINE GAG;};
+            #CLASS {necromancer_gs3} KILL;            
+        } {2};
+    };
+
+    #LOCAL {_gs3Parms} {%0};
+    #IF {"%0" == "%*quiet%*"}
+    {
+        #REPLACE {_gs3Parms} {quiet} {};
+    };
+
+    #SEND {!gs3 $_gs3Parms};
+};
+
+#ALIAS {handler_auto_detectsize}
+{
+	#NOP %1;
+	.debug GUILD {SIZE: %0};
+
+    #ALIAS {handler_auto_gs3}
+    {
+        #LOCAL {_hAG} {%%0};
+        #VAR {opponent[size]} {$_hAG[e_gs3][list][1][size]};
+        #UNALIAS {handler_auto_gs3};
+    };
+    event_oneshot {e_gs3} {gs3.tin} {handler_auto_gs3};
+    gs3 quiet;
+    gs3 clear quiet;
+};
+auto add {detectsize} {gs3 clear} {e_killed_opponent} {};

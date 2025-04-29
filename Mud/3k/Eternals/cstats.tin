@@ -1,53 +1,154 @@
-#ALIAS {handler_auto_cstats}
+#NOP Damage Taken:   1,496,709                                     
+#NOP                                                               
+#NOP Combat Rounds:          1,247                                 
+#NOP Overall Combat Rounds:  1,060,649                             
+#NOP                                                               
+#NOP XP Gained:    -58,597,664                                     
+#NOP XP Per Hour:  -30,243,955                                     
+#NOP GXP Gained:   1,275                                           
+#NOP GXP Per Hour: 658                                             
+#NOP                                                               
+#NOP Total Kills:   55                                             
+#NOP XP Per Kill:   -1,065,412                                     
+#NOP GXP Per Kill:  23                                             
+#NOP                                                               
+#NOP Top 3 kills:                                                  
+#NOP 4,277,778 : A zombie cook looking for something to chop     
+#NOP 4,272,641 : A zombie cook looking for something to chop     
+#NOP 4,269,988 : A zombie waiter offering drinks                 
+#NOP                                                               
+#NOP Last 5 kills:                                                 
+#NOP 4,233,045 : A zombie waiter offering drinks                 
+#NOP 4,250,545 : A zombie cook looking for something to chop     
+#NOP 4,265,737 : A zombie cook looking for something to chop     
+#NOP 4,201,558 : A zombie waiter offering drinks                 
+#NOP 4,211,367 : A zombie cook looking for something to chop     
+#NOP                                                               
+#NOP Rooms Explored: 222                                           
+#NOP Gstat Time : 1 hr 56 mins 15 secs                             
+#NOP                                                               
+#NOP Total Time Spent online : 3 days 2 mins 9 secs   
+
+#ALIAS {(cstats}
 {
-	#NOP %1;
+    #NOP %1;
 	.debug ETERNALS {CSTATS: %0};
-	#IF {"%2" != ""}
-	{
-		#VAR {_hACS} {};
-		#VAR {_hACS[data]} {@fGetMapData{{_npc}{%3}}};
-		#IF {&map[area][scaler] == 0}
-		{
-			scaler
-		};
-		#ACTION {^Damage Taken:%s%S$}
-		{
-			#VAR {_hACS[damage]} {@fCleanNumber{%%2}};
-		};
-		#ACTION {^Combat Rounds:%s%S$}
-		{
-			#VAR {_hACS[rounds]} {@fCleanNumber{%%2}};
-		};
-		#ACTION {^XP Gained:%s%S$}
-		{
-			#VAR {_hACS[xp]} {@fCleanNumber{%%2}};
-		};
-		#ACTION {^Combat details have been cleared.$}
-		{
-			#MATH {_hACS[avg_dmg]} {$_hACS[damage] / $_hACS[rounds]};
-			.debug ETERNALS {Avg Damage : $_hACS[damage]  / $_hACS[rounds] = $_hACS[avg_dmg]};
-
-			#IF {&${_hACS[data][path]}[size][$map[area][scaler]][avg_dmg_taken_per_round] == 0} 
-			{
-				#VAR {${_hACS[data][path]}[size][$map[area][scaler]][avg_dmg_taken_per_round]} {$_hACS[avg_dmg]};
-			};
-			#IF {&${_hACS[data][path]}[size][$map[area][scaler]][avg_xp] == 0} 
-			{
-				#VAR {${_hACS[data][path]}[size][$map[area][scaler]][avg_xp]} {$_hACS[xp]};
-			};
-
-			#MATH {${_hACS[data][path]}[size][$map[area][scaler]][avg_dmg_taken_per_round]} {(($${_hACS[data][path]}[size][$map[area][scaler]][avg_dmg_taken_per_round] * $${_hACS[data][path]}[size][$map[area][scaler]][kills]) + $_hACS[avg_dmg]) / ($${_hACS[data][path]}[size][$map[area][scaler]][kills] + 1)};
-			#MATH {${_hACS[data][path]}[size][$map[area][scaler]][avg_xp]} {(($${_hACS[data][path]}[size][$map[area][scaler]][avg_xp] * $${_hACS[data][path]}[size][$map[area][scaler]][kills]) + $_hACS[xp]) / ($${_hACS[data][path]}[size][$map[area][scaler]][kills] + 1)};
-			.scanRoomNPCSave {$_hACS[data][regex]};
-			#UNVAR {_hACS};
-			#UNACTION {^Damage Taken:%s%S$};			
-			#UNACTION {^Combat Rounds:%s%S$};
-			#UNACTION {^XP Gained:%s%S$};
-			#UNACTION {^Combat details have been cleared.$};			
-		} {3};
-		#SEND {!(cstats};
-		#SEND {!(csclear};
-	};
+    #CLASS {eternals_cstats} ASSIGN
+    {
+        #VAR {_cstats} {};
+        #IF {"%1" == "quiet"}
+        {
+            #GAG {^---------------------------  Combat Statistics  ---------------------$};
+            #GAG {^$};
+            #VAR {_cstats[settings][quiet]} {1};
+        };
+        #ACTION {{^([a-zA-Z ]+):\s+(.*)$}}
+        {
+            #IF {"$_cstats[settings][quiet]" == "1"} {#LINE GAG;};
+            #IF {@@fIsNumber{%%3}}
+            {
+                #VAR {_cstats[%%2]} {@@fCleanNumber{%%3}};
+            };
+            #ELSE 
+            {
+                #VAR {_cstats[%%2]} {%%3};
+            };
+            #IF {"%%2" == "Total Time Spent online "}
+            {
+                #UNVAR {_cstats[settings]};
+                event_raise {e_cstats} {$_cstats};
+                #CLASS {eternals_cstats} {kill};
+            };
+        };
+        #ACTION {^{\w+ \d+ kills}:$}
+        {
+            #IF {"$_cstats[settings][quiet]" == "1"} {#LINE GAG;};
+            #VAR {_cstats[settings][list]} {%%1};
+        };
+        #ACTION {^  %* : %*$}
+        {
+            #IF {"$_cstats[settings][quiet]" == "1"} {#LINE GAG;};
+            #LIST {_cstats[$_cstats[settings][list]]} ADD {{{name}{%%2}{size}{@@fCleanNumber{%%1}}}};
+        };
+    };
+    #SEND {!(cstats};
 };
 
-auto add {cstats} {#SEND {!(csclear}} {e_killed_opponent} {};
+#ALIAS {handler_auto_cstats}
+{
+    #NOP %1;
+    #ACTION {^Combat details have been cleared.$}
+    {
+        #LINE GAG;
+        #UNACTION {^Combat details have been cleared.$};
+    };
+    #ALIAS {handler_cstats}
+    {
+        #LOCAL {_hCS} {%%0};
+        #VAR {opponent[rounds]} {$_hCS[e_cstats][Combat Rounds]};
+        #VAR {opponent[damage]} {$_hCS[e_cstats][Damage Taken]};
+        #VAR {opponent[xp]}     {$_hCS[e_cstats][XP Gained]};
+        #UNALIAS {handler_cstats};
+    };
+    event_oneshot {e_cstats} {cstats.tin} {handler_cstats};    
+    (cstats quiet;
+    #SEND {!(csclear};
+};
+auto add {cstats} {#SEND {!(csclear}} {e_killed_opponent};
+
+#NOP #ALIAS {handler_auto_cstats}
+#NOP {
+#NOP 	#NOP %1;
+#NOP 	.debug ETERNALS {CSTATS: %0};
+#NOP 	#IF {"%2" != ""}
+#NOP 	{
+#NOP         #CLASS {eternals_cstats} ASSIGN
+#NOP         {
+#NOP             #VAR {_hACS} {};
+#NOP             #VAR {_hACS[data]} {@fGetMapData{{_npc}{%3}}};
+#NOP             #IF {&map[area][scaler] == 0}
+#NOP             {
+#NOP                 scaler
+#NOP             };
+#NOP             #ACTION {{^([a-zA-Z ]+):\s+([0-9,]+)$}}
+#NOP             {
+#NOP                 #VAR {_hACS[input][%%2]} {@fCleanNumber{%%3}};
+#NOP             };
+#NOP #NOP            #ACTION {^Damage Taken:%s%S$}
+#NOP #NOP            {
+#NOP #NOP                #VAR {_hACS[damage]} {@fCleanNumber{%%2}};
+#NOP #NOP            };
+#NOP #NOP            #ACTION {^Combat Rounds:%s%S$}
+#NOP #NOP            {
+#NOP #NOP                #VAR {_hACS[rounds]} {@fCleanNumber{%%2}};
+#NOP #NOP            };
+#NOP #NOP            #ACTION {^XP Gained:%s%S$}
+#NOP #NOP            {
+#NOP #NOP                #VAR {_hACS[xp]} {@fCleanNumber{%%2}};
+#NOP #NOP            };
+#NOP             #ACTION {^Combat details have been cleared.$}
+#NOP             {
+#NOP                 #MATH {_hACS[avg_dmg]} {$_hACS[damage] / $_hACS[rounds]};
+#NOP                 .debug ETERNALS {Avg Damage : $_hACS[damage]  / $_hACS[rounds] = $_hACS[avg_dmg]};
+#NOP 
+#NOP                 #IF {&${_hACS[data][path]}[size][$map[area][scaler]][avg_dmg_taken_per_round] == 0} 
+#NOP                 {
+#NOP                     #VAR {${_hACS[data][path]}[size][$map[area][scaler]][avg_dmg_taken_per_round]} {$_hACS[avg_dmg]};
+#NOP                 };
+#NOP                 #IF {&${_hACS[data][path]}[size][$map[area][scaler]][avg_xp] == 0} 
+#NOP                 {
+#NOP                     #VAR {${_hACS[data][path]}[size][$map[area][scaler]][avg_xp]} {$_hACS[xp]};
+#NOP                 };
+#NOP 
+#NOP                 #MATH {${_hACS[data][path]}[size][$map[area][scaler]][avg_dmg_taken_per_round]} {(($${_hACS[data][path]}[size][$map[area][scaler]][avg_dmg_taken_per_round] * $${_hACS[data][path]}[size][$map[area][scaler]][kills]) + $_hACS[avg_dmg]) / ($${_hACS[data][path]}[size][$map[area][scaler]][kills] + 1)};
+#NOP                 #MATH {${_hACS[data][path]}[size][$map[area][scaler]][avg_xp]} {(($${_hACS[data][path]}[size][$map[area][scaler]][avg_xp] * $${_hACS[data][path]}[size][$map[area][scaler]][kills]) + $_hACS[xp]) / ($${_hACS[data][path]}[size][$map[area][scaler]][kills] + 1)};
+#NOP                 #NOP  {$_hACS[data][regex]};
+#NOP                 #CLASS {eternals_cstats} KILL;
+#NOP             } {3};
+#NOP         };
+#NOP 		#SEND {!(cstats};
+#NOP 		#SEND {!(csclear};
+#NOP 	};
+#NOP };
+
+#NOP auto add {cstats} {#SEND {!(csclear}} {e_killed_opponent} {};
