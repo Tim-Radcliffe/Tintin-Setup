@@ -6,6 +6,7 @@
 	};
     event_oneshot {e_prompt} {craftstats.tin}
     {
+        #NOP %%1;
         #UNACTION {{^\s+(\w+)\s+:\s+(\d+) \/\s+(\d+) \(\s*(\d+)\%\) \[\s+(\w+)\s+\]\s*$}};
     };
 	#SEND {craftstats %0};
