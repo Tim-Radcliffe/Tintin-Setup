@@ -1,25 +1,25 @@
 #ALIAS {handler_auto_detectundead}
 {
     #NOP %1;
-    #IF {"%2" != ""}
+    #IF {"%1" != ""}
 	{
-        #IF {"$%2[undead]" == ""}
+        #IF {"$%1[data][undead]" == ""}
         {
-            #VAR {%2[undead]} {0};
+            #VAR {%1[data][undead]} {0};
             #CLASS {cNecromancerDetectUndead%5} {open};
-            #ACTION {%3 is undead...}
+            #ACTION {$%1[data][id] is undead...}
             {
-                #VAR {%2[undead]} {1};
-				.scanRoomNPCSave {%6};               
+                #VAR {%1[data][undead]} {1};
+				.scanRoomNPCSave {%1[data]};               
             } {3};
-            #ACTION {_necromancer.detect.undead.end.%5}
+            #ACTION {_necromancer.detect.undead.end.$%1[hash]}
             {
                 #LINE GAG;
-                #CLASS {cNecromancerDetectUndead%5} {kill};
+                #CLASS {cNecromancerDetectUndead$%1[hash]} {kill};
             } {2};
-            #CLASS {cNecromancerDetectUndead%5} {close};
+            #CLASS {cNecromancerDetectUndead$%1[hash]} {close};
             #SEND {!detect undead};
-            #SEND {!_necromancer.detect.undead.end.%5};            
+            #SEND {!_necromancer.detect.undead.end.$%1[hash]};            
         };
     };
 };

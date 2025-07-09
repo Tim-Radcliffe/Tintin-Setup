@@ -885,6 +885,11 @@
             }
             {name} {A small pile of gold coins}
         }
+        {containing \\d+ messages} 
+        {
+            {_area} {Pinnacle/Fantasy/Necromancer Guild}
+            {{_area}{Pinnacle/Fantasy/Necromancer Guild}{desc}{{1}{Type 'help board' for a list of commands.}}{global}{1}{id}{board}{location}{{Pinnacle}{{1}{}{20}{}{22}{}{24}{}{28}{}{37}{}{63}{}{71}{}{74}{}{78}{}{82}{}{95}{}{120}{}{125}{}{126}{}{141}{}{199}{}{203}{}}{Pinnacle/Fantasy/Necromancer Guild}{{1}{}{4}{}{16}{}{19}{}{20}{}{45}{}{46}{}{48}{}{73}{}{76}{}{92}{}{310}{}{364}{}{365}{}}}{name}{board}{nomap}{}{pickup}{-1}} {}
+        }
         {containing \d+ messages} 
         {
             {_area} {Pinnacle/Fantasy/Necromancer Guild}

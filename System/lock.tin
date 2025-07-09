@@ -36,6 +36,7 @@
     };
 };
 
+#NOP .Unlock {match} {negative match};
 #ALIAS {.Unlock}
 {
     #IF {"%0" == ""}
@@ -44,13 +45,29 @@
     };
     #ELSE
     {
-        #LOCAL {_lock_record} {};
         #FOREACH {*_lock[%1]} {_lock_record}
         {
-            #UNVAR {_lock[$_lock_record]};
-            .debug LOCK {Unlock: $_lock_record};    
-            event_raise {e_lock_removed} {$_lock_record};
+            #IF {"%2" != ""}
+            {
+                #REGEXP {$_lock_record} {%2} 
+                {
+                    #VAR {_lock_record} {};
+                };
+                #IF {"$_lock_record" != ""}
+                {
+                    #UNVAR {_lock[$_lock_record]};
+                    .debug LOCK {Unlock: $_lock_record};    
+                    event_raise {e_lock_removed} {$_lock_record};    
+                };
+            };
+            #ELSE 
+            {
+                #UNVAR {_lock[$_lock_record]};
+                .debug LOCK {Unlock: $_lock_record};    
+                event_raise {e_lock_removed} {$_lock_record};
+            };
         };
+        #UNVAR {_lock_record};
         .file write {$path[profile]/lock.tin};
     };
 };

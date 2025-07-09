@@ -51,8 +51,8 @@
         .gag add {necro.unholy_ground} {^Purple lightning arcs from %* to %*!$};
     };
     
-    .gag add {necro.unholy_ground.finished} {^Your grounding to the negative material plane dissipates in a sparkle.$};
-    event_register {e_gag_necro.unholy_ground.finished} {unholy ground.tin} {#NOP %1;.gag set {necro.unholy_ground%*} {off};};    
+    .gag add {necro.unholy_ground.end} {^Your grounding to the negative material plane dissipates in a sparkle.$};
+    event_register {e_gag_necro.unholy_ground.end} {unholy ground.tin} {#NOP %1;.gag set {necro.unholy_ground%*} {off};};    
 
     .gag set {necro.unholy_ground%*} {off};
 };

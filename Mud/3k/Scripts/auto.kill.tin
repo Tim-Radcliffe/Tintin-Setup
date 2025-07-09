@@ -95,12 +95,12 @@
 #ALIAS {handler_auto_kill_combat}
 {
 	#NOP %1;
-	#IF {!@fLocked{room.autokill}}
+	#IF {!@fLocked{room.autokill} && "%1" != ""}
 	{
 	    .Lock {room.autokill};
 	    handler_auto_kill_choice {};
 	    #UNVAR {room[target]};
-        #SEND {!kill %1};    
+        #SEND {!kill %1};
 	    event_oneshot {e_combat_finished} {auto.kill.tin} {handler_auto_kill_roomscan};
     };
 };
@@ -108,15 +108,17 @@
 #ALIAS {handler_auto_kill_roomscan}
 {
     #NOP %1;
+	#NOP .Unlock {room.autokill};
+	handler_auto_kill_choice {};
+	event_remove_handler {auto.kill.tin};    
     event_oneshot {e_roomscan_end} {auto.kill.tin} {handler_auto_kill_finish};  
 };
 
 #ALIAS {handler_auto_kill_finish}
 {
 	#NOP %1;
-	.Unlock {room.autokill};
-	handler_auto_kill_choice {};
-	event_remove_handler {auto.kill.tin};
+    #NOP .Unlock {room.autokill};
+    event_remove_handler {auto.kill.tin};
 };
 
 auto add {kill} {.file load {$path[mud]/Scripts/auto.kill.tin}} {e_room_npc} {#NOP %%1;handler_auto_kill_finish;#CLASS {$path[mud]/Scripts/auto.kill.tin} {kill};};

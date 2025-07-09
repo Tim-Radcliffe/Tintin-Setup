@@ -66,7 +66,7 @@ auto add {mine}
         {pickup} {handler_auto_mine_ore}
     };
 }
-{e_roomscan_end}
+{e_room_enter}
 {
     #UNVAR {_item[global][A {copper|bronze|iron|steel|silver|gold|mithril|titanium|ebon|adamantium|obsidian|nethernium|voidstone|phasemetal|chaostone} ore deposit]};
     handler_auto_mine_end;

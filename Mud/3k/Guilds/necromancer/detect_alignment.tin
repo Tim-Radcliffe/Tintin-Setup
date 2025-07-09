@@ -1,37 +1,38 @@
 #ALIAS {handler_alignment}
 {
-    #NOP %1;
-    #IF {"%2" != ""}
-    {
-        #IF {&%2[alignment] == 0}
-        {
-            #CLASS {cNecromancerAlignment%5} {open};
-            #VAR {_alignments} {{hellish evilness}{-4}{extreme evil}{-3}{evil}{-2}{weak evil}{-1}
-            {neutrality}{0}
-            {weak goodness}{1}{goodness}{2}{extreme goodness}{3}{divine goodness}{4}};            
-            #ACTION {{^\x7D\x7D\x7D (.*) reflects (.*)$}}
-            {
-                #LOCAL {string} {};
-                #FORMAT {string} {%l} {%%2};
-                #LOCAL {match} {};
-                #FORMAT {match} {%l} {%6};
-                .debug {GUILD} {GUILD: Detect Alignment: $string : $match};
-                #REGEXP {$string} {{$match}} 
-                {
-                    #VAR {%2[alignment]} {$_alignments[%%3]};
-                    .scanRoomNPCSave {%6};                      
-                };             
-            } {3};
+	#NOP %1;
+	#IF {"%2" != ""}
+	{
+		#IF {&%2[data][alignment] == 0 || "$%2[data][alignment]" == ""}
+		{
+			#CLASS {cNecromancerAlignment%2} {open};
+			#VAR {_alignments} {{hellish evilness}{-4}{extreme evil}{-3}{evil}{-2}{weak evil}{-1}
+			{neutrality}{0}
+			{weak goodness}{1}{goodness}{2}{extreme goodness}{3}{divine goodness}{4}};            
+			#ACTION {{^\x7D\x7D\x7D (.*) reflects (.*)$}}
+			{
+				#LOCAL {string} {};
+				#FORMAT {string} {%l} {%%2};
+				#LOCAL {match} {};
+				#FORMAT {match} {%l} {@fUnescapeString{$%2[data][regexpattern]}};
+				.debug {GUILD} {GUILD: Detect Alignment: $string : $match};
+				#REGEXP {$string} {{$match}} 
+				{
+					#VAR {%2[data][alignment]} {$_alignments[%%3]};
+					.debug SCAN {NPC Alignment Save $%2[id]};              
+					.scanRoomNPCSave {%2} {%3};		
+				};             
+			} {3};
 
-            #ACTION {_necromancer.detect.alignment.end.%5}
-            {
-                #LINE GAG;
-                #CLASS {cNecromancerAlignment%5} {kill};
-            } {2};            
-            #CLASS {cNecromancerAlignment%5} {close};
-            #SEND {!detect alignment};
-            #SEND {!_necromancer.detect.alignment.end.%5};
-        };
-    };
+			#ACTION {_necromancer.detect.alignment.end.%3}
+			{
+				#LINE GAG;
+				#CLASS {cNecromancerAlignment%3} {kill};
+			} {2};            
+			#CLASS {cNecromancerAlignment%3} {close};
+			#SEND {!detect alignment};
+			#SEND {!_necromancer.detect.alignment.end.%3};
+		};
+	};
 };
 event_register e_scan_room_npc {detect_alignment.tin} {handler_alignment};

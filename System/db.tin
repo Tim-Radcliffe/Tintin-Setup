@@ -34,7 +34,8 @@
       #MATH {db[Count]} {$db[Count] + 1};
       #IF {$db[Count] > 2}
       {
-        #REPLACE {db[Temp]} {\\} {\\\\};
+        #NOP /*The following statement actually escapes "\" to "\\"...yes, it is weird syntax */;
+        #REPLACE {db[Temp]} {\\} {\\};
         #REPLACE {db[Temp]} {"} {\"};
         #REPLACE {db[Temp]} {'} {\'};
         #REPLACE {db[Temp]} {`} {\`};
@@ -62,6 +63,8 @@
             {
                 #NOP /* Build a tintin associative array using the field names from record 1 and the field data from the current record */;
                 #VAR {db[output][$db[recordindex]][$db[return][1][$db[f]]]} {$db[return][$db[i]][$db[f]]};
+                #NOP /*The following statement actually converts "\\" to "\"...yes, as above it is weird syntax */;
+                #REPLACE {db[output][$db[recordindex]][$db[return][1][$db[f]]]} {\\\\} {\};
             };
         };
     };

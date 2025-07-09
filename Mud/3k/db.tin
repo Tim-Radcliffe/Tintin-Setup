@@ -9,16 +9,6 @@
     #VAR {dbSave[area]} {$dbSave[data][_area]};
     #VAR {dbSave[id]} {$dbSave[data][id]};
     #VAR {dbSave[name]} {$dbSave[data][name]};
-    #FOREACH {*dbSave[data][desc][]} {d}
-    {
-        #IF {"$dbSave[desc]" == ""}
-        {
-            #VAR {dbSave[desc]} {$dbSave[data][desc][$d]};
-        }
-        {
-            #VAR {dbSave[desc]} {$dbSave[desc]\n$dbSave[data][desc][$d]};
-        }
-    }
 
     #IF {!@fIsNumber{*dbSave[data][size][+1]}}
     {
@@ -40,15 +30,16 @@
         #VAR {dbSave[size_max]} {$dbSave[data][size][$dbSave[scaler]][max]};
 
         db_submit {dbSave[result]}
-        {INSERT INTO npcs (areanum, scaler, regexpattern, id, name, description, alignment, undead, autokill) 
-        VALUES ( (SELECT recnum FROM areas WHERE path = '%s'), '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s')
+        {INSERT INTO npcs (areanum, scaler, regexpattern, id, name, description, alignment, undead, autokill, consider) 
+        VALUES ( (SELECT recnum FROM areas WHERE path = '%s'), '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s')
         ON DUPLICATE KEY UPDATE 
         id          = '%s',
         name        = '%s',
         description = '%s',
         alignment   = '%s',
         undead      = '%s',
-        autokill    = '%s'
+        autokill    = '%s',
+        consider    = '%s'
         RETURNING recnum
         }
         {$dbSave[area]}
@@ -56,16 +47,18 @@
         {$dbSave[regexp]}
         {$dbSave[id]}
         {$dbSave[name]}
-        {$dbSave[desc]}
+        {$dbSave[data][description]}
         {$dbSave[data][alignment]}
         {$dbSave[data][undead]}
         {$dbSave[data][autokill]}
+        {$dbSave[data][consider]}
         {$dbSave[id]}
         {$dbSave[name]}
-        {$dbSave[desc]}
+        {$dbSave[data][description]}
         {$dbSave[data][alignment]}
         {$dbSave[data][undead]}
-        {$dbSave[data][autokill]};
+        {$dbSave[data][autokill]}
+        {$dbSave[data][consider]};
 
         #IF {$dbSave[result][1][recnum] > 0}
         {
@@ -290,19 +283,31 @@
     #RETURN {$dbItemSearch[result]};
 }
 
-#NOP #VAR returnvariable {@fDbNPCFind{{area}{npc name}}};
+#NOP #VAR returnvariable {@fDBNPCSearch{{area}{npc name}{dungeon scaler}}};
 #FUNCTION {fDBNPCSearch}
 {
     #LOCAL {dbNPCSearch};
     #LOCAL {dbNPCSearch[options]} {'global', '$my[guild]', '%1'};
+    #IF {"%3" != ""}
+    {
+        #LOCAL {dbNPCSearch[scaler]} {%3};
+    };
+    #ELSE 
+    {
+        #LOCAL {dbNPCSearch[scaler]} {0};
+    };
     db_submit {dbNPCSearch[result]} 
     {
         SELECT npcs.*, areas.path 
         FROM npcs INNER JOIN areas ON npcs.areanum = areas.recnum 
-        WHERE '%s' REGEXP npcs.regexpattern 
-    } {%2} {$dbNPCSearch[options]};
+        WHERE '%s' REGEXP npcs.regexpattern
+    } {%2};
     #LIST {dbNPCSearch[result]} INDEXATE {path};
-    #LIST {dbNPCSearch[result]} REFINE {"&0" == "global" || "&0" == "$my[guild]" || "&0" == "%1"};    
+    #LIST {dbNPCSearch[result]} REFINE {"&0" == "global" || "&0" == "$my[guild]" || "&0" == "%1"};
+    #LIST {dbNPCSearch[result]} INDEXATE {scaler};
+    #LIST {dbNPCSearch[result]} REFINE {"&0" == "$dbNPCSearch[scaler]" || "&0" == "0"};
+    #LIST {dbNPCSearch[result]} ORDER
+    #LOCAL {dbNPCSearch[result]} {$dbNPCSearch[result][-1]};
     #RETURN {$dbNPCSearch[result]};
 }
 

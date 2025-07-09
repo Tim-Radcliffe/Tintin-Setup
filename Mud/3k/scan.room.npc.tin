@@ -1,18 +1,20 @@
 #ALIAS {.scanRoomNPC}
 {
 	#IF {@fLocked{scan.%*}} {#RETURN};
-    #LOCAL {_sRN[data]} {%5};
+	#LOCAL {_sRN[data]} {%5};
 	#LOCAL {_sRN[match]} {$_sRN[data][path]};
-	#IF {"%5[nomap]" == "1"} {#RETURN};
-    .debug SCAN {NPC: $_sRN[match]};    
-	#FORMAT {_sRN[hash]} {%H} {$_sRN[match]};
-    #VAR {%7[hash]} {$_sRN[hash]};
-#NOP    #LINE SUBSTITUTE VARIABLES {.RoomAddCommand {#VAR {_npc[$_sRN[match]]} {@fFormatNPCData{$_npc[$_sRN[match]]}}} {3}};
-	#LINE SUBSTITUTE VARIABLES {.RoomAddCommand {.scanRoomNPCID       {%7}} {3}};
-	#LINE SUBSTITUTE VARIABLES {.RoomAddCommand {.scanRoomNPCDesc     {%7}} {3}};
-	#LINE SUBSTITUTE VARIABLES {.RoomAddCommand {.scanRoomNPCLocation {$_sRN[match]} {%6}} {3}};
-	#LINE SUBSTITUTE VARIABLES {.RoomAddCommand {.scanRoomNPCConsider {$_sRN[match]} {%3} {%2} {$_sRN[hash]} {%6}} {3}};
-	#LINE SUBSTITUTE VARIABLES {.RoomAddCommand {event_raise {e_scan_room_npc} {$_sRN[match]} {%3} {%2} {$_sRN[hash]} {%6}} {4}};
+	#IF {"$_sRN[data][nomap]" == "1"} {#RETURN};
+	.debug SCAN {NPC Start: $_sRN[data][id]};    
+	#FORMAT {_sRN[hash]} {%H} {$_sRN[data][id]};
+	#VAR {%7[hash]} {$_sRN[hash]};
+
+	#NOP    #LINE SUBSTITUTE VARIABLES {.RoomAddCommand {#VAR {_npc[$_sRN[match]]} {@fFormatNPCData{$_npc[$_sRN[match]]}}} {3}};
+	#LINE SUBSTITUTE VARIABLES {.RoomAddCommand {.scanRoomNPCID       {%7} {$_sRN[hash]}} {3}};
+	#LINE SUBSTITUTE VARIABLES {.RoomAddCommand {.scanRoomNPCDesc     {%7} {$_sRN[hash]}} {3}};
+	#LINE SUBSTITUTE VARIABLES {.RoomAddCommand {.scanRoomNPCScaler   {%7} {$_sRN[hash]}} {3}};
+	#NOP #LINE SUBSTITUTE VARIABLES {.RoomAddCommand {.scanRoomNPCLocation {$_sRN[match]} {%6}} {3}};
+	#LINE SUBSTITUTE VARIABLES {.RoomAddCommand {.scanRoomNPCConsider {%7} {$_sRN[hash]}} {3}};
+	#LINE SUBSTITUTE VARIABLES {.RoomAddCommand {event_raise {e_scan_room_npc} {%7} {$_sRN[hash]}} {4}};
 };
 event_register {e_room_npc} {h_scan_npc} {.scanRoomNPC};
 
@@ -22,44 +24,47 @@ event_register {e_room_npc} {h_scan_npc} {.scanRoomNPC};
 	{
 		#VAR {%1[data][id]} {$%1[id]};
 		#VAR {%1[data][name]} {$%1[name]};
-		.scanRoomNPCSave {%1[data]};
+		.scanRoomNPCSave {%1} {%2};
+		.debug SCAN {NPC ID Save $%1[id]};  
 	};
 };
 
 #ALIAS {.scanRoomNPCDesc}
 {
 	#LOCAL {_sRND} {};
-	#CLASS {cScanNPC$%1[hash]} SIZE {_sRND};
+	#CLASS {cScanNPC%2} SIZE {_sRND};
 	#IF {$_sRND == 0}
 	{
-		#CLASS {cScanNPC$%1[hash]} {kill};
+		#CLASS {cScanNPC%2} {kill};
 		#IF {"$%1[data][description]" == ""}
 		{
-            .Lock {room.scannpc.desc};
-			#CLASS {cScanNPC$%1[hash]} {assign}
+			.Lock {room.scannpc.desc};
+			#CLASS {cScanNPC%2} {assign}
 			{
-				#ACTION {_scan.room.npc.desc.$%1[hash]}
+				#ACTION {_scan.room.npc.desc.%2}
 				{
 					#LINE GAG;
-					#CLASS {cScanNPC$%1[hash]} {assign}
+					#CLASS {cScanNPC%2} {assign}
 					{
 						#ACTION {{^(.*$)}}
 						{
-							#LIST {%1[data][desc]} {add} {%%%0};
+							#LIST {%1[data][description]} {add} {%%%0};
 						} {2};
 					};
 				} {1};
 
-				#ACTION {_scan.room.npc.desc.end.$%1[hash]}
+				#ACTION {_scan.room.npc.desc.end.%2}
 				{
 					#LINE GAG;
-					#CLASS {cScanNPC$%1[hash]} {kill};
-					.scanRoomNPCSave {%1[data]};
-                    .Unlock {room.scannpc.desc};                    
+					#CLASS {cScanNPC%2} {kill};
+					#LIST {%1[data][description]} COLLAPSE {\n};
+					.scanRoomNPCSave {%1} {%2};
+					.debug SCAN {NPC Description Save $%1[id]};                      
+					.Unlock {room.scannpc.desc};                    
 				} {1};
 			};
 
-			#SEND {!_scan.room.npc.desc.$%1[hash]};
+			#SEND {!_scan.room.npc.desc.%2};
 			#IF {&%1[id] > 0}
 			{
 				#SEND {!exa $%1[id]};
@@ -68,8 +73,18 @@ event_register {e_room_npc} {h_scan_npc} {.scanRoomNPC};
 			{
 				#SEND {!exa $%1[name]};
 			};
-			#SEND {!_scan.room.npc.desc.end.$%1[hash]};
+			#SEND {!_scan.room.npc.desc.end.%2};
 		};
+	};
+};
+
+#ALIAS {.scanRoomNPCScaler}
+{
+	#IF {"$%1[data][_area]" == "$map[area][path]" && ( "$%1[data][scaler]" == "0" || !@fIsNumber{$%1[data][scaler]})}
+	{
+		#VAR {%1[data][scaler]} {$map[area][scaler]};
+		.scanRoomNPCSave {%1} {%2};
+		.debug SCAN {NPC Scaler Save $%1[id]};          
 	};
 };
 
@@ -80,57 +95,64 @@ event_register {e_room_npc} {h_scan_npc} {.scanRoomNPC};
 		#IF {"$%1[data][_area]" == ""}
 		{
 			#VAR {%1[data][_area]} {$map[area][path]};
-			.scanRoomNPCSave {%1[data]};
-        };
+			.scanRoomNPCSave {%1} {%2};
+		};
 		#LOCAL {_scanRoomVnum} {};
 		#MAP GET ROOMVNUM {_scanRoomVnum};
 		#IF {&%1[location][$map[area][path]][$_scanRoomVnum] == 0}
 		{
 			#VAR {%1[location][$map[area][path]][$_scanRoomVnum]} {};
-			.scanRoomNPCSave {%1[data]};            
+			.scanRoomNPCSave {%1} {%2};
+			.debug SCAN {NPC Location Save $%1[id]};                       
 		};
 	};
 };
 
 #ALIAS {.scanRoomNPCConsider}
 {
-	#IF {&map[area][scaler] == 0}
+	#IF {"&%1[data][consider]" == "0" || "$%1[data][consider]" == ""}
 	{
-		#VAR {map[area][scaler]} {0};
-	};
-	#IF {"&%1[size][$map[area][scaler]][consider]" == "0"}
-	{
-        .Lock {room.scannpc.consider};
-		#ACTION {_scan.room.npc.consider.%4}
+		.Lock {room.scannpc.consider};
+		#ACTION {_scan.room.npc.consider.%2}
 		{
 			#LINE GAG;
 			#ACTION {^Monster class: %*$}
 			{
-				#VAR {%1[size][$map[area][scaler]][consider]} {%%%1};
-				.scanRoomNPCSave {%1[data]};
-                .Unlock {room.scannpc.consider};                
+				#VAR {%1[data][consider]} {%%%1};
+				.scanRoomNPCSave {%1} {%2};
+				.debug SCAN {NPC Consider Save : %2};
+				.Unlock {room.scannpc.consider};
 				#UNACTION {^Monster class: %*$};
 			};
-			#UNACTION {_scan.room.npc.consider.%4};
+			#UNACTION {_scan.room.npc.consider.%2};
 		} {1};
-		#SEND {!_scan.room.npc.consider.%4};
+		#SEND {!_scan.room.npc.consider.%2};
 		#IF {&%1[id] > 0}
 		{
 			#SEND {!consider $%1[id]};
 		};
 		#ELSE
 		{
-			#SEND {!consider %3};
+			#SEND {!consider $%1[name]};
 		};
 	};
 };
 
 #ALIAS {.scanRoomNPCSave}
 {
-    .debug SCAN {NPC Save: %1};
-	#IF {"$%1[nomap]" != "1" && &map[area][path] > 0}
+	.debug SCAN {NPC Save Trigger Added: %2};
+	#IF {"$%1[data][nomap]" != "1" && &map[area][path] > 0}
 	{
-        event_oneshot {e_roomscan_finished} {h_scan_npc %1} {#NOP %%1;.debug SCAN {NPC save: $%1[id]};.dbNPCSave {%1};};
+		#ACTION {_scan.room.npc.complete.%2}
+		{
+			#NOP %%1;
+			#LINE GAG;
+			.debug SCAN {NPC save: %2};
+			.dbNPCSave {%1[data]};
+			#UNACTION {_scan.room.npc.complete.%2};			
+		};
+		event_oneshot {e_roomscan_end} {h_scan_npc %2} {#NOP %%1;_scan.room.npc.complete.%2};
+		#NOP event_oneshot {e_roomscan_finished} {h_scan_npc %1} {#NOP %%1;.debug SCAN {NPC save: $%1[id]};.dbNPCSave {%1};};
 		#NOP .mapVariable add {_npc} {%1} {$_npc[$map[area][path]][%1]};
 	};
 };

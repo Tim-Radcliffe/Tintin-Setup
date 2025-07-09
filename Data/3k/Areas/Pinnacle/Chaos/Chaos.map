@@ -18,7 +18,7 @@ F 1048586
 
 G 0
 
-I 68
+I 83
 
 L {ASCII NESW LINE} {NO EXITS} {x}
 L {ASCII NESW LINE} {N} {o}
@@ -604,16 +604,18 @@ E {143}{grab joystick}{.mapLink {Pinnacle/Chaos/Gamer's House} {} {grab joystick
 R {80}{0}{<000>}{LINK: Pinnacle/Chaos/Crydee}{<138>*}{}{Pinnacle/Chaos/Crydee}{{link}{}}{}{}{1.000}{}
 E {79}{d}{d}{32}{0}{}{1.000}{}{0.00}
 
-R {81}{0}{<178>}{Eastwick Road}{ }{This is the Eastwick road.  The lurching, sidewinding street leads straight as an arrow north and south, or rather south and north, or perhaps both at the same time.  The mottled sky is dark and shadowy, caused both by the existence and non- existence of a fixed source of light, and the giant warehouse that floats happily over your halo.  Which way to head?  Which way to feet?  Which way to the nearest nail factory?  Questions, questions.}{Mud}{{content}{{item}{{^A spectral warehouse$}{{name}{A spectral warehouse}}}{noun}{{sky}{{name}{sky}}}}}{}{}{1.000}{}
+R {81}{0}{<178>}{Eastwick Road}{ }{This is the Eastwick road.  The lurching, sidewinding street leads straight as an arrow north and south, or rather south and north, or perhaps both at the same time.  The mottled sky is dark and shadowy, caused both by the existence and non- existence of a fixed source of light, and the giant warehouse that floats happily over your halo.  Which way to head?  Which way to feet?  Which way to the nearest nail factory?  Questions, questions.}{Mud}{{content}{{item}{{}{{name}{A spectral warehouse}}{Pinnacle/Chaos}{{name}{A strange boy}}{^A spectral warehouse$}{{name}{A spectral warehouse}}}{noun}{{sky}{{name}{sky}}}}}{}{}{1.000}{}
 E {79}{s}{s}{4}{0}{}{1.000}{}{0.00}
 E {83}{n}{n}{1}{0}{}{1.000}{}{0.00}
 
 R {82}{0}{<000>}{LINK: Pinnacle/Chaos/The Book Nook}{<138>*}{}{Pinnacle/Chaos/The Book Nook}{{link}{}}{}{}{1.000}{}
 E {79}{w}{w}{8}{0}{}{1.000}{}{0.00}
 
-R {83}{0}{<178>}{Eastwick Road}{ }{This is the Eastwick road.  Somehow it suddenly veered in direction. There is a road to the west and another to the east.  Which way do you go, you do not know.}{Mud}{{content}{{item}{{^A large whirlpool$}{{name}{A large whirlpool}}}{noun}{{road}{{name}{road}}}}}{}{}{1.000}{}
+R {83}{0}{<068>}{Eastwick Road}{ }{This is the Eastwick road.  Somehow it suddenly veered in direction. There is a road to the west and another to the east.  Which way do you go, you do not know.}{Mud}{{content}{{item}{{}{{name}{A large whirlpool}}{^A large whirlpool$}{{name}{A large whirlpool}}}{noun}{{road}{{name}{road}}}{npc}{{room[contents][npc][1]}{{name}{5585146093336}}}}}{}{}{1.000}{}
 E {85}{e}{e}{2}{0}{}{1.000}{}{0.00}
 E {81}{w}{w}{8}{0}{}{1.000}{}{0.00}
+E {204}{enter whirlpool}{.mapLink {Pinnacle/Chaos/Pandaemonium} {} {enter whirlpool};}{0}{1}{}{1.000}{}{0.00}
+E {205}{dive whirlpool}{.mapLink {Pinnacle/Chaos/Pandaemonium 2.0} {} {dive whirlpool};}{0}{1}{}{1.000}{}{0.00}
 
 R {84}{0}{<109>}{}{ }{}{}{}{}{}{1.000}{}
 E {85}{s}{s}{4}{0}{}{1.000}{}{0.00}
@@ -994,3 +996,7 @@ R {201}{0}{<000>}{LINK: Pinnacle/Chaos/The Ten Commandments}{<138>*}{}{Pinnacle/
 R {202}{0}{<000>}{LINK: Pinnacle/Chaos/Tree of Life v2}{<138>*}{}{Pinnacle/Chaos/Tree of Life v2}{{content}{{item}{{^A swirling void$}{{name}{A swirling void}}{^Magic mushroom magically stuck in the ground$}{{name}{Magic mushroom magically stuck in the ground}}}{noun}{{sky}{{name}{sky}}}{npc}{{^villager$}{{name}{villager}}}}{link}{}}{}{}{1.000}{}
 
 R {203}{0}{<000>}{LINK: Pinnacle/Chaos/Stonemaze Pass}{<138>*}{}{Pinnacle/Chaos/Stonemaze Pass}{{content}{{item}{{}{{name}{Hiking stick}}}{noun}{{air}{{name}{air}}{bamboo}{{name}{bamboo}}{ceiling}{{name}{ceiling}}{dead-end}{{name}{dead-end}}{dirt}{{name}{dirt}}{exit}{{name}{exit}}{floor}{{name}{floor}}{ground}{{name}{ground}}{others}{{name}{others}}{trail}{{name}{trail}}{trees}{{name}{trees}}{varieties}{{name}{varieties}}{walls}{{name}{walls}}{wood}{{name}{wood}}}{npc}{{}{{name}{Spectral Guardian}}}}{link}{}}{}{}{1.000}{}
+
+R {204}{0}{<000>}{LINK: Pinnacle/Chaos/Pandaemonium}{<138>*}{}{Pinnacle/Chaos/Pandaemonium}{{content}{{item}{{}{{name}{A large whirlpool}}{Pinnacle/Chaos}{{name}{A little brown monkey doll}}{^A large whirlpool$}{{name}{A large whirlpool}}}{noun}{{road}{{name}{road}}}}{link}{}}{}{}{1.000}{}
+
+R {205}{0}{<000>}{LINK: Pinnacle/Chaos/Pandaemonium 2.0}{<138>*}{}{Pinnacle/Chaos/Pandaemonium 2.0}{{content}{{item}{{}{{name}{A large whirlpool}}{^A large whirlpool$}{{name}{A large whirlpool}}}{noun}{{road}{{name}{road}}}{npc}{{room[contents][npc][1]}{{name}{5585146093336}}}}{link}{}}{}{}{1.000}{}

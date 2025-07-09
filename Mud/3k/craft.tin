@@ -244,7 +244,7 @@
 
   #ALIAS {.shownext}
   {
-    #NOP %%1;
+    #NOP %1;
     #VAR {_bCS[i]} {@fEval{$_bCS[i] + 1}};
     #IF {$_bCS[i] > &_bCS[list][]}
     {

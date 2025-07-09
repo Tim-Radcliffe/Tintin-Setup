@@ -94,5 +94,5 @@ event_register {e_necro_gline_Undead} {minion.tin} {=heal};
 	#LOCAL {_aMinEnter} {%1};
 	#FORMAT {_aMinEnter} {%n} {$_aMinEnter};
 	#LIST {room[contents][npc]} {ADD} {{{id}{$_aMinEnter}}};
-	handler_auto_corpse;
+    event_raise {e_minion_present};
 };

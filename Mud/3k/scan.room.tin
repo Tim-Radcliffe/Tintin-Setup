@@ -23,7 +23,12 @@
 #ALIAS {.HandlerRoomName}
 {
 	#NOP %1;
-	#VAR {room} {};
+    #KILL {CLASS} {room.*};
+    event_remove_handler {room.*};
+    .Lock {room.start};
+    .Unlock {room.%*} {room.start};
+    #VAR {room} {};
+
 	#REGEXP {%2} {{^(.*?)\s*\(([a-z\s,]*)\)\s*$}}
 	{
 		#VAR {room[name]} {&2};
@@ -33,12 +38,11 @@
 	};
 	.debug SCAN {Room Name: $room[name]};
     event_remove_handler {scan.room.tin};
-    event_oneshot e_prompt {scan.room.tin} {#NOP %%1;event_raise e_room_enter;};
-	event_oneshot e_prompt {scan.room.tin} handler_room_end;
+	event_oneshot e_prompt {scan.room.tin} handler_roomscan_end;
     event_oneshot e_combat {scan.room.tin} {#NOP %%1;event_remove_specific {e_lock_removed} {scan.room.tin};};
 };
 #NOP event_register {e_mip_BAD} {h_room_name} {.HandlerRoomName};
-event_register {e_ansiflag_R} {scan.room.tin} {.HandlerRoomName};
+event_register {e_ansiflag_R} {scan.room.tin roomname} {.HandlerRoomName};
 
 #ALIAS {handler_room_contents}
 {
@@ -66,6 +70,7 @@ event_register {e_ansiflag_R} {scan.room.tin} {.HandlerRoomName};
             #LOCAL {_HRC[item][data]} {@fGetMapData{{_item}{$_HRC[item][name]}}};
  		};
 	};
+    #VAR {_HRC[item][recnum]} {$_HRC[item][data][recnum]}; 
 	#LIST {room[contents][$_HRC[tokenized][1]]} ADD {{$_HRC[item]}};
     #LIST {room[contents][$_HRC[tokenized][1]]} SIZE {_HRC[itemnum]};
     event_raise e_room_${_HRC[tokenized][1]} {$_HRC[item][id]} {$_HRC[item][name]} {$_HRC[item][actions]} {$_HRC[item][data]} {$_HRC[item][data][regexp]} {room[contents][$_HRC[tokenized][1]][$_HRC[itemnum]]};
@@ -73,9 +78,11 @@ event_register {e_ansiflag_R} {scan.room.tin} {.HandlerRoomName};
 event_register e_mip_HAA h_room_contents handler_room_contents;
 event_register e_mip_HAB h_room_contents handler_room_contents;
 
-#ALIAS {handler_room_end}
+#ALIAS {handler_roomscan_end}
 {
 	#NOP %1;
+    .RoomAddCommand {.Unlock {room.start}} {9};
+    event_raise e_room_enter;    
 	#IF {&room[contents][player][] <= 0}
 	{
 		#IF {"&room[commandqueue][]" != "0"}

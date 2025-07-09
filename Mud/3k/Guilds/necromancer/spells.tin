@@ -1,26 +1,36 @@
 #ALIAS {handler_necspells_combat_end}
 {
     #NOP %1;
-    #ACTION {^%s{Edged|Crushing|Cold|Flame|Psionic|Lightning|Corrosion|Virulence|Power|Light}-\(%s%d\)-(%s%d\%\)}
+    #CLASS {necro_spells} ASSIGN
     {
-        #FORMAT {_necSpell} {%l} {%%2};
-        #LOCAL {_stdDamage} {@fStandardDamage{{%%2}{necromancer}}};
-        #VAR {my[necromancer][spells][%%4][$_necSpell]} {%%6};
-        #IF {"%%6" != "0"}
+        #ACTION {^%s{Edged|Crushing|Cold|Flame|Psionic|Lightning|Corrosion|Virulence|Power|Light}-\(%s%d\)-(%s%d\%\)}
         {
-            #IF {&_npc[$opponent[regexp]][vulnerabilities][$_stdDamage] == 0} 
+            #LINE GAG;
+            #FORMAT {_necSpell} {%l} {%%2};
+            #LOCAL {_stdDamage} {@fStandardDamage{{%%2}{necromancer}}};
+            #VAR {my[necromancer][spells][%%4][$_necSpell]} {%%6};
+            #IF {"%%6" != "0"}
             {
-                #VAR {_npc[$opponent[regexp]][vulnerabilities][$_stdDamage]} {0};
+                #IF {&_npc[$opponent[regexp]][vulnerabilities][$_stdDamage] == 0} 
+                {
+                    #VAR {_npc[$opponent[regexp]][vulnerabilities][$_stdDamage]} {0};
+                };
+                #VAR {_npc[$opponent[regexp]][vulnerabilities][$_stdDamage]} {@fMax{{%%6}{$_npc[$opponent[regexp]][vulnerabilities][$_stdDamage]}}};
+                #NOP .scanRoomNPCSave {$opponent[regexp]};	            
             };
-            #VAR {_npc[$opponent[regexp]][vulnerabilities][$_stdDamage]} {@fMax{{%%6}{$_npc[$opponent[regexp]][vulnerabilities][$_stdDamage]}}};
-			.scanRoomNPCSave {$opponent[regexp]};	            
+            #UNVAR {_necSpell};
         };
-        #UNVAR {_necSpell};
-    };
-    #ACTION {^Your spells minimum is set to}
-    {
-        #UNACTION {^Your spells minimum is set to};
-        #UNACTION {^%s{Edged|Crushing|Cold|Flame|Psionic|Lightning|Corrosion|Virulence|Power|Light}-\(%s%d\)-(%s%d\%\)};
+        #ACTION {^Your spells minimum is set to}
+        {
+            #LINE GAG;
+            #CLASS {necro_spells} KILL;
+        };
+        #GAG {^$};
+        #GAG {^%sHere is your spell status master.$};
+        #GAG {^%sSchool  SP   Eff   Ascendency$};
+        #GAG {^%s-----------------------------$};
+        #GAG {^You have 1 free star to allocate into your magical studies.$};
+        #GAG {^You do not have any free stars to allocate at this time.$} {2};
     };
     #UNVAR {my[necromancer][spells]};
     #SEND {!spells};
@@ -31,6 +41,10 @@ event_register e_killed_opponent spells.tin handler_necspells_combat_end;
 {
     #NOP %1;
     #LOCAL {_necSpells} {};
+    #CLASS {necro_spells} ASSIGN
+    {
+        #GAG {^  Clearing your spell efficiency listing master.$}
+    };
     #SEND {!spells clear};
     #LOCAL {_necSpells[max]} {0};
     #FOREACH {*my[necromancer][spells][@fMax{*my[necromancer][spells][]}][]} {s}
@@ -55,4 +69,3 @@ event_register e_killed_opponent spells.tin handler_necspells_combat_end;
 };
 event_register e_combat spells.tin handler_necspells_combat_start; 
 
-#GAG {^  Clearing your spell efficiency listing master.$};

@@ -1,10 +1,6 @@
 #ALIAS {handler_auto_pickup}
 {
     #NOP %1;
-    #IF {@fLocked{scan.%*}}
-    {
-        #RETURN;
-    };
     #IF {"$room[break]" != "1"}
     {
         .debug PICKUP {%2 : %3 : %4};
@@ -26,7 +22,7 @@
                 #CASE {"1"}
                 {
                     .debug PICKUP {Item flagged always pick up};            
-                    #VAR {room[commandbuffer]} {@fAutoGetCommand{%2}};
+                    handler_auto_pickup_command {%2};
                 };
                 #CASE {""}
                 {
@@ -53,15 +49,20 @@
     #ELSEIF {"$room[break]" != "1" && "$auto[pickup][variable]" == "full"}
     {
         .debug PICKUP {Full Pickup - get item added to command queue: $room[commandbuffer]};
-        .RoomAddCommand {#SEND {!get %2}} {8};
-        #IF {$auto[bag][status]}
-        {
-            .RoomAddCommand {#SEND {!put %2 in bag}} {9};
-        };
+        handler_auto_pickup_command {%2};
     };
 
     #UNVAR {room[break]};
     #UNVAR {room[commandbuffer]};
+};
+
+#ALIAS {handler_auto_pickup_command}
+{
+    .RoomAddCommand {#SEND {!get %1}} {8};
+    #IF {$auto[bag][status]}
+    {
+        .RoomAddCommand {#SEND {!put %1 in bag}} {9};
+    };
 };
 
 auto add {pickup} {.file load {$path[mud]/Scripts/auto.pickup.tin}} {e_room_item} {#NOP %1;#CLASS {$path[mud]/Scripts/auto.pickup.tin} KILL;};

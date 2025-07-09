@@ -84,6 +84,9 @@
         #VAR {opponent} {};        
         #VAR {opponent[data]} {@fGetMapData{{_npc}{%2}}};
         #VAR {opponent[longname]} {%2};
+        #LIST {room[contents][npc]} INDEXATE {recnum};
+        #LIST {room[contents][npc]} FIND {$opponent[data][recnum]} {opponent[roomvar]};
+        #VAR {opponent[roomvar]} {room[contents][npc][$opponent[roomvar]]};
         #ACTION {^{>\s|}{You've killed|(.*) dealt the killing blow to} %*.} 
         {
             #IF {"%%3" == "%%4" || "%%3" == "$my[name]" || "%%3" == ""}
