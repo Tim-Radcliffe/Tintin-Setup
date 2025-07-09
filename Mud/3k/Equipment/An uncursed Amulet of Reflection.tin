@@ -25,6 +25,6 @@
     #IF {&opponent[regexp]}
     {
         #VAR {_npc[$opponent[regexp]][attacks][@fStandardDamage{{%2}{amulet of reflection}}]} {1};
-        .scanRoomNPCSave {$opponent[regexp]};
+        #NOP .scanRoomNPCSave {$opponent[regexp]};
     };    
 };

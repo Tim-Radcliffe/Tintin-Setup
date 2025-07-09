@@ -4,6 +4,11 @@
 
 #ACTION {{^A flare of light from your shades puts|^Light flashes off your shades, briefly distracting|.* is distracted by seeing .* reflection in your shades.}}
 {
-    .record_frequency {DAMAGE REDUCTION} *my[eq][%* shades] {$_combat[attacks][incoming]} {incoming attacks};
     #LINE GAG;
+    #LOCAL {_eqShades} {*my[eq][%* shades]};
+    #IF {"$_eqShades" == ""}
+    {
+        #RETURN;
+    };
+    .record_frequency {DAMAGE REDUCTION} {$_eqShades} {$_combat[attacks][incoming]} {incoming attacks};
 };

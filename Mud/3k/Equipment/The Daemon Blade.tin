@@ -1,0 +1,7 @@
+#ACTION {The Daemon Blade screams at you, 'I need SOULS!!'}
+{
+    #SEND {!steal};
+};
+.gag add {equipment.The_Daemon_Blade} {The Daemon Blade is licked with black flame as you strike!};
+.gag add {equipment.The_Daemon_Blade} {The Daemon Blade gouges deeply into %*!};
+.gag add {equipment.The_Daemon_Blade} {You feel the Daemon Blade come alive as you cut deep into %*!};

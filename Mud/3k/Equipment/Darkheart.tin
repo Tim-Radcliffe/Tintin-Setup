@@ -1,0 +1,5 @@
+#ACTION {Your heart burns with hate as you strike again.}
+{
+    .record_frequency {RESTRIKE} {Darkheart} {$_combat[attacks][outgoing]} {outgoing attacks};
+};
+#SEND {!ibrief on darkheart};
