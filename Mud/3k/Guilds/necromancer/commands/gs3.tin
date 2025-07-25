@@ -48,7 +48,7 @@
             #IF {"%0" == "%*quiet%*"} {#LINE GAG;};
             #VAR {_gs3[total]} {%%2};
             event_raise {e_gs3} {$$_gs3};
-            #CLASS {necromancer_gs3} KILL;            
+            .Unlock {killed.detectsize};         
         } {2};
         #ACTION {^  Your gscore3 is now cleared master.$}
         {
@@ -70,6 +70,7 @@
 {
 	#NOP %1;
 	.debug GUILD {SIZE: %0};
+    .Lock {killed.detectsize};
 
     #ALIAS {handler_auto_gs3}
     {

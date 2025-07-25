@@ -77,9 +77,11 @@
 #ALIAS {handler_auto_cstats}
 {
     #NOP %1;
+    .Lock {killed.cstats};
     #ACTION {^Combat details have been cleared.$}
     {
         #LINE GAG;
+        .Unlock {killed.cstats};
         #UNACTION {^Combat details have been cleared.$};
     };
     #ALIAS {handler_cstats}

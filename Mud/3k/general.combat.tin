@@ -34,7 +34,8 @@
 {
     #LINE GAG;
     .debug {COMBAT} {Attack Incoming: %1 %2};
-    #MATH {_combat[attacks][incoming]} {$_combat[attacks][incoming] + 1};    
+    #MATH {_combat[attacks][incoming]} {$_combat[attacks][incoming] + 1};
+    #MATH {opponent[attacks][incoming]} {$opponent[attacks][incoming] + 1};    
     event_raise {e_combat_attack_incoming} {%1} {%2} {%3};
 };
 
@@ -120,6 +121,16 @@ event_register e_combat h_combat handler_combat;
     };
 };
 
+#ALIAS {handler_kill_save}
+{
+    #NOP %1;
+    #IF {!@fLocked{killed.%*}}
+    {
+        .dbKillSave;
+        event_remove_specific {e_lock_removed} {general.combat.tin};
+    };
+};
+
 #ALIAS {handler_combat_finished}
 {
     #NOP %1;
@@ -130,6 +141,11 @@ event_register e_combat h_combat handler_combat;
     event_register        {e_combat}          {h_combat} {handler_combat};
     event_raise           {e_room_corpse};
     event_raise           {e_combat_finished};
+    event_register {e_lock_removed} {general.combat.tin} 
+    {
+        #NOP %%1;
+        handler_kill_save;
+    };    
     #SEND {!glance};
     #BELL;
 };

@@ -1,6 +1,7 @@
 #ALIAS {handler_necspells_combat_end}
 {
     #NOP %1;
+    .Lock {killed.spells};
     #CLASS {necro_spells} ASSIGN
     {
         #ACTION {^%s{Edged|Crushing|Cold|Flame|Psionic|Lightning|Corrosion|Virulence|Power|Light}-\(%s%d\)-(%s%d\%\)}
@@ -23,6 +24,7 @@
         #ACTION {^Your spells minimum is set to}
         {
             #LINE GAG;
+            .Unlock {killed.spells};
             #CLASS {necro_spells} KILL;
         };
         #GAG {^$};

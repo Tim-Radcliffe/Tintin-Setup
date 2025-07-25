@@ -214,7 +214,23 @@
     };
 }
 
-
+#NOP .dbKillSave 
+#ALIAS {.dbKillSave}
+{
+    #LOCAL {dbKill} {};
+    db_submit {dbKill[result]}
+    {
+        INSERT INTO npcs_kills (username, npcnum, scaler, size, rounds, attacks, coins)
+        VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s')
+    }
+    {$my[name]}
+    {$opponent[data][recnum]}
+    {$map[area][scaler]}
+    {$opponent[size]}
+    {$opponent[rounds]}
+    {$opponent[attacks][incoming]}
+    {$opponent[coins]};
+};
 
 #NOP .dbLocationSave {area} {object type} {objectregexp} {roomnum}
 #ALIAS {.dbLocationSave}
